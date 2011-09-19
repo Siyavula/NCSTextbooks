@@ -1,0 +1,310 @@
+\chapter{Mathematical Models - Grade 11}
+\label{m:se:m11}
+
+Up until now, you have only learnt how to solve equations and inequalities, but there has not been much application of what you have learnt. This chapter builds on this knowledge and introduces you to the idea of a \textit{mathematical model} which uses mathematical concepts to solve real-world problems.
+
+%\begin{syllabus}
+%\item Use mathematical models to investigate problems that arise in real-life contexts:
+%\begin{itemize}
+%\item making conjectures, demonstrating and explaining their validity;
+%\item expressing and justifying mathematical generalisations of situations;
+%\item using various representations to interpolate and extrapolate;
+%\item describing a situation by interpreting graphs, or drawing graphs from a description of a situation, with special focus on trends and pertinent features. (Examples should include issues related to health, social, economic, cultural, political and environmental matters.)
+%\end{itemize}
+%\end{syllabus}
+
+\Definition{Mathematical Model}{A mathematical model is a method of using the mathematical language to describe the behaviour of a physical system. Mathematical models are used particularly in the natural sciences and engineering disciplines (such as physics, biology, and electrical engineering) but also in the social sciences (such as economics, sociology and political science); physicists, engineers, computer scientists, and economists use mathematical models most extensively.}
+
+A mathematical model is an equation (or a set of equations for the more difficult problems) that describes a particular situation.
+For example, if Anna receives R3 for each time she helps her mother wash the dishes and R5 for each time she helps her father cut the grass, how much money will Anna earn if she helps her mother 5 times to wash the dishes and helps her father 2 times to wash the car.
+The first step to modelling is to write the equation, that describes the situation. To calculate how much Anna will earn we see that she will earn :
+
+\begin{eqnarray*}
+&5 &\times R3 \quad \mbox{for washing the dishes}\\
++&2 &\times R5 \quad \mbox{for cutting the grass}\\
+=& R15&+R10\\
+=& R25
+\end{eqnarray*}
+If however, we ask: "What is the equation if Anna helps her mother $x$ times and her father $y$ times?", then we have:
+
+\nequ{\mbox{Total earned}=x \times R3 + y \times R5}
+
+\section{Real-World Applications: Mathematical Models}
+Some examples of where mathematical models are used in the real-world are:
+
+\begin{enumerate}
+\item{To model population growth}
+\item{To model effects of air pollution}
+\item{To model effects of global warming}
+\item{In computer games}
+\item{In the sciences (e.g. physics, chemistry, biology) to understand how the natural world works}
+\item{In simulators that are used to train people in certain jobs, like pilots, doctors and soldiers}
+\item{In medicine to track the progress of a disease}
+\end{enumerate}
+
+\Activity{Investigation}{Simple Models}{In order to get used to the idea of
+mathematical models, try the following simple models. Write an equation that
+describes the following real-world situations, mathematically:
+\vspace{0.5cm}
+\begin{enumerate}
+\item{Jack and Jill both have colds. Jack sneezes twice for each sneeze of Jill's. If Jill sneezes $x$ times, write an equation describing how many times they both sneezed?}
+\item{It rains half as much in July as it does in December. If it rains $y$~mm in July, write an expression relating the rainfall in July and December.}
+\item{Zane can paint a room in 4 hours. Billy can paint a room in 2 hours. How long will it take both of them to paint a room together?}
+\item{25 years ago, Arthur was 5 more than $\frac{1}{3}$ as old as Lee was. Today, Lee is 26 less than twice Arthur's age. How old is Lee?}
+\item{Kevin has played a few games of ten-pin bowling. In the third game, Kevin scored 80 more than in the second game. In the first game Kevin scored 110 less than the third game. His total score for the first two games was 208. If he wants an average score of 146, what must he score on the fourth game?}
+\item{Erica has decided to treat her friends to coffee at the Corner Coffee House. Erica paid R54,00 for four cups of cappuccino and three cups of filter coffee. If a cup of cappuccino costs R3,00 more than a cup of filter coffee, calculate how much each type of coffee costs?}
+\item{The product of two integers is 95. Find the integers if their total is 24.}
+\end{enumerate}}
+
+\begin{wex}{Mathematical Modelling of Falling Objects}{When an object is dropped or thrown downward, the distance, $d$, that it falls in time, $t$ is described by the following equation:
+\nequ{s = 5t^2 + v_0t}
+In this equation, $v_0$ is the initial velocity, in \ms. Distance is measured in meters and time is measured in seconds. Use the equation to find how far an object will fall in 2~s if it is thrown downward at an initial velocity of 10~\ms.}
+{\westep{Identify what is given for each problem}
+We are given an expression to calculate distance traveled by a falling object in terms of initial velocity and time. We are also given the initial velocity and time and are required to calculate the distance traveled.
+
+\westep{List all known and unknown information}
+\begin{itemize}
+\item $v_0 = 10\ems$
+\item $t = 2\es$
+\item $s = ?\emm$
+\end{itemize}
+
+\westep{Substitute values into expression}
+\begin{eqnarray*}
+s &=& 5t^2 + v_0t\\
+&=&5(2)^2+(10)(2)\\
+&=&5(4)+20\\
+&=&20+20\\
+&=&40
+\end{eqnarray*}
+
+\westep{Write the final answer}
+The object will fall 40~m in 2~s if it is thrown downward at an initial velocity of 10~\ms.}
+\end{wex}
+
+\begin{wex}{Another Mathematical Modelling of Falling Objects}{When an object is dropped or thrown downward, the distance, $d$, that it falls in time, $t$ is described by the following equation:
+\nequ{s = 5t^2 + v_0t}
+In this equation, $v_0$ is the initial velocity, in \ms. Distance is measured in meters and time is measured in seconds. Use the equation find how long it takes for the object to reach the ground if it is dropped from a height of 2000~m. The initial velocity is 0~\ms.}
+{
+\westep{Identify what is given for each problem}
+We are given an expression to calculate distance travelled by a falling object in terms of initial velocity and time. We are also given the initial velocity and distance travelled and are required to calculate the time it takes the object to travel the distance.
+
+\westep{List all known and unknown information}
+\begin{itemize}
+\item $v_0 = 0\ems$
+\item $t = ?\es$
+\item $s = 2000\emm$
+\end{itemize}
+
+\westep{Substitute values into expression}
+\begin{eqnarray*}
+s &=& 5t^2 + v_0t\\
+2000&=&5t^2+(0)(2)\\
+2000&=&5t^2\\
+t^2&=&\frac{2000}{5}\\
+&=&400\\
+\therefore\quad t&=&20\es
+\end{eqnarray*}
+
+\westep{Write the final answer}
+The object will take 20~s to reach the ground if it is dropped from a height of 2000~m.}
+\end{wex}
+
+\Activity{Investigation}{Mathematical Modelling}{The graph below shows how
+the distance travelled by a car depends on time. Use the graph to answer the
+following questions.
+\begin{center}
+\begin{pspicture}(-1,-1)(5,5)
+\psgrid[gridcolor=gray,gridlabels=0](0,0)(5,5)
+\psaxes[dx=1,dy=1,Dx=10,Dy=100]{<->}(0,0)(5,5)
+\psplot{0}{4}{x 2 exp 0.3 mul}
+\uput[u](2.5,-1.2){Time (s)}
+\pcline[linestyle=none,offset=0.8cm](0,0)(0,5)
+\aput{:U}{Distance (m)}
+\end{pspicture}
+\end{center}
+
+\begin{enumerate}
+\item How far does the car travel in 20~s?
+\item How long does it take the car to travel 300~m?
+\end{enumerate}}
+
+\begin{wex}{More Mathematical Modelling}
+{A researcher is investigating the number of trees in a forest over a period of n years. After investigating numerous data, the following data model emerged:
+\begin{center}
+\begin{tabular}{|c|c|}\hline
+Year& Number of trees in hundreds\\\hline
+1 & 1\\\hline
+2 & 3 \\\hline
+3 & 9 \\\hline
+4 & 27 \\\hline
+\end{tabular}
+\end{center}
+\begin{enumerate}
+\item{How many trees, in hundreds, are there in the SIXTH year if this pattern is
+continued?}
+\item{Determine an algebraic expression that describes the number of trees in the $n^{th}$ year in the forest.}
+\item{Do you think this model, which determines the number of trees in the forest, will continue indefinitely? Give a reason for your answer.}
+\end{enumerate}
+}{
+\westep{Find the pattern}
+The pattern is $3^0; 3^1; 3^2; 3^3;...$\\
+Therefore, three to the power one less than the year.
+\westep{Trees in year 6}
+\nequ{year\ 6 :3^5\ hundreds = 243\ hundreds = 24 300}
+\westep{Algebraic expression for year $n$}
+\nequ{number ~of~ trees = 3^{n-1}~hundreds}
+\westep{Conclusion}
+No\\
+The number of trees will increase for some time. Yet, eventually the number of trees will not increase any more. It will be limited by factors such as the limited amount of water and nutrients available in the ecosystem.
+}
+\end{wex}
+
+\begin{wex}{Setting up an equation}{Currently the subscription to a gym for a single member is R1~000 annually while family membership is R1~500.  The gym is considering raising all memberships fees by the same amount.  If this is done then the single membership will cost $\frac{5}{7}$ of the family membership.  Determine the proposed increase.}{
+\westep{Summarise the information in a table}
+Let the proposed increase be $x$.\\
+\vspace{0.5cm}
+\begin{center}
+\begin{tabular}{|c|c|c|}\hline
+& Now & After increase\\\hline
+Single& 1~000 & 1~000+$x$\\\hline
+Family& 1~500 & 1~500+$x$\\\hline
+\end{tabular}
+\end{center}
+\westep{Set up an equation}
+\nequ{1~000 + x = \frac{5}{7}(1~500 + x)}
+\westep{Solve the equation}
+\begin{eqnarray*}
+7~000 + 7x &=& 7~500  + 5x\\
+2x &=& 500\\
+x &=& 250
+\end{eqnarray*}
+\westep{Write down the answer}
+Therefore the increase is R250.
+}
+\end{wex}
+
+\section{End of Chapter Exercises}
+\begin{enumerate}
+\item{When an object is dropped or thrown downward, the distance, $d$, that it falls in time, $t$, is described by the following equation:
+\nequ{s = 5t^2 + v_0t}
+In this equation, $v_0$ is the initial velocity, in \ms. Distance is measured in meters and time is measured in seconds. Use the equation to find how long it takes a tennis ball to reach the ground if it is thrown downward from a hot-air balloon that is 500~m high. The tennis ball is thrown at an initial velocity of 5~\ms.}
+
+\item{The table below lists the times that Sheila takes to walk the given distances.
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|}\hline
+Time (minutes)& 5 & 10 & 15 &20 &25 &30\\\hline
+Distance (km)& 1 & 2 & 3 & 4 & 5 &6\\\hline
+\end{tabular}
+\end{center}
+
+Plot the points.
+
+If the relationship between the distances and times is linear, find the equation of the straight line, using any two points. Then use the equation to answer the following questions:
+\begin{enumerate}
+\item How long will it take Sheila to walk 21~km?
+\item How far will Sheila walk in 7 minutes?
+\end{enumerate}
+If Sheila were to walk half as fast as she is currently walking, what would the graph of her distances and times look like?}
+
+\item{The power $P$ (in watts) supplied to a circuit by a 12 volt battery is given by the formula $P = 12I - 0,5I^2$ where $I$ is the current in amperes.
+\begin{enumerate}
+\item{Since both power and current must be greater than 0, find the limits of the current that can be drawn by the circuit.}
+\item{Draw a graph of $P = 12I - 0,5I^2$ and use your answer to the first question, to define the extent of the graph.}
+\item{What is the maximum current that can be drawn?}
+\item{From your graph, read off how much power is supplied to the circuit when the current is 10 amperes. Use the equation to confirm your answer.}
+\item{At what value of current will the power supplied be a maximum?}
+\end{enumerate}
+}
+
+\item{You are in the lobby of a business building waiting for the lift. You are late for a meeting and wonder if it will be quicker to take the stairs. There is a fascinating relationship between the number of floors in the building, the number of people in the lift and how often it will stop:
+\begin{quote}
+{If $N$ people get into a lift at the lobby and the number of
+floors in the building is $F$, then the lift can be expected to
+stop $$F - F\biggl(\dfrac{F-1}{F}\biggr)^N$$ \\
+times}.
+\end{quote}
+\begin{enumerate}
+\item{If the building has 16 floors and there are 9 people who get into the lift, how many times is the lift expected to stop?}
+\item{How many people would you expect in a lift, if it stopped 12 times and there are 17 floors?}
+\end{enumerate}
+}
+
+\item{A wooden block is made as shown in the diagram. The ends are right-angled triangles having sides $3x$, $4x$ and $5x$. The length of the block is $y$. The total surface area of the block is 3 600~cm$^2$.
+\begin{center}
+\begin{pspicture}(0, -1)(6, 6)
+\psset{xunit=7.5mm, yunit=7.5mm}
+%\psgrid[gridlabels=10pt,gridlabelcolor=black]
+\psline(0, 0)(0, 5)(5, 4.5)(5, -0.5)(0, 0)
+\psline(0, 5)(1.2, 6)(5, 4.5)
+\uput[r](5, 2){$y$}
+\uput[l](0.8, 5.7){$3x$}
+\uput[r](2.5, 5.7){$4x$}
+\psline(0, 0.2)(0.2, 0.2)(0.2, 0)
+\psline[linestyle=dashed](1.2, 6)(1.2, 1)(0, 0)
+\psline[linestyle=dashed](1.2, 1)(5, -0.5)
+\psline(1.0, 5.8)(1.2, 5.7)(1.5, 5.9)
+\end{pspicture}
+\end{center}
+Show that \nequ{y=\frac{300-x^2}{x}}
+}
+
+\item{A stone is thrown vertically upwards and its height (in metres)
+above the ground at time $t$ (in seconds) is given by:
+\nequ{h(t) = 35 - 5t^2 + 30t}\\
+Find its initial height above the ground.}
+
+\item{After doing some research, a transport company has determined that the rate at which petrol is consumed by one of its large carriers, travelling at an average speed of $x$ km per hour, is given by:
+\nequ{P(x)=\frac{55}{2x}+\frac{x}{200} \quad \mbox{litres per kilometre}}\\
+Assume that the petrol costs R4,00 per litre and the driver earns R18,00 per hour (travelling time). Now deduce that the total cost, $C$, in Rands, for a 2~000 km trip is given by:
+\nequ{C(x)=\frac{256000}{x}+40x}}
+
+\item{During an experiment the temperature $T$ (in degrees Celsius), varies with time $t$ (in hours), according to the formula:
+\nequ{T(t)=30+4t-\frac{1}{2}t^2 \quad t\in[1;10]}
+\begin{enumerate}
+\item{Determine an expression for the rate of change of temperature with time.}
+\item{During which time interval was the temperature dropping?}
+\end{enumerate}}
+
+\item{In order to reduce the temperature in a room from 28\deg C, a cooling system is allowed to operate for 10 minutes. The room temperature, $T$ after $t$ minutes is given in \deg C by the formula:
+\nequ{T=28-0,008t^3-0,16t \quad \mbox{where $t \in [0;10]$}}
+\begin{enumerate}
+\item{At what rate (rounded off to TWO decimal places) is the temperature falling when $t$ = 4 minutes?}
+\item{Find the lowest room temperature reached during the 10 minutes for which the cooling system operates, by drawing a graph.}
+\end{enumerate}}
+
+\item{A washing powder box has the shape of a rectangular prism as shown in the diagram below. The box has a volume of 480 cm$^3$, a breadth of 4 cm and a length of $x$ cm.
+
+\begin{center}
+\begin{pspicture}(0,0)(3.4,4.4)
+%\psgrid[gridcolor=gray]
+\psframe(0,0)(3,4)
+\pspolygon(0,4)(0.4,4.4)(3.4,4.4)(3,4)
+\pspolygon(3,0)(3.4,0.4)(3.4,4.4)(3,4)
+\rput(1.5,2){Washing powder}
+
+\end{pspicture}
+\end{center}
+
+Show that the total surface area of the box (in cm$^2$) is given by:
+\nequ{A=8x+960x^{-1}+240}}
+
+\end{enumerate}
+
+\Extension{Simulations}{A simulation is an attempt to model a real-life
+situation on a computer so that it can be studied to see how the system works.
+By changing variables, predictions may be made about the behaviour of the
+system.
+Simulation is used in many contexts, including the modeling of natural systems or human systems in order to gain insight into their functioning. Other contexts include simulation of technology for performance optimization, safety engineering, testing, training and education. Simulation can be used to show the eventual real effects of alternative conditions and courses of action.
+\newline 
+\newline
+\textbf{Simulation in education}
+Simulations in education are somewhat like training simulations. They focus on specific tasks. In the past, video has been used for teachers and education students to observe, problem solve and role play; however, a more recent use of simulations in education is that of animated narrative vignettes (ANV). ANVs are cartoon-like video narratives of hypothetical and reality-based stories involving classroom teaching and learning. ANVs have been used to assess knowledge, problem solving skills and dispositions of children and pre-service and in-service teachers.}
+
+
+% CHILD SECTION END
+
+
+
+% CHILD SECTION START
+

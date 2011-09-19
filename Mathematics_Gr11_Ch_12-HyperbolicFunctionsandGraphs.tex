@@ -1,0 +1,319 @@
+\chapter{Hyperbolic Functions and Graphs - Grade 11}
+\label{m:fg:h11}
+
+\section{Introduction}
+In Grade 10, you studied graphs of many different forms. In this chapter, you will learn a little more about the graphs of functions.
+
+%\begin{syllabus}
+%\item Demonstrate the ability to work with various types of functions.
+%\item Recognise relationships between variables in terms of numerical, graphical, verbal and symbolic representations and convert flexibly between these representations (tables, graphs, words and formulae).
+%\item Generate as many graphs as necessary, initially by means of point-by-point plotting, supported by available technology, to make and test conjectures and hence to generalise the effects of the parameters $a$ and $q$ on the graphs of functions including:
+%\begin{eqnarray*}
+%y=\frac{a}{x+p} + q\\
+%\end{eqnarray*}
+%\item Identify characteristics as listed below and hence use applicable characteristics to sketch graphs of functions including those listed above:
+%\begin{itemize}
+%\item domain and range;
+%\item intercepts with the axes;
+%\item turning points, minima and maxima;
+%\item asymptotes;
+%\item shape and symmetry;
+%\item average gradient (average rate of change);
+%\item intervals on which the function increases/decreases;
+%\item the discrete or continuous nature of the graph.
+%\end{itemize}
+%\end{syllabus}
+
+\section{Functions of the Form $y=\frac{a}{x+p} + q$}
+This form of the hyperbolic function is slightly more complex than the form studied in Grade 10.
+\begin{figure}[htbp]
+\begin{center}
+\begin{pspicture}(-5,-4)(5,4)
+%\psgrid
+\psset{yunit=0.75,xunit=0.75}
+\psaxes(0,0)(-5,-5)(5,5)
+\psplot[plotstyle=curve,arrows=<->]{-5}{-1.145}{x 1 add -1 exp 2 add}
+\psplot[plotstyle=curve,arrows=<->]{-0.65}{5}{x 1 add -1 exp 2 add}
+\psplot[linestyle=dotted,plotstyle=curve]{-5}{2}{x 3 add}
+\psline[linestyle=dashed](-1,-5)(-1,5)
+\psline[linestyle=dashed](-5,2)(5,2)
+\end{pspicture}
+\caption{General shape and position of the graph of a function of the form $f(x)=\frac{a}{x+p} + q$. The asymptotes are shown as dashed lines.}
+\label{fig:mf:g:hyperbola}
+\end{center}
+\end{figure}
+\Activity{Investigation}{Functions of the Form $y=\frac{a}{x+p} + q$}{
+\begin{enumerate}
+\item{On the same set of axes, plot the following graphs:
+\begin{enumerate}
+\item{$a(x)=\frac{-2}{x+1} + 1$}
+\item{$b(x)=\frac{-1}{x+1} + 1$}
+\item{$c(x)=\frac{0}{x+1} + 1$}
+\item{$d(x)=\frac{1}{x+1} + 1$}
+\item{$e(x)=\frac{2}{x+1} + 1$}
+\end{enumerate}
+Use your results to deduce the effect of $a$.}
+\item{On the same set of axes, plot the following graphs:
+\begin{enumerate}
+\item{$f(x)=\frac{1}{x-2} + 1$}
+\item{$g(x)=\frac{1}{x-1} + 1$}
+\item{$h(x)=\frac{1}{x+0} + 1$}
+\item{$j(x)=\frac{1}{x+1} + 1$}
+\item{$k(x)=\frac{1}{x+2} + 1$}
+\end{enumerate}
+Use your results to deduce the effect of $p$.}
+\item{Following the general method of the above activities, choose your own values of $a$ and $p$ to plot 5 different graphs of $y=\frac{a}{x+p} + q$ to deduce the effect of $q$.}
+\end{enumerate}}
+
+You should have found that the sign of $a$ affects whether the graph is located in the first and third quadrants, or the second and fourth quadrants of Cartesian plane.
+
+You should have also found that the value of $p$ affects whether the $x$-intercept is negative ($p>0$) or positive ($p<0$).
+
+You should have also found that the value of $q$ affects whether the graph lies above the $x$-axis ($q>0$) or below the $x$-axis ($q<0$).
+
+These different properties are summarised in Table~\ref{tab:mf:graphs:summaryhyp}. The axes of symmetry for each graph is shown as a dashed line.
+
+\begin{table}[htb]
+\begin{center}
+\caption{Table summarising general shapes and positions of functions of the form $y=\frac{a}{x+p} + q$. The axes of symmetry are shown as dashed lines.}
+\label{tab:mf:graphs:summaryhyp}
+\begin{tabular}{|c|c|c||c|c|}\hline
+&\multicolumn{2}{c||}{$p<0$}&\multicolumn{2}{c|}{$p>0$}\\\hline
+& $a>0$&$a<0$& $a>0$&$a<0$\\\hline\hline
+$q>0$&
+\begin{pspicture}(-1.2,-1.2)(1.2,1.2)
+%\psgrid
+\psset{xunit=0.2,yunit=0.2}
+\psaxes[arrows=<->,dx=0,Dx=10,dy=0,Dy=10](0,0)(-5,-5)(5,5)
+\psplot[plotstyle=curve,arrows=<->]{-5}{0.85}{x 1 sub -1 exp 2 add}
+\psplot[plotstyle=curve,arrows=<->]{1.35}{5}{x 1 sub -1 exp 2 add}
+\psplot[linestyle=dotted,plotstyle=curve]{-4}{4}{x 1 add}
+\psline[linestyle=dashed](-5,2)(5,2)
+\psline[linestyle=dashed](1,-5)(1,5)
+\end{pspicture}
+&
+\begin{pspicture}(-1.2,-1.2)(1.2,1.2)
+%\psgrid
+\psset{xunit=0.2,yunit=0.2}
+\psaxes[arrows=<->,dx=0,Dx=10,dy=0,Dy=10](0,0)(-5,-5)(5,5)
+\psplot[plotstyle=curve,arrows=<->]{-5}{0.70}{x 1 sub -1 exp -1 mul 2 add}
+\psplot[plotstyle=curve,arrows=<->]{1.2}{5}{x 1 sub -1 exp -1 mul 2 add}
+\psplot[linestyle=dotted,plotstyle=curve]{-2}{4}{x neg 3 add}
+\psline[linestyle=dashed](-5,2)(5,2)
+\psline[linestyle=dashed](1,-5)(1,5)
+\end{pspicture}
+&
+\begin{pspicture}(-1.2,-1.2)(1.2,1.2)
+%\psgrid
+\psset{xunit=0.2,yunit=0.2}
+\psaxes[arrows=<->,dx=0,Dx=10,dy=0,Dy=10](0,0)(-5,-5)(5,5)
+\psplot[plotstyle=curve,arrows=<->]{-5}{-1.2}{x 1 add -1 exp 2 add}
+
+\psplot[plotstyle=curve,arrows=<->]{-0.70}{5}{x 1 add -1 exp 2 add}
+\psplot[linestyle=dotted,plotstyle=curve]{-4}{2}{x 3 add}
+\psline[linestyle=dashed](-5,2)(5,2)
+\psline[linestyle=dashed](-1,-5)(-1,5)
+\end{pspicture}
+&
+\begin{pspicture}(-1.2,-1.2)(1.2,1.2)
+%\psgrid
+\psset{xunit=0.2,yunit=0.2}
+\psaxes[arrows=<->,dx=0,Dx=10,dy=0,Dy=10](0,0)(-5,-5)(5,5)
+\psplot[plotstyle=curve,arrows=<->]{-5}{-1.3}{x 1 add -1 exp -1 mul 2 add}
+\psplot[plotstyle=curve,arrows=<->]{-0.85}{5}{x 1 add -1 exp -1 mul 2 add}
+\psplot[linestyle=dotted,plotstyle=curve]{-4}{4}{x neg 1 add}
+\psline[linestyle=dashed](-1,-5)(-1,5)
+\psline[linestyle=dashed](-5,2)(5,2)
+\end{pspicture}
+\\\hline
+$q<0$&
+\begin{pspicture}(-1.2,-1.2)(1.2,1.2)
+%\psgrid
+\psset{xunit=0.2,yunit=0.2}
+\psaxes[arrows=<->,dx=0,Dx=10,dy=0,Dy=10](0,0)(-5,-5)(5,5)
+\psplot[plotstyle=curve,arrows=<->]{-5}{0.75}{x 1 sub -1 exp 2 sub}
+\psplot[plotstyle=curve,arrows=<->]{1.35}{5}{x 1 sub -1 exp 2 sub}
+\psplot[linestyle=dotted,plotstyle=curve]{-2}{4}{x 3 sub}
+\psline[linestyle=dashed](-5,-2)(5,-2)
+\psline[linestyle=dashed](1,-5)(1,5)
+\end{pspicture}
+&
+\begin{pspicture}(-1.2,-1.2)(1.2,1.2)
+%\psgrid
+\psset{xunit=0.2,yunit=0.2}
+\psaxes[arrows=<->,dx=0,Dx=10,dy=0,Dy=10](0,0)(-5,-5)(5,5)
+\psplot[plotstyle=curve,arrows=<->]{-5}{0.70}{x 1 sub -1 exp -1 mul 2 sub}
+\psplot[plotstyle=curve,arrows=<->]{1.3}{5}{x 1 sub -1 exp -1 mul 2 sub}
+\psplot[linestyle=dotted,plotstyle=curve]{-2}{4}{x neg 1 sub}
+\psline[linestyle=dashed](-5,-2)(5,-2)
+\psline[linestyle=dashed](1,-5)(1,5)
+\end{pspicture}
+&
+\begin{pspicture}(-1.2,-1.2)(1.2,1.2)
+%\psgrid
+\psset{xunit=0.2,yunit=0.2}
+\psaxes[arrows=<->,dx=0,Dx=10,dy=0,Dy=10](0,0)(-5,-5)(5,5)
+\psplot[plotstyle=curve,arrows=<->]{-5}{-1.3}{x 1 add -1 exp 2 sub}
+\psplot[plotstyle=curve,arrows=<->]{-0.70}{5}{x 1 add -1 exp 2 sub}
+\psplot[linestyle=dotted,plotstyle=curve]{-4}{2}{x 1 sub}
+\psline[linestyle=dashed](-1,-5)(-1,5)
+\psline[linestyle=dashed](-5,-2)(5,-2)
+\end{pspicture}
+&
+\begin{pspicture}(-1.2,-1.2)(1.2,1.2)
+%\psgrid
+\psset{xunit=0.2,yunit=0.2}
+\psaxes[arrows=<->,dx=0,Dx=10,dy=0,Dy=10](0,0)(-5,-5)(5,5)
+\psplot[plotstyle=curve,arrows=<->]{-5}{-1.3}{x 1 add -1 exp -1 mul 2 sub}
+\psplot[plotstyle=curve,arrows=<->]{-0.75}{5}{x 1 add -1 exp -1 mul 2 sub}
+\psplot[linestyle=dotted,plotstyle=curve]{-4}{2}{x neg 3 sub}
+\psline[linestyle=dashed](-1,-5)(-1,5)
+\psline[linestyle=dashed](-5,-2)(5,-2)
+\end{pspicture}
+\\\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\subsection{Domain and Range}
+For $y=\frac{a}{x+p} + q$, the function is undefined for $x=-p$. The domain is therefore $\{x:x\in\mathbb{R},x\ne -p\}$.
+
+We see that $y=\frac{a}{x+p} + q$ can be re-written as:
+\begin{eqnarray*}
+y&=&\frac{a}{x+p} + q\\
+y-q&=&\frac{a}{x+p}\\
+\mbox{If $x\ne -p$ then:}\quad (y-q)(x+p)&=&a\\
+x+p&=&\frac{a}{y-q}
+\end{eqnarray*}
+
+This shows that the function is undefined at $y=q$. Therefore the range of $f(x)=\frac{a}{x+p} + q$ is $\{f(x):f(x)\in R, f(x) \neq q$.
+
+For example, the domain of $g(x)=\frac{2}{x+1} + 2$ is $\{x:x\in\mathbb{R}, x\ne-1\}$ because $g(x)$ is undefined at $x=-1$.
+\begin{eqnarray*}
+y&=&\frac{2}{x+1} + 2\\
+(y-2)&=&\frac{2}{x+1}\\
+(y-2)(x+1)&=& 2\\
+(x+1)&=&\frac{2}{y-2}
+\end{eqnarray*}
+We see that $g(x)$ is undefined at $y=2$. Therefore the range is $\{g(x):g(x)\in(-\infty,2)\cup(2,\infty)\}$.
+
+\Exercise{Domain and Range}{
+\item{Determine the range of $y = \frac{1}{x}+1$.}
+\item{Given:$f(x)=\frac{8}{x-8}+4$. Write down the domain of $f$.}
+\item{Determine the domain of $y = -\frac{8}{x+1} + 3$}
+}
+
+\subsection{Intercepts}
+For functions of the form, $y=\frac{a}{x+p} + q$, the intercepts with the $x$ and $y$ axis are calculated by setting $x=0$ for the $y$-intercept and by setting $y=0$ for the $x$-intercept.
+
+The $y$-intercept is calculated as follows:
+\begin{eqnarray}
+y&=&\frac{a}{x+p} + q\\
+y_{int}&=&\frac{a}{0+p} + q\\
+&=&\frac{a}{p} + q
+\end{eqnarray}
+
+For example, the $y$-intercept of $g(x)=\frac{2}{x+1} + 2$ is given by setting $x=0$ to get:
+\begin{eqnarray*}
+y&=&\frac{2}{x+1} + 2\\
+y_{int}&=&\frac{2}{0+1} + 2\\
+&=&\frac{2}{1} + 2\\
+&=&2+ 2\\
+&=&4\\
+\end{eqnarray*}
+
+The $x$-intercepts are calculated by setting $y=0$ as follows:
+\begin{eqnarray}
+y=\frac{a}{x+p} + q\\
+0&=&\frac{a}{x_{int}+p} + q\\
+\frac{a}{x_{int}+p}&=&-q\\
+a&=&-q(x_{int}+p)\\
+x_{int}+p&=&\frac{a}{-q}\\
+x_{int}&=&\frac{a}{-q}-p
+\end{eqnarray}
+
+For example, the $x$-intercept of $g(x)=\frac{2}{x+1} + 2$ is given by setting $x=0$ to get:
+\begin{eqnarray*}
+y&=&\frac{2}{x+1} + 2\\
+0&=&\frac{2}{x_{int}+1} + 2\\
+-2&=&\frac{2}{x_{int}+1}\\
+-2(x_{int}+1)&=&2\\
+x_{int}+1&=&\frac{2}{-2}\\
+x_{int}&=&-1-1\\
+x_{int}&=&-2
+\end{eqnarray*}
+
+\Exercise{Intercepts}{
+\item{Given:$h(x) = \frac{1}{x+4}-2$. Determine the coordinates of the intercepts of $h$ with the x- and y-axes.}
+\item{Determine the x-intercept of the graph of $y = \frac{5}{x} + 2$. Give the reason why there is no y-intercept for this function.}
+}
+
+\subsection{Asymptotes}
+There are two asymptotes for functions of the form $y=\frac{a}{x+p} + q$. They are determined by examining the domain and range.
+
+We saw that the function was undefined at $x=-p$ and for $y=q$. Therefore the asymptotes are $x=-p$ and $y=q$.
+
+For example, the domain of $g(x)=\frac{2}{x+1} + 2$ is $\{x:x\in\mathbb{R}, x\ne-1\}$ because $g(x)$ is undefined at $x=-1$. We also see that $g(x)$ is undefined at $y=2$. Therefore the range is $\{g(x):g(x)\in(-\infty,2)\cup(2,\infty)\}$.
+
+From this we deduce that the asymptotes are at $x=-1$ and $y=2$.
+
+\Exercise{Asymptotes}{
+\item{Given:$h(x) = \frac{1}{x+4}-2$.Determine the equations of the asymptotes of $h$.}
+\item{Write down the equation of the vertical asymptote of the graph $y = \frac{1}{x-1}$.}
+}
+
+\subsection{Sketching Graphs of the Form $f(x)=\frac{a}{x+p} + q$}
+In order to sketch graphs of functions of the form, $f(x)=\frac{a}{x+p} + q$, we need to calculate four characteristics:
+\begin{enumerate}
+\item{domain and range}
+\item{asymptotes}
+\item{$y$-intercept}
+\item{$x$-intercept}
+\end{enumerate}
+
+For example, sketch the graph of $g(x)=\frac{2}{x+1} + 2$. Mark the intercepts and asymptotes.
+
+We have determined the domain to be $\{x:x\in\mathbb{R}, x\ne-1\}$ and the range to be $\{g(x):g(x)\in(-\infty,2)\cup(2,\infty)\}$. Therefore the asymptotes are at $x=-1$ and $y=2$.
+
+The $y$-intercept is $y_{int}=4$ and the $x$-intercept is $x_{int}=-2$.
+
+\begin{figure}[htbp]
+\begin{center}
+\begin{pspicture}(-5,-3)(5,6)
+%\psgrid
+\psset{yunit=0.75,xunit=0.75}
+\psaxes[arrows=<->](0,0)(-5,-4)(5,7)
+\psplot[plotstyle=curve,arrows=<->]{-5}{-1.4}{x 1 add -1 exp 2 mul 2 add}
+\psplot[plotstyle=curve,arrows=<->]{-0.65}{5}{x 1 add -1 exp 2 mul 2 add}
+\psline[linestyle=dashed](-1,-4)(-1,7)
+\psline[linestyle=dashed](-5,2)(5,2)
+\end{pspicture}
+\caption{Graph of $g(x)=\frac{2}{x+1} + 2$.}
+\label{fig:mf:g:hyperbolasketchexample}
+\end{center}
+\end{figure}
+
+\Exercise{Graphs}{
+\begin{enumerate}
+\item{Draw the graph of $y = \frac{1}{x} + 2$.  Indicate the horizontal asymptote.}
+\item{Given:$h(x) = \frac{1}{x+4}-2$. Sketch the graph of $h$ showing clearly the asymptotes and ALL intercepts with the axes.}
+\item{Draw the graph of $y = \frac{1}{x}$  and  $y = - \frac{8}{x+1} + 3$  on the same system of axes.}
+\item{Draw the graph of $y = \frac{5}{x-2,5} + 2$.  Explain your method.}
+\item{Draw the graph of the function defined by $y = \frac{8}{x-8} + 4$. Indicate the asymptotes and intercepts with the axes.}
+\end{enumerate}
+}
+
+\section{End of Chapter Exercises}
+\begin{enumerate}
+\item{Plot the graph of the hyperbola defined by $y = \frac{2}{x}$  for $-4 \leq x \leq 4$.  Suppose the hyperbola is shifted 3 units to the right and 1 unit down.  What is the new equation then ?}
+\item{Based on the graph of $y = \frac{1}{x}$, determine the equation of the graph with asymptotes $y = 2$ and $x = 1$ and passing through the point (2; 3).}
+\end{enumerate}
+
+
+
+% CHILD SECTION END
+
+
+
+% CHILD SECTION START
+

@@ -1,0 +1,194 @@
+\chapter{Solving Simultaneous Equations - Grade 11}
+\label{m:se:sim11}
+
+%\begin{syllabus}
+%\item Solve equations in two unknowns, one of which is linear and one of which is quadratic, algebraically or graphically.
+%\end{syllabus}
+
+In grade 10, you learnt how to solve sets of simultaneous equations where both equations were linear (i.e. had the highest power equal to 1). In this chapter, you will learn how to solve sets of simultaneous equations where one is linear and one is quadratic. As in Grade 10, the solution will be found both algebraically and graphically.
+
+The only difference between a system of linear simultaneous equations and a system of simultaneous equations with one linear and one quadratic equation, is that the second system will have at most two solutions.
+
+An example of a system of simultaneous equations with one linear equation and one quadratic equation is:
+\begin{eqnarray}
+\label{sim11:example}
+y-2x=-4\\
+x^2+y=4 \nonumber
+\end{eqnarray}
+
+\section{Graphical Solution}
+The method of graphically finding the solution to one linear and one quadratic equation is identical to systems of linear simultaneous equations.
+
+\subsubsection{Method: Graphical solution to a system of simultaneous equations
+with one linear and one quadratic equation}{
+\begin{enumerate}
+\item{Make $y$ the subject of each equation.}
+\item{Draw the graphs of each equation as defined above.}
+\item{The solution of the set of simultaneous equations is given by the intersection points of the two graphs.}
+\end{enumerate}}
+
+For this example, making $y$ the subject of each equation, gives:
+\begin{eqnarray*}
+y=2x-4\\
+y=4-x^2
+\end{eqnarray*}
+
+Plotting the graph of each equation, gives a straight line for the first equation and a parabola for the second equation.
+
+\begin{figure}[htbp]
+\begin{center}
+\begin{pspicture}(-4,-4)(4,2)
+\psgrid[gridcolor=lightgray,gridlabels=0,gridwidth=0.5pt]
+\psaxes[dx=1,Dx=2,Dy=2,dy=0.5,arrows=<->](0,0)(-4,-4)(4,2)
+\pstextpath[c](2.6,0.1){\psplot[xunit=0.5,yunit=0.25,plotstyle=curve,arrows=<->]{-4.5}{6}{2 x mul 4 sub}}{\small{$y=2x-4$}}
+\pstextpath[c](-3,0.1){\psplot[xunit=0.5,yunit=0.25,plotstyle=curve,arrows=<->]{-4.25}{4.25}{x 2 exp neg 4 add}}{\small{$y=4-x^2$}}
+\uput[l](-2,-3){(-4,-12)}
+\uput[u](1.1,0.3){(2,0)}
+\psdots(1,0)(-2,-3)
+\end{pspicture}
+\end{center}
+\label{fig:s11:eq:ex1}
+\end{figure}
+
+The parabola and the straight line intersect at two points: (2,0) and (-4,-12). Therefore, the solutions to the system of equations in (\ref{sim11:example}) is $x=2, y=0$ and $x=-4, y=12$
+
+\begin{wex}{Simultaneous Equations}{Solve graphically:
+\begin{eqnarray*}
+y-x^2+9&=&0\\
+y+3x-9&=&0
+\end{eqnarray*}}
+{\westep{Make $y$ the subject of the equation}
+For the first equation:
+\begin{eqnarray*}
+y-x^2+9&=&0\\
+y&=&x^2-9
+\end{eqnarray*}
+and for the second equation:
+\begin{eqnarray*}
+y+3x-9&=&0\\
+y&=&-3x+9
+\end{eqnarray*}
+
+\westep{Draw the graphs corresponding to each equation.}
+\begin{center}
+\begin{pspicture}(-5,-1)(5,5)
+\psgrid[subgriddiv=10,gridcolor=lightgray,gridlabels=0,gridwidth=0.1pt]
+\psaxes[dx=1,dy=1,Dy=10,Dx=2,arrows=<->](0,0)(-5,-1)(5,5)
+\pstextpath[c](-2,0.1){\psplot[xunit=0.5,yunit=0.1,plotstyle=curve,arrows=<->]{-7}{6}{3 x mul neg 9 add}}{\small{$y=-3x+9$}}
+\pstextpath[c](3.2,0.1){\psplot[xunit=0.5,yunit=0.1,plotstyle=curve,arrows=<->]{-7}{7}{x 2 exp 9 sub}}{\small{$y=x^2-9$}}
+\psdots(-3,2.7)(1.5,0)
+\uput[dl](-3,2.7){(-6,27)}
+\uput[d](1.5,-0.2){(3,0)}
+\end{pspicture}
+\end{center}
+
+\westep{Find the intersection of the graphs.}
+The graphs intersect at $(-6,27)$ and at $(3,0)$.
+
+\westep{Write the solution of the system of simultaneous equations as given by the intersection of the graphs.}
+The first solution is $x=-6$ and $y=27$. The second solution is $x=3$ and $y=0$.}
+\end{wex}
+
+\Exercise{Graphical Solution}
+{Solve the following systems of equations graphically. Leave your answer in
+surd form, where appropriate.
+\begin{enumerate}
+\item{$b^2-1-a=0, a + b -5 =0$}
+\item{$x+y-10=0, x^2-2-y=0$}
+\item{$6-4x-y=0, 12-2x^2-y=0$}
+\item{$x+2y-14=0, x^2+2-y=0$}
+\item{$2x+1-y=0, 25-3x-x^2-y=0$}
+\end{enumerate}}
+
+\section{Algebraic Solution}
+The algebraic method of solving simultaneous equations is by substitution.
+
+For example the solution of
+\begin{eqnarray*}
+y-2x=-4\\
+x^2+y=4
+\end{eqnarray*}
+
+is:
+\begin{eqnarray*}
+y&=&2x-4 \quad \mbox{into second equation}\\
+x^2+(2x-4)&=&4\\
+x^2+2x-8&=&0 \\
+\mbox{Factorise to get:}\quad (x+4)(x-2)&=&0\\
+\therefore \mbox{the 2 solutions for $x$ are:}\quad x=-4\quad \mbox{and}\quad x=2
+\end{eqnarray*}
+
+The corresponding solutions for $y$ are obtained by substitution of the $x$-values into the first equation
+\begin{eqnarray*}
+y=2(-4)-4&=&-12 \quad \mbox{for $x=-4$}\\
+\mbox{and:}\quad y=2(2)-4&=&0 \quad \mbox{for $x=2$}\\
+\end{eqnarray*}
+
+As expected, these solutions are identical to those obtained by the graphical solution.
+
+\begin{wex}{Simultaneous Equations}{Solve algebraically:
+\begin{eqnarray*}
+y-x^2+9&=&0\\
+y+3x-9&=&0
+\end{eqnarray*}}
+{\westep{Make $y$ the subject of the linear equation}
+\begin{eqnarray*}
+y+3x-9&=&0\\
+y&=&-3x+9
+\end{eqnarray*}
+\westep{Substitute into the quadratic equation}
+\begin{eqnarray*}
+(-3x+9)-x^2+9&=&0\\
+x^2+3x-18&=&0\\
+\mbox{Factorise to get:}\quad (x+6)(x-3)&=&0\\
+\therefore \mbox{the 2 solutions for $x$ are:}\quad x=-6\quad \mbox{and}\quad x=3
+\end{eqnarray*}
+
+\westep{Substitute the values for $x$ into the first equation to calculate the corresponding $y$-values.}
+\begin{eqnarray*}
+y= -3(-6)+9&=&27 \quad \mbox{for $x=-6$}\\
+\mbox{and:}\quad y=-3(3)+9&=&0 \quad \mbox{for $x=3$}
+\end{eqnarray*}
+
+\westep{Write the solution of the system of simultaneous equations.}
+The first solution is $x=-6$ and $y=27$. The second solution is $x=3$ and $y=0$.}
+\end{wex}
+
+\Exercise{Algebraic Solution}
+{Solve the following systems of equations algebraically. Leave your answer in
+surd form, where appropriate.
+\begin{center}
+\begin{tabular}{p{0.25\textwidth}p{0.25\textwidth}}
+1. \Big.$a + b = 5$ & $a-b^2 + 3b - 5 = 0$\\
+2. \Big.$a - b + 1=0$ & $a-b^2 + 5b - 6 =0$\\
+3. \Big.$a-\frac{(2b + 2)}{4} = 0$ & $a-2b^2 + 3b + 5 = 0$\\
+4. \Big.$a+2b -4 = 0$ & $a-2b^2 - 5b + 3 = 0$\\
+5. \Big.$a-2+3b=0$ & $a-9+b^2=0$\\
+6. \Big.$a-b-5=0$ & $a-b^2=0$\\
+7. \Big.$a-b-4=0$ & $a+2b^2-12=0$\\
+8. \Big.$a+b-9=0$ & $a+b^2-18=0$\\
+9. \Big.$a-3b+5=0$ & $a+b^2-4b=0$\\
+10. \Big.$a+b-5=0 $ & $a-b^2+1=0$\\
+11. \Big.$a-2b-3=0 $ & $a-3b^2+4=0$\\
+12. \Big.$a-2b=0 $ & $a-b^2-2b+3=0$\\
+13. \Big.$a-3b=0$ & $a-b^2+4=0$\\
+14. \Big.$a-2b-10=0$ & $a-b^2-5b=0$\\
+15. \Big.$a-3b-1=0$ & $a-2b^2-b+3=0$\\
+16. \Big.$a-3b+1=0$ & $a-b^2=0$\\
+17. \Big.$a+6b-5=0$ & $a-b^2-8=0$\\
+18. \Big.$a-2b+1=0$ & $a-2b^2-12b+4=0$\\
+19.\Big. $2a+b-2=0$ & $8a+b^2-8=0$\\
+20. \Big.$a+4b-19=0$ & $8a+5b^2-101=0$\\
+21. \Big.$a+4b-18=0$ & $2a+5b^2-57=0$\\
+\end{tabular}
+\end{center}
+}
+
+
+
+% CHILD SECTION END
+
+
+
+% CHILD SECTION START
+

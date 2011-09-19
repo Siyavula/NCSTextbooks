@@ -1,0 +1,640 @@
+\evensidemargin = 0.46cm
+\oddsidemargin = 0.46cm
+\topmargin = -1.54cm
+\headheight = 1cm
+\headsep = 0.5cm
+\textwidth = 14cm
+\textheight = 25.7cm
+\footskip = 1.25cm
+\setlength{\parindent}{0ex}
+\setlength{\parskip}{2ex}
+\pagestyle{headings}
+\marginparsep = 0.5cm
+\marginparwidth = 2cm
+\hbadness=10000
+
+\def\beforepreface{
+\pagenumbering{roman}
+\pagestyle{plain}
+\thispagestyle{empty}%
+\pagebreak[4]%\newpage
+\setcounter{page}{1}
+}
+
+\def\prefacesection#1{%
+\parskip 0pt
+\chapter*{#1}
+\addcontentsline{toc}{chapter}{#1}}
+\parskip 0pt
+
+\def\afterpreface{%\newpage
+\parskip 0pt
+\addcontentsline{toc}{chapter}{Table of Contents}
+\addtolength{\parskip}{-0.75ex}
+\tableofcontents
+\addtolength{\parskip}{+0.75ex}
+\cleardoublepage
+\pagenumbering{arabic}
+\pagestyle{fancy}
+\renewcommand{\footrulewidth}{0.4pt}}
+
+
+
+\makeatletter
+\def\thickhrulefill{\leavevmode \leaders \hrule height 1pt\hfill \kern \z@}
+\renewcommand{\maketitle}{\begin{titlepage}%
+    \let\footnotesize\small
+    \let\footnoterule\relax
+    \parindent \z@
+    \reset@font
+%    \null
+    \vskip 10\p@
+    \hbox{\mbox{%
+        \hspace{4pt}%
+        \includegraphics[width=4cm]{../logohighschool.eps}%
+        \hspace{4pt}
+        }%
+      \vrule depth 0.9\textheight%
+      \mbox{\hspace{2em}}
+      \vtop{% %%%%%%%%%%%%%%%%%%
+        \vskip 40\p@
+        \begin{flushleft}
+          \Large \@author \par
+        \end{flushleft}
+        \vskip 80\p@
+        \begin{flushleft}
+          \huge \bfseries \@title \par
+        \end{flushleft}
+        \vskip 80\p@
+        \begin{center}
+          \large \bfseries Version 0.5.1 \par
+          \large \bfseries \@date \par
+        \end{center}
+        \vfil
+        }}
+    \null
+  \end{titlepage}%
+  \setcounter{footnote}{0}%
+}\makeatother
+
+
+%===========================================================================%
+% Here are the locally defined macros which are designed to make the FHSST
+% authors' lives just that little bit more bearable ;-)
+
+% Note To Self (comes up parenthesised and red)
+\newcommand{\nts}[1]{(\textcolor{red}{NOTE TO SELF: #1})}
+\newcommand{\query}[1]{(\textcolor{red}{Query: #1})}
+\newcommand{\ohm}{\ensuremath{\Omega}}
+\newcommand{\eohm}{\,\Omega}
+\newcommand{\eN}{\,\rm{N}}                %m in text
+\newcommand{\emm}{\,\rm{m}}                %m in text
+\newcommand{\ep}{\,\ekg \cdot \mbox{\ms}}                %m/s in text
+\newcommand{\es}{\,\mathrm{s}}                %s in equation
+\newcommand{\ekg}{\,\mathrm{kg}}                %kg in equation
+\newcommand{\eJ}{\,\mathrm{J}}                %J in equation
+\newcommand{\eA}{\,\mathrm{A}}                %A in equation
+\newcommand{\eV}{\,\mathrm{V}}                %J in equation
+\newcommand{\eW}{\,\mathrm{W}}                %W in equation
+\newcommand{\ms}{m$\cdot$s$^{-1}$}                %m/s in text
+\newcommand{\mss}{m$\cdot$s$^{-2}$}                %m/s in text
+\newcommand{\ems}{\,\mathrm{m \cdot s^{-1}}}            %m/s in equation
+\newcommand{\emss}{\,\mathrm{m \cdot s^{-2}}}            %m/s in equation
+\newcommand{\qstart}[1]{#1\begin{enumerate}}
+\newcommand{\qend}{
+\end{enumerate}}
+\newcommand{\px}{$x$}                % position x, in text
+\newcommand{\py}{$y$}                % position y, in text
+\newcommand{\edx}{\Delta x}        % displacement dx, in text
+\newcommand{\dx}{$\edx$}            % displacement dx, in text
+\newcommand{\edy}{\Delta y}            % displacement dy, in text
+\newcommand{\dy}{$\edy$}            % displacement dy, in text
+\newcommand{\edt}{\Delta t}            % delta time dt, in text
+\newcommand{\dt}{$\edt$}            % delta time dt, in text
+\newcommand{\vel}{$v$}                % velocity
+\newcommand{\kph}{km$\cdot$hr$^{-1}$}    %km/h in text
+\newcommand{\momen}{\vec{p}}            %momentum
+\newcommand{\kener}{KE}                            %kinetic energy
+\newcommand{\poten}{PE}                            %kinetic energy
+\newcommand{\degree}{^{\circ}}
+\newcommand{\ie}{{\em i.e.~}}
+\newcommand{\eg}{{\em e.g.~}}
+\newcommand{\cf}{{\em c.f.~}}
+\newcommand{\resp}{{\em resp.~}}
+\newcommand{\etc}{{\em etc.~}}
+\newcommand{\nb}{{\em n.b.~}}
+\def\deg{$^\circ$}
+\newcommand{\ud}{\mathrm{d}}
+\newcommand{\comment}[1]{}
+
+%===========================================================================%
+
+% This is an environment for conveniently writing out the syllabus for a
+% particular section. using \item for each relevant entry from the syllabus
+\newenvironment{syllabus}{\color{blue}The syllabus requires:\begin{itemize}}{\end{itemize}}
+
+\newcounter{workedexamplecounter} % physics worked example counter
+\setcounter{workedexamplecounter}{1}
+\newlength{\saveparindentlength}
+\setlength{\saveparindentlength}{\parindent}
+% Essay counter :)
+\newcounter{essaycounter} % physics worked example counter
+\setcounter{essaycounter}{1}
+% My attempt to define an essay environment
+% Will take 3 arguments
+% 1 - Essay title
+% 2 - Authors name and details block
+% 3 - About the author block
+
+\newenvironment{essay}[4]%
+{\begin{center}\begin{pspicture}(-5,0)(5,0.01)
+ \psline[linecolor=red]{-}(5,0)(7,0)\psline[linecolor=red]{-}(7,0)(7,-1)
+ \psline[linecolor=red]{-}(-7,0)(-5,0)\psline[linecolor=red]{-}(-7,0)(-7,-1)
+\end{pspicture}\end{center}
+\vspace{.5cm}\setlength{\parindent}{5pt}
+ \textbf{\textit{ Essay \arabic{essaycounter}} \\ #1 \small{by #2}}%
+ \addtocounter{essaycounter}{1}%
+ \par\vspace{.5cm} #4 \\\par\vspace{0.25cm}\textit{\textbf{Author: #2}}\\\vspace{0.5cm}%
+\small{#3}\\ %
+}%
+{%
+\begin{center}\begin{pspicture}(0,0)(5,0.01)%
+ \psline[linecolor=red]{-}(0,0)(5,0)%
+\end{pspicture}\end{center}%
+\setlength{\parindent}{\saveparindentlength}}
+
+\def\essay[#1]{\pagebreak \addcontentsline{toc}{chapter}{\textit{Essay \arabic{essaycounter}}: #1}%
+ \textbf{\Large\textit{Essay \arabic{essaycounter}}: #1\addtocounter{essaycounter}{1}}%
+}
+\def\essayauthor[#1]{\vspace{.5cm}\textit{\textbf{Author: #1}}}
+\def\essayauthorblurb[#1]{\par\vspace{.5cm}{\sffamily #1}}
+\def\essaytitle[#1]{\vspace{0.3cm}{\textbf{\Large #1}}\par\vspace{0.3cm}}
+
+% My attempt to define a worked example environment
+\newcounter{stepcounter}
+\setcounter{stepcounter}{1}
+
+% can we deprecate the use of this, and use \westep instead
+\newcommand{\westep}[1]
+{\par \par%\pagebreak[1]
+ \textbf{\textit{Step \arabic{stepcounter} : #1}}\par
+ \addtocounter{stepcounter}{1}}
+
+\ifx\setlinejoinmode\undefined
+ \newcommand{\setlinejoinmode}[1]{}
+\fi
+\ifx\setlinecaps\undefined
+ \newcommand{\setlinecaps}[1]{}
+\fi
+% This way define your own fonts mapping (for example with ifthen)
+\ifx\setfont\undefined
+ \newcommand{\setfont}[2]{}
+\fi
+
+\newcommand{\pscompass}%
+{\scalebox{1} % Change this value to rescale the drawing.
+{
+\begin{pspicture}(-1.5,-1.561875)(1.5,1.561875)
+\pspolygon[fillstyle=solid,fillcolor=black](0,0.75)(0,0)(-0.15,0.15)
+\pspolygon(0,0.75)(0,0)(0.15,0.15)
+\pspolygon(0.75,0)(0,0)(0.15,-0.15)
+\pspolygon[fillstyle=solid,fillcolor=black](0.75,0)(0,0)(0.15,0.15)
+\pspolygon[fillstyle=solid,fillcolor=black](0,-0.75)(0,0)(0.15,-0.15)
+\pspolygon(0,-0.75)(0,0)(-0.15,-0.15)
+\pspolygon(-0.75,0)(0,0)(-0.15,0.15)
+\pspolygon[fillstyle=solid,fillcolor=black](-0.75,0)(0,0)(-0.15,-0.15)
+\uput[u](0,0.75){N}
+\uput[d](0,-0.75){S}
+\uput[l](-0.75,0){W}
+\uput[r](0.75,0){E}
+\end{pspicture} 
+}
+
+
+
+}
+
+\newcommand{\psrings}%
+{%
+\pscircle*[linewidth=0.5pt](0cm,0cm){.01}
+\pscircle[linewidth=.5pt,linecolor=gray](0cm,0cm){.25}%
+\pscircle[linewidth=.5pt,linecolor=gray](0cm,0cm){.5}%
+\pscircle[linewidth=.5pt,linecolor=gray](0cm,0cm){0.75}%
+\pscircle[linewidth=.5pt,linecolor=gray](0cm,0cm){1}%
+}
+\newcommand{\psintfact}%
+{%
+\rput(0,0){\begin{tabular}{c}\textbf{Interesting}\\ \textbf{Fact}%
+\end{tabular}}
+}
+\newcommand{\psfact}%
+{%
+\begin{pspicture}(-.5,-.5)(.5,.5)
+ \psintfact
+ \PstLens[LensSize=0.5,LensRotation=-60,LensMagnification=1.5](-.04,-.1){\psintfact}
+\end{pspicture}
+}
+\newcommand{\psflag}%
+{%
+\scalebox{0.3} % Change this value to rescale the drawing.
+{\begin{pspicture}(0,-1.92)(3.0744452,1.92)
+\definecolor{color792b}{rgb}{0.6,0.6,0.6}
+\psline[linewidth=0.04cm](0.14559634,1.06)(0.9655963,-1.9)
+\psline[linewidth=0.04cm](0.24559633,1.06)(1.0855963,-1.88)
+\rput{13.182965}(0.26058337,-0.015092337){\psellipse[linewidth=0.04,dimen=outer](0.19559634,1.12)(0.19,0.1)}
+\psline[linewidth=0.04cm](0.94559634,-1.88)(1.0655963,-1.86)
+\psbezier[linewidth=0.04,fillstyle=solid,fillcolor=color792b](0.86559635,1.42)(1.2655964,1.64)(0.94559634,1.24)(1.1455964,1.2)(1.3455963,1.16)(2.4855964,1.9)(2.5255964,1.86)(2.5655963,1.82)(3.054445,0.5009174)(2.9255962,0.54)(2.7967474,0.5790826)(1.4855963,-0.3)(1.3855963,-0.16)(1.2855964,-0.02)(1.3455963,-0.08)(1.3455963,0.12)(1.3455963,0.32)(0.7855963,-0.28)(0.7055963,-0.34)(0.62559634,-0.4)(0.26559633,0.84)(0.28559634,0.86)(0.30559632,0.88)(0.26559633,0.94)(0.26559633,0.94)(0.26559633,0.94)(0.46559635,1.2)(0.86559635,1.42)
+\end{pspicture}}
+}
+\newcommand{\psqmark}%
+{%
+\scalebox{0.2} % Change this value to rescale the drawing.
+{\begin{pspicture}(0,-3.51)(3.98,3.53)
+\psbezier[linewidth=0.04,fillstyle=solid,fillcolor=black](0.92,2.95)(1.22,3.37)(1.84,3.51)(2.44,3.43)(3.04,3.35)(3.96,2.93)(3.88,1.69)(3.8,0.45)(2.06,-0.27)(1.88,-1.09)(1.7,-1.91)(2.3,-2.09)(2.36,-2.15)(2.42,-2.21)(1.44,-1.99)(1.44,-1.15)(1.44,-0.31)(2.94,0.77)(2.84,1.69)(2.74,2.61)(1.36,3.07)(0.68,1.95)(0.0,0.83)(0.62,2.53)(0.92,2.95)
+\pscircle[linewidth=0.04,dimen=outer,fillstyle=solid,fillcolor=black](2.09,-2.96){0.55}
+\end{pspicture}}
+}
+\newcommand{\pstip}%
+{%
+\scalebox{0.2} % Change this value to rescale the drawing.
+{\begin{pspicture}(0,-3.1533968)(2.7831953,3.1533968)
+\definecolor{color2871}{rgb}{0.4,0.4,0.4}
+\psbezier[linewidth=0.04,linecolor=color2871,fillstyle=solid,fillcolor=color2871](0.30975282,1.480703)(0.59950,0.346823)(1.4712996,-1.9338118)(1.9878281,-1.8548366)(2.5043566,-1.7758614)(2.18284,0.61323)(1.8401965,1.87331)(1.497551,3.13339)(0.019999,2.6145823)(0.30975,1.480703)
+\rput{14.334663}(-0.565312,-0.6214416){\pscircle[linewidth=0.04,linecolor=color2871,dimen=outer,fillstyle=solid,fillcolor=color2871](2.18828,-2.55848){0.54}}
+\end{pspicture}}
+}
+\newcommand{\psbulb}%
+{%
+\scalebox{0.2} % Change this value to rescale the drawing.
+{\begin{pspicture}(0,-3.3013647)(4.908481,3.4294605)
+\definecolor{color946b}{rgb}{0.6,0.6,0.6}
+\psbezier[linewidth=0.04](3.2474866,-1.5642114)(2.4098418,0.36813208)(1.6433032,0.23539852)(1.6970811,0.6480823)(1.7508591,1.0607661)(2.1953533,0.77506554)(2.2262053,0.587854)(2.2570574,0.4006425)(1.5684397,0.80635864)(2.196053,1.1597726)(2.8236666,1.5131865)(2.8261008,0.56492805)(2.579102,0.8190769)(2.3321033,1.0732257)(2.7962835,1.2613873)(2.784706,1.2439616)(2.7731285,1.2265358)(2.950391,1.4443324)(3.1070092,1.2329777)(3.2636273,1.0216233)(2.798124,0.61800635)(3.7428837,-1.3030947)
+\psbezier[linewidth=0.08](1.5593854,2.8649697)(2.7758908,3.3884606)(4.093773,2.5972388)(4.3687177,1.4005746)(4.643662,0.20391025)(3.7490253,-0.52576435)(4.290271,-1.442636)(4.831516,-2.3595076)(4.802724,-2.4393263)(4.7687063,-2.3669193)(4.7346883,-2.294512)(4.867481,-2.7182646)(4.2435164,-2.9893143)(3.6195517,-3.2603643)(3.4195778,-3.0228555)(3.4642856,-3.0239484)(3.5089936,-3.025041)(3.3216572,-3.002568)(2.9688413,-2.0634615)(2.6160254,-1.1243552)(1.6755583,-1.3425524)(0.83777916,-0.30250326)(0.0,0.73754585)(0.34288007,2.3414786)(1.5593854,2.8649697)
+\psbezier[linewidth=0.06,fillstyle=solid,fillcolor=color946b](3.5100658,-3.0310266)(3.7100658,-3.2394476)(4.8300657,-2.849974)(4.730066,-2.3194475)(4.630066,-1.7889212)(4.550066,-1.9194475)(4.3100657,-1.4594476)(4.070066,-0.9994476)(2.810066,-1.5794476)(2.9700658,-2.0794475)(3.130066,-2.5794475)(3.310066,-2.8226056)(3.5100658,-3.0310266)
+\psbezier[linewidth=0.05,fillstyle=solid,fillcolor=color946b](3.079205,-2.3223355)(3.1871026,-2.2979457)(3.9018052,-1.5315504)(3.9259355,-1.4160248)(3.9500659,-1.3004992)(4.010066,-1.2194476)(3.7197256,-1.3377068)(3.4293854,-1.4559659)(3.0753205,-1.9640672)(2.962319,-2.1313665)(2.8493176,-2.2986655)(2.9713078,-2.346725)(3.079205,-2.3223355)
+\psbezier[linewidth=0.05,fillstyle=solid,fillcolor=color946b](3.2135053,-2.5354118)(3.3468883,-2.504099)(4.230406,-1.520147)(4.260236,-1.3718271)(4.290066,-1.2235073)(4.1889153,-1.1194476)(4.0053186,-1.271277)(3.8217223,-1.4231063)(3.208703,-2.0754423)(3.0690103,-2.2902327)(2.9293175,-2.505023)(3.0801222,-2.566725)(3.2135053,-2.5354118)
+\psbezier[linewidth=0.05,fillstyle=solid,fillcolor=color946b](3.3335052,-2.735412)(3.4668882,-2.704099)(4.3504057,-1.720147)(4.3802357,-1.5718272)(4.410066,-1.4235073)(4.308915,-1.3194476)(4.1253185,-1.471277)(3.9417222,-1.6231064)(3.328703,-2.2754421)(3.1890101,-2.4902325)(3.0493176,-2.705023)(3.200122,-2.766725)(3.3335052,-2.735412)
+\psbezier[linewidth=0.05,fillstyle=solid,fillcolor=color946b](3.4935052,-2.975412)(3.6268883,-2.944099)(4.5104055,-1.960147)(4.540236,-1.8118272)(4.570066,-1.6635073)(4.468915,-1.5594476)(4.285319,-1.711277)(4.1017222,-1.8631064)(3.488703,-2.5154421)(3.3490102,-2.7302325)(3.2093174,-2.945023)(3.3601222,-3.006725)(3.4935052,-2.975412)
+\psbezier[linewidth=0.05,fillstyle=solid,fillcolor=color946b](3.6135051,-3.155412)(3.7468882,-3.1240988)(4.630406,-2.140147)(4.660236,-1.9918271)(4.690066,-1.8435073)(4.5889153,-1.7394476)(4.4053187,-1.891277)(4.221722,-2.0431063)(3.548703,-2.7754421)(3.46901,-2.9102325)(3.3893175,-3.045023)(3.480122,-3.1867251)(3.6135051,-3.155412)
+\rput{31.819052}(-0.8005619,-2.576656){\psellipse[linewidth=0.07,dimen=outer,fillstyle=solid,fillcolor=color946b](4.119578,-2.692639)(0.76116425,0.3465934)}
+\rput{25.244768}(-0.8473483,-2.0893452){\psellipse[linewidth=0.04,dimen=outer,fillstyle=solid,fillcolor=black](4.241361,-2.9366095)(0.27659246,0.1380608)}
+\psbezier[linewidth=0.04](2.403768,2.3592985)(2.611458,2.299041)(2.721967,2.2683775)(3.0574007,1.9846212)(3.3928344,1.7008649)(3.2636173,1.9681277)(3.5846286,1.9902756)(3.90564,2.0124235)(3.2477834,2.7296348)(2.714062,2.59565)(2.1803405,2.4616654)(2.1960783,2.4195557)(2.403768,2.3592985)
+\end{pspicture}}
+}
+\newcommand{\pspencil}%
+{%
+\scalebox{0.2} % Change this value to rescale the drawing.
+{\begin{pspicture}(0,-2.6732397)(5.2826033,2.5843153)
+\definecolor{color3983b}{rgb}{0.6,0.6,0.6}
+\rput{44.4269}(1.5588851,-0.010889986){\psframe[linewidth=0.04,dimen=outer,fillstyle=solid,fillcolor=black](1.2927761,2.2532396)(0.29277614,1.5532397)}
+\psbezier[linewidth=0.04](1.0711963,0.767678)(0.9788245,0.8230626)(2.0244849,1.4042634)(1.9913505,1.4501121)(1.9582161,1.495961)(4.1760063,-0.58293444)(4.514382,-1.123584)(4.8527575,-1.6642336)(5.150486,-2.583232)(5.2065444,-2.6125135)(5.2626033,-2.6417952)(4.336381,-2.2293487)(3.6961355,-1.8021653)(3.0558898,-1.3749818)(1.1635681,0.7122935)(1.0711963,0.767678)
+\psbezier[linewidth=0.04,fillstyle=solid,fillcolor=black](4.7548966,-2.3972247)(4.9297223,-2.5004773)(5.151456,-2.6131008)(5.206459,-2.6331704)(5.261462,-2.6532397)(5.10783,-2.3825366)(5.0126433,-2.1965938)(4.9174566,-2.010651)(4.580071,-2.293972)(4.7548966,-2.3972247)
+\psline[linewidth=0.04cm](1.3127761,0.99323976)(3.7127762,-1.3467603)
+\psline[linewidth=0.04cm](1.6727761,1.2132398)(4.0727763,-1.1267602)
+\psbezier[linewidth=0.04](4.0327764,-1.0867603)(4.292776,-1.3867602)(4.6527762,-1.1667602)(4.5327764,-1.2067603)
+\psbezier[linewidth=0.04](3.612776,-1.2467602)(4.352776,-1.7467602)(4.1527762,-1.4667603)(4.0871353,-1.1067603)
+\psbezier[linewidth=0.04](3.6927762,-1.3067603)(3.8927763,-1.7067603)(3.7527761,-1.9667603)(3.792776,-1.8067603)
+\rput{41.58525}(1.5649645,0.18445837){\psellipse[linewidth=0.04,dimen=outer,fillstyle=solid,fillcolor=black](0.539593,2.1529272)(0.4898439,0.2609555)}
+\psbezier[linewidth=0.04,fillstyle=solid,fillcolor=color3983b](1.3428409,2.242443)(1.6086246,2.2932398)(1.5615585,2.142183)(1.4889802,2.0629127)(1.4164017,1.9836423)(1.8161182,2.040834)(1.794309,1.7979672)(1.7724998,1.5551004)(2.352776,1.7629943)(1.9469734,1.4005489)(1.5411707,1.0381036)(2.0222244,1.4581892)(1.844831,1.3085054)(1.6674373,1.1588216)(1.937567,1.409145)(1.7413607,1.2381673)(1.5451542,1.0671896)(1.4235525,0.9589731)(1.1182237,0.7161064)(0.8128949,0.47323975)(0.90062475,1.0635847)(0.85651326,0.9810519)(0.81240183,0.8985192)(0.5511844,1.0472883)(0.616612,1.2239187)(0.6820397,1.4005489)(0.4606455,1.093056)(0.3767108,1.3343126)(0.29277614,1.5755692)(1.0770572,2.1916463)(1.3428409,2.242443)
+\psbezier[linewidth=0.04](1.0027244,1.0147622)(1.1309127,1.3605639)(1.5727762,1.6332397)(1.7327762,1.6532397)
+\psbezier[linewidth=0.04](0.88272446,1.1747621)(1.0109127,1.520564)(1.3527762,1.7132398)(1.5127761,1.7732397)
+\psbezier[linewidth=0.04](0.7427244,1.3147621)(0.87091273,1.660564)(1.2127762,1.8532398)(1.3727762,1.9132397)
+\rput{-141.02766}(10.480751,-1.0945002){\pstriangle[linewidth=0.04,dimen=outer,fillstyle=solid](5.046733,-2.6609855)(0.21336946,0.5188883)}
+\end{pspicture}}
+}
+
+\newenvironment{TempEnv}[3]%
+{% This is a picture at the beginning, a line or bar or something else
+\begin{center}
+   \begin{pspicture}(0,-0.2)(5,0.2)
+      \psline[doubleline=true,linewidth=1pt]{-}(0,0)(5,0)
+      \psline[doubleline=true,linewidth=1pt,border=3pt](2,0.2)(2.5,-0.2)(3,0.2)
+   \end{pspicture}
+\end{center}% End of opening picture
+% this command puts a bar in the margin and sets the bar width
+\setlength{\changebarwidth}{8pt}\cbstart
+% Now we set margins
+\begin{quotation}
+\noindent
+\vspace{.5cm}
+\setlength{\parindent}{0pt}
+%% Title and counter
+\textbf{\textit{Worked Example \arabic{workedexamplecounter}: }
+#1}\par
+\textbf{Question:} #2\par
+\textbf{Answer}\par #3%
+\addtocounter{workedexamplecounter}{1}\setcounter{stepcounter}{1}%
+\par%\vspace{.25cm}
+}%
+{\cbend
+\end{quotation}\begin{center}\begin{pspicture}(0,-0.2)(5,0.2)
+\psline[doubleline=true,linewidth=1pt]{-}(0,0)(5,0)
+\psline[doubleline=true,linewidth=1pt,border=3pt](2,-0.2)(2.5,0.2)(3,-0.2)
+\end{pspicture}\end{center}
+\setlength{\parindent}{\saveparindentlength}}
+
+
+
+
+\newenvironment{IFact}[1]%
+{\vspace{3mm}\rmfamily
+ \begin{center}\begin{pspicture}(0,0)(5,0.01)
+ \psline[linecolor=red]{-}(0,0)(5,0)
+\end{pspicture}\end{center}
+%\psshadowbox{
+ \begin{quote}%
+\rput(-1.5,0){\psfact}\noindent #1%
+\end{quote}%
+ }%}
+{\begin{center}\begin{pspicture}(0,0)(5,0.01)
+ \psline[linecolor=red]{-}(0,-0.1)(5,-0.1)
+\end{pspicture}\end{center}
+\vspace{3mm}\sffamily}%
+
+%Defining our own aside environment!
+\newcommand{\Extension}[2]
+{\vspace{3mm}
+\begin{quotation}
+\rput(-2.5,0){\psbulb}\noindent%
+\textit{Extension: #1}\\
+#2
+\end{quotation}
+\vspace{3mm}}
+
+\newcommand{\Definition}[2]{
+\vspace{3mm}
+\begin{center}
+\colorbox{lightgray}{\begin{minipage}[t]{0.95\textwidth}
+\rput(-1.5,0){\psflag}\noindent%
+\textbf{Definition: #1}\par
+#2
+\end{minipage}}
+\end{center}
+\vspace{3mm}}
+
+
+\newcommand{\HistoricalNote}[2]{
+\vspace{3mm}
+\begin{center}
+\psshadowbox[framearc=0.2]{\begin{minipage}[t]{0.95\textwidth}
+\textbf{Historical Note: #1}\par
+#2
+\end{minipage}}
+\end{center}
+\vspace{3mm}}
+
+
+\mathchardef\ocomma="013B
+\mathchardef\pcomma="613B
+\mathcode`\,="8000
+{\catcode`\,=\active
+ \gdef,{\obeyspaces
+ \futurelet\next\smartcomma}}
+\def\smartcomma{\if\space\next
+ \pcomma\else\ocomma\fi}
+
+%the macro divrule#1#2 produces a rule the same width as
+%#2 digits, indented by the width of #1 digits.
+%~ is used as an active character to produce a space equal to a comma
+% this is in order to align numbers properly
+\newdimen\digitwidth
+\settowidth\digitwidth{,}
+%{\catcode`\~=\active
+% \gdef~{\hspace{\digitwidth}}}
+\def\divrule#1#2{%
+ \noalign{\moveright#1\digitwidth%
+ \vtop{\hrule width#2\digitwidth}}}
+
+% Adds a reminder to put an example in.
+\newcommand{\Ex}{(\textcolor{red}{ADD AN EXAMPLE HERE})}
+\newcommand{\new}[1]{{\textit #1}}
+\newcommand{\advanced}[1]{\nts{Advanced: #1}}
+\def\deg{$^\circ$}
+
+\newcommand{\equ}[2]{\begin{equation}#1\label{#2}\end{equation}}
+\newcommand{\nequ}[1]{\begin{equation*}#1\end{equation*}}
+
+\newcommand{\Tip}[1]
+{\vspace{3mm}
+\begin{center}
+\begin{minipage}[t]{0.95\textwidth}
+\rput(-1.5,0){\pstip}\noindent%
+\textbf{Important:} #1
+\end{minipage}
+\end{center}
+\vspace{3mm}}
+
+\newcommand{\GlossEntry}[2]
+{%\vspace{3mm}
+%\begin{center}
+\marginpar{
+\textit{\textbf{#1} : #2}
+}
+%\newglossaryentry{#1}{name=#1,description=#2}
+%\end{center}
+%\vspace{3mm}
+}
+
+\newcommand{\MarginTip}[1]{
+\marginpar{\begin{center}
+\psshadowbox{\begin{minipage}[t]{\marginparwidth}%
+ #1%
+ \end{minipage}}
+\end{center}}
+}
+
+\newcommand{\Activity}[3]{
+\vspace{3mm}
+\begin{center}
+\begin{pspicture}(0,-0.1)(10,0.1)\psline[linewidth=1pt]{-}(0,0)(10,0)
+\end{pspicture}
+  \begin{quotation} % or save, then modify margin
+     \textbf{Activity :: #1 : #2}\par #3%
+  \end{quotation} % or set margins back to normal
+\begin{pspicture}(0,-0.1)(10,0.1)\psline[linewidth=1pt]{-}(0,0)(10,0)
+\end{pspicture}
+\end{center}
+\vspace{3mm}}
+
+\newcommand{\Aim}[1]{\par\noindent\textbf{Aim:} \par\noindent #1}
+\newcommand{\Apparatus}[1]{\par\noindent\textbf{Apparatus:} \par\noindent #1}
+\newcommand{\Method}[1]{\par\noindent\textbf{Method:} \par\noindent #1}
+\newcommand{\Results}[1]{\par\noindent\textbf{Results:} \par\noindent #1}
+\newcommand{\Conclusions}[1]{\par\noindent\textbf{Conclusions:} \par\noindent
+#1}
+
+\newcommand{\Exercise}[2]{
+\vspace{3mm}
+\begin{center}
+\begin{pspicture}(0,-0.2)(5,0.2)\psline[linewidth=1pt]{-}(0,0)(5,0)
+\end{pspicture}
+  \begin{quotation} % or save, then modify margin
+     \rput(-2.5,0){\psqmark}\noindent%
+     \textbf{Exercise: #1}\par #2%
+  \end{quotation} % or set margins back to normal
+\begin{pspicture}(0,-0.2)(5,0.2)\psline[linewidth=1pt]{-}(0,0)(5,0)
+\end{pspicture}
+\end{center}
+\vspace{3mm}}
+
+\newtheorem{Theorem}{Theorem}
+\newtheorem{Lemma}{This is a leemmma}
+
+\newcommand{\mytheorem}[3]{
+{\begin{Theorem}{#2}\label{#1}\end{Theorem}}
+\textbf{Proof}:{#3}}
+
+\newcommand{\schooltheorem}[6]{
+{\begin{Theorem}{#2}:#3\label{#1}\end{Theorem}}
+\textbf{Given}:{#4} \par  
+\textbf{R.T.P.}:{#5} \par
+\textbf{Proof}:{#6}
+}
+\newenvironment{wex}[3]
+{% This is a picture at the beginning, a line or bar or something else
+% this command puts a bar in the margin and sets the bar width
+% Now we set margins
+% \begin{center}
+%\pagebreak
+%\begin{flushleft}
+%\begin{pspicture}(0,0)(10,0.01)
+% \psline[linecolor=gray,linewidth=3pt]{-}(0,0)(10,0)
+% \psline[linecolor=gray]{-}(0,0)(0,-2)
+%\end{pspicture}
+%\end{flushleft}
+%\end{center}
+\begin{quotation}
+\noindent
+\vspace{.5cm}
+\setlength{\parindent}{0pt}
+%% Title and counter
+\rput(-2.0,0){\pspencil}\noindent
+\begin{mdframed}[linewidth =2,margin=40]
+\textbf{\textit{Worked Example \arabic{workedexamplecounter}: }
+#1}\par
+\textbf{Question:} #2\par
+\textbf{Answer}\par #3%
+\addtocounter{workedexamplecounter}{1}\setcounter{stepcounter}{1}%
+\par%\vspace{.25cm}
+}%
+{%
+\end{mdframed}
+\end{quotation}
+%\nopagebreak[4]
+\begin{flushright}
+%\begin{pspicture}(0,0)(10,0.01)
+% \psline[linecolor=gray,linewidth=3pt]{-}(0,0)(10,0)
+% \psline[linecolor=gray]{-}(10,0)(10,2)
+%\end{pspicture}
+\end{flushright}
+\setlength{\parindent}{\saveparindentlength}}
+
+\newcommand{\MarginCompass}{\marginpar{\begin{center}\pscompass\end{center}}}
+
+\newcommand{\todo}[1]{(\textcolor{red}{To Do: #1})}
+
+%Chemistry Definitions
+\def\beaker{\psline[linearc=7pt](0,2)(0,0)(1.5,0)(1.5,2)\psellipse(0.75,2)(0.8,0.1)}
+\def\filledbeaker{\psline[linearc=7pt](0,2)(0,0)(1.5,0)(1.5,2)
+\psline[fillstyle=solid,fillcolor=lightgray,linearc=7pt](0,1)(0,0)(1.5,0)(1.5,1)\psellipse(0.75,2)(0.8,0.1)}
+
+\def\bunsen{
+\pnode(0,0){A}\pnode(0,0.2){C}\pnode(1.4,0.2){D}
+\pnode(0.6,0.4){E}\pnode(0.8,0.4){F}\pnode(0.7,0.4){EF}
+\pnode(0.6,1.4){K}\pnode(0.8,1.4){L}
+\pnode(0,0.6){G}\pnode(0.6,0.6){H}
+\pnode(0,0.7){I}\pnode(0.6,0.7){J}
+\pnode(0.5,0.75){J1}\pnode(0.9,0.95){J2}
+\pnode(0.5,1.6){M}\pnode(0.9,2){N}
+\pnode(0.55,1.4){O}\pnode(0.85,1.6){P}
+\psframe(A)(D)
+\psline(C)(E)\psline(D)(F)
+\psellipse(EF)(0.1,0.05)
+\psframe[fillstyle=solid,linestyle=none,fillcolor=white](E)(0.9,0.5)
+\psline(E)(K)\psline(F)(L)
+\psline(G)(H)\psline(I)(J)
+\psframe(M)(N)\psframe(O)(P)
+\psframe[fillstyle=solid,fillcolor=white](J1)(J2)
+\pscircle(0.7,0.85){0.05}\pscircle(0.6,0.85){0.05}\pscircle(0.8,0.85){0.05}}
+
+\def\stand{\psline(0,0)(0.5,2.5)\psline(0,2.5)(2.5,2.5)\psline(2.5,0)(2,2.5)}
+
+
+%Physics Definitions
+\def\rope{\psline(0,0.2)(5,.2)\psline(0,0)(5,0)\multirput(0,0)(0.2,0){25}{\psline(0,0)(0.2,0.2)}}
+
+\def\cart{\psframe(0,0.4)(1,1)\pscircle(0.2,0.2){0.2}\pscircle(0.8,0.2){0.2}}
+
+% Arrow for objects and images
+\newpsobject{oi}{psline}{arrowsize=6pt, arrowlength=1.5, arrowinset=0, linewidth=2pt}
+\psset{lensHeight=3,lensColor=lightgray}
+\newpsobject{PrincipalAxis}{psline}{linewidth=0.5pt,linecolor=gray}
+
+%Maths Definitions
+\def\arrow{\psline(0,0)(0.2;-45)\psline(0,0)(0.2;45)}
+
+\newcommand{\fline}[1]{\mathrm{#1}}
+
+\psset{gridcolor=lightgray,RightAngleSize=0.2}
+
+\def\andgate{\rput(1.2,0){
+\psline(0.75,1)(0,1)(0,0)(0.75,0)
+\psarcn(0.75,0.5){0.5}{90}{-90}
+\psline(1.25,0.5)(2,0.5)
+\psline(-0.75,0.3)(0,0.3)
+\psline(-0.75,0.7)(0,0.7)
+\uput[l](-0.75,0.7){A}
+\uput[l](-0.75,0.3){B}
+\uput[r](2,0.5){AB}}}
+
+\def\nandgate{\rput(1.2,0){
+\psline(0.75,1)(0,1)(0,0)(0.75,0)
+\psarcn(0.75,0.5){0.5}{90}{-90}
+\psline(1.25,0.5)(2,0.5)
+\psline(-0.75,0.3)(0,0.3)
+\psline(-0.75,0.7)(0,0.7)
+\psdot[dotstyle=o](1.32,0.5)
+\uput[l](-0.75,0.7){A}
+\uput[l](-0.75,0.3){B}
+\uput[r](2,0.5){$\overline{\rm{AB}}$}}}
+
+\def\notgate{\rput(1.2,0){
+\pspolygon(0.75,0.5)(0,1)(0,0)
+\psdot[dotstyle=o](0.8,0.5)
+\psline(0.8,0.5)(1.5,0.5)
+\psline(-0.75,0.5)(0,0.5)
+\uput[l](-0.75,0.5){A}
+\uput[r](1.5,0.5){$\bar{\rm{A}}$}}}
+
+\def\orgate{\rput(1.2,0.5){
+\pscurve(-0.1,0.5)(0,0)(-0.1,-0.5)
+\psline(-0.1,-0.5)(0.1,-0.5)
+\pscurve(0.1,-0.5)(0.5,-0.4)(0.95,0)
+\psline(-0.1,0.5)(0.1,0.5)
+\pscurve(0.1,0.5)(0.5,0.4)(0.95,0)
+\psline(-0.75,-0.3)(-0.05,-0.3)
+\psline(-0.75,0.3)(-0.05,0.3)
+\psline(0.95,0)(1.7,0)
+\uput[r](1.7,0){A+B}
+\uput[l](-0.75,0.3){A}
+\uput[l](-0.75,-0.3){B}}}
+
+\def\norgate{\rput(1.2,0.5){
+\pscurve(-0.1,0.5)(0,0)(-0.1,-0.5)
+\psline(-0.1,-0.5)(0.1,-0.5)
+\pscurve(0.1,-0.5)(0.5,-0.4)(0.95,0)
+\psline(-0.1,0.5)(0.1,0.5)
+\pscurve(0.1,0.5)(0.5,0.4)(0.95,0)
+\psline(-0.75,-0.3)(-0.05,-0.3)
+\psline(-0.75,0.3)(-0.05,0.3)
+\psline(0.95,0)(1.7,0)
+\psdot[dotstyle=o](0.97,0)
+\uput[r](1.7,0){$\overline{\rm{A+B}}$}
+\uput[l](-0.75,0.3){A}
+\uput[l](-0.75,-0.3){B}}}
+
+
+% just remove sections form header - too long
+\renewcommand{\sectionmark}[1]{\markright{}{}}
+
+

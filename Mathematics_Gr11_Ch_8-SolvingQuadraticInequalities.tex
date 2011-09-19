@@ -1,0 +1,258 @@
+\chapter{Solving Quadratic Inequalities - Grade 11}
+\label{m:se:qineq11}
+
+\section{Introduction}
+Now that you know how to solve quadratic equations, you are ready to learn how to solve quadratic inequalities.
+
+\section{Quadratic Inequalities}
+%\begin{syllabus}
+%\item Solve quadratic inequalities in one variable and interpret the solution graphically
+%\end{syllabus}
+
+A \emph{quadratic inequality} is an inequality of the form
+\begin{eqnarray*}
+ax^{2} + bx + c > 0\\
+ax^{2} + bx + c \geq 0\\
+ax^{2} + bx + c < 0\\
+ax^{2} + bx + c \leq 0
+\end{eqnarray*}
+
+Solving a quadratic inequality corresponds to working out in what region the graph of a quadratic function lies above or below the $x$-axis.
+
+\begin{wex}{Quadratic Inequality}{Solve the inequality $4x^{2} - 4x + 1 \leq 0$ and interpret the solution graphically.} {
+\westep{Factorise the quadratic}
+Let $f(x) = 4x^{2} - 4x + 1$. Factorising this quadratic function gives $f(x) = (2x - 1)^{2}$.
+
+\westep{Re-write the original equation with factors}
+\nequ{(2x - 1)^{2} \leq 0}
+\westep{Solve the equation}
+$f(x) = 0$ only when $x = \frac{1}{2}$.
+\westep{Write the final answer}
+This means that the graph of $f(x)=4x^{2} - 4x + 1$ touches the $x$-axis at $x=\frac{1}{2}$, but there are no regions where the graph is below the $x$-axis.
+
+\westep{Graphical interpretation of solution}
+\begin{center}
+\begin{pspicture}(-3,-1)(3,0.4)
+%\psgrid[gridcolor=gray]
+\psline{<->}(-3,0)(3,0)
+\multirput(-2.5,0)(0.5,0){11}{\psline(0,-0.1)(0,0.1)}
+\multido{\n=-2+1}{5}{\uput[d](\n,-0.2){\n}}
+\psdot(0.5,0)
+\uput[u](0.5,0.1){$x=\frac{1}{2}$}
+\end{pspicture}
+\end{center}
+}\end{wex}
+
+\begin{wex}{Solving Quadratic Inequalities}{Find all the solutions to the inequality $x^{2} - 5x + 6 \geq 0$.}
+{\westep{Factorise the quadratic}
+The factors of $x^{2} - 5x + 6$ are $(x - 3)(x - 2)$.
+
+\westep{Write the inequality with the factors}
+\begin{eqnarray*}
+x^{2} - 5x + 6&\ge&0\\
+(x - 3)(x - 2)&\ge&0
+\end{eqnarray*}
+
+\westep{Determine which ranges correspond to the inequality}
+We need to figure out which values of $x$ satisfy the inequality. From the answers we have five regions to consider.
+
+\begin{center}
+\begin{pspicture}(0,0)(5,1)
+\psline[arrows=<->](0,0.5)(5,0.5)
+\psdots[dotsize=5pt](2,0.5)(3,0.5)
+\multido{\n=1+1}{4}
+{\uput[d](\n,0.4){\n}
+\psline(\n,0.4)(\n,0.6)}
+\uput[u](1,0.5){A}
+\uput[u](2,0.5){B}
+\uput[u](2.5,0.5){C}
+\uput[u](3,0.5){D}
+\uput[u](4,0.5){E}
+\end{pspicture}
+\end{center}
+
+\westep{Determine whether the function is negative or positive in each of the regions}
+Let $f(x)=x^{2} - 5x + 6$. For each region, choose any point in the region and evaluate the function.
+\begin{center}
+\begin{tabular}{cccc}
+& &$f(x)$ &sign of $f(x)$\\
+Region A&$x<2$ &$f(1)=2$ &+\\
+Region B&$x=2$ &$f(2)=0$ &+\\
+Region C&$2<x<3$ &$f(2,5)= -2,5$ &-\\
+Region D&$x=3$ &$f(3)=0$ &+\\
+Region E&$x>3$ &$f(4)=2$ &+\\
+\end{tabular}
+\end{center}
+We see that the function is positive for $x\le2$ and $x\ge 3$.
+
+\westep{Write the final answer and represent on a number line}
+We see that $x^{2} - 5x + 6 \geq 0$ is true for $x\le2$ and $x\ge 3$.
+
+\begin{center}
+\begin{pspicture}(0,0)(5,1)
+\psline[arrows=<->](0,0.5)(5,0.5)
+\psdots[dotsize=5pt](2,0.5)(3,0.5)
+\multido{\n=1+1}{4}
+{\uput[d](\n,0.4){\n}
+\psline(\n,0.4)(\n,0.6)}
+\psline[linewidth=3pt]{->}(2,0.5)(0,0.5)
+\psline[linewidth=3pt]{->}(3,0.5)(5,0.5)
+\end{pspicture}
+\end{center}
+}\end{wex}
+
+\begin{wex}{Solving Quadratic Inequalities}{Solve the quadratic inequality $-x^{2} - 3x + 5 > 0$.}{
+\westep{Determine how to approach the problem}
+Let $f(x) = -x^{2} - 3x + 5$. $f(x)$ cannot be factorised so, use the quadratic formula to determine the roots of $f(x)$. The $x$-intercepts are solutions to the quadratic equation
+\begin{eqnarray*}
+-x^{2}- 3x + 5 &=& 0 \\
+x^{2} + 3x - 5 &=& 0\\
+\therefore x &=& \frac{-3 \pm \sqrt{(3)^{2} - 4(1)(-5)}}{2(1)} \\
+&=& \frac{-3 \pm \sqrt{29}}{2}\\
+x_1 &=& \frac{-3 - \sqrt{29}}{2}\\
+x_2 &=& \frac{-3 + \sqrt{29}}{2}
+\end{eqnarray*}
+
+\westep{Determine which ranges correspond to the inequality}
+We need to figure out which values of $x$ satisfy the inequality. From the answers we have five regions to consider.
+
+\begin{center}
+\begin{pspicture}(0,0)(5,1)
+\psline[arrows=<->](0,0.5)(5,0.5)
+\psdots[dotsize=5pt](2,0.5)(3,0.5)
+\multido{\n=1+1}{4}
+{%\uput[d](\n,0.4){\n}
+\psline(\n,0.4)(\n,0.6)}
+\uput[u](1,0.5){A}
+\uput[u](2,0.5){B}
+\uput[d](2,0.5){$x_1$}
+\uput[u](2.5,0.5){C}
+\uput[u](3,0.5){D}
+\uput[d](3,0.5){$x_2$}
+\uput[u](4,0.5){E}
+\end{pspicture}
+\end{center}
+
+\westep{Determine whether the function is negative or positive in each of the regions}
+We can use another method to determine the sign of the function over different regions, by drawing a rough sketch of the graph of the function. We know that the roots of the function correspond to the $x$-intercepts of the graph. Let $g(x)=-x^{2} - 3x + 5$. We can see that this is a parabola with a maximum turning point that intersects the $x$-axis at $x_1$ and $x_2$.
+
+\begin{center}
+\begin{pspicture}(-3.8,-2)(1.6,5.5)
+%\psgrid
+\psset{unit=0.75}
+\psaxes{<->}(0,0)(-5,-2)(2,8)
+\psplot{-4.5}{1.5}{x 2 exp neg x 3 mul sub 5 add}
+\uput[ul](-4.2,0){$x_1$}
+\uput[ur](1.2,0){$x_2$}
+\end{pspicture}
+\end{center}
+It is clear that $g(x)>0$ for $x_1<x<x_2$
+
+\westep{Write the final answer and represent the solution graphically}
+$-x^{2} - 3x + 5>0$ for $x_1<x<x_2$
+
+\begin{center}
+\begin{pspicture}(0,0)(5,1)
+\psline[arrows=<->](0,0.5)(5,0.5)
+\multido{\n=1+1}{4}
+{%\uput[d](\n,0.4){\n}
+\psline(\n,0.4)(\n,0.6)}
+\uput[d](2,0.5){$x_1$}
+\uput[d](3,0.5){$x_2$}
+\psline[linewidth=3pt](2,0.5)(3,0.5)
+\pscircle[fillstyle=solid,fillcolor=white](2,0.5){0.1}
+\pscircle[fillstyle=solid,fillcolor=white](3,0.5){0.1}
+\end{pspicture}
+\end{center}
+
+}\end{wex}
+
+When working with an inequality where the variable is in the denominator, a different approach is needed.
+
+\begin{wex}{Non-linear inequality with the variable in the denominator}
+{Solve $\dfrac{2}{x+3} \le \dfrac{1}{x-3}$}{
+\westep{Subtract $\frac{1}{x-3}$ from both sides}
+\nequ{\dfrac{2}{x+3} - \dfrac{1}{x-3} \le 0}
+\westep{Simplify the fraction by finding LCD}
+\begin{eqnarray*}
+\dfrac{2(x-3)-(x+3)}{(x+3)(x-3)} \le 0 \\
+\dfrac{x-9}{(x+3)(x-3)} \le 0
+\end{eqnarray*}
+\westep{Draw a number line for the inequality}
+\begin{center}
+% Generated with LaTeXDraw 1.9.3
+% Tue Jan 01 20:09:06 CAT 2008
+% \usepackage[usenames,dvipsnames]{pstricks}
+% \usepackage{epsfig}
+% \usepackage{pst-grad} % For gradients
+% \usepackage{pst-plot} % For axes
+\scalebox{.75} % Change this value to rescale the drawing.
+{
+\begin{pspicture}(0,-0.9)(15,0.9)
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{<->}(0.0,-0.0128125)(14.16,-0.0128125)
+\psline[linewidth=0.04cm](1.2,0)(1.16,-0.4)
+\psline[linewidth=0.04cm](3.96,0)(3.96,-0.4)
+\psline[linewidth=0.04cm](13.18,0)(13.18,-0.4)
+\usefont{T1}{ptm}{m}{n}
+\rput(1.2,-0.6){-3}
+\usefont{T1}{ptm}{m}{n}
+\rput(3.96,-0.6){3}
+\usefont{T1}{ptm}{m}{n}
+\rput(13.18,-0.6){9}
+\usefont{T1}{ptm}{m}{n}
+\rput(13.18,0.4){0}
+\usefont{T1}{ptm}{m}{n}
+\rput(14,0.4){+}
+\usefont{T1}{ptm}{m}{n}
+\rput(8.7,0.4){-}
+\usefont{T1}{ptm}{m}{n}
+\rput(4.3,0.4){undef}
+\usefont{T1}{ptm}{m}{n}
+\rput(2.4,0.4){+}
+\usefont{T1}{ptm}{m}{n}
+\rput(1.4,0.4){undef}
+\usefont{T1}{ptm}{m}{n}
+\rput(0.2,0.4){-}
+\end{pspicture}
+}
+\end{center}
+We see that the expression is negative for $x < -3$  or $3 < x \le 9$.
+\westep{Write the final answer}
+\nequ{x < -3 \quad or  \quad 3 < x \le 9}
+}
+\end{wex}
+
+
+\section{End of Chapter Exercises}
+Solve the following inequalities and show your answer on a number line.
+\begin{enumerate}
+\item{Solve: $x^2-x<12$.}
+\item{Solve: $3x^2 > -x + 4$}
+\item{Solve: $y^2 < -y - 2$}
+\item{Solve: $-t^2 + 2t > -3$}
+\item{Solve: $s^2 - 4s > -6$}
+\item{Solve: $0\geq7x^2-x+8$}
+\item{Solve: $0\geq -4x^2-x$}
+\item{Solve: $0\geq6x^2$}
+\item{Solve: $2x^2 + x + 6\leq0$}
+\item{Solve for $x$ if: $\dfrac{x}{x-3} < 2$ and $x \neq 3$.}
+\item{Solve for $x$ if: $\dfrac{4}{x-3} \leq 1$.}
+\item{Solve for $x$ if: $\dfrac{4}{(x-3)^2} < 1$.}
+\item{Solve for $x$: $\dfrac{2x-2}{x-3} > 3$}
+\item{Solve for $x$: $\dfrac{-3}{(x-3)(x+1)} <0$}
+\item{Solve: $(2x-3)^2 < 4$}
+\item{Solve: $2x \leq \dfrac{15-x}{x}$}
+\item{Solve for $x$: \quad $\dfrac{x^2 + 3}{3x - 2} \leq 0$}
+\item{Solve: $x-2 \geq \dfrac{3}{x}$}
+\item{Solve for $x$: $\dfrac{x^2+3x-4}{5+x^4} \leq 0$}
+\item{Determine all real solutions: $\dfrac{x-2}{3-x} \geq 1$}
+\end{enumerate}
+
+
+
+% CHILD SECTION END
+
+
+
+% CHILD SECTION START
+
