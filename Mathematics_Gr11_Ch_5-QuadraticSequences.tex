@@ -1,4 +1,4 @@
-\chapter{Quadratic Sequences - Grade 11}
+\chapter{Quadratic Sequences}
 \label{m:pin:g11}
 
 %\begin{syllabus}
@@ -12,7 +12,7 @@
 \section{Introduction}
 In Grade 10, you learned about arithmetic sequences, where the difference between consecutive terms was constant. In this chapter we learn about quadratic sequences.
 
-\section{What is a \textit{quadratic sequence}?}
+\section{What is a \textit{Quadratic Sequence}?}
 
 \Definition{Quadratic Sequence}{A quadratic sequence is a sequence of numbers in which the second differences between each consecutive term differ by the same amount, called a common second difference.}
 
@@ -32,16 +32,16 @@ a_4 - a_3 &= 7 - 4 &= 3 \\
 a_5 - a_4 &= 11 - 7 &= 4
 \end{eqnarray*}
 
-We then work out the \textit{second differences}, which is simply obtained by taking the difference between the consecutive differences \{$1; \: 2; \: 3; \: 4; \: \ldots $\} obtained above:
+We then work out the \textit{second differences}, which are simply obtained by taking the difference between the consecutive differences \{$1; \: 2; \: 3; \: 4; \: \ldots $\} obtained above:
 \begin{eqnarray*}
 2 - 1 &=& 1 \\
 3 - 2 &=& 1 \\
 4 - 3 &=& 1 \\
 \ldots
 \end{eqnarray*}
-We then see that the second differences are equal to 1. Thus, (\ref{eq:mp:s:quadseq:1}) is a \textit{quadratic sequence}. 
+We then see that the second differences are equal to $1$. Thus, Equation (\ref{eq:mp:s:quadseq:1}) is a \textit{quadratic sequence}. 
 
-Note that the differences between consecutive terms (that is, the first differences) of a quadratic sequence form a sequence where there is a constant difference between consecutive terms. In the above example, the sequence of \{$1; \: 2; \: 3; \: 4; \: \ldots $\}, which is formed by taking the differences between consecutive terms of (\ref{eq:mp:s:quadseq:1}), has a linear formula of the kind $ax+b$. 
+Note that the differences between consecutive terms (that is, the first differences) of a quadratic sequence form a sequence where there is a constant difference between consecutive terms. In the above example, the sequence of \{$1; \: 2; \: 3; \: 4; \: \ldots $\}, which is formed by taking the differences between consecutive terms of Equation (\ref{eq:mp:s:quadseq:1}), has a linear formula of the kind $ax+b$. 
 
 \Exercise{Quadratic Sequences}{The following are also examples of quadratic
 sequences:
@@ -71,7 +71,7 @@ $57 + 23 = 80$\\
 So the sequence will be:
 $5, 12, 23, 38, 57, 80$
 \westep{We now need to find the formula for this sequence.} 
-We know that the second difference is 4. The start of the formula will therefore be $2n^2$.
+We know that the second difference is $4$. The start of the formula will therefore be $2n^2$.
 \westep{We now need to work out the next part of the sequence.}
 If $n=1$, you have to get the value of term one, which is $5$ in this particular sequence.  The difference between $2n^2 = 2$ and original number ($5$) is $3$, which leads to $n+2$.\\
 Check if it works for the second term, i.e. when $n=2$.\\
@@ -188,15 +188,15 @@ a_n = \frac{D}{2} \cdot {n^2} + (d - \frac {3} {2} \: D) \cdot n + (a_1 - d + D)
 \end{equation}}
 
 \begin{wex}{Using a set of equations}
-{Study the following pattern: 1; 7; 19; 37; 61; ...
+{Study the following pattern: $1; 7; 19; 37; 61; \ldots$
 \begin{enumerate}
-\item{What is the next number in the sequence ?}
+\item{What is the next number in the sequence?}
 \item{Use variables to write an algebraic statement to generalise the pattern.}
-\item{What will the 100th term of the sequence be ?}
+\item{What will the $100^{th}$ term of the sequence be?}
 \end{enumerate}
 }{
 \westep{The next number in the sequence}
-The numbers go up in multiples of 6\\
+The numbers go up in multiples of $6$\\
 $1 + 6(1) = 7$,  then $7 + 6(2) = 19$\\
 $19+ 6(3)=37$, then $37+6(4)=61$\\
 Therefore $61 + 6(5) = 91$\\
@@ -232,7 +232,7 @@ a+b+c &=& 1\\
 \westep{Final answer}
 The general formula for the pattern is $3n^2 - 3n + 1$
 \westep{Term 100}
-Substitute n with 100:\\
+Substitute n with $100$:\\
 $3(100)^2 - 3(100) + 1 = 29~701$\\
 The value for term 100 is 29~701.
 }
@@ -257,12 +257,12 @@ If we plot each of the terms vs. the corresponding index, we obtain a graph of a
 \psaxes[arrows=<->,dx=10,Dx=1,dy=10,Dy=0.5](1,0)(11,8)
 \psplot[plotstyle=curve,arrows=->]{1}{10.5}{x 2 exp 0.05 mul x 0.25 mul add}
 \psplot[plotstyle=dots,arrows=->,plotpoints=10]{1}{10}{x 2 exp 0.05 mul x 0.25 mul add}
-\uput[l](0.4,5){\rotateleft{Term, $a_n$}}
-\uput[r](1,0.35){$y$-intercept, $a_1$}
+\uput[l](0.4,5){\rotateleft{Term: $a_n$}}
+\uput[r](1.4,0.35){$y$-intercept: $a_1$}
 \multips(1,0)(1,0){10}{\psline(0,-.1)(0,.1)}
 \multido{\n=1+1}{10}{\rput(\n,-0.35){\n}}
 %\multido{\n=1+1}{9}{\rput(0.65,\n){$a_{\n}$}}
-\rput(5,-.9){Index, $n$}
+\rput(5,-.9){Index: $n$}
 
 \psline(0.9,0.3)(1.1,0.3)
 \psline(0.9,0.7)(1.1,0.7)
@@ -292,9 +292,9 @@ If we plot each of the terms vs. the corresponding index, we obtain a graph of a
 %\end{figure}
 }
 
-\section{End of chapter Exercises}
+\section{End of Chapter Exercises}
 \begin{enumerate}
-\item{Find the first 5 terms of the quadratic sequence defined by:
+\item{Find the first five terms of the quadratic sequence defined by:
 \nequ{a_n=n^2+2n+1}}
 \item{Determine which of the following sequences is a quadratic sequence by calculating the common second difference:
 \begin{enumerate}

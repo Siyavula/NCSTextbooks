@@ -1,11 +1,11 @@
-\chapter{Solving Simultaneous Equations - Grade 11}
+\chapter{Solving Simultaneous Equations}
 \label{m:se:sim11}
 
 %\begin{syllabus}
 %\item Solve equations in two unknowns, one of which is linear and one of which is quadratic, algebraically or graphically.
 %\end{syllabus}
 
-In grade 10, you learnt how to solve sets of simultaneous equations where both equations were linear (i.e. had the highest power equal to 1). In this chapter, you will learn how to solve sets of simultaneous equations where one is linear and one is quadratic. As in Grade 10, the solution will be found both algebraically and graphically.
+In Grade 10, you learnt how to solve sets of simultaneous equations where both equations were linear (i.e. had the highest power equal to $1$). In this chapter, you will learn how to solve sets of simultaneous equations where one is linear and one is quadratic. As in Grade 10, the solution will be found both algebraically and graphically.
 
 The only difference between a system of linear simultaneous equations and a system of simultaneous equations with one linear and one quadratic equation, is that the second system will have at most two solutions.
 
@@ -38,19 +38,19 @@ Plotting the graph of each equation, gives a straight line for the first equatio
 \begin{figure}[htbp]
 \begin{center}
 \begin{pspicture}(-4,-4)(4,2)
-\psgrid[gridcolor=lightgray,gridlabels=0,gridwidth=0.5pt]
+% \psgrid[gridcolor=lightgray,gridlabels=0,gridwidth=0.5pt]
 \psaxes[dx=1,Dx=2,Dy=2,dy=0.5,arrows=<->](0,0)(-4,-4)(4,2)
 \pstextpath[c](2.6,0.1){\psplot[xunit=0.5,yunit=0.25,plotstyle=curve,arrows=<->]{-4.5}{6}{2 x mul 4 sub}}{\small{$y=2x-4$}}
 \pstextpath[c](-3,0.1){\psplot[xunit=0.5,yunit=0.25,plotstyle=curve,arrows=<->]{-4.25}{4.25}{x 2 exp neg 4 add}}{\small{$y=4-x^2$}}
-\uput[l](-2,-3){(-4,-12)}
-\uput[u](1.1,0.3){(2,0)}
+\uput[l](-2,-3){$(-4,-12)$}
+\uput[u](1.1,0.3){$(2,0)$}
 \psdots(1,0)(-2,-3)
 \end{pspicture}
 \end{center}
 \label{fig:s11:eq:ex1}
 \end{figure}
 
-The parabola and the straight line intersect at two points: (2,0) and (-4,-12). Therefore, the solutions to the system of equations in (\ref{sim11:example}) is $x=2, y=0$ and $x=-4, y=12$
+The parabola and the straight line intersect at two points: $(2,0)$ and $(-4,-12)$. Therefore, the solutions to the system of equations in (\ref{sim11:example}) is $x=2, y=0$ and $x=-4, y=12$
 
 \begin{wex}{Simultaneous Equations}{Solve graphically:
 \begin{eqnarray*}
@@ -72,13 +72,13 @@ y&=&-3x+9
 \westep{Draw the graphs corresponding to each equation.}
 \begin{center}
 \begin{pspicture}(-5,-1)(5,5)
-\psgrid[subgriddiv=10,gridcolor=lightgray,gridlabels=0,gridwidth=0.1pt]
+% \psgrid[subgriddiv=10,gridcolor=lightgray,gridlabels=0,gridwidth=0.1pt]
 \psaxes[dx=1,dy=1,Dy=10,Dx=2,arrows=<->](0,0)(-5,-1)(5,5)
 \pstextpath[c](-2,0.1){\psplot[xunit=0.5,yunit=0.1,plotstyle=curve,arrows=<->]{-7}{6}{3 x mul neg 9 add}}{\small{$y=-3x+9$}}
 \pstextpath[c](3.2,0.1){\psplot[xunit=0.5,yunit=0.1,plotstyle=curve,arrows=<->]{-7}{7}{x 2 exp 9 sub}}{\small{$y=x^2-9$}}
 \psdots(-3,2.7)(1.5,0)
-\uput[dl](-3,2.7){(-6,27)}
-\uput[d](1.5,-0.2){(3,0)}
+\uput[dl](-3,2.7){$(-6,27)$}
+\uput[d](1.5,-0.2){$(3,0)$}
 \end{pspicture}
 \end{center}
 
@@ -111,8 +111,8 @@ x^2+y=4
 
 is:
 \begin{eqnarray*}
-y&=&2x-4 \quad \mbox{into second equation}\\
-x^2+(2x-4)&=&4\\
+y&=&2x-4 \quad \\
+x^2+(2x-4)&=&4 \\
 x^2+2x-8&=&0 \\
 \mbox{Factorise to get:}\quad (x+4)(x-2)&=&0\\
 \therefore \mbox{the 2 solutions for $x$ are:}\quad x=-4\quad \mbox{and}\quad x=2

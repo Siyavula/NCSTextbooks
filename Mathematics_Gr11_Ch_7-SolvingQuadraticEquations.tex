@@ -1,10 +1,10 @@
-\chapter{Solving Quadratic Equations - Grade 11}
+\chapter{Solving Quadratic Equations}
 \label{m:se:q11}
 
 %\nts{The section on the nature of roots is not in the syllabus and has been included as an `Advanced' section at the end of the chapter.}
 
 \section{Introduction}
-In grade 10, the basics of solving linear equations, quadratic equations, exponential equations and linear inequalities were studied. This chapter extends on that work. We look at different methods of solving quadratic equations.
+In Grade 10, the basics of solving linear equations, quadratic equations, exponential equations and linear inequalities were studied. This chapter extends on that work. We look at different methods of solving quadratic equations.
 
 \section{Solution by Factorisation}
 %\begin{syllabus}
@@ -31,14 +31,14 @@ We see that $sv = -12$ and $s + 2v = -5$. This is a set of simultaneous equation
 \begin{center}
 \begin{tabular}{|c|c|c|}\hline\hline
 $s$ & $v$ & $s + 2v$ \\\hline\hline
-2 & -6 & -10 \\
--2 & 6 & 10 \\
-3 & -4 & -5 \\
--3 & 4 & 5 \\
-4 & -3 & -2 \\
--4 & 3 & 2 \\
-6 & -2 & 2 \\
--6 & 2 & -2 \\\hline
+$2$ & $-6$ & $-10$ \\
+$-2$ & $6$ & $10$ \\
+$3$ & $-4$ & $-5$ \\
+$-3$ & $4$ & $5$ \\
+$4$ & $-3$ & $-2$ \\
+$-4$ & $3$ & $2$ \\
+$6$ & $-2$ & $2$ \\
+$-6$ & $2$ & $-2$ \\\hline
 \end{tabular}
 \end{center}
 We see that the combination $s = 3$ and $v = -4$ gives $s + 2v = -5$.
@@ -55,7 +55,7 @@ Therefore, $x=-\frac{3}{2}$ or $x=4$
 The solutions to $2x^{2} - 5x - 12 = 0$ are $x=-\frac{3}{2}$ or $x=4$.
 }\end{wex}
 
-It is important to remember that a quadratic equation has to be in the form    $ax^2+bx+c = 0$ before one can solve it using the following methods.
+It is important to remember that a quadratic equation has to be in the form    $ax^2+bx+c = 0$ before one can solve it using the factorisation method.
 
 \begin{wex}{Solving quadratic equation by factorisation}
 {Solve for $a$: $a(a-3)=10$}{
@@ -76,7 +76,7 @@ Therefore, $a = -2$ or $a = 5$
 
 \begin{wex}{Solving fractions that lead to a quadratic equation}
 {Solve for $b$: $\frac{3b}{b+2}+ 1 = \frac{4}{b+1}$}{
-\westep{Put both sides over the LCM}
+\westep{Multiply both sides over the lowest common denominator}
 \nequ{\frac{3b(b+1)+(b+2)(b+1)}{(b+2)(b+1)}= \frac{4(b+2)}{(b+2)(b+1)}}
 \westep{Determine the restrictions}
 The denominators are the same, therefore the numerators must be the same.\\
@@ -139,7 +139,7 @@ We demonstrate with a simple example, by trying to solve for $x$ in:
 \equ{x^2-2x-1=0.}{eq:cts:ex1}
 We cannot easily find factors of this term, but the first two terms look similar to the first two terms of the perfect square:
 \nequ{(x-1)^2=x^2-2x+1.}
-However, we can cheat and create a perfect square by adding 2 to both sides of the equation in (\ref{eq:cts:ex1}) as:
+However, we can cheat and create a perfect square by adding $2$ to both sides of the equation in (\ref{eq:cts:ex1}) as:
 \begin{eqnarray*}
 x^2-2x-1&=&0\\
 x^2-2x-1+2&=&0+2\\
@@ -171,7 +171,7 @@ This means $x=1+\sqrt{2}$ or $x=1-\sqrt{2}$. This example demonstrates the use o
 \end{enumerate}
 
 \begin{wex}{Solving Quadratic Equations by Completing the Square}
-{Solve:
+{Solve
 \nequ{x^2 - 10x - 11 = 0}
 by completing the square}
 {
@@ -205,7 +205,7 @@ $(-5)^2=25$. Therefore:
 }
 \end{wex}
 
-\begin{wex}{Solving Quadratic Equations by Completing the Square}{Solve:
+\begin{wex}{Solving Quadratic Equations by Completing the Square}{Solve
 \nequ{2x^2 - 8x - 16 = 0}
 by completing the square}
 {
@@ -245,7 +245,7 @@ Leave the left hand side written as a perfect square
 \nequ{x - 2  = \pm \sqrt{12}}
 
 \westep{Solve for $x$}
-Therefore $x=2-\sqrt{12}$ \quad \rm{or} \quad $x=2+\sqrt{12}$\\
+Therefore $x=2-\sqrt{12} \quad \rm${or}$ \quad x=2+\sqrt{12}$\\
 Compare to answer in step 7.
 }
 \end{wex}
@@ -277,25 +277,25 @@ It is not always possible to solve a quadratic equation by factorising and somet
 Consider the general form of the quadratic function:
 \nequ{f(x) = ax^{2} + bx + c.}
 Factor out the $a$ to get:
-\equ{f(x)=a(x^2+\frac{b}{a}x+\frac{c}{a}).}{eq:cts:ex2}
+\equ{f(x)=a\left(x^2+\frac{b}{a}x+\frac{c}{a}\right).}{eq:cts:ex2}
 Now we need to do some detective work to figure out how to turn (\ref{eq:cts:ex2}) into a perfect square plus some extra terms. We know that for a perfect square:
 \nequ{(m+n)^2=m^2+2mn+n^2}
 and
 \nequ{(m-n)^2=m^2-2mn+n^2}
 The key is the middle term on the right hand side, which is $2\times$ the first term $\times$ the second term of the left hand side.
 In (\ref{eq:cts:ex2}), we know that the first term is $x$ so 2$\times$ the second term is $\frac{b}{a}$. This means that the second term is $\frac{b}{2a}$. So,
-\nequ{(x+\frac{b}{2a})^2 = x^2 + 2\frac{b}{2a}x + (\frac{b}{2a})^2.}
-In general if you add a quantity and subtract the same quantity, nothing has changed. This means if we add and subtract $\left(\frac{b}{2a}\right)^2$ from the right hand side of (\ref{eq:cts:ex2}) we will get:
+\nequ{\left(x+\frac{b}{2a}\right)^2 = x^2 + 2\frac{b}{2a}x + \left(\frac{b}{2a}\right)^2.}
+In general if you add a quantity and subtract the same quantity, nothing has changed. This means if we add and subtract $\left(\frac{b}{2a}\right)^2$ from the right hand side of Equation (\ref{eq:cts:ex2}) we will get:
 \begin{eqnarray}
-f(x)&=&a(x^2+\frac{b}{a}x+\frac{c}{a})\\
+f(x)&=&a\left(x^2+\frac{b}{a}x+\frac{c}{a}\right)\\
 &=&a\left(x^2+\frac{b}{a}x+\left(\frac{b}{2a}\right)^2 - \left(\frac{b}{2a}\right)^2+\frac{c}{a}\right)\\
 &=&a\left(\left[x+\left(\frac{b}{2a}\right)\right]^2 - \left(\frac{b}{2a}\right)^2+\frac{c}{a}\right)\\
-&=&a\left(\left[x+\left(\frac{b}{2a}\right)\right]^2\right) +c- \frac{b^2}{4a}
+&=&a\left[x+\left(\frac{b}{2a}\right)\right]^2 +c- \frac{b^2}{4a}
 \end{eqnarray}
 We set $f(x)=0$ to find its roots, which yields:
 
 \begin{equation}
-a(x + \frac{b}{2a})^{2} = \frac{b^{2}}{4a} - c
+a\left(x + \frac{b}{2a}\right)^{2} = \frac{b^{2}}{4a} - c
 \end{equation}
 Now dividing by $a$ and taking the square root of both sides gives the
 expression
@@ -412,7 +412,7 @@ Solve the quadratic equations by either factorisation, completing the square or 
 \end{center}
 }
 
-\section{Finding an equation when you know its roots}
+\section{Finding an Equation When You Know its Roots}
 
 We have mentioned before that the \textit{roots} of a quadratic equation are the solutions or answers you get from solving the quadatic equation.  Working back from the answers, will take you to an equation.
 
@@ -424,7 +424,7 @@ The step before giving the solutions would be:\\
 Notice that the signs in the brackets are opposite of the given roots.
 \westep{Remove brackets}
 \nequ{x^2 -8x - 65 = 0}
-Of course, there would be other possibilities as well when each term on each side of the \textit{equal to sign} is multiplied by a constant.}
+Of course, there would be other possibilities as well when each term on each side of the \textit{equals sign} is multiplied by a constant.}
 \end{wex}
 
 \begin{wex}{Fraction roots}
@@ -463,8 +463,8 @@ There various possibilities are summarised in the figure below.
 %\psgrid[gridcolor=lightgray]
 \rput(0,4.8){\textbf{$\Delta$}}
 \psline(-3,4)(-3,4.4)(3,4.4)(3,4)
-\rput(-3,3.8){\textbf{$\Delta<0$ - imaginary roots}}
-\rput(3,3.8){\textbf{$\Delta\ge 0$ - real roots}}
+\rput(-3,3.8){\textbf{$\Delta<0$ : imaginary roots}}
+\rput(3,3.8){\textbf{$\Delta\ge 0$ : real roots}}
 %\psline(-3,3.4)(-3,3.6)
 \psline(3,3.4)(3,3.6)
 \psline(4.5,3)(4.5,3.4)(1.5,3.4)(1.5,3)
@@ -474,8 +474,8 @@ There various possibilities are summarised in the figure below.
 \rput(1.5,2.4){unequal roots}
 \rput(0,-0.6){\psline(1.5,2.6)(1.5,2.4)
 \psline(0,2.0)(0,2.4)(3,2.4)(3,2.0)
-\rput(0,1.2){\parbox[l]{2cm}{$\Delta$ a perfect square - rational roots}}
-\rput(3,1){\parbox[l]{2cm}{$\Delta$ not a perfect square - irrational roots}}}
+\rput(0,1.2){\parbox[l]{2cm}{$\Delta$ a perfect square : rational roots}}
+\rput(3,1){\parbox[l]{2cm}{$\Delta$ not a perfect square : irrational roots}}}
 \end{pspicture}
 \end{center}
 
@@ -497,7 +497,7 @@ Khan Academy video on discriminant of quadratic equations: SIYAVULA-VIDEO:http:/
 \Exercise{From past papers}{
 \begin{enumerate}
 
-\item{[IEB, Nov. 2001, HG] Given: \quad $x^2 + bx -2 + k(x^2 + 3x + 2) = 0 \qquad (k \ne -1)$
+\item{[IEB, Nov. 2001, HG] Given: $x^2 + bx -2 + k(x^2 + 3x + 2) = 0 $,  $(k \ne -1)$
 \begin{enumerate}
 \item{Show that the discriminant is given by: \\ $$\Delta = k^2 + 6bk + b^2 + 8$$}
 \item{If $b=0$, discuss the nature of the roots of the equation.}
@@ -540,7 +540,7 @@ Khan Academy video on discriminant of quadratic equations: SIYAVULA-VIDEO:http:/
 \item{Solve for $x$:
 \begin{enumerate}
 \item{$x(x-9)+14 = 0$}
-\item{$x^2  - x = 3$ \quad (Show your answer correct to ONE decimal place.)}
+\item{$x^2  - x = 3$ \quad (Show your answer correct to \textit{one} decimal place.)}
 \item{$x + 2 = \dfrac{6}{x}$ \quad (correct to 2 decimal places)}
 \item{$\dfrac{1}{x+1}+\dfrac{2x}{x-1} = 1$}
 \end{enumerate}}
@@ -551,9 +551,9 @@ Khan Academy video on discriminant of quadratic equations: SIYAVULA-VIDEO:http:/
 
 \item{ An equation of the form $x^2 + bx + c = 0$ is written
 on the board. Saskia and Sven copy it down incorrectly. Saskia has
-a mistake in the constant term and obtains the solutions -4 and 2.
+a mistake in the constant term and obtains the solutions $-4$ and $2$.
 Sven has a mistake in the coefficient of $x$ and obtains the solutions
-1 and -15. Determine the correct equation that was on the
+$1$ and $-15$. Determine the correct equation that was on the
 board.}
 
 \item{Bjorn stumbled across the following formula to solve

@@ -20,14 +20,14 @@ For example, if Anna receives R3 for each time she helps her mother wash the dis
 The first step to modelling is to write the equation, that describes the situation. To calculate how much Anna will earn we see that she will earn :
 
 \begin{eqnarray*}
-&5 &\times R3 \quad \mbox{for washing the dishes}\\
-+&2 &\times R5 \quad \mbox{for cutting the grass}\\
-=& R15&+R10\\
-=& R25
+&5 &\times \mbox{ R}3 \quad \mbox{for washing the dishes}\\
++&2 &\times \mbox{ R}5 \quad \mbox{for cutting the grass}\\
+=& \mbox{R}15&+\mbox{ R}10\\
+=& \mbox{ R}25
 \end{eqnarray*}
 If however, we ask: "What is the equation if Anna helps her mother $x$ times and her father $y$ times?", then we have:
 
-\nequ{\mbox{Total earned}=x \times R3 + y \times R5}
+\nequ{\mbox{Total earned}=(x\times \mbox{R}3) + (y\times \mbox{R}5)}
 
 \section{Real-World Applications: Mathematical Models}
 Some examples of where mathematical models are used in the real-world are:
@@ -52,13 +52,13 @@ describes the following real-world situations, mathematically:
 \item{Zane can paint a room in 4 hours. Billy can paint a room in 2 hours. How long will it take both of them to paint a room together?}
 \item{25 years ago, Arthur was 5 more than $\frac{1}{3}$ as old as Lee was. Today, Lee is 26 less than twice Arthur's age. How old is Lee?}
 \item{Kevin has played a few games of ten-pin bowling. In the third game, Kevin scored 80 more than in the second game. In the first game Kevin scored 110 less than the third game. His total score for the first two games was 208. If he wants an average score of 146, what must he score on the fourth game?}
-\item{Erica has decided to treat her friends to coffee at the Corner Coffee House. Erica paid R54,00 for four cups of cappuccino and three cups of filter coffee. If a cup of cappuccino costs R3,00 more than a cup of filter coffee, calculate how much each type of coffee costs?}
+\item{Erica has decided to treat her friends to coffee at the Corner Coffee House. Erica paid R$54,00$ for four cups of cappuccino and three cups of filter coffee. If a cup of cappuccino costs R$3,00$ more than a cup of filter coffee, calculate how much each type of coffee costs?}
 \item{The product of two integers is 95. Find the integers if their total is 24.}
 \end{enumerate}}
 
 \begin{wex}{Mathematical Modelling of Falling Objects}{When an object is dropped or thrown downward, the distance, $d$, that it falls in time, $t$ is described by the following equation:
 \nequ{s = 5t^2 + v_0t}
-In this equation, $v_0$ is the initial velocity, in \ms. Distance is measured in meters and time is measured in seconds. Use the equation to find how far an object will fall in 2~s if it is thrown downward at an initial velocity of 10~\ms.}
+In this equation, $v_0$ is the initial velocity, in $\ems$. Distance is measured in meters and time is measured in seconds. Use the equation to find how far an object will fall in 2~s if it is thrown downward at an initial velocity of 10~\ms.}
 {\westep{Identify what is given for each problem}
 We are given an expression to calculate distance traveled by a falling object in terms of initial velocity and time. We are also given the initial velocity and time and are required to calculate the distance traveled.
 
@@ -79,12 +79,12 @@ s &=& 5t^2 + v_0t\\
 \end{eqnarray*}
 
 \westep{Write the final answer}
-The object will fall 40~m in 2~s if it is thrown downward at an initial velocity of 10~\ms.}
+The object will fall $40\emm$ in $2\es$ if it is thrown downward at an initial velocity of $10~\ems$.}
 \end{wex}
 
 \begin{wex}{Another Mathematical Modelling of Falling Objects}{When an object is dropped or thrown downward, the distance, $d$, that it falls in time, $t$ is described by the following equation:
 \nequ{s = 5t^2 + v_0t}
-In this equation, $v_0$ is the initial velocity, in \ms. Distance is measured in meters and time is measured in seconds. Use the equation find how long it takes for the object to reach the ground if it is dropped from a height of 2000~m. The initial velocity is 0~\ms.}
+In this equation, $v_0$ is the initial velocity, in $\ems$. Distance is measured in meters and time is measured in seconds. Use the equation find how long it takes for the object to reach the ground if it is dropped from a height of $2000\emm$. The initial velocity is $0~\ems$.}
 {
 \westep{Identify what is given for each problem}
 We are given an expression to calculate distance travelled by a falling object in terms of initial velocity and time. We are also given the initial velocity and distance travelled and are required to calculate the time it takes the object to travel the distance.
@@ -107,7 +107,7 @@ t^2&=&\frac{2000}{5}\\
 \end{eqnarray*}
 
 \westep{Write the final answer}
-The object will take 20~s to reach the ground if it is dropped from a height of 2000~m.}
+The object will take $20~\es$ to reach the ground if it is dropped from a height of $2000~\emm$.}
 \end{wex}
 
 \Activity{Investigation}{Mathematical Modelling}{The graph below shows how
@@ -115,7 +115,7 @@ the distance travelled by a car depends on time. Use the graph to answer the
 following questions.
 \begin{center}
 \begin{pspicture}(-1,-1)(5,5)
-\psgrid[gridcolor=gray,gridlabels=0](0,0)(5,5)
+% \psgrid[gridcolor=gray,gridlabels=0](0,0)(5,5)
 \psaxes[dx=1,dy=1,Dx=10,Dy=100]{<->}(0,0)(5,5)
 \psplot{0}{4}{x 2 exp 0.3 mul}
 \uput[u](2.5,-1.2){Time (s)}
@@ -125,50 +125,50 @@ following questions.
 \end{center}
 
 \begin{enumerate}
-\item How far does the car travel in 20~s?
-\item How long does it take the car to travel 300~m?
+\item How far does the car travel in $20~\es$?
+\item How long does it take the car to travel $300~\emm$?
 \end{enumerate}}
 
 \begin{wex}{More Mathematical Modelling}
-{A researcher is investigating the number of trees in a forest over a period of n years. After investigating numerous data, the following data model emerged:
+{A researcher is investigating the number of trees in a forest over a period of $n$ years. After investigating numerous data, the following data model emerged:
 \begin{center}
 \begin{tabular}{|c|c|}\hline
-Year& Number of trees in hundreds\\\hline
-1 & 1\\\hline
-2 & 3 \\\hline
-3 & 9 \\\hline
-4 & 27 \\\hline
+Year& Number of trees (in hundreds)\\\hline
+$1$ & $1$\\\hline
+$2$ & $3$ \\\hline
+$3$ & $9$ \\\hline
+$4$ & $27$ \\\hline
 \end{tabular}
 \end{center}
 \begin{enumerate}
-\item{How many trees, in hundreds, are there in the SIXTH year if this pattern is
+\item{How many trees, in hundreds, are there in the sixth year if this pattern is
 continued?}
 \item{Determine an algebraic expression that describes the number of trees in the $n^{th}$ year in the forest.}
 \item{Do you think this model, which determines the number of trees in the forest, will continue indefinitely? Give a reason for your answer.}
 \end{enumerate}
 }{
 \westep{Find the pattern}
-The pattern is $3^0; 3^1; 3^2; 3^3;...$\\
+The pattern is $3^0; 3^1; 3^2; 3^3;\ldots$\\
 Therefore, three to the power one less than the year.
 \westep{Trees in year 6}
-\nequ{year\ 6 :3^5\ hundreds = 243\ hundreds = 24 300}
+\nequ{\mbox{Year 6 : }3^5 \mbox{ hundred }= 243 \mbox{ hundred }= 24 300}
 \westep{Algebraic expression for year $n$}
-\nequ{number ~of~ trees = 3^{n-1}~hundreds}
+\nequ{\mbox{Number of trees }= 3^{n-1}\mbox{ hundred}}
 \westep{Conclusion}
 No\\
 The number of trees will increase for some time. Yet, eventually the number of trees will not increase any more. It will be limited by factors such as the limited amount of water and nutrients available in the ecosystem.
 }
 \end{wex}
 
-\begin{wex}{Setting up an equation}{Currently the subscription to a gym for a single member is R1~000 annually while family membership is R1~500.  The gym is considering raising all memberships fees by the same amount.  If this is done then the single membership will cost $\frac{5}{7}$ of the family membership.  Determine the proposed increase.}{
+\begin{wex}{Setting up an equation}{Currently the subscription to a gym for a single member is R$1~000$ annually while family membership is R$1~500$.  The gym is considering raising all memberships fees by the same amount.  If this is done then the single membership will cost $\frac{5}{7}$ of the family membership.  Determine the proposed increase.}{
 \westep{Summarise the information in a table}
 Let the proposed increase be $x$.\\
 \vspace{0.5cm}
 \begin{center}
 \begin{tabular}{|c|c|c|}\hline
 & Now & After increase\\\hline
-Single& 1~000 & 1~000+$x$\\\hline
-Family& 1~500 & 1~500+$x$\\\hline
+Single& $1~000$ & $1~000+x$\\\hline
+Family& $1~500$ & $1~500+x$\\\hline
 \end{tabular}
 \end{center}
 \westep{Set up an equation}
@@ -180,7 +180,7 @@ Family& 1~500 & 1~500+$x$\\\hline
 x &=& 250
 \end{eqnarray*}
 \westep{Write down the answer}
-Therefore the increase is R250.
+Therefore the increase is R$250$.
 }
 \end{wex}
 
@@ -188,7 +188,7 @@ Therefore the increase is R250.
 \begin{enumerate}
 \item{When an object is dropped or thrown downward, the distance, $d$, that it falls in time, $t$, is described by the following equation:
 \nequ{s = 5t^2 + v_0t}
-In this equation, $v_0$ is the initial velocity, in \ms. Distance is measured in meters and time is measured in seconds. Use the equation to find how long it takes a tennis ball to reach the ground if it is thrown downward from a hot-air balloon that is 500~m high. The tennis ball is thrown at an initial velocity of 5~\ms.}
+In this equation, $v_0$ is the initial velocity, in \ms. Distance is measured in meters and time is measured in seconds. Use the equation to find how long it takes a tennis ball to reach the ground if it is thrown downward from a hot-air balloon that is $500~\emm$ high. The tennis ball is thrown at an initial velocity of $5~\ems$.}
 
 \item{The table below lists the times that Sheila takes to walk the given distances.
 \begin{center}
@@ -230,7 +230,7 @@ times}.
 \end{enumerate}
 }
 
-\item{A wooden block is made as shown in the diagram. The ends are right-angled triangles having sides $3x$, $4x$ and $5x$. The length of the block is $y$. The total surface area of the block is 3 600~cm$^2$.
+\item{A wooden block is made as shown in the diagram. The ends are right-angled triangles having sides $3x$, $4x$ and $5x$. The length of the block is $y$. The total surface area of the block is $3 600~$cm$^2$.
 \begin{center}
 \begin{pspicture}(0, -1)(6, 6)
 \psset{xunit=7.5mm, yunit=7.5mm}
@@ -240,6 +240,7 @@ times}.
 \uput[r](5, 2){$y$}
 \uput[l](0.8, 5.7){$3x$}
 \uput[r](2.5, 5.7){$4x$}
+\uput[r](2.2, 4.4){$5x$}
 \psline(0, 0.2)(0.2, 0.2)(0.2, 0)
 \psline[linestyle=dashed](1.2, 6)(1.2, 1)(0, 0)
 \psline[linestyle=dashed](1.2, 1)(5, -0.5)
@@ -256,7 +257,7 @@ Find its initial height above the ground.}
 
 \item{After doing some research, a transport company has determined that the rate at which petrol is consumed by one of its large carriers, travelling at an average speed of $x$ km per hour, is given by:
 \nequ{P(x)=\frac{55}{2x}+\frac{x}{200} \quad \mbox{litres per kilometre}}\\
-Assume that the petrol costs R4,00 per litre and the driver earns R18,00 per hour (travelling time). Now deduce that the total cost, $C$, in Rands, for a 2~000 km trip is given by:
+Assume that the petrol costs R$4,00$ per litre and the driver earns R$18,00$ per hour (travelling time). Now deduce that the total cost, $C$, in Rands, for a $2~000$ km trip is given by:
 \nequ{C(x)=\frac{256000}{x}+40x}}
 
 \item{During an experiment the temperature $T$ (in degrees Celsius), varies with time $t$ (in hours), according to the formula:
@@ -269,11 +270,11 @@ Assume that the petrol costs R4,00 per litre and the driver earns R18,00 per hou
 \item{In order to reduce the temperature in a room from 28\deg C, a cooling system is allowed to operate for 10 minutes. The room temperature, $T$ after $t$ minutes is given in \deg C by the formula:
 \nequ{T=28-0,008t^3-0,16t \quad \mbox{where $t \in [0;10]$}}
 \begin{enumerate}
-\item{At what rate (rounded off to TWO decimal places) is the temperature falling when $t$ = 4 minutes?}
+\item{At what rate (rounded off to two decimal places) is the temperature falling when $t$ = 4 minutes?}
 \item{Find the lowest room temperature reached during the 10 minutes for which the cooling system operates, by drawing a graph.}
 \end{enumerate}}
 
-\item{A washing powder box has the shape of a rectangular prism as shown in the diagram below. The box has a volume of 480 cm$^3$, a breadth of 4 cm and a length of $x$ cm.
+\item{A washing powder box has the shape of a rectangular prism as shown in the diagram below. The box has a volume of $480 $ cm$^3$, a breadth of $4$ cm and a length of $x$ cm.
 
 \begin{center}
 \begin{pspicture}(0,0)(3.4,4.4)
