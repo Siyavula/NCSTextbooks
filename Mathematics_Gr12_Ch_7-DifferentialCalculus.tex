@@ -95,7 +95,7 @@ Similarly, for the function:
 \nequ{y=\frac{x^2 +4x-12}{x+6}}
 The numerator of the function can be factorised as:
 \nequ{y=\frac{(x+6)(x-2)}{x+6}.}
-Then we can cancel the $x-6$ from numerator and denominator and we are left with:
+Then we can cancel the $x+6$ from numerator and denominator and we are left with:
 \nequ{y=x-2.}
 However, we are only able to cancel the $x+6$ term if $x\ne-6$. If $x=-6$, then the denominator becomes $0$ and the function is not defined. This means that the domain of the function does not include $x=-6$. But we can examine what happens to the values for $y$ as $x$ gets closer to $-6$. These values are listed in Table~\ref{tab:m:fg:diff12:limits} which shows that as $x$ gets closer to -6, $y$ gets close to 8. 
 
@@ -152,7 +152,7 @@ The graph of this function is shown in Figure~\ref{fig:m:fg:diff12:limitseg}. Th
 \subsection{Limits}
 We can now introduce a new notation. For the function $y=\dfrac{(x+6)(x-2)}{x+6}$, we can write:
 \nequ{\lim_{x\to-6}\frac{(x+6)(x-2)}{x+6}=-8.}
-This is read: \textit{the limit of $\frac{(x+6)(x-2)}{x+6}$ as $x$ tends to $-6$ is $8$.}
+This is read: \textit{the limit of $\frac{(x+6)(x-2)}{x+6}$ as $x$ tends to $-6$ is $-8$.}
 
 \Activity{Investigation}{Limits}{If $f(x)=x+1$, determine:
 \begin{center}
@@ -243,11 +243,11 @@ The numerator can be factorised.
 \nequ{\frac{x^2-100}{x-10}=\frac{(x+10)(x-10)}{x-10}}
 
 \westep{Cancel all common terms}
-$x-10$ can be cancelled from the numerator and denominator.
+$(x-10)$ can be cancelled from the numerator and denominator.
 
 \nequ{\frac{(x+10)(x-10)}{x-10}=x+10}
 
-\westep{Let $x \to 1$ and write final answer}
+\westep{Let $x \to 10$ and write final answer}
 \nequ{\lim_{x \to 10}\frac{x^2-100}{x-10} = 20}
 }
 \end{wex}
@@ -267,7 +267,7 @@ Now let us consider the problem of trying to find the gradient of a tangent $t$ 
 \end{pspicture}
 \end{center}
 
-We know how to calculate the average gradient between two points on a curve, but we need two points. The problem now is that we only have one point, namely $P$. To get around the problem we first consider a secant to the curve that passes through point $P$ and another point on the curve $Q$. We can now find the average gradient of the curve between points $P$ and $Q$.
+We know how to calculate the average gradient between two points on a curve, but we need two points. The problem now is that we only have one point, namely $P$. To get around the problem we first consider a secant to the curve that passes through point $P$ and another point on the curve $Q$, where $Q$ is an arbitrary distance ($h$) from $P$, as shown in the figure. We can now find the average gradient of the curve between points $P$ and $Q$.
 
 \begin{center}
 \begin{pspicture}(-2,-1)(5,5)
@@ -283,28 +283,28 @@ We know how to calculate the average gradient between two points on a curve, but
 \psplot{-3}{2}{0.22 x mul 4 add}
 \uput[u](0,4){$P$}
 \uput[dr](-1.8,3.6){$Q$}
-\uput[d](0,0){$a$}
-\uput[d](-1.8,0){$a-h$}
-\uput[l](-3,4){$f(a)$}
-\uput[l](-3,3.6){$f(a-h)$}
+\uput[d](0,0){$a+h$}
+\uput[d](-1.8,0){$a$}
+\uput[l](-3,4){$f(a+h)$}
+\uput[l](-3,3.6){$f(a)$}
 \uput[u](2,4.4){secant}}
 \end{pspicture}
 \end{center}
 
-If the $x$-coordinate of $P$ is $a$, then the $y$-coordinate is $f(a)$. Similarly, if the $x$-coordinate of $Q$ is $a-h$, then the $y$-coordinate is $f(a-h)$. If we choose $a$ as $x_2$ and $a-h$ as $x_1$, then:
-\nequ{y_1=f(a-h)}
-\nequ{y_2=f(a).}
+If the $x$-coordinate of $P$ is $a+h$, then the $y$-coordinate is $f(a+h)$. Similarly, if the $x$-coordinate of $Q$ is $a$, then the $y$-coordinate is $f(a)$. If we choose $a+h$ as $x_2$ and $a$ as $x_1$, then:
+\nequ{y_1=f(a)}
+\nequ{y_2=f(a+h).}
 We can now calculate the average gradient as:
 \begin{eqnarray}
-\frac{y_2-y_1}{x_2-x_1}&=&\frac{f(a)-f(a-h)}{a-(a-h)}\\
+\frac{y_2-y_1}{x_2-x_1}&=&\frac{f(a+h)-f(a)}{(a+h)-a}\\
 %\label{md:lim:grad:slope}
-&=&\frac{f(a)-f(a-h)}{h}
+&=&\frac{f(a+h)-f(a)}{h}
 \end{eqnarray}
 
 Now imagine that $Q$ moves along the curve toward $P$. The secant line approaches the tangent line as its limiting position. This means that the average gradient of the secant \textit{approaches} the gradient of the tangent to the curve at $P$. In (\ref{md:lim:grad:slope}) we see that as point $Q$ approaches point $P$, $h$ gets closer to 0. When $h=0$, points $P$ and $Q$ are equal. We can now use our knowledge of limits to write this as:
 \begin{equation}
 \label{md:lim:grad:lim}
-\mbox{gradient at $P$}=\lim_{h\to 0} \frac{f(a)-f(a-h)}{h}.
+\mbox{gradient at $P$}=\lim_{h\to 0} \frac{f(a+h)-f(h)}{h}.
 \end{equation}
 and we say that the gradient at point $P$ is the limit of the average gradient as $Q$ approaches $P$ along the curve. 
 
@@ -340,7 +340,7 @@ f(x+h)&=&2(x+h)^2-5(x+h)\\
 \westep{Calculate gradient at $x=2$}
 \nequ{4x-5=4(2)-5=3}
 \westep{Write the final answer}
-The gradient of the tangent to the curve $f(x)=2x^2-5x$ at $x=2$ is $3$.
+The gradient of the tangent to the curve $f(x)=2x^2-5x$ at $x=2$ is $3$. This is also the gradient of the curve at $x=2$.
 }\end{wex}
 
 \begin{wex}
@@ -534,14 +534,14 @@ In our case $f(x)=x$ and $g(x)=1$.
 and
 \nequ{g'(x)=0}
 \westep{Write the final answer}
-The derivative of $x-1$ is 1 which is the same result as was obtained earlier, from first principles.
+The derivative of $x-1$ is $1$ which is the same result as was obtained earlier, from first principles.
 }
 \end{wex}
 
 \subsection{Summary of Differentiation Rules}
 \label{md:summ}
 
-Given two functions, $f(x)$ and $g(x)$ and a constant $b$, we know that:
+Given two functions, $f(x)$ and $g(x)$ and constant $b$, $n$ and $k$, we know that:
 \begin{center}
 \begin{tabular}{l}
 $\frac{d}{dx} b = 0$\\
@@ -612,7 +612,7 @@ The equation of the tangent to the curve defined by $y=x^2$ at the point $(1,1)$
 \psplot{-1.5}{2.12}{x 2 mul 1 sub}
 \psplot{-2.12}{2.12}{x x mul}
 \psdot(1,1)
-\uput[r](1,1){(1,1)}
+\uput[r](1,1){$(1,1)$}
 \uput[u](2.12,4.5){$y=x^2$}
 \uput[l](-1,-3){$y=2x-1$}
 \end{pspicture}
@@ -674,7 +674,8 @@ We are now ready to sketch graphs of functions.
 \Method{Sketching Graphs: }{Suppose we are given that $f(x) = ax^3+bx^2+cx+d$, then there are \textbf{five} steps to be followed to sketch the graph of the function:
 \vspace{0.5cm}
 \begin{enumerate}
-\item If $a > 0$, then the graph is increasing from left to right, and may have a maximum and a minimum. As $x$ increases, so does $f(x)$. If $a<0$, then the graph decreasing is from left to right, and has first a minimum and then a maximum. $f(x)$ decreases as $x$ increases.
+% \item Determine the shape of the graph based on the sign of the leading coefficient $a$ <------possible suggestion
+% ----->INCORRECT STATEMENT! \item If $a > 0$, then the graph is increasing from left to right, and may have a maximum and a minimum. As $x$ increases, so does $f(x)$. If $a<0$, then the graph decreasing is from left to right, and has first a minimum and then a maximum. $f(x)$ decreases as $x$ increases.
 \item Determine the value of the $y$-intercept by substituting $x=0$ into $f(x)$
 \item Determine the $x$-intercepts by factorising $ax^3+bx^2+cx+d=0$ and solving for $x$. First try to eliminate constant common factors, and to group like terms together so that the expression is expressed as economically as possible. Use the factor theorem if necessary.
 \item Find the turning points of the function by working out the derivative $\frac{df}{dx}$ and setting it to zero, and solving for $x$.
@@ -743,7 +744,7 @@ The turning point is at $(\frac{1}{2},\frac{7}{4})$
 \westep{Determine the shape of the graph}
 The leading coefficient of $x$ is $<0$ therefore the graph is a parabola with a maximum.
 
-\westep{Determine the $y$-intercepts}
+\westep{Determine the $y$-intercept}
 We find the $y$-intercepts by finding the value for $g(0)$.
 
 \begin{eqnarray*}
@@ -861,7 +862,7 @@ If the derivative ($\frac{dy}{dx}$) is zero at a point, the gradient of the tang
 
 From the drawing the point $(1;0)$ represents a \textbf{local minimum} and the point $(3;4)$ the \textbf{local maximum}.
 
-A graph has a horizontal \textbf{point of inflexion} where the derivative is zero but the sign of the gradient does not change. That means the graph always increases or always decreases.
+A graph has a horizontal \textbf{point of inflexion} where the derivative is zero but the sign of the gradient does not change. That means the graph will continue to increase or decrease after the stationary point.
 \begin{center}
 \begin{pspicture}(-1,-1)(5,5)
 %\psgrid[gridcolor=gray]
@@ -1054,7 +1055,7 @@ A width of 80~m and a length of 40~m will yield the maximal area fenced off.
 \end{center}
 
 \begin{enumerate}
-\item{Show that $y=\dfrac{300-x^2}{x}$.}
+\item{Show that $y=\dfrac{1200cm^2-4x^2}{5x}$.}
 \item{Find the value of $x$ for which the block will have a maximum volume. (Volume = area of base $\times$ height.)}
 \end{enumerate}}
 
@@ -1105,7 +1106,7 @@ If $AB = D\!E = x$ and $BC = C\!D = y$, and the length of the railing must be 30
 
 Two concepts were discussed in this chapter:  \textbf{Average} rate of change = $\frac{f(b)-f(a)}{b-a}$  and \textbf{Instantaneous} rate of change = $\lim_{h \to 0}\frac{f(x+h)-f(x)}{h}$.  When we mention \textit{rate of change}, the latter is implied.  Instantaneous rate of change is the \textbf{derivative}.   When \textit{average rate of change} is required, it will be specifically referred to as \textbf{average} rate of change. 
 
-Velocity is one of the most common forms of rate of change.  Again, \textbf{average} velocity = \textbf{average} rate of change  and  \textbf{instantaneous} velocity = \textbf{instantaneous} rate of change = \textbf{derivative}.  Velocity refers to the increase of distance(s) for a corresponding increade in time (t).  
+Velocity is one of the most common forms of rate of change.  Again, \textbf{average} velocity = \textbf{average} rate of change  and  \textbf{instantaneous} velocity = \textbf{instantaneous} rate of change = \textbf{derivative}.  Velocity refers to the increase of distance(s) for a corresponding increase in time (t).  
 The notation commonly used for this is: \nequ{v(t)= \dfrac{ds}{dt} = s'(t)}  
 
 where $s'(t)$ is the position function. Acceleration is the change in velocity for a corresponding increase in time.  Therefore, acceleration is the derivative of velocity \nequ{a(t) = v'(t)}  This implies that acceleration is the second derivative of the distance(s).
@@ -1114,7 +1115,7 @@ where $s'(t)$ is the position function. Acceleration is the change in velocity f
 \begin{enumerate}
 \item{the average velocity of the ball during the first two seconds}
 \item{the velocity of the ball after 1,5 seconds}
-\item{when the velocity is zero}
+\item{the time at which the velocity is zero}
 \item{the velocity at which the ball hits the ground}
 \item{the acceleration of the ball}
 \end{enumerate}

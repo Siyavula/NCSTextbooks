@@ -130,6 +130,7 @@ For an arithmetic sequence, plotting $a_n$ vs. $n$ results in:
 %\end{figure}
 %We can see that the gradient of the graph is 2, which is equal to the common difference, $d$. The
 %first term, $a_1$, is obtained from the $y$-intercept (for $n=1$), which is 4.
+(Note that the graph will only be a straight line if the sequence is arithmetic.)
 }
 
 \section{Geometric Sequences}
@@ -138,8 +139,8 @@ For an arithmetic sequence, plotting $a_n$ vs. $n$ results in:
 %arithmetic and geometric sequences and series.
 %\end{syllabus}
 
-\Definition{Geometric Sequences}{A geometric sequence is a sequence in which every number in the
-sequence is equal to the previous number in the sequence, \textbf{multiplied} by a constant number.}
+\Definition{Geometric Sequences}{A geometric sequence is a sequence of numbers in which each new term 
+(except for the first term) is calculated by \textbf{multipliying} the previous term by a constant value.}
 
 This means that the \textit{ratio} between consecutive numbers in the geometric sequence is a
 constant. We will explain what we mean by ratio after looking at the following example.
@@ -194,7 +195,7 @@ These events can be written as a geometric sequence:
 2; \: 4; \: 8; \: 16; \: 32; \: \ldots
 \end{eqnarray*}
 
-Note the common factor ($2$) between the events. Recall from the linear arithmetic sequence how the
+Note the common ratio ($2$) between the events. Recall from the linear arithmetic sequence how the
 common difference between terms was established. In the geometric sequence we can determine the
 \textit{common ratio}, $r$, from
 
@@ -208,7 +209,7 @@ Or, more generally,
 \frac{a_n}{a_{n-1}} = r
 \end{equation}
 
-\Activity{Common Factor of Geometric Sequence}{Determine the common factor for the following
+\Activity{Common Ratio of Geometric Sequence}{Determine the common ratio for the following
 geometric sequences:
 \begin{enumerate}
 \item{$5, 10, 20, 40, 80, \ldots$}
@@ -221,7 +222,7 @@ geometric sequences:
 
 \subsection{General Equation for the $n^{th}$-Term of a Geometric Sequence}
 
-From the above example we know $a_1 = 2$ and $r = 2$, and we have seen from the table that the
+From the flu example above we know that $a_1 = 2$ and $r = 2$, and we have seen from the table that the
 $n^{th}$-term is given by $a_n = 2 \times 2^{n-1}$. Thus, in general,
 \begin{equation}
 a_n = a_1 \cdot r^{n-1}
@@ -240,7 +241,7 @@ a_{10} &=& 2 \times 2^{10-1} \\
 
 That is, after 10 days, there are 1~024 newly-infected people.
 
-Or, how many days would pass before 16~384 people become newly infected with the flu virus?
+Or, after how many days would 16~384 people be newly-infected with the flu virus?
 \begin{eqnarray*}
 a_n &=& a_1 \cdot r^{n-1} \\
 16~384 &=& 2 \times 2^{n-1} \\
@@ -251,9 +252,9 @@ a_n &=& a_1 \cdot r^{n-1} \\
 n &=& 14
 \end{eqnarray*}
 
-That is, 14 days pass before 16~384 people are newly-infected.
+That is, after 14 days 16~384 people are newly-infected.
 
-\Activity{General Equation of Geometric Sequence}{Determine the formula for the following geometric
+\Activity{General Equation of Geometric Sequence}{Determine the formula for the $n^{th}$-term of the following geometric
 sequences:
 \begin{enumerate}
 \item{$5, 10, 20, 40, 80, \ldots$}
@@ -413,7 +414,7 @@ where
 
 The index $i$ increases from $m$ to $n$ in steps of $1$.
 
-If we are summing from $n=1$ (which implies summing from the first term in a sequence), then we can use either $S_n$- or $\sum$-notation since they mean the same thing:
+If we are summing from $i=1$ (which implies summing from the first term in a sequence), then we can use either $S_n$- or $\sum$-notation since they mean the same thing:
 \begin{equation}
 \label{eq:mp:se:Ssigma}
 S_n=\sum_{i=1}^n a_i = a_1 + a_2 + \ldots + a_n
@@ -488,7 +489,7 @@ for any value $x$.
 
 \section{Finite Arithmetic Series}
 
-Remember that an arithmetic sequence is a set of numbers, such that the difference between any term and the previous term is a constant number, $d$, called the \textbf{constant difference}:
+Remember that an arithmetic sequence is a sequence of numbers, such that the difference between any term and the previous term is a constant number, $d$, called the \textbf{constant difference}:
 \begin{eqnarray}
 \label{eq:mp:series:lin:gen}
 a_n = a_1 + d \; (n - 1)
@@ -609,22 +610,19 @@ This example demonstrates how useful equation \eqref{eq:mp:se:fa:3} is.
 
 \item The sum of an arithmetic series is $100$ times its first term, while the last term is $9$ times the first term. Calculate the number of terms in the series if the first term is not equal to zero.
 
-\item The common difference of an arithmetic series is $3$. Calculate the values of $n$ for which the $n^{th}$ term of the series is $93$, and the sum of the first $n$ terms is $975$.
+\item The common difference of an arithmetic series is $3$. Calculate the value of $n$ for which the $n^{th}$ term of the series is $93$, and the sum of the first $n$ terms is $975$.
 
 \item The sum of $n$ terms of an arithmetic series is $5n^2 - 11n$ for all values of $n$. Determine the common difference.
-
-\item{The sum of an arithmetic series is $100$ times the value of its first term, while the last term is $9$ times the first term. Calculate the number of terms in the series if the first term is not equal to zero.}
 
 \item{The third term of an arithmetic sequence is $-7$ and the $7^{th}$ term is $9$. Determine the sum of the first $51$ terms of the sequence.}
 
 \item{Calculate the sum of the arithmetic series $4+7+10+\cdots+901$.}
-\item{ The common difference of an arithmetic series is 3. Calculate the values of $n$ for which the $n^{\rm{th}}$ term of the series is $93$ and the sum of the first $n$ terms is $975$.}
 \end{enumerate}
 
 \section{Finite Squared Series}
 When we sum a finite number of terms in a quadratic sequence, we get a \textit{finite
 quadratic series}. The general form of a quadratic series is quite complicated,
-so we will only look at the simple case when $D=2$ and $d=(a_2 - a_1)=3$, where $D$ is the common second difference and $d$ is the finite difference. This is the sequence of squares of the integers:
+so we will only look at the simple case when $D=2$ and $d=(a_2 - a_1)=3$, where $D$ is the common second difference and $d$ is the first difference. This is the sequence of squares of the integers:
 \begin{eqnarray*}
 \label{eq:mp:se:quad:seq}
 a_i &=& i^{\,2} \\
@@ -726,11 +724,6 @@ Khan Academy video on sequences and series, part 1:SIYAVULA-VIDEO:http://cnx.org
 \subsection{Exercises}
 \begin{enumerate}
 \item Prove that $$a + ar + ar^2 + ... + ar^{n-1} = \dfrac{a\,(1 - r^n)}{(1-r)}$$
-\item Find the sum of the first 11 terms of the geometric series $6 + 3 + \tfrac{3}{2} + \tfrac{3}{4} + \ldots$
-\item Show that the sum of the first $n$ terms of the geometric series $$54 + 18 + 6 + ... + 5 \, (\tfrac{1}{3})^{n-1}$$ is given by $81 - 3^{4-n}$.
-\item The eighth term of a geometric sequence is $640$. The third term is $20$. Find the sum of the first 7 terms.
-\item Solve for $n$: $\sum_{t=1}^n \limits 8 \, (\tfrac{1}{2})^t = 15\tfrac{3}{4}$.
-\item The ratio between the sum of the first three terms of a geometric series and the sum of the $4^{th}$-, $5^{th}$- and $6^{th}$-terms of the same series is $8:27$. Determine the common ratio and the first 2 terms if the third term is $8$.
 \item{Given the geometric sequence $1;\;-3;\; 9;\;\dots$ determine:
 \begin{enumerate}
 \item{The 8$^{\rm{th}}$ term of the sequence}
@@ -738,10 +731,17 @@ Khan Academy video on sequences and series, part 1:SIYAVULA-VIDEO:http://cnx.org
 \end{enumerate}}
 \item{Determine:
 \nequ{\sum_{n=1}^{4}3\cdot2^{n-1}}}
+\item Find the sum of the first 11 terms of the geometric series $6 + 3 + \tfrac{3}{2} + \tfrac{3}{4} + \ldots$
+\item Show that the sum of the first $n$ terms of the geometric series $$54 + 18 + 6 + ... + 5 \, (\tfrac{1}{3})^{n-1}$$ is given by $81 - 3^{4-n}$.
+\item The eighth term of a geometric sequence is $640$. The third term is $20$. Find the sum of the first 7 terms.
+\item Solve for $n$: $\sum_{t=1}^n \limits 8 \, (\tfrac{1}{2})^t = 15\tfrac{3}{4}$.
+\item The ratio between the sum of the first three terms of a geometric series and the sum of the $4^{th}$-, $5^{th}$- and $6^{th}$-terms of the same series is $8:27$. Determine the common ratio and the first 2 terms if the third term is $8$.
+
+
 \end{enumerate}
 
 \section{Infinite Series}
-Thus far we have been working only with finite sums, meaning that whenever we determined the sum of a series, we only considered the sum of the first $n$ terms. In this section, we consider what happens when we add infinitely many terms together. You might think that this is a silly question - surely the answer will be $\infty$ when one sums infinitely many numbers, no matter how small they are? The surprising answer is that while in some cases one will reach $\infty$ (like when you try to add all the positive integers together), there are some cases one will get a finite answer. If you don't believe this, try doing the following sum, a geometric series, on your calculator or computer:
+Thus far we have been working only with finite sums, meaning that whenever we determined the sum of a series, we only considered the sum of the first $n$ terms. In this section, we consider what happens when we add infinitely many terms together. You might think that this is a silly question - surely the answer will be $\infty$ when one sums infinitely many numbers, no matter how small they are? The surprising answer is that while in some cases one will reach $\infty$ (like when you try to add all the positive integers together), there are some cases in which one will get a finite answer. If you don't believe this, try doing the following sum, a geometric series, on your calculator or computer:
 $$\tfrac{1}{2} + \tfrac{1}{4} + \tfrac{1}{8} + \tfrac{1}{16} + \tfrac{1}{32} + \ldots $$
 You might think that if you keep adding more and more terms you will eventually get larger and larger numbers, but in fact you won't even get past $1$ - try it and see for yourself!
 
@@ -825,14 +825,6 @@ correct to two decimal places using previously calculated results.
 
 \item Write the sum of the first 20 terms of the series $6 + 3 + \tfrac{3}{2} + \tfrac{3}{4} + ...$ in $\sum$\,-notation.
 
-\item Given the geometric series: $2 \cdot 5^5 + 2 \cdot 5^4 + 2 \cdot 5^3 + \ldots$
-\begin{enumerate}
-\item Show that the series converges.
-\item Calculate the sum of the first 8 terms of the series, correct to TWO decimal places.
-\item \label{Cumulative:1} Calculate the sum to infinity of the series.
-\item Use your answer to \ref{Cumulative:1} above to determine $$\sum_{n=9}^\infty 2 \cdot 5^{(6-n)}$$ correct to TWO decimal places.
-\end{enumerate}
-
 \item For the geometric series, $$54 + 18 + 6 + ... + 5 \, (\tfrac{1}{3})^{n-1}$$ calculate the smallest value of $n$ for which the sum of the first $n$ terms is greater than $80.99$.
 
 \item Determine the value of $\sum_{k=1}^\infty \limits 12(\tfrac{1}{5})^{k-1} $.
@@ -880,7 +872,8 @@ He sets a mathematical quiz with 20 questions. For the correct answer to the fir
 \item{The amount of money that the school will receive for the correct answer to the 20$^{\rm{th}}$ question.}
 \item{The total amount of money that the school will receive if all 20 questions are answered correctly.}
 \end{enumerate}
-}
+}\item{ The common difference of an arithmetic series is 3. Calculate the values of $n$ for which the $n^{\rm{th}}$ term of the series is $93$ and the sum of the first $n$ terms is $975$.}
+
 \item{The first term of a geometric sequence is $9$, and the ratio of the sum of the first eight terms to the sum of the first four terms is $97:81$. Find the first three terms of the sequence, if it is given that all the terms are positive.}
 
 \item{$(k-4); \; (k+1); \; m; \; 5k$ is a set of numbers, the first three of which form an arithmetic sequence, and the last three a geometric sequence. Find $k$ and $m$ if both are positive.}
@@ -902,10 +895,9 @@ He sets a mathematical quiz with 20 questions. For the correct answer to the fir
 
 \item{Find the integer that is the closest approximation to:$$\dfrac{10^{ 2001} \:+\: 10^{ 2003}}{10^{ 2002} \:+\: 10^{ 2002}}$$}
 
-\item{Find the pattern and hence calculate: $$1-2+3-4+5-6 \ldots +677 - 678 + \ldots -1000$$}
+% \item{Find the pattern and hence calculate: $$1-2+3-4+5-6 \ldots +677 - 678 + \ldots -1000$$}
 
-\item{Determine if $\sum_{p=1}^{\infty} \limits (x+2)^p$ converges. If it does, then work out what it converges to if:}
-\begin{enumerate}
+\item{In each case (substituting the values of $x$ below), determine if the series $\sum_{p=1}^{\infty} \limits (x+2)^p$ converges. If it does, work out what it converges to:}\begin{enumerate}
 \item{$x=-\dfrac{5}{2}$}
 \item{$x=-5$}
 \end{enumerate}
