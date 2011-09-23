@@ -1,4 +1,4 @@
-\chapter{Logarithms - Grade 12}
+\chapter{Logarithms}
 \label{m:f12:logarithms}
 
 %\begin{syllabus}
@@ -18,7 +18,7 @@ So, if $a^n = x$, then:
 \Extension{Inverse Function}{When we say ``inverse function'' we mean that the answer becomes the
 question and the question becomes the answer. For example, in the equation $a^{b} = x$ the
 ``question'' is ``what is $a$ raised to the power $b$?'' The answer is ``$x$.'' The inverse function
-would be $log_{a}x=b$ or ``by what power must we raise $a$ to obtain $x$?'' The answer is ``$b$.'' }
+would be $\log_{a}x=b$ or ``by what power must we raise $a$ to obtain $x$?'' The answer is ``$b$.'' }
 
 The mathematical symbol for logarithm is $\log_{a}(x)$ and it is read ``log to the base $a$ of $x$''. For example, $\log_{10}(100)$ is ``log to the base 10 of 100.''
 
@@ -60,8 +60,8 @@ We generally use the ``common'' base, $10$, or the \textit{natural} base, $e$.
 The number $e$ is an irrational number between $2.71$ and $2.72$. It comes up surprisingly often in Mathematics, but for now suffice it to say that it is one of the two common bases.
 
 \Extension{Natural Logarithm}{The natural logarithm (symbol $\ln$) is widely used in the sciences.
-The natural logarithm is to the base $e$ which is approximately $2.71828183...$. $e$ is like $\pi$
-and is another example of an irrational number.}
+The natural logarithm is to the base $e$ which is approximately $2.71828183...$. $e$, like $\pi$
+and is an example of an irrational number.}
 
 While the notation $\log_{10}(x)$ and $\log_{e}(x)$ may be used, $\log_{10}(x)$ is often written $\log(x)$ in Science and $\log_{e}(x)$ is normally written as $\ln(x)$ in both Science and Mathematics. So, if you see the $\log$ symbol without a base, it means $\log_{10}$.
 
@@ -110,8 +110,7 @@ Just as for the exponents, logarithms have some laws which make working with the
 \section{Logarithm Law 1: $\log_{a}1 = 0$}
 \begin{eqnarray*}
 \mbox{Since}\quad a^0&=&1\\
-\mbox{Then,}\quad \log_{a}(1) &=& \log_{a}(a^0)\\
-&=&0\qquad \mbox{by definition of logarithm in Equation~\ref{eq:mn:l}}
+\mbox{Then,}\quad \log_{a}(1)&=&0\qquad \mbox{by definition of logarithm in Equation~\ref{eq:mn:l}}
 \end{eqnarray*}
 
 For example,
@@ -131,8 +130,7 @@ and
 \section{Logarithm Law 2: $\log_{a}(a) = 1$}
 \begin{eqnarray*}
 \mbox{Since}\quad a^1&=&a\\
-\mbox{Then,}\quad \log_{a}(a) &=& \log_{a}(a^1)\\
-&=&1\qquad \mbox{by definition of logarithm in Equation~\ref{eq:mn:l}}
+\mbox{Then,}\quad \log_{a}(a) &=&1\qquad \mbox{by definition of logarithm in Equation~\ref{eq:mn:l}}
 \end{eqnarray*}
 
 For example,
@@ -203,7 +201,7 @@ The derivation of this law is identical to the derivation of Logarithm Law 3 and
 
 For example, show that $\log (\frac{10}{100}) = \log 10 - \log 100$. Start with calculating the left hand side:
 \begin{eqnarray*}
-\log (\frac{10}{100}) &=& \log (\frac{1}{10})\\
+\log \left(\frac{10}{100}\right) &=& \log \left(\frac{1}{10}\right)\\
 &=& \log (10^{-1})\\
 &=&-1
 \end{eqnarray*}
@@ -282,11 +280,12 @@ Khan Academy video on logarithm properties, part 2: SIYAVULA-VIDEO:http://cnx.or
 \westep{Simplify}
 \begin{eqnarray*}
 3\log 3 + \log 125 &=&3\log 3 + \log 5^3\\
-&=&3\log 3 + 3\log 5 \quad \because \log_{a}(x^b) = b \log_{a}(x)
+&=&3\log 3 + 3\log 5 \quad \because \log_{a}(x^b) = b \log_{a}(x)\\
+&=&3\log 15 \quad \mbox{(Logarithm Law 3)}
 \end{eqnarray*}
 \westep{Final Answer}
 We cannot simplify any further. The final answer is:
-\nequ{3\log 3 + 3\log 5}}\end{wex}
+\nequ{3\log 15}}\end{wex}
 \MarginTip{The final answer doesn't have to \textit{look} simple.}
 
 \begin{wex}{Simplification of Logs}{Simplify, without use of a calculator:
@@ -302,13 +301,13 @@ We can use:
 \nequ{\log_{a}(x^b) = b \log_{a}(x)}
 
 \westep{Apply log laws to simplify}
-\nequ{(2^3)^{\frac{2}{3}}+\log_2 2^5=(2)^{3\frac{2}{3}}+5\log_2 2}
+\nequ{(2^3)^{\frac{2}{3}}+\log_2 2^5=(2)^{3\times\frac{2}{3}}+5\log_2 2}
 
 \westep{Determine which laws can be used.}
 We can now use $\log_a a =1$
 
 \westep{Apply log laws to simplify}
-\nequ{(2)^{3\frac{2}{3}}+5\log_2 2=(2)^2+5(1)=4+5=9}
+\nequ{(2)^{2}+5\log_2 2=2^2+5(1)=4+5=9}
 
 \westep{Final Answer}
 The final answer is:
@@ -329,7 +328,7 @@ $= \log {3,6}$
 \MarginTip{Exponent rule: $\left( x^{b} \right) ^{a}=x^{ab}$}
 
 
-\section{Solving simple log equations}
+\section{Solving Simple Log Equations}
 
 In grade 10 you solved some exponential equations by trial and error, because you did not know the great power of logarithms yet.  Now it is much easier to solve these equations by using logarithms.
 
@@ -357,9 +356,9 @@ is solved by moving all terms with the unknown to one side of the equation and t
 2^x\cdot2^2&=&1\\
 2^x &=&\frac{1}{2^2}\\
 \end{eqnarray*}
-Then, take the logarithm of each side.
+Then, take the logarithm of each side. 
 \begin{eqnarray*}
-\log{(2^x)} &=&\log{(\frac{1}{2^2})}\\
+\log{(2^x)} &=&\log\left(\frac{1}{2^2}\right)\\
 x\log{(2)} &=&-\log{(2^2)}\\
 x\log{(2)} &=&-2\log{(2)} \quad \mbox{Divide both sides by $\log{(2)}$}\\
 \therefore \quad x&=&-2
@@ -397,7 +396,7 @@ In order to eliminate 7, divide both sides of the equation by 7 to give:
 x&=&-\frac{2}{3}
 \end{eqnarray*}
 \westep{Substitute into the original equation to check answer.}
-\nequ{7 \cdot 5^{(-3\frac{2}{3}+3)}=7 \cdot 5^{(-2+3)}=7 \cdot 5^{1}=35 \quad \checkmark}
+\nequ{7 \cdot 5^{((-3\times\frac{2}{3})+3)}=7 \cdot 5^{(-2+3)}=7 \cdot 5^{1}=35 \quad \checkmark}
 }\end{wex}
 
 \subsection{Exercises}
@@ -410,7 +409,7 @@ Solve for $x$:
 
 
 
-\section{Logarithmic applications in the Real World}
+\section{Logarithmic Applications in the Real World}
 
 Logarithms are part of a number of formulae used in the Physical Sciences.  There are formulae that deal with earthquakes, with sound, and pH-levels to mention a few.  To work out time periods is growth or decay, logs are used to solve the particular equation.
 
@@ -437,7 +436,7 @@ So it will take approximately 45 years for the population to triple in size.
 \item{Plus Bank is offering a savings account with an interest rate if 10 \% per annum compounded monthly.  You can afford to save R 300 per month.  How long will it take you to save R 20~000 ?  (Give your answer in years and months)}
 \end{enumerate}
 
-\begin{wex}{}{}{}{Logs in Compound Interest}{I have R12~000 to invest.  I need the money to grow to at least R30~000.  If it is invested at a compound interest rate of 13\% per annum, for how long (in full years) does my investment need to grow ? }{
+\begin{wex}{Logs in Compound Interest}{I have R12~000 to invest.  I need the money to grow to at least R30~000.  If it is invested at a compound interest rate of 13\% per annum, for how long (in full years) does my investment need to grow ? }{
 \westep{The formula to use}
 \begin{equation*}
 A=P(1+i)^n 

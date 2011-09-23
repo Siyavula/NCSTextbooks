@@ -1,8 +1,8 @@
-\chapter{Sequences and Series - Grade 12}
+\chapter{Sequences and Series}
 \label{mp:s}
 
 \section{Introduction}
-In this chapter we extend the arithmetic and quadratic sequences studied in earlier grades, to geometric sequences. We also look at series, which is the summing of the terms in a sequence.
+In this chapter we extend the arithmetic and quadratic sequences studied in earlier grades, to geometric sequences. We also look at series, which are the summing of the terms in sequences.
 
 \section{Arithmetic Sequences}
 The simplest type of numerical sequence is an \textit{arithmetic sequence}. 
@@ -31,7 +31,7 @@ $n^{\rm{th}}$ term:&$n=(n-1)+1$\\
 \item{$3,0,-3,-6,-9,-12, \ldots$}
 \end{enumerate}}
 
-\subsection{General Equation for the $n^{th}$-term of an Arithmetic Sequence}
+\subsection{General Equation for the $n^{th}$-Term of an Arithmetic Sequence}
 
 More formally, the number we start out with is called \textit{$a_1$} (the first term), and the difference between each successive term is denoted \textit{d}, called the \textit{common difference}.
 
@@ -45,7 +45,7 @@ a_4 &=& a_3 + d = (a_1 + 2d) + d = a_1 + 3d \\
 a_n &=& a_1 + d \cdot (n - 1)
 \end{eqnarray*}
 
-Thus, the equation for the $n^{th}$-term will be:
+Thus, the equation for the $n^{th}$-term is:
 \begin{equation}
 \label{eq:mp:s:arithseq:2}
 a_n = a_1 + d \cdot (n - 1)
@@ -145,7 +145,7 @@ This means that the \textit{ratio} between consecutive numbers in the geometric 
 constant. We will explain what we mean by ratio after looking at the following example.
 
 \subsection{Example - A Flu Epidemic}
-\Extension{What is influenza?}{Influenza (commonly called ``the flu'') is caused by the influenza
+\Extension{What is influenza?}{Influenza (commonly called ``flu'') is caused by the influenza
 virus, which infects the respiratory tract (nose, throat, lungs). It can cause mild to severe
 illness that most of us get during winter time. The main way that the influenza virus is spread is
 from person to person in respiratory droplets of coughs and sneezes. (This is called ``droplet
@@ -194,15 +194,15 @@ These events can be written as a geometric sequence:
 2; \: 4; \: 8; \: 16; \: 32; \: \ldots
 \end{eqnarray*}
 
-Note the common factor (2) between the events. Recall from the linear arithmetic sequence how the
-common difference between terms were established. In the geometric sequence we can determine the
-\textit{common ratio}, $r$, by
+Note the common factor ($2$) between the events. Recall from the linear arithmetic sequence how the
+common difference between terms was established. In the geometric sequence we can determine the
+\textit{common ratio}, $r$, from
 
 \begin{equation}
 \frac{a_2}{a_1} = \frac{a_3}{a_2} = r
 \end{equation}
 
-Or, more general,
+Or, more generally,
 \begin{equation}
 \label{eq:mp:s:geomseq:1}
 \frac{a_n}{a_{n-1}} = r
@@ -219,7 +219,7 @@ geometric sequences:
 \end{enumerate}}
 % -----------------------------------------------------------------
 
-\subsection{General Equation for the $n^{th}$-term of a Geometric Sequence}
+\subsection{General Equation for the $n^{th}$-Term of a Geometric Sequence}
 
 From the above example we know $a_1 = 2$ and $r = 2$, and we have seen from the table that the
 $n^{th}$-term is given by $a_n = 2 \times 2^{n-1}$. Thus, in general,
@@ -268,8 +268,7 @@ sequences:
 \subsection{Exercises}
 \begin{enumerate}
 \item{What is the important characteristic of an arithmetic sequence?}
-\item{Write down how you would go about finding the formula for the $n^{\rm{th}}$ term of an
-arithmetic sequence?}
+\item{Write down how you would go about finding the formula for the $n^{\rm{th}}$ term of an arithmetic sequence?}\
 \item{A single square is made from 4 matchsticks. Two squares in a row needs 7 matchsticks and 3
 squares in a row needs 10 matchsticks. Determine:
 \begin{enumerate}
@@ -297,7 +296,7 @@ squares in a row needs 10 matchsticks. Determine:
 \rput{180}(2,2){\match}}
 \end{pspicture}
 \end{center}}
-\item{$5;\;x;\;y$ is an arithmetic sequence and $x;\;y\;81$ is a geometric sequence. All terms in
+\item{$5;\;x;\;y$ is an arithmetic sequence and $x;\;y;\;81$ is a geometric sequence. All terms in
 the sequences are integers. Calculate the values of $x$ and $y$.}
 
 \end{enumerate}
@@ -371,7 +370,7 @@ a_n = a_{n-1} + a_{n-2}
 In this section we simply work on the concept of \textit{adding} up the numbers belonging to arithmetic and geometric sequences. We call the sum of \textit{any} sequence of numbers a \textit{series}.
 
 \subsection{Some Basics}
-If we add up the terms of a sequence, we obtain what is called a \textit{series}. If we only sum a finite amount of terms, we get a \textit{finite series}. We use the symbol $S_n$ to mean the sum of the first $n$ terms of a sequence
+If we add up the terms of a sequence, we obtain what is called a \textit{series}. If we only sum a finite number of terms, we get a \textit{finite series}. We use the symbol $S_n$ to mean the sum of the first $n$ terms of a sequence
 $\{a_1; \: a_2; \: a_3; \ldots ; a_n \}$:
 \begin{eqnarray}
 S_n = a_1 + a_2 + a_3 + \ldots + a_n
@@ -409,10 +408,10 @@ where
 \item $i$ is the index of the sum;
 \item $m$ is the lower bound (or start index), shown below the summation symbol;
 \item $n$ is the upper bound (or end index), shown above the summation symbol;
-\item $a_i$ are the terms of a sequence.
+\item $a_i$ is a term of a sequence.
 \end{itemize}
 
-The index $i$ is increased from $m$ to $n$ in steps of $1$.
+The index $i$ increases from $m$ to $n$ in steps of $1$.
 
 If we are summing from $n=1$ (which implies summing from the first term in a sequence), then we can use either $S_n$- or $\sum$-notation since they mean the same thing:
 \begin{equation}
@@ -504,7 +503,7 @@ where
 
 When we sum a finite number of terms in an arithmetic sequence, we get a \textit{finite arithmetic series}.
 
-The simplest arithmetic sequence is when $a_1=1$ and $d=0$ in the general form \eqref{eq:mp:series:lin:gen}; in other words all the terms in the sequence are 1:
+A simple arithmetic sequence is when $a_1=1$ and $d=0$ in the general form \eqref{eq:mp:series:lin:gen}; in other words all the terms in the sequence are 1:
 \begin{eqnarray*}
 a_i &=& a_1 + d \; (i - 1) \\
 &=& 1 + 0 \cdot (i - 1) \\
@@ -604,22 +603,22 @@ This example demonstrates how useful equation \eqref{eq:mp:se:fa:3} is.
 
 \item The sum to $n$ terms of an arithmetic series is $S_n = \dfrac{n}{2} \, (7n + 15)$.
 \begin{enumerate}
-\item{How many terms of the series must be added to give a sum of 425?}
-\item{Determine the 6$^{th}$ term of the series.}
+\item{How many terms of the series must be added to give a sum of $425$?}
+\item{Determine the $6^{th}$ term of the series.}
 \end{enumerate}
 
 \item The sum of an arithmetic series is $100$ times its first term, while the last term is $9$ times the first term. Calculate the number of terms in the series if the first term is not equal to zero.
 
-\item The common difference of an arithmetic series is $3$. Calculate the values of $n$ for which the $n^{th}$ term of the series is $93$, and the sum of the first $n$ terms is 975.
+\item The common difference of an arithmetic series is $3$. Calculate the values of $n$ for which the $n^{th}$ term of the series is $93$, and the sum of the first $n$ terms is $975$.
 
 \item The sum of $n$ terms of an arithmetic series is $5n^2 - 11n$ for all values of $n$. Determine the common difference.
 
-\item{The sum of an arithmetic series is 100 times the value of its first term, while the last term is 9 times the first term. Calculate the number of terms in the series if the first term is not equal to zero.}
+\item{The sum of an arithmetic series is $100$ times the value of its first term, while the last term is $9$ times the first term. Calculate the number of terms in the series if the first term is not equal to zero.}
 
-\item{The third term of an arithmetic sequence is -7 and the 7$^{th}$ term is 9. Determine the sum of the first 51 terms of the sequence.}
+\item{The third term of an arithmetic sequence is $-7$ and the $7^{th}$ term is $9$. Determine the sum of the first $51$ terms of the sequence.}
 
 \item{Calculate the sum of the arithmetic series $4+7+10+\cdots+901$.}
-\item{ The common difference of an arithmetic series is 3. Calculate the values of $n$ for which the $n^{\rm{th}}$ term of the series is 93 and the sum of the first $n$ terms is 975.}
+\item{ The common difference of an arithmetic series is 3. Calculate the values of $n$ for which the $n^{\rm{th}}$ term of the series is $93$ and the sum of the first $n$ terms is $975$.}
 \end{enumerate}
 
 \section{Finite Squared Series}
@@ -632,7 +631,7 @@ a_i &=& i^{\,2} \\
 \{a_i\} &=& \{1^2; \: 2^2; \: 3^2; \: 4^2; \: 5^2; \: 6^2; \: \ldots \} \\
 &=& \{1; \: 4; \: 9; \: 16; \: 25; \: 36; \: \ldots \}
 \end{eqnarray*}
-If we wish to sum this sequence and create a series, then we write
+If we wish to sum this sequence and create a series, we write
 \begin{equation*}
 \label{eq:mp:se:fs:sum}
 S_n=\sum_{i=1}^n i^{\,2} = 1 + 4 + 9 + \ldots + n^2
@@ -755,14 +754,14 @@ When we sum the terms of a series, and the answer we get after each summation ge
 
 \subsection{Infinite Geometric Series}
 
-There is a simple test for knowing instantly which geometric series converges and which diverges. When $r$, the common ratio, is strictly between -1 and 1, i.e. $-1 < r < 1$, the infinite series will converge, otherwise it will diverge. There is also a formula for working out the value to which the series converges.
+There is a simple test for knowing instantly which geometric series converges and which diverges. When $r$, the common ratio, is strictly between $-1$ and $1$, i.e. $-1 < r < 1$, the infinite series will converge, otherwise it will diverge. There is also a formula for working out the value to which the series converges.
 
 Let's start off with formula \eqref{eq:mp:se:fg:4} for the finite geometric series:
 \begin{equation*}
 S_n = \sum_{i=1}^n a_1 \cdot r^{i-1} = \frac{a_1 \, (r^n - 1)}{r-1}
 \end{equation*}
 
-Now we will investigate the behaviour of $r^n$ for $-1<r<1$ as n becomes larger.
+Now we will investigate the behaviour of $r^n$ for $-1<r<1$ as $n$ becomes larger.
 
 Take $r=\frac{1}{2}$:
 \begin{eqnarray*}
@@ -771,7 +770,7 @@ n=2 &:& r^n = r^2 =(\tfrac{1}{2})^2 = \tfrac{1}{2} \cdot \tfrac{1}{2} = \tfrac{1
 n=3 &:& r^n = r^3 =(\tfrac{1}{2})^3 = \tfrac{1}{2} \cdot \tfrac{1}{2} \cdot \tfrac{1}{2} = \tfrac{1}{8} < \tfrac{1}{4}
 \end{eqnarray*}
 
-Since $r$ is in the range $-1<r<1$, we see that $r^n$ gets closer to $0$ as n gets larger.
+Since $r$ is in the range $-1<r<1$, we see that $r^n$ gets closer to $0$ as $n$ gets larger.
 
 Therefore,
 \begin{eqnarray*}
@@ -882,7 +881,7 @@ He sets a mathematical quiz with 20 questions. For the correct answer to the fir
 \item{The total amount of money that the school will receive if all 20 questions are answered correctly.}
 \end{enumerate}
 }
-\item{The first term of a geometric sequence is 9, and the ratio of the sum of the first eight terms to the sum of the first four terms is $97:81$. Find the first three terms of the sequence, if it is given that all the terms are positive.}
+\item{The first term of a geometric sequence is $9$, and the ratio of the sum of the first eight terms to the sum of the first four terms is $97:81$. Find the first three terms of the sequence, if it is given that all the terms are positive.}
 
 \item{$(k-4); \; (k+1); \; m; \; 5k$ is a set of numbers, the first three of which form an arithmetic sequence, and the last three a geometric sequence. Find $k$ and $m$ if both are positive.}
 
@@ -941,7 +940,7 @@ Find the value of $2^{2005} + 2^{2005}$.
 \end{quote}
 Here are some of the students' answers:\\
 \begin{enumerate}
-\item Megansaid the answer is $4^{2005}$.
+\item Megan said the answer is $4^{2005}$.
 \item Stefan wrote down $2^{4010}$.
 \item Nina thinks it is $2^{2006}$.
 \item Annatte gave the answer $2^{2005 \times 2005}$.

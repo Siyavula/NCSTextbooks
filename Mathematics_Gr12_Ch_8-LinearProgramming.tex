@@ -1,4 +1,4 @@
-\chapter{Linear Programming - Grade 12}
+\chapter{Linear Programming}
 \label{m:lp12}
 
 
@@ -69,19 +69,20 @@ The major consequence of the constraints being linear is that \textit{the feasib
 
 The objective function being linear means that \textit{the feasible point(s) that gives the solution of a linear program always lies on one of the vertices of the feasible region}. This is very important since, as we will soon see, it gives us a way of solving linear programs. 
 
-We will now see why the solutions of a linear program always lie on the vertices of the feasible region. Firstly, note that if we think of $f(x,y)$ as lying on the $z$ axis, then the function $f(x,y)=ax+by$ (where $a$ and $b$ are real numbers) is the definition of a plane. If we solve for $y$ in the equation defining the objective function then
+We will now see why the solutions of a linear program always lie on the boundary of the feasible region. Firstly, note that if we think of $f(x,y)$ as lying on the $z$ axis, then the function $f(x,y)=ax+by$ (where $a$ and $b$ are real numbers) is the definition of a plane. If we solve for $y$ in the equation defining the objective function then
 
-\begin{align}\label{eq:num:levelline}
+\begin{align}
 \nonumber & \quad f(x,y)=ax+by\\
 \therefore & \quad y=\frac{-a}{b}x+\frac{f(x,y)}{b}
 \end{align}
+\label{eq:num:levelline}
 What this means is that if we find all the points where $f(x,y)=c$ for any real number $c$ (i.e. $f(x,y)$ is constant with a value of $c$), then we have the equation of a line. This line we call a \textbf{level line} of the objective function.
 
 Consider again the feasible region described in Figure~\ref{fig:lp:feasible}. Let's say that we have the objective function $f(x,y)=x-2y$ with this feasible region. If we consider Equation~\ref{eq:num:levelline} corresponding to
 \nequ{f(x,y)=-20}
 then we get the level line
 \nequ{y=\frac{1}{2}x+10}
-which has been drawn in Figure~\ref{fig:num:levelline}. Level lines corresponding to
+which has been drawn in Figure~\ref{fig:lp:levelline}. Level lines corresponding to
 \begin{eqnarray*}
 f(x,y)=-10 &\text{or}&y=\frac{x}{2}+5\\
 f(x,y)=0 &\text{or}& y=\frac{x}{2}\\
@@ -117,15 +118,15 @@ have also been drawn in. It is very important to realise that these are not the 
 \end{center}
 \end{figure}
 
-If a ruler is placed on the level line corresponding to $f(x,y)=-20$ in Figure~\ref{fig:lp:levelline} and moved down the page parallel to this line then it is clear that the ruler will be moving over level lines which correspond to \textit{larger} values of $f(x,y)$. So if we wanted to maximise $f(x,y)$ then we simply move the ruler down the page until we reach the ``lowest'' point in the feasible region. This point will then be the feasible point that maximises $f(x,y)$. Similarly, if we wanted to minimise $f(x,y)$ then the ``highest'' feasible point will give the minimum value of $f(x,y)$. 
+If a ruler is placed on the level line corresponding to $f(x,y)=-20$ in Figure~\ref{fig:lp:levelline} and moved down the page parallel to this line then it is clear that the ruler will be moving over level lines which correspond to \textit{larger} values of $f(x,y)$. So if we wanted to maximise $f(x,y)$ then we simply move the ruler down the page until we reach the bottom-most point in the feasible region. This point will then be the feasible point that maximises $f(x,y)$. Similarly, if we wanted to minimise $f(x,y)$ then the top-most feasible point will give the minimum value of $f(x,y)$. 
 
 Since our feasible region is a polygon, these points \textit{will always lie on vertices in the feasible region}. The fact that the value of our objective function along the line of the ruler increases as we move it down and decreases as we move it up depends on this particular example. Some other examples might have that the function increases as we move the ruler up and decreases as we move it down. 
 
-It is a general property, though, of linear objective functions that they will consistently increase or decrease as we move the ruler up or down. Knowing which direction to move the ruler in order to maximise/minimise $f(x,y)=ax+by$ is as simple as looking at the sign of $b$ (i.e. ``is $b$ negative, positive or zero?"). If $b$ is \textit{positive}, then $f(x,y)$ \textit{increases} as we move the ruler up and $f(x,y)$ \textit{decreases} as we move the ruler down. The opposite happens for the case when $b$ is negative: $f(x,y)$ \textit{decreases} as we move the ruler up and $f(x,y)$ \textit{increases} as we move the ruler down. If $b=0$ then we need to look at the sign of $a$. 
+It is a general property, though, of linear objective functions that they will consistently increase or decrease as we move the ruler up or down. Knowing which direction to move the ruler in order to maximise/minimise $f(x,y)=ax+by$ is as simple as looking at the sign of $b$ (i.e. ``is $b$ negative, positive or zero?"). If $b$ is \textit{positive}, then $f(x,y)$ \textit{increases} as we move the ruler up and $f(x,y)$ \textit{decreases} as we move the ruler down. The opposite happens for the case when $b$ is negative: $f(x,y)$ \textit{decreases} as we move the ruler up and $f(x,y)$ \textit{increases} as we move the ruler down. If $b=0$, we need to look at the sign of $a$. 
 
 If $a$ is positive then $f(x,y)$ increases as we move the ruler to the right and decreases if we move the ruler to the left. Once again, the opposite happens for $a$ negative. If we look again at the objective function mentioned earlier,
 \nequ{f(x,y)=x-2y}
-with $a=1$ and $b=-2$, then we should find that $f(x,y)$ increases as we move the ruler down the page since $b=-2<0$. This is exactly what we found happening in Figure~\ref{fig:lp:levelline}.
+with $a=1$ and $b=-2$, then we should find that $f(x,y)$ increases as we move the ruler down the page since $b=-2<0$. This is exactly what happened in Figure~\ref{fig:lp:levelline}.
 
 The main points about linear programming we have encountered so far are
 \begin{itemize}
@@ -155,7 +156,7 @@ If we wish to maximise the objective function $f(x,y)$ then:
 \end{enumerate}
 
 \begin{wex}
-{Prizes!}{As part of their opening specials, a furniture store has promised to give away at least 40 prizes with a total value of at least R2 000. The prizes are kettles and toasters.
+{Prizes!}{As part of their opening specials, a furniture store promised to give away at least 40 prizes with a total value of at least R2 000. The prizes are kettles and toasters.
 \begin{enumerate}
 \item{If the company decides that there will be at least 10 of each prize, write down two more inequalities from these constraints.}
 \item{If the cost of manufacturing a kettle is R60 and a toaster is R50, write down an objective function $C$ which can be used to determine the cost to the company of both kettles and toasters.}
@@ -166,17 +167,17 @@ If we wish to maximise the objective function $f(x,y)$ then:
 }
 {
 \westep{Identify the decision variables}
-Let the number of kettles be $x_k$ and the number of toasters be $y_t$ and write down two constraints apart from $x_k\geq 0$ and $y_t \geq 0$ that must be adhered to.
+Let the number of kettles be $x$ and the number of toasters be $y$ and write down two constraints apart from $x\geq 0$ and $y\geq 0$ that must be adhered to.
 \westep{Write constraint equations}
 Since there will be at least 10 of each prize we can write:
-\nequ{x_k\geq 10}
+\nequ{x\geq 10}
 and
-\nequ{y_t\geq 10}
-Also the store has promised to give away at least 40 prizes in total. Therefore:
-\nequ{x_k+y_t\geq 40}
+\nequ{y\geq 10}
+Also, the store promised to give away at least 40 prizes in total. Therefore:
+\nequ{x+y\geq 40}
 \westep{Write the objective function}
 The cost of manufacturing a kettle is R60 and a toaster is R50. Therefore the cost the total cost $C$ is:
-\nequ{C=60x_k+50y_t}
+\nequ{C=60x+50y}
 \westep{Sketch the graph of the feasible region}
 \begin{center}
 \psset{unit=0.75}
@@ -188,18 +189,18 @@ The cost of manufacturing a kettle is R60 and a toaster is R50. Therefore the co
 \psplot{0}{4}{4 x sub}
 %\psplot{0}{10}{x 1.2 mul neg 20 add}
 \pspolygon[fillcolor=lightgray,fillstyle=solid](10,10)(1,10)(1,3)(3,1)(10,1)
-\uput[r](10.4,0){$x_k$}
-\uput[u](0,10.4){$y_t$}
-\uput[ul](3,1){A}
-\uput[l](1,3){B}
+\uput[r](10.4,0){$x$}
+\uput[u](0,10.4){$y$}
+\uput[ul](3.5,1){$A$}
+\uput[l](1,3){$B$}
 \end{pspicture}
 \end{center}
 
 \westep{Determine vertices of feasible region}
-From the graph, the coordinates of vertex A are (30,10) and the coordinates of vertex B are (10,30).
+From the graph, the coordinates of vertex $A$ are $(30,10)$ and the coordinates of vertex $B$ are $(10,30)$.
 
 \westep{Draw in the search line}
-The seach line is the gradient of the objective function.  That is, if the equation $C = 60x + 50y$ is now written in the standard form $y = ...$, then the gradient is:
+The search line is the gradient of the objective function.  That is, if the equation $C = 60x + 50y$ is now written in the standard form $y = ...$, then the gradient is:
 $$ m = -\frac{6}{5},$$ which is shown with the broken line on the graph.
 
 \begin{center}
@@ -212,29 +213,29 @@ $$ m = -\frac{6}{5},$$ which is shown with the broken line on the graph.
 \psplot{0}{4}{4 x sub}
 %\psplot{0}{10}{x 1.2 mul neg 20 add}
 \pspolygon[fillcolor=lightgray,fillstyle=solid](10,10)(1,10)(1,3)(3,1)(10,1)
-\uput[r](10.4,0){$x_k$}
-\uput[u](0,10.4){$y_t$}
-\uput[ul](3,1){A}
-\uput[l](1,3){B}
+\uput[r](10.4,0){$x$}
+\uput[u](0,10.4){$y$}
+\uput[ul](3.5,1){$A$}
+\uput[l](1,3){$B$}
 \psline[linestyle=dashed, linecolor=gray](5,0)(0,6)
 \end{pspicture}
 \end{center}
 
 \westep{Calculate cost at each vertex}
-At vertex A, the cost is:
+At vertex $A$, the cost is:
 \begin{eqnarray*}
-C&=&60x_k+50y_t\\
+C&=&60x+50y\\
 &=&60(30)+50(10)\\
-&=&1800+500\\
-&=&2300
+&=&1~800+500\\
+&=&\mbox{R}2~300
 \end{eqnarray*}
 
-At vertex B, the cost is:
+At vertex $B$, the cost is:
 \begin{eqnarray*}
 C&=&60x_k+50y_t\\
 &=&60(10)+50(30)\\
 &=&600+1500\\
-&=&2100
+&=&\mbox{R}2~100
 \end{eqnarray*}
 
 \westep{Write the final answer}
@@ -280,7 +281,7 @@ Pentagon lawn cutters that will yield a maximum profit.}
 }{\westep{Remaining constraints:}
 \nequ{\frac{1}{2}x + \frac{1}{5}y \le 480}
 \nequ{\frac{y}{x} \ge \frac{3}{2}}
-\westep{Graphical representation}
+\westep{Graphical representation\\}
 
 % Generated with LaTeXDraw 1.9.3
 % Wed Apr 02 20:26:05 CAT 2008
@@ -299,28 +300,28 @@ Pentagon lawn cutters that will yield a maximum profit.}
 \psline[linewidth=0.04cm](0.8921875,3.4504688)(5.6921873,-3.7495313)
 \psline[linewidth=0.04cm](0.8975,-3.7504687)(5.8921876,0.65046877)
 \usefont{T1}{ptm}{m}{n}
-\rput(4.4612503,-3.9804688){720}
+\rput(4.4612503,-3.9804688){$720$}
 \usefont{T1}{ptm}{m}{n}
-\rput(5.7003126,-3.9804688){960}
+\rput(5.7003126,-3.9804688){$960$}
 \rput(6.7003126,-3.9804688){$x$}
 \usefont{T1}{ptm}{m}{n}
-\rput(0.3225,-0.5604688){1080}
+\rput(0.3225,-0.5604688){$1080$}
 \usefont{T1}{ptm}{m}{n}
-\rput(1.946875,-3.9804688){200}
+\rput(1.946875,-3.9804688){$200$}
 \pspolygon[linewidth=0.04,fillstyle=solid,fillcolor=color11b](1.8921875,1.9904687)(1.8921875,-1.4295312)(2.6921875,-2.1495314)(3.9721875,-1.0495312)
 \usefont{T1}{ptm}{m}{n}
-\rput(0.623125,4.099531){y}
+\rput(0.623125,4.099531){$y$}
 \usefont{T1}{ptm}{m}{n}
-\rput(0.64156246,-3.9804688){0}
+\rput(0.64156246,-3.9804688){$0$}
 \usefont{T1}{ptm}{m}{n}
-\rput(0.341875,3.4604688){2400}
+\rput(0.341875,3.4604688){$2400$}
 \psline[linewidth=0.04cm,linestyle=dashed,dash=0.16cm 0.16cm](0.8921875,-0.14953125)(2.8921876,-3.7495313)
 \end{pspicture} 
 }
 \westep{Profit equation}
 \nequ{P = 1~200x + 400y}
 \westep{Maximum profit}
-By moving the search line upwards, we see that the point of maximum profit is at (600,900). Therefore
+By moving the search line upwards, we see that the point of maximum profit is at $(600,900)$. Therefore
 \nequ{P = 1~200(600) + 400(900)}
 \nequ{P = R1~080~000}}
 \end{wex}

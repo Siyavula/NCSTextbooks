@@ -1,4 +1,4 @@
-\chapter{Trigonometry - Grade 12}
+\chapter{Trigonometry}
 \label{m:t12}
 
 \section{Compound Angle Identities}
@@ -66,13 +66,13 @@ Suppose we have the unit circle shown below. The two points $L(a,b)$ and $K(x,y)
 \usefont{T1}{ptm}{m}{n}
 \rput(9.921406,-0.50921875){$M(x;y)$}
 \usefont{T1}{ptm}{m}{n}
-\rput(6.7767186,-0.38921875){O}
+\rput(6.7767186,-0.38921875){$O$}
 \end{pspicture} 
 }
 
 
 We can get the coordinates of $L$ and $K$ in terms of the angles $\alpha$ and $\beta$.
-For the triangle $LOK$, we have that
+For the triangle $LOM$, we have that
 \begin{eqnarray*}
 \sin\beta =\frac{b}{1} \ \ \ \ &\implies& b=\sin\beta\\
 \cos\beta=\frac{a}{1} \ \ \ \ &\implies&a=\cos\beta
@@ -158,7 +158,6 @@ When $\alpha=\beta$, we have that
 \begin{eqnarray*}
 \sin(2\alpha)=\sin(\alpha + \alpha) &=& \sin\alpha\cos\alpha+\cos\alpha\sin\alpha\\
 &=& 2\sin\alpha\cos\alpha\\
-&=&\sin(2\alpha) 
 \end{eqnarray*}
 
 \subsection{Derivation of $\cos 2 \alpha$}
@@ -168,7 +167,6 @@ When $\alpha=\beta$, we have that
 \begin{eqnarray*}
 \cos(2\alpha)=\cos(\alpha + \alpha) &=& \cos\alpha\cos\alpha-\sin\alpha\sin\alpha\\
 &=& \cos^2\alpha-\sin^2\alpha\\
-&=&\cos(2\alpha) 
 \end{eqnarray*}
 
 However, we can also write
@@ -181,11 +179,7 @@ by using
 
 \Activity{The $\cos 2\alpha$ Identity}{Use \nequ{\sin^2\alpha+\cos^2\alpha=1} to show that:
 \begin{eqnarray*}
-\cos 2 \alpha &=& \left\{
-\begin{array}{l}
-2 \cos^2 \alpha - 1\\
-1 - 2 \sin^2 \alpha \\
-\end{array}\right.
+\cos 2 \alpha = 2 \cos^2 \alpha - 1 =1 - 2 \sin^2 \alpha \\
 \end{eqnarray*}
 }
 
@@ -204,7 +198,7 @@ We only know the exact values of the trig functions for a few special angles ($3
 \begin{eqnarray*}
 \sin 75^\circ&=&\sin(45^\circ+30^\circ)\\
 &=&\sin(45^\circ)\cos(30^\circ)+\cos(45^\circ)\sin(30^\circ)\\
-&=&\frac{1}{\sqrt{2}}\cdot\frac{\sqrt{3}}{2}+\frac{1}{2}\cdot\frac{1}{\sqrt{2}}\\
+&=&\frac{1}{\sqrt{2}}\cdot\frac{\sqrt{3}}{2}+\frac{1}{\sqrt{2}}\cdot\frac{1}{2}\\\
 &=&\frac{\sqrt{3}+1}{2\sqrt{2}}\\
 &=&\frac{\sqrt{3}+1}{2\sqrt{2}}\times\frac{\sqrt{2}}{\sqrt{2}}\\
 &=&\frac{\sqrt{2}(\sqrt{3}+1)}{4}
@@ -212,12 +206,8 @@ We only know the exact values of the trig functions for a few special angles ($3
 }
 \end{wex}
 
-
-
-
-
-
-\begin{wex}{Trigonometric Identities 2}{Deduce a formula for $\tan(\alpha+\beta)$ in terms of $\tan\alpha$ and $\tan\beta$.\\
+\begin{wex}{Trigonometric Identities 2}
+{Deduce a formula for $\tan(\alpha+\beta)$ in terms of $\tan\alpha$ and $\tan\beta$.\\
 \emph{Hint: Use the formulae for $\sin(\alpha+\beta)$ and $\cos(\alpha+\beta)$} }
 {
 \westep{Identify a strategy}
@@ -232,7 +222,8 @@ We can express $\tan(\alpha+\beta)$ in terms of cosines and sines, and then use 
 }
 \end{wex}
 
-\begin{wex}{Trigonometric Identities 3}{Prove that $$\frac{\sin \theta+\sin  2\theta}{1+\cos\theta+\cos 2\theta}=\tan \theta$$
+\begin{wex}{Trigonometric Identities 3}
+{Prove that $$\frac{\sin \theta+\sin  2\theta}{1+\cos\theta+\cos 2\theta}=\tan \theta$$
 In fact, this identity is not valid for all values of $\theta$. Which values are those?}
 {
 \westep{Identify a strategy}
@@ -240,11 +231,11 @@ The right-hand side (RHS) of the identity cannot be simplified. Thus we should t
 We know that $\tan\theta$ is undefined for some angles $\theta$. Thus the identity is also undefined for these $\theta$, and hence is not valid for these angles. Also, for some $\theta$, we might have division by zero in the LHS, which is not allowed. Thus the identity won't hold for these angles also.
 \westep{Execute the strategy}
 \begin{eqnarray*}
-LHS&=&\frac{\sin\theta+2\,\sin \theta\,\cos \theta}{1+\cos\theta +(2 \cos^2\theta-1)}\\
+\mbox{LHS}&=&\frac{\sin\theta+2\,\sin \theta\,\cos \theta}{1+\cos\theta +(2 \cos^2\theta-1)}\\
 &=&\frac{\sin\theta(1+2 \cos\theta)}{\cos\theta(1+2\cos\theta)}\\
 &=&\frac{\sin\theta}{\cos\theta}\\
 &=&\tan\theta\\
-&=&RHS
+&=&\mbox{RHS}
 \end{eqnarray*}
 We know that $\tan\theta$ is undefined when $\theta=90\degree+180\degree n$, where $n$ is an integer. 
 The LHS is undefined when $1+\cos\theta+\cos 2\theta=0$. Thus we need to solve this equation.
@@ -281,7 +272,7 @@ Before we are able to solve the equation, we first need to simplify the left-han
 
 \subsection{Problems in Two Dimensions}
 \begin{wex}{Problem in Two Dimensions}
-{For the figure below, we are given that $BC=BD=x$. \\ \\
+{For the figure below, we are given that $CD=BD=x$. \\ \\
 Show that $BC^2=2x^2(1+\sin\theta)$.\\
 % \scalebox{0.9} % Change this value to rescale the drawing.
 % {
@@ -320,7 +311,7 @@ Show that $BC^2=2x^2(1+\sin\theta)$.\\
 \psdots[dotsize=0.12](4.2728124,0.25390622)
 \psline[linewidth=0.024cm](6.1728125,1.8539063)(0.7728125,-2.6460938)
 \psline[linewidth=0.024cm](6.1728125,1.8539063)(4.7528124,-2.1660938)
-\psline[linewidth=0.04cm](0.2259375,0.02124997)(4.7728124,-2.1860938)
+% \psline[linewidth=0.04cm](0.2259375,0.02124997)(4.7728124,-2.1860938)
 \psline[linewidth=0.024cm](4.7528124,-2.1660938)(2.3728125,-1.3460938)
 \psline[linewidth=0.024cm](0.7528125,-2.6460938)(4.7328124,-2.1860938)
 \psdots[dotsize=0.12](6.1728125,1.8539063)
@@ -336,7 +327,7 @@ Show that $BC^2=2x^2(1+\sin\theta)$.\\
 \usefont{T1}{ptm}{m}{n}
 \rput(1.8473438,-1.2560939){$D$}
 \usefont{T1}{ptm}{m}{n}
-\rput(4.0456247,0.6239062){O}
+\rput(4.0456247,0.6239062){$O$}
 \usefont{T1}{ptm}{m}{n}
 \rput(5.4687505,0.9439062){$\theta$}
 \usefont{T1}{ptm}{m}{n}
@@ -440,7 +431,7 @@ Show that $\cos\theta=\frac{1}{4}$.\\
 \usefont{T1}{ptm}{m}{n}
 \rput(2.104375,-0.28570315){$B$}
 \usefont{T1}{ptm}{m}{n}
-\rput(5.6139064,-0.56570315){O}
+\rput(5.6139064,-0.56570315){$O$}
 \psdots[dotsize=0.12](0.4171875,-2.5557032)
 \usefont{T1}{ptm}{m}{n}
 \rput(5.878594,0.49429685){$\theta$}
@@ -482,18 +473,15 @@ Show that $\cos\theta=\frac{1}{4}$.\\
 \rput(3.706875,2.1907814){$D$}
 \end{pspicture} 
 }
-
-
-
 \end{enumerate}
 }
 
 
-\subsection{Problems in 3 dimensions}
+\subsection{Problems in 3 Dimensions}
 \begin{wex}{Height of tower}
 {
-\item $D$ is the top of a tower of height $h$. Its base is at $C$. The triangle $ABC$ lies on the ground (a horizontal plane). If we have that $BC=b$, $D\hat{B}A=\alpha$, $D\hat{B}C=x$ and $D\hat{C}B=\theta$, show that
-$$h=\frac{b\sin\alpha\sin x}{\sin(x+\theta)}$$
+\item $D$ is the top of a tower of height $h$. Its base is at $A$. The triangle $ABC$ lies on the ground (a horizontal plane). If we have that $BC=b$, $D\hat{B}A=\alpha$, $D\hat{B}C=\beta$ and $D\hat{C}B=\theta$, show that
+$$h=\frac{b\sin\alpha\sin\theta}{\sin(\beta+\theta)}$$
 
 \scalebox{0.9} % Change this value to rescale the drawing.
 {
@@ -513,26 +501,24 @@ $$h=\frac{b\sin\alpha\sin x}{\sin(x+\theta)}$$
 \usefont{T1}{ptm}{m}{n}
 \rput(1.3271875,0){$C$}
 \psdots(1.82,-0.10921875)
-
 \psdots(2.84,-3.0892189)
 \psdots(6.82,-0.10921875)
 \psdots(6.8,3.8507812)
 \usefont{T1}{ptm}{m}{n}
-\rput(1.8914063,-1.6592188){$b$}
+\rput(1.8914063,-1.6592188){log \left(\frac{10}{100}\right)}{$b$}
 \usefont{T1}{ptm}{m}{n}
 \rput(2.2414062,-0.35921875){$\theta$}
 \usefont{T1}{ptm}{m}{n}
 \rput(3.7514062,-2.0192187){$\alpha$}
 \usefont{T1}{ptm}{m}{n}
-\rput(2.8414063,-2.3992188){$x$}
+\rput(2.8414063,-2.3992188){$\beta$}
 \psarc(3.3,-3.1092188){1.22}{80.53768}{130.42607}
 \usefont{T1}{ptm}{m}{n}
 \rput(6.82,4.2007813){$D$}
 \psframe(6.82,0.13078125)(6.56,-0.12921876)
 \psarc(1.36,0.21078125){1.36}{302.4712}{14.82648}
 \end{pspicture} 
-}
-}
+}}
 {
 \westep{Identify a strategy}
 We have that the triangle $ABD$ is right-angled. Thus we can relate the height $h$ with the angle $\alpha$ and either the length $BA$ or $BD$ (using sines or cosines). But we have two angles and a length for $\triangle BCD$, and thus can work out all the remaining lengths and angles of this triangle. We can thus work out $BD$. 
@@ -545,25 +531,25 @@ We have that
 Now we need $BD$ in terms of the given angles and length $b$. Considering the triangle $BCD$, we see that we can use the sine rule.
 \begin{eqnarray*}
  \frac{\sin \theta}{BD}&=&\frac{\sin (B\hat{D}C)}{b}\\
-\implies \ \ \ \ BD&=&\frac{b \sin\theta}{\sin (b\hat{D}C)}
+\implies \ \ \ \ BD&=&\frac{b \sin\theta}{\sin (B\hat{D}C)}
 \end{eqnarray*}
-But $D\hat{B}C=180\degree -\alpha-\theta$, and  
+But $B\hat{D}C=180\degree -\beta-\theta$, and  
 \begin{eqnarray*}
-\sin (180\degree -\alpha-\theta)&=&-\sin (-\alpha-\theta)\\
-&=& \sin(\alpha+\theta)
+\sin (180\degree -\beta-\theta)&=&-\sin (-\beta-\theta)\\
+&=& \sin(\beta+\theta)
 \end{eqnarray*}
 So 
 \begin{eqnarray*}
-BD&=&\frac{b \sin\theta}{\sin (D\hat{B}C)}\\
-&=&\frac{b \sin\theta}{\sin(\alpha+\theta)}
+BD&=&\frac{b \sin\theta}{\sin (B\hat{D}C)}\\
+&=&\frac{b \sin\theta}{\sin(\beta+\theta)}\\
+\therefore h &=&BD\sin\alpha\\
+&=& \frac{b \sin\alpha \sin\theta}{\sin(\beta + \theta)}\\
 \end{eqnarray*}
-
-}
-\end{wex}
+}\end{wex}
 
 \Exercise{}{
 \begin{enumerate}
-\item The line $BC$ represents a tall tower, with $C$ at its foot. Its angle of elevation from $D$ is $\theta$. We are also given that $BA=AD=x$.\\
+\item The line $BC$ represents a tall tower, with $B$ at its foot. Its angle of elevation from $D$ is $\theta$. We are also given that $BA=AD=x$.\\
 \scalebox{1} % Change this value to rescale the drawing.
 {
 \begin{pspicture}(0,-3.561875)(5.0803127,3.561875)
@@ -595,12 +581,11 @@ BD&=&\frac{b \sin\theta}{\sin (D\hat{B}C)}\\
 \rput(3.7354689,-2.411875){$x$}
 \end{pspicture} 
 }
-\begin{enumerate}
 \item Find the height of the tower $BC$ in terms of $x$, $\tan \theta$ and $\cos 2\alpha$.
 \item Find $BC$ if we are given that $x=140m$, $\alpha=21\degree$ and $\theta=9\degree$.
 \end{enumerate}
 
-\end{enumerate}
+
 }
 
 \section{Other Geometries}
@@ -611,7 +596,7 @@ BD&=&\frac{b \sin\theta}{\sin (D\hat{B}C)}\\
 \subsection{Taxicab Geometry}
 Taxicab geometry, considered by Hermann Minkowski in the 19th century, is a form of geometry in which the usual metric of Euclidean geometry is replaced by a new metric in which the distance between two points is the sum of the (absolute) differences of their coordinates.
 
-\subsection{Manhattan distance}
+\subsection{Manhattan Distance}
 The metric in taxi-cab geometry, is known as the \textit{Manhattan distance}, between two points in an Euclidean space with fixed Cartesian coordinate system as the sum of the lengths of the projections of the line segment between the points onto the coordinate axes.
 
 For example, the Manhattan distance between the point $P_1$ with coordinates $(x_1, y_1)$ and the point $P_2$ at $(x_2, y_2)$ is
@@ -650,7 +635,7 @@ For example, the Manhattan distance between the point $P_1$ with coordinates $(x
 
 \end{pspicture}
 \end{center}
-\caption{Manhattan Distance (dotted and solid) compared to Euclidean Distance (dashed). In each case the Manhattan distance is 12 units, while the Euclidean distance is $\sqrt{36}$}
+\caption{Manhattan distance (dotted and solid) compared to Euclidean distance (dashed). In each case the Manhattan distance is 12 units, while the Euclidean distance is $\sqrt{36}$}
 \label{fig:mt:o:taxicab}
 \end{figure}
 
@@ -712,11 +697,11 @@ $\cos^2{\theta}+\sin^2{\theta}=1 $ & $ \sin(90^\circ - \theta)=\cos\theta$ & $ \
 &  $ \cos(90^\circ - \theta)=\sin\theta$&\\
 \\
 \\
-Odd/Even Identities & Periodicity Identities & Double angle Identities  \\
+Odd/Even Identities & Periodicity Identities & Double Angle Identities  \\
 \\
 $\sin(-\theta)=-\sin\theta$ & $\sin(\theta\pm 360^\circ)=\sin\theta$ &$\sin(2\theta)=2\sin\theta\cos\theta$  \\
 $\cos(-\theta)=\cos\theta$ & $\cos(\theta\pm 360^\circ)=\cos\theta$ & $\cos{(2\theta)}=\cos^2\theta-\sin^2\theta$ \\
-$\tan(-\theta)=-\tan\theta$ & $\tan(\theta\pm 180^\circ)=\tan\theta$ &$\cos{(2\theta)}= 2\cos^2\theta-1$   \\
+$\tan(-\theta)=-\tan\theta$ & $\tan(\theta\pm 180^\circ)=\tan\theta$ &$\cos{(2\theta)}= 1-2\sin^2\theta$   \\
 & & $\tan{(2\theta)}=\frac{2\tan\theta}{1-\tan^2\theta}$\\
 \\
 \\
@@ -734,7 +719,7 @@ Addition/Subtraction Identities & Area Rule & Cosine rule  \\
 Sine Rule &  &  \\
 \\
 &  & \\
-$\frac{\sin{A}}{a}=\frac{\sin{B}}{b}=\frac{\sin{C}}{c}$& $$ &  \\
+$\frac{\sin{A}}{a}=\frac{\sin{B}}{b}=\frac{\sin{C}}{c}$&  &  \\
 &  & \\
 \end{tabular}
 \end{center}
@@ -743,7 +728,7 @@ $\frac{\sin{A}}{a}=\frac{\sin{B}}{b}=\frac{\sin{C}}{c}$& $$ &  \\
 \section{End of Chapter Exercises}
 Do the following without using a calculator.
 \begin{enumerate}
-\item Suppose $\cos\theta=0.7$. Find $\cos 2\theta$ and $\cos 4\theta$.
+\item Suppose $\cos\theta=0,7$. Find $\cos 2\theta$ and $\cos 4\theta$.
 \item If $\sin\theta=\frac{4}{7}$, again find $\cos 2\theta$ and $\cos 4\theta$.
 \item Work out the following:
 \begin{enumerate}
@@ -752,7 +737,7 @@ Do the following without using a calculator.
 \item $\tan 105\degree$
 \item $\cos 15\degree$
 \item $\cos 3\degree \cos 42\degree -\sin 3\degree \sin 42\degree$
-\item $1-2 \sin^2 (22.5\degree)$
+\item $1-2 \sin^2 (22,5\degree)$
 \end{enumerate}
 \item Solve the following equations:
 \begin{enumerate}

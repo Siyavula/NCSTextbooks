@@ -1,4 +1,4 @@
-\chapter{Finance - Grade 12}
+\chapter{Finance}
 \label{m:f12}
 
 \section{Introduction}
@@ -38,9 +38,9 @@ Remember, you do not have to memorise this formula. It is very easy to derive an
 \begin{wex}{Term of Investment - Logarithms}{Suppose we invested R3~500 into a savings account which pays 7,5\% compound interest. After an unknown period of time our account is worth R4~044,69. For how long did we invest the money? How does this compare with the trial and error answer from Chapters~\ref{m:f11}.}{
 \westep{Determine what is given and what is required}
 \begin{itemize}
-\item{$P$=R3~500}
-\item{$i$=7,5\%}
-\item{$A$=R4~044,69}
+\item{$P$=R$3~500$}
+\item{$i$=$7,5$\%}
+\item{$A$=R$4~044,69$}
 \end{itemize}
 We are required to find $n$.
 \westep{Determine how to approach the problem}
@@ -56,14 +56,14 @@ n &=& \log(A/P) / \log(1+i)
 \westep{Solve the problem}
 \begin{eqnarray*}
 n &=& \log(A/P) / \log(1+i)\\
-&=&\frac{\log(\frac{4~044,69}{3~500})}{\log(1+0.075)}\qquad \textrm{Remember that:}7.5\%=\frac{7.5}{100}=0.075\\
+&=&\frac{\log(\frac{4~044,69}{3~500})}{\log(1+0.075)}\qquad \mbox{Remember that: }7.5\%=\frac{7.5}{100}=0.075\\
 &=&2.0
 \end{eqnarray*}
 \westep{Write final answer}
 The R3~500 was invested for 2 years.}
 \end{wex}
 
-\section{A Series of Payments}
+\section{Series of Payments}
 %\begin{syllabus}
 %\item Apply knowledge of geometric series to solving annuity, bond repayment and sinking fund problems, with or without the use of the formulae:
 %\begin{eqnarray*}
@@ -76,7 +76,7 @@ By this stage, you know how to do calculations such as `If I want R1~000 in 3 ye
 
 What if we extend this as follows: `If I want to draw R1~000 next year, R1~000 the next year and R1~000 after three years ... how much do I need to initially put into a bank account earning 10\% p.a. to be able to afford to be able to do this?'
 
-The obvious way of working that out is to work out how much you need now to afford the payments individually and sum them. We'll work out how much is needed now to afford the payment of R1~000 in a year $(= \textrm{R}1~000\times (1,10)^{-1} = \textrm{R}909,09)$, the amount needed now for the following year's R1~000 $(=\textrm{R}1~000\times (1,10)^{-2} = \textrm{R}826,45)$ and the amount needed now for the R1~000 after 3 years $(=\textrm{R}1~000\times (1,10)^{-3} =\textrm{R}751,31)$. Add these together gives you the amount needed to afford all three payments and you get R2\,486,85.
+The obvious way of working that out is to work out how much you need now to afford the payments individually and sum them. We'll work out how much is needed now to afford the payment of R1~000 in a year $(= $ {R}$1~000\times (1,10)^{-1} = ${R}$909,09)$, the amount needed now for the following year's R1~000 $(= ${R}$1~000\times (1,10)^{-2} = $ {R}$826,45)$ and the amount needed now for the R1~000 after 3 years $(= ${R}$1~000\times (1,10)^{-3} =${R}$751,31)$. Adding these together gives you the amount needed to afford all three payments and you get R2\,486,85.
 
 So, if you put R2\,486,85 into a 10\% bank account now, you will be able to draw out R1\,000 in a year, R1\,000 a year after that, and R1\,000 a year after that - and your bank account will come down to R0. You would have had exactly the right amount of money to do that (obviously!).
 
@@ -84,12 +84,12 @@ You can check this as follows:
 
 \begin{tabular}{lll}
 Amount at Time 0 (i.e. Now) &&= R2\,486,85\\
-Amount at Time 1 (i.e. a year later) &= 2\,486,85(1+10\%) &= R2\,735,54\\
-Amount after withdrawing R1\,000 &= 2\,735,54 - 1\,000 &= R1\,735,54\\
-Amount at Time 2 (i.e. a year later) &= 1\,735,54(1+10\%) &= R1\,909,09\\
-Amount after withdrawing R1\,000 &= R1\,909,09 - 1\,000 &= R909,09\\
-Amount at Time 3 (i.e. a year later) &= 909,09(1+10\%) &= R1~000\\
-Amount after withdrawing R1\,000 &= 1\,000 - 1\,000 &= R0\\
+Amount at Time 1 (i.e. a year later) &= R2\,486,85(1+10\%) &= R2\,735,54\\
+Amount after withdrawing R1\,000 &= R2\,735,54 - R1\,000 &= R1\,735,54\\
+Amount at Time 2 (i.e. a year later) &= R1\,735,54(1+10\%) &= R1\,909,09\\
+Amount after withdrawing R1\,000 &= R1\,909,09 - R1\,000 &= R909,09\\
+Amount at Time 3 (i.e. a year later) &= R909,09(1+10\%) &= R1~000\\
+Amount after withdrawing R1\,000 &= R1\,000 - R1\,000 &= R0\\
 \end{tabular}
 
 Perfect! Of course, for only three years, that was not too bad. But what if I asked you how much you needed to put into a bank account now, to be able to afford R100 a month for the next 15 years. If you used the above approach you would still get the right answer, but it would take you weeks!
@@ -116,8 +116,8 @@ this can be simplified as:
 \frac{a (1 - r^n)}{1-r} &\mbox{useful when $0\le r <1$}
 \end{eqnarray*}
 
-\subsection{Present Values of a series of Payments}\label{presentvalues}
-So having reviewed the mathematics of Sequences and Series, you might be wondering how this is meant to have any practical purpose! Given that we are in the finance section, you would be right to guess that there must be some financial use to all this. Here is an example which happens in many people's lives - so you know you are learning something practical.
+\subsection{Present Values of a Series of Payments}\label{presentvalues}
+So having reviewed the mathematics of sequences and series, you might be wondering how this is meant to have any practical purpose! Given that we are in the finance section, you would be right to guess that there must be some financial use to all this. Here is an example which happens in many people's lives - so you know you are learning something practical.
 
 Let us say you would like to buy a property for R300~000, so you go to the bank to apply for a mortgage bond. The bank wants it to be repaid by annually payments for the next 20 years, starting at end of this year. They will charge you 15\% interest per annum. At the end of the 20 years the bank would have received back the total amount you borrowed together with all the interest they have earned from lending you the money. You would obviously want to work out what the annual repayment is going to be!
 
@@ -158,7 +158,7 @@ Time lines are particularly useful tools for visualizing the series of payments 
 \uput[r](10.5,1.75){Cash Flows}
 \uput[r](10.5,1.25){Time}
 \end{pspicture}
-\caption{Time Line for an annuity (in arrears) of $X$ for $n$ periods.}
+\caption{Time line for an annuity (in arrears) of $X$ for $n$ periods.}
 \end{center}
 \end{figure}
 
@@ -166,7 +166,7 @@ The present value of all the payments (which includes interest) must equate to t
 
 Mathematically, you can write this as:
 \begin{equation*}
-M = X(1+i)^{-1} + X(1+i)^{-2} + X(1+i)^{-3} + ... + X(1+i)^{-20}
+M = X(1+i)^{-1} + X(1+i)^{-2} + X(1+i)^{-3} + \cdots + X(1+i)^{-20}
 \end{equation*}
 
 The painful way of solving this problem would be to do the calculation for each of the terms above - which is 20 different calculations. Not only would you probably get bored along the way, but you are also likely to make a mistake.
@@ -175,7 +175,7 @@ Naturally, there is a simpler way of doing this! You can rewrite the above equat
 
 \begin{eqnarray*}
 M = X[v^1 + v^2 + v^3 + ... + v^{20}]\\
-\mbox{where $v^i = (1+i)^{-1} = 1/(1+i)$}
+\mbox{where $v = (1+i)^{-1} = 1/(1+i)$}
 \end{eqnarray*}
 
 Of course, you do not have to use the method of substitution to solve this. We just find this a useful method because you can get rid of the negative exponents - which can be quite confusing! As an exercise - to show you are a real financial whizz - try to solve this without substitution. It is actually quite easy.
@@ -183,7 +183,7 @@ Of course, you do not have to use the method of substitution to solve this. We j
 Now, the item in square brackets is the sum of a geometric sequence, as discussion in section~\ref{mp:s}. This can be re-written as follows, using what we know from Chapter~\ref{mp:s} of this text book:
 \begin{eqnarray*}
 v^1 + v^2 + v^3 + ... + v^n &=& v(1 + v + v^2 + ... + v^{n-1})\\
-&=& v(\frac{1 - v^n}{1-v})\\
+&=& v\left(\frac{1 - v^n}{1-v}\right)\\
 &=& \frac{1 - v^n}{1/v-1}\\
 &=& \frac{1-(1+i)^{-n}}{i}\\
 \end{eqnarray*}
@@ -192,7 +192,7 @@ Note that we took out a common factor of $v$ before using the formula for the ge
 
 So we can write:
 \begin{equation*}
-M = X[\frac{(1-(1+i)^{-n})}{i}]
+M = X \biggl[\frac{(1-(1+i)^{-n})}{i}\biggr]
 \end{equation*}
 
 This can be re-written:
@@ -205,17 +205,17 @@ So, this formula is useful if you know the amount of the mortgage bond you need 
 For example, if I want to buy a house for R300~000 over 20 years, and the bank is going to charge me 15\% per annum on the outstanding balance, then the annual repayment is:
 \begin{eqnarray*}
 X &=& \frac{Mi}{1-(1+i)^{-n}}\\
-&=& \frac{\rm{R}300\,000 \times 0,15}{1-(1+0,15)^{-20}}\\
-&=& \rm{R}4\,792\,844
+&=& \frac{\mbox{R}300\,000 \times 0,15}{1-(1+0,15)^{-20}}\\
+&=& \mbox{R}47\,928,44
 \end{eqnarray*}
 This means, each year for the next 20 years, I need to pay the bank R47~928,44 per year before I have paid off the mortgage bond. 
 
-On the other hand, if I know I will only have R30~000 a year to repay my bond, then how big a house can I buy? That is easy ....
+On the other hand, if I know I will have only R30~000 per year to repay my bond, then how big a house can I buy? That is easy ....
 
 \begin{eqnarray*}
-M &=& X [\frac{(1-(1+i)^{-n})}{i}]\\
-&=& \rm{R}30~000 [\frac{(1-(1,15)^{-20})}{0,15}]\\
-&=& \rm{R}187~779,90
+M &=& X \biggl[\frac{(1-(1+i)^{-n})}{i}\biggr]\\
+&=& \mbox{R}30~000 \biggl[\frac{(1-(1,15)^{-20})}{0,15}\biggr]\\
+&=& \mbox{R}187~779,94
 \end{eqnarray*}
 
 So, for R30~000 a year for 20 years, I can afford to buy a house of R187~800 (rounded to the nearest hundred).
@@ -237,16 +237,16 @@ We know that:
 \nequ{X = \frac{M}{[\frac{(1-(1+i)^{-n})}{i}]}}
 In order to use this equation, we need to calculate $M$, the amount of the mortgage bond, which is the purchase price of property less the deposit which Sam pays up-front.
 \begin{eqnarray*}
-M &=& R250~000 - R15~000\\
-&=& R235~000
+M &=& \mbox{R}250~000 - \mbox{R}15~000\\
+&=& \mbox{R}235~000
 \end{eqnarray*}
 
-Now because we are considering monthly repayments, but we have been given an annual interest rate, we need to convert this to a monthly interest rate, $i12$. (If you are not clear on this, go back and revise section \ref{m:f11:nominal}.)
+Now because we are considering monthly repayments, but we have been given an annual interest rate, we need to convert this to a monthly interest rate, $i_{12}$. (If you are not clear on this, go back and revise section \ref{m:f11:nominal}.)
 
 \begin{eqnarray*}
-(1+ i12)^{12} &=& (1+i)\\
-(1 + i12)^{12} &=& 1,11\\
-i12 &=& 0,873459\%
+(1+ i_{12})^{12} &=& (1+i)\\
+(1 + i_{12})^{12} &=& 1,11\\
+i_{12} &=& 0,873459\%
 \end{eqnarray*}
 
 We know that the mortgage bond is for 30 years, which equates to 360 months.
@@ -256,8 +256,8 @@ Now it is easy, we can just plug the numbers in the formula, but do not forget t
 
 \begin{eqnarray*}
 X &=& \frac{M}{[\frac{(1-(1+i)^{-n})}{i}]}\\
-&=& \frac{\rm{R}235~000}{[\frac{(1-(1.00876459)^{-360})}{0,008734594}]}\\
-&=& \rm{R}2~146,39
+&=& \frac{\mbox{R}235~000}{[\frac{(1-(1.00876459)^{-360})}{0,008734594}]}\\
+&=& \mbox{R}2~146,39
 \end{eqnarray*}
 
 \westep{Write the final answer}
@@ -270,7 +270,7 @@ The following is given:
 \begin{itemize}
 \item{Deposit amount = R10~000}
 \item{Price of flat = R200~000}
-\item{interest rate, $i=9\%$}
+\item{Interest rate, $i=9\%$}
 \end{itemize}
 We are required to find the monthly repayment for a 20-year mortgage.
 
@@ -281,11 +281,11 @@ The interest rate was quoted as 9\% per annum payable monthly, which means that 
 
 First we need to calculate $M$, the amount of the mortgage bond, which is the purchase price of property minus the deposit which Sam pays up-front.
 \begin{eqnarray*}
-M &=& R200\:~000 - R10\:~000\\
-&=& R190\:~000
+M &=& \mbox{R}200\:~000 - \mbox{R}10\:~000\\
+&=& \mbox{R}190\:~000
 \end{eqnarray*}
 
-The present value of our mortgage payments X (which includes interest), must equate to the present mortgage amount
+The present value of our mortgage payments $X$ (which includes interest), must equate to the present mortgage amount
 \begin{eqnarray*}
 M = X\times (1 + 0,75\%)^{-1}&+& \\
 X\times (1 + 0,75\%)^{-2}&+& \\
@@ -298,16 +298,16 @@ But it is clearly much easier to use our formula than work out 240 factors and a
 
 \westep{Solve the problem}
 \begin{eqnarray*}
-X \times \frac{1 - (1 + 0,75\%)^{-240}}{0,75\%} &=& \rm{R}190~000\\
-X \times 111,14495 &=& \rm{R}190~000\\
-X &=& \rm{R}1~709,48
+X \times \frac{1 - (1 + 0,75\%)^{-240}}{0,75\%} &=& \mbox{R}190~000\\
+X \times 111,14495 &=& \mbox{R}190~000\\
+X &=& \mbox{R}1~709,48
 \end{eqnarray*}
 
 \westep{Write the final answer}
 So to repay a R190~000 mortgage over 20 years, at 9\% interest payable monthly, will cost you R1~709,48 per month for 240 months.}
 \end{wex}
 
-\subsubsection{Show me the money}
+\subsubsection{Show Me the Money}
 Now that you've done the calculations for the worked example and know what the monthly repayments are, you can work out some surprising figures. For example, R1~709,48 per month for 240 month makes for a total of R410~275,20 (=R1~709,48 $\times$ 240). That is more than double the amount that you borrowed! This seems like a lot. However, now that you've studied the effects of time (and interest) on money, you should know that this amount is somewhat meaningless. The value of money is dependant on its timing.
 
 Nonetheless, you might not be particularly happy to sit back for 20 years making your R1~709,48 mortgage payment every month knowing that half the money you are paying are going toward interest. But there is a way to avoid those heavy interest charges. It can be done for less than R300 extra every month...
@@ -316,7 +316,7 @@ So our payment is now R2~000. The interest rate is still 9\% per annum payable m
 
 The present value of the stream of payments must be equal to R190~000 (the present value of the borrowed amount). So we need to solve for $n$ in:
 \begin{eqnarray*}
-\rm{R}2~000 \times [1 - (1 + 0,75\%)^{-n}]/0,75\% &=& \rm{R}190~000\\
+\mbox{R}2~000 \times [1 - (1 + 0,75\%)^{-n}]/0,75\% &=& \mbox{R}190~000\\
 1 - (1 + 0,75\%)^{-n} &=& (\frac{190~000\times 0,75\%}{2~000})\\
 \log(1+0,75\%)^{-n} &=& \log[(1 - \frac{190~000\times 0,0075}{2~000}]\\
 -n\times \log(1+0,75\%) &=& \log[(1 - \frac{190~000\times 0,0075}{2~000}]\\
@@ -326,9 +326,9 @@ n &=& 166,8 \mbox{ months}\\
 \end{eqnarray*}
 So the mortgage will be completely repaid in less than 14 years, and you would have made a total payment of 166,8$\times$ R2~000 = R333~600.
 
-Can you see what is happened? Making regular payments of R2~000 instead of the required R1,709,48, you will have saved R76~675,20 (= R410~275,20 - R333~600) in interest, and yet you have only paid an additional amount of R290,52 for 166,8 months, or R48~458,74. You surely know by now that the difference between the additional R48~458,74 that you have paid and the R76~675,20 interest that you have saved is attributable to, yes, you have got it, compound interest!
+Can you see what is happened? Making regular payments of R2~000 instead of the required R1~709,48, you will have saved R76~675,20 (= R410~275,20 - R333~600) in interest, and yet you have only paid an additional amount of R290,52 for 166,8 months, or R48~458,74. You surely know by now that the difference between the additional R48~458,74 that you have paid and the R76~675,20 interest that you have saved is attributable to, yes, you have got it, compound interest!
 
-\subsection{Future Value of a series of Payments}
+\subsection{Future Value of a Series of Payments}
 In the same way that when we have a single payment, we can calculate a present value or a future value - we can also do that when we have a series of payments.
 
 In the above section, we had a few payments, and we wanted to know what they are worth now - so we calculated present values. But the other possible situation is that we want to look at the future value of a series of payments.
@@ -337,15 +337,15 @@ Maybe you want to save up for a car, which will cost R45~000 - and you would lik
 
 Can you see the difference between this example and the ones at the start of the chapter where we were only making a single payment into the bank account - whereas now we are making a series of payments into the same account? This is a sinking fund.
 
-So, using our usual notation, let us write out the answer. Make sure you agree how we come up with this. Because we are making monthly payments, everything needs to be in months. So let $A$ be the closing balance you need to buy a car, $P$ is how much you need to pay into the bank account each month, and $i12$ is the monthly interest rate. (Careful - because 12\% is the annual interest rate, so we will need to work out later what the monthly interest rate is!)
+So, using our usual notation, let us write out the answer. Make sure you agree how we come up with this. Because we are making monthly payments, everything needs to be in months. So let $A$ be the closing balance you need to buy a car, $P$ is how much you need to pay into the bank account each month, and $i_{12}$ is the monthly interest rate. (Careful - because 12\% is the annual interest rate, so we will need to work out later what the monthly interest rate is!)
 
 \begin{equation*}
-A = P(1+i12)^{24} + P(1+i12)^{23} + ... + P(1+i12)^1
+A = P(1+i_{12})^{24} + P(1+i_{12})^{23} + ... + P(1+i_{12})^1
 \end{equation*}
 
 Here are some important points to remember when deriving this formula:
 \begin{enumerate}
-\item{We are calculating future values, so in this example we use $(1+i12)^n$ and not $(1+i12)^{-n}$. Check back to the start of the chapter if this is not obvious to you by now.}
+\item{We are calculating future values, so in this example we use $(1+i_{12})^n$ and not $(1+i_{12})^{-n}$. Check back to the start of the chapter if this is not obvious to you by now.}
 \item{If you draw a timeline you will see that the time between the first payment and when you buy the car is 24 months, which is why we use 24 in the first exponent.}
 \item{Again, looking at the timeline, you can see that the 24th payment is being made one month before you buy the car - which is why the last exponent is a 1.}
 \item{Always check that you have got the right number of payments in the equation. Check right now that you agree that there are 24 terms in the formula above.}
@@ -353,11 +353,11 @@ Here are some important points to remember when deriving this formula:
 
 So, now that we have the right starting point, let us simplify this equation:
 \begin{eqnarray*}
-A &=& P[(1+i12)^{24} + (1+i12)^{23} + \ldots + (1+i12)^{1}]\\
-&=& P [ X^{24} + X^{23} + \ldots + X^1] \mbox{ using $X=(1+i12)$}
+A &=& P[(1+i_{12})^{24} + (1+i_{12})^{23} + \ldots + (1+i_{12})^{1}]\\
+&=& P [ X^{24} + X^{23} + \ldots + X^1] \mbox{ using $X=(1+i_{12})$}
 \end{eqnarray*}
 
-Note that this time X has a positive exponent not a negative exponent, because we are doing future values. This is not a rule you have to memorise - you can see from the equation what the obvious choice of X should be.
+Note that this time $X$ has a positive exponent not a negative exponent, because we are doing future values. This is not a rule you have to memorise - you can see from the equation what the obvious choice of $X$ should be.
 
 Let us re-order the terms:
 \begin{equation*}
@@ -366,15 +366,15 @@ A = P [ X^1 + X^2 + \ldots + X^{24}] = P \cdot X [1 + X + X^2 + \ldots + X^{23}]
 
 This is just another sum of a geometric sequence, which as you know can be simplified as:
 \begin{eqnarray*}
-A &=& P \cdot X [X^n - 1] / ((1+i12)-1)\\
-&=& P \cdot X [X^n - 1] / i12
+A &=& P \cdot X [X^n - 1] / ((1+i_{12})-1)\\
+&=& P \cdot X [X^n - 1] / i_{12}
 \end{eqnarray*}
 
-So if we want to use our numbers, we know that $A$ = R45~000, $n$=24 (because we are looking at monthly payments, so there are 24 months involved) and $i = 12\%$ per annum.
+So if we want to use our numbers, we know that $A$ = R45~000, $n=24$ (because we are looking at monthly payments, so there are 24 months involved) and $i = 12\%$ per annum.
 
 BUT (and it is a big but) we need a monthly interest rate. Do not forget that the trick is to keep the time periods and the interest rates in the same units - so if we have monthly payments, make sure you use a monthly interest rate! Using the formula from Grade 11%
 %Section \ref{m:f11:nominal}
-, we know that $(1+i) = (1+i12)^{12}$. So we can show that $i12 = 0,0094888 = 0,94888 \%$. 
+, we know that $(1+i) = (1+i_{12})^{12}$. So we can show that $i_{12} = 0,0094888 = 0,94888 \%$. 
 
 Therefore,
 \begin{eqnarray*}
@@ -400,7 +400,7 @@ This means you need to invest R166~267 each month into that bank account to be a
 \item What is the monthly repayment on the bond?
 \item How much interest will be paid in total over the 30 years?
 \end{enumerate}}
-\item{How much money must be invested now to obtain regular annuity payments of R 5~500 per month for five years ?  The money is invested at 11,1\% p.a., compounded monthly. (Answer to the nearest hundred rand)}
+\item{How much money must be invested now to obtain regular annuity payments of R 5~500 per month for five years?  The money is invested at 11,1\% p.a., compounded monthly. (Answer to the nearest hundred rand.)}
 \end{enumerate}
 
 \section{Investments and Loans}
@@ -424,17 +424,17 @@ We will continue to use the earlier example. There is a loan amount of R190~000.
 Consider the first payment of R1~709,48 one month into the loan. First, we can work out how much interest we owe the bank at this moment. We borrowed R190~000 a month ago, so we should owe:
 
 \begin{eqnarray*}
-I &=& M \times i12\\
-&=& R190~000 \times 0,75\%\\
-&=& R1~425\\
+I &=& M \times i_{12}\\
+&=& \mbox{R}190~000 \times 0,75\%\\
+&=& \mbox{R}1~425\\
 \end{eqnarray*}
 
-We are paying them R1~425 in interest. We call this the interest component of the repayment. We are only paying off R1~709,48 - R1~425 = R284.48 of what we owe! This is called the capital component. That means we still owe R190~000 - R284,48 = R189~715,52. This is called the capital outstanding. Let's see what happens at the end of the second month. The amount of interest we need to pay is the interest on the capital outstanding.
+We are paying them R1~425 in interest. We call this the interest component of the repayment. We are only paying off R1~709,48 - R1~425 = R284,48 of what we owe! This is called the capital component. That means we still owe R190~000 - R284,48 = R189~715,52. This is called the capital outstanding. Let's see what happens at the end of the second month. The amount of interest we need to pay is the interest on the capital outstanding.
 
 \begin{eqnarray*}
-I &=& M \times i12\\
-&=& R189~715,52 \times 0,75\%\\
-&=& R1~422,87\\
+I &=& M \times i_{12}\\
+&=& \mbox{R}189~715,52 \times 0,75\%\\
+&=& \mbox{R}1~422,87\\
 \end{eqnarray*}
 
 Since we don't owe the bank as much as we did last time, we also owe a little less interest. The capital component of the repayment is now R1~709,48 - R1~422,87 = R286,61. The capital outstanding will be R189~715,52 - R286,61 = R189~428,91. This way, we can break each of our repayments down into an interest part and the part that goes towards paying off the loan.
@@ -469,7 +469,7 @@ Time&\multicolumn{3}{l|}{Repayment}&\multicolumn{3}{p{2cm}|}{Interest Component}
 \label{tb:lschedule1}
 \end{table}
 
-Now, let's see the same thing again, but with R2~000 being repaid each year. We expect the numbers to change. However, how much will they change by? As before, we owe R1~425 in interest in interest. After one month. However, we are paying R2~000 this time. That leaves R575 that goes towards paying off the capital outstanding, reducing it to R189~425. By the end of the second month, the interest owed is R1~420,69 (That's R189~425$\times i12$). Our R2~000 pays for that interest, and reduces the capital amount owed by R2~000 - R1~420,69 = R579,31. This reduces the amount outstanding to R188~845,69.
+Now, let's see the same thing again, but with R2~000 being repaid each year. We expect the numbers to change. However, how much will they change by? As before, we owe R1~425 in interest in interest. After one month. However, we are paying R2~000 this time. That leaves R575 that goes towards paying off the capital outstanding, reducing it to R189~425. By the end of the second month, the interest owed is R1~420,69 (That's R189~425$\times i_{12}$). Our R2~000 pays for that interest, and reduces the capital amount owed by R2~000 $-$ R1~420,69 = R579,31. This reduces the amount outstanding to R188~845,69.
 
 Doing the same calculations as before yields a new loan schedule shown in Table \ref{tb:lschedule2}.
 
@@ -515,22 +515,22 @@ Learning about financial mathematics enables you to duplicate these calculations
 \begin{wex}{Monthly Payments}{Stefan and Marna want to buy a house that costs R 1~200~000. Their parents offer to put down a 20\% payment towards the cost of the house.  They need to get a moratage for the balance.  What are their monthly repayments if the term of the home loan is 30 years and the interest is 7,5\%, compounded monthly?}
 {
 \westep{Determine how much money they need to borrow}
-$R 1~200~00 - R 240~000 = R 960~000$
+R$ 1~200~00 - $R$ 240~000 = $R$ 960~000$
 \westep{Determine how to approach the problem}
 Use the formula: \\
 \nequ{P = \dfrac{x[1-(1+i)^{-n}]}{i}}\\
 Where \\
-$P = 960~000$\\
+$P = $R$960~000$\\
 $n = 30 \times 12 = 360 \mbox{ months}$\\
 $i = 0,075 \div 12 = 0,00625$
 \westep{Solve the problem}
 \begin{eqnarray*}
-R 960~000&=& \dfrac{x[1-(1 + 0,00625)^{-360}]}{0,00625}\\
+\mbox{R}960~000&=& \dfrac{x[1-(1 + 0,00625)^{-360}]}{0,00625}\\
 &=&x(143,0176273)\\
-x&=&R 6~712,46
+x&=&\mbox{R} 6~712,46
 \end{eqnarray*}
 \westep{Write the final answer}
-The monthly repayments $= R6~712,46$
+The monthly repayments $= $R$6~712,46$
 }
 \end{wex}
 
@@ -544,11 +544,11 @@ The monthly repayments $= R6~712,46$
 \subsection{Calculating Capital Outstanding}
 \label{ss:capitaloutstanding}
 
-As defined in Section \ref{ss:loadschedules}, Capital outstanding is the amount we still owe the people we borrowed money from at a given moment in time. We also saw how we can calculate this using loan schedules. However, there is a significant disadvantage to this method: it is very time consuming. For example, in order to calculate how much capital is still outstanding at time 12 using the loan schedule, we'll have to first calculate how much capital is outstanding at time 1 through to 11 as well. This is already quite a bit more work than we'd like to do. Can you imagine calculating the amount outstanding after 10 years (time 120)?
+As defined in Section \ref{ss:loadschedules}, capital outstanding is the amount we still owe the people we borrowed money from at a given moment in time. We also saw how we can calculate this using loan schedules. However, there is a significant disadvantage to this method: it is very time consuming. For example, in order to calculate how much capital is still outstanding at time 12 using the loan schedule, we'll have to first calculate how much capital is outstanding at time 1 through to 11 as well. This is already quite a bit more work than we'd like to do. Can you imagine calculating the amount outstanding after 10 years (time 120)?
 
 Fortunately, there is an easier method. However, it is not immediately clear why this works, so let's take some time to examine the concept.
 
-\subsubsection{Prospective method for Capital Outstanding}
+\subsubsection{Prospective Method for Capital Outstanding}
 
 Let's say that after a certain number of years, just after we made a repayment, we still owe amount $Y$. What do we know about $Y$? We know that using the loan schedule, we can calculate what it equals to, but that is a lot of repetitive work. We also know that $Y$ is the amount that we are still going to pay off. In other words, all the repayments we are still going to make in the future will exactly pay off $Y$. This is true because in the end, after all the repayments, we won't be owing anything.
 
@@ -568,7 +568,7 @@ Y &=&R1~709,48 \times \frac{1-1,0075^{-228}}{0,0075}\\
 Oops! This seems to be almost right, but not quite. We should have got R186~441,84. We are 8 cents out. However, this is in fact not a mistake. Remember that when we worked out the monthly repayments, we rounded to the nearest cents and arrived at R1~709,48. This was because one cannot make a payment for a fraction of a cent. Therefore, the rounding off error was carried through. That's why the two figures don't match exactly. In financial mathematics, this is largely unavoidable.
 
 
-\section{Formulae Sheet}
+\section{Formula Sheet}
 As an easy reference, here are the key formulae that we derived and used during this chapter. While memorising them is nice (there are not many), it is the application that is useful. Financial experts are not paid a salary in order to recite formulae, they are paid a salary to use the right methods to solve financial problems.
 
 \subsection{Definitions}
@@ -615,7 +615,7 @@ $iT$ &the interest rate paid $T$ times per annum, i.e. $iT = \frac{\mbox{Nominal
 %This question does not make sense, please look at it for future editions
 %\item{Suppose you invest R500 this year compounded at interest rate $i$ for a year in Bank T. In the following year you invest the accumulation that you received for another year at the same interest rate and on the third year, you invested the accumulation you received at the same interest rate too. If $P$ represents the present value (R500), find a pattern for this investment. [Hint: find a formula]}
 
-\item{Thabani and Lungelo are both using UKZN Bank for their saving. Suppose Lungelo makes a deposit of $X$ today at interest rate of $i$ for six years. Thabani makes a deposit of $3X$ at an interest rate of $0.05$. Thabani made his deposit 3 years after Lungelo made his first deposit. If after 6 years, their investments are equal, calculate the value of $i$ and find $X$. If the sum of their investment is R20 000, use $X$ you got to find out how much Thabani got in 6 years.}
+\item{Thabani and Lungelo are both using UKZN Bank for their saving. Suppose Lungelo makes a deposit of $X$ today at interest rate of $i$ for six years. Thabani makes a deposit of $3X$ at an interest rate of $0,05$. Thabani made his deposit 3 years after Lungelo made his first deposit. If after 6 years, their investments are equal, calculate the value of $i$ and find $X$. If the sum of their investment is R20 000, use $X$ you got to find out how much Thabani got in 6 years.}
 
 \item{Sipho invests R500 at an interest rate of $\log(1,12)$ for 5 years. Themba, Sipho's sister invested R200 at interest rate $i$ for 10 years on the same date that her brother made his first deposit. If after 5 years, Themba's accumulation equals Sipho's, find the interest rate $i$ and find out whether Themba will be able to buy her favorite cell phone after 10 years which costs R2 000.}
 

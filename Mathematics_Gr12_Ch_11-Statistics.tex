@@ -1,4 +1,4 @@
-\chapter{Statistics - Grade 12}
+\chapter{Statistics}
 \label{m:s12}
 
 
@@ -7,7 +7,7 @@
 \section{Introduction}
 In this chapter, you will use the mean, median, mode and standard deviation of a set of data to identify whether the data is normally distributed or whether it is skewed. You will learn more about populations and selecting different kinds of samples in order to avoid bias. You will work with lines of best fit, and learn how to find a regression equation and a correlation coefficient. You will analyse these measures in order to draw conclusions and make predictions.
 
-\section{A Normal Distribution}
+\section{Normal Distribution}
 \Activity{Investigation}{}
 {You are given a table of data below. 
 \begin{center}
@@ -225,9 +225,9 @@ Phet simulation for curve fitting: SIYAVULA-SIMULATION:http://cnx.org/content/m3
 \begin{wex}{Fitting by hand}
 {Use the data given to draw a scatter plot and line of best fit. Now write down the equation of the line that best seems to fit the data.\\ \\
 \begin{tabular}{l|l|l|l|l|l|l}
-x&1,0&2,4&3,1&4,9&5,6&6,2\\
+$x$&1,0&2,4&3,1&4,9&5,6&6,2\\
 \hline
-y&2,5&2,8&3,0&4,8&5,1&5,3
+$y$&2,5&2,8&3,0&4,8&5,1&5,3
 \end{tabular} \\ \\
 }
 {
@@ -268,8 +268,7 @@ $$y=\frac{2}{3}x+1,5$$
 \end{wex}
 
 \subsection{The Method of Least Squares}
-We now come to a more accurate method of finding the line of best-fit. The method is very simple. \\
- Suppose we guess a line of best-fit. Then at at every data point, we find the distance between the data point and the line. If the line fitted the data perfectly, this distance should be zero for all the data points. The worse the fit, the larger the differences. We then square each of these distances, and add them all together. 
+We now come to a more accurate method of finding the line of best-fit. The method is very simple. Suppose we guess a line of best-fit. Then at at every data point, we find the distance between the data point and the line. If the line fitted the data perfectly, this distance should be zero for all the data points. The worse the fit, the larger the differences. We then square each of these distances, and add them all together. 
 
 \begin{center}
 \scalebox{1} 
@@ -298,10 +297,10 @@ We now come to a more accurate method of finding the line of best-fit. The metho
 %\\ \\
 The best-fit line is then the line that minimises the sum of the squared distances. \\
 Suppose we have a data set of $n$ points  $\{(x_1;y_1), (x_2;y_2), \ldots , (x_n,y_n)\}$. We also have a line $f(x)=mx+c$ that we are trying to fit to the data. The distance between the first data point and the line, for example, is 
- $$\text{distance}=y_1-f(x)=y_1-(mx+c)$$
+ $$\text{distance}=y_1-f(x_1)=y_1-(mx_1+c)$$
 We now square each of these distances and add them together. Lets call this sum $S(m,c)$. Then we have that
 \begin{eqnarray*}
-S(m,c)&=&(y_1-f(x_1))^2+(y_2-f(x_2))^2+\ldots+(y_n-f(x_n))^2\\
+S(m,c)&=&(y_1-f(x_1))^2+(y_2-f(x_2))^2+\cdots+(y_n-f(x_n))^2\\
 &=&\sum^n_{i=1}(y_i-f(x_i))^2
 \end{eqnarray*} 
 Thus our problem is to find the value of $m$ and $c$ such that $S(m,c)$ is minimised. Let us call these minimising values $m_0$ and $c_0$. Then the line of best-fit is $f(x)=m_0 x+c_0$. We can find $m_0$ and $c_0$ using calculus, but it is tricky, and we will just give you the result, which is that
@@ -341,7 +340,7 @@ a &=& \bar{y} - b\bar{x} = \frac{1160}{5} - \frac{12\times 80}{5} = 40\\
 }
 \end{wex}
 
-\subsection{Using a calculator}
+\subsection{Using a Calculator}
 
 \begin{wex}{Using the Sharp EL-531VH calculator
 }{% Queston
@@ -505,9 +504,9 @@ Biology \% & 48 & 59 & 68 & 84 & 53 \\\hline
 
 
 
-\subsection{Correlation coefficients}
+\subsection{Correlation Coefficients}
 
-Once we have applied regression analysis to a set of data, we would like to have a number that tells us exactly how well the data fits the function. A correlation coefficient, $r$, is a tool that tells us to what degree there is a relationship between two sets of data. The correlation coefficient $r \in \left[-1; 1\right]$ when $r = -1$, there is a perfect negative relationship, when $r = 0$, there is no relationship and $r = 1$ is a perfect positive correlation.
+Once we have applied regression analysis to a set of data, we would like to have a number that tells us exactly how well the data fits the function. A correlation coefficient, $r$, is a tool that tells us to what degree there is a relationship between two sets of data. The correlation coefficient $r \in \left[-1; 1\right]$ when $r = -1$, there is a perfect negative correlation, when $r = 0$, there is no correlation and $r = 1$ is a perfect positive correlation.
 
 % insert 5 small graphs - examples of correlation
 \begin{center}
@@ -1021,7 +1020,7 @@ A class wrote two tests, and the marks for each were recorded in the table below
 \begin{enumerate}
 \item Is there a strong association between the marks for the first and second test? Show why or why not.
 
-\item One of the learners (in row 18) did not write the second test. Given their mark for the first test, calculate an expected mark for the second test.
+\item One of the learners (in row 18) did not write the second test. Given her mark for the first test, calculate an expected mark for the second test.
 \end{enumerate}
 
 \begin{tabular}{|c|c|c|}
@@ -1053,6 +1052,7 @@ Learner & Test 1 & Test 2 \\
 
 \item
 A fast food company produces hamburgers. The number of hamburgers made, and the costs are recorded over a week.\\
+
 \begin{tabular}{|c|c|}
 \hline
 Hamburgers made & Costs \\
@@ -1070,14 +1070,14 @@ Hamburgers made & Costs \\
 \begin{enumerate}
 \item Find the linear regression function that best fits the data.
 
-\item If the total cost in a day is R2500, estimate the number of hamburgers produced.
+\item If the total cost in a day is R2 500, estimate the number of hamburgers produced.
 
 \item What is the cost of 490 hamburgers?
 
 \end{enumerate}
 
 \item
-The profits of a new shop are recorded over the first 6 months. The owner wants to predict his future sales. The profits so far have been R90 000 , R93 000, R99 500, R102 000, R101 300, R109 000. 
+The profits of a new shop are recorded over the first 6 months. The owner wants to predict his future sales. The profits so far have been R90 000, R93 000, R99 500, R102 000, R101 300, R109 000. 
 
 \begin{enumerate}
 \item For the profit data, calculate the linear regression function.
