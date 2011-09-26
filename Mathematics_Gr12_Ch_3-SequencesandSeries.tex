@@ -10,13 +10,13 @@ The simplest type of numerical sequence is an \textit{arithmetic sequence}.
 \Definition{Arithmetic Sequence}{An \textit{arithmetic} (or \textit{linear}) \textit{sequence} is a sequence of numbers in which each new term is calculated by \textbf{adding} a constant value to the previous term}
 
 For example,
-\nequ{1,2,3,4,5,6,\ldots}
-is an arithmetic sequence because you add 1 to the current term to get the next term:
+\nequ{1;~2;~3;~4;~5;~6;\ldots}
+is an arithmetic sequence because you add $1$ to the current term to get the next term:
 \begin{center}
 \begin{tabular}{rl}
-first term:&1\\
-second term:&2=1+1\\
-third term:&3=2+1\\
+first term:&$1$\\
+second term:&$2=1+1$\\
+third term:&$3=2+1$\\
 $\vdots$&\\
 $n^{\rm{th}}$ term:&$n=(n-1)+1$\\
 \end{tabular}
@@ -24,11 +24,11 @@ $n^{\rm{th}}$ term:&$n=(n-1)+1$\\
 
 \Activity{Common Difference}{Find the constant value that is added to get the following sequences and write out the next 5 terms.
 \begin{enumerate}
-\item{$2,6,10,14,18,22, \ldots$}
-\item{$-5,-3,-1,1,3,\ldots$}
-\item{$1,4,7,10,13,16,\ldots$}
-\item{$-1,10,21,32,43,54,\ldots$}
-\item{$3,0,-3,-6,-9,-12, \ldots$}
+\item{$2;~6;~10;~14;~18;~22; \ldots$}
+\item{$-5;~-3;~-1;~1;~3;\ldots$}
+\item{$1;~4;~7;~10;~13;~16;\ldots$}
+\item{$-1;~10;~21;~32;~43;~54;\ldots$}
+\item{$3;~0;~-3;~-6;~-9;~-12; \ldots$}
 \end{enumerate}}
 
 \subsection{General Equation for the $n^{th}$-Term of an Arithmetic Sequence}
@@ -89,11 +89,11 @@ For an arithmetic sequence, plotting $a_n$ vs. $n$ results in:
 \uput[u](8.5,8.5){$a_n=a_1 + d(n-1)$}
 \uput[l](0.25,5){\rotateleft{Term: $a_n$}}
 \uput[r](1,1){$y$-intercept: $a_1$}
-\multips(1,0)(1,0){10}{\psline(0,-.1)(0,.1)}
-\multips(0,1){10}{\psline(0.9,0)(1.1,0)}8
+\multips(1,0)(1,0){10}{\psline(0,-0.1)(0,0.1)}
+\multips(0,1){10}{\psline(0.9,0)(1.1,0)}
 \multido{\n=1+1}{9}{\rput(\n,-0.35){\n}}
 \multido{\n=1+1}{9}{\rput(0.65,\n){$a_{\n}$}}
-\rput(5,-.75){Index: $n$}
+\rput(5,-1.75){Index: $n$}
 \end{pspicture}
 %\caption{When the terms of a linear sequence are plotted as a function of the index, a straight
 %line is obtained.}
@@ -212,11 +212,11 @@ Or, more generally,
 \Activity{Common Ratio of Geometric Sequence}{Determine the common ratio for the following
 geometric sequences:
 \begin{enumerate}
-\item{$5, 10, 20, 40, 80, \ldots$}
-\item{$\frac{1}{2},\frac{1}{4},\frac{1}{8},\ldots$}
-\item{$7, 28, 112, 448,\ldots$}
-\item{$2, 6, 18, 54,\ldots$}
-\item{$-3, 30, -300, 3000,\ldots$}
+\item{$5;~ 10;~ 20;~40;~ 80; \ldots$}
+\item{$\frac{1}{2};~\frac{1}{4};~\frac{1}{8};\ldots$}
+\item{$7;~28;~112;~448;\ldots$}
+\item{$2;~6;~18;~54;\ldots$}
+\item{$-3;~30;~ -300;~ 3000;\ldots$}
 \end{enumerate}}
 % -----------------------------------------------------------------
 
@@ -229,7 +229,7 @@ a_n = a_1 \cdot r^{n-1}
 \end{equation}
 where $a_1$ is the first term and $r$ is called the \textit{common ratio}. 
 
-So, if we want to know how many people are newly-infected after $10$ days, we need to work
+So, if we want to know how many people are newly-infected after 10 days, we need to work
 out $a_{10}$:
 \begin{eqnarray*}
 a_n &=& a_1 \cdot r^{n-1} \\
@@ -239,7 +239,7 @@ a_{10} &=& 2 \times 2^{10-1} \\
 &=& 1024
 \end{eqnarray*}
 
-That is, after $10$ days, there are $1~024$ newly-infected people.
+That is, after 10 days, there are $1~024$ newly-infected people.
 
 Or, after how many days would $16~384$ people be newly-infected with the flu virus?
 \begin{eqnarray*}
@@ -252,16 +252,16 @@ a_n &=& a_1 \cdot r^{n-1} \\
 n &=& 14
 \end{eqnarray*}
 
-That is, after $14$ days $16~384$ people are newly-infected.
+That is, after 14 days $16~384$ people are newly-infected.
 
 \Activity{General Equation of Geometric Sequence}{Determine the formula for the $n^{th}$-term of the following geometric
 sequences:
 \begin{enumerate}
-\item{$5, 10, 20, 40, 80, \ldots$}
-\item{$\frac{1}{2},\frac{1}{4},\frac{1}{8},\ldots$}
-\item{$7, 28, 112, 448,\ldots$}
+\item{$5;~ 10;~ 20;~ 40;~ 80; \ldots$}
+\item{$\frac{1}{2};~\frac{1}{4};~\frac{1}{8};\ldots$}
+\item{$7;~28;~ 112;~ 448;\ldots$}
 \item{$2, 6, 18, 54,\ldots$}
-\item{$-3, 30, -300, 3000,\ldots$}
+\item{$-3;~ 30;~ -300;~ 3000;\ldots$}
 \end{enumerate}}
 
 %===========================================================

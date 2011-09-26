@@ -1487,7 +1487,7 @@ In $\triangle{OCD}$
 \westep{Then, once we've shown similarity, we use the proportionality relation, as well as our first observation, appropriately.}
 \begin{eqnarray*}
 &\therefore& \triangle{BOC} /// \triangle{ODC} \mbox{ (3 $\angle$'s equal)} \\
-&\therefore& \frac{CO}{BC} = \frac{CD}{CO} 67625\\
+&\therefore& \frac{CO}{BC} = \frac{CD}{CO} \\
 &\therefore& \frac{OE}{BC} = \frac{CD}{CO} \mbox{ ($OE = CO$ isosceles $\triangle{OEC}$)} \\
 \end{eqnarray*}
 
@@ -1603,7 +1603,7 @@ Let $\angle{FEA} = y$
 %\end{itemize}
 %\end{syllabus}
 
-We know that every point on the circumference of a circle is the same distance away from the centre of the circle. Consider a point $(x_1,y_1)$ on the circumference of a circle of radius $r$ with centre at $(x_0,y_0)$.
+We know that every point on the circumference of a circle is the same distance away from the centre of the circle. Consider a point $(x_1;y_1)$ on the circumference of a circle of radius $r$ with centre at $(x_0;y_0)$.
 
 \begin{figure}[htbp]
 \begin{center}
@@ -1611,14 +1611,14 @@ We know that every point on the circumference of a circle is the same distance a
 %\psgrid[gridcolor=lightgray,gridlabels=0,gridwidth=0.5pt,subgriddiv=10]
 \pscircle(0,0){1.5}
 \psdots(1.06,1.06)(0,0)
-\uput[ul](0,0){$(x_0,y_0)$}
-\uput[r](1.06,1.06){$P (x_1,y_1)$}
+\uput[ul](0,0){$(x_0;y_0)$}
+\uput[r](1.06,1.06){$P (x_1;y_1)$}
 \psaxes[dx=0,Dx=10,dy=0,Dy=10,arrows=<->](0,0)(-2,-2)(2,2)
 \psline[linestyle=dashed](0,0)(1.06,1.06)(1.06,0)
 \uput[dr](0,0){$O$}
 \uput[d](1.06,0){$Q$}
 \endpspicture
-\caption{Circle with centre $(x_0,y_0)$ and a point $P$ at $(x_1,y_1)$}
+\caption{Circle with centre $(x_0;y_0)$ and a point $P$ at $(x_1;y_1)$}
 \label{fig:mg:c:circle}
 \end{center}
 \end{figure}
@@ -1635,9 +1635,9 @@ OP&=& r\\
 
 But, this same relation holds for any point $P$ on the circumference. Therefore, we can write:
 \equ{(x-x_0)^2+(y-y_0)^2=r^2}{eq:mg:c:circle}
-for a circle with centre at $(x_0,y_0)$ and radius $r$.
+for a circle with centre at $(x_0;y_0)$ and radius $r$.
 
-For example, the equation of a circle with centre $(0,0)$ and radius 4 is:
+For example, the equation of a circle with centre $(0;0)$ and radius 4 is:
 \begin{eqnarray*}
 (y-y_0)^2+(x-x_0)^2&=&r^2\\
 (y-0)^2+(x-0)^2&=&4^2\\
@@ -1645,7 +1645,7 @@ x^2+y^2&=&16\\
 \end{eqnarray*}
 Khan Academy video on circles:SIYAVULA-VIDEO:http://cnx.org/content/m39288/latest/#circles-1
 \begin{wex}{Equation of a Circle I}
-{Find the equation of a circle (centre $O$) with a diameter between two points, $P$ at $(-5,5)$ and $Q$ at $(5,-5)$.}{
+{Find the equation of a circle (centre $O$) with a diameter between two points, $P$ at $(-5;5)$ and $Q$ at $(5;-5)$.}{
 \westep{Draw a picture}
 Draw a picture of the situation to help you figure out what needs to be done.
 \begin{center}
@@ -1662,7 +1662,7 @@ Draw a picture of the situation to help you figure out what needs to be done.
 \end{center}
 
 \westep{Find the centre of the circle}
-We know that the centre of a circle lies on the midpoint of a diameter. Therefore the co-ordinates of the centre of the circle is found by finding the midpoint of the line between $P$ and $Q$. Let the co-ordinates of the centre of the circle be $(x_0,y_0)$, let the co-ordinates of $P$ be $(x_1,y_1)$ and let the co-ordinates of $Q$ be $(x_2,y_2)$. Then, the co-ordinates of the midpoint are:
+We know that the centre of a circle lies on the midpoint of a diameter. Therefore the co-ordinates of the centre of the circle is found by finding the midpoint of the line between $P$ and $Q$. Let the co-ordinates of the centre of the circle be $(x_0;y_0)$, let the co-ordinates of $P$ be $(x_1;y_1)$ and let the co-ordinates of $Q$ be $(x_2;y_2)$. Then, the co-ordinates of the midpoint are:
 \begin{eqnarray*}
 x_0&=&\frac{x_1+x_2}{2}\\
 &=&\frac{-5+5}{2}\\
@@ -1671,7 +1671,7 @@ y_0&=&\frac{y_1+y_2}{2}\\
 &=&\frac{5+(-5)}{2}\\
 &=&0
 \end{eqnarray*}
-The centre point of line $PQ$ and therefore the centre of the circle is at $(0,0)$.
+The centre point of line $PQ$ and therefore the centre of the circle is at $(0;0)$.
 
 \westep{Find the radius of the circle}
 If $P$ and $Q$ are two points on a diameter, then the radius is half the distance between them.
@@ -1729,7 +1729,7 @@ $\therefore$ & center is $ (7;-2)$ and the radius is $5$ units
 %\end{itemize}
 %\end{syllabus}
 
-We are given that a tangent to a circle is drawn through a point $P$ with co-ordinates $(x_1,y_1)$. In this section, we find out how to determine the equation of that tangent.
+We are given that a tangent to a circle is drawn through a point $P$ with co-ordinates $(x_1;y_1)$. In this section, we find out how to determine the equation of that tangent.
 
 \begin{figure}[htbp]
 \begin{center}
@@ -1745,14 +1745,14 @@ We are given that a tangent to a circle is drawn through a point $P$ with co-ord
 \uput[u](0.1,2){$g$}
 \uput[l](-1.06,1.06){$h$}
 \end{pspicture}
-\caption{Circle $h$ with centre $(x_0,y_0)$ has a tangent, $g$ passing through point $P$ at $(x_1,y_1)$. Line $f$ passes through the centre and point $P$.}
+\caption{Circle $h$ with centre $(x_0;y_0)$ has a tangent, $g$ passing through point $P$ at $(x_1;y_1)$. Line $f$ passes through the centre and point $P$.}
 \label{fig:mg:c:tangent}
 \end{center}
 \end{figure}
 
 We start by making a list of what we know:
 \begin{enumerate}
-\item{We know that the equation of the circle with centre $(x_0,y_0)$ and radius $r$ is $(x-x_0)^2+(y-y_0)^2=r^2$.}
+\item{We know that the equation of the circle with centre $(x_0;y_0)$ and radius $r$ is $(x-x_0)^2+(y-y_0)^2=r^2$.}
 \item{We know that a tangent is perpendicular to the radius, drawn at the point of contact with the circle.}
 \end{enumerate}
 
@@ -1771,7 +1771,7 @@ The tangent (line $g$) is perpendicular to this line. Therefore,
 So,
 \nequ{m_g=-\frac{1}{m_f}}
 
-Now, we know that the tangent passes through $(x_1,y_1)$ so the equation is given by:
+Now, we know that the tangent passes through $(x_1;y_1)$ so the equation is given by:
 \begin{eqnarray*}
 y-y_1&=&m_{g}(x-x_1)\\
 y-y_1&=&-\frac{1}{m_f}(x-x_1)\\
@@ -1779,9 +1779,9 @@ y-y_1&=&-\frac{1}{\frac{y_1-y_0}{x_1-x_0}}(x-x_1)\\
 y-y_1&=&-\frac{x_1-x_0}{y_1-y_0}(x-x_1)\\
 \end{eqnarray*}
 
-For example, find the equation of the tangent to the circle at point $(1,1)$. The centre of the circle is at $(0,0)$. The equation of the circle is $x^2+y^2=2$.
+For example, find the equation of the tangent to the circle at point $(1;1)$. The centre of the circle is at $(0;0)$. The equation of the circle is $x^2+y^2=2$.
 
-Use \nequ{y-y_1=-\frac{x_1-x_0}{y_1-y_0}(x-x_1)} with $(x_0,y_0)=(0,0)$ and $(x_1,y_1)=(1,1)$.
+Use \nequ{y-y_1=-\frac{x_1-x_0}{y_1-y_0}(x-x_1)} with $(x_0;y_0)=(0;0)$ and $(x_1;y_1)=(1;1)$.
 
 \begin{eqnarray*}
 y-y_1&=&-\frac{x_1-x_0}{y_1-y_0}(x-x_1)\\
@@ -1796,24 +1796,24 @@ y&=&-x+2
 \begin{enumerate} 
 \item Find the equation of the cicle: 
 \begin{enumerate} 
-\item with centre $(0,5)$ and radius $5$ 
-\item with centre $(2,0)$ and radius $4$ 
-\item with centre $(5,7)$ and radius $18$ 
-\item with centre $(-2,0)$ and radius $6$ 
-\item with centre $(-5,-3)$ and radius $\sqrt{3}$ 
+\item with centre $(0;5)$ and radius $5$ 
+\item with centre $(2;0)$ and radius $4$ 
+\item with centre $(5;7)$ and radius $18$ 
+\item with centre $(-2;0)$ and radius $6$ 
+\item with centre $(-5;-3)$ and radius $\sqrt{3}$ 
 \end{enumerate} 
 
 \item 
 \begin{enumerate} 
-\item Find the equation of the circle with centre $(2,1)$ which passes through $(4,1)$. 
+\item Find the equation of the circle with centre $(2;1)$ which passes through $(4;1)$. 
 \item Where does it cut the line $y = x + 1$? 
 \item Draw a sketch to illustrate your answers. 
 \end{enumerate} 
 
 \item 
 \begin{enumerate} 
-\item Find the equation of the circle with center $(-3,-2)$ which passes through $(1,-4)$. 
-\item Find the equation of the circle with center $(3,1)$ which passes through $(2,5)$. 
+\item Find the equation of the circle with center $(-3;-2)$ which passes through $(1;-4)$. 
+\item Find the equation of the circle with center $(3;1)$ which passes through $(2;5)$. 
 \item Find the point where these two circles cut each other. 
 \end{enumerate} 
 
@@ -1984,12 +1984,12 @@ Any line $OP$ is drawn (not necessarily in the first quadrant), making an angle 
 \begin{center}
 \begin{tabular}{|c|c|c|}\hline
 & $P$ & $\alpha$ \\\hline
-1. & $(2, 6)$ & $60^\circ$ \\\hline
-2. & $(4, 2)$ & $30^\circ$ \\\hline
-3. & $(5, -1)$ & $45^\circ$ \\\hline
-4. & $(-3, 2)$ & $120^\circ$ \\\hline
-5. & $(-4, -1)$ & $225^\circ$ \\\hline
-6. & $(2, 5)$ & $-150^\circ$ \\\hline
+1. & $(2; 6)$ & $60^\circ$ \\\hline
+2. & $(4; 2)$ & $30^\circ$ \\\hline
+3. & $(5; -1)$ & $45^\circ$ \\\hline
+4. & $(-3; 2)$ & $120^\circ$ \\\hline
+5. & $(-4; -1)$ & $225^\circ$ \\\hline
+6. & $(2; 5)$ & $-150^\circ$ \\\hline
 \end{tabular}
 \end{center}
 \end{minipage}
@@ -2020,7 +2020,7 @@ Rigid transformations like translations, reflections, rotations and glide reflec
 \Activity{}{Geometric Transformations}
 {
 \begin{minipage}{0.38\textwidth}
-Draw a large 15$\times$15 grid and plot $\triangle{ABC}$ with $A(2,6)$, $B(5,6)$ and $C(5,1)$. Fill in the lines $y = x$ and $y = -x$. \\
+Draw a large 15$\times$15 grid and plot $\triangle{ABC}$ with $A(2;6)$, $B(5;6)$ and $C(5;1)$. Fill in the lines $y = x$ and $y = -x$. \\
 
 Complete the table below , by drawing the images of $\triangle ABC$ under the given transformations. The first one has been done for you.
 \end{minipage}
@@ -2114,17 +2114,17 @@ Transformation & Sides & Angles & Area \\
 \hline
 Reflect & & & \\
 \hline
-Reduce by a scale factor of 3 & & & \\
+Reduce by a scale factor of $3$ & & & \\
 \hline
 Rotate by $90^\circ$ & & & \\
 \hline
-Translate 4 units right & & & \\
+Translate $4$ units right & & & \\
 \hline
-Enlarge by a scale factor of 2 & & & \\
+Enlarge by a scale factor of $2$ & & & \\
 \hline
 \end{tabular}
 
-\item $\Delta DEF$ has $\hat{E} = 30^\circ$, $DE = 4\,\mbox{cm}$, $EF = 5\,\mbox{cm}$. $\Delta DEF$ is enlarged by a scale factor of 6 to form $\Delta D'E'F'$.
+\item $\Delta DEF$ has $\hat{E} = 30^\circ$, $DE = 4\,\mbox{cm}$, $EF = 5\,\mbox{cm}$. $\Delta DEF$ is enlarged by a scale factor of $6$ to form $\Delta D'E'F'$.
 \begin{enumerate}
 \item Solve $\Delta DEF$
 \item Hence, solve $\Delta D'E'F'$

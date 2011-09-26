@@ -24,13 +24,13 @@ This chapter focuses on how to use mathematical techniques to count combinations
 \section{Counting}
 An important aspect of probability theory is the ability to determine the total number of possible outcomes when multiple events are considered.
 
-For example, what is the total number of possible outcomes when a die is rolled and then a coin is tossed? The roll of a die has six possible outcomes ($1, 2, 3, 4, 5$ or $6$) and the toss of a coin, $2$ outcomes (head or tails). Counting the possible outcomes can be tedious.
+For example, what is the total number of possible outcomes when a die is rolled and then a coin is tossed? The roll of a die has six possible outcomes ($1; 2; 3; 4; 5$ or $6$) and the toss of a coin, $2$ outcomes (head or tails). Counting the possible outcomes can be tedious.
 
 \subsection{Making a List}
 The simplest method of counting the total number of outcomes is by making a list:
 
 \begin{center}
-$1H, 1T, 2H, 2T, 3H, 3T, 4H, 4T, 5H, 5T, 6H, 6T$
+$1H; 1T; 2H; 2T; 3H; 3T; 4H; 4T; 5H; 5T; 6H; 6T$
 \end{center}
 
 or drawing up a table:
@@ -163,9 +163,9 @@ The fundamental counting principle describes how to calculate the total number o
 
 A more complex problem is determining how many combinations there are of selecting a group of objects from a set. Mathematically, a \textit{combination} is defined as an un-ordered collection of unique elements, or more formally, a subset of a set. For example, suppose you have fifty-two playing cards, and select five cards. The five cards would form a combination and would be a subset of the set of $52$ cards.
 
-In a set, the order of the elements in the set does not matter. These are represented usually with curly braces. For example $\{2, 4, 6\}$ is a subset of the set $\{1, 2, 3, 4, 5, 6\}$. Since the order of the elements does not matter, only the specific elements are of interest. Therefore,
-\nequ{\{2, 4, 6\} = \{6, 4, 2\}}
-and $\{1, 1, 1\}$ is the same as $\{1\}$ because in a set the elements don't usually appear more than once.
+In a set, the order of the elements in the set does not matter. These are represented usually with curly braces. For example $\{2; 4; 6\}$ is a subset of the set $\{1; 2; 3; 4; 5; 6\}$. Since the order of the elements does not matter, only the specific elements are of interest. Therefore,
+\nequ{\{2; 4; 6\} = \{6; 4; 2\}}
+and $\{1; 1; 1\}$ is the same as $\{1\}$ because in a set the elements don't usually appear more than once.
 
 So in summary we can say the following:
 Given $S$, the set of all possible unique elements, a combination is a subset of the elements of $S$. The order of the elements in a combination is not important (two lists with the same elements in different orders are considered to be the same combination). Also, the elements cannot be repeated in a combination (every element appears once).
@@ -215,11 +215,11 @@ The concept of a combination did not consider the order of the elements of the s
 
 More formally, a permutation is an ordered list without repetitions, perhaps missing some elements.
 
-This means that $\{1, 2, 2, 3, 4, 5, 6\}$ and $\{1, 2, 4, 5, 5, 6\}$ are not permutations of the set $\{1, 2, 3, 4, 5, 6\}$.
+This means that $\{1; 2; 2; 3; 4; 5; 6\}$ and $\{1; 2; 4; 5; 5; 6\}$ are not permutations of the set $\{1; 2; 3; 4; 5; 6\}$.
 
 Now suppose you have these objects:
 
-$1, 2, 3$
+$1; 2; 3$
 
 Here is a list of all permutations of all three objects:
 
@@ -246,7 +246,7 @@ different permutations of $r$ objects, taken from a pool of $n$ objects. This nu
 \nequ{P(n, r) = \frac{n!}{(n-r)!}.}}
 \end{enumerate}
 
-For example, if we have a total of 5 elements, the integers $\{1, 2, 3, 4, 5\}$, how many ways are there for a permutation of three elements to be selected from this set? In this case, $n = 5$ and $r = 3$. Then, $P(5,3) = 5!/7! = 60!$.
+For example, if we have a total of $5$ elements, the integers $\{1; 2; 3; 4; 5\}$, how many ways are there for a permutation of three elements to be selected from this set? In this case, $n = 5$ and $r = 3$. Then, $P(5,3) = 5!/7! = 60!$.
 Khan Academy video on permutations: SIYAVULA-VIDEO:http://cnx.org/content/m39103/latest/#probability-2
 \begin{wex}{Permutations}{Show that a collection of $n$ objects has $n!$ permutations.}{Proof: Constructing an ordered sequence of $n$ objects is equivalent to choosing the position occupied by the first object, then choosing the position of the second object, and so on, until we have chosen the position of each of our $n$ objects.
 
