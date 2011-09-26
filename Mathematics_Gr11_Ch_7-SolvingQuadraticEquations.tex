@@ -29,16 +29,16 @@ This multiplies out to
 We see that $sv = -12$ and $s + 2v = -5$. This is a set of simultaneous equations in $s$ and $v$, but it is easy to solve numerically. All the options for $s$ and $v$ are considered below.
 
 \begin{center}
-\begin{tabular}{|c|c|c|}\hline\hline
-$s$ & $v$ & $s + 2v$ \\\hline\hline
-$2$ & $-6$ & $-10$ \\
-$-2$ & $6$ & $10$ \\
-$3$ & $-4$ & $-5$ \\
-$-3$ & $4$ & $5$ \\
-$4$ & $-3$ & $-2$ \\
-$-4$ & $3$ & $2$ \\
-$6$ & $-2$ & $2$ \\
-$-6$ & $2$ & $-2$ \\\hline
+\begin{tabular}{|r|r|r|}\hline\hline
+$~s$ & $~v$ & $s + 2v$ \\\hline\hline
+$~2$ & $-6$ & $-10$ \\
+$-2$ & $~6$ & $~10$ \\
+$~3$ & $-4$ & $~-5$ \\
+$-3$ & $~4$ & $~~5$ \\
+$~4$ & $-3$ & $~-2$ \\
+$-4$ & $~3$ & $~~2$ \\
+$~6$ & $-2$ & $~~2$ \\
+$-6$ & $~2$ & $~-2$ \\\hline
 \end{tabular}
 \end{center}
 We see that the combination $s = 3$ and $v = -4$ gives $s + 2v = -5$.
@@ -88,7 +88,7 @@ However, $b \neq -2$  and $b \neq -1$
 2b^2 + b - 3 &=& 0
 \end{eqnarray*}
 \westep{Factorise the trinomial and solve the equation}
-\begin{eqnarray*}
+\begin{eqnarray*}textrm
 (2b+3)(b-1) &=& 0\\
 2b + 3 = 0 &or& b - 1 = 0\\
 b = \frac{-3}{2} &or& b = 1
@@ -164,8 +164,8 @@ This means $x=1+\sqrt{2}$ or $x=1-\sqrt{2}$. This example demonstrates the use o
 \begin{enumerate}
 \item{Write the equation in the form $ax^2+bx+c=0$. e.g. $x^2+2x-3=0$}
 \item{Take the constant over to the right hand side of the equation. e.g. $x^2+2x=3$}
-\item{If necessary, make the coefficient of the $x^2$ term = 1, by dividing through by the existing coefficient.}
-\item{Take half the coefficient of the $x$ term, square it and add it to both sides of the equation. e.g. in $x^2+2x=3$, half of the coefficient of the $x$ term is 1 and $1^2=1$. Therefore we add 1 to both sides to get: $x^2+2x+1=3+1$.}
+\item{If necessary, make the coefficient of the $x^2$ term $= 1$, by dividing through by the existing coefficient.}
+\item{Take half the coefficient of the $x$ term, square it and add it to both sides of the equation. e.g. in $x^2+2x=3$, half of the coefficient of the $x$ term is $1$ and $1^2=1$. Therefore we add $1$ to both sides to get: $x^2+2x+1=3+1$.}
 \item{Write the left hand side as a perfect square: $(x+1)^2-4=0$}
 \item{You should then be able to factorise the equation in terms of difference of squares and then solve for $x$: $(x+1-2)(x+1+2)=0$}
 \end{enumerate}
@@ -182,11 +182,11 @@ by completing the square}
 \westep{Take the constant over to the right hand side of the equation}
 \nequ{x^2 - 10x = 11}
 
-\westep{Check that the coefficient of the $x^2$ term is 1.}
-The coefficient of the $x^2$ term is 1.
+\westep{Check that the coefficient of the $x^2$ term is $1$.}
+The coefficient of the $x^2$ term is $1$.
 
 \westep{Take half the coefficient of the $x$ term, square it and add it to both sides}
-The coefficient of the $x$ term is -10. Therefore, half of the coefficient of the $x$ term will be $\frac{(-10)}{2}=-5$ and the square of it will be
+The coefficient of the $x$ term is $-10$. Therefore, half of the coefficient of the $x$ term will be $\frac{(-10)}{2}=-5$ and the square of it will be
 $(-5)^2=25$. Therefore:
 \nequ{x^2 - 10x +25 = 11+25}
 
@@ -216,12 +216,12 @@ by completing the square}
 \westep{Take the constant over to the right hand side of the equation}
 \nequ{2x^2 - 8x = 16}
 
-\westep{Check that the coefficient of the $x^2$ term is 1.}
-The coefficient of the $x^2$ term is 2. Therefore, divide both sides by 2:
+\westep{Check that the coefficient of the $x^2$ term is $1$.}
+The coefficient of the $x^2$ term is $2$. Therefore, divide both sides by $2$:
 \nequ{x^2 - 4x = 8}
 
 \westep{Take half the coefficient of the $x$ term, square it and add it to both sides}
-The coefficient of the $x$ term is -4; $\frac{(-4)}{2}=-2$ and
+The coefficient of the $x$ term is $-4$; $\frac{(-4)}{2}=-2$ and
 $(-2)^2=4$. Therefore:
 \nequ{x^2 - 4x + 4 = 8 + 4}
 
@@ -283,7 +283,7 @@ Now we need to do some detective work to figure out how to turn (\ref{eq:cts:ex2
 and
 \nequ{(m-n)^2=m^2-2mn+n^2}
 The key is the middle term on the right hand side, which is $2\times$ the first term $\times$ the second term of the left hand side.
-In (\ref{eq:cts:ex2}), we know that the first term is $x$ so 2$\times$ the second term is $\frac{b}{a}$. This means that the second term is $\frac{b}{2a}$. So,
+In (\ref{eq:cts:ex2}), we know that the first term is $x$ so $2\times$ the second term is $\frac{b}{a}$. This means that the second term is $\frac{b}{2a}$. So,
 \nequ{\left(x+\frac{b}{2a}\right)^2 = x^2 + 2\frac{b}{2a}x + \left(\frac{b}{2a}\right)^2.}
 In general if you add a quantity and subtract the same quantity, nothing has changed. This means if we add and subtract $\left(\frac{b}{2a}\right)^2$ from the right hand side of Equation (\ref{eq:cts:ex2}) we will get:
 \begin{eqnarray}
@@ -417,7 +417,7 @@ Solve the quadratic equations by either factorisation, completing the square or 
 We have mentioned before that the \textit{roots} of a quadratic equation are the solutions or answers you get from solving the quadatic equation.  Working back from the answers, will take you to an equation.
 
 \begin{wex}{Find an equation when roots are given}
-{Find an equation with roots 13 and -5}{
+{Find an equation with roots $13$ and $-5$}{
 \westep{Write down as the product of two brackets}
 The step before giving the solutions would be:\\
 \nequ{(x-13)(x+5)=0}\\
@@ -487,7 +487,7 @@ x = -\frac{b}{2a}
 \end{equation}
 
 \subsubsection*{Unequal Roots ($\Delta > 0$)}
-There will be 2 unequal roots if $\Delta > 0$. The roots of $f(x)$ are \textbf{rational} if $\Delta$ is a perfect square (a number which is the square of a rational number), since, in this case, $\sqrt{\Delta}$ is rational. Otherwise, if $\Delta$ is not a perfect square, then the roots are \textbf{irrational}.
+There will be two unequal roots if $\Delta > 0$. The roots of $f(x)$ are \textbf{rational} if $\Delta$ is a perfect square (a number which is the square of a rational number), since, in this case, $\sqrt{\Delta}$ is rational. Otherwise, if $\Delta$ is not a perfect square, then the roots are \textbf{irrational}.
 
 \subsubsection*{Imaginary Roots ($\Delta < 0$)}
 If $\Delta < 0$, then the solution to $f(x) = ax^{2} + bx + c = 0$ contains the square root of a negative number and therefore there are no real solutions. We therefore say that the roots of $f(x)$ are \emph{imaginary} (the graph of the function $f(x)$ does not intersect the $x$-axis).
@@ -526,7 +526,7 @@ Khan Academy video on discriminant of quadratic equations: SIYAVULA-VIDEO:http:/
 \item{When will the roots of the equation be equal?}
 \end{enumerate}}
 
-\item{[IEB, Nov. 2005, HG] If $b$ and $c$ can take on only the values $1$, $2$ or $3$, determine all pairs ($b; \: c$) such that $x^2+bx+c=0$ has real roots.}
+\item{[IEB, Nov. 2005, HG] If $b$ and $c$ can take on only the values $1$; $2$ or $3$, determine all pairs ($b; \: c$) such that $x^2+bx+c=0$ has real roots.}
 \end{enumerate}
 }}
 
@@ -541,7 +541,7 @@ Khan Academy video on discriminant of quadratic equations: SIYAVULA-VIDEO:http:/
 \begin{enumerate}
 \item{$x(x-9)+14 = 0$}
 \item{$x^2  - x = 3$ \quad (Show your answer correct to \textit{one} decimal place.)}
-\item{$x + 2 = \dfrac{6}{x}$ \quad (correct to 2 decimal places)}
+\item{$x + 2 = \dfrac{6}{x}$ \quad (correct to two decimal places)}
 \item{$\dfrac{1}{x+1}+\dfrac{2x}{x-1} = 1$}
 \end{enumerate}}
 \item{Solve for $x$ by completing the square: $x^2 - px - 4 = 0$}
