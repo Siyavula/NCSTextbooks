@@ -24,13 +24,13 @@ This chapter focuses on how to use mathematical techniques to count combinations
 \section{Counting}
 An important aspect of probability theory is the ability to determine the total number of possible outcomes when multiple events are considered.
 
-For example, what is the total number of possible outcomes when a die is rolled and then a coin is tossed? The roll of a die has six possible outcomes (1, 2, 3, 4, 5 or 6) and the toss of a coin, 2 outcomes (head or tails). Counting the possible outcomes can be tedious.
+For example, what is the total number of possible outcomes when a die is rolled and then a coin is tossed? The roll of a die has six possible outcomes ($1, 2, 3, 4, 5$ or $6$) and the toss of a coin, $2$ outcomes (head or tails). Counting the possible outcomes can be tedious.
 
 \subsection{Making a List}
 The simplest method of counting the total number of outcomes is by making a list:
 
 \begin{center}
-1H, 1T, 2H, 2T, 3H, 3T, 4H, 4T, 5H, 5T, 6H, 6T
+$1H, 1T, 2H, 2T, 3H, 3T, 4H, 4T, 5H, 5T, 6H, 6T$
 \end{center}
 
 or drawing up a table:
@@ -38,22 +38,22 @@ or drawing up a table:
 \begin{center}
 \begin{tabular}{|c|c|}\hline
 die & coin\\\hline\hline
-1&H\\\hline
-1&T\\\hline
-2&H\\\hline
-2&T\\\hline
-3&H\\\hline
-3&T\\\hline
-4&H\\\hline
-4&T\\\hline
-5&H\\\hline
-5&T\\\hline
-6&H\\\hline
-6&T\\\hline
+$1$&$H$\\\hline
+$1$&$T$\\\hline
+$2$&$H$\\\hline
+$2$&$T$\\\hline
+$3$&$H$\\\hline
+$3$&$T$\\\hline
+$4$&$H$\\\hline
+$4$&$T$\\\hline
+$5$&$H$\\\hline
+$5$&$T$\\\hline
+$6$&$H$\\\hline
+$6$&$T$\\\hline
 \end{tabular}
 \end{center}
 
-Both these methods result in 12 possible outcomes, but both these methods have a lot of repetition. Maybe there is a smarter way to write down the result?
+Both these methods result in $12$ possible outcomes, but both these methods have a lot of repetition. Maybe there is a smarter way to write down the result?
 
 \subsection{Tree Diagrams}
 One method of eliminating some of the repetition is to use \textit{tree diagrams}. Tree diagrams are a graphical method of listing all possible combinations of events from a random experiment.
@@ -84,25 +84,25 @@ One method of eliminating some of the repetition is to use \textit{tree diagrams
 \psline(-3,2)(-3.25,1)
 \psline(-3,2)(-2.75,1)
 
-\uput[l](-3,2){1}
-\uput[l](-2,2){2}
-\uput[l](-1,2){3}
-\uput[r](3,2){6}
-\uput[r](2,2){5}
-\uput[r](1,2){4}
+\uput[l](-3,2){$1$}
+\uput[l](-2,2){$2$}
+\uput[l](-1,2){$3$}
+\uput[r](3,2){$6$}
+\uput[r](2,2){$5$}
+\uput[r](1,2){$4$}
 
-\rput(-3.25,0.75){H}
-\rput(-2.75,0.75){T}
-\rput(-2.25,0.75){H}
-\rput(-1.75,0.75){T}
-\rput(-1.25,0.75){H}
-\rput(-0.75,0.75){T}
-\rput(3.25,0.75){T}
-\rput(2.75,0.75){H}
-\rput(2.25,0.75){T}
-\rput(1.75,0.75){H}
-\rput(1.25,0.75){T}
-\rput(0.75,0.75){H}
+\rput(-3.25,0.75){$H$}
+\rput(-2.75,0.75){$T$}
+\rput(-2.25,0.75){$H$}
+\rput(-1.75,0.75){$T$}
+\rput(-1.25,0.75){$H$}
+\rput(-0.75,0.75){$T$}
+\rput(3.25,0.75){$T$}
+\rput(2.75,0.75){$H$}
+\rput(2.25,0.75){$T$}
+\rput(1.75,0.75){$H$}
+\rput(1.25,0.75){$T$}
+\rput(0.75,0.75){$H$}
 
 \psline[arrows=<->](-0.75,2)(0.75,2)
 \psline[arrows=<->](-0.75,1)(0.75,1)
@@ -135,7 +135,7 @@ $\prod$ is the multiplication equivalent of $\sum$.
 
 Note: the order in which the experiments are done does not affect the total number of possible outcomes.
 
-\begin{wex}{Lunch Special}{A take-away has a 4-piece lunch special which consists of a sandwich, soup, dessert and drink for R25,00. They offer the following choices for :\\
+\begin{wex}{Lunch Special}{A take-away has a 4-piece lunch special which consists of a sandwich, soup, dessert and drink for R$25,00$. They offer the following choices for :\\
 Sandwich: chicken mayonnaise, cheese and tomato, tuna, and ham and lettuce\\
 Soup: tomato, chicken noodle, vegetable\\
 Dessert: ice-cream, piece of cake\\
@@ -148,20 +148,20 @@ There are 4 parts: sandwich, soup, dessert and drink.
 \begin{center}
 \begin{tabular}{|c|c|c|c|c|}\hline
 Meal component & Sandwich & Soup & Dessert & Drink\\\hline
-Number of choices & 4 & 3 & 2 & 5\\\hline
+Number of choices & $4$ & $3$ & $2$ & $5$\\\hline
 \end{tabular}
 \end{center}
 
 \westep{Use the fundamental counting principle to determine how many different meals are possible}
 
 \nequ{4\times 3 \times 2 \times 5 = 120}
-So there are 120 possible meals.}
+So there are $120$ possible meals.}
 \end{wex}
 
 \section{Combinations}
 The fundamental counting principle describes how to calculate the total number of outcomes when multiple independent events are performed together.
 
-A more complex problem is determining how many combinations there are of selecting a group of objects from a set. Mathematically, a \textit{combination} is defined as an un-ordered collection of unique elements, or more formally, a subset of a set. For example, suppose you have fifty-two playing cards, and select five cards. The five cards would form a combination and would be a subset of the set of 52 cards.
+A more complex problem is determining how many combinations there are of selecting a group of objects from a set. Mathematically, a \textit{combination} is defined as an un-ordered collection of unique elements, or more formally, a subset of a set. For example, suppose you have fifty-two playing cards, and select five cards. The five cards would form a combination and would be a subset of the set of $52$ cards.
 
 In a set, the order of the elements in the set does not matter. These are represented usually with curly braces. For example $\{2, 4, 6\}$ is a subset of the set $\{1, 2, 3, 4, 5, 6\}$. Since the order of the elements does not matter, only the specific elements are of interest. Therefore,
 \nequ{\{2, 4, 6\} = \{6, 4, 2\}}
@@ -179,9 +179,9 @@ When the order does not matter, but each object can be chosen only once, the num
 \nequ{\frac{n!}{r!(n - r)!} = \binom{n}{r}}
 where $n$ is the number of objects from which you can choose and $r$ is the number to be chosen.
 
-For example, if you have 10 numbers and wish to choose 5 you would have $10!/(5!(10 - 5)!) = 252$ ways to choose.
+For example, if you have $10$ numbers and wish to choose $5$ you would have $10!/(5!(10 - 5)!) = 252$ ways to choose.
 
-For example how many possible 5 card hands are there in a deck of cards with 52 cards?
+For example how many possible $5$ card hands are there in a deck of cards with $52$ cards?
 
 $52! / (5!(52-5)!) = 2\;598\;960$ combinations
 
@@ -200,13 +200,13 @@ Khan Academy video on combinations and probability:SIYAVULA-VIDEO:http://cnx.org
 Combinatorics is quite useful in the computation of probabilities of events, as it can be used to determine exactly how many outcomes are possible in a given experiment.
 
 \begin{wex}{Probability}
-{At a school, learners each play 2 sports. They can choose from netball, basketball, soccer, athletics, swimming, or tennis. What is the probability that a learner plays soccer and either netball, basketball or tennis?\\}
+{At a school, learners each play $2$ sports. They can choose from netball, basketball, soccer, athletics, swimming, or tennis. What is the probability that a learner plays soccer and either netball, basketball or tennis?\\}
 {
 \westep{Identify what events we are counting} We count the events: soccer and netball, soccer and basketball, soccer and tennis. This gives three choices.
 \westep{Calculate the total number of choices}
-There are 6 sports to choose from and we choose 2 sports. There are \\$\binom{6}{2} = 6!/(2!(6-2)!)$ = 15 choices.
+There are $6$ sports to choose from and we choose $2$ sports. There are \\$\binom{6}{2} = 6!/(2!(6-2)!)$ = 15 choices.
 \westep{Calculate the probability} The probability is the number of events we are counting, divided by the total number of choices.\\
-Probability = $\frac{3}{15}$ = $\frac{1}{5}$ = 0,2
+Probability = $\frac{3}{15}$ = $\frac{1}{5} = 0,2$
 }
 \end{wex}
 
@@ -219,16 +219,16 @@ This means that $\{1, 2, 2, 3, 4, 5, 6\}$ and $\{1, 2, 4, 5, 5, 6\}$ are not per
 
 Now suppose you have these objects:
 
-1, 2, 3
+$1, 2, 3$
 
 Here is a list of all permutations of all three objects:
 
-1 2 3; $\;$
-1 3 2; $\;$
-2 1 3; $\;$
-2 3 1; $\;$
-3 1 2; $\;$
-3 2 1. $\;$
+$1~2~3$; $\;$
+$1~3~2$; $\;$
+$2~1~3$; $\;$
+$2~3~1$; $\;$
+$3~1~2$; $\;$
+$3~2~1$. $\;$
 
 \subsection{Counting Permutations}
 Let $S$ be a set with $n$ objects. Permutations of $r$ objects from this set $S$ refer to sequences of $r$ different elements of $S$ (where two sequences are considered different if they contain the same elements but in a different order). Formulas for the number of permutations and combinations are readily available and important throughout combinatorics.
@@ -238,7 +238,7 @@ It is easy to count the number of permutations of size $r$ when chosen from a se
 \begin{enumerate}
 \item{Select the first member of the permutation out of $n$ choices, because there are $n$ distinct elements in the set.}
 \item{Next, since one of the $n$ elements has already been used, the second member of the permutation has $(n - 1)$ elements to choose from the remaining set.}
-\item{The third member of the permutation can be filled in $(n - 2)$ ways since 2 have been used already.}
+\item{The third member of the permutation can be filled in $(n - 2)$ ways since $2$ have been used already.}
 \item{This pattern continues until there are $r$ members on the permutation. This means that the last member can be filled in $(n - (r - 1) ) = (n - r + 1)$ ways.}
 \item{Summarizing, we find that there is a total of
 \nequ{n(n - 1)(n - 2) ... (n - r + 1)}
@@ -262,7 +262,7 @@ When order matters and an object can be chosen more than once then the number of
 \nequ{n^r}
 where $n$ is the number of objects from which you can choose and $r$ is the number to be chosen.
 
-For example, if you have the letters A, B, C, and D and you wish to discover the number of ways of arranging them in three letter patterns (trigrams) you find that there are $4^3$ or 64 ways. This is because for the first slot you can choose any of the four values, for the second slot you can choose any of the four, and for the final slot you can choose any of the four letters. Multiplying them together gives the total.
+For example, if you have the letters A, B, C, and D and you wish to discover the number of ways of arranging them in three letter patterns (trigrams) you find that there are $4^3$ or $64$ ways. This is because for the first slot you can choose any of the four values, for the second slot you can choose any of the four, and for the final slot you can choose any of the four letters. Multiplying them together gives the total.
 
 %\subsubsection{Permutation without Repetition}
 
@@ -349,11 +349,11 @@ This formula and the triangular arrangement of the binomial coefficients, are of
 }
 
 \begin{wex}{Number Plates}
-{The number plate on a car consists of any 3 letters of the alphabet (excluding the vowels and 'Q'), followed by any 3 digits (0 to 9). For a car chosen at random, what is the probability that the number plate starts with a 'Y' and ends with an odd digit?}
+{The number plate on a car consists of any $3$ letters of the alphabet (excluding the vowels and '$Q$'), followed by any $3$ digits ($0$ to $9$). For a car chosen at random, what is the probability that the number plate starts with a '$Y$' and ends with an odd digit?}
 {
-\westep{Identify what events are counted} The number plate starts with a 'Y', so there is only 1 choice for the first letter, and ends with an odd digit, so there are 5 choices for the last digit (1, 3, 5, 7, 9).
+\westep{Identify what events are counted} The number plate starts with a '$Y$', so there is only $1$ choice for the first letter, and ends with an odd digit, so there are $5$ choices for the last digit ($1, 3, 5, 7, 9$).
 \westep{Find the number of events}
-Use the counting principle. For each of the other letters, there are 20 possible choices (26 in the alphabet, minus 5 vowels and 'Q') and 10 possible choices for each of the other digits.\\ Number of events = $1 \times 20 \times 20 \times 10 \times 10 \times 5 = 200\;000$
+Use the counting principle. For each of the other letters, there are $20$ possible choices ($26$ in the alphabet, minus $5$ vowels and '$Q$') and $10$ possible choices for each of the other digits.\\ Number of events = $1 \times 20 \times 20 \times 10 \times 10 \times 5 = 200\;000$
 \westep{Find the number of total number of possible number plates}
 Use the counting principle. This time, the first letter and last digit can be anything.\\
 Total number of choices = $20 \times 20 \times 20 \times 10 \times 10 \times 10 = 8\;000\;000$
@@ -371,7 +371,7 @@ Cancelling the common factor of $(n-1) \times (n-2) \times ... \times 2 \times 1
 So $\frac{n!}{(n-1)!} = n$\\
 
 \textbf{Method 2:}
-We know that $P(n,r) = \frac{n!}{(n-r)!}$ is the number of permutations of $r$ objects, taken from a pool of $n$ objects. In this case, $r=1$. To choose 1 object from $n$ objects, there are $n$ choices.\\
+We know that $P(n,r) = \frac{n!}{(n-r)!}$ is the number of permutations of $r$ objects, taken from a pool of $n$ objects. In this case, $r=1$. To choose $1$ object from $n$ objects, there are $n$ choices.\\
 So $\frac{n!}{(n-1)!} = n$\\
 
 }
@@ -399,30 +399,30 @@ Greek salad & Chicken curry &  Apple crumble\\
 
 \item Four coins are thrown, and the outcomes recorded. How many different ways are there of getting three heads? First write out the possibilities, and then use the formula for combinations.
 
-\item The answers in a multiple choice test can be A, B, C, D, or E. In a test of 12 questions, how many different ways are there of answering the test?
+\item The answers in a multiple choice test can be $A, B, C, D,$ or $E$. In a test of $12$ questions, how many different ways are there of answering the test?
 
-\item A girl has 4 dresses, 2 necklaces, and 3 handbags. 
+\item A girl has $4$ dresses, $2$ necklaces, and $3$ handbags. 
 \begin{enumerate} \item How many different choices of outfit (dress, necklace and handbag) does she have?
-\item She now buys two pairs of shoes. How many choices of outfit (dress, necklace, handbag and shoes) does she now have?
+\item She now buys $2$ pairs of shoes. How many choices of outfit (dress, necklace, handbag and shoes) does she now have?
 \end{enumerate}
 
-\item In a soccer tournament of 9 teams, every team plays every other team. 
+\item In a soccer tournament of $9$ teams, every team plays every other team. 
 \begin{enumerate}
 \item How many matches are there in the tournament?
-\item If there are 5 boys' teams and 4 girls' teams, what is the probability that the first match will be played between 2 girls' teams?
+\item If there are $5$ boys' teams and $4$ girls' teams, what is the probability that the first match will be played between $2$ girls' teams?
 \end{enumerate}
 
 \item The letters of the word 'BLUE' are rearranged randomly. How many new words (a word is any combination of letters) can be made?
 
 \item The letters of the word 'CHEMISTRY' are arranged randomly to form a new word. What is the probability that the word will start and end with a vowel?
 
-\item There are 2 History classes, 5 Accounting classes, and 4 Mathematics classes at school. Luke wants to do all three subjects. How many possible combinations of classes are there?
+\item There are $2$ History classes, $5$ Accounting classes, and $4$ Mathematics classes at school. Luke wants to do all three subjects. How many possible combinations of classes are there?
 
-\item A school netball team has 8 members. How many ways are there to choose a captain, vice-captain, and reserve?
+\item A school netball team has $8$ members. How many ways are there to choose a captain, vice-captain, and reserve?
 
-\item A class has 15 boys and 10 girls. A debating team of 4 boys and 6 girls must be chosen. How many ways can this be done?
+\item A class has $15$ boys and $10$ girls. A debating team of $4$ boys and $6$ girls must be chosen. How many ways can this be done?
 
-\item A secret pin number is 3 characters long, and can use any digit (0 to 9) or any letter of the alphabet. Repeated characters are allowed. How many possible combinations are there?
+\item A secret pin number is $3$ characters long, and can use any digit ($0$ to $9$) or any letter of the alphabet. Repeated characters are allowed. How many possible combinations are there?
 
 
 \end{enumerate}
@@ -438,4 +438,4 @@ Greek salad & Chicken curry &  Apple crumble\\
 
 % CHILD SECTION START 
 
-\part{Exercises}
+% \part{Exercises}

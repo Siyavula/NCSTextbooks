@@ -87,13 +87,13 @@ For an arithmetic sequence, plotting $a_n$ vs. $n$ results in:
 \uput[l](7.6,5.1){gradient $d$}
 \psarc[arrows=->](5.5,5.4){1}{0}{45}
 \uput[u](8.5,8.5){$a_n=a_1 + d(n-1)$}
-\uput[l](0.25,5){\rotateleft{Term, $a_n$}}
-\uput[r](1,1){$y$-intercept, $a_1$}
+\uput[l](0.25,5){\rotateleft{Term: $a_n$}}
+\uput[r](1,1){$y$-intercept: $a_1$}
 \multips(1,0)(1,0){10}{\psline(0,-.1)(0,.1)}
-\multips(0,1){10}{\psline(0.9,0)(1.1,0)}
+\multips(0,1){10}{\psline(0.9,0)(1.1,0)}8
 \multido{\n=1+1}{9}{\rput(\n,-0.35){\n}}
 \multido{\n=1+1}{9}{\rput(0.65,\n){$a_{\n}$}}
-\rput(5,-.75){Index, $n$}
+\rput(5,-.75){Index: $n$}
 \end{pspicture}
 %\caption{When the terms of a linear sequence are plotted as a function of the index, a straight
 %line is obtained.}
@@ -158,7 +158,7 @@ when you have the flu.}
 Assume that you have the flu virus, and you forgot to cover your mouth when two friends came to
 visit while you were sick in bed. They leave, and the next day they also have the flu. Let's assume
 that they in turn spread the virus to two of their friends by the same droplet spread the following
-day. Assuming this pattern continues and each sick person infects 2 other friends, we can represent
+day. Assuming this pattern continues and each sick person infects $2$ other friends, we can represent
 these events in the following manner:
 \begin{figure}[htb]
 \begin{center}
@@ -185,11 +185,11 @@ Again we can tabulate the events and formulate an equation for the general case:
 \end{center}
 
 The above table represents the number of \textbf{newly-infected} people after $n$ days since you
-first infected your 2 friends. 
+first infected your $2$ friends. 
 
-You sneeze and the virus is carried over to 2 people who start the chain ($a_1 = 2$).
-The next day, each one then infects 2 of their friends. Now 4 people are newly-infected.
-Each of them infects 2 people the third day, and 8 people are infected, and so on.
+You sneeze and the virus is carried over to $2$ people who start the chain ($a_1 = 2$).
+The next day, each one then infects $2$ of their friends. Now $4$ people are newly-infected.
+Each of them infects $2$ people the third day, and $8$ people are infected, and so on.
 These events can be written as a geometric sequence:
 \begin{eqnarray*}
 2; \: 4; \: 8; \: 16; \: 32; \: \ldots
@@ -229,7 +229,7 @@ a_n = a_1 \cdot r^{n-1}
 \end{equation}
 where $a_1$ is the first term and $r$ is called the \textit{common ratio}. 
 
-So, if we want to know how many people are newly-infected after 10 days, we need to work
+So, if we want to know how many people are newly-infected after $10$ days, we need to work
 out $a_{10}$:
 \begin{eqnarray*}
 a_n &=& a_1 \cdot r^{n-1} \\
@@ -239,9 +239,9 @@ a_{10} &=& 2 \times 2^{10-1} \\
 &=& 1024
 \end{eqnarray*}
 
-That is, after 10 days, there are 1~024 newly-infected people.
+That is, after $10$ days, there are $1~024$ newly-infected people.
 
-Or, after how many days would 16~384 people be newly-infected with the flu virus?
+Or, after how many days would $16~384$ people be newly-infected with the flu virus?
 \begin{eqnarray*}
 a_n &=& a_1 \cdot r^{n-1} \\
 16~384 &=& 2 \times 2^{n-1} \\
@@ -252,7 +252,7 @@ a_n &=& a_1 \cdot r^{n-1} \\
 n &=& 14
 \end{eqnarray*}
 
-That is, after 14 days 16~384 people are newly-infected.
+That is, after $14$ days $16~384$ people are newly-infected.
 
 \Activity{General Equation of Geometric Sequence}{Determine the formula for the $n^{th}$-term of the following geometric
 sequences:
@@ -270,13 +270,13 @@ sequences:
 \begin{enumerate}
 \item{What is the important characteristic of an arithmetic sequence?}
 \item{Write down how you would go about finding the formula for the $n^{\rm{th}}$ term of an arithmetic sequence?}\
-\item{A single square is made from 4 matchsticks. Two squares in a row needs 7 matchsticks and 3
-squares in a row needs 10 matchsticks. Determine:
+\item{A single square is made from $4$ matchsticks. To make two squares in a row takes $7$ matchsticks, while three
+squares in a row takes $10$ matchsticks. Determine:
 \begin{enumerate}
 \item the first term
 \item the common difference
 \item the formula for the general term
-\item how many matchsticks are in a row of 25 squares
+\item how many matchsticks are in a row of $25$ squares
 \end{enumerate}
 \begin{center}
 \begin{pspicture}(0,0)(8,2)
@@ -316,7 +316,7 @@ constant value, $d$:
 a_n = a_{n-1} + d
 \end{eqnarray*}
 The above equation is an example of a \textit{recursive equation} since we can calculate the
-$n^{th}$-term only by considering the previous term in the sequence. Compare this with equation
+$n^{th}$-term only by considering the previous term in the sequence. Compare this with Equation
 (\ref{eq:mp:s:arithseq:2}),
 \begin{equation}
 a_n = a_1 + d \cdot (n - 1)
@@ -347,7 +347,7 @@ term $a_{n-1}$ can be a much simpler computation than working out $a_n$ from scr
 formula. This means that using a recursive formula when using a computer to work out a sequence
 would mean the computer would finish its calculations significantly quicker.
 
-\Activity{Recursive Formula}{Write the first 5 terms of the following sequences, given their
+\Activity{Recursive Formula}{Write the first five terms of the following sequences, given their
 recursive formulae:
 \begin{enumerate}
 \item{$a_n=2a_{n-1}+3, a_1=1$}
@@ -381,11 +381,11 @@ For example, if we have the following sequence of numbers
 \begin{eqnarray*}
 1; \: 4; \: 9; \: 25; \: 36; \: 49; \: \ldots
 \end{eqnarray*}
-and we wish to find the sum of the first 4 terms, then we write
+and we wish to find the sum of the first four terms, then we write
 \begin{eqnarray*}
 S_4 = 1 + 4 + 9 + 25 = 39
 \end{eqnarray*}
-The above is an example of a finite series since we are only summing 4 terms.
+The above is an example of a finite series since we are only summing four terms.
 
 If we sum infinitely many terms of a sequence, we get an \textit{infinite series}:
 \begin{eqnarray}
@@ -504,7 +504,7 @@ where
 
 When we sum a finite number of terms in an arithmetic sequence, we get a \textit{finite arithmetic series}.
 
-A simple arithmetic sequence is when $a_1=1$ and $d=0$ in the general form \eqref{eq:mp:series:lin:gen}; in other words all the terms in the sequence are 1:
+A simple arithmetic sequence is when $a_1=1$ and $d=0$ in the general form \eqref{eq:mp:series:lin:gen}; in other words all the terms in the sequence are $1$:
 \begin{eqnarray*}
 a_i &=& a_1 + d \; (i - 1) \\
 &=& 1 + 0 \cdot (i - 1) \\
@@ -516,7 +516,7 @@ If we wish to sum this sequence from $i=1$ to any positive integer $n$, we would
 \sum_{i=1}^n {a_i} = \sum_{i=1}^n 1 = 1 + 1 + 1 + \ldots + 1 \qquad (n\textrm{ times})
 \end{equation*}
 
-Since all the terms are equal to 1, it means that if we sum to $n$ we will be adding $n$-number of $1$'s together, which is simply equal to $n$:
+Because all the terms are equal to $1$, it means that if we sum to $n$ we will be adding $n$-number of $1$'s together, which is simply equal to $n$:
 \begin{equation}
 \boxed{\sum_{i=1}^n 1 = n}
 \end{equation}
@@ -535,7 +535,7 @@ If we wish to sum this sequence from $i=1$ to any positive integer $n$, we would
 \end{equation}
 This is an equation with a very important solution as it gives the answer to the sum of positive integers.
 
-\begin{IFact}{Mathematician, Karl Friedrich Gauss, discovered this proof when he was only 8 years old. His teacher had decided to give his class a problem which would distract them for the entire day by asking them to add all the numbers from 1 to 100. Young Karl realised how to do this almost instantaneously and shocked the teacher with the correct answer, 5050.}
+\begin{IFact}{Mathematician, Karl Friedrich Gauss, discovered this proof when he was only 8 years old. His teacher had decided to give his class a problem which would distract them for the entire day by asking them to add all the numbers from $1$ to $100$. Young Karl realised how to do this almost instantaneously and shocked the teacher with the correct answer, $5050$.}
 \end{IFact}
 
 We first write $S_n$ as a sum of terms in ascending order:
@@ -549,7 +549,7 @@ We then write the same sum but with the terms in descending order:
 \label{eq:mp:series:arith:sum_integers2}
 S_n = n + (n-1) + \ldots + 2 + 1
 \end{equation}
-We then add corresponding pairs of terms from equations \eqref{eq:mp:series:arith:sum_integers1} and \eqref{eq:mp:series:arith:sum_integers2}, and we find that the sum for each pair is the same, $(n+1)$:
+We then add corresponding pairs of terms from Equations \eqref{eq:mp:series:arith:sum_integers1} and \eqref{eq:mp:series:arith:sum_integers2}, and we find that the sum for each pair is the same, $(n+1)$:
 \begin{equation}
 2 \; S_n = (n+1) + (n+1) + \ldots + (n+1) + (n+1)
 \end{equation}
@@ -590,14 +590,14 @@ S_{20} &=& \sum_{i=1}^{20} \; [3 + 7 \, (i-1)] \\
 && 108 + 115 + 122 + 129 + 136 \\
 &=& 1390
 \end{eqnarray*}
-or, more sensibly, we could use equation \eqref{eq:mp:se:fa:3} noting that $a_1=3$, $d=7$ and $n=20$ so that
+or, more sensibly, we could use Equation \eqref{eq:mp:se:fa:3} noting that $a_1=3$, $d=7$ and $n=20$ so that
 \begin{eqnarray*}
 \label{eq:mp:se:fa:ex:smartway}
 S_{20} &=& \sum_{i=1}^{20} \; [3 + 7 \, (i-1)] \\
 &=& \textstyle \small {\frac{20}{2}} \: [2 \cdot 3 + 7 \, (20 - 1) ] \\
 &=& 1390
 \end{eqnarray*}
-This example demonstrates how useful equation \eqref{eq:mp:se:fa:3} is.
+This example demonstrates how useful Equation \eqref{eq:mp:se:fa:3} is.
 
 \subsection{Exercises}
 \begin{enumerate}
@@ -640,7 +640,7 @@ which can be written, in general, as
 \boxed{S_n = \sum_{i=1}^n i^2 = \frac{n}{6}(2n + 1)(n + 1)}
 \end{equation}
 \\
-The proof for equation \eqref{eq:mp:se:fs:2} can be found under the Advanced block that follows:
+The proof for Equation \eqref{eq:mp:se:fs:2} can be found under the \textit{Extension} block that follows:
 \\
 \Extension{Derivation of the Finite Squared Series}{
 We will now prove the formula for the finite squared series:
@@ -726,12 +726,12 @@ Khan Academy video on sequences and series, part 1:SIYAVULA-VIDEO:http://cnx.org
 \item Prove that $$a + ar + ar^2 + ... + ar^{n-1} = \dfrac{a\,(1 - r^n)}{(1-r)}$$
 \item{Given the geometric sequence $1;\;-3;\; 9;\;\dots$ determine:
 \begin{enumerate}
-\item{The 8$^{\rm{th}}$ term of the sequence}
-\item{The sum of the first 8 terms of the sequence.}
+\item{The $8^{\rm{th}}$ term of the sequence}
+\item{The sum of the first eight terms of the sequence.}
 \end{enumerate}}
 \item{Determine:
 \nequ{\sum_{n=1}^{4}3\cdot2^{n-1}}}
-\item Find the sum of the first 11 terms of the geometric series $6 + 3 + \tfrac{3}{2} + \tfrac{3}{4} + \ldots$
+\item Find the sum of the first $11$ terms of the geometric series $6 + 3 + \tfrac{3}{2} + \tfrac{3}{4} + \ldots$
 \item Show that the sum of the first $n$ terms of the geometric series $$54 + 18 + 6 + ... + 5 \, (\tfrac{1}{3})^{n-1}$$ is given by $81 - 3^{4-n}$.
 \item The eighth term of a geometric sequence is $640$. The third term is $20$. Find the sum of the first 7 terms.
 \item Solve for $n$: $\sum_{t=1}^n \limits 8 \, (\tfrac{1}{2})^t = 15\tfrac{3}{4}$.
@@ -756,7 +756,7 @@ When we sum the terms of a series, and the answer we get after each summation ge
 
 There is a simple test for knowing instantly which geometric series converges and which diverges. When $r$, the common ratio, is strictly between $-1$ and $1$, i.e. $-1 < r < 1$, the infinite series will converge, otherwise it will diverge. There is also a formula for working out the value to which the series converges.
 
-Let's start off with formula \eqref{eq:mp:se:fg:4} for the finite geometric series:
+Let's start off with Formula \eqref{eq:mp:se:fg:4} for the finite geometric series:
 \begin{equation*}
 S_n = \sum_{i=1}^n a_1 \cdot r^{i-1} = \frac{a_1 \, (r^n - 1)}{r-1}
 \end{equation*}
@@ -799,7 +799,7 @@ Khan Academy video on sequences and series, part 2:SIYAVULA-VIDEO:http://cnx.org
 \begin{enumerate}
 \item Show that the series converges
 \item Calculate the sum to infinity of the series
-\item Calculate the sum of the first 8 terms of the series, correct to two decimal places.
+\item Calculate the sum of the first eight terms of the series, correct to two decimal places.
 \item Determine
 \nequ{\sum_{n=9}^{\infty}2\cdot{5}^{6-n}}
 correct to two decimal places using previously calculated results.
@@ -817,13 +817,13 @@ correct to two decimal places using previously calculated results.
 
 \item Calculate $$\sum_{k=2}^6 3 \, {(\tfrac{1}{3})}^{k+2}$$
 
-\item If $x+1$; $x-1$; $2x-5$ are the first 3 terms of a convergent geometric series, calculate the:
+\item If $x+1$; $x-1$; $2x-5$ are the first three terms of a convergent geometric series, calculate the:
 \begin{enumerate}
 \item Value of $x$.
 \item Sum to infinity of the series.
 \end{enumerate}
 
-\item Write the sum of the first 20 terms of the series $6 + 3 + \tfrac{3}{2} + \tfrac{3}{4} + ...$ in $\sum$\,-notation.
+\item Write the sum of the first twenty terms of the series $6 + 3 + \tfrac{3}{2} + \tfrac{3}{4} + ...$ in $\sum$\,-notation.
 
 \item For the geometric series, $$54 + 18 + 6 + ... + 5 \, (\tfrac{1}{3})^{n-1}$$ calculate the smallest value of $n$ for which the sum of the first $n$ terms is greater than $80.99$.
 
@@ -835,9 +835,9 @@ correct to two decimal places using previously calculated results.
 \item If each of $n$ teams played each other once, determine a formula for the total number of matches in terms of $n$.
 \end{enumerate}
 
-\item The midpoints of the opposite sides of square of length $4$ units are joined to form 4 new smaller squares. This midpoints of the new smaller squares are then joined in the same way to make even smaller squares. This process is repeated indefinitely. Calculate the sum of the areas of all the squares so formed.
+\item The midpoints of the opposite sides of square of length $4$ units are joined to form $4$ new smaller squares. This midpoints of the new smaller squares are then joined in the same way to make even smaller squares. This process is repeated indefinitely. Calculate the sum of the areas of all the squares so formed.
 
-\item Thembi worked part-time to buy a Mathematics book which cost R29,50. On 1 February she saved R1,60, and saves everyday 30 cents more than she saved the previous day. (So, on the second day, she saved R1,90, and so on.) After how many days did she have enough money to buy the book?
+\item Thembi worked part-time to buy a Mathematics book which cost R$29,50$. On 1 February she saved R$1,60$, and everyday saves $30$ cents more than she saved the previous day. (So, on the second day, she saved R$1,90$, and so on.) After how many days did she have enough money to buy the book?
 
 \item Consider the geometric series: $$5 + 2\tfrac{1}{2} + 1\tfrac{1}{4} + \ldots $$
 \begin{enumerate}
@@ -854,25 +854,25 @@ correct to two decimal places using previously calculated results.
 
 \item Calculate the value of $n$ if $\sum_{a=1}^n \limits \, (20 - 4a) = -20$.
 
-\item Michael saved R400 during the first month of his working life. In each subsequent month, he saved 10\% more than what he had saved in the previous month.
+\item Michael saved R$400$ during the first month of his working life. In each subsequent month, he saved $10\%$ more than what he had saved in the previous month.
 \begin{enumerate}
 \item How much did he save in the $7^{th}$ working month?
-\item How much did he save all together in his first $12$ working months?
-\item In which month of his working life did he save more than R1,500 for the first time?
+\item How much did he save all together in his first 12 working months?
+\item In which month of his working life did he save more than R$1~500$ for the first time?
 \end{enumerate}
 
-\item A man was injured in an accident at work. He receives a disability grant of R4,800 in the first year. This grant increases with a fixed amount each year.
+\item A man was injured in an accident at work. He receives a disability grant of R$4~800$ in the first year. This grant increases with a fixed amount each year.
 \begin{enumerate}
-\item What is the annual increase if, over $20$ years, he would have received a total of R143,500?
-\item His initial annual expenditure is R2,600 and increases at a rate of R400 per year. After how many years does his expenses exceed his income?
+\item What is the annual increase if, over 20 years, he would have received a total of R$143~500$?
+\item His initial annual expenditure is R$2~600$ and increases at a rate of R$400$ per year. After how many years does his expenses exceed his income?
 \end{enumerate}
 \item{The Cape Town High School wants to build a school hall and is busy with fundraising. Mr. Manuel, an ex-learner of the school and a successful politician, offers to donate money to the school. Having enjoyed mathematics at school, he decides to donate an amount of money on the following basis.
-He sets a mathematical quiz with 20 questions. For the correct answer to the first question (any learner may answer), the school will receive 1 cent, for a correct answer to the second question, the school will receive 2 cents, and so on. The donations 1, 2, 4, ... form a geometric sequence. Calculate (Give your answer to the nearest Rand)
+He sets a mathematical quiz with $20$ questions. For the correct answer to the first question (any learner may answer), the school will receive $1$ cent, for a correct answer to the second question, the school will receive $2$ cents, and so on. The donations $1; 2; 4; \ldots$ form a geometric sequence. Calculate (Give your answer to the nearest Rand)
 \begin{enumerate}
-\item{The amount of money that the school will receive for the correct answer to the 20$^{\rm{th}}$ question.}
-\item{The total amount of money that the school will receive if all 20 questions are answered correctly.}
+\item{The amount of money that the school will receive for the correct answer to the $20^{\rm{th}}$ question.}
+\item{The total amount of money that the school will receive if all $20$ questions are answered correctly.}
 \end{enumerate}
-}\item{ The common difference of an arithmetic series is 3. Calculate the values of $n$ for which the $n^{\rm{th}}$ term of the series is $93$ and the sum of the first $n$ terms is $975$.}
+}\item{ The common difference of an arithmetic series is $3$. Calculate the values of $n$ for which the $n^{\rm{th}}$ term of the series is $93$ and the sum of the first $n$ terms is $975$.}
 
 \item{The first term of a geometric sequence is $9$, and the ratio of the sum of the first eight terms to the sum of the first four terms is $97:81$. Find the first three terms of the sequence, if it is given that all the terms are positive.}
 
@@ -939,7 +939,7 @@ Here are some of the students' answers:\\
 \end{enumerate}
 Who is correct? (``None of them" is also a possibility.)}
 
-\item{A shrub of height 110 cm is planted. At the end of the first year, the shrub is 120 cm tall. Thereafter, the growth of the shrub each year is half of its growth in the previous year. Show that the height of the shrub will never exceed 130 cm.}
+\item{A shrub of height $110$ cm is planted. At the end of the first year, the shrub is $120$ cm tall. Thereafter, the growth of the shrub each year is half of its growth in the previous year. Show that the height of the shrub will never exceed $130$ cm.}
 
 \end{enumerate}
 
