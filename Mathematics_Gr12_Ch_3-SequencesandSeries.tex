@@ -91,9 +91,11 @@ For an arithmetic sequence, plotting $a_n$ vs. $n$ results in:
 \uput[r](1,1){$y$-intercept: $a_1$}
 \multips(1,0)(1,0){10}{\psline(0,-0.1)(0,0.1)}
 \multips(0,1){10}{\psline(0.9,0)(1.1,0)}
-\multido{\n=1+1}{9}{\rput(\n,-0.35){\n}}
+\rput(5,-1.0){Index: $n$}
+\usefont{T1}{ptm}{m}{n}
+\multido{\n=1+1}{9}{\rput(\n,-0.35){$\n$}}
 \multido{\n=1+1}{9}{\rput(0.65,\n){$a_{\n}$}}
-\rput(5,-1.75){Index: $n$}
+
 \end{pspicture}
 %\caption{When the terms of a linear sequence are plotted as a function of the index, a straight
 %line is obtained.}
@@ -130,6 +132,7 @@ For an arithmetic sequence, plotting $a_n$ vs. $n$ results in:
 %\end{figure}
 %We can see that the gradient of the graph is 2, which is equal to the common difference, $d$. The
 %first term, $a_1$, is obtained from the $y$-intercept (for $n=1$), which is 4.
+\newline
 (Note that the graph will only be a straight line if the sequence is arithmetic.)
 }
 

@@ -21,11 +21,17 @@ We can see this with our previous example of the circle by looking at its graph 
 
 \begin{figure}[!ht]
 \begin{center}
-\begin{pspicture}(-2.5,-2.5)(2.5,2.5)
-% FIXME: axes labels intersect the circle
-\psaxes{<->}(0,0)(-2.5,-2.5)(2.5,2.5)
-\rput(0.2,2.5){$y$}
-\rput(2.5,-.2){$x$}
+\begin{pspicture}(-3.5,-3.5)(3.5,3.5)
+% FIXED. (FIXME: axes labels intersect the circle. )
+{\psaxes[labels=none]{<->}(0,0)(-3,-3)(3,3)}
+\rput(0.3,1){$1$}
+\rput(-1, -0.3){$-1$}
+\rput(2.2, -0.3){$2$}
+\rput(-2.3, -0.3){$-2$}
+% \rput(0.3,-1){$-1$}
+\rput(0.3, 2.2){$2$}
+\rput(0.2,2.8){$y$}
+\rput(2.8,-.2){$x$}
 \pscircle(0,0){2}
 \psline[linestyle=dashed](1,2.5)(1,-2.5)
 \psdots(1,1.732)(1,-1.732)

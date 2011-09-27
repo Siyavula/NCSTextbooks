@@ -482,43 +482,83 @@ Show that $\cos\theta=\frac{1}{4}$.\\
 {
 \item $D$ is the top of a tower of height $h$. Its base is at $A$. The triangle $ABC$ lies on the ground (a horizontal plane). If we have that $BC=b$, $D\hat{B}A=\alpha$, $D\hat{B}C=\beta$ and $D\hat{C}B=\theta$, show that
 $$h=\frac{b\sin\alpha\sin\theta}{\sin(\beta+\theta)}$$
+%Nasty Graphic:
+% \scalebox{0.9} % Change this value to rescale the drawing.
+% {
+% \begin{pspicture}(0,-3.6492188)(7.581875,4.369219)
+% \psline(1.82,-0.10921875)(6.82,-0.10921875)
+% \psline(6.82,-0.10921875)(2.82,-3.1092188)
+% \psline(2.82,-3.1092188)(1.82,-0.10921875)
+% \psline(1.82,-0.10921875)(6.82,3.8907812)
+% \psline(6.82,3.8907812)(6.82,-0.10921875)
+% \psline(6.82,3.8907812)(2.82,-3.1092188)
+% \usefont{T1}{ptm}{m}{n}
+% \rput(7.271406,1.9007813){$h$}
+% \usefont{T1}{ptm}{m}{n}
+% \rput(7.3465624,-0.09921875){$A$}
+% \usefont{T1}{ptm}{m}{n}
+% \rput(2.7271874,-3.4992187){$B$}
+% \usefont{T1}{ptm}{m}{n}
+% \rput(1.3271875,0){$C$}
+% \psdots(1.82,-0.10921875)
+% \psdots(2.84,-3.0892189)
+% \psdots(6.82,-0.10921875)
+% \psdots(6.8,3.8507812)
+% \usefont{T1}{ptm}{m}{n}
+% \rput(1.8914063,-1.6592188){log \left(\frac{10}{100}\right)}{$b$}
+% \usefont{T1}{ptm}{m}{n}
+% \rput(2.2414062,-0.35921875){$\theta$}
+% \usefont{T1}{ptm}{m}{n}
+% \rput(3.7514062,-2.0192187){$\alpha$}
+% \usefont{T1}{ptm}{m}{n}
+% \rput(2.8414063,-2.3992188){$\beta$}
+% \psarc(3.3,-3.1092188){1.22}{80.53768}{130.42607}
+% \usefont{T1}{ptm}{m}{n}
+% \rput(6.82,4.2007813){$D$}
+% \psframe(6.82,0.13078125)(6.56,-0.12921876)
+% \psarc(1.36,0.21078125){1.36}{302.4712}{14.82648}
+% \end{pspicture} 
+% }\rput(6.8079686,-2.16125){$b$}
 
-\scalebox{0.9} % Change this value to rescale the drawing.
+%Re-done graphic:
+\begin{center}
+\scalebox{1} % Change this value to rescale the drawing.
 {
-\begin{pspicture}(0,-3.6492188)(7.581875,4.369219)
-\psline(1.82,-0.10921875)(6.82,-0.10921875)
-\psline(6.82,-0.10921875)(2.82,-3.1092188)
-\psline(2.82,-3.1092188)(1.82,-0.10921875)
-\psline(1.82,-0.10921875)(6.82,3.8907812)
-\psline(6.82,3.8907812)(6.82,-0.10921875)
-\psline(6.82,3.8907812)(2.82,-3.1092188)
-\usefont{T1}{ptm}{m}{n}
-\rput(7.271406,1.9007813){$h$}
-\usefont{T1}{ptm}{m}{n}
-\rput(7.3465624,-0.09921875){$A$}
-\usefont{T1}{ptm}{m}{n}
-\rput(2.7271874,-3.4992187){$B$}
-\usefont{T1}{ptm}{m}{n}
-\rput(1.3271875,0){$C$}
-\psdots(1.82,-0.10921875)
-\psdots(2.84,-3.0892189)
-\psdots(6.82,-0.10921875)
-\psdots(6.8,3.8507812)
-\usefont{T1}{ptm}{m}{n}
-\rput(1.8914063,-1.6592188){log \left(\frac{10}{100}\right)}{$b$}
-\usefont{T1}{ptm}{m}{n}
-\rput(2.2414062,-0.35921875){$\theta$}
-\usefont{T1}{ptm}{m}{n}
-\rput(3.7514062,-2.0192187){$\alpha$}
-\usefont{T1}{ptm}{m}{n}
-\rput(2.8414063,-2.3992188){$\beta$}
-\psarc(3.3,-3.1092188){1.22}{80.53768}{130.42607}
-\usefont{T1}{ptm}{m}{n}
-\rput(6.82,4.2007813){$D$}
-\psframe(6.82,0.13078125)(6.56,-0.12921876)
-\psarc(1.36,0.21078125){1.36}{302.4712}{14.82648}
-\end{pspicture} 
-}}
+\begin{pspicture}(5,-2.97125)(11.683437,2.97125)
+\definecolor{color12542b}{rgb}{0.6549019607843137,0.6352941176470588,0.6352941176470588}
+\pspolygon[linewidth=0.04,fillstyle=solid,fillcolor=color12542b](6.24,-1.43125)(11.2,-1.43125)(7.94,-2.45125)
+\psline[linewidth=0.028222222cm](6.2,-1.43125)(11.28,2.60875)
+\psline[linewidth=0.028222222cm](11.26,2.5953124)(11.26,-1.41125)
+\psline[linewidth=0.028222222cm](11.26,2.56875)(7.94,-2.51125)
+\psdots[dotsize=0.127](6.22,-1.4446876)
+\psdots[dotsize=0.127](11.26,-1.4246875)
+\psdots[dotsize=0.127](11.26,2.5753124)
+\psframe[linewidth=0.028222222,dimen=outer](11.26,-1.09125)(10.9,-1.4446876)
+
+\psdots[dotsize=0.127](7.98,-2.4446876)
+% \usefont{T1}{ptm}{m}{n}
+\rput(11.430312,2.77875){$D$}
+% \usefont{T1}{ptm}{m}{n}
+\rput(11.482344,0.55875){$h$}
+% \usefont{T1}{ptm}{m}{n}
+\rput(11.520312,-1.48125){$A$}
+% \usefont{T1}{ptm}{m}{n}
+\rput(7.933125,-2.82125){$B$}
+% \usefont{T1}{ptm}{m}{n}
+\rput(5.8857813,-1.40125){$C$}
+% \usefont{T1}{ptm}{m}{n}
+\rput(6.8079686,-2.16125){$b$}
+\rput(6.8079686,-1.2){$\theta$}
+\rput(7.9,-2){$\beta$}
+\rput(8.8,-1.8){$\alpha$}
+\psarc[linewidth=0.04](6.8,-1.31125){0.42}{255.96376}{74.74488}
+\psarc[linewidth=0.04](8.78,-1.67125){0.52}{301.7595}{86.42367}
+\psarc[linewidth=0.04](8.06,-2.15125){0.5}{42.878902}{185.19443}
+\end{pspicture}
+}
+\end{center}
+
+}
 {
 \westep{Identify a strategy}
 We have that the triangle $ABD$ is right-angled. Thus we can relate the height $h$ with the angle $\alpha$ and either the length $BA$ or $BD$ (using sines or cosines). But we have two angles and a length for $\triangle BCD$, and thus can work out all the remaining lengths and angles of this triangle. We can thus work out $BD$. 

@@ -133,11 +133,23 @@ The graph of this function is shown in Figure~\ref{fig:m:fg:diff12:limitseg}. Th
 
 \begin{figure}[htbp]
 \begin{center}
-\begin{pspicture}(-5,-5)(3,3)
+\begin{pspicture}(-6,-6)(5,5)
 %\psgrid
 \psset{unit=0.5}
-\psaxes{<->}(0,0)(-10,-10)(5,5)
-\rput(5,-.5){$x$}
+{\psaxes[labels=none]{<->}(0,0)(-10,-10)(5,5)}
+\rput(2,-1){$2$}
+\rput(4,-1){$4$}
+\rput(-2.3,-1){$-2$}
+\rput(-4.3,-1){$-4$}
+\rput(-6.3,-1){$-6$}
+\rput(-8.3,-1){$-8$}
+\rput(-1,2){$2$}
+\rput(-1,4){$4$}
+\rput(-1,-2){$-2$}
+\rput(-1,-4){$-4$}
+\rput(-1,-6){$-6$}
+\rput(-1,-8){$-8$}
+\rput(5,-0.5){$x$}
 \rput(.5,5){$y$}
 \psplot{-7}{4.5}{x 2 sub}
 \psdot[dotstyle=o](-6,-8)
@@ -191,9 +203,24 @@ We can also have the situation where a function has a different value depending 
 \begin{pspicture}(-6,-4)(6,4)
 %\psgrid[gridcolor=gray]
 \psset{unit=0.75}
-\psaxes{<->}(0,0)(-7.5,-5)(7.5,5)
+\psaxes[labels=none]{<->}(0,0)(-7.5,-5)(7.5,5)
 \psplot{-7.5}{-0.2}{1 x div}
 \psplot{0.2}{7.5}{1 x div}
+\rput(7.7,-0.5){$x$}
+\rput(0.5,5.2){$y$}
+\rput(1,-0.5){$1$}
+\rput(3,-0.5){$3$}
+\rput(5,-0.5){$5$}
+\rput(7,-0.5){$7$}
+\rput(-1.1,-0.5){$-1$}
+\rput(-3.2,-0.55){$-3$}
+\rput(-5.2,-0.5){$-5$}
+\rput(-7.2,-0.5){$-7$}
+\rput(-0.5,1){$1$}
+\rput(-0.5,3){$3$}
+\rput(-0.62,-1){$-1$}
+\rput(-0.685,-3){$-3$}
+
 \end{pspicture}
 \caption{Graph of $y=\frac{1}{x}$.}
 \label{fig:m:fg:diff12:limits:lr}
@@ -288,6 +315,8 @@ We know how to calculate the average gradient between two points on a curve, but
 \uput[l](-3,4){$f(a+h)$}
 \uput[l](-3,3.6){$f(a)$}
 \uput[u](2,4.4){secant}}
+\rput(5,-0.3){$x$}
+\rput(0.3,5){$y$}
 \end{pspicture}
 \end{center}
 
@@ -656,8 +685,7 @@ Therefore, the turning points are at $x=2$ and $x=1$.
 \begin{eqnarray*}
 f(2)&=&2(2)^3-9(2)^2+12(2)-15\\
 &=&16-36+24-15\\
-&=&-11-10)$.}
-\end{wex}
+&=&-11.
 \end{eqnarray*}
 
 \begin{eqnarray*}
@@ -721,6 +749,7 @@ g\left(\frac{1}{2}\right)&=&\left(\frac{1}{2}\right)^2-\left(\frac{1}{2}\right)+
 &=&\frac{7}{4}
 \end{eqnarray*}
 The turning point is at $(\frac{1}{2};~\frac{7}{4})$
+\newline
 
 \westep{Draw a neat sketch}
 \begin{center}
@@ -809,7 +838,7 @@ g(3)&=&-(3)^3 +6(3)^2 -9(3) +4\\
 \end{eqnarray*}
 
 Therefore the turning points are: $(1;0)$ and $(3;4)$.
-
+\newline
 \westep{Draw a neat sketch}
 \begin{center}
 \psset{unit=0.75}
@@ -820,7 +849,7 @@ Therefore the turning points are: $(1;0)$ and $(3;4)$.
 \uput[u](0,9.5){$y$}
 \uput[r](4.5,0){$x$}
 \psdots(1,0)(4,0)(3,4)(0,4)
-\uput{8pt}[u](1,0){($1;0$)}
+\uput{8pt}[u](1,0.4){($1;0$)}
 \uput[u](3,4){($3;4$)}
 \uput[ur](4,0){($4;0$)}
 \end{pspicture}
@@ -855,7 +884,7 @@ If the derivative ($\frac{dy}{dx}$) is zero at a point, the gradient of the tang
 \uput[u](0,9.5){$y$}
 \uput[r](4.5,0){$x$}
 \psdots(1,0)(4,0)(3,4)(0,4)
-\uput{8pt}[u](1,0){($1,0$)}
+\uput{8pt}[u](1,0.4){($1,0$)}
 \uput[u](3,4){($3,4$)}
 \uput[ur](4,0){($4,0$)}
 \end{pspicture}
@@ -899,9 +928,9 @@ If we draw the graph of this function we find that the graph has a minimum. The 
 \psset{unit=0.1}
 \psaxes[dx=10,Dx=10,dy=10,Dy=10]{<->}(0,0)(0,0)(150,70)
 \psplot{40}{120}{x 2 exp 0.0375 mul x 6 mul sub 245 add}
-\pcline[linestyle=none,offset=12pt](0,0)(0,70)
+\pcline[linestyle=none,offset=18pt](0,0)(0,70)
 \aput{:U}{fuel consumption (l/h)}
-\pcline[linestyle=none,offset=-12pt](0,0)(150,0)
+\pcline[linestyle=none,offset=-16pt](0,0)(150,0)
 \bput{:U}{speed (km/h)}
 %\psdot(80,5)
 %\uput[u](80,5){(80,5)}
@@ -971,7 +1000,7 @@ The product is maximised when $a$ and $b$ are both equal to $5$.}
 
 \begin{wex}
 {Optimisation Problems}{Michael wants to start a vegetable garden, which he decides to fence off in the shape of a rectangle from the rest of the garden. Michael has only $160~\emm$ of fencing, so he decides to use a wall as one border of the vegetable garden. Calculate the width and length of the garden that corresponds to largest possible area that Michael can fence off.
-
+\newline
 \begin{center}
 \psset{unit=0.75}
 \begin{pspicture}(0,0)(5,5)
@@ -983,9 +1012,9 @@ The product is maximised when $a$ and $b$ are both equal to $5$.}
 \pszigzag[coilarm=.1cm,linewidth=.5pt,coilwidth=.25cm,linewidth=2pt](1,1)(4,1)
 \pszigzag[coilarm=.1cm,linewidth=.5pt,coilwidth=.25cm,linewidth=2pt](4,1)(4,4.25)
 \rput*(2.5,2.625){garden}
-\pcline[linestyle=none](4,1)(4,4.25)
+\pcline[linestyle=none, offset=-8pt](4,1)(4,4.25)
 \bput{:U}{length, $l$}
-\pcline[linestyle=none](1,1)(4,1)
+\pcline[linestyle=none,offset=-8pt](1,1)(4,1)
 \bput{:U}{width, $w$}
 \end{pspicture}
 \end{center}
@@ -1046,7 +1075,7 @@ A width of $80~\emm$ and a length of $40~\emm$ will yield the maximal area fence
 \uput[r](5, 2){$y$}
 \uput[l](0.8, 5.7){$3x$}
 \uput[r](2.5, 5.7){$4x$}
-\uput[r](2.5, 3.7){$5x$}
+\uput[r](2.5, 4.2){$5x$}
 
 \psline(0, 0.2)(0.2, 0.2)(0.2, 0)
 \psline[linestyle=dashed](1.2, 6)(1.2, 1)(0, 0)
@@ -1088,7 +1117,7 @@ A width of $80~\emm$ and a length of $40~\emm$ will yield the maximal area fence
 \pcline[linestyle=none](C)(D)
 \aput{:U}{$y$}
 \pcline[linestyle=none](D)(E)
-\aput{:U}{$x$}
+\rput(3.35,1.8){$x$}
 \pstRightAngle{A}{B}{C}
 \pstRightAngle{B}{C}{D}
 \pstRightAngle{C}{D}{E}
