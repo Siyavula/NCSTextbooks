@@ -1,4 +1,4 @@
-\chapter{Statistics - Grade 11}
+\chapter{Statistics}
 \label{m:s11}
 
 \section{Introduction}
@@ -9,12 +9,12 @@ This chapter gives you an opportunity to build on what you have learned in previ
 %\item Calculating the variance and standard deviation of sets of data manually (for small sets of data) and using available technology (for larger sets of data), and representing results graphically using histograms and frequency polygons.
 %\end{syllabus}
 
-The measures of central tendency (mean, median and mode) and measures of dispersion (quartiles, percentiles, ranges) provide information on the data values at the centre of the data set and provide information on the spread of the data. The information on the spread of the data is however based on data values at specific points in the data set, e.g. the end points for range and data points that divide the data set into 4 equal groups for the quartiles. The behaviour of the entire data set is therefore not examined.
+The measures of central tendency (mean, median and mode) and measures of dispersion (quartiles, percentiles, ranges) provide information on the data values at the centre of the data set and provide information on the spread of the data. The information on the spread of the data is however based on data values at specific points in the data set, e.g. the end points for range and data points that divide the data set into four equal groups for the quartiles. The behaviour of the entire data set is therefore not examined.
 
 A method of determining the spread of data is by calculating a measure of the possible distances between the data and the mean. The two important measures that are used are called the \textit{variance} and the \textit{standard deviation} of the data set.
 
 \subsection{Variance}
-The variance of a data set is the average squared distance between the mean of the data set and each data value. An example of what this means is shown in Figure~\ref{fig:mdat:variance}. The graph represents the results of 100 tosses of a fair coin, which resulted in 45 heads and 55 tails. The mean of the results is 50. The squared distance between the heads value and the mean is $(45-50)^2=25$ and the squared distance between the tails value and the mean is $(55-50)^2=25$. The average of these two squared distances gives the variance, which is $\frac{1}{2}(25+25)=25$.
+The variance of a data set is the average squared distance between the mean of the data set and each data value. An example of what this means is shown in Figure~\ref{fig:mdat:variance}. The graph represents the results of 100 tosses of a fair coin, which resulted in $45$ heads and $55$ tails. The mean of the results is $50$. The squared distance between the heads value and the mean is $(45-50)^2=25$ and the squared distance between the tails value and the mean is $(55-50)^2=25$. The average of these two squared distances gives the variance, which is $\frac{1}{2}(25+25)=25$.
 
 \begin{figure}[htp!]
 \begin{center}
@@ -40,12 +40,12 @@ The variance of a data set is the average squared distance between the mean of t
 \rput[l](2.95,4.75){Heads-Mean}
 \end{pspicture}
 \end{center}
-\caption{The graph shows the results of 100 tosses of a fair coin, with 45 heads and 55 tails. The mean value of the tosses is shown as a vertical dotted line. The difference between the mean value and each data value is shown.}
+\caption{The graph shows the results of $100$ tosses of a fair coin, with $45$ heads and $55$ tails. The mean value of the tosses is shown as a vertical dotted line. The difference between the mean value and each data value is shown.}
 \label{fig:mdat:variance}
 \end{figure}
 
 \subsubsection{Population Variance}
-Let the population consist of $n$ elements $\{x_1,x_2,\ldots ,x_n\}$, with mean $\bar{x}$ (read as "x bar"). The variance of the population, denoted by $\sigma^2$, is the average of the square of the distance of each data value from the mean value.
+Let the population consist of $n$ elements $\{x_1;x_2;\ldots ;x_n\}$, with mean $\bar{x}$ (read as "x bar"). The variance of the population, denoted by $\sigma^2$, is the average of the square of the distance of each data value from the mean value.
 
 \begin{equation}
 \sigma^2 = \frac{(\sum(x - \bar{x}))^2}{n}.
@@ -81,7 +81,7 @@ In statistics, the standard deviation is the most common measure of statistical 
 The standard deviation is always a positive number and is always measured in the same units as the original data. For example, if the data are distance measurements in metres, the standard deviation will also be measured in metres.
 
 \subsubsection{Population Standard Deviation}
-Let the population consist of $n$ elements $\{x_1,x_2,\ldots ,x_n\}$, with mean $\bar{x}$. The standard deviation of the population, denoted by $\sigma$, is the square root of the average of the square of the distance of each data value from the mean value.
+Let the population consist of $n$ elements $\{x_1;x_2;\ldots ;x_n\}$, with mean $\bar{x}$. The standard deviation of the population, denoted by $\sigma$, is the square root of the average of the square of the distance of each data value from the mean value.
 
 \begin{equation}
 \sigma = \sqrt{\frac{\sum(x - \bar{x})^2}{n}}
@@ -89,7 +89,7 @@ Let the population consist of $n$ elements $\{x_1,x_2,\ldots ,x_n\}$, with mean 
 \end{equation}
 
 \subsubsection{Sample Standard Deviation}
-Let the sample consist of $n$ elements $\{x_1,x_2,\ldots,x_n\}$, taken from the population, with mean $\bar{x}$. The standard deviation of the sample, denoted by $s$, is the square root of the average of the squared deviations from the sample mean:
+Let the sample consist of $n$ elements $\{x_1;x_2;\ldots,x_n\}$, taken from the population, with mean $\bar{x}$. The standard deviation of the sample, denoted by $s$, is the square root of the average of the squared deviations from the sample mean:
 
 \begin{equation}
 s = \sqrt{\frac{\sum(x - \bar{x})^2}{n-1}}
@@ -108,14 +108,14 @@ It is often useful to set your data out in a table so that you can apply the for
 \hline
 \textbf{$\bar{X}$} & \textbf{Deviation $(X - \bar{X})$} & \textbf{Deviation squared $(X - \bar{X})^2$ } \\
 \hline
-57 & 1 & 1 \\
-53 & -3 & 9 \\
-58 & 2 & 4 \\
-65 & 9 & 81 \\
-48 & -8 & 64 \\
-50 & -6 & 36 \\
-66 & 10 & 100 \\
-51 & -5 & 25 \\
+$57$ & $1$ & $1$ \\
+$53$ & $-3$ & $9$ \\
+$58$ & $2$ & $4$ \\
+$65$ & $9$ & $81$ \\
+$48$ & $-8$ & $64$ \\
+$50$ & $-6$ & $36$ \\
+$66$ & $10$ & $100$ \\
+$51$ & $-5$ & $25$ \\
 \hline
 $\sum{X} = 448$ & $\sum{x} = 0$ & $\sum{(X  - \bar{X})^2} = 320$ \\
 \hline
@@ -130,7 +130,7 @@ Calculate the variance (add the squared results together and divide this total b
 \end{eqnarray*}
 
 \begin{eqnarray*}
-\textbf{Standard deviation} & = & \sqrt{\rm variance} \\
+\textbf{Standard deviation} & = & \sqrt{\mbox{variance}} \\
 &=& \sqrt{\frac{\sum{(X - \bar{X})^2}}{n}} \\
 &=& \sqrt{\frac{320}{8}} \\
 &=& \sqrt{40} \\
@@ -153,9 +153,10 @@ When dealing with the complete population the (population) standard deviation is
 \end{enumerate}
 
 Khan Academy video on standard deviation: SIYAVULA-VIDEO:http://cnx.org/content/m38858/latest/#statistics-2
+
 \begin{wex}{Variance and Standard Deviation}{What is the variance and standard deviation of the population of possibilities associated with rolling a fair die?}
 {\westep{Determine how many outcomes make up the population}
-When rolling a fair die, the population consists of 6 possible outcomes. The data set is therefore $x=\{1,2,3,4,5,6\}$. and n=6.
+When rolling a fair die, the population consists of $6$ possible outcomes. The data set is therefore $x=\{1;2;3;4;5;6\}$. and $n=6$.
 
 \westep{Calculate the population mean}
 The population mean is calculated by:
@@ -178,12 +179,12 @@ The population variance is calculated by:
 \hline
 $\bar{X}$ & $(X - \bar{X})$ & $(X - \bar{X})^2$  \\
 \hline
-1 & -2.5 & 6.25 \\
-2 & -1.5 & 2.25 \\
-3 & -0.5 & 0.25 \\
-4 & 0.5  & 0.25 \\
-5 & 1.5  & 2.25 \\
-6 & 2.5  & 6.25 \\
+$1$ & $-2.5$ & $6.25$ \\
+$2 $& $-1.5 $& $2.25 $\\
+$3 $& $-0.5$ & $0.25 $\\
+$4 $& $0.5$  & $0.25 $\\
+$5$ & $1.5$  & $2.25 $\\
+$6$ & $2.5$  & $6.25$ \\
 \hline
 $\sum{X} = 21$ & $\sum{x} = 0$ & $\sum{(X  - \bar{X})^2} = 17.5$ \\
 \hline
@@ -204,11 +205,11 @@ Notice how this standard deviation is somewhere in between the possible deviatio
 
 A large standard deviation indicates that the data values are far from the mean and a small standard deviation indicates that they are clustered closely around the mean.
 
-For example, each of the three samples (0, 0, 14, 14), (0, 6, 8, 14), and (6, 6, 8, 8) has a mean of 7. Their standard deviations are 8.08, 5.77 and 1.15, respectively. The third set has a much smaller standard deviation than the other two because its values are all close to 7. The value of the standard deviation can be considered `large' or `small' only in relation to the sample that is being measured. In this case, a standard deviation of 7 may be considered large. Given a different sample, a standard deviation of 7 might be considered small.
+For example, each of the three samples ($0; 0; 14; 14$), ($0; 6; 8; 14$), and ($6; 6; 8; 8$) has a mean of $7$. Their standard deviations are $8,08$; $5,77$ and $1,15$ respectively. The third set has a much smaller standard deviation than the other two because its values are all close to $7$. The value of the standard deviation can be considered `large' or `small' only in relation to the sample that is being measured. In this case, a standard deviation of $7$ may be considered large. Given a different sample, a standard deviation of $7$ might be considered small.
 
 Standard deviation may be thought of as a measure of uncertainty. In physical science for example, the reported standard deviation of a group of repeated measurements should give the precision of those measurements. When deciding whether measurements agree with a theoretical prediction, the standard deviation of those measurements is of crucial importance: if the mean of the measurements is too far away from the prediction (with the distance measured in standard deviations), then we consider the measurements as contradicting the prediction. This makes sense since they fall outside the range of values that could reasonably be expected to occur if the prediction were correct and the standard deviation appropriately quantified. (See prediction interval.)
 
-\subsection{Relationship between Standard Deviation and the Mean}
+\subsection{Relationship etween Standard Deviation and the Mean}
 
 The mean and the standard deviation of a set of data are usually reported together. In a certain sense, the standard deviation is a ``natural'' measure of statistical dispersion if the center of the data is measured about the mean. 
 
@@ -218,8 +219,8 @@ The mean and the standard deviation of a set of data are usually reported togeth
 \item Bridget surveyed the price of petrol at petrol stations in Cape Town and Durban. The raw data, in rands per litre, are given below:
 \begin{center}
 \begin{tabular}{lllllll}
-Cape Town & 3.96 & 3.76 & 4.00 & 3.91 & 3.69 & 3.72 \\
-Durban    & 3.97 & 3.81 & 3.52 & 4.08 & 3.88 & 3.68 \\ 
+Cape Town & $3,96$ & $3,76$ & $4,00$ & $3,91$ & $3,69$ & $3,72$ \\
+Durban    & $3,97$ & $3,81$ & $3,52$ & $4,08$ & $3,88$ & $3,68$ \\ 
 \end{tabular}
 \end{center}
 	\begin{enumerate}
@@ -229,14 +230,14 @@ Durban    & 3.97 & 3.81 & 3.52 & 4.08 & 3.88 & 3.68 \\
 	\item Giving reasons which city has the more consistently priced petrol?
 	\end{enumerate}
 \item The following data represents the pocket money of a sample of teenagers. \newline
-150; 300; 250; 270; 130; 80; 700; 500; 200; 220; 110; 320; 420; 140. \newline
+$150; ~300;~ 250;~ 270;~ 130;~ 80;~ 700;~ 500;~ 200;~ 220;~ 110;~ 320;~ 420;~ 140$. \newline
 What is the standard deviation?
-\item Consider a set of data that gives the weights of 50 cats at a cat show.
+\item Consider a set of data that gives the weights of $50$ cats at a cat show.
 	\begin{enumerate}
 	\item When is the data seen as a population?
 	\item When is the data seen as a sample?
 	\end{enumerate}
-\item Consider a set of data that gives the results of 20 pupils in a class.
+\item Consider a set of data that gives the results of $20$ pupils in a class.
 	\begin{enumerate}
 	\item When is the data seen as a population?
 	\item When is the data seen as a sample?
@@ -268,6 +269,7 @@ The main features of the box and whisker diagram are shown in Figure~\ref{fig:md
 \begin{center}
 \begin{pspicture}(-5,-2)(5,1)
 %\psgrid
+% \usefont{T1}{ptm}{m}{n}
 \psframe(-2,-0.5)(2,0.5)
 \psline[arrows=*-*](-4,0)(-2,0)
 \psline[arrows=*-*](2,0)(4,0)
@@ -294,20 +296,20 @@ The main features of the box and whisker diagram are shown in Figure~\ref{fig:md
 \label{fig:mdat:s:boxwhiskerfeatures}
 \end{figure}
 
-\begin{wex}{Box and Whisker Diagram}{Draw a box and whisker diagram for the data set \\$x=\{1,25; 1,5; 2,5; 2,5; 3,1; 3,2; 4,1; 4,25; 4,75; 4,8; 4,95; 5,1\}$.}{
+\begin{wex}{Box and Whisker Diagram}{Draw a box and whisker diagram for the data set \\$x=\{1,25;~ 1,5;~ 2,5;~ 2,5;~ 3,1;~ 3,2;~ 4,1;~ 4,25;~ 4,75;~ 4,8; ~4,95;~ 5,1\}$.}{
 
 \westep{Determine the five number summary}
-Minimum = 1,25\\
-Maximum = 5,10\\
-Position of first quartile = between 3 and 4\\
-Position of second quartile = between 6 and 7\\
-Position of third quartile = between 9 and 10\\
+Minimum = $1,25$\\
+Maximum = $5,10$\\
+Position of first quartile = between $3$ and $4$\\
+Position of second quartile = between $6$ and $7$\\
+Position of third quartile = between $9$ and $10$\\
 
-Data value between 3 and 4 = $\frac{1}{2}(2,5+2,5)=2,5$\\
-Data value between 6 and 7 = $\frac{1}{2}(3,2+4,1)=3,65$\\
-Data value between 9 and 10 = $\frac{1}{2}(4,75+4,8)=4,775$\\
+Data value between $3$ and $4$ = $\frac{1}{2}(2,5+2,5)=2,5$\\
+Data value between $6$ and $7$ = $\frac{1}{2}(3,2+4,1)=3,65$\\
+Data value between $9$ and $10$ = $\frac{1}{2}(4,75+4,8)=4,775$\\
 
-The five number summary is therefore: 1,25; 2,5; 3,65; 4,775; 5,10.
+The five number summary is therefore: $1,25;~ 2,5;~ 3,65;~ 4,775;~ 5,10$.
 
 \westep{Draw a box and whisker diagram and mark the positions of the minimum, maximum and quartiles.}
 
@@ -346,16 +348,16 @@ Khan Academy video on box and whisker plots: SIYAVULA-VIDEO:http://cnx.org/conte
 {
 \begin{enumerate}
 \item Lisa works as a telesales person. She keeps a record of the number of sales she makes each month. The data below show how much she sells each month. \newline
-\textbf{49; 12; 22; 35; 2; 45; 60; 48; 19; 1; 43; 12} \newline
+\textbf{$49; ~12; ~22; ~35; ~2; ~45;~ 60; ~48; ~19; ~1;~ 43; ~12$} \newline
 Give a five number summary and a box and whisker plot of her sales. 
 \item Jason is working in a computer store. He sells the following number of computers each month: \newline
-\textbf{27; 39; 3; 15; 43; 27; 19; 54; 65; 23; 45; 16} \newline
+\textbf{$27; ~39; ~3; ~15; ~43; ~27; ~19; ~54; ~65; ~23; ~45; ~16$} \newline
 Give a five number summary and a box and whisker plot of his sales,
 \item The number of rugby matches attended by 36 season ticket holders is as follows: \newline
-\textbf{15; 11; 7; 34; 24; 22; 31; 12; 9} \newline
-\textbf{12; 9; 1; 3; 15; 5; 8; 11; 2} \newline
-\textbf{25; 2; 6; 18; 16; 17; 20; 13; 17} \newline
-\textbf{14; 13; 11; 5; 3; 2; 23; 26; 40} \newline
+\textbf{$15; ~11;~ 7;~ 34;~ 24;~ 22;~ 31;~ 12;~ 9$} \newline
+\textbf{$12;~ 9;~ 1;~ 3;~ 15;~ 5;~ 8;~ 11;~ 2$} \newline
+\textbf{$25;~ 2;~ 6; ~18; ~16; ~17; ~20; ~13; ~17$} \newline
+\textbf{$14;~ 13;~ 11; ~5; ~3; ~2; ~23; ~26; ~40$} \newline
 	\begin{enumerate}
 	\item Sum the data.
 	\item Using an appropriate graphical method (give reasons) represent the data.
@@ -363,10 +365,10 @@ Give a five number summary and a box and whisker plot of his sales,
 	\item Calculate the five number summary and make a box and whisker plot.
 	\item What is the variance and standard deviation?
 	\item Comment on the data's spread.
-	\item Where are 95\% of the results expected to lie?
+	\item Where are $95\%$ of the results expected to lie?
 	\end{enumerate}
 \item Rose has worked in a florists shop for nine months. She sold the following number of wedding bouquets: \newline
-\textbf{16; 14; 8; 12; 6; 5; 3; 5; 7} \newline
+\textbf{$16;~ 14;~ 8;~ 12;~ 6; ~5; ~3; ~5; ~7$} \newline
 	\begin{enumerate}
 	\item What is the five-number summary of the data?
 	\item Since there is an odd number of data points what do you observe when calculating the five-numbers?
@@ -384,11 +386,11 @@ For example, the cumulative frequencies for Data Set 2 are shown in Table~\ref{t
 \begin{tabular}{|c||p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|}\hline
 Intervals & $0<n\leq 1 $ & $1<n\leq 2 $ & $2<n\leq 3 $ & $3<n\leq 4 $ & $4<n\leq 5$ & $5<n\leq 6 $ \\ 
 \hline
-Frequency & 30 &32 &35 &34 &37 &32\\
+Frequency & $30$ &$32$ &$35$ &$34$ &$37$ &$32$\\
 \hline
-Cumulative Frequency & 30 &30 + 32 &30 + 32 + 35 &30 + 32 + 35 + 34 &30 + 32 + 35 + 34 + 37 &30 + 32 + 35 + 34 + 37 + 32\\
+Cumulative Frequency & $30$ &$30 + 32$ &$30 + 32 + 35$ &$30 + 32 + 35 + 34$ &$30 + 32 + 35 + 34 + 37 $&$30 + 32 + 35 + 34 + 37 + 32$\\
 \hline
-& 30 & 62 & 97 & 131 & 168 & 200\\
+& $30$ &$ 62$ & $97$ & $131$ & $168$ & $200$\\
 \hline
 \end{tabular}
 \caption{Cumulative Frequencies for Data Set 2. \label{tab:mdat:s:cumulativeds2}}
@@ -417,34 +419,34 @@ Cumulative Frequency & 30 &30 + 32 &30 + 32 + 35 &30 + 32 + 35 + 34 &30 + 32 + 3
 \end{center}
 \caption{Example of a cumulative histogram for Data Set 2.\label{fig:mdat:s:cumulativegraph}}
 \end{figure}
-Notice the frequencies plotted at the upper limit of the intervals, so the points (30;1) (62;2) (97;3), etc have been plotted. This is different from the frequency polygon where we plot frequencies at the midpoints of the intervals.
+Notice the frequencies plotted at the upper limit of the intervals, so the points $(30;1)$ $(62;2)$ $(97;3)$, etc have been plotted. This is different from the frequency polygon where we plot frequencies at the midpoints of the intervals.
 
 \Exercise{Intervals}
 {
 \begin{enumerate}
 \item Use the following data of peoples ages to answer the questions. \newline
-2; 5; 1; 76; 34; 23; 65; 22; 63; 45; 53; 38 \newline
-4; 28; 5; 73; 80; 17; 15; 5; 34; 37; 45; 56 
+$2;~ 5;~1;~ 76;~ 34;~ 23; ~65; ~22;~ 63;~ 45;~ 53; ~38 $\newline
+$4; ~28; ~5; ~73; ~80; ~17; ~15; ~5; ~34; ~37;~ 45; ~56 $
 	\begin{enumerate}
-	\item Using an interval width of 8 construct a cumulative frequency distribution 
-	\item How many are below 30?
-	\item How many are below 60?
-	\item Giving an explanation state below what value the bottom 50\% of the ages fall
-	\item Below what value do the bottom 40\% fall?
+	\item Using an interval width of $8$ construct a cumulative frequency distribution 
+	\item How many are below $30$?
+	\item How many are below $60$?
+	\item Giving an explanation state below what value the bottom $50\%$ of the ages fall
+	\item Below what value do the bottom $40\%$ fall?
 	\item Construct a frequency polygon and an ogive. 
 	\item Compare these two plots
 	\end{enumerate}
 \item The weights of bags of sand in grams is given below (rounded to the nearest tenth): \newline
-50.1; 40.4; 48.5; 29.4; 50.2; 55.3; 58.1; 35.3; 54.2; 43.5 \newline
-60.1; 43.9; 45.3; 49.2; 36.6; 31.5; 63.1; 49.3; 43.4; 54.1 
+$50.1;~ 40.4; ~48.5;~ 29.4; ~50.2; ~55.3;~ 58.1;~ 35.3;~ 54.2;~ 43.5$ \newline
+$60.1; ~43.9;~ 45.3; ~49.2; ~36.6; ~31.5; ~63.1; ~49.3;~ 43.4; ~54.1$ 
 	\begin{enumerate}
 	\item Decide on an interval width and state what you observe about your choice.
 	\item Give your lowest interval. 
 	\item Give your highest interval.
 	\item Construct a cumultative frequency graph and a frequency polygon.
 	\item Compare the cumulative frequency graph and frequency polygon.
-	\item Below what value do 53\% of the cases fall?
-	\item Below what value fo 60\% of the cases fall?
+	\item Below what value do $53\%$ of the cases fall?
+	\item Below what value fo $60\%$ of the cases fall?
 	\end{enumerate}
 \end{enumerate}
 }
@@ -503,25 +505,25 @@ With both the mean and median known, the following can be concluded:
 \Exercise{Distribution of Data}
 {
 \begin{enumerate}
-\item Three sets of 12 pupils each had test score recorded. The test was out of 50. Use the given data to answer the following questions.
+\item Three sets of $12$ pupils each had test score recorded. The test was out of $50$. Use the given data to answer the following questions.
 \begin{table}[htb]
 \begin{center}
 \begin{tabular}{|l|l|l|}
 \hline
 Set 1 & Set 2 & Set 3 \\ 
 \hline
-25 & 32 & 43 \\
-47 & 34 & 47 \\
-15 & 35 & 16 \\
-17 & 32 & 43 \\
-16 & 25 & 38 \\
-26 & 16 & 44 \\
-24 & 38 & 42 \\
-27 & 47 & 50 \\
-22 & 43 & 50 \\
-24 & 29 & 44 \\
-12 & 18 & 43 \\
-31 & 25 & 42 \\
+$25$ & $32$ & $43$ \\
+$47$ & $34$ & $47$ \\
+$15$ & $35$ & $16$ \\
+$17$ & $32$ & $43$ \\
+$16$ & $25$ & $38$ \\
+$26$ & $16$ & $44$ \\
+$24$ & $38$ & $42$ \\
+$27$ & $47$ & $50$ \\
+$22$ & $43$ & $50$ \\
+$24$ & $29$ & $44$ \\
+$12$ & $18$ & $43$ \\
+$31$ & $25$ & $42 $\\
 \hline
 \end{tabular}
 \caption{Cumulative Frequencies for Data Set 2. \label{tab:mdat:s:cumulativeds2}}
@@ -532,10 +534,10 @@ Set 1 & Set 2 & Set 3 \\
 \item For each of the sets calculate the mean and the five number summary.
 \item For each of the classes find the difference between the mean and the median. Make box and whisker plots on the same set of axes.
 \item State which of the three are skewed (either right or left).
-\item Is set A skewed or symmetrical? 
-\item Is set C symmetrical? Why or why not?
+\item Is set $A$ skewed or symmetrical? 
+\item Is set $C$ symmetrical? Why or why not?
 \end{enumerate}
-\item Two data sets have the same range and interquartile range, but one is skewed right and the other is skewed left. Sketch the box and whisker plots and then invent data (6 points in each set) that meets the requirements.
+\item Two data sets have the same range and interquartile range, but one is skewed right and the other is skewed left. Sketch the box and whisker plots and then invent data ($6$ points in each set) that meets the requirements.
 \end{enumerate}
 }
 
@@ -555,18 +557,18 @@ Ohm's Law is an important relationship in physics. Ohm's law describes the relat
 \caption{Values of current and voltage measured in a wire.}
 \begin{tabular}{|c|c||c|c|}\hline
 \textbf{Current} & \textbf{Voltage} & \textbf{Current} & \textbf{Voltage} \\\hline\hline
-0 & 0.4 & 2.4 & 1.4 \\\hline
-0.2 & 0.3 & 2.6 & 1.6 \\\hline
-0.4 & 0.6 & 2.8 & 1.9 \\\hline
-0.6 & 0.6 & 3 & 1.9 \\\hline
-0.8 & 0.4 & 3.2 & 2 \\\hline
-1 & 1 & 3.4 & 1.9 \\\hline
-1.2 & 0.9 & 3.6 & 2.1 \\\hline
-1.4 & 0.7 & 3.8 & 2.1 \\\hline
-1.6 & 1 & 4 & 2.4 \\\hline
-1.8 & 1.1 & 4.2 & 2.4 \\\hline
-2 & 1.3 & 4.4 & 2.5 \\\hline
-2.2 & 1.1 & 4.6 & 2.5 \\\hline
+$0$ & $0.4$ & $2.4$ & $1.4$ \\\hline
+$0.2$ & $0.3$ & $2.6$ & $1.6$ \\\hline
+$0.4$ & $0.6$ & $2.8$ & $1.9$ \\\hline
+$0.6$ & $0.6$ & $3$ & $1.9$ \\\hline
+$0.8$ & $0.4$ & $3.2$ & $2$ \\\hline
+$1$ & $1$ & $3.4$ & $1.9$ \\\hline
+$1.2$ & $0.9$ & $3.6$ & $2.1$ \\\hline
+$1.4 $& $0.7$ & $3.8$ & $2.1$ \\\hline
+$1.6 $& $1$ & $4$ & $2.4$ \\\hline
+$1.8$ & $1.1$ & $4.2$ & $2.4$ \\\hline
+$2$ & $1.3$ & $4.4$ & $2.5$ \\\hline
+$2.2$ & $1.1$ & $4.6$ & $2.5$ \\\hline
 \end{tabular}
 \label{tab:ms:sp:ohm}
 \end{center}
@@ -597,34 +599,34 @@ Plot the following sets of data as scatter plots and deduce the type of function
 \begin{enumerate}
 \item \begin{tabular}{|c|c||c|c||c|c||c|c|}
 \hline
-\textbf{x} & \textbf{y} & \textbf{x} & \textbf{y} & \textbf{x} & \textbf{y} & \textbf{x} & \textbf{y} \\
+\textbf{$x$} & \textbf{$y$} & \textbf{$x$} & \textbf{$y$} & \textbf{$x$} & \textbf{$y$} & \textbf{$x$} & \textbf{$y$} \\
 \hline
 \hline
--5 & 9.8 & 0 & 14.2 & -2.5 & 11.9 & 2.5 & 49.3 \\
+$-5$ & $9.8$ & $0$ & $14.2$ & $-2.5$ &$ 11.9$ & $2.5$ & $49.3 $\\
 \hline
--4.5 & 4.4 & 0.5 & 22.5 & -2 & 6.9 & 3 & 68.9 \\
+$-4.5 $& $4.4$ &$ 0.5$ & $22.5$ &$ -2$ &$ 6.9$ & $3$ &$ 68.9$ \\
 \hline
--4 & 7.6 & 1 & 21.5 & -1.5 & 8.2 & 3.5 & 88.4 \\
+$-4$ & $7.6$ & $1$ & $21.5$ & $-1.5$ & $8.2$ & $3.5$ & $88.4 $\\
 \hline
--3.5 & 7.9 & 1.5 & 27.5 & -1 & 7.8 & 4 & 117.2 \\
+$-3.5$ & $7.9$ &$ 1.5$ & $27.5$ & $-1$ & $7.8$ & $4$ & $117.2$ \\
 \hline
--3 & 7.5 & 2 & 41.9 & -0.5 & 14.4 & 4.5 & 151.4 \\
+$-3$ &$ 7.5$ & $2$ & $41.9$ &$ -0.5 $& $14.4$ & $4.5$ & $151.4$ \\
 \hline
 \end{tabular}
 \item \begin{tabular}{|c|c||c|c||c|c||c|c|} \hline
-\textbf{x} & \textbf{y} & \textbf{x} & \textbf{y} & \textbf{x} & \textbf{y} & \textbf{x} & \textbf{y} \\
+\textbf{$x$} & \textbf{$y$} & \textbf{$x$} & \textbf{$y$} & \textbf{$x$} & \textbf{$y$} & \textbf{$x$} & \textbf{$y$} \\
 \hline\hline
--5 & 75 & 0 & 5 & -2.5 & 27.5 & 2.5 & 7.5 \\\hline
--4.5 & 63.5 & 0.5 & 3.5 & -2 & 21 & 3 & 11 \\\hline
--4 & 53 & 1 & 3 & -1.5 & 15.5 & 3.5 & 15.5 \\\hline
--3.5 & 43.5 & 1.5 & 3.5 & -1 & 11 & 4 & 21 \\\hline
--3 & 35 & 2 & 5 & -0.5 & 7.5 & 4.5 & 27.5 \\\hline
+$-5$ & $75$ & $0$ & $5$ & $-2.5$ & $27.5$ & $2.5$ & $7.5$ \\\hline
+$-4.5$ & $63.5$ & $0.5$ & $3.5$ & $-2$ & $21$ & $3$ & $11$ \\\hline
+$-4$ & $53$ & $1$ & $3$ & $-1.5$ & $15.5$ & $3.5$ & $15.5$ \\\hline
+$-3.5$ & $43.5$ & $1.5$ & $3.5$ & $-1$ & $11$ & $4$ & $21$ \\\hline
+$-3$ & $35$ & $2$ & $5$ & $-0.5$ & $7.5$ & $4.5$ & $27.5$ \\\hline
 \end{tabular}
 \item \begin{tabular}{|l||c|c|c|c|c|c|c|c|}\hline
-Height (cm) & 147 & 150 & 152 & 155 & 157 & 160 & 163 & 165\\
-& 168 & 170 & 173 & 175 & 178 & 180 & 183&\\\hline
-Weight (kg) & 52 & 53 & 54 & 56 & 57 & 59 & 60 & 61\\
-& 63 & 64 & 66 & 68 & 70 & 72 & 74&\\\hline
+Height (cm) & $147$ & $150$ & $152$ & $155$ & $157$ & $160$ & $163$ & $165$\\
+& $168$ & $170$ & $173$ & $175$ & $178$ & $180$ & $183$&\\\hline
+Weight (kg) & $52$ & $53$ & $54$ & $56$ & $57$ & $59$ & $60$ & $61$\\
+& $63$ & $64$ & $66$ & $68$ & $70$ & $72$ & $74$&\\\hline
 \end{tabular}
 \end{enumerate}
 }
@@ -640,18 +642,18 @@ Phet simulation for scatter plots: SIYAVULA-SIMULATION:http://cnx.org/content/m3
 \hline
 Score (percent) & Time spent studying (minutes)  \\ 
 \hline
-67 & 100  \\
-55 & 85  \\
-70 & 150  \\
-90 & 180  \\
-45 & 70  \\
-75 & 160  \\
-50 & 80  \\
-60 & 90  \\
-84 & 110  \\
-30 & 60  \\
-66 & 96  \\
-96 & 200  \\
+$67 $&$ 100 $ \\
+$55 $& $85 $ \\
+$70 $& $150 $ \\
+$90 $& $180$  \\
+$45 $& $70 $ \\
+$75 $& $160 $ \\
+$50 $& $80 $ \\
+$60 $& $90$  \\
+$84 $& $110 $ \\
+$30$ & $60 $ \\
+$66$ & $96 $ \\
+$96$ & $200$  \\
 \hline
 \end{tabular}
 \end{center}
@@ -670,14 +672,14 @@ Score (percent) & Time spent studying (minutes)  \\
 \hline
 Practice time (min) & Ranking  \\ 
 \hline
-154 & 5 \\
-390 & 1 \\
-130 & 6 \\
-70  & 8 \\
-240 & 3 \\
-280 & 2 \\
-175 & 4 \\
-103 & 7 \\
+$154$ & $5$ \\
+$390$ & $1$ \\
+$130$ & $6$ \\
+$70 $ & $8$ \\
+$240$ & $3$ \\
+$280$ & $2$ \\
+$175$ & $4$ \\
+$103$ & $7$ \\
 \hline
 \end{tabular}
 \end{center}
@@ -693,14 +695,14 @@ Practice time (min) & Ranking  \\
 \hline
 Number of sweets (per week) & Average sleeping time (per day) \\ 
 \hline
-15 & 4   \\
-12 & 4.5 \\
-5  & 8   \\
-3  & 8.5 \\
-18 & 3   \\
-23 & 2   \\
-11 & 5   \\
-4  & 8   \\
+$15$ & $4   $\\
+$12$ & $4.5 $\\
+$5 $ & $8   $\\
+$3 $ & $8.5$ \\
+$18$ & $3 $  \\
+$23$ & $2$   \\
+$11$ & $5$   \\
+$4$  & $8$   \\
 \hline
 \end{tabular}
 \end{center}
@@ -853,12 +855,12 @@ Statistics can be manipulated in many ways that can be misleading. Graphs need t
 \hline
 Activity & Hours \\ 
 \hline
-Sleep        & 8 \\
-Sports       & 2 \\
-School       & 7 \\
-Visit friend & 1 \\
-Watch TV     & 2 \\
-Studying     & 3 \\
+Sleep        & $8 $\\
+Sports       & $2 $\\
+School       & $7 $\\
+Visit friend & $1$ \\
+Watch TV     & $2$ \\
+Studying     & $3$ \\
 \hline
 \end{tabular}
 \end{center}
@@ -1004,14 +1006,14 @@ Studying     & 3 \\
 \hline
 Income (thousands of rands) & Food bill (thousands of rands) \\ 
 \hline
- $<$5  & 2  \\
- 5-10  & 2  \\
- 10-15 & 4  \\
- 15-20 & 4  \\
- 20-30 & 8  \\
- 30-40 & 6  \\
- 40-50 & 10 \\
- $>$50 & 12 \\
+ $<5$  & $2$  \\
+ $5-10$  & $2$  \\
+ $10-15$ & $4$  \\
+ $15-20$ & $4$  \\
+ $20-30$ & $8$  \\
+ $30-40$ & $6$  \\
+ $40-50$ & $10$ \\
+ $>50$ & $12$ \\
 \hline
 \end{tabular}
 \end{center}
@@ -1034,16 +1036,16 @@ Income (thousands of rands) & Food bill (thousands of rands) \\
 \hline
 Speed (km/h) & Frequency \\ 
 \hline
- $60<x\leq 70$   & 3  \\
- $70<x\leq 80$   & 2  \\
- $80<x\leq 90$   & 6  \\
- $90<x\leq 100$  & 40 \\
- $100<x\leq 110$ & 50 \\
- $110<x\leq 120$ & 30 \\
- $120<x\leq 130$ & 15 \\
- $130<x\leq 140$ & 12 \\
- $140<x\leq 150$ & 3  \\
- $150<x\leq 160$ & 2  \\
+ $60<x\leq 70$   & $3 $ \\
+ $70<x\leq 80$   & $2 $ \\
+ $80<x\leq 90$   & $6 $ \\
+ $90<x\leq 100$  & $40$ \\
+ $100<x\leq 110$ & $50$ \\
+ $110<x\leq 120$ & $30$ \\
+ $120<x\leq 130$ & $15$ \\
+ $130<x\leq 140$ & $12$ \\
+ $140<x\leq 150$ & $3 $ \\
+ $150<x\leq 160$ & $2$  \\
 \hline
 \end{tabular}
 \end{center}
@@ -1051,7 +1053,7 @@ Speed (km/h) & Frequency \\
 	\begin{enumerate}
 	\item Draw a graph to illustrate this information. 
 	\item Use your graph to find the median speed and the interquartile range.
-	\item What percent of cars travel more than 120km/h on this road?
+	\item What percent of cars travel more than $120~$km/h on this road?
 	\item Do cars generally exceed the speed limit?
 	\end{enumerate}
 
@@ -1108,12 +1110,12 @@ Speed (km/h) & Frequency \\
 \end{center}
 
 \item The monthly income of eight teachers are given as follows: \newline
-R10 050; R14 300; R9 800; R15 000; R12 140; R13 800; R11 990; R12 900.
+R$10~ 050$; R$14 ~300$; R$9 ~800$; R$15~ 000$; R$12~ 140$; R$13 ~800$; R$11~ 990$; R$12~ 900$.
 	\begin{enumerate}
 	\item What is the mean income and the standard deviation? 
 	\item How many of the salaries are within one standard deviation of the mean?
-	\item If each teacher gets a bonus of R500 added to their pay what is the new mean and standard deviation?
-	\item If each teacher gets a bonus of 10\% on their salary what is the new mean and standard deviation? 
+	\item If each teacher gets a bonus of R$500$ added to their pay what is the new mean and standard deviation?
+	\item If each teacher gets a bonus of $10\%$ on their salary what is the new mean and standard deviation? 
 	\item Determine for both of the above, how many salaries are within one standard deviation of the mean.
 	\item Using the above information work out which bonus is more beneficial financially for the teachers.
 	\end{enumerate}

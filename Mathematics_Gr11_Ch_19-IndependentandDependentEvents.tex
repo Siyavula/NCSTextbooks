@@ -1,4 +1,4 @@
-\chapter{Independent and Dependent Events - Grade 11}
+\chapter{Independent and Dependent Events}
 \label{m:p11}
 
 
@@ -11,21 +11,21 @@
 In probability theory event are either independent or dependent. This chapter describes the differences and how each type of event is worked with.
 
 \section{Definitions}
-Two events are independent if knowing something about the value of one event does not give any information about the value of the second event. For example, the event of getting a "1" when a die is rolled and the event of getting a "1" the second time it is thrown are independent.
+Two events are independent if knowing something about the value of one event does not give any information about the value of the second event. For example, the event of getting a "$1$" when a die is rolled and the event of getting a "$1$" the second time it is thrown are independent.
 
 \Definition{Independent Events}{Two events $A$ and $B$ are independent if when one of them happens, it doesn't affect whether the one happens or not.}
 
 The probability of two independent events occurring, $P(A \cap B)$, is given by:
 \equ{P(A \cap B) = P(A)\times P(B)}{eq:independentproduct}
 
-\begin{wex}{Independent Events}{What is the probability of rolling a 1 and then rolling a 6 on a fair die?}{
+\begin{wex}{Independent Events}{What is the probability of rolling a $1$ and then rolling a $6$ on a fair die?}{
 \westep{Identify the two events and determine whether the events are independent or not}
 
-Event $A$ is rolling a 1 and event $B$ is rolling a 6. Since the outcome of the first event does not affect the outcome of the second event, the events are independent.
+Event $A$ is rolling a $1$ and event $B$ is rolling a $6$. Since the outcome of the first event does not affect the outcome of the second event, the events are independent.
 
 \westep{Determine the probability of the specific outcomes occurring, for each event}
 
-The probability of rolling a 1 is $\frac{1}{6}$ and the probability of rolling a 6 is $\frac{1}{6}$.
+The probability of rolling a $1$ is $\frac{1}{6}$ and the probability of rolling a $6$ is $\frac{1}{6}$.
 
 Therefore, $P(A)=\frac{1}{6}$ and $P(B)=\frac{1}{6}$.
 
@@ -37,19 +37,19 @@ P(A \cap B) &=& P(A)\times P(B)\\
 &=&\frac{1}{36}\\
 \end{eqnarray*}
 
-The probability of rolling a 1 and then rolling a 6 on a fair die is $\frac{1}{36}$.}
+The probability of rolling a $1$ and then rolling a $6$ on a fair die is $\frac{1}{36}$.}
 \end{wex}
 
 Consequently, two events are dependent if the outcome of the first event affects the outcome of the second event.
 
-\begin{wex}{Dependent Events}{A cloth bag has four coins, one R1 coin, two R2 coins and one R5 coin. What is the probability of first selecting a R1 coin followed by selecting a R2 coin?}{
+\begin{wex}{Dependent Events}{A cloth bag has four coins, one R$1$ coin, two R$2$ coins and one R$5$ coin. What is the probability of fisrt selecting a R$1$ coin and then selecting a R$2$ coin?}{
 \westep{Identify the two events and determine whether the events are independent or not}
 
-Event $A$ is selecting a R1 coin and event $B$ is next selecting a R2. Since the outcome of the first event affects the outcome of the second event (because there are less coins to choose from after the first coin has been selected), the events are dependent.
+Event $A$ is selecting a R$1$ coin and event $B$ is next selecting a R$2$. Since the outcome of the first event affects the outcome of the second event (because there are less coins to choose from after the first coin has been selected), the events are dependent.
 
 \westep{Determine the probability of the specific outcomes occurring, for each event}
 
-The probability of first selecting a R1 coin is $\frac{1}{4}$ and the probability of next selecting a R2 coin is $\frac{2}{3}$ (because after the R1 coin has been selected, there are only three coins to choose from).
+The probability of first selecting a R$1$ coin is $\frac{1}{4}$ and the probability of next selecting a R$2$ coin is $\frac{2}{3}$ (because after the R$1$ coin has been selected, there are only three coins to choose from).
 
 Therefore, $P(A)=\frac{1}{4}$ and $P(B)=\frac{2}{3}$.
 
@@ -64,7 +64,7 @@ P(A \cap B) &=& P(A)\times P(B)\\
 &=&\frac{1}{6}\\
 \end{eqnarray*}
 
-The probability of first selecting a R1 coin followed by selecting a R2 coin is $\frac{1}{6}$.}
+The probability of first selecting a R$1$ coin followed by selecting a R$2$ coin is $\frac{1}{6}$.}
 \end{wex}
 
 \subsection{Identification of Independent and Dependent Events}
@@ -75,7 +75,7 @@ A two-way contingency table (studied in an earlier grade) can be used to determi
 
 For example we can draw and analyse a two-way contingency table to solve the following problem.
 \begin{wex}{Contingency Tables}
-{A medical trial into the effectiveness of a new medication was carried out. 120 males and 90 females responded. Out of these 50 males and 40 females responded positively to the medication. 
+{A medical trial into the effectiveness of a new medication was carried out. $120$ males and $90$ females responded. Out of these $50$ males and $40$ females responded positively to the medication. 
 \begin{enumerate}
 \item Was the medication's success independent of gender? Explain.
 \item Give a table for the independence of gender results.
@@ -87,10 +87,10 @@ For example we can draw and analyse a two-way contingency table to solve the fol
 \hline
                    & Male & Female & Totals \\
 \hline
-Positive result    & 50   & 40     & 90     \\
-No Positive result & 70   & 50     & 120    \\
+Positive result    & $50$   & $40  $   & $90   $  \\
+No Positive result & $70  $ & $50 $    & $120 $   \\
 \hline
-Totals             & 120  & 90     & 210    \\
+Totals             & $120$  & $90$     & $210$    \\
 \hline
 \end{tabular}
 \end{center}
@@ -101,16 +101,16 @@ P(male and positive result)=$\frac{50}{210}=0,24$
 \westep{Draw conclusion}
 P(male and positive result) is the observed probability and P(male).P(positive result) is the expected probability. These two are quite different. So there is no evidence that the medication's success is independent of gender.
 \westep{Gender-independent results}
-To get gender independence we need the positive results in the same ratio as the gender. The gender ratio is: 120:90, or 4:3, so the number in the male and positive column would have to be $\frac{4}{7}$ of the total number of patients responding positively which gives 51,4. This leads to the following table:
+To get gender independence we need the positive results in the same ratio as the gender. The gender ratio is: $120:90$, or $4:3$, so the number in the male and positive column would have to be $\frac{4}{7}$ of the total number of patients responding positively which gives $51,4$. This leads to the following table:
 \begin{center}
 \begin{tabular}{|c|c|c|c|}
 \hline
                    & Male & Female & Totals \\
 \hline
-Positive result    & 51,4   & 38,6     & 90     \\
-No Positive result & 68,6   & 51,4     & 120    \\
+Positive result    & $51,4$   & $38,6$     & $90$     \\
+No Positive result & $68,6$   & $51,4$     & $120$    \\
 \hline
-Totals             & 120  & 90     & 210    \\
+Totals             & $120$  & $9$0     & $210$    \\
 \hline
 \end{tabular}
 \end{center}
@@ -119,13 +119,13 @@ Totals             & 120  & 90     & 210    \\
 
 \subsubsection{Use of a Venn Diagram}
 We can also use Venn diagrams to check whether events are dependent or independent. 
-\Definition{Independent events}{Events are said to be independent if the result or outcome of one event does not affect the result or outcome of the other event. So P(A/C)=P(A), where P(A/C) represents the probability of event A after event C has occured.} 
+\Definition{Independent events}{Events are said to be independent if the result or outcome of one event does not affect the result or outcome of the other event. So $P(A/C)=P(A)$, where $P(A/C)$ represents the probability of event $A$ after event $C$ has occured.} 
 \Definition{Dependent events}{Two events are dependent if the outcome of one event is affected by the outcome of the other event i.e. $P(A/C)\neq P(A)$}.
 Also note that $P(A/C) = \frac{P(A\cap C)}{P(C)}$.
 For example, we can draw a Venn diagram and a contingency table to illustrate and analyse the following example.
 \begin{wex}{Venn diagrams and events}
 {
-A school decided that its uniform needed upgrading. The colours on offer were beige or blue or beige and blue. 40\% of the school wanted beige, 55\% wanted blue and 15\% said a combination would be fine. Are the two events independent?
+A school decided that its uniform needed upgrading. The colours on offer were beige or blue or beige and blue. $40\%$ of the school wanted beige, $55\%$ wanted blue and $15\%$said a combination would be fine. Are the two events independent?
 }
 {
 \westep{Draw a Venn diagram}
@@ -135,20 +135,20 @@ A school decided that its uniform needed upgrading. The colours on offer were be
 \psframe[linewidth=0.04,dimen=outer](10.08,3.49)(0.0,-3.49)
 \pscircle[linewidth=0.04,dimen=outer](3.31,-0.04){2.31}
 \pscircle[linewidth=0.04,dimen=outer](6.93,-0.04){2.33}
-\usefont{T1}{ptm}{m}{n}
+% \usefont{T1}{ptm}{m}{n}
 \rput(3.2478125,2.55){\small Beige}
-\usefont{T1}{ptm}{m}{n}
+% \usefont{T1}{ptm}{m}{n}
 \rput(6.9478126,2.51){\small Blue}
-\usefont{T1}{ptm}{m}{n}
-\rput(3.0676563,0.01){\small 0,25}
-\usefont{T1}{ptm}{m}{n}
-\rput(5.027656,-0.01){\small 0,15}
-\usefont{T1}{ptm}{m}{n}
-\rput(7.0829687,0.03){\small 0,4}
-\usefont{T1}{ptm}{m}{n}
-\rput(9.488125,-3.07){\small 0,2}
-\usefont{T1}{ptm}{m}{n}
-\rput(0.39484376,3.07){\small S}
+% \usefont{T1}{ptm}{m}{n}
+\rput(3.0676563,0.01){\small $0,25$}
+% \usefont{T1}{ptm}{m}{n}
+\rput(5.027656,-0.01){\small $0,15$}
+% \usefont{T1}{ptm}{m}{n}
+\rput(7.0829687,0.03){\small $0,4$}
+% \usefont{T1}{ptm}{m}{n}
+\rput(9.488125,-3.07){\small $0,2$}
+% \usefont{T1}{ptm}{m}{n}
+\rput(0.39484376,3.07){\small $S$}
 \end{pspicture} 
 }
 \westep{Draw up a contingency table}
@@ -157,23 +157,23 @@ A school decided that its uniform needed upgrading. The colours on offer were be
 \hline
          & Beige & Not Beige & Totals \\
 \hline
-Blue     & 0,15  & 0,4       & 0,55   \\
-Not Blue & 0,25  & 0,2       & 0,35   \\
+Blue     & $0,15$  & $0,4$       & $0,55 $  \\
+Not Blue & $0,25 $ & $0,2$       & $0,35$   \\
 \hline
-Totals   & 0,40  & 0,6       & 1      \\
+Totals   & $0,40$  & $0,6$       & $1$      \\
 \hline
 \end{tabular}
 \end{center}
 \westep{Work out the probabilities}
-P(Blue)=0,4, P(Beige)=0,55, P(Both)=0,15, P(Neither)=0,20 \newline
+$P$(Blue)$=0,4$; $P$(Beige)$=0,55$; $P$(Both)$=0,15$; $P$(Neither)$=0,20$ \newline
 Probability of choosing beige after blue is: \newline
 \begin{eqnarray*}
-P(Beige/Blue) & = & \frac{P(Beige \cap Blue)}{P(Blue)} \\
+P\left(\frac{\mbox{Beige}}{\mbox{Blue}}\right) & = & \frac{P\mbox{(Beige} \cap \mbox{Blue})}{P\mbox{(Blue)}} \\
 & = & \frac{0,15}{0,55} \\
 & = & 0,27 \\ 
 \end{eqnarray*}
 \westep{Solve the problem}
-Since $P(Beige/Blue)\neq P(Beige)$ the events are statistically dependent.
+Since $P\left(\frac{\mbox{Beige}}{\mbox{Blue}}\right)$ the events are statistically dependent.
 }
 \end{wex}
 
@@ -197,10 +197,10 @@ Another significant application of probability theory in everyday life is reliab
 \hline
            & Brown eyes & Not Brown eyes & Totals \\
 \hline
-Black hair & 50         & 30             & 80     \\
-Red hair   & 70         & 80             & 150    \\
+Black hair & $50$         & $30$             & $80 $    \\
+Red hair   & $70$         & $80$             & $150 $   \\
 \hline
-Totals     & 120        & 110            & 230    \\
+Totals     & $120$        & $110 $           & $230 $   \\
 \hline
 \end{tabular}
 \end{center}
@@ -210,10 +210,10 @@ Totals     & 120        & 110            & 230    \\
 \hline
                     & Point A & Point B & Totals \\
 \hline
-Busses left late    & 15      & 40      & 55     \\
-Busses left on time & 25      & 20      & 45     \\
+Busses left late    & $15$      & $40$      & $55$     \\
+Busses left on time & $25$      & $20 $     & $45$     \\
 \hline
-Totals              & 40      & 60      & 100    \\
+Totals              & $40 $     & $60$      & $100$    \\
 \hline
 \end{tabular}
 \end{center}
@@ -223,11 +223,11 @@ Totals              & 40      & 60      & 100    \\
 \hline
                           & Durban & Bloemfontein & Totals \\
 \hline
-Liked living there        & 130    & 30           & 160    \\
-Did not like living there & 140    & 200          & 340    \\
+Liked living there        & $130$    & $30 $          & $160$    \\
+Did not like living there & $140 $   & $200 $         & $340$    \\
 \hline
-Totals                    & 270    & 230          & 500    \\
-\hline
+Totals                    & $270$   &$ 230 $         & $500    \\
+\hline$
 \end{tabular}
 \end{center}
 
@@ -236,45 +236,45 @@ Totals                    & 270    & 230          & 500    \\
 \hline
                          & Multivitamin A & Multivitamin B & Totals \\
 \hline
-Improvement in health    & 400            & 300            & 700    \\
-No improvement in health & 140            & 120            & 260    \\
+Improvement in health    & $400$            & $300$            & $700$    \\
+No improvement in health & $140 $           &$ 120 $           & $260 $   \\
 \hline
-Totals                   & 540            & 420            & 960    \\
+Totals                   & $540 $           & $420$            & $960$    \\
 \hline
 \end{tabular}
 
 \end{center}
 	\end{enumerate}
 %\item A company has a probability of 0.4 of meeting their quota on time and a probability of 0.25 of meeting their quota late. Also there is a 0.10 chance of not meeting their quota on time. Use a Venn diagram and a contingency table to show the information and decide if the events are independent.
-\item A study was undertaken to see how many people in Port Elizabeth owned either a Volkswagen or a Toyota. 3\% owned both, 25\% owned a Toyota and 60\% owned a Volkswagen. Draw a contingency table to show all events and decide if car ownership is independent.
+\item A study was undertaken to see how many people in Port Elizabeth owned either a Volkswagen or a Toyota. $3\%$ owned both, $25\%$ owned a Toyota and $60\%$ owned a Volkswagen. Draw a contingency table to show all events and decide if car ownership is independent.
 \item Jane invested in the stock market. The probability that she will not lose all her money is 0,32. What is the probability that she will lose all her money? Explain.
-\item If D and F are mutually exclusive events, with P(D$'$)=0,3 and P(D or F)=0,94, find P(F).
-\item A car sales person has pink, lime-green and purple models of car A and purple, orange and multicolour models of car B. One dark night a thief steals a car. 
+\item If $D$ and $ F$ are mutually exclusive events, with $P(D')=0,3$ and $P(D$ or $F)=0,94$, find $P(F)$.
+\item A car sales person has pink, lime-green and purple models of car $A$ and purple, orange and multicolour models of car $B$. One dark night a thief steals a car. 
 	\begin{enumerate}
 	\item What is the experiment and sample space? 
 	\item Draw a Venn diagram to show this.
-	\item What is the probability of stealing either a model of A or a model of B?
-	\item What is the probability of stealing both a model of A and a model of B?
+	\item What is the probability of stealing either a model of $A$ or a model of $B$?
+	\item What is the probability of stealing both a model of $A$ and a model of $B$?
 	\end{enumerate}
-\item The probability of Event X is 0,43 and the probability of Event Y is 0,24. The probability of both occuring together is 0,10. What is the probability that X or Y will occur (this inculdes X and Y occuring simultaneously)?  
-\item P(H)=0,62, P(J)=0,39 and P(H and J)=0,31. Calculate:
+\item The probability of Event $X$ is $0,43$ and the probability of Event $Y$ is $0,24$. The probability of both occuring together is $0,10$. What is the probability that $X$ or $Y$ will occur (this inculdes $X$ and $Y$ occuring simultaneously)?  
+\item$ P(H)=0,62$; $P(J)=0,39$ and$ P(H$ and $J)=0,31$. Calculate:
 	\begin{enumerate}
-	\item P(H$'$) 
-	\item P(H or J)
-	\item P(H$'$ or J$'$)
-	\item P(H$'$ or J)
-	\item P(H$'$ and J$'$)
+	\item $P(H')$ 
+	\item $P(H$ or $J)$
+	\item $P(H'$ or $J')$
+	\item $P(H'$ or $J)$
+	\item $P(H'$ and $J')$
 	\end{enumerate}
-\item The last ten letters of the alphabet were placed in a hat and people were asked to pick one of them. Event D is picking a vowel, Event E is picking a consonant and Event F is picking the last four letters. Calculate the following probabilities:
+\item The last ten letters of the alphabet were placed in a hat and people were asked to pick one of them. Event $D$ is picking a vowel, Event $E$ is picking a consonant and Event $F$ is picking the last four letters. Calculate the following probabilities:
 	\begin{enumerate}
-	\item P(F$'$) 
-	\item P(F or D)
-	\item P(neither E nor F)
-	\item P(D and E)
-	\item P(E and F)
-	\item P(E and D$'$)
+	\item $P(F')$ 
+	\item $P(F$ or $D)$
+	\item $P($neither $E$ nor $F)$
+	\item $P(D$ and $E)$
+	\item $P(E$ and $F)$
+	\item $P(E$ and $D')$
 	\end{enumerate}
-\item At Dawnview High there are 400 Grade 12's. 270 do Computer Science, 300 do English and 50 do Typing. All those doing Computer Science do English, 20 take Computer Science and Typing and 35 take English and Typing. Using a Venn diagram calculate the probability that a pupil drawn at random will take:
+\item At Dawnview High there are $400$ Grade 12's. $270$ do Computer Science, $300$ do English and $50$ do Typing. All those doing Computer Science do English, $20$ take Computer Science and Typing and $35$ take English and Typing. Using a Venn diagram calculate the probability that a pupil drawn at random will take:
 	\begin{enumerate}
 	\item English, but not Typing or Computer Science 
 	\item English but not Typing
