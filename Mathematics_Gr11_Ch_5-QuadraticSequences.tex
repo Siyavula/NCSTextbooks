@@ -46,25 +46,50 @@ The first difference is calculated by finding the difference between consecutive
  	  & +1 &   & +2 &   & +3 &   & +4 &   \\         
      };
 % -------------(FROM: tree-row-column) -- (TO: tree-row-column) node [.....] {LABEL};
-     \draw[->] (tree-2-2) -- (tree-1-1) node [midway,above] {};
-     \draw[->] (tree-2-2) -- (tree-1-3) node [midway,below] {};
-     \draw[->] (tree-2-4) -- (tree-1-3) node [midway,above] {};
-     \draw[->] (tree-2-4) -- (tree-1-5) node [midway,below] {};
-     \draw[->] (tree-2-6) -- (tree-1-5) node [midway,below] {};
-     \draw[->] (tree-2-6) -- (tree-1-7) node [midway,below] {};
-     \draw[->] (tree-2-8) -- (tree-1-7) node [midway,below] {};
-     \draw[->] (tree-2-8) -- (tree-1-9) node [midway,below] {};
+     \draw[-] (tree-2-2) -- (tree-1-1) node [midway,above] {};
+     \draw[-] (tree-2-2) -- (tree-1-3) node [midway,below] {};
+     \draw[-] (tree-2-4) -- (tree-1-3) node [midway,above] {};
+     \draw[-] (tree-2-4) -- (tree-1-5) node [midway,below] {};
+     \draw[-] (tree-2-6) -- (tree-1-5) node [midway,below] {};
+     \draw[-] (tree-2-6) -- (tree-1-7) node [midway,below] {};
+     \draw[-] (tree-2-8) -- (tree-1-7) node [midway,below] {};
+     \draw[-] (tree-2-8) -- (tree-1-9) node [midway,below] {};
 
 \end{tikzpicture}
 \end{center}
 
 We then work out the \textit{second differences}, which are simply obtained by taking the difference between the consecutive differences \{$1; \: 2; \: 3; \: 4; \: \ldots $\} obtained above:
-\begin{eqnarray*}
-2 - 1 &=& 1 \\
-3 - 2 &=& 1 \\
-4 - 3 &=& 1 \\
-\ldots
-\end{eqnarray*}
+%\begin{eqnarray*}
+%2 - 1 &=& 1 \\
+%3 - 2 &=& 1 \\
+%4 - 3 &=& 1 \\
+%\ldots
+%\end{eqnarray*}
+
+\begin{center}
+
+\begin{tikzpicture}[>=stealth,sloped]
+     \matrix (tree) [%
+       matrix of nodes,
+       minimum size=0.5cm,
+       column sep=0.5cm,
+       row sep=1cm,
+     ]
+     {
+ 	1 &    & 2 &    & 3 &    & 4 &\\
+ 	  & +1 &   & +1 &   & +1 &\\         
+     };
+% -------------(FROM: tree-row-column) -- (TO: tree-row-column) node [.....] {LABEL};
+     \draw[-] (tree-2-2) -- (tree-1-1) node [midway,above] {};
+     \draw[-] (tree-2-2) -- (tree-1-3) node [midway,below] {};
+     \draw[-] (tree-2-4) -- (tree-1-3) node [midway,above] {};
+     \draw[-] (tree-2-4) -- (tree-1-5) node [midway,below] {};
+     \draw[-] (tree-2-6) -- (tree-1-5) node [midway,above] {};
+     \draw[-] (tree-2-6) -- (tree-1-7) node [midway,below] {};
+
+\end{tikzpicture}
+\end{center}
+
 We then see that the second differences are equal to $1$. Thus, Equation (\ref{eq:mp:s:quadseq:1}) is a \textit{quadratic sequence}. 
 
 Note that the differences between consecutive terms (that is, the first differences) of a quadratic sequence form a sequence where there is a constant difference between consecutive terms. In the above example, the sequence of \{$1; \: 2; \: 3; \: 4; \: \ldots $\}, which is formed by taking the differences between consecutive terms of Equation (\ref{eq:mp:s:quadseq:1}), has a linear formula of the kind $ax+b$. 
@@ -82,9 +107,52 @@ Can you calculate the common second difference for each of the above examples?}
 
 % -----------------------------------------------------------------
 
-\begin{wex}{Quadratic sequence}{Write down the next two terms and find a formula for the $n^{\rm th}$ term of the sequence $;, 12; 23; 38;\ldots$}{ 
+\begin{wex}{Quadratic sequence}
+% Question
+{Write down the next two terms and find a formula for the $n^{\rm th}$ term of the sequence $;, 12; 23; 38;\ldots$}
+% Answer
+{ 
 \westep{Find the first differences between the terms.} 
 i.e. $7 ; 11; 15$
+
+% \begin{center}
+% 
+% \begin{tikzpicture}[>=stealth,sloped]
+%      \matrix (tree)
+%      [
+% 	matrix of nodes,
+% 	minimum size=0.5cm,
+% 	column sep=0.5cm,
+% 	row sep=1cm,
+%      ]
+%      {
+%  	1 &    & 2 &    & 3 &    & 4 &\\
+%  	  & +1 &   & +1 &   & +1 &\\         
+%      };
+% % -------------(FROM: tree-row-column) -- (TO: tree-row-column) node [.....] {LABEL};
+%      \draw[-] (tree-2-2) -- (tree-1-1) node [midway,above] {};
+%      \draw[-] (tree-2-2) -- (tree-1-3) node [midway,below] {};
+%      \draw[-] (tree-2-4) -- (tree-1-3) node [midway,above] {};
+%      \draw[-] (tree-2-4) -- (tree-1-5) node [midway,below] {};
+%      \draw[-] (tree-2-6) -- (tree-1-5) node [midway,above] {};
+%      \draw[-] (tree-2-6) -- (tree-1-7) node [midway,below] {};
+% 
+% \end{tikzpicture}
+% \end{center}
+
+% % \pstree[nodesep=2pt,levelsep=7ex]{\TR{RootNode} }{
+% %         \TR{D1}
+% %         \pstree{ 
+% % 	\TR{D2} }
+% % 		  {
+% %                   \TR{D2.1}
+% % 		  \TR{D2.2}
+% % 		  }
+% %         \TR{D3}
+% %         \TR{D4}
+% %                     }
+
+
 \westep{Find the second differences between the terms.}
 the second difference is $4$.\\
 So continuing the sequence, the differences between each term will be:\\
