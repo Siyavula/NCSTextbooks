@@ -252,7 +252,7 @@ If we plot each of the terms vs. the corresponding index, we obtain a graph of a
 \begin{center}
 \begin{pspicture}(-1,-1)(10,8)
 %\psset{yunit=0.7,xunit=0.7}
-%\psgrid[gridcolor=lightgray]
+\psgrid[gridcolor=lightgray]
 \rput(-1,0){
 \psaxes[arrows=<->,dx=10,Dx=1,dy=10,Dy=0.5](1,0)(11,8)
 \psplot[plotstyle=curve,arrows=->]{1}{10.5}{x 2 exp 0.05 mul x 0.25 mul add}
