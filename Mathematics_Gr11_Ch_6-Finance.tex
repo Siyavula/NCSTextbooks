@@ -13,7 +13,7 @@ It is said that when you drive a new car out of the dealership, it loses $20\%$ 
 
 The book value of the car is the value of the car taking into account the loss in value due to wear, age and use. We call this loss in value \textit{depreciation}, and in this section we will look at two ways of how this is calculated. Just like interest rates, the two methods of calculating depreciation are \textit{simple} and \textit{compound} methods.
 
-The terminology used for simple depreciation is \textbf{straight-line depreciation} and for compound depreciation is \textbf{reducing-balance depreciation}.  In the straight-line method the value of the asset is reduced by the same constant amount each year. In the compound depreciation method the value of the asset is reduced by the same percentage each year. This means that the value of an asset does not decrease by a constant amount each year, but the decrease is most in the first year, then by a smaller amount in the second year and by an even smaller amount in the third year, and so on.
+The terminology used for simple depreciation is \textbf{straight-line depreciation} and for compound depreciation is \textbf{reducing-balance depreciation}.  In the straight-line method the value of the asset is reduced by the same constant amount each year. In compound depreciation or reducing-balance the value of the asset is reduced by the same percentage each year. This means that the value of an asset does not decrease by a constant amount each year, but the decrease is most in the first year, then by a smaller amount in the second year and by an even smaller amount in the third year, and so on.
 
 \Extension{Depreciation}{You may be wondering why we need to calculate
 depreciation. Determining the value of assets (as in the example of the second
@@ -22,7 +22,7 @@ calculating depreciation - tax! Companies can take depreciation into account as
 an expense, and thereby reduce their taxable income. A lower taxable income
 means that the company will pay less income tax to the Revenue Service.}
 
-\section{Simple Depreciation (It Really is Simple!)}
+\section{Simple Decay (it really is simple!) or Straight-line depreciation}
 Let us return to the second-hand cars. One way of calculating a depreciation amount would be to assume that the car has a limited useful life. Simple depreciation assumes that the value of the car decreases by an equal amount each year. For example, let us say the limited useful life of a car is 5 years, and the cost of the car today is R$60~000$. What we are saying is that after 5 years you will have to buy a new car, which means that the old one will be valueless at that point in time. Therefore, the amount of depreciation is calculated:
 \nequ{\frac{\rm{R}60~000}{5~\rm{years}} = \rm{R}12~000\quad\mbox{per year}.}
 
@@ -49,7 +49,7 @@ If we replace the word \textit{interest} with the word \textit{depreciation} and
 Then the book value of the asset after $n$ years is:
 \begin{eqnarray*}
 \mbox{Initial Value - Total depreciation after $n$ years} &=& P - n \times (P \times i)\\
-&=&P(1-n\times i)
+A &=&P(1-n\times i)
 \end{eqnarray*}
 
 For example, the book value of the car after two years can be simply calculated as follows:
@@ -62,9 +62,9 @@ For example, the book value of the car after two years can be simply calculated 
 \end{eqnarray*}
 as expected.
 
-Note that the difference between the simple interest calculations and the simple depreciation calculations is that while the interest adds value to the principal amount, the depreciation amount reduces value!
+Note that the difference between the simple interest calculations and the simple decay calculations is that while the interest adds value to the principal amount, the depreciation amount reduces value!
 
-\begin{wex}{Simple Depreciation method}{A car is worth R$240~000$ now.  If it depreciates at a rate of $15\%$ p.a. on a straight-line depreciation, what is it worth in 5 years' time?}{
+\begin{wex}{Simple Decay method}{A car is worth R$240~000$ now.  If it depreciates at a rate of $15\%$ p.a. on a straight-line depreciation, what is it worth in 5 years' time?}{
 \westep{Determine what has been provided and what is required}
 \begin{eqnarray*}
 P &=& R240~000\\
@@ -74,6 +74,7 @@ A~ &\mbox{is}& \mbox{required}
 \end{eqnarray*}
 \westep{Determine how to approach the problem}
 \begin{eqnarray*}
+A &=& P(1 - i\times n)\\
 A &=& 240~000(1-(0,15\times 5))
 \end{eqnarray*}
 \westep{Solve the problem}
@@ -86,7 +87,7 @@ A &=& 240~000(1 - 0,75)\\
 In 5 years' time the car is worth R$60~000$}
 \end{wex}
 
-\begin{wex}{Simple Depreciation}{A small business buys a photocopier for R$12~000$.  For the tax return the owner depreciates this asset over 3 years using a straight-line depreciation method.  What amount will he fill in on his tax form after 1 year, after 2 years and then after 3 years?}{
+\begin{wex}{Simple Decay}{A small business buys a photocopier for R$12~000$.  For the tax return the owner depreciates this asset over 3 years using a straight-line depreciation method.  What amount will he fill in on his tax form after 1 year, after 2 years and then after 3 years?}{
 \westep{Understanding the question}
 The owner of the business wants the photocopier to depreciate to R$0$ after 3 years.
 Thus, the value of the photocopier will go down by $12~000 \div 3 = \mbox{R}4~000$ per year.
@@ -113,7 +114,7 @@ In general, the formula for simple (straight line) depreciation:
 \mbox{Annual Depreciation} = \frac{\mbox{Initial Value - Salvage Value}}{\mbox{Useful Life}}
 \end{equation*}}
 
-\Exercise{Simple Depreciation}{
+\Exercise{Simple Decay}{
 \begin{enumerate}
 \item{A business buys a truck for R$560~000$. Over a period of 10 years the value of the truck depreciates to R$0$ (using the straight-line method). What is the value of the truck after 8 years?}
 \item{Shrek wants to buy his grandpa's donkey for R$800$. His grandpa is quite pleased with the offer, seeing that it only depreciated at a rate of 3\% per year using the straight-line method.  Grandpa bought the donkey 5 years ago.  What did grandpa pay for the donkey then ?}
@@ -121,7 +122,7 @@ In general, the formula for simple (straight line) depreciation:
 \item{Fiona buys a DStv satellite dish for R$3~000$.  Due to weathering, its value depreciates simply at 15\% per annum. After how long will the satellite dish be worth nothing?}
 \end{enumerate}}
 
-\section{Compound Depreciation}
+\section{Compound Decay or Reducing-balance depreciation}
 The second method of calculating depreciation is to assume that the value of the asset decreases at a certain annual rate, but that the initial value of the asset this year, is the book value of the asset at the end of last year.
 
 For example, if our second hand car has a limited useful life of 5 years and it has an initial value of R$60~000$, then the interest rate of depreciation is $20\%$ ($100\%$/5 years). After 1 year, the car is worth:
@@ -159,7 +160,7 @@ We can now write a general formula for the book value of an asset if the depreci
 
 For example, the book value of the car after two years can be simply calculated as follows:
 \begin{eqnarray*}
-\mbox{Book Value after 2 years} &=& P(1-i)^n\\
+\mbox{Book Value after 2 years: } A &=& P(1-i)^n\\
 &=&\rm{R}60~000(1-20\%)^2\\
 &=&\rm{R}60~000(1-0,2)^2\\
 &=&\rm{R}60~000(0,8)^2\\
@@ -169,29 +170,30 @@ For example, the book value of the car after two years can be simply calculated 
 
 Note that the difference between the compound interest calculations and the compound depreciation calculations is that while the interest adds value to the principal amount, the depreciation amount reduces value!
 
-\begin{wex}{Compound Depreciation}{The flamingo population of the Berg river mouth is depreciating on a reducing balance at a rate of $12\%$ p.a. If there are now $3~200$ flamingos in the wetlands of the Berg river mouth, how many will there be in 5 years' time? Answer to three significant numbers.}{
+\begin{wex}{Compound Depreciation}{The flamingo population of the Berg river mouth is depreciating on a reducing balance at a rate of $12\%$ p.a. If there are now $3~200$ flamingos in the wetlands of the Berg river mouth, how many will there be in 5 years' time? Answer to three significant figures.\\}{
 \westep{Determine what has been provided and what is required}
 \begin{eqnarray*}
-P &=& R3~200\\
+P &=& 3~200\\
 i &=& 0,12\\
 n &=& 5\\
 A~ &\mbox{is}& \mbox{required}
 \end{eqnarray*}
 \westep{Determine how to approach the problem}
 \begin{eqnarray*}
+A &=& P(1 - i)^n\\
 A &=& 3~200(1-0,12)^5
 \end{eqnarray*}
 \westep{Solve the problem}
 \begin{eqnarray*}
 A &=& 3~200(0,88)^5\\
-&=&3~200\times 0,527731916\\
+%&=&3~200\times 0,527731916\\
 &=& 1688,742134
 \end{eqnarray*}
 \westep{Write the final answer}}
 There would be approximately $1~690$ flamingos in 5 years' time.
 \end{wex}
 
-\begin{wex}{Compound Depreciation}{Farmer Brown buys a tractor for R$250~000$ which depreciates by $20\%$ per year using the compound depreciation method. What is the depreciated value of the tractor after 5 years?}{
+\begin{wex}{Compound Depreciation}{Farmer Brown buys a tractor for R$250~000$ which depreciates by $20\%$ per year using the compound depreciation method. What is the depreciated value of the tractor after 5 years?\\}{
 \westep{Determine what has been provided and what is required}
 \begin{eqnarray*}
 P &=& R250~000\\
@@ -201,12 +203,13 @@ A~ &\mbox{is}& \mbox{required}
 \end{eqnarray*}
 \westep{Determine how to approach the problem}
 \begin{eqnarray*}
+A &=& P(1-i)^n\\
 A &=& 250~000(1-0,2)^5
 \end{eqnarray*}
 \westep{Solve the problem}
 \begin{eqnarray*}
 A &=& 250~000(0,8)^5\\
-&=&250~000\times 0,32768\\
+%&=&250~000\times 0,32768\\
 &=&81~920
 \end{eqnarray*}
 \westep{Write the final answer}
@@ -217,12 +220,12 @@ Depreciated value after 5 years is R$81~920$}
 \begin{enumerate}
 \item{On January 1, 2008 the value of my Kia Sorento is R$320~000$.
 Each year after that, the cars value will decrease $20\%$ of the previous years value.  What is the value of the car on January 1, 2012?}
-\item{The population of Bonduel decreases at a rate of $9,5\%$ per annum as people migrate to the cities.  Calculate the decrease in population over a period of 5 years if the initial population was $2~178~000$.}
-\item{A $20\ekg$ watermelon consists of $98\%$ water.  If it is left outside in the sun it loses $3\%$ of its water each day.  How much does it weigh after a month of 31 days ?}
+\item{The population of Bonduel decreases at a reducing-balance rate of $9,5\%$ per annum as people migrate to the cities.  Calculate the decrease in population over a period of 5 years if the initial population was $2~178~000$.}
+\item{A $20\ekg$ watermelon consists of $98\%$ water.  If it is left outside in the sun it loses $3\%$ of its water each day.  How much does it weigh after a month of 31 days?}
 \item{A computer depreciates at $x\%$ per annum using the reducing-balance method. Four years ago the value of the computer was R$10~000$ and is now worth R$4~520$.  Calculate the value of $x$ correct to two decimal places.}
 \end{enumerate}}
 
-\section{Present Values or Future Values of an Investment or Loan}
+\section{Present and Future Values of an Investment or Loan}
 \label{sec:m:f11:presentfuture}
 %\begin{syllabus}
 %\item Calculation of all variables in $A=P(1-i)^n$ (for $n$ by trial and error using a calculator).
@@ -249,7 +252,8 @@ P = A \cdot (1+i)^{-n}
 
 This can also be written as follows, but the first approach is usually preferred.
 \begin{equation}
-P = A / (1+i)^n
+%P = A / (1+i)^n
+P = \frac{A}{(1+i)^n}
 \label{m:f:opening2}
 \end{equation}
 
@@ -277,7 +281,8 @@ A = P (1 + i\times n)
 
 Solving for $P$ gives:
 \begin{equation}
-P = A / (1 + i\times n)
+%P = A / (1 + i\times n)
+P = \frac{A}{(1 + i\times n)}
 \end{equation}
 
 Let us say you need to accumulate an amount of R$1~210$ in 3 years time, and a bank account pays \textit{simple interest} of $7\%$. How much would you need to invest in this bank account today?
@@ -314,9 +319,13 @@ A = P \cdot (1+i)^n
 
 If this were an algebra problem, and you were told to ``solve for $i$", you should be able to show that:
 \begin{eqnarray*}
-A/P &=& (1+i)^n\\
-(1+i) &=& (A/P)^{1/n}\\
-i &=& (A/P)^{1/n} - 1
+% A/P &=& (1+i)^n\\
+% (1+i) &=& (A/P)^{1/n}\\
+% i &=& (A/P)^{1/n} - 1
+\frac{A}{P} &=& (1 + i)^n\\
+\sqrt[n]{\frac{A}{P}} &=& 1 + i\\
+\sqrt[n]{\frac{A}{P}} -1 &=& i\\
+\therefore i &=& \sqrt[n]{\frac{A}{P}} -1 
 \end{eqnarray*}
 
 You do not need to memorise this equation, it is easy to derive any time you need it!
@@ -324,16 +333,18 @@ You do not need to memorise this equation, it is easy to derive any time you nee
 So let us look at the two examples mentioned above.
 
 \begin{enumerate}
-\item{Check that you agree that $P=$R$2~500$, $A=$R$3~000$, $n=8/12=0,666667$. This means that:
+\item{Check that you agree that $P=$R$2~500$, $A=$R$3~000$, $n= \frac{8}{12}=\frac{2}{3}$. This means that:
 \begin{eqnarray*}
-i &=& (\rm{R}3~000/\rm{R}2~500)^{1/0,666667} - 1\\
+i &=& \sqrt[\frac{2}{3}]{\frac{3000}{2500}} - 1\\
+&=& 0,314534...\\
 &=& 31,45\%
 \end{eqnarray*}
 Ouch! That is not a very generous neighbour you have.}
 
 \item{Check that $P=$R$400$, $A=$R$450$, $n=1,5$
 \begin{eqnarray*}
-i &=& (\rm{R}450/\rm{R}400)^{1/1,5} - 1\\
+i &=& \sqrt[1,5]{\frac{450}{400}} - 1\\
+&=& 0,0816871...\\
 &=& 8,17\%
 \end{eqnarray*}
 This means that as long as you can find a bank which pays more than $8,17\%$ interest, you should have the money you need!}
@@ -368,14 +379,14 @@ A &=& P(1+i)^n\\
 Now we have to examine the numbers involved to try to determine what a possible value of $n$ is. Refer to your Grade 10 notes for some ideas as to how to go about finding $n$.
 
 
-\begin{wex}{Term of Investment - Trial and Error}{We invest R$3~500$ into a savings account which pays $7,5\%$ compound interest for an unknown period of time, at the end of which our account is worth R$4~044,69$. How long did we invest the money?}{
+\begin{wex}{Term of Investment - Trial and Error}{We invest R$3~500$ into a savings account which pays $7,5\%$ compound interest for an unknown period of time, at the end of which our account is worth R$4~044,69$. How long did we invest the money?\\}{
 \westep{Determine what is given and what is required}
 \begin{itemize}
 \item{$P=$R$3~500$}
 \item{$i=7,5\%$}
 \item{$A=$R$4~044,69$}
 \end{itemize}
-We are required to find $n$.
+We are required to find $n$.\\
 \westep{Determine how to approach the problem}
 We know that:
 \begin{eqnarray*}
@@ -399,7 +410,7 @@ $2,0$ & $1,156$\\
 $2,5$ & $1,198$\\
 \end{tabular}
 \end{center}
-We see that $n$ is close to $2$.
+We see that $n$ is close to $2$.\\
 \westep{Write final answer}
 The R$3~500$ was invested for about 2 years.}
 \end{wex}
@@ -502,12 +513,12 @@ For example, the monthly interest rate on $12\%$ interest per annum paid monthly
 \end{eqnarray*}
 The same principle applies to other frequencies of payment.
 
-\begin{wex}{Nominal Interest Rate}{Consider a savings account which pays a nominal interest at $8\%$ per annum, paid quarterly. Calculate (a) the interest amount that is paid each quarter, and (b) the effective annual interest rate.}
+\begin{wex}{Nominal Interest Rate}{Consider a savings account which pays a nominal interest at $8\%$ per annum, paid quarterly. Calculate (a) the interest amount that is paid each quarter, and (b) the effective annual interest rate.\\}
 {\westep{Determine what is given and what is required}
 We are given that a savings account has a nominal interest rate of $8\%$ paid quarterly. We are required to find:
 \begin{itemize}
 \item{the quarterly interest rate, $i_4$}
-\item{the effective annual interest rate, $i$}
+\item{the effective annual interest rate, $i$\\}
 \end{itemize}
 
 \westep{Determine how to approach the problem}
@@ -515,7 +526,7 @@ We know that:
 \nequ{\mbox{quarterly interest rate}=\frac{\mbox{Nominal interest Rate per annum}}{\mbox{number of quarters per year}}}
 and
 \nequ{P(1 + i) = P(1 + i_T)^{T}}
-where $T$ is 4 because there are 4 payments each year.
+where $T$ is 4 because there are 4 payments each year.\\
 
 \westep{Calculate the monthly interest rate}
 \begin{eqnarray*}
@@ -539,7 +550,7 @@ The quarterly interest rate is $2\%$ and the effective annual interest rate is $
 \begin{wex}{Nominal Interest Rate}
 {On their saving accounts, Echo Bank offers an interest rate of $18\%$ nominal,
 paid monthly. If you save R$100$ in such an account now, how much would the amount
-have accumulated to in 3 years' time?}
+have accumulated to in 3 years' time?\\}
 {
 \westep{Determine what is given and what is required}
 Interest rate is $18\%$
@@ -615,8 +626,8 @@ $i_T$ &the interest rate paid $T$ times per annum, i.e. $i_T = \frac{\mbox{Nomin
 \begin{eqnarray*}
 Simple~ Increase: A &=& P(1 + i \times n)\\
 Compound~ Increase: A &=& P(1 + i)^n\\
-Simple~ Decrease: A &=& P(1 - i \times n)\\
-Compound~ Decrease: A &=& P(1 - i)^n\\
+Simple~ Decay: A &=& P(1 - i \times n)\\
+Compound~ Decay: A &=& P(1 - i)^n\\
 Effective~ Annual~ Interest~ Rate (i):  (1 + i) &=& (1 + i_T)^T
 \end{eqnarray*}
 
