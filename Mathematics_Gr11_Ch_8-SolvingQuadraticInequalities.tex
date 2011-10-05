@@ -48,10 +48,10 @@ This means that the graph of $f(x)=4x^{2} - 4x + 1$ touches the $x$-axis at $x=\
 }
 \end{wex}
 
-\begin{wex}{Solving Quadratic Inequalities}{Find all the solutions to the inequality $x^{2} - 5x + 6 \geq 0$.}
+\begin{wex}{Solving Quadratic Inequalities}{Find all the solutions to the inequality $x^{2} - 5x + 6 \geq 0$.\\}
 {
 \westep{Factorise the quadratic}
-The factors of $x^{2} - 5x + 6$ are $(x - 3)(x - 2)$.
+The factors of $x^{2} - 5x + 6$ are $(x - 3)(x - 2)$.\\
 
 \westep{Write the inequality with the factors}
 \begin{eqnarray*}
@@ -91,7 +91,7 @@ Region D&$x=3$ &$f(3)=0$ &+\\
 Region E&$x>3$ &$f(4)=2$ &+\\
 \end{tabular}
 \end{center}
-We see that the function is positive for $x\le2$ and $x\ge 3$.
+We see that the function is positive for $x\le2$ and $x\ge 3$.\\
 % \newline
 \westep{Write the final answer and represent on a number line}
 
@@ -112,7 +112,7 @@ We see that $x^{2} - 5x + 6 \geq 0$ is true for $x\le2$ and $x\ge 3$.
 }
 \end{wex}
 
-\begin{wex}{Solving Quadratic Inequalities}{Solve the quadratic inequality $-x^{2} - 3x + 5 > 0$.}{
+\begin{wex}{Solving Quadratic Inequalities}{Solve the quadratic inequality $-x^{2} - 3x + 5 > 0$.\\}{
 \westep{Determine how to approach the problem}
 Let $f(x) = -x^{2} - 3x + 5$. $f(x)$ cannot be factorised so, use the quadratic formula to determine the roots of $f(x)$. The $x$-intercepts are solutions to the quadratic equation
 \begin{eqnarray*}
@@ -120,8 +120,8 @@ Let $f(x) = -x^{2} - 3x + 5$. $f(x)$ cannot be factorised so, use the quadratic 
 x^{2} + 3x - 5 &=& 0\\
 \therefore x &=& \frac{-3 \pm \sqrt{(3)^{2} - 4(1)(-5)}}{2(1)} \\
 &=& \frac{-3 \pm \sqrt{29}}{2}\\
-x_1 &=& \frac{-3 - \sqrt{29}}{2}\\
-x_2 &=& \frac{-3 + \sqrt{29}}{2}
+x_1 &=& \frac{-3 - \sqrt{29}}{2} = -4,2\\
+x_2 &=& \frac{-3 + \sqrt{29}}{2} = 1,2
 \end{eqnarray*}
 
 \westep{Determine which ranges correspond to the inequality}
@@ -136,16 +136,16 @@ We need to figure out which values of $x$ satisfy the inequality. From the answe
 \psline(\n,0.4)(\n,0.6)}
 \uput[u](1,0.5){$A$}
 \uput[u](2,0.5){$B$}
-\uput[d](2,0.5){$x_1$}
+\uput[d](2,0.5){$-4,2$}
 \uput[u](2.5,0.5){$C$}
 \uput[u](3,0.5){$D$}
-\uput[d](3,0.5){$x_2$}
+\uput[d](3,0.5){$1,2$}
 \uput[u](4,0.5){$E$}
 \end{pspicture}
 \end{center}
 
 \westep{Determine whether the function is negative or positive in each of the regions}
-We can use another method to determine the sign of the function over different regions, by drawing a rough sketch of the graph of the function. We know that the roots of the function correspond to the $x$-intercepts of the graph. Let $g(x)=-x^{2} - 3x + 5$. We can see that this is a parabola with a maximum turning point that intersects the $x$-axis at $x_1$ and $x_2$.\\
+We can use another method to determine the sign of the function over different regions, by drawing a rough sketch of the graph of the function. We know that the roots of the function correspond to the $x$-intercepts of the graph. Let $g(x)=-x^{2} - 3x + 5$. We can see that this is a parabola with a maximum turning point that intersects the $x$-axis at $-4,2$ and $1,2$.\\
 
 \begin{center}
 \begin{pspicture}(-3.8,-2)(1.6,5.5)
@@ -157,10 +157,10 @@ We can use another method to determine the sign of the function over different r
 \uput[ur](1.2,0){$x_2$}
 \end{pspicture}
 \end{center}
-It is clear that $g(x)>0$ for $x_1<x<x_2$
+It is clear that $g(x)>0$ for $x_1<x<x_2$\\
 
 \westep{Write the final answer and represent the solution graphically}
-$-x^{2} - 3x + 5>0$ for $x_1<x<x_2$
+$-x^{2} - 3x + 5>0$ for $-4,2<x<1,2$
 
 \begin{center}
 \begin{pspicture}(0,0)(5,1)
@@ -168,8 +168,8 @@ $-x^{2} - 3x + 5>0$ for $x_1<x<x_2$
 \multido{\n=1+1}{4}
 {%\uput[d](\n,0.4){\n}
 \psline(\n,0.4)(\n,0.6)}
-\uput[d](2,0.5){$x_1$}
-\uput[d](3,0.5){$x_2$}
+\uput[d](2,0.5){$-4,2$}
+\uput[d](3,0.5){$1,2$}
 \psline[linewidth=3pt](2,0.5)(3,0.5)
 \pscircle[fillstyle=solid,fillcolor=white](2,0.5){0.1}
 \pscircle[fillstyle=solid,fillcolor=white](3,0.5){0.1}
@@ -181,7 +181,7 @@ $-x^{2} - 3x + 5>0$ for $x_1<x<x_2$
 When working with an inequality in which the variable is in the denominator, a different approach is needed.
 
 \begin{wex}{Non-linear inequality with the variable in the denominator}
-{Solve $\dfrac{2}{x+3} \le \dfrac{1}{x-3}$}
+{Solve $\dfrac{2}{x+3} \le \dfrac{1}{x-3}$\\}
 {
 \westep{Subtract $\frac{1}{x-3}$ from both sides}
 \nequ{\dfrac{2}{x+3} - \dfrac{1}{x-3} \le 0}
