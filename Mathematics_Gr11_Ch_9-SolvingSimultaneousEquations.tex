@@ -42,8 +42,8 @@ Plotting the graph of each equation, gives a straight line for the first equatio
 \psaxes[dx=1,Dx=2,Dy=2,dy=0.5,arrows=<->](0,0)(-4,-4)(4,2)
 \pstextpath[c](2.6,0.1){\psplot[xunit=0.5,yunit=0.25,plotstyle=curve,arrows=<->]{-4.5}{6}{2 x mul 4 sub}}{\small{$y=2x-4$}}
 \pstextpath[c](-3,0.1){\psplot[xunit=0.5,yunit=0.25,plotstyle=curve,arrows=<->]{-4.25}{4.25}{x 2 exp neg 4 add}}{\small{$y=4-x^2$}}
-\uput[l](-2,-3){$(-4,-12)$}
-\uput[u](1.1,0.3){$(2,0)$}
+\uput[l](-2,-3){$(-4;-12)$}
+\uput[u](1.1,0.3){$(2;0)$}
 \psdots(1,0)(-2,-3)
 \end{pspicture}
 \end{center}
@@ -83,7 +83,7 @@ y&=&-3x+9
 \end{center}
 
 \westep{Find the intersection of the graphs.}
-The graphs intersect at $(-6;27)$ and at $(3;0)$.
+The graphs intersect at $(-6;27)$ and at $(3;0)$.\\
 
 \westep{Write the solution of the system of simultaneous equations as given by the intersection of the graphs.}
 The first solution is $x=-6$ and $y=27$. The second solution is $x=3$ and $y=0$.}
@@ -93,62 +93,85 @@ The first solution is $x=-6$ and $y=27$. The second solution is $x=3$ and $y=0$.
 {Solve the following systems of equations graphically. Leave your answer in
 surd form, where appropriate.
 \begin{enumerate}
-\item{$b^2-1-a=0, a + b -5 =0$}
-\item{$x+y-10=0, x^2-2-y=0$}
-\item{$6-4x-y=0, 12-2x^2-y=0$}
-\item{$x+2y-14=0, x^2+2-y=0$}
-\item{$2x+1-y=0, 25-3x-x^2-y=0$}
+\item{$b^2-1-a=0; a + b -5 =0$}
+\item{$x+y-10=0; x^2-2-y=0$}
+\item{$6-4x-y=0; 12-2x^2-y=0$}
+\item{$x+2y-14=0; x^2+2-y=0$}
+\item{$2x+1-y=0; 25-3x-x^2-y=0$}
 \end{enumerate}}
 
 \section{Algebraic Solution}
 The algebraic method of solving simultaneous equations is by substitution.
 
 For example the solution of
+\begin{eqnarray}
+y - 2x &=& -4 \label{9.2:eqn1}\\
+x^2 + y &=& 4 \label{9.2:eqn2}
+\end{eqnarray}
+
+is:\\
+\newline
+
+In (\ref{9.2:eqn1})
+\begin{eqnarray}
+y &=& 2x - 4 \quad \label{9.2:eqn3}
+\end{eqnarray}
+
+Substitute (\ref{9.2:eqn3}) into (\ref{9.2:eqn2}):
 \begin{eqnarray*}
-y-2x=-4\\
-x^2+y=4
+x^2 + (2x - 4) &=& 4\\
+x^2 + 2x - 8 &=& 0
+\end{eqnarray*}
+Factorise to get:
+\begin{eqnarray*}
+ (x + 4)(x - 2) &=& 0\\
+\therefore x = -4 \quad &\mbox{and}& \quad x=2
 \end{eqnarray*}
 
-is:
-\begin{eqnarray*}
-y&=&2x-4 \quad \\
-x^2+(2x-4)&=&4 \\
-x^2+2x-8&=&0 \\
-\mbox{Factorise to get:}\quad (x+4)(x-2)&=&0\\
-\therefore \mbox{the 2 solutions for $x$ are:}\quad x=-4\quad \mbox{and}\quad x=2
-\end{eqnarray*}
-
-The corresponding solutions for $y$ are obtained by substitution of the $x$-values into the first equation
-\begin{eqnarray*}
-y=2(-4)-4&=&-12 \quad \mbox{for $x=-4$}\\
-\mbox{and:}\quad y=2(2)-4&=&0 \quad \mbox{for $x=2$}\\
-\end{eqnarray*}
+Substitute the values of $x$ into (\ref{9.2:eqn3}) to find $y$:
+% The corresponding solutions for $y$ are obtained by substitution of the $x$-values into the first equation
+% \begin{eqnarray*}
+% y=2(-4)-4&=&-12 \quad \mbox{for $x=-4$}\\
+% \mbox{and:}\quad y=2(2)-4&=&0 \quad \mbox{for $x=2$}
+% \end{eqnarray*}
+\begin{align*}
+ y &= 2(-4) -4		&	y &= 2(2) - 4\\
+ y &= -12		&	y &= 0\\
+ &(-4;-12)		&	&(2;0)
+\end{align*}
 
 As expected, these solutions are identical to those obtained by the graphical solution.
 
 \begin{wex}{Simultaneous Equations}{Solve algebraically:
-\begin{eqnarray*}
-y-x^2+9&=&0\\
-y+3x-9&=&0
-\end{eqnarray*}}
+\begin{eqnarray}
+ y - x^2 + 9 &=& 0 \label{9.2:we:eqn1}\\
+ y + 3x - 9 &=& 0 \label{9.2:we:eqn2}
+\end{eqnarray}}
 {\westep{Make $y$ the subject of the linear equation}
-\begin{eqnarray*}
-y+3x-9&=&0\\
-y&=&-3x+9
-\end{eqnarray*}
+In (\ref{9.2:we:eqn1}):
+\begin{eqnarray}
+ y + 3x - 9 &=& 0 \nonumber\\
+ y &=& -3x +9 \label{9.2:we:eqn3}
+\end{eqnarray}
 \westep{Substitute into the quadratic equation}
+Substitute (\ref{9.2:we:eqn3}) into (\ref{9.2:we:eqn1}):
 \begin{eqnarray*}
-(-3x+9)-x^2+9&=&0\\
-x^2+3x-18&=&0\\
-\mbox{Factorise to get:}\quad (x+6)(x-3)&=&0\\
-\therefore \mbox{the two solutions for $x$ are:}\quad x=-6\quad \mbox{and}\quad x=3
+ (-3x + 9) - x^2 + 9 &=& 0\\
+ x^2 + 3x - 18 &=& 0
+\end{eqnarray*}
+Factorise to get:
+\begin{eqnarray*}
+ (x + 6)(x - 3) &=& 0\\
+\therefore x = -6 \quad &\mbox{and}& \quad x = 3
 \end{eqnarray*}
 
 \westep{Substitute the values for $x$ into the first equation to calculate the corresponding $y$-values.}
-\begin{eqnarray*}
-y= -3(-6)+9&=&27 \quad \mbox{for $x=-6$}\\
-\mbox{and:}\quad y=-3(3)+9&=&0 \quad \mbox{for $x=3$}
-\end{eqnarray*}
+Substitute $x$ into \ref{9.2:we:eqn1}:
+\begin{align*}
+ y &= -3(-6) + 9	&	y &= -3(3) + 9\\
+   &= 27		&	  &= 0\\
+   &(-6;27)		&	  &(3;0)
+\end{align*}
 
 \westep{Write the solution of the system of simultaneous equations.}
 The first solution is $x=-6$ and $y=27$. The second solution is $x=3$ and $y=0$.}
