@@ -13,12 +13,12 @@ In Grade 10, the basics of solving linear equations, quadratic equations, expone
 
 How to solve quadratic equations by factorisation was discussed in Grade 10. Here is an example to remind you of what is involved.
 
-\begin{wex}{Solution of Quadratic Equations}{Solve the equation $2x^{2} - 5x - 12 = 0$.}
+\begin{wex}{Solution of Quadratic Equations}{Solve the equation $2x^{2} - 5x - 12 = 0$.\\}
 {\westep{Determine whether the equation has common factors}
-This equation has no common factors.
+This equation has no common factors.\\
 
 \westep{Determine if the equation is in the form $ax^2+bx+c$ with $a>0$}
-The equation is in the required form, with $a=2$, $b=-5$ and $c=-12$.
+The equation is in the required form, with $a=2$, $b=-5$ and $c=-12$.\\484
 
 \westep{Factorise the quadratic}
 $2x^{2} - 5x - 12$ has factors of the form:
@@ -41,7 +41,7 @@ $~6$ & $-2$ & $~~2$ \\
 $-6$ & $~2$ & $~-2$ \\\hline
 \end{tabular}
 \end{center}
-We see that the combination $s = 3$ and $v = -4$ gives $s + 2v = -5$.
+We see that the combination $s = 3$ and $v = -4$ gives $s + 2v = -5$.\\
 
 \westep{Write the equation with factors}
 \nequ{(2x + 3)(x - 4) = 0}
@@ -50,7 +50,7 @@ If two brackets are multiplied together and give 0, then one of the brackets mus
 \nequ{2x+3=0}
 or
 \nequ{x-4=0}
-Therefore, $x=-\frac{3}{2}$ or $x=4$
+Therefore, $x=-\frac{3}{2}$ or $x=4$\\
 \westep{Write the final answer}
 The solutions to $2x^{2} - 5x - 12 = 0$ are $x=-\frac{3}{2}$ or $x=4$.
 }\end{wex}
@@ -58,7 +58,7 @@ The solutions to $2x^{2} - 5x - 12 = 0$ are $x=-\frac{3}{2}$ or $x=4$.
 It is important to remember that a quadratic equation has to be in the form    $ax^2+bx+c = 0$ before one can solve it using the factorisation method.
 
 \begin{wex}{Solving quadratic equation by factorisation}
-{Solve for $a$: $a(a-3)=10$}{
+{Solve for $a$: $a(a-3)=10$\\}{
 \westep{Rewrite the equation in the form $ax^2+bx+c = 0$}
 Remove the brackets and move all terms to one side.\\
 \nequ{a^2-3a-10 = 0}
@@ -68,27 +68,28 @@ Remove the brackets and move all terms to one side.\\
 \nequ{a+ 2 = 0}
 or
 \nequ{a - 5 = 0}
-Solve the two linear equations and check the solutions in the original equation.
+Solve the two linear equations and check the solutions in the original equation.\\
 \westep{Write the final answer}
 Therefore, $a = -2$ or $a = 5$
 }
 \end{wex}
 
 \begin{wex}{Solving fractions that lead to a quadratic equation}
-{Solve for $b$: $\frac{3b}{b+2}+ 1 = \frac{4}{b+1}$}{
+{Solve for $b$: $\frac{3b}{b+2}+ 1 = \frac{4}{b+1}$\\}{
 \westep{Multiply both sides over the lowest common denominator}
 \nequ{\frac{3b(b+1)+(b+2)(b+1)}{(b+2)(b+1)}= \frac{4(b+2)}{(b+2)(b+1)}}
 \westep{Determine the restrictions}
-The denominators are the same, therefore the numerators must be the same.\\
-However, $b \neq -2$  and $b \neq -1$
+The restrictions are the values for $b$ that would result in the denominator being $0$.  Since a denominator of $0$ would make the fraction undefined, $b$ cannot be these values.
+Therefore, $b \neq -2$  and $b \neq -1$\\
 \westep{Simplify equation to the standard form}
+The denominators on both sides of the equation are equal.  This means we can drop them (by multiplying both sides of the equation by $(b + 2)(b + 1)$) and just work with the numerators.
 \begin{eqnarray*}
 3b^2 + 3b + b^2 + 3b + 2 &=& 4b + 8\\
 4b^2 + 2b - 6 &=& 0\\
 2b^2 + b - 3 &=& 0
 \end{eqnarray*}
 \westep{Factorise the trinomial and solve the equation}
-\begin{eqnarray*}textrm
+\begin{eqnarray*}
 (2b+3)(b-1) &=& 0\\
 2b + 3 = 0 &or& b - 1 = 0\\
 b = \frac{-3}{2} &or& b = 1
@@ -164,16 +165,22 @@ This means $x=1+\sqrt{2}$ or $x=1-\sqrt{2}$. This example demonstrates the use o
 \begin{enumerate}
 \item{Write the equation in the form $ax^2+bx+c=0$. e.g. $x^2+2x-3=0$}
 \item{Take the constant over to the right hand side of the equation. e.g. $x^2+2x=3$}
-\item{If necessary, make the coefficient of the $x^2$ term $= 1$, by dividing through by the existing coefficient.}
+\item{Make the coefficient of the $x^2$ term $= 1$, by dividing through by the existing coefficient.}
 \item{Take half the coefficient of the $x$ term, square it and add it to both sides of the equation. e.g. in $x^2+2x=3$, half of the coefficient of the $x$ term is $1$ and $1^2=1$. Therefore we add $1$ to both sides to get: $x^2+2x+1=3+1$.}
 \item{Write the left hand side as a perfect square: $(x+1)^2-4=0$}
-\item{You should then be able to factorise the equation in terms of difference of squares and then solve for $x$: $(x+1-2)(x+1+2)=0$}
+\item{You should then be able to factorise the equation in terms of difference of squares and then solve for $x$:\\
+\begin{eqnarray*}
+[(x+1)-2][(x+1)+2)]&=&0\\
+(x-1)(x+3)&=&0\\
+\therefore x=1 \quad &\rm{or}& \quad x=-3
+\end{eqnarray*}
+}
 \end{enumerate}
 
 \begin{wex}{Solving Quadratic Equations by Completing the Square}
-{Solve
+{Solve by completing the square:
 \nequ{x^2 - 10x - 11 = 0}
-by completing the square}
+}
 {
 
 \westep{Write the equation in the form $ax^2+bx+c=0$}
@@ -183,7 +190,7 @@ by completing the square}
 \nequ{x^2 - 10x = 11}
 
 \westep{Check that the coefficient of the $x^2$ term is $1$.}
-The coefficient of the $x^2$ term is $1$.
+The coefficient of the $x^2$ term is $1$.\\
 
 \westep{Take half the coefficient of the $x$ term, square it and add it to both sides}
 The coefficient of the $x$ term is $-10$. Therefore, half of the coefficient of the $x$ term will be $\frac{(-10)}{2}=-5$ and the square of it will be
@@ -199,15 +206,14 @@ $(-5)^2=25$. Therefore:
 
 \westep{Solve for the unknown value}
 \begin{eqnarray*}
-[x+1][x-11]&=&0\\
+(x+1)(x-11)&=&0\\
 \therefore x=-1 \quad &\rm{or}& \quad x=11
 \end{eqnarray*}
 }
 \end{wex}
 
-\begin{wex}{Solving Quadratic Equations by Completing the Square}{Solve
-\nequ{2x^2 - 8x - 16 = 0}
-by completing the square}
+\begin{wex}{Solving Quadratic Equations by Completing the Square}{Solve by completing the square:
+\nequ{2x^2 - 8x - 16 = 0}}
 {
 
 \westep{Write the equation in the form $ax^2+bx+c=0$}
@@ -290,7 +296,7 @@ In general if you add a quantity and subtract the same quantity, nothing has cha
 f(x)&=&a\left(x^2+\frac{b}{a}x+\frac{c}{a}\right)\\
 &=&a\left(x^2+\frac{b}{a}x+\left(\frac{b}{2a}\right)^2 - \left(\frac{b}{2a}\right)^2+\frac{c}{a}\right)\\
 &=&a\left(\left[x+\left(\frac{b}{2a}\right)\right]^2 - \left(\frac{b}{2a}\right)^2+\frac{c}{a}\right)\\
-&=&a\left[x+\left(\frac{b}{2a}\right)\right]^2 +c- \frac{b^2}{4a}
+&=&a\left[x+\left(\frac{b}{2a}\right)\right]^2 - \frac{b^2}{4a} +c
 \end{eqnarray}
 We set $f(x)=0$ to find its roots, which yields:
 
@@ -317,9 +323,9 @@ solutions in general, but these may not always exists (depending on the sign of
 the expression $b^{2} - 4ac$ under the square root). These solutions are also
 called the \textit{roots} of the quadratic equation.
 
-\begin{wex}{Using the quadratic formula}{Find the roots of the function $f(x) = 2x^{2} + 3x - 7$.}{
+\begin{wex}{Using the quadratic formula}{Find the roots of the function $f(x) = 2x^{2} + 3x - 7$.\\}{
 \westep{Determine whether the equation can be factorised}
-The expression cannot be factorised. Therefore, the general quadratic formula must be used.
+The expression cannot be factorised. Therefore, the general quadratic formula must be used.\\
 
 \westep{Identify the coefficients in the equation for use in the formula}
 From the equation:
@@ -340,9 +346,9 @@ x & =& \frac{-b \pm \sqrt{b^{2} - 4ac}}{2a} \\
 The two roots of $f(x) = 2x^{2} + 3x - 7$ are $x = \frac{-3 + \sqrt{65}}{4}$ and $\frac{-3 - \sqrt{65}}{4}$.}
 \end{wex}
 
-\begin{wex}{Using the quadratic formula but no solution}{Find the solutions to the quadratic equation $x^{2} - 5x + 8=0$.}{
+\begin{wex}{Using the quadratic formula but no solution}{Find the solutions to the quadratic equation $x^{2} - 5x + 8=0$.\\}{
 \westep{Determine whether the equation can be factorised}
-The expression cannot be factorised. Therefore, the general quadratic formula must be used.
+The expression cannot be factorised. Therefore, the general quadratic formula must be used.\\
 
 \westep{Identify the coefficients in the equation for use in the formula}
 From the equation:
@@ -417,18 +423,18 @@ Solve the quadratic equations by either factorisation, completing the square or 
 We have mentioned before that the \textit{roots} of a quadratic equation are the solutions or answers you get from solving the quadatic equation.  Working back from the answers, will take you to an equation.
 
 \begin{wex}{Find an equation when roots are given}
-{Find an equation with roots $13$ and $-5$}{
+{Find an equation with roots $13$ and $-5$\\}{
 \westep{Write down as the product of two brackets}
 The step before giving the solutions would be:\\
 \nequ{(x-13)(x+5)=0}\\
-Notice that the signs in the brackets are opposite of the given roots.
+Notice that the signs in the brackets are opposite of the given roots.\\
 \westep{Remove brackets}
 \nequ{x^2 -8x - 65 = 0}
 Of course, there would be other possibilities as well when each term on each side of the \textit{equals sign} is multiplied by a constant.}
 \end{wex}
 
 \begin{wex}{Fraction roots}
-{Find an equation with roots $-\frac{3}{2}$  and $4$}{
+{Find an equation with roots $-\frac{3}{2}$  and $4$\\}{
 \westep{Product of two brackets}
 Notice that if $x = -\frac{3}{2}$ then $2x + 3 = 0$\\
 Therefore the two brackets will be:\\
@@ -544,7 +550,7 @@ If $\Delta < 0$, then the solution to $f(x) = ax^{2} + bx + c = 0$ contains the 
 \item{$x + 2 = \dfrac{6}{x}$ \quad (correct to two decimal places)}
 \item{$\dfrac{1}{x+1}+\dfrac{2x}{x-1} = 1$}
 \end{enumerate}}
-\item{Solve for $x$ by completing the square: $x^2 - px - 4 = 0$}
+\item{Solve for $x$ in terms of $p$ by completing the square: $x^2 - px - 4 = 0$}
 \item{The equation $ax^2 + bx + c = 0$ has roots $x=\tfrac{2}{3}$ and $x=-4$. Find one set of possible values for $a$, $b$ and $c$.}
 
 \item{The two roots of the equation $4x^2 + px - 9 = 0$ differ by $5$. Calculate the value of $p$.}
