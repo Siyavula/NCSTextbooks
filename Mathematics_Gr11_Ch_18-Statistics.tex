@@ -2,7 +2,7 @@
 \label{m:s11}
 
 \section{Introduction}
-This chapter gives you an opportunity to build on what you have learned in previous grades about data handling and probability. The work done will be mostly  of a practical nature. Through problem solving and activities, you will end up mastering further methods of collecting, organising, displaying and analysing data. You will also learn how to interpret data, and not always to accept the data at face value, because data is sometimes misused and abused in order to try to falsely prove or support a viewpoint. Measures of central tendency (mean, median and mode) and dispersion (range, percentiles, quartiles, inter-quartile, semi-inter-quartile range, variance and standard deviation) will be investigated. Of course, the activities involving probability will be familiar to most of you - for example, you may have played dice or card games even before you came to school. Your basic understanding of probability and chance gained so far will be deepened to enable you to come to a better understanding of how chance and uncertainty can be measured and understood.  
+This chapter gives you an opportunity to build on what you have learned in previous grades about data handling and probability. The work done will be mostly  of a practical nature. Through problem solving and activities, you will end up mastering further methods of collecting, organising, displaying and analysing data. You will also learn how to interpret data, and not always to accept the data at face value, because data is sometimes misused and abused in order to try to falsely prove or support a viewpoint. Measures of central tendency (mean, median and mode) and dispersion (range, percentiles, quartiles, inter-quartile, semi-inter-quartile range, variance and standard deviation) will be investigated. Of course, the activities involving probability will be familiar to most of you - for example, you may have played dice or card games even before you came to school. Your basic understanding of probability and chance gained so far will deepen to enable you to come to a better understanding of how chance and uncertainty can be measured and understood.  
 
 \section{Standard Deviation and Variance}
 %\begin{syllabus}
@@ -16,7 +16,7 @@ A method of determining the spread of data is by calculating a measure of the po
 \subsection{Variance}
 The variance of a data set is the average squared distance between the mean of the data set and each data value. An example of what this means is shown in Figure~\ref{fig:mdat:variance}. The graph represents the results of 100 tosses of a fair coin, which resulted in $45$ heads and $55$ tails. The mean of the results is $50$. The squared distance between the heads value and the mean is $(45-50)^2=25$ and the squared distance between the tails value and the mean is $(55-50)^2=25$. The average of these two squared distances gives the variance, which is $\frac{1}{2}(25+25)=25$.
 
-\begin{figure}[htp!]
+\begin{figure}[H]
 \begin{center}
 \begin{pspicture}(-1,-1)(4,6)
 \psset{unit=1.0cm}
@@ -106,7 +106,7 @@ It is often useful to set your data out in a table so that you can apply the for
 \begin{center}
 \begin{tabular}{|l|l|l|}
 \hline
-\textbf{$\bar{X}$} & \textbf{Deviation $(X - \bar{X})$} & \textbf{Deviation squared $(X - \bar{X})^2$ } \\
+\textbf{$X$} & \textbf{Deviation $(X - \bar{X})$} & \textbf{Deviation squared $(X - \bar{X})^2$} \bigstrut \\
 \hline
 $57$ & $1$ & $1$ \\
 $53$ & $-3$ & $9$ \\
@@ -117,18 +117,18 @@ $50$ & $-6$ & $36$ \\
 $66$ & $10$ & $100$ \\
 $51$ & $-5$ & $25$ \\
 \hline
-$\sum{X} = 448$ & $\sum{x} = 0$ & $\sum{(X  - \bar{X})^2} = 320$ \\
+$\sum{X} = 448$ & $\sum{x} = 0$ & $\sum{(X  - \bar{X})^2} = 320$ \bigstrut \\
 \hline
 \end{tabular}
 \end{center}
 \textbf{Note:} The sum of the deviations of scores about their mean is zero. This always happens; that is $(X - \bar{X}) = 0$, for any set of data. Why is this? Find out. \newline
+
 Calculate the variance (add the squared results together and divide this total by the number of items).
 \begin{eqnarray*}
 \textbf{Variance} & = & \frac{\sum{(X - \bar{X})^2}}{n} \\
 &=& \frac{320}{8} \\
 &=& 40
 \end{eqnarray*}
-
 \begin{eqnarray*}
 \textbf{Standard deviation} & = & \sqrt{\mbox{variance}} \\
 &=& \sqrt{\frac{\sum{(X - \bar{X})^2}}{n}} \\
@@ -154,9 +154,9 @@ When dealing with the complete population the (population) standard deviation is
 
 %Khan Academy video on standard deviation: SIYAVULA-VIDEO:http://cnx.org/content/m38858/latest/#statistics-2
 
-\begin{wex}{Variance and Standard Deviation}{What is the variance and standard deviation of the population of possibilities associated with rolling a fair die?}
+\begin{wex}{Variance and Standard Deviation}{What is the variance and standard deviation of the population of possibilities associated with rolling a fair die?\\}
 {\westep{Determine how many outcomes make up the population}
-When rolling a fair die, the population consists of $6$ possible outcomes. The data set is therefore $x=\{1;2;3;4;5;6\}$. and $n=6$.
+When rolling a fair die, the population consists of $6$ possible outcomes. The data set is therefore $x=\{1;2;3;4;5;6\}$. and $n=6$.\\
 
 \westep{Calculate the population mean}
 The population mean is calculated by:
@@ -173,11 +173,11 @@ The population variance is calculated by:
 &=& 2,917
 \end{eqnarray*}
 
-\westep{Alternately the population variance is calculated by:}
+\westep{Alternately the population variance is calculated by:\\}
 \begin{center}
 \begin{tabular}{|l|l|l|}
 \hline
-$\bar{X}$ & $(X - \bar{X})$ & $(X - \bar{X})^2$  \\
+$X$ & $(X - \bar{X})$ & $(X - \bar{X})^2$ \bigstrut \\
 \hline
 $1$ & $-2.5$ & $6.25$ \\
 $2 $& $-1.5 $& $2.25 $\\
@@ -186,7 +186,7 @@ $4 $& $0.5$  & $0.25 $\\
 $5$ & $1.5$  & $2.25 $\\
 $6$ & $2.5$  & $6.25$ \\
 \hline
-$\sum{X} = 21$ & $\sum{x} = 0$ & $\sum{(X  - \bar{X})^2} = 17.5$ \\
+$\sum{X} = 21$ & $\sum{x} = 0$ & $\sum{(X  - \bar{X})^2} = 17.5$ \bigstrut \\
 \hline
 \end{tabular}
 \end{center}
@@ -296,7 +296,7 @@ The main features of the box and whisker diagram are shown in Figure~\ref{fig:md
 \label{fig:mdat:s:boxwhiskerfeatures}
 \end{figure}
 
-\begin{wex}{Box and Whisker Diagram}{Draw a box and whisker diagram for the data set \\$x=\{1,25;~ 1,5;~ 2,5;~ 2,5;~ 3,1;~ 3,2;~ 4,1;~ 4,25;~ 4,75;~ 4,8; ~4,95;~ 5,1\}$.}{
+\begin{wex}{Box and Whisker Diagram}{Draw a box and whisker diagram for the data set \\$x=\{1,25;~ 1,5;~ 2,5;~ 2,5;~ 3,1;~ 3,2;~ 4,1;~ 4,25;~ 4,75;~ 4,8; ~4,95;~ 5,1\}$.\\}{
 
 \westep{Determine the five number summary}
 Minimum = $1,25$\\
@@ -383,7 +383,7 @@ For example, the cumulative frequencies for Data Set 2 are shown in Table~\ref{t
 
 \begin{table}[htb]
 \begin{center}
-\begin{tabular}{|c||p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|p{1cm}|}\hline
+\begin{tabular}{|c||p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|}\hline
 Intervals & $0<n\leq 1 $ & $1<n\leq 2 $ & $2<n\leq 3 $ & $3<n\leq 4 $ & $4<n\leq 5$ & $5<n\leq 6 $ \\ 
 \hline
 Frequency & $30$ &$32$ &$35$ &$34$ &$37$ &$32$\\
@@ -402,7 +402,7 @@ Cumulative Frequency & $30$ &$30 + 32$ &$30 + 32 + 35$ &$30 + 32 + 35 + 34$ &$30
 %\scalebox{1} % Change this value to rescale the drawing.
 {
 \begin{pspicture}(0,-3.1454444)(7.4096947,3.1195555)
-\rput(1.3320833,-1.9580556){\psaxes[linewidth=0.028222222,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4,dx=1.0cm,dy=1.0cm,Dy=40]{<->}(0,0)(0,0)(6,5)}
+\rput(1.3320833,-1.9580556){\psaxes[linewidth=0.028222222,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4,dx=1.0cm,dy=1.0cm,Dy=40]{->}(0,0)(0,0)(6,5)}
 \psdots[dotsize=0.127](2.3320832,-1.2080556)
 \psdots[dotsize=0.127](3.3320832,-0.40805557)
 \psdots[dotsize=0.127](4.332083,0.46694443)
@@ -466,7 +466,8 @@ The shape of a data set is important to know.
 %\scalebox{1} % Change this value to rescale the drawing.
 {
 \begin{pspicture}(0,-0.54)(8.1,0.56)
-\psline[linewidth=0.04cm,dotsize=0.07055555cm 2.0]{**-**}(0.0,0.02)(8.08,-0.02)
+ \psline[linewidth=0.04cm,dotsize=0.07055555cm 2.0]{**-}(0.0,0.02)(2.05,-0.02)
+\psline[linewidth=0.04cm,dotsize=0.07055555cm 2.0]{-**}(6.0,0.02)(8.05,-0.02)
 \psframe[linewidth=0.04,dimen=outer](6.02,0.54)(2.02,-0.54)
 \psline[linewidth=0.04cm](4.02,0.54)(4.02,-0.5)
 \end{pspicture} 
@@ -477,10 +478,12 @@ The shape of a data set is important to know.
 %\scalebox{1} % Change this value to rescale the drawing.
 {
 \begin{pspicture}(0,-2.3225)(8.28,2.2825)
-\psline[linewidth=0.04cm,dotsize=0.07055555cm 2.0]{**-**}(0.0,-1.0575)(8.08,-1.0975)
+\psline[linewidth=0.04cm,dotsize=0.07055555cm 2.0]{**-}(0.0,-1.0575)(3.04,-1.0575)
+\psline[linewidth=0.04cm,dotsize=0.07055555cm 2.0]{-**}(7.0,-1.0575)(8.05,-1.0575)
 \psframe[linewidth=0.04,dimen=outer](7.0,-0.5375)(3.0,-1.6175)
 \psline[linewidth=0.04cm](6.12,-0.5375)(6.12,-1.5775)
-\psline[linewidth=0.04cm,dotsize=0.07055555cm 2.0]{**-**}(0.18,1.7625)(8.26,1.7225)
+\psline[linewidth=0.04cm,dotsize=0.07055555cm 2.0]{**-}(0.18,1.7625)(1.22,1.7625)
+\psline[linewidth=0.04cm,dotsize=0.07055555cm 2.0]{-**}(5.18,1.7625)(8.26,1.7625)
 \psframe[linewidth=0.04,dimen=outer](5.18,2.2825)(1.18,1.2025)
 \psline[linewidth=0.04cm](2.08,2.2625)(2.08,1.2225)
 %%%%%%%\usefont{T1}{ptm}{m}{n}
@@ -510,7 +513,7 @@ With both the mean and median known, the following can be concluded:
 \begin{center}
 \begin{tabular}{|l|l|l|}
 \hline
-Set 1 & Set 2 & Set 3 \\ 
+Set A & Set B & Set C \bigstrut \\ 
 \hline
 $25$ & $32$ & $43$ \\
 $47$ & $34$ & $47$ \\
@@ -613,6 +616,9 @@ $-3.5$ & $7.9$ &$ 1.5$ & $27.5$ & $-1$ & $7.8$ & $4$ & $117.2$ \\
 $-3$ &$ 7.5$ & $2$ & $41.9$ &$ -0.5 $& $14.4$ & $4.5$ & $151.4$ \\
 \hline
 \end{tabular}
+
+\vspace{0.3cm}
+
 \item \begin{tabular}{|c|c||c|c||c|c||c|c|} \hline
 \textbf{$x$} & \textbf{$y$} & \textbf{$x$} & \textbf{$y$} & \textbf{$x$} & \textbf{$y$} & \textbf{$x$} & \textbf{$y$} \\
 \hline\hline
@@ -622,6 +628,9 @@ $-4$ & $53$ & $1$ & $3$ & $-1.5$ & $15.5$ & $3.5$ & $15.5$ \\\hline
 $-3.5$ & $43.5$ & $1.5$ & $3.5$ & $-1$ & $11$ & $4$ & $21$ \\\hline
 $-3$ & $35$ & $2$ & $5$ & $-0.5$ & $7.5$ & $4.5$ & $27.5$ \\\hline
 \end{tabular}
+
+\vspace{0.3cm}
+
 \item \begin{tabular}{|l||c|c|c|c|c|c|c|c|}\hline
 Height (cm) & $147$ & $150$ & $152$ & $155$ & $157$ & $160$ & $163$ & $165$\\
 & $168$ & $170$ & $173$ & $175$ & $178$ & $180$ & $183$&\\\hline
@@ -735,123 +744,155 @@ Statistics can be manipulated in many ways that can be misleading. Graphs need t
 \begin{enumerate}
 \item Examine the following graphs and comment on the effects of changing scale.
 
+\begin{figure}[htb]
 \begin{center}
-%\scalebox{1} % Change this value to rescale the drawing.
+\scalebox{0.75} % Change this value to rescale the drawing.
 {
-\begin{pspicture}(0,-4.5620313)(10.4125,4.5420313)
-%\usefont{T1}{ptm}{m}{n}
-\rput(1.2978125,3.9820313){\small 16}
-%\usefont{T1}{ptm}{m}{n}
-\rput(1.3196875,2.942031){\small 14}
-%\usefont{T1}{ptm}{m}{n}
-\rput(1.276406,1.9820313){\small 12}
-%\usefont{T1}{ptm}{m}{n}
-\rput(1.2792188,1.0020314){\small 10}
-%\usefont{T1}{ptm}{m}{n}
-\rput(1.3670313,0.0220311){\small 8}
-%\usefont{T1}{ptm}{m}{n}
-\rput(1.3657812,-0.9779689){\small 6}
-%\usefont{T1}{ptm}{m}{n}
-\rput(1.3617188,-2.0379689){\small 4}
-%\usefont{T1}{ptm}{m}{n}
-\rput(1.395625,-3.0379689){\small 2}
-%\usefont{T1}{ptm}{m}{n}
-\rput(1.3709375,-3.997969){\small 0}
-\psline[linewidth=0.04cm](1.7924999,-4.097969)(1.7924999,4.462031)
-\psline[linewidth=0.04cm](1.8124999,4.4820313)(1.6925,4.342031)
-\psline[linewidth=0.04cm](1.7924999,4.5220313)(1.9324999,4.362031)
-\psline[linewidth=0.04cm](1.7524999,-3.997969)(10.392501,-3.997969)
-\psline[linewidth=0.04cm](10.392501,-3.977969)(10.2325,-3.8979688)
-\psline[linewidth=0.04cm](10.352501,-3.977969)(10.2325,-4.117969)
-%\usefont{T1}{ptm}{m}{n}
-\rput(1.6856251,-4.397969){\small 2002}
-%\usefont{T1}{ptm}{m}{n}
-\rput(5.704531,-4.4179688){\small 2003}
-%\usefont{T1}{ptm}{m}{n}
-\rput(9.748905,-4.357969){\small 2004}
-\psline[linewidth=0.04cm](1.8124999,-3.977969)(1.8124999,-4.137969)
-\psline[linewidth=0.04cm](5.7925,-3.997969)(5.7925,-4.217969)
-\psline[linewidth=0.04cm](9.8724985,-3.977969)(9.8724985,-4.177969)
-\psline[linewidth=0.04cm](1.7724999,4.0020313)(1.6724999,4.0020313)
-\psline[linewidth=0.04cm](1.7924999,2.962031)(1.6925,2.962031)
-\psline[linewidth=0.04cm](1.7724999,1.9820313)(1.6724999,1.9620309)
-\psline[linewidth=0.04cm](1.7724999,1.0020314)(1.6125001,1.0220313)
-\psline[linewidth=0.04cm](1.7724999,0.0020311)(1.6724999,0.0020311)
-\psline[linewidth=0.04cm](1.7524999,-0.9779689)(1.5925,-0.9779689)
-\psline[linewidth=0.04cm](1.7724999,-2.0579689)(1.6125001,-2.0579689)
-\psline[linewidth=0.04cm](1.7524999,-3.0379689)(1.6524999,-3.017969)
-\psline[linewidth=0.04cm](1.7325001,-3.997969)(1.6524999,-3.997969)
-\psline[linewidth=0.04cm](1.7924999,-3.017969)(5.8324995,-1.0179689)
-\psline[linewidth=0.04cm](5.8324995,-1.0179689)(9.852501,2.5620313)
-\psdots[dotsize=0.06](5.8324995,-1.0579689)
-\psdots[dotsize=0.06](9.8724985,2.5820312)
-\psdots[dotsize=0.06](1.7524999,-2.977969)
-%\usefont{T1}{ptm}{m}{n}
-\rput(0.56359375,0.4920311){earnings}
+\begin{pspicture}(0,0)(9,9)
+\psaxes[linewidth=0.05,arrowsize=0.1cm 2.0,arrowlength=1.4,arrowinset=0.4,Ox=2002,dx=4.0cm,dy=1.0cm,Dx=1,Dy=2]{->}(0,0)(0,0)(8.5,8.5)
+\psline[linewidth=0.05](0,1)(4,3)(8,6.5)
+\psdots[dotsize=0.15](0,1)(4,3)(8,6.5)
+\rput{90}(-1.0,4){earnings}
+\rput(4,-1.0){years}
 \end{pspicture} 
 }
 \end{center}
+% \caption{Example of a cumulative histogram for Data Set 2.\label{fig:mdat:s:cumulativegraph}}
+\end{figure}
 
+% \begin{center}
+% %\scalebox{1} % Change this value to rescale the drawing.
+% {
+% \begin{pspicture}(0,-4.5620313)(10.4125,4.5420313)
+% %\usefont{T1}{ptm}{m}{n}
+% \rput(1.2978125,3.9820313){\small 16}
+% %\usefont{T1}{ptm}{m}{n}
+% \rput(1.3196875,2.942031){\small 14}
+% %\usefont{T1}{ptm}{m}{n}
+% \rput(1.276406,1.9820313){\small 12}
+% %\usefont{T1}{ptm}{m}{n}
+% \rput(1.2792188,1.0020314){\small 10}
+% %\usefont{T1}{ptm}{m}{n}
+% \rput(1.3670313,0.0220311){\small 8}
+% %\usefont{T1}{ptm}{m}{n}
+% \rput(1.3657812,-0.9779689){\small 6}
+% %\usefont{T1}{ptm}{m}{n}
+% \rput(1.3617188,-2.0379689){\small 4}
+% %\usefont{T1}{ptm}{m}{n}
+% \rput(1.395625,-3.0379689){\small 2}
+% %\usefont{T1}{ptm}{m}{n}
+% \rput(1.3709375,-3.997969){\small 0}
+% \psline[linewidth=0.04cm](1.7924999,-4.097969)(1.7924999,4.462031)
+% \psline[linewidth=0.04cm](1.8124999,4.4820313)(1.6925,4.342031)
+% \psline[linewidth=0.04cm](1.7924999,4.5220313)(1.9324999,4.362031)
+% \psline[linewidth=0.04cm](1.7524999,-3.997969)(10.392501,-3.997969)
+% \psline[linewidth=0.04cm](10.392501,-3.977969)(10.2325,-3.8979688)
+% \psline[linewidth=0.04cm](10.352501,-3.977969)(10.2325,-4.117969)
+% %\usefont{T1}{ptm}{m}{n}
+% \rput(1.6856251,-4.397969){\small 2002}
+% %\usefont{T1}{ptm}{m}{n}
+% \rput(5.704531,-4.4179688){\small 2003}
+% %\usefont{T1}{ptm}{m}{n}
+% \rput(9.748905,-4.357969){\small 2004}
+% \psline[linewidth=0.04cm](1.8124999,-3.977969)(1.8124999,-4.137969)
+% \psline[linewidth=0.04cm](5.7925,-3.997969)(5.7925,-4.217969)
+% \psline[linewidth=0.04cm](9.8724985,-3.977969)(9.8724985,-4.177969)
+% \psline[linewidth=0.04cm](1.7724999,4.0020313)(1.6724999,4.0020313)
+% \psline[linewidth=0.04cm](1.7924999,2.962031)(1.6925,2.962031)
+% \psline[linewidth=0.04cm](1.7724999,1.9820313)(1.6724999,1.9620309)
+% \psline[linewidth=0.04cm](1.7724999,1.0020314)(1.6125001,1.0220313)
+% \psline[linewidth=0.04cm](1.7724999,0.0020311)(1.6724999,0.0020311)
+% \psline[linewidth=0.04cm](1.7524999,-0.9779689)(1.5925,-0.9779689)
+% \psline[linewidth=0.04cm](1.7724999,-2.0579689)(1.6125001,-2.0579689)
+% \psline[linewidth=0.04cm](1.7524999,-3.0379689)(1.6524999,-3.017969)
+% \psline[linewidth=0.04cm](1.7325001,-3.997969)(1.6524999,-3.997969)
+% \psline[linewidth=0.04cm](1.7924999,-3.017969)(5.8324995,-1.0179689)
+% \psline[linewidth=0.04cm](5.8324995,-1.0179689)(9.852501,2.5620313)
+% \psdots[dotsize=0.06](5.8324995,-1.0579689)
+% \psdots[dotsize=0.06](9.8724985,2.5820312)
+% \psdots[dotsize=0.06](1.7524999,-2.977969)
+% %\usefont{T1}{ptm}{m}{n}
+% \rput(0.56359375,0.4920311){earnings}
+% \end{pspicture} 
+% }
+% \end{center}
+
+\begin{figure}[htb]
 \begin{center}
-%\scalebox{1} % Change this value to rescale the drawing.
+\scalebox{0.75} % Change this value to rescale the drawing.
 {
-\begin{pspicture}(0,-4.8189063)(10.439531,4.7789063)
-%\usefont{T1}{ptm}{m}{n}
-\rput(1.3767188,4.2189064){\small 80}
-%\usefont{T1}{ptm}{m}{n}
-\rput(1.4048437,3.1789062){\small 70}
-%\usefont{T1}{ptm}{m}{n}
-\rput(1.3626562,2.2189062){\small 60}
-%\usefont{T1}{ptm}{m}{n}
-\rput(1.3610938,1.2389063){\small 50}
-%\usefont{T1}{ptm}{m}{n}
-\rput(1.3720312,0.27890626){\small 40}
-%\usefont{T1}{ptm}{m}{n}
-\rput(1.2835938,-0.70109373){\small 30}
-%\usefont{T1}{ptm}{m}{n}
-\rput(1.2701563,-1.8010937){\small 20}
-%\usefont{T1}{ptm}{m}{n}
-\rput(1.2973437,-2.8010938){\small 10}
-%\usefont{T1}{ptm}{m}{n}
-\rput(1.4151562,-3.7610939){\small 0}
-\psline[linewidth=0.04cm](1.8195312,-3.8610938)(1.8195312,4.6989064)
-\psline[linewidth=0.04cm](1.8395312,4.7189064)(1.7195313,4.578906)
-\psline[linewidth=0.04cm](1.8195312,4.7589064)(1.9595312,4.598906)
-\psline[linewidth=0.04cm](1.7795312,-3.7610939)(10.419532,-3.7610939)
-\psline[linewidth=0.04cm](10.419532,-3.7410936)(10.259531,-3.6610937)
-\psline[linewidth=0.04cm](10.379532,-3.7410936)(10.259531,-3.8810937)
-%\usefont{T1}{ptm}{m}{n}
-\rput(1.7282813,-4.1610937){\small 2002}
-%\usefont{T1}{ptm}{m}{n}
-\rput(5.7542186,-4.1810937){\small 2003}
-%\usefont{T1}{ptm}{m}{n}
-\rput(9.790468,-4.1210938){\small 2004}
-\psline[linewidth=0.04cm](1.8395312,-3.7410936)(1.8395312,-3.9010937)
-\psline[linewidth=0.04cm](5.8195314,-3.7610939)(5.8195314,-3.9810936)
-\psline[linewidth=0.04cm](9.89953,-3.7410936)(9.89953,-3.9410937)
-\psline[linewidth=0.04cm](1.7995312,4.2389064)(1.6995312,4.2389064)
-\psline[linewidth=0.04cm](1.8195312,3.1989062)(1.7195313,3.1989062)
-\psline[linewidth=0.04cm](1.7995312,2.2189062)(1.6995312,2.1989062)
-\psline[linewidth=0.04cm](1.7995312,1.2389063)(1.6395313,1.2589062)
-\psline[linewidth=0.04cm](1.7995312,0.23890625)(1.6995312,0.23890625)
-\psline[linewidth=0.04cm](1.7795312,-0.74109375)(1.6195313,-0.74109375)
-\psline[linewidth=0.04cm](1.7995312,-1.8210938)(1.6395313,-1.8210938)
-\psline[linewidth=0.04cm](1.7795312,-2.8010938)(1.6795312,-2.7810938)
-\psline[linewidth=0.04cm](1.7595313,-3.7610939)(1.6795312,-3.7610939)
-%\usefont{T1}{ptm}{m}{n}
-\rput(0.60359377,0.7289063){earnings}
-\psline[linewidth=0.04cm](1.7995312,-3.3810937)(5.8195314,-3.2410936)
-\psline[linewidth=0.04cm](5.8195314,-3.2410936)(9.839532,-2.3610938)
-%\usefont{T1}{ptm}{m}{n}
-\rput(5.7295313,-4.5910935){year}
+\begin{pspicture}(0,0)(9,9)
+\psaxes[linewidth=0.05,arrowsize=0.1cm 2.0,arrowlength=1.4,arrowinset=0.4,Ox=2002,dx=4.0cm,dy=1.0cm,Dx=1,Dy=10]{->}(0,0)(0,0)(8.5,8.5)
+\psline[linewidth=0.05](0,0.2)(4,0.6)(8,1.3)
+\psdots[dotsize=0.15](0,0.2)(4,0.6)(8,1.3)
+\rput{90}(-1.0,4){earnings}
+\rput(4,-1.0){years}
 \end{pspicture} 
 }
 \end{center}
+% \caption{Example of a cumulative histogram for Data Set 2.\label{fig:mdat:s:cumulativegraph}}
+\end{figure}
+
+% \begin{center}
+% %\scalebox{1} % Change this value to rescale the drawing.
+% {
+% \begin{pspicture}(0,-4.8189063)(10.439531,4.7789063)
+% %\usefont{T1}{ptm}{m}{n}
+% \rput(1.3767188,4.2189064){\small 80}
+% %\usefont{T1}{ptm}{m}{n}
+% \rput(1.4048437,3.1789062){\small 70}
+% %\usefont{T1}{ptm}{m}{n}
+% \rput(1.3626562,2.2189062){\small 60}
+% %\usefont{T1}{ptm}{m}{n}
+% \rput(1.3610938,1.2389063){\small 50}
+% %\usefont{T1}{ptm}{m}{n}
+% \rput(1.3720312,0.27890626){\small 40}
+% %\usefont{T1}{ptm}{m}{n}
+% \rput(1.2835938,-0.70109373){\small 30}
+% %\usefont{T1}{ptm}{m}{n}
+% \rput(1.2701563,-1.8010937){\small 20}
+% %\usefont{T1}{ptm}{m}{n}
+% \rput(1.2973437,-2.8010938){\small 10}
+% %\usefont{T1}{ptm}{m}{n}
+% \rput(1.4151562,-3.7610939){\small 0}
+% \psline[linewidth=0.04cm](1.8195312,-3.8610938)(1.8195312,4.6989064)
+% \psline[linewidth=0.04cm](1.8395312,4.7189064)(1.7195313,4.578906)
+% \psline[linewidth=0.04cm](1.8195312,4.7589064)(1.9595312,4.598906)
+% \psline[linewidth=0.04cm](1.7795312,-3.7610939)(10.419532,-3.7610939)
+% \psline[linewidth=0.04cm](10.419532,-3.7410936)(10.259531,-3.6610937)
+% \psline[linewidth=0.04cm](10.379532,-3.7410936)(10.259531,-3.8810937)
+% %\usefont{T1}{ptm}{m}{n}
+% \rput(1.7282813,-4.1610937){\small 2002}
+% %\usefont{T1}{ptm}{m}{n}
+% \rput(5.7542186,-4.1810937){\small 2003}
+% %\usefont{T1}{ptm}{m}{n}
+% \rput(9.790468,-4.1210938){\small 2004}
+% \psline[linewidth=0.04cm](1.8395312,-3.7410936)(1.8395312,-3.9010937)
+% \psline[linewidth=0.04cm](5.8195314,-3.7610939)(5.8195314,-3.9810936)
+% \psline[linewidth=0.04cm](9.89953,-3.7410936)(9.89953,-3.9410937)
+% \psline[linewidth=0.04cm](1.7995312,4.2389064)(1.6995312,4.2389064)
+% \psline[linewidth=0.04cm](1.8195312,3.1989062)(1.7195313,3.1989062)
+% \psline[linewidth=0.04cm](1.7995312,2.2189062)(1.6995312,2.1989062)
+% \psline[linewidth=0.04cm](1.7995312,1.2389063)(1.6395313,1.2589062)
+% \psline[linewidth=0.04cm](1.7995312,0.23890625)(1.6995312,0.23890625)
+% \psline[linewidth=0.04cm](1.7795312,-0.74109375)(1.6195313,-0.74109375)
+% \psline[linewidth=0.04cm](1.7995312,-1.8210938)(1.6395313,-1.8210938)
+% \psline[linewidth=0.04cm](1.7795312,-2.8010938)(1.6795312,-2.7810938)
+% \psline[linewidth=0.04cm](1.7595313,-3.7610939)(1.6795312,-3.7610939)
+% %\usefont{T1}{ptm}{m}{n}
+% \rput(0.60359377,0.7289063){earnings}
+% \psline[linewidth=0.04cm](1.7995312,-3.3810937)(5.8195314,-3.2410936)
+% \psline[linewidth=0.04cm](5.8195314,-3.2410936)(9.839532,-2.3610938)
+% %\usefont{T1}{ptm}{m}{n}
+% \rput(5.7295313,-4.5910935){year}
+% \end{pspicture} 
+% }
+% \end{center}
 
 \item Examine the following three plots and comment on omission, selection and bias. Hint: What is wrong with the data and what is missing from the bar and pie charts?
 
 \begin{center}
-\begin{tabular}{|l|l|}
+\begin{tabular}{|l|c|}
 \hline
 Activity & Hours \\ 
 \hline
