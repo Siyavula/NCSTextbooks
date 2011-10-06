@@ -66,7 +66,7 @@ The surface area of a pyramid is calculated by adding the area of each face toge
 
 \begin{wex}
 {Surface Area}
-{If a cone has a height of $h$ and a base of radius $r$, show that the surface area is $\pi r^2 + \pi r \sqrt{r^2+h^2}$.}
+{If a cone has a height of $h$ and a base of radius $r$, show that the surface area is $\pi r^2 + \pi r \sqrt{r^2+h^2}$.\\}
 {
 \westep{Draw a picture}
 \begin{center}
@@ -147,7 +147,7 @@ The cone has two faces: the base and the walls. The base is a circle of radius $
 \psline[linewidth=0.03cm,linestyle=dashed,dash=0.16cm 0.16cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(3.68,0.2646875)(3.68,-0.6753125) 
 \psline[linewidth=0.03cm,linestyle=dashed,dash=0.16cm 0.16cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(3.68,0.5446875)(3.68,1.1246876) 
 \rput(5.6826563,-0.9853125){$2\pi r$ = circumference} \end{pspicture} } 
-\\ This curved surface can be cut into many thin triangles with height close to $a$ ($a$ is called the \emph{slant height}). The area of these triangles will add up to $\frac{1}{2}\times$base$\times$height(of a small triangle) which is $\frac{1}{2}\times2\pi r \times a = \pi r a $ 
+\\ This curved surface can be cut into many thin triangles with height close to $a$ ($a$ is called the \emph{slant height}). The area of these triangles will add up to $\frac{1}{2}\times$base$\times$height(of a small triangle) which is $\frac{1}{2}\times2\pi r \times a = \pi r a $ \\
 
 \westep{Calculate $a$}
     $a$ can be calculated by using the Theorem of Pythagoras. Therefore:
@@ -173,7 +173,7 @@ A_{w} &=& \pi r a \\
 
 \textbf{Volume of a Pyramid:} The volume of a pyramid is found by:
 \nequ{V=\frac{1}{3}A\cdot h}
-where $A$ is the area of the base and $h$ is the height.
+where $A$ is the area of the base and $h$ is the perpendicular height.
 
 A cone is like a pyramid, so the volume of a cone is given by:
 \nequ{V=\frac{1}{3}\pi r^2 h.}
@@ -186,7 +186,7 @@ where $a$ is the side length of the square base.
 
 \begin{wex}{Volume of a Pyramid}
 {
-What is the volume of a square pyramid, $3$ cm high with a side length of $2$ cm?
+What is the volume of a square pyramid, $3$ cm high with a side length of $2$ cm?\\
 }
 {
 \westep{Determine the correct formula}
@@ -997,17 +997,16 @@ B\hat{D}A &=& C\hat{D}A=\hat{A} =90^\circ
  &=&CB^{2} \\ 
 \text{i.e.  }  BC^{2} &=& AB^{2}+AC^{2} 
 \end{eqnarray*}
-
 }
 \end{schooltheorem}
 
 
-
-
-\begin{wex}{Triangle Geometry 1}{
-In $\triangle GHI$, $GH \parallel LJ$; $GJ \parallel LK$ and $\frac{JK}{KI} = \frac{5}{3}$. Determine $\frac{HJ}{KI}$.
-\begin{center}
-\scalebox{1.0} % Change this value to rescale the drawing.
+\begin{wex}
+{Triangle Geometry 1}{
+In $\triangle GHI$, $GH \parallel LJ$; $GJ \parallel LK$ and $\frac{JK}{KI} = \frac{5}{3}$. Determine $\frac{HJ}{KI}$.}
+%\begin{center}
+% Change this value to rescale the drawing.
+%\scalebox{1.0}
 {
 \begin{pspicture}(0,-2.415526)(9.615091,2.415526)
 \psline[linewidth=0.04cm](0.3862329,2.0651042)(3.8791187,-2.0330596)
@@ -1058,14 +1057,13 @@ In $\triangle GHI$, $GH \parallel LJ$; $GJ \parallel LK$ and $\frac{JK}{KI} = \f
 %\rput(7.704149,-0.73809904){\small k}
 \end{pspicture} 
 }
-\end{center}}{\westep{Identify similar triangles}
+%\end{center}
+{\westep{Identify similar triangles}
 \begin{eqnarray*}
 L\hat{I}J &=& G\hat{I}H\\
 J\hat{L}I &=& H\hat{G}I \makebox[5.8cm]{ \text{(Corresponding $\angle$'s)}}\\
 \therefore \triangle LIJ &|||& \triangle GIH \makebox[5cm]{\text{(Equiangular $\triangle$'s)}}
 \end{eqnarray*}
-
-
 \begin{eqnarray*}
 L\hat{I}K &=& G\hat{I}J\\
 K\hat{L}I &=& J\hat{G}I \makebox[5.8cm]{\text{ (Corresponding $\angle$'s)}}\\
@@ -1073,26 +1071,22 @@ K\hat{L}I &=& J\hat{G}I \makebox[5.8cm]{\text{ (Corresponding $\angle$'s)}}\\
 \end{eqnarray*}
 
 \westep{Use proportional sides}
-
-\begin{eqnarray*}
-\frac{HJ}{JI} &=& \frac{GL}{LI} \makebox[5.5cm]{(\triangle LIJ \; ||| \; \triangle GIH)}\\
-\text{and } \frac{GL}{LI} &=& \frac{JK}{KI} \makebox[5.3cm]{ (\triangle LIK \; ||| \; \triangle GIJ)}\\
-&=& \frac{5}{3}\\
-\therefore \frac{HJ}{JI} &=& \frac{5}{3}\\
-\end{eqnarray*}
+\begin{align*}
+ \frac{HJ}{JI} &= \frac{GL}{LI}       &(\triangle LIJ \; ||| \; \triangle GIH)\\
+ \text{and } \frac{GL}{LI} &= \frac{JK}{KI}       &(\triangle LIK \; ||| \; \triangle GIJ)\\
+ &= \frac{5}{3}\\
+ \therefore \frac{HJ}{JI} &= \frac{5}{3}
+\end{align*}
 
 \westep{Rearrange to find the required ratio}
-
 \begin{eqnarray*}
-\frac{HJ}{KI} &=& \frac{HJ}{JI} \times \frac{JI}{KI}\\
+\frac{HJ}{KI} &=& \frac{HJ}{JI} \times \frac{JI}{KI}
 \end{eqnarray*}
 % \pagebreak
-
 We need to calculate $\frac{JI}{KI}$: 
 We were given $\frac{JK}{KI} = \frac{5}{3}$ 
 So rearranging, we have $JK = \frac{5}{3}KI$ 
 And: 
-
 \begin{eqnarray*}
 JI &=& JK + KI \\
 & = & \frac{5}{3}KI + KI\\
@@ -1103,10 +1097,11 @@ Using this relation:
 \begin{eqnarray*}
 &=& \frac{5}{3} \times \frac{8}{3}\\
 &=& \frac{40}{9}
-\end{eqnarray*}}
+\end{eqnarray*}
+}
 \end{wex}
 
-\begin{wex}{Triangle Geometry 2}{$PQRS$ is a trapezium, with $PQ \parallel RS$. Prove that $PT \cdot TR = ST \cdot TQ$.
+\begin{wex}{Triangle Geometry 2}{$PQRS$ is a trapezium, with $PQ \parallel RS$. \newline Prove that $PT \cdot TR = ST \cdot TQ$.
 \begin{center}
 \scalebox{0.8}
 {
@@ -1448,8 +1443,7 @@ If $LM \parallel JK$, calculate $y$.
 %\end{syllabus}
 
 \subsection{Equation of a Line Between Two Points}
-%Khan Academy video on point-slope and standard form: SIYAVULA-VIDEO:http://cnx.org/content/m38835/latest/#Point-slope-and-standard-form
-\\
+%Khan Academy video on point-slope and standard form: SIYAVULA-VIDEO:http://cnx.org/content/m38835/latest/#Point-slope-and-standard-form\\
 There are many different methods of specifying the requirements for determining the equation of a straight line. One option is to find the equation of a straight line, when two points are given.
 
 Assume that the two points are $(x_1;y_1)$ and $(x_2;y_2)$, and we know that the general form of the equation for a straight line is:
@@ -1533,7 +1527,7 @@ So, $y=\frac{1}{3}x + \frac{4}{3}$ passes through $(-1;1)$ and $(2;2)$.
 \end{center}
 \end{figure}
 
-\begin{wex}{Equation of Straight Line}{Find the equation of the straight line passing through $(-3;2)$ and $(5;8)$.}{
+\begin{wex}{Equation of Straight Line}{Find the equation of the straight line passing through $(-3;2)$ and $(5;8)$.\\}{
 \westep{Label the points}
 \begin{eqnarray*}
 (x_1;y_1)&=&(-3;2)\\
@@ -1799,22 +1793,20 @@ From these activities you should have come to the following conclusions:
 $90^\circ$ clockwise rotation:\\
 The image of a point $P(x;y)$ rotated clockwise through $90^\circ$ around the origin is $P'(y; - x)$.\\
 We write the rotation as $(x;y) \rightarrow (y; -x)$.
-\vspace{3cm}
+\vspace{2cm}
 \item
 $90^\circ$ anticlockwise rotation:\\
 The image of a point $P(x;y)$ rotated anticlockwise through $90^\circ$ around the origin is $P'(-y; x)$.\\
 We write the rotation as $(x;y) \rightarrow (-y; x)$.
-\vspace{3cm}
+\vspace{2cm}
 \item
 $180^\circ$ rotation:\\
 The image of a point $P(x;y)$ rotated through $180^\circ$ around the origin is $P'(-x; -y)$.\\
 We write the rotation as $(x;y) \rightarrow (-x; -y)$.
 \end{itemize}
 \end{minipage}
-
 \begin{minipage}{0.45\textwidth}
 \begin{flushright}
-
 \scalebox{0.8} % Change this value to rescale the drawing.
 {
 \begin{pspicture}(0,-2.435)(5.055,2.435)
@@ -1845,7 +1837,6 @@ We write the rotation as $(x;y) \rightarrow (-x; -y)$.
 \psdots[dotsize=0.12](3.9599998,0.3599999)
 \end{pspicture} 
 }
-
 % Generated with LaTeXDraw 1.9.3
 % Thu Dec 13 14:27:19 CAT 2007
 % \usepackage[usenames,dvipsnames]{pstricks}
@@ -1882,7 +1873,6 @@ We write the rotation as $(x;y) \rightarrow (-x; -y)$.
 \rput{-158.52878}(5.4499764,0.3132921){\psframe[linewidth=0.02,dimen=outer](2.9146876,-0.52)(2.5946877,-0.84)}
 \end{pspicture} 
 }
-
 % Generated with LaTeXDraw 1.9.3
 % Thu Dec 13 14:29:56 CAT 2007
 % \usepackage[usenames,dvipsnames]{pstricks}
@@ -1918,7 +1908,6 @@ We write the rotation as $(x;y) \rightarrow (-x; -y)$.
 \psdots[dotsize=0.12](2.82,-1.7400001)
 \end{pspicture} 
 }
-
 \end{flushright}
 \end{minipage}
 %
@@ -1926,26 +1915,23 @@ We write the rotation as $(x;y) \rightarrow (-x; -y)$.
 \Exercise{Rotation}{
 \begin{enumerate}
 \item
-For each of the following rotations about the origin:\\ (i) Write down the rule. \\(ii) Draw a diagram showing the direction of rotation. 
+For each of the following rotations about the origin:\\
+(i) Write down the rule.\\
+(ii) Draw a diagram showing the direction of rotation. 
 \begin{enumerate}
 \item $OA$ is rotated to $OA^{\prime}$ with $A(4;2)$ and $A^{\prime}(-2;4)$
 \item $OB$ is rotated to $OB^{\prime}$ with $B(-2;5)$ and $B^{\prime}(5;2)$
 \item $OC$ is rotated to $OC^{\prime}$ with $C(-1;-4)$ and $C^{\prime}(1;4)$
 \end{enumerate}
-
+% 
 \item Copy $\Delta XYZ$ onto squared paper. The co-ordinates are given on the picture. 
 \begin{enumerate}
-\item Rotate $\Delta XYZ$ anti-clockwise through an angle of $90^{\circ}$ about the origin to give $\Delta X'Y'Z^$. Give the co-ordinates of $X'$, $Y'$ and $Z'$. 
+\item Rotate $\Delta XYZ$ anti-clockwise through an angle of $90^{\circ}$ about the origin to give $\Delta X'Y'Z'$. Give the co-ordinates of $X'$, $Y'$ and $Z'$. 
 \item Rotate $\Delta XYZ$ through $180^{\circ}$ about the origin to give $\Delta X'' Y''Z''$. Give the co-ordinates of $X''$, $Y''$and $Z''$.
 \end{enumerate}
-
-
 \begin{center} 
 \scalebox{1} % Change this value to rescale the drawing.
 {
-
-
-
 \begin{pspicture}(0,-3.2)(6.9434376,3.2) 
 \definecolor{color1229c}{rgb}{0.501960784,0.501960784,0.501960784} 
 \rput(0.5434375,-3.2){\psgrid[gridwidth=0.028222222,subgridwidth=0.014111111,gridlabels=0.0pt,unit=3.2cm,subgridcolor=color1229c](0,0)(0,0)(2,2) 
@@ -1960,7 +1946,6 @@ For each of the following rotations about the origin:\\ (i) Write down the rule.
 \end{pspicture} 
 }
 \end{center}
-
 \end{enumerate}
 }
 
@@ -2160,11 +2145,6 @@ Copy polygon $STUV$ onto squared paper and then answer the following questions.
 \end{enumerate}
 
 \item $\triangle ABC$ is an enlargement of $\triangle A'B'C'$ by a constant factor of $k$ through the origin.
-\begin{enumerate}
-\item What are the co-ordinates of the vertices of $\triangle ABC$ and $\triangle A'B'C'$?
-\item Giving reasons, calculate the value of $k$.
-\item If the area of $\triangle ABC$ is $m$ times the area of $\triangle A'B'C'$, what is $m$?
-\end{enumerate}
 
 \begin{center}
 \scalebox{1} % Change this value to rescale the drawing.
@@ -2188,18 +2168,17 @@ Copy polygon $STUV$ onto squared paper and then answer the following questions.
 \psline[linewidth=0.04,fillstyle=solid,fillcolor=color450b](7.36,1.02)(4.36,2.0)(3.36,-1.98)(7.36,1.02)
 \psline[linewidth=0.04](3.34,4.04)(1.36,-3.98)(9.44,2.0)(3.36,3.98)
 \end{pspicture} 
-
 }
 \end{center}
 
-\item 
 \begin{enumerate}
-\item What are the co-ordinates of the vertices of polygon $MNPQ$?
-\item  Enlarge the polygon through the origin by using a constant factor of $c = 3$, obtaining polygon $M'N'P'Q'$. Draw this on the same set of axes.
-\item What are the co-ordinates of the new vertices?
-\item Now draw $M''N''P''Q''$ which is an anticlockwise rotation of $MNPQ$ by $90^{\circ}$ around the origin.
-\item Find the inclination of $OM''$.
+\item What are the co-ordinates of the vertices of $\triangle ABC$ and $\triangle A'B'C'$?
+\item Giving reasons, calculate the value of $k$.
+\item If the area of $\triangle ABC$ is $m$ times the area of $\triangle A'B'C'$, what is $m$?
 \end{enumerate}
+
+\item Examine the polygon below.
+
 \begin{center} 
 \scalebox{1} % Change this value to rescale the drawing.
 {
@@ -2219,6 +2198,15 @@ Copy polygon $STUV$ onto squared paper and then answer the following questions.
 \end{pspicture} 
 }
 \end{center}
+
+\begin{enumerate}
+\item What are the co-ordinates of the vertices of polygon $MNPQ$?
+\item  Enlarge the polygon through the origin by using a constant factor of $c = 3$, obtaining polygon $M'N'P'Q'$. Draw this on the same set of axes.
+\item What are the co-ordinates of the new vertices?
+\item Now draw $M''N''P''Q''$ which is an anticlockwise rotation of $MNPQ$ by $90^{\circ}$ around the origin.
+\item Find the inclination of $OM''$.
+\end{enumerate}
+
 
 \end{enumerate}
 }
