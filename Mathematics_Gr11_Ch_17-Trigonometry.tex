@@ -60,7 +60,7 @@ The works of the following people or cultures can be investigated:
 \subsection{Functions of the Form $y=\sin(k\theta)$}
 In the equation, $y=\sin(k\theta)$, $k$ is a constant and has different effects on the graph of the function. The general shape of the graph of functions of this form is shown in Figure~\ref{fig:m:t11:g:sinkx} for the function $f(\theta)=\sin(2\theta)$.
 
-\begin{figure}[!ht]
+\begin{figure}[H]
 \begin{center}
 \begin{pspicture}(-4,-1.5)(4,1.5)
 %\psgrid[gridcolor=gray]
@@ -91,23 +91,27 @@ These different properties are summarised in Table~\ref{tab:m:t11:g:sinkx}.
 
 \begin{table}[htb]
 \begin{center}
-\caption{Table summarising general shapes and positions of graphs of functions of the form $y=\sin(kx)$. The curve $y=\sin(x)$ is shown as a dotted line.}
+\caption{Table summarising general shapes and positions of graphs of functions of the form $y=\sin(kx)$. The curve $y=\sin(x)$ is shown as a dotted line.\newline}
 \label{tab:m:t11:g:sinkx}
 \begin{tabular}{|c|c|}\hline
 $k>0$&$k<0$\\\hline\hline
+\scalebox{1.5}{
 \begin{pspicture}(-1.2,-1.5)(1.2,1.5)
 \psset{yunit=0.5,xunit=0.0111}
 \psaxes[arrows=<->,dx=0,Dx=720,dy=0,Dy=10,xunit=0.25](0,0)(-450,-1.5)(450,1.5)
 \psplot[plotstyle=curve,arrows=<->,xunit=0.25]{-360}{360}{x 2 mul sin}
 \psplot[plotstyle=curve,arrows=<->,xunit=0.25,linestyle=dotted]{-360}{360}{x sin}
 \end{pspicture}
+}
 &
+\scalebox{1.5}{
 \begin{pspicture}(-1.2,-1.5)(1.2,1.5)
 \psset{yunit=0.5,xunit=0.0111}
 \psaxes[arrows=<->,dx=0,Dx=720,dy=0,Dy=10,xunit=0.25](0,0)(-450,-1.5)(450,1.5)
 \psplot[plotstyle=curve,arrows=<->,xunit=0.25]{-360}{360}{x 2 mul neg sin}
 \psplot[plotstyle=curve,arrows=<->,xunit=0.25,linestyle=dotted]{-360}{360}{x sin}
-\end{pspicture}\\\hline
+\end{pspicture}
+}\\\hline
 \end{tabular}
 \end{center}
 \end{table}
@@ -134,13 +138,26 @@ In the equation, $y=\cos(k\theta)$, $k$ is a constant and has different effects 
 
 \begin{figure}[!ht]
 \begin{center}
+\scalebox{1.5}{
 \begin{pspicture}(-4,-1.5)(4,1.5)
 %\psgrid[gridcolor=gray]
-\psset{yunit=1,xunit=0.01111}
-\psaxes[dx=90,Dx=90]{<->}(0,0)(-360,-1.5)(360,1.5)
+\psset{yunit=1,xunit=0.0111}
+% \renewcommand{\pshlabel}[1]{\small #1}
+% \renewcommand{\psvlabel}[1]{\small #1}
+% \renewcommand{\pshlabel}[1]{\bfseries #1}% for x-axis
+% \renewcommand{\psvlabel}[1]{\bfseries #1}% for y-axis
+
+% \renewcommand{\pshlabel}[1]{\scriptsize#1}
+% \renewcommand{\psvlabel}[1]{\scriptsize#1}
+\def\pshlabel#1{\tiny #1}
+\def\psvlabel#1{\tiny #1}
+
+% \psaxes[labelFontSize=\scriptscriptstyle,dx=45,Dx=45]{<->}(0,0)(-360,-1.5)(360,1.5)
+\psaxes[dx=45,Dx=45]{<->}(0,0)(-360,-1.5)(360,1.5)
 \psplot[plotstyle=curve,arrows=<->,linestyle=dotted]{-360}{360}{x cos}
 \psplot[plotstyle=curve,arrows=<->]{-360}{360}{x 2 mul cos}
 \end{pspicture}
+}
 \caption{Graph of $f(\theta)=\cos(2\theta)$ (solid line) and the graph of $g(\theta)=cos(\theta)$ (dotted line).}
 \label{fig:m:t11:g:coskx}
 \end{center}
@@ -163,10 +180,11 @@ These different properties are summarised in Table~\ref{tab:m:t11:g:coskx}.
 
 \begin{table}[htb]
 \begin{center}
-\caption{Table summarising general shapes and positions of graphs of functions of the form $y=\cos(kx)$. The curve $y=\cos(x)$ is plotted with a dotted line.}
+\caption{Table summarising general shapes and positions of graphs of functions of the form $y=\cos(kx)$. The curve $y=\cos(x)$ is plotted with a dotted line.\newline}
 \label{tab:m:t11:g:coskx}
 \begin{tabular}{|c|c|}\hline
 $k>0$&$k<0$\\\hline\hline
+\scalebox{1.5}{
 \begin{pspicture}(-1.2,-1)(1.2,1)
 %\psgrid
 \psset{yunit=0.5,xunit=0.0111}
@@ -174,14 +192,17 @@ $k>0$&$k<0$\\\hline\hline
 \psplot[plotstyle=curve,arrows=<->,xunit=0.25]{-360}{360}{x 2 mul cos}
 \psplot[plotstyle=curve,arrows=<->,xunit=0.25,linestyle=dotted]{-360}{360}{x cos}
 \end{pspicture}
+}
 &
+\scalebox{1.5}{
 \begin{pspicture}(-1.2,-1)(1.2,1)
 %\psgrid
 \psset{yunit=0.5,xunit=0.0111}
 \psaxes[arrows=<->,dx=0,Dx=720,dy=0,Dy=10,xunit=0.25](0,0)(-450,-1.5)(450,1.5)
-\psplot[plotstyle=curve,arrows=<->,xunit=0.25]{-360}{360}{x 2 mul neg cos}
+\psplot[plotstyle=curve,arrows=<->,xunit=0.25]{-360}{360}{x 2 mul cos neg}
 \psplot[plotstyle=curve,arrows=<->,xunit=0.25,linestyle=dotted]{-360}{360}{x cos}
-\end{pspicture}\\\hline
+\end{pspicture}
+}\\\hline
 \end{tabular}
 \end{center}
 \end{table}
@@ -221,7 +242,7 @@ In the equation, $y=\tan(k\theta)$, $k$ is a constant and has different effects 
 \multirput(-360,0)(180,0){5}{\tanx}
 
 \end{pspicture}
-\caption{The graph of $\tan(2\theta)$ (solid line) and the graph of $g(\theta)=\tan(\theta)$ (dotted line). The asymptotes are shown as dashed lines.}
+\caption{The graph of $f(\theta)=\tan(2\theta)$ (solid line) and the graph of $g(\theta)=\tan(\theta)$ (dotted line). The asymptotes are shown as dashed lines.}
 \label{fig:m:t11:g:tankx}
 \end{center}
 \end{figure}
@@ -243,7 +264,7 @@ These different properties are summarised in Table~\ref{tab:m:t11:g:tankx}.
 
 \begin{table}[htb]
 \begin{center}
-\caption{Table summarising general shapes and positions of graphs of functions of the form $y=\tan(k\theta)$. }
+\caption{Table summarising general shapes and positions of graphs of functions of the form $y=\tan(k\theta)$.\newline}
 \label{tab:m:t11:g:tankx}
 \begin{tabular}{|c|c|}\hline
 $k>0$&$k<0$\\\hline\hline
@@ -318,7 +339,7 @@ These different properties are summarised in Table~\ref{tab:m:t11:g:sinxp}.
 
 \begin{table}[htb]
 \begin{center}
-\caption{Table summarising general shapes and positions of graphs of functions of the form $y=\sin(\theta +p)$.  The curve $y=\sin(\theta)$ is plotted with a dotted line.}
+\caption{Table summarising general shapes and positions of graphs of functions of the form $y=\sin(\theta +p)$.  The curve $y=\sin(\theta)$ is plotted with a dotted line.\newline}
 \label{tab:m:t11:g:sinxp}
 \begin{tabular}{|c|c|}\hline
 $p>0$&$p<0$\\\hline\hline
@@ -389,7 +410,7 @@ These different properties are summarised in Table~\ref{tab:m:t11:g:cosxp}.
 
 \begin{table}[htb]
 \begin{center}
-\caption{Table summarising general shapes and positions of graphs of functions of the form $y=\cos(\theta +p)$. The curve $y=\cos\theta$ is plotted with a dotted line.}
+\caption{Table summarising general shapes and positions of graphs of functions of the form $y=\cos(\theta +p)$. The curve $y=\cos\theta$ is plotted with a dotted line.\newline}
 \label{tab:m:t11:g:cosxp}
 \begin{tabular}{|c|c|}\hline
 $p>0$&$p<0$\\\hline\hline
@@ -444,7 +465,7 @@ In the equation, $y=\tan(\theta + p)$, $p$ is a constant and has different effec
 \multirput(-390,0)(180,0){5}{\tanxp}
 \multirput(-360,0)(180,0){5}{\tanx}
 \end{pspicture}
-\caption{The graph of $\tan(\theta+30^{\circ})$  (solid lines) and the graph of $g(\theta)=\tan(\theta)$ (dotted lines).}
+\caption{The graph of $f(\theta)=\tan(\theta+30^{\circ})$  (solid lines) and the graph of $g(\theta)=\tan(\theta)$ (dotted lines).}
 \label{fig:m:t11:g:tanxp}
 \end{center}
 \end{figure}
@@ -559,13 +580,11 @@ So, we have:
 &=&\frac{a}{\sqrt{2}a}\\
 &=&\frac{1}{\sqrt{2}}
 \end{eqnarray*}
-
 \begin{eqnarray*}
 \cos(45^\circ)&=&\frac{\mbox{adjacent$(45^\circ)$}}{\mbox{hypotenuse}}\\
 &=&\frac{a}{\sqrt{2}a}\\
 &=&\frac{1}{\sqrt{2}}
 \end{eqnarray*}
-
 \begin{eqnarray*}
 \tan(45^\circ)&=&\frac{\mbox{opposite$(45^\circ)$}}{\mbox{adjacent$(45^\circ)$}}\\
 &=&\frac{a}{a}\\
@@ -583,9 +602,12 @@ We can try something similar for $30^\circ$ and $60^\circ$. We start with an equ
 \pstRightAngle{C}{D}{B}
 \psline(B)(D)
 \rput(2.5,0.2){$60^\circ$}
-\rput{0}(1.8,1.65){$30^\circ$}
+\rput{90}(1.7,1.8){$30^\circ$}
 \rput{0}(1.3,1.){$v$}
+\rput{0}(2.5,1.3){$a$}
+\rput{0}(2.3,-0.3){$\frac{1}{2}a$}
 \end{pspicture}
+\vspace{0.2cm}
 \caption{An equilateral triangle with one angle bisected.}
 \label{m:t11:ti:3060}
 \end{center}
@@ -804,8 +826,8 @@ Prove: $\frac{1-\sin x}{\cos x} = \frac{\cos x}{1+\sin x}$
 	\begin{enumerate}
 		\item $\frac{1 + \sin\theta}{\cos\theta} = \frac{\cos\theta}{1 - \sin\theta}$
 		\item $\sin^2\theta + (\cos\theta - \tan\theta)(\cos\theta + \tan\theta)  = 1 - \tan^2\theta$
-		\item $\frac{(2\cos^2\theta - 1)}{1} + \frac{1}{(1 + \tan^2\theta)} = \frac{1 - \tan^2\theta}{1 + \tan^2\theta}$
-		\item $\frac{1}{\cos\theta} - \frac{\cos\theta\tan^2\theta}{1} = 1$
+		\item $\frac{(2\cos^2\theta - 1)}{1} + \frac{1}{(1 + \tan^2\theta)} = \frac{2 - \tan^2\theta}{1 + \tan^2\theta}$
+		\item $\frac{1}{\cos\theta} - \frac{\cos\theta\tan^2\theta}{1} = \cos\theta$
 		\item $\frac{2\sin\theta\cos\theta}{\sin\theta+\cos\theta} = \sin\theta+\cos\theta - \frac{1}{\sin\theta+\cos\theta}$
 		\item $\left(\frac{\cos\theta}{\sin\theta} + \tan\theta \right)\cdot\cos\theta = \frac{1}{\sin\theta}$
 	\end{enumerate}
@@ -1018,7 +1040,7 @@ Evaluate without using a calculator:
 \[\tan^2210^\circ-(1+\cos 120^\circ)\sin ^2225^\circ\]
 }%question
 {%answer
- \begin{eqnarray*}
+\begin{eqnarray*}
 & & \tan^2210^\circ-(1+\cos 120^\circ)\sin^2 225^\circ\\
 &=& [\tan(180^\circ+30^\circ)]^2-[1+\cos(180^\circ-60^\circ)]\cdot[ \sin(180^\circ+45^\circ)]^2\\
 &=& (\tan 30^\circ)^2 - [1+(-\cos 60^\circ)] \cdot (-\sin 45^\circ)^2\\
@@ -1203,15 +1225,15 @@ Thus for sine and cosine we have
  \cos (90^\circ-\theta) &=& \sin\theta
 \end{eqnarray*}
 
-\begin{wex}{Co-co Rule}
+\begin{wex}{Co-function Rule}
 {%question
 Write each of the following in terms of $40^{\circ}$ using $\sin (90^{\circ}-\theta)=\cos \theta$ and $\cos (90^{\circ}-\theta)=\sin \theta$. \begin{enumerate} \item $\cos 50^{\circ}$ \item $\sin 320^{\circ}$ \item $\cos 230^{\circ}$ \end{enumerate}
 }%question
 {%answer
 \begin{enumerate}
-\item $\cos 50^{\circ}=\cos (90^{\circ}-40^{\circ}) = \sin 40^{\circ}$
+\item $\cos 50^{\circ}=\sin (90^{\circ}-50^{\circ}) = \sin 40^{\circ}$
 \item $\sin 320^{\circ} = \sin (360^{\circ}-40^{\circ}) = -\sin 40^{\circ}$
-\item $\cos 230^{\circ} = \cos (180^{\circ}+50^{\circ}) = -\cos 50^{\circ} = -\cos (90^{\circ} - 40^{\circ}) = -\sin 40^{\circ}$
+\item $\cos 230^{\circ} =\cos (180^{\circ}+50^{\circ}) = -\cos 50^{\circ} \newline = -\sin (90^{\circ} - 50^{\circ}) = -\sin 40^{\circ}$
 \end{enumerate}
 }%answer
 \end{wex}
@@ -1278,7 +1300,7 @@ Angles in the third and fourth quadrants may be written as $270^\circ \pm \theta
 %\end{syllabus}
 
 %Chapters~\ref{m:se10} and \ref{m:se11} 
-In Grade 10 we focused on the solution of algebraic equations and excluded equations that dealt with trigonometric functions (i.e. $\sin$ and $\cos$). In this section, the solution of trigonometric equations will be discussed. 
+In Grade 10 and 11 we focused on the solution of algebraic equations and excluded equations that dealt with trigonometric functions (i.e. $\sin$ and $\cos$). In this section, the solution of trigonometric equations will be discussed. 
 
 %The methods described in Chapters~\ref{m:se10} and \ref{m:se11} also apply here. 
 The methods described in previous Grades also apply here. 
@@ -1320,7 +1342,7 @@ Both graphs, for $-720^{\circ}<\theta<720^{\circ}$, are shown in Figure \ref{fig
 
 In the domain for $\theta$ of $-720^{\circ}<\theta<720^{\circ}$, there are eight possible solutions for the equation $\sin \theta = 0,5$. These are $\theta=[-690^{\circ}; -570^{\circ}; -330^{\circ}; -210^{\circ}; 30^{\circ}; 150^{\circ}; 390^{\circ}; 510^{\circ}]$
 
-\begin{wex}{}{Find $\theta$, if $\tan \theta + 0,5=1,5$, with $0^{\circ}<\theta<90^{\circ}$. Determine the solution graphically.}{
+\begin{wex}{}{Find $\theta$, if $\tan \theta + 0,5=1,5$, with $0^{\circ}<\theta<90^{\circ}$. Determine the solution graphically.\\}{
 \westep{Write the equation so that all the terms with the unknown quantity (i.e. $\theta$) are on one side of the equation.}
 \begin{eqnarray*}
 \tan \theta + 0,5&=&1,5\\
@@ -1353,7 +1375,7 @@ The graphs intersect at $\theta=45^{\circ}.$
 \end{wex}
 
 \subsection{Algebraic Solution}
-The inverse trigonometric functions $\arcsin$, $\arccos$ and $\arctan$ can also be used to solve trigonometric equations. These may be shown as second functions on your calculator: $sin^{-1}$, $cos^{-1}$ and $tan^{-1}$.
+The inverse trigonometric functions can be used to solve trigonometric equations. These may be shown as second functions on your calculator: $sin^{-1}$, $cos^{-1}$ and $tan^{-1}$.
 
 Using inverse trigonometric functions, the equation
 \begin{equation*}
@@ -1363,16 +1385,20 @@ Using inverse trigonometric functions, the equation
 is solved as
 \begin{eqnarray*}
 \sin \theta &=&0,5\\
-\therefore \quad \theta &=&\arcsin 0,5\\
+%\therefore \quad \theta &=&\arcsin 0,5\\
 &=&30^{\circ}
 \end{eqnarray*}
+On your calculator you would type \fbox{\raisebox{0cm}[8pt][1pt]{$\sin^{-1}$}} \fbox{\raisebox{0cm}[8pt][1pt]{$($}} \fbox{\raisebox{0cm}[8pt][1pt]{$0,5$}} \fbox{\raisebox{0cm}[8pt][1pt]{$)$}} \fbox{\raisebox{0cm}[8pt][1pt]{$=$}} to find the size of $\theta$.\\
+% \vspace{10pt}
+\newline
+This step does not need to be shown in your calculations.
 
-\begin{wex}{}{Find $\theta$, if $\tan \theta + 0,5=1,5$, with $0^{\circ}<\theta<90^{\circ}$. Determine the solution using inverse trigonometric functions.}{
+\begin{wex}{}{Find $\theta$, if $\tan \theta + 0,5=1,5$, with $0^{\circ}<\theta<90^{\circ}$. Determine the solution using inverse trigonometric functions.\\}{
 \westep{Write the equation so that all the terms with the unknown quantity (i.e. $\theta$) are on one side of the equation. Then solve for the angle using the inverse function.}
 \begin{eqnarray*}
 \tan \theta + 0,5&=&1,5\\
 \tan \theta &=&1\\
-\therefore \quad \theta &=& \arctan 1\\
+% \therefore \quad \theta &=& \arctan 1\\
 &=&45^{\circ}
 \end{eqnarray*}}
 \end{wex}
@@ -1401,7 +1427,7 @@ As you can see from Figure \ref{fig:trig:sin0.7}, there are \emph{four} possible
 
 Any problem on trigonometric equations will require two pieces of information to solve. The first is the equation itself and the second is the \emph{range} in which your answers must lie. The hard part is making sure you find all of the possible answers within the range. Your calculator will always give you the \emph{smallest} answer (\ie the one that lies between $-90^\circ$ and $90^\circ$ for tangent and sine and one between $0^\circ$ and $180^\circ$ for cosine). Bearing this in mind we can already solve trigonometric equations within these ranges.
 
-\begin{wex}{}{Find the values of $x$ for which $\sin\left( \tfrac{x}{2}\right)=0,5$ if it is given that $x <90^\circ$.} 
+\begin{wex}{}{Find the values of $x$ for which $\sin\left( \tfrac{x}{2}\right)=0,5$ if it is given that $x <90^\circ$.\\} 
 {Because we are told that $x$ is an acute angle, we
 can simply apply an inverse trigonometric function to both sides.
 \begin{eqnarray}
@@ -1429,7 +1455,7 @@ line at $y=0,5$.
 \end{pspicture}
 \end{center}
 \westep{}Notice that this line touches the graph four times. This means
-that there are four solutions to the equation.
+that there are four solutions to the equation.\\
 
 \westep{}
 Read off the $x$ values of those intercepts from the graph as $x=-330^\circ$; $-210^\circ$; $30^\circ$ and $150^\circ$.
@@ -1620,8 +1646,9 @@ A more convenient way of writing this is to note that all functions are positive
 Now that we know in which quadrants our solutions lie, we need to know which angles in these quadrants satisfy our equation.\\
 Calculators give us the smallest possible answer (sometimes negative) which satisfies the equation. For example, if we wish to solve $\sin\theta=0,3$ we can apply the inverse sine function to both sides of the equation to find:
 \begin{eqnarray*}
-\theta&=&\arcsin 0,3 \\
-&=& 17,46^\circ
+\sin\theta&=&0,3\\
+% \theta&=&\arcsin 0,3 \\
+\therefore \theta&=& 17,46^\circ
 \end{eqnarray*}
 However, we know that this is just one of infinitely many possible answers. We get the rest of the answers by finding relationships between this small angle, $\theta$, and answers in other quadrants.\\
 To do this we use our small angle $\theta$ as a \emph{reference angle}. We then look at the sign of the trigonometric function in order to decide in which quadrants we need to work (using the CAST diagram) and add multiples of the period to each, remembering that sine, cosine and tangent are periodic (repeating) functions. To add multiples of the period we use $(360^{\circ}\cdot n)$ (where $n$ is an integer) for sine and cosine and $(180^{\circ}\cdot n)$; $n \in \mathbb{Z}$, for the tangent. \\
@@ -1650,8 +1677,8 @@ $T$ & $C$
 The small angle $\theta$ is the angle returned by the calculator:
 \begin{eqnarray*}
 \sin \theta &= &0,3\\
-\Rightarrow \theta &=& \arcsin 0,3 \\
-\Rightarrow \theta &=& 17,46^\circ
+% \Rightarrow \theta &=& \arcsin 0,3 \\
+\therefore \theta &=& 17,46^\circ
 \end{eqnarray*}
 
 \westep{Determine the general solution}
@@ -1675,7 +1702,7 @@ Our solution lies in quadrants I and II. We therefore use $\theta$ and $180^\cir
 &=& 162,54^{\circ} + (360^{\circ}\cdot n) \mbox{; } n \in \mathbb{Z}
 \end{eqnarray*}
 
-This is called the \emph{general solution}.
+This is called the \emph{general solution}.\\
 
 \westep{Find the specific solutions}
 We can then find \emph{all} the values of $\theta$ by substituting $n=\ldots-1;~0;~1;~2;\ldots$etc.\\
@@ -1689,22 +1716,26 @@ We can find as many as we like or find specific solutions in a given interval by
 
 \subsection{General Solution Using Periodicity}
 Up until now we have only solved trigonometric equations where the argument (the bit after the function, e.g. the $\theta$ in $\cos\theta$ or the $(2x-7)$ in $\tan(2x-7)$), has been $\theta$. If there is anything more complicated than this we need to be a little more careful. \\
-Let us try to solve $\tan(2x-10^\circ)=2,5$ in the range $-360^\circ \leq x \leq 360^\circ$. We want solutions for positive tangent so using our CAST diagram we know to look in the $1^{st}$ and $3^{rd}$ quadrants. Our calculator tells us that $\arctan(2,5)=68,2^\circ$. This is our reference angle. So to find the general solution we proceed as follows:
+\newline
+Let us try to solve $\tan(2x-10^\circ)=2,5$ in the range $-360^\circ \leq x \leq 360^\circ$. We want solutions for positive tangent so using our CAST diagram we know to look in the $1^{st}$ and $3^{rd}$ quadrants. Our calculator tells us that $2x-10^\circ=68,2^\circ$. This is our reference angle. So to find the general solution we proceed as follows:
  \begin{eqnarray*}
- \tan(2x-10^{\circ}) &=& 2,5\ [68,2^{\circ}]\\
+ \tan(2x-10^{\circ}) &=& 2,5\\
+ \therefore 2x-10^\circ &=& 68,2^{\circ}\\
  \mathrm{I:} \quad 2x-10^{\circ}&=&68,2^{\circ}+(180^{\circ}\cdot n)\\ 2x&=&78,2^{\circ}+(180^{\circ}\cdot n)\\
  x&=&39,1^{\circ}+(90^{\circ}\cdot n)\mbox{; }n \in \mathbb{Z} \\
 \end{eqnarray*}
 This is the general solution. Notice that we added the $10^{\circ}$ and divided by $2$ only at the end. Notice that we added $(180^{\circ}\cdot n)$ because the tangent has a period of $180^{\circ}$. This is \textbf{also} divided by $2$ in the last step to keep the equation balanced. We chose quadrants I and III because $\tan$ was positive and we used the formulae $\theta$ in quadrant I and $(180^{\circ}+\theta)$ in quadrant III. To find solutions where $-360^{\circ}<x<360^{\circ}$ we substitue integers for $n$:
 \begin{itemize} 
-\item $n=0$; $x=39,1^{\circ}$; $129,1^{\circ}$ 
-\item $n=1$; $x=129,1^{\circ}$; $219,1^{\circ}$ 
-\item $n=2$; $x=219,1^{\circ}$; $309,1^{\circ}$ 
-\item $n=3$; $x=309,1^{\circ}$; $399,1^{\circ}$ (too big!) 
-\item $n=-1$; $x=-50,9^{\circ}$; $39,1^{\circ}$ 
-\item $n=-2$; $x=-140,1^{\circ}$; $-50,9^{\circ}$ 
-\item $n=-3$; $x=-230,9^{\circ}$; $-140,9^{\circ}$ 
-\item $n=-4$; $x=-320,9^{\circ}$; $-230,9^{\circ}$ 
+\item $n=0$; $x=39,1^{\circ}$; $219,1^{\circ}$
+\item $n=1$; $x=129,1^{\circ}$; $309,1^{\circ}$
+\item $n=2$; $x=219,1^{\circ}$; $399,1^{\circ}$ (too big!)
+\item $n=3$; $x=309,1^{\circ}$; $489,1^{\circ}$ (too big!)
+\item $n=-1$; $x=-50,9^{\circ}$; $129,1^{\circ}$
+\item $n=-2$; $x=-140,9^{\circ}$; $-39,9^{\circ}$
+\item $n=-3$; $x=-230,9^{\circ}$; $-50,9^{\circ}$
+\item $n=-4$; $x=-320,9^{\circ}$; $-140,9^{\circ}$
+\item $n=-5$; $x=-410,9^{\circ}$; $-230,9^{\circ}$
+\item $n=-6$; $x=-500,9^{\circ}$; $-320,9^{\circ}$
 \end{itemize} 
 Solution: $x=-320,9^{\circ}; -230^{\circ}; -140,9^{\circ}; -50,9^{\circ}; 39,1^{\circ}; 129,1^{\circ}; 219,1^{\circ}$ and $309,1^{\circ}$
 
@@ -1713,7 +1744,7 @@ Just like with regular equations without trigonometric functions, solving trigon
 
 \begin{wex}{}
 {%q
-Write down the general solution for $3\cos(\theta - 15^\circ)-1 = -2,583$
+Write down the general solution for $3\cos(\theta - 15^\circ)-1 = -2,583$\\
 }
 {%a
 \begin{eqnarray*} 
@@ -1763,18 +1794,17 @@ Here are two examples on the level of the hardest trigonometric equations you ar
 
 \begin{wex}{}
 {
-Solve $2\cos^2x-\cos x - 1 = 0$ for $x\in [-180^\circ;360^\circ]$
+Solve $2\cos^2x-\cos x - 1 = 0$ for $x\in [-180^\circ;360^\circ]$\\
 }
 {
 \westep{Use a temporary variable}
 We note that $\cos x$ occurs twice in the equation. So, let $y=\cos x$. Then we have $2y^2-y-1=0$
-Note that with practice you may be able to leave out this step.
+Note that with practice you may be able to leave out this step.\\
 
 \westep{Solve the quadratic equation}
 Factorising yields
 \[(2y+1)(y-1)=0 \]
 \[\therefore \quad y = -0,5 \quad \mbox{or} \quad y=1 \]
-}
 
 \westep{Substitute back and solve the two resulting equations}
 We thus get
@@ -1801,6 +1831,7 @@ General solution:
 
 Now we find the specific solutions in the interval $[-180^\circ;360^\circ]$. Appropriate values of $n$ yield
 \[x= -120^\circ; 0^\circ; 120^\circ; 240^\circ; 360^\circ \]
+}
 \end{wex}
 
 \begin{wex}{}
@@ -1821,6 +1852,7 @@ which gives two equations\\
 \end{minipage}
 \begin{minipage}{0.5\textwidth}
 \begin{eqnarray*}
+2\sin - \cos x &=& 0\\
 2\sin x &=& \cos x \\
 \frac{2\sin x}{\cos x} &=& \frac{\cos x}{\cos x} \\
 2\tan x &=& 1 \\
@@ -1838,10 +1870,10 @@ General solution:\\
 \begin{minipage}{0.5\textwidth}
 \begin{eqnarray*}
 \tan x &=& \tfrac{1}{2} \quad [26,57^\circ]\\
-\mathrm{I;III:} \quad x &=& 26,57^\circ +  (180^\circ\cdot n)\mbox{;} n\in\mathbb{Z} 
+\mathrm{I;III:} \quad x &=& 26,57^\circ +  (180^\circ\cdot n)\mbox{;} n\in\mathbb{Z}\\
 \end{eqnarray*}
-\end{minipage}\\
-\\
+\end{minipage}
+
 Specific solution in the interval  $[-360^\circ;360^\circ]$:
 \[ x = -360^\circ; -206,57^\circ; -180^\circ; -26,57^\circ; 0^\circ; 26,57^\circ; 180^\circ; 206,25^\circ; 360^\circ \]
 }%a
@@ -1954,7 +1986,11 @@ and
 \end{eqnarray*}
 
 Therefore the area of $\triangle ABC$ is:
-\nequ{\frac{1}{2}c\cdot h=\frac{1}{2}c \cdot b\cdot \sin \hat{A} = \frac{1}{2}c \cdot a\cdot \sin \hat{B}}
+\begin{eqnarray*}
+& &\frac{1}{2}c\cdot h\\
+&=&\frac{1}{2}c \cdot b\cdot \sin \hat{A}\\
+&=& \frac{1}{2}c \cdot a\cdot \sin \hat{B}
+\end{eqnarray*}
 
 Similarly, by drawing the perpendicular between point $B$ and line $AC$ we can show that:
 \nequ{\frac{1}{2}c \cdot b\cdot \sin \hat{A} = \frac{1}{2}a \cdot b\cdot \sin \hat{C}}
@@ -2002,14 +2038,14 @@ We need to know the lengths of the two sides ${AC}$ and ${BC}$. We can use the s
 \begin{eqnarray*}
 \frac{BC}{\sin \hat{A}}&=&\frac{AB}{\sin \hat{C}}\\
 BC&=&\frac{AB\cdot \sin \hat{A}}{\sin \hat{C}}\\
-&=&\frac{(0,67 ~\rm{km}) \sin(37^\circ)}{\sin(128^\circ)}\\
+&=&\frac{(0,67) \sin(37^\circ)}{\sin(128^\circ)}\\
 &=&0,51\;\rm{km}
 \end{eqnarray*}
 
 \begin{eqnarray*}
 \frac{AC}{\sin \hat{B}}&=&\frac{AB}{\sin \hat{C}}\\
 AC&=&\frac{AB\cdot \sin \hat{B}}{\sin \hat{C}}\\
-&=&\frac{(0,67 ~\rm{km}) \sin(15^\circ)}{\sin(128^\circ)}\\
+&=&\frac{(0,67) \sin(15^\circ)}{\sin(128^\circ)}\\
 &=&0,22\;\rm{km}
 \end{eqnarray*}
 
@@ -2128,11 +2164,11 @@ The other cases can be proved in an identical manner.
 {
 Applying the cosine rule:
 \begin{eqnarray*}
-a^2 & = & b^2+c^2 - 2 bd\cos \hat{A}\\
+a^2 & = & b^2+c^2 - 2 bc\cos \hat{A}\\
 \therefore \quad \cos \hat{A}&=& \frac{b^2+c^2-a^2}{2bc}\\
 &=& \frac{8^2+5^2-7^2}{2\cdot 8 \cdot 5} \\
 &=& 0,5 \\
-\therefore \quad \hat{A} &=& \arccos 0,5 = 60^\circ
+\therefore \quad \hat{A} &=& 60^\circ
 \end{eqnarray*}
 }%a
 \end{wex}
@@ -2170,7 +2206,11 @@ a^2 & = & b^2+c^2 - 2 bd\cos \hat{A}\\
 \Definition{The Area Rule}{The area rule applies to any triangle and states that the area of a triangle is given by half the product of any two sides with the sine of the angle between them.}
 
 That means that in the $\triangle DEF$, the area is given by:
-\nequ{A=\frac{1}{2}DE\cdot EF \sin\hat{E} = \frac{1}{2}EF\cdot FD \sin\hat{F}=\frac{1}{2}FD\cdot DE \sin\hat{D}}
+\begin{eqnarray*}
+A &=& \frac{1}{2}DE\cdot EF \sin\hat{E}\\
+&=& \frac{1}{2}EF\cdot FD \sin\hat{F}\\
+&=& \frac{1}{2}FD\cdot DE \sin\hat{D}\\
+\end{eqnarray*}
 
 \begin{center}
 \begin{pspicture}(-0.6,-0.4)(3.6,3.2)
@@ -2261,7 +2301,8 @@ Draw sketches of the figures you use in this exercise.
 \section*{Summary of the Trigonometric Rules and Identities}
 \begin{center}
 \begin{tabular}{cc}
-Pythagorean Identity  & Ratio Identity \\
+% Pythagorean Identity  & Ratio Identity \\
+Squares Identity  & Quotient Identity\\
 \\
 $\cos^2{\theta}+\sin^2{\theta}=1 $ & $ \tan\theta=\frac{\sin\theta}{\cos\theta} $ \\
 \\
@@ -2316,11 +2357,9 @@ Determine:
 \end{minipage}
 
 \begin{minipage}{0.7\textwidth}
-\item $WXYZ$ is a trapezium ($WX \parallel XZ$) with $WX=3~\emm$; $YZ=1,5~\emm$;$\hat{Z} = 120^\circ$ and $\hat{W} = 30^\circ$
-\begin{enumerate}
-\item Determine the distances $XZ$ and $XY$.
-\item Find the angle $\hat{C}$.
-\end{enumerate}
+\item $WXYZ$ is a trapezium ($WX \parallel XZ$) with $WX=3~\emm$; \newline $YZ=1,5~\emm$;$\hat{Z} = 120^\circ$ and $\hat{W} = 30^\circ$.\\
+\newline
+Determine the distances $XZ$ and $XY$.
 \end{minipage}
 \begin{minipage}{0.3\textwidth}
 \scalebox{0.8} % Change this value to rescale the drawing.
