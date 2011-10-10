@@ -13,21 +13,23 @@ In probability theory event are either independent or dependent. This chapter de
 \section{Definitions}
 Two events are independent if knowing something about the value of one event does not give any information about the value of the second event. For example, the event of getting a "$1$" when a die is rolled and the event of getting a "$1$" the second time it is thrown are independent.
 
-\Definition{Independent Events}{Two events $A$ and $B$ are independent if when one of them happens, it doesn't affect whether the one happens or not.}
+% \Definition{Independent Events}{Two events $A$ and $B$ are independent if when one of them happens, it doesn't affect whether the one happens or not.}
 
 The probability of two independent events occurring, $P(A \cap B)$, is given by:
 \equ{P(A \cap B) = P(A)\times P(B)}{eq:independentproduct}
 
-\begin{wex}{Independent Events}{What is the probability of rolling a $1$ and then rolling a $6$ on a fair die?}{
+\Definition{Independent events}{Events are said to be independent if the result or outcome of one event does not affect the result or outcome of the other event. So $P(A/C)=P(A)$, where $P(A/C)$ represents the probability of event $A$ after event $C$ has occured.}
+
+\begin{wex}{Independent Events}{What is the probability of rolling a $1$ and then rolling a $6$ on a fair die?\\}{
 \westep{Identify the two events and determine whether the events are independent or not}
 
-Event $A$ is rolling a $1$ and event $B$ is rolling a $6$. Since the outcome of the first event does not affect the outcome of the second event, the events are independent.
+Event $A$ is rolling a $1$ and event $B$ is rolling a $6$. Since the outcome of the first event does not affect the outcome of the second event, the events are independent.\\
 
 \westep{Determine the probability of the specific outcomes occurring, for each event}
 
 The probability of rolling a $1$ is $\frac{1}{6}$ and the probability of rolling a $6$ is $\frac{1}{6}$.
 
-Therefore, $P(A)=\frac{1}{6}$ and $P(B)=\frac{1}{6}$.
+Therefore, $P(A)=\frac{1}{6}$ and $P(B)=\frac{1}{6}$.\\
 
 \westep{Use equation~\ref{eq:independentproduct} to determine the probability of the two events occurring together.}
 
@@ -42,16 +44,18 @@ The probability of rolling a $1$ and then rolling a $6$ on a fair die is $\frac{
 
 Consequently, two events are dependent if the outcome of the first event affects the outcome of the second event.
 
-\begin{wex}{Dependent Events}{A cloth bag has four coins, one R$1$ coin, two R$2$ coins and one R$5$ coin. What is the probability of fisrt selecting a R$1$ coin and then selecting a R$2$ coin?}{
+\Definition{Dependent events}{Two events are dependent if the outcome of one event is affected by the outcome of the other event i.e. $P(A/C)\neq P(A)$.}
+
+\begin{wex}{Dependent Events}{A cloth bag has four coins, one R$1$ coin, two R$2$ coins and one R$5$ coin. What is the probability of fisrt selecting a R$1$ coin and then selecting a R$2$ coin?\\}{
 \westep{Identify the two events and determine whether the events are independent or not}
 
-Event $A$ is selecting a R$1$ coin and event $B$ is next selecting a R$2$. Since the outcome of the first event affects the outcome of the second event (because there are less coins to choose from after the first coin has been selected), the events are dependent.
+Event $A$ is selecting a R$1$ coin and event $B$ is next selecting a R$2$. Since the outcome of the first event affects the outcome of the second event (because there are less coins to choose from after the first coin has been selected), the events are dependent.\\
 
 \westep{Determine the probability of the specific outcomes occurring, for each event}
 
 The probability of first selecting a R$1$ coin is $\frac{1}{4}$ and the probability of next selecting a R$2$ coin is $\frac{2}{3}$ (because after the R$1$ coin has been selected, there are only three coins to choose from).
 
-Therefore, $P(A)=\frac{1}{4}$ and $P(B)=\frac{2}{3}$.
+Therefore, $P(A)=\frac{1}{4}$ and $P(B)=\frac{2}{3}$.\\
 
 \westep{Use equation~\ref{eq:independentproduct} to determine the probability of the two events occurring together.}
 
@@ -95,11 +99,15 @@ Totals             & $120$  & $90$     & $210$    \\
 \end{tabular}
 \end{center}
 \westep{Work out probabilities}
-P(male).P(positive result)=$\frac{120}{210}=0,57$ \newline
-P(female).P(positive result)=$\frac{90}{210}=0,43$ \newline
-P(male and positive result)=$\frac{50}{210}=0,24$
+\begin{align*}
+\text{P(male).P(positive result)} =\frac{120}{210}=0,57\\
+\newline
+\text{P(female).P(positive result)} =\frac{90}{210}=0,43\\
+\newline
+\text{P(male and positive result)} =\frac{50}{210}=0,24
+\end{align*}
 \westep{Draw conclusion}
-P(male and positive result) is the observed probability and P(male).P(positive result) is the expected probability. These two are quite different. So there is no evidence that the medication's success is independent of gender.
+P(male and positive result) is the observed probability and P(male).P(positive result) is the expected probability. These two are quite different. So there is no evidence that the medication's success is independent of gender.\\
 \westep{Gender-independent results}
 To get gender independence we need the positive results in the same ratio as the gender. The gender ratio is: $120:90$, or $4:3$, so the number in the male and positive column would have to be $\frac{4}{7}$ of the total number of patients responding positively which gives $51,4$. This leads to the following table:
 \begin{center}
@@ -119,13 +127,12 @@ Totals             & $120$  & $9$0     & $210$    \\
 
 \subsubsection{Use of a Venn Diagram}
 We can also use Venn diagrams to check whether events are dependent or independent. 
-\Definition{Independent events}{Events are said to be independent if the result or outcome of one event does not affect the result or outcome of the other event. So $P(A/C)=P(A)$, where $P(A/C)$ represents the probability of event $A$ after event $C$ has occured.} 
-\Definition{Dependent events}{Two events are dependent if the outcome of one event is affected by the outcome of the other event i.e. $P(A/C)\neq P(A)$}.
+
 Also note that $P(A/C) = \frac{P(A\cap C)}{P(C)}$.
 For example, we can draw a Venn diagram and a contingency table to illustrate and analyse the following example.
 \begin{wex}{Venn diagrams and events}
 {
-A school decided that its uniform needed upgrading. The colours on offer were beige or blue or beige and blue. $40\%$ of the school wanted beige, $55\%$ wanted blue and $15\%$said a combination would be fine. Are the two events independent?
+A school decided that its uniform needed upgrading. The colours on offer were beige or blue or beige and blue. $40\%$ of the school wanted beige, $55\%$ wanted blue and $15\%$said a combination would be fine. Are the two events independent?\\
 }
 {
 \westep{Draw a Venn diagram}
