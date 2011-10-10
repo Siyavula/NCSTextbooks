@@ -313,7 +313,12 @@ In the equation, $y=\sin(\theta + p)$, $p$ is a constant and has different effec
 \begin{pspicture}(-4,-1.5)(4,1.5)
 %\psgrid[gridcolor=gray]
 \psset{yunit=1,xunit=0.01111}
-\psaxes[dx=90,Dx=90]{<->}(0,0)(-360,-1.5)(360,1.5)
+
+\def\pshlabel#1{\tiny #1}
+\def\psvlabel#1{\tiny #1}
+
+\psaxes[dx=30,Dx=30]{<->}(0,0)(-360,-1.5)(360,1.5)
+
 \psplot[plotstyle=curve,arrows=<->]{-360}{360}{x 30 add sin}
 \psplot[plotstyle=curve,arrows=<->,linestyle=dotted]{-360}{360}{x sin}
 \end{pspicture}
@@ -383,7 +388,12 @@ In the equation, $y=\cos(\theta + p)$, $p$ is a constant and has different effec
 \begin{pspicture}(-4,-1.5)(4,1.5)
 %\psgrid[gridcolor=gray]
 \psset{yunit=1,xunit=0.01111}
-\psaxes[dx=90,Dx=90]{<->}(0,0)(-360,-1.5)(360,1.5)
+
+\def\pshlabel#1{\tiny #1}
+\def\psvlabel#1{\tiny #1}
+
+\psaxes[dx=30,Dx=30]{<->}(0,0)(-360,-1.5)(360,1.5)
+
 \psplot[plotstyle=curve,arrows=<->,linestyle=dotted]{-360}{360}{x cos}
 \psplot[plotstyle=curve,arrows=<->]{-360}{360}{x 30 add cos}
 \end{pspicture}
@@ -461,7 +471,12 @@ In the equation, $y=\tan(\theta + p)$, $p$ is a constant and has different effec
 \def\tanx{
 \psline[linestyle=dashed,linecolor=lightgray](-90,-10)(-90,10)
 \psplot[plotpoints=500, arrows=<->,linestyle=dotted]{-80}{80}{x sin x cos div}}
-\psaxes[Dx=90, dx=90, Dy=5, dy=5]{<->}(0,0)(-450,-10)(450,10)
+
+\def\pshlabel#1{\tiny #1}
+\def\psvlabel#1{\tiny #1}
+
+\psaxes[Dx=30, dx=30, Dy=5, dy=5]{<->}(0,0)(-450,-10)(450,10)
+
 \multirput(-390,0)(180,0){5}{\tanxp}
 \multirput(-360,0)(180,0){5}{\tanx}
 \end{pspicture}
