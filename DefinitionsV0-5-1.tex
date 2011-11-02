@@ -362,20 +362,18 @@
 
 
 
-\newenvironment{IFact}[1]%
-{\vspace{3mm}\rmfamily
- \begin{center}\begin{pspicture}(0,0)(5,0.01)
- \psline[linecolor=red]{-}(0,0)(5,0)
-\end{pspicture}\end{center}
-%\psshadowbox{
- \begin{quote}%
-\rput(-1.5,0){\psfact}\noindent #1%
-\end{quote}%
- }%}
-{\begin{center}\begin{pspicture}(0,0)(5,0.01)
- \psline[linecolor=red]{-}(0,-0.1)(5,-0.1)
-\end{pspicture}\end{center}
-\vspace{3mm}\sffamily}%
+\newcommand{\IFact}[1]{
+\marginpar{%odd
+\begin{minipage}[m]{0.225\paperwidth}
+\begin{mdframed}[linecolor=black, linewidth=1.0pt,leftmargin=15pt, rightmargin=15pt]
+\textbf{\textit{FACT}}
+\end{mdframed}
+\begin{mdframed}[backgroundcolor=lightgray, linecolor=lightgray,skipabove=-4pt, leftmargin=15pt, rightmargin=15pt]
+\small #1
+\end{mdframed}
+\end{minipage}
+}
+}
 
 
 

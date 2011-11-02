@@ -1,5 +1,6 @@
-\documentclass[10pt,a4paper,titlepage,twoside,openright]{report}
+\documentclass[9pt,a4paper,titlepage,twoside,openright]{extbook}
 \renewcommand{\familydefault}{\sfdefault}
+\usepackage{extsizes}
 \usepackage{float} % for figures to appear where you want them
 \usepackage{setspace}
 \usepackage{graphicx}
@@ -43,9 +44,9 @@
 \sffamily
 
 \usepackage{mdframed}
+\usepackage{tikz}
 
-
-\include{DefinitionsV0-5}
+\input{../../DefinitionsV0-5-1}
 
 \begin{document}
 
@@ -90,12 +91,12 @@ of hours went into making them and they are a gift to everyone in the education 
 }
 \end{center}
 
-\include{AuthorListV0-5}
+\input{../../AuthorListV0-5}
 
 
 % Stuff copied from thesis
 % Dutch style of paragraph formatting, i.e. no indents. 
-\setlength{\parskip}{1.3ex plus 0.2ex minus 0.2ex}
+\setlength{\parskip}{0.7ex plus 0.2ex minus 0.2ex}
 \setlength{\parindent}{0pt}
 \pagestyle{fancy}
 \renewcommand{\sectionmark}[1]{\markright{\thesection}{}}

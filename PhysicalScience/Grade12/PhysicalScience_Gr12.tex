@@ -1,5 +1,6 @@
-\documentclass[10pt,a4paper,titlepage,twoside,openright]{report}
+\documentclass[9pt,a4paper,titlepage,twoside,openright]{extbook}
 \renewcommand{\familydefault}{\sfdefault}
+\usepackage{extsizes}
 \usepackage{float} % for figures to appear where you want them
 \usepackage{setspace}
 \usepackage{graphicx}
@@ -13,7 +14,7 @@
 \usepackage{pst-spectra}
 \usepackage{pst-slpe}
 \usepackage{pst-math}
-\usepackage{pst-diffraction}
+%\usepackage{pst-diffraction}
 
 %% ************* NB ************
 %% The order in which pstricks packages are loaded
@@ -27,6 +28,7 @@
 \usepackage{pst-optic}         %Jo
 \usepackage{pstricks-add}         %Jo
 \usepackage{pst-labo}         %Jo
+
 \usepackage{subfigure}
 \usepackage{multirow}
 \usepackage{amsmath}
@@ -42,9 +44,9 @@
 \sffamily
 
 \usepackage{mdframed}
+\usepackage{tikz}
 
-
-\include{DefinitionsV0-5}
+\input{../../DefinitionsV0-5-1}
 
 \begin{document}
 
