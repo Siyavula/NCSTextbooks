@@ -370,15 +370,70 @@
 \end{pspicture}\end{center}
 \vspace{3mm}\sffamily}%
 
+
+
+
 %Defining our own aside environment!
 \newcommand{\Extension}[2]
-{\vspace{3mm}
+{%\vspace{3mm}
+%\begin{quotation}
+%\rput(-2.5,0){\psbulb}\noindent%
+%\textit{Extension: #1}\\
+%#2
+%\end{quotation}
+%\vspace{3mm}
+\setlength{\saveparindentlength}{\parindent}
+\setlength{\parindent}{0pt}
+
+\ifdimless{\pagegoal-\pagetotal}{4em}%4em play with this 
+{\clearpage\vspace*{-\topskip}}{} 
+
 \begin{quotation}
-\rput(-2.5,0){\psbulb}\noindent%
-\textit{Extension: #1}\\
+\vspace*{25.6pt}
+{  \fontsize{12}\bfseries\itshape
+\begin{tikzpicture}[remember picture,overlay]
+    \node[anchor=west ,text centered, xshift=-40pt]
+      {\begin{tikzpicture}[remember picture, overlay]
+        \draw[color=white, draw=black, linewidth=1pt] (0,0) rectangle
+          (0.2\textwidth, 28pt);
+       \node[anchor=west, yshift=14pt, xshift=4pt, text centered]
+              { \bfseries ~ \color{black} Extension:};
+       \end{tikzpicture}
+    };
+    
+% now the white bar to the end of the paragraph
+    \node[anchor=west, xshift=45pt]{
+      \begin{tikzpicture}[remember picture, overlay]
+        \draw[fill=white, draw=black, linewidth=1pt] (0,0) rectangle
+          (0.8\textwidth-5pt,28pt);
+         \node[anchor=west, yshift=14pt, xshift=0pt, text centered]
+              { \textit{#1} };
+
+       \end{tikzpicture}
+
+
+      };
+   \end{tikzpicture}
+
+}
+
+\begin{mdframed}[leftline=true, topline=false, bottomline=true, rightline=false, linecolor=siyavula-gray, linewidth=10pt]
+\vspace{5pt}
+
 #2
+
+\end{mdframed}
 \end{quotation}
-\vspace{3mm}}
+\setlength{\parindent}{\saveparindentlength}
+
+
+
+
+
+
+
+
+}
 
 
 
@@ -443,15 +498,18 @@
 \newcommand{\equ}[2]{\begin{equation}#1\label{#2}\end{equation}}
 \newcommand{\nequ}[1]{\begin{equation*}#1\end{equation*}}
 
-\newcommand{\Tip}[1]
-{\vspace{3mm}
-\begin{center}
-\begin{minipage}[t]{0.95\textwidth}
-\rput(-1.5,0){\pstip}\noindent%
-\textbf{Important:} #1
+\newcommand{\Tip}[1]{
+\marginpar{%odd
+\begin{minipage}[m]{0.225\paperwidth}
+\begin{mdframed}[linecolor=black, linewidth=1.0pt, leftmargin=15pt, rightmargin=15pt]
+\textbf{\textit{Tip}}
+\end{mdframed}
+\begin{mdframed}[backgroundcolor=lightgray, linecolor=lightgray,skipabove=-4pt,leftmargin=15pt, rightmargin=15pt]
+\small #1
+\end{mdframed}
 \end{minipage}
-\end{center}
-\vspace{3mm}}
+}
+}
 
 \newcommand{\GlossEntry}[2]
 {%\vspace{3mm}
@@ -530,7 +588,6 @@
 
 
 }
-
 % End of Activity
 
 
