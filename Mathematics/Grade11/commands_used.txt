@@ -1,0 +1,1000 @@
+ 1225  git status
+ 1226  sh build.sh 
+ 1227  acroread main.pdf
+ 1228  cd ../icons/
+ 1229  ll
+ 1230  epstopdf www.eps
+ 1231  ll -h
+ 1232  cd ../Grade10/
+ 1233  ll
+ 1234  sh build.sh 
+ 1235  git status
+ 1236  git add Gr10-AlgebraicExpressions.tex Gr10-FunctionsAndGraphs.tex
+ 1237  gdiffmk 
+ 1238  meld 
+ 1239  git status
+ 1240  meld 
+ 1241  git add preample.tex
+ 1242  git checkout main.tex
+ 1243  cd ../icons/
+ 1244  ll
+ 1245  rm *.pdf
+ 1246  epstopdf aplus.eps 
+ 1247  evince aplus.pdf 
+ 1248  epstopdf www.eps 
+ 1249  epstopdf video.eps 
+ 1250  eps2eps video.eps
+ 1251  eps2eps video.eps video.eps
+ 1252  epstopdf video.eps 
+ 1253  evince video.eps 
+ 1254  cp /home/ewald/Downloads/epsfilesforshortcodes.zip .
+ 1255  unzip epsfilesforshortcodes.zip 
+ 1256  ll
+ 1257  rm *.eps
+ 1258  ll
+ 1259  rm *.pdf
+ 1260  ll
+ 1261  unzip epsfilesforshortcodes.zip 
+ 1262  rm example\ exercises2.png 
+ 1263  ll
+ 1264  eog icons-1.eps 
+ 1265  gv icons-1.eps 
+ 1266  epstopdf icons-1.eps help.pdf
+ 1267  epstopdf icons-1.eps 
+ 1268  mv icons-1.pdf help.pdf
+ 1269  epstopdf icons-2.eps 
+ 1270  epstopdf icons-3.eps 
+ 1271  epstopdf icons-4.eps 
+ 1272  ll
+ 1273  evince icons-2.
+ 1274  evince icons-2.pdf 
+ 1275  mv icons-2.pdf video.pdf
+ 1276  evince icons-3.
+ 1277  evince icons-3.pdf
+ 1278  mv icons-3..pdf aplus.pdf
+ 1279  mv icons-3.pdf aplus.pdf
+ 1280  ll
+ 1281  evince icons-4.pdf 
+ 1282  mv icons-4.pdf www.pdf
+ 1283  ll
+ 1284  rm icons-*
+ 1285  ll
+ 1286  rm epsfilesforshortcodes.zip 
+ 1287  ll
+ 1288  cp * ../../PhysicalScience-CAPS/icons/
+ 1289  git status
+ 1290  git add *
+ 1291  git status
+ 1292  git add *
+ 1293  git status
+ 1294  ll
+ 1295  git status
+ 1296  git commit -m "fixed some .eps things, made them .pdf"
+ 1297  gitpull
+ 1298  git pull
+ 1299  cd ../Grade10/
+ 1300  git mergetool
+ 1301  ll
+ 1302  git diff
+ 1303  git status
+ 1304  git revert HEAD
+ 1305  git checkout *
+ 1306  git status
+ 1307  git reset *
+ 1308  git status
+ 1309  git checkout Gr10*.tex
+ 1310  git status
+ 1311  git pull
+ 1312  git status
+ 1313  git mergetool
+ 1314  ll
+ 1315  ls
+ 1316  rm Gr10-AlgebraicExpressions.tex.backup Gr10-AlgebraicExpressions.tex.orig
+ 1317  git pull
+ 1318  grep -r MERGE_HEAD *
+ 1319  git status
+ 1320  git reset --hard HEAD^
+ 1321  git status
+ 1322  git pull
+ 1323  sh build.sh 
+ 1324  git status
+ 1325  cd ../icons/
+ 1326  ll
+ 1327  rm *
+ 1328  cp ../../PhysicalScience-CAPS/icons/* .
+ 1329  evince aplus.pdf 
+ 1330  ll
+ 1331  git status
+ 1332  git add *
+ 1333  git status
+ 1334  git rm *.eps
+ 1335  git status
+ 1336  git rm converted-to.pdf*
+ 1337  git rm *converted-to.pdf*
+ 1338  git status
+ 1339  git rm example\ exercises2.png
+ 1340  git status
+ 1341  git commit -m "updated the pdf icons. Nice vector format now"
+ 1342  git pull
+ 1343  git push
+ 1344  gitg
+ 1345  sh build.sh 
+ 1346  cd ../Grade10/
+ 1347  sh build.sh 
+ 1348  git pull
+ 1349  sh build.sh 
+ 1350  ll
+ 1351  git pull
+ 1352  sh build.sh 
+ 1353  cat build.sh 
+ 1354  vim build.sh 
+ 1355  sh build.sh 
+ 1356  evince main.pdf
+ 1357  bg
+ 1358  cp main.pdf /media/USB\ DISK/Grad10_Maths_Sunday_30Oct.pdf
+ 1359  git pull
+ 1360  sh build.sh 
+ 1361  ll
+ 1362  gvim main.tex preample.tex
+ 1363  sh build.sh 
+ 1364  grep -r Identity{ Gr10*.tex
+ 1365  grep -r Identity Gr10*.tex
+ 1366  man grep
+ 1367  grep -rl Identity Gr10*.tex
+ 1368  grep -r --line-numbers  Identity Gr10*.tex
+ 1369  man grep
+ 1370  grep -r --line-number  Identity Gr10*.tex
+ 1371  git status
+ 1372  git diff
+ 1373  git checkout *.tex
+ 1374  git checkout preample.tex main.tex
+ 1375  git status
+ 1376  git checkout build.sh
+ 1377  git pull
+ 1378  sh build.sh 
+ 1379  vim build.sh 
+ 1380  sh build.sh 
+ 1381  git status
+ 1382  git add preample.tex
+ 1383  git checkout build.sh
+ 1384  git commit -m "Made the abominable identity boxes look better, changed the section headings to be siyavula-dark-gray"
+ 1385  git pull
+ 1386  git push
+ 1387  sh build.sh 
+ 1388  grep -r chapterstartvid *.tex
+ 1389  grep -rn chapterstartvid *.tex
+ 1390  grep -rn the shortcodes Gr10*.tex
+ 1391  grep -rn "the shortcodes" Gr10*.tex
+ 1392  find . -name "*.tex" -exec sed -i "s/\raisebox{-0.2em}{\includegraphics[height=1em]{../icons/www.eps}} Find the answers with the shortcodes://g" '{}' \;
+ 1393  find . -name "*.tex" -exec sed -i "s/'\raisebox{-0.2em}{\includegraphics[height=1em]{../icons/www.eps}} Find the answers with the shortcodes:'//g" '{}' \;
+ 1394  git diff
+ 1395  find . -name "*.tex" -exec sed -i "s#\raisebox{-0.2em}{\includegraphics[height=1em]{../icons/www.eps}} Find the answers with the shortcodes:##g" '{}' \;
+ 1396  git diff
+ 1397  find . -name "*.tex" -exec sed -i s#"\raisebox{-0.2em}{\includegraphics[height=1em]{../icons/www.eps}} Find the answers with the shortcodes:"##g '{}' \;
+ 1398  git diff
+ 1399  ll
+ 1400  git status
+ 1401  find . -name "*.tex" -exec sed -i s#"\\raisebox\{-0.2em\}\{\\includegraphics\[height=1em\]\{\.\.\/icons\/www\.eps\}\} Find the answers with the shortcodes\:"##g '{}' \;
+ 1402  git diff
+ 1403  grep -r \includegraphics *.tex 
+ 1404  grep -r \\includegraphics *.tex 
+ 1405  grep -r "\includegraphics" *.tex 
+ 1406  grep -r "\\includegraphics" *.tex 
+ 1407  find . -name "*.tex" -exec sed -i s#"\raisebox{-0.2em}{\includegraphics[height=1em]{../icons/www.eps}} Find the answers with the shortcodes:"##g '{}' \;
+ 1408  find . -name "*.tex" -exec sed -i s#"\\raisebox{-0.2em}{\\includegraphics[height=1em]{../icons/www.eps}} Find the answers with the shortcodes:"##g '{}' \;
+ 1409  git diff
+ 1410  grep -r "the shortcodes" *.tex
+ 1411  grep -r "the shortcodes" Gr10*.tex
+ 1412  grep -r "the shortcodes" Gr10*.tex | wc
+ 1413  grep -r "the shortcodes" Gr10*.tex | wc -l
+ 1414  gsed
+ 1415  man sed
+ 1416  find . -name "*.tex" -exec sed -i s#"\\par \\raisebox{-0.2em}the shortcodes:#\\par #g '{}' \;
+ 1417  find . -name "*.tex" -exec sed -i s#"\\par \\raisebox{-0.2em}the shortcodes:"#\\par #g '{}' \;
+ 1418  find . -name "*.tex" -exec sed -i s/\\par \\raisebox{-0.2em}the shortcodes:/\\par /g '{}' \;
+ 1419  find . -name "*.tex" -exec sed -i "s/\\par \\raisebox{-0.2em}.*the shortcodes:/\\par /g" '{}' \;
+ 1420  git diff
+ 1421  find . -name "*.tex" -exec sed -i s/\\par \\raisebox{-0.2em}the shortcodes:/\\par /g '{}' \;
+ 1422  find . -name "*.tex" -exec sed -i s/\\par \\raisebox{-0.2em}.*the shortcodes:/\\par /g '{}' \;
+ 1423  find . -name "*.tex" -exec sed -i "s/\\par \\raisebox{-0.2em}.*the shortcodes:/\\par /g" '{}' \;
+ 1424  git diff
+ 1425  git status
+ 1426  sed -e "s/\\par \\raisebox{-0.2em}.*the shortcodes:/\\par /g" Gr10*.tex
+ 1427  git diff
+ 1428  find . -name "*.tex" -exec sed -i "s/\\par \\raisebox{-0.2em}.*the shortcodes:/\\par /g" '{}' \;
+ 1429  git diff
+ 1430  ll
+ 1431  find . "*.tex
+ 1432  find . "*.tex"
+ 1433  man find
+ 1434  find . "*.tex" | grep Gr10
+ 1435  find ./ "*.tex"
+ 1436  find ./ --name "Gr10*.tex"
+ 1437  find ./ -name "Gr10*.tex"
+ 1438  find ./ -name "Gr10*.tex" -exec sed -i 's/\\par \\raisebox{-0.2em}.*the shortcodes:/\\par /g' '{}' \;
+ 1439  git diff
+ 1440  meld
+ 1441  git status
+ 1442  sh build.sh 
+ 1443  find ./ -name "Gr10*.tex" -exec sed -i 's/\\raisebox{-0.2em}.*the shortcodes:/\\par \\practiceinfo/g' '{}' \;
+ 1444  git diff
+ 1445  mdel
+ 1446  meld
+ 1447  grep -r shortcode Gr10*.tex
+ 1448  sh build.sh 
+ 1449  find ./ -name "Gr10*.tex" -exec sed -i 's/\\raisebox{.*the shortcodes:/\\par \\practiceinfo/g' '{}' \;
+ 1450  sh build.sh 
+ 1451  grep -r "with the shortcodes:" Gr10*.tex
+ 1452  git status
+ 1453  git add Gr10-*.tex
+ 1454  git add preample.tex
+ 1455  git status
+ 1456  git commit -m "removed text - find answers with shortcodes"
+ 1457  git pull
+ 1458  git push
+ 1459  sh build.sh 
+ 1460  git status
+ 1461  git diff
+ 1462  git add preample.tex
+ 1463  git commit -m "tweaked preample"
+ 1464  git status
+ 1465  git pull
+ 1466  cat build.sh 
+ 1467  vim build.sh 
+ 1468  sh build.sh 
+ 1469  cat build.sh cat build.sh 
+ 1470  grep -r \\pagebreak Gr10*.tex
+ 1471  grep -nr "\\pagebreak" Gr10*.tex
+ 1472  grep -nr "\pagebreak" Gr10*.tex
+ 1473  grep -nr "\\pagebreak" Gr10*.tex
+ 1474  grep -nr '\\pagebreak' Gr10*.tex
+ 1475  find ./ -name "Gr10*.tex" -exec sed -i 's/\\pagebreak//g' '{}' \;
+ 1476  git diff
+ 1477  sh build.sh 
+ 1478  find ./ -name "Gr10*.tex" -exec sed -i 's/\\clearpage//g' '{}' \;
+ 1479  sh build.sh 
+ 1480  vim build.sh 
+ 1481  sh build.sh 
+ 1482  git diff
+ 1483  git status
+ 1484  git add Gr10-Statistics.tex Gr10-Probability.tex Gr10-Geometry.tex Gr10-FunctionsAndGraphs.tex
+ 1485  git commit -m "removed all pagebreaks, fixed bad wex in Functions"
+ 1486  git pull
+ 1487  git push
+ 1488  sh build.sh 
+ 1489  git status
+ 1490  git checkout Gr10-Finance.tex build.sh main.tex
+ 1491  git pull
+ 1492  sh build.sh 
+ 1493  vim build.sh 
+ 1494  sh build.sh 
+ 1495  git pull
+ 1496  sh build.sh 
+ 1497  tig
+ 1498  git status
+ 1499  git checkout Gr10-AlgebraicExpressions.tex
+ 1500  git add preample.tex
+ 1501  git commit -m "Added nobreak to Definitions"
+ 1502  git pull
+ 1503  git push
+ 1504  sh build.sh 
+ 1505  meld .
+ 1506  git pull
+ 1507  sh build.sh 
+ 1508  cp /home/ewald/Downloads/Gr10-ExerciseSolutions.tex temp.tex
+ 1509  ll *.py
+ 1510  python checkLaTeX.py 
+ 1511  vim checkLaTeX.py 
+ 1512  python checkLaTeX.py 
+ 1513  vim checkLaTeX.py 
+ 1514  ll
+ 1515  python checkLaTeX.py 
+ 1516  git checkout checkLaTeX.py
+ 1517  python checkLaTeX.py 
+ 1518  git status
+ 1519  git pull
+ 1520  sh build.sh 
+ 1521  ll
+ 1522  touch titlepages.tex
+ 1523  touch EverythingMathsTitlePages.tex
+ 1524  rm titlepages.tex 
+ 1525  sh build.sh 
+ 1526  ll
+ 1527  ls
+ 1528  mkdir title_images
+ 1529  cp /home/ewald/Downloads/introductorypagesinthebook.zip title_images/
+ 1530  cd title_images/
+ 1531  unzip introductorypagesinthebook.zip 
+ 1532  rm introductorypagesinthebook.zip 
+ 1533  ;;
+ 1534  ll
+ 1535  rm Intro\ pages\ Everything\ Maths.pdf 
+ 1536  ll
+ 1537  cd ..
+ 1538  sh build.sh 
+ 1539  ll title_images/
+ 1540  ll
+ 1541  cd title_images/
+ 1542  ll
+ 1543  mv Cc-by-nd.png cc1.png
+ 1544  mv cc.logo_.large_.png cc2.png
+ 1545  ll
+ 1546  cd ..
+ 1547  sh build.sh 
+ 1548  ll title_images/
+ 1549  sh build.sh 
+ 1550  ll title_images/
+ 1551  sh build.sh 
+ 1552  ll title_images/
+ 1553  sh build.sh 
+ 1554  ll title_images/
+ 1555  sh build.sh 
+ 1556  cd title_images/
+ 1557  convert phone.gif phone.png
+ 1558  cd ..
+ 1559  sh build.sh 
+ 1560  ll title_images/
+ 1561  sh build.sh 
+ 1562  ll title_images/
+ 1563  sh build.sh 
+ 1564  rm *.aux
+ 1565  sh build.sh 
+ 1566  vim build.sh 
+ 1567  sh build.sh 
+ 1568  vim build.sh 
+ 1569  sh build.sh 
+ 1570  cp main.pdf main2.pdf
+ 1571  ll -h main2.pdf
+ 1572  ps2pdf main2.pdf
+ 1573  sh build.sh 
+ 1574  vim build.sh 
+ 1575  sh build.sh 
+ 1576  python checkLaTeX.py 
+ 1577  sh build.sh 
+ 1578  python checkLaTeX.py 
+ 1579  sh build.sh 
+ 1580  vim build.sh 
+ 1581  sh build.sh 
+ 1582  git status
+ 1583  git add Gr10-AlgebraicExpressions.tex Gr10-AnalyticalGeometry.tex Gr10-Statistics.tex Gr10-Trigonometry.tex preample.tex EverythingMathsTitlePages.tex main.tex title_images/
+ 1584  git status
+ 1585  git commit -m "added frontmatter, fixed a number of issues with mismatching braces and begin/ends"
+ 1586  git pull
+ 1587  git meld
+ 1588  git mergetool
+ 1589  git add Gr10-AnalyticalGeometry.tex
+ 1590  git commit -m "fixed conflict"
+ 1591  git pull
+ 1592  git status
+ 1593  git push
+ 1594  sh build.sh 
+ 1595  evince main.pdf.pdf 
+ 1596  sh build.sh 
+ 1597  git status
+ 1598  git add EverythingMathsTitlePages.tex
+ 1599  git commit -m "Fixed small issue with title pages that buggered up all fonts"
+ 1600  git pull
+ 1601  vim build.sh 
+ 1602  sh build.sh 
+ 1603  git tag -a v1.0 -m "Version 1.0 of Everything Maths"
+ 1604  git status
+ 1605  git commit -m "Small changes, tagged V1.0" --tags
+ 1606  git commit -m "Small changes, tagged V1.0" -tags
+ 1607  git push --tags
+ 1608  cp main.pdf /media/PETER/EverythingMaths-V1.0.pdf
+ 1609  git pull
+ 1610  cd SiyavulaBooks/Mathematics-CAPS/icons/
+ 1611  ll
+ 1612  epstopdf www.eps 
+ 1613  evince www.pdf
+ 1614  cd /home/ewald/SiyavulaBooks/Mathematics-CAPS/Grade10
+ 1615  clear
+ 1616  ifconfig
+ 1617  host
+ 1618  hostname
+ 1619  ll
+ 1620  cd ../carl/
+ 1621  ll
+ 1622  tail  ../ewald/.bashrc 
+ 1623  vim .bashrc 
+ 1624  sudo vim .bashrc
+ 1625  cd ..
+ 1626  ll
+ 1627  cd ewald/
+ 1628  ll
+ 1629  cd SiyavulaBooks/PhysicalScience-CAPS/Graad10_Afrikaans/
+ 1630  sh build.sh 
+ 1631  ll
+ 1632  sh build.sh 
+ 1633  vim build.sh 
+ 1634  sh build.sh 
+ 1635  git status
+ 1636  git add Gr10-motion.tex
+ 1637  git add build.sh main.tex
+ 1638  git status
+ 1639  git commit -m "about 1/3 through motion's translation, deleted the obsoleted mdframed"
+ 1640  git pull
+ 1641  git push
+ 1642  sh build.sh 
+ 1643  git add Gr10-motion.tex
+ 1644  git status
+ 1645  git commit -m "further translation on motion"
+ 1646  git pyll
+ 1647  git pull
+ 1648  git push
+ 1649  sh build.sh 
+ 1650  vim main.aux 
+ 1651  vim Gr10-motion.aux 
+ 1652  sh build.sh 
+ 1653  git status
+ 1654  git commit -a
+ 1655  git status
+ 1656  git pull
+ 1657  sudo apt-get install meld
+ 1658  meld
+ 1659  git mergetool
+ 1660  git status
+ 1661  git add Gr10-motion.tex
+ 1662  git commit -m "fixed conflict in motion"
+ 1663  gitg
+ 1664  gvim Gr10-motion.tex
+ 1665  sh build.sh 
+ 1666  evince main.pdf
+ 1667  git
+ 1668  ls
+ 1669  ll *.tex
+ 1670  git status
+ 1671  git pus
+ 1672  git push
+ 1673  git pull
+ 1674  cd ../Grade10/
+ 1675  git pull
+ 1676  sh build.sh 
+ 1677  cat build.sh 
+ 1678  evince main.pdf
+ 1679  ll -h main.pdf
+ 1680  ps2pdf main.pdf
+ 1681  ll -h main.pdf*
+ 1682  evince main.pdf.pdf
+ 1683  mv md* temp
+ 1684  ll
+ 1685  sh build.sh 
+ 1686  cp main.pdf /media/USB\ DISK/PhysicalScience_Complete_saturday_29_oct.pdf
+ 1687  cd ../
+ 1688  ll
+ 1689  cd Icons/
+ 1690  ll
+ 1691  cd ../Grade10/
+ 1692  git status
+ 1693  mv ../Icons/ ../icons
+ 1694  cp ../../Mathematics-CAPS/icons/* ../icons/
+ 1695  cd ../icons/
+ 1696  ll
+ 1697  rm icons-*
+ 1698  ll
+ 1699  cd ../
+ 1700  git status
+ 1701  git checkout Grade10/main.tex
+ 1702  git add icons
+ 1703  git status
+ 1704  git rm icons/*.pdf
+ 1705  cd icons/
+ 1706  ll
+ 1707  ll -h
+ 1708  cd ..
+ 1709  ll
+ 1710  git rm --cache icons/*.pdf
+ 1711  git status
+ 1712  git commit -m "Added rich media icons"
+ 1713  git pull
+ 1714  git push
+ 1715  sh bui
+ 1716  cd Grade10/
+ 1717  sh build.sh 
+ 1718  evince main.pdf&
+ 1719  sh build.sh 
+ 1720  gitg
+ 1721  ll
+ 1722  ls
+ 1723  cd photos/
+ 1724  ll
+ 1725  ls
+ 1726  cd ..
+ 1727  du -sh photos/
+ 1728  cd photos/
+ 1729  ll
+ 1730  ls
+ 1731  cd ..
+ 1732  cd ic
+ 1733  epstopdf ../icons/www.eps ../icons/www.pdf
+ 1734  cd ../icons/
+ 1735  epstopdf www.eps 
+ 1736  ll
+ 1737  cd ../Grade10/
+ 1738  sh build.sh 
+ 1739  cd ../icons/
+ 1740  ll
+ 1741  rm *.pdf
+ 1742  ll
+ 1743  cd ../Grade10/
+ 1744  ll
+ 1745  git status
+ 1746  git checkout Gr10-atom.tex main.tex
+ 1747  git pull
+ 1748  sh build.sh 
+ 1749  cd ../icons/
+ 1750  ll
+ 1751  rm *.eps
+ 1752  ll
+ 1753  rm www-eps-converted-to.pdf 
+ 1754  rm example\ exercises2.png 
+ 1755  ll
+ 1756  git status
+ 1757  git add *.pdf
+ 1758  git checkout ../Grade10/main.tex
+ 1759  git status
+ 1760  git commit -m "added vector format pdf icons"
+ 1761  git pull
+ 1762  git push
+ 1763  git pull
+ 1764  cd ..
+ 1765  cd Grade10/
+ 1766  git pull
+ 1767  sh build.sh 
+ 1768  vim build.sh 
+ 1769  sh build.sh 
+ 1770  cp main.pdf /media/USB\ DISK/Grad10_Science_Sunday_30Oct.pdf 
+ 1771  gvim preamble.tex 
+ 1772  sh build.sh 
+ 1773  find ./ -name "Gr10*.tex" -exec sed -i 's/\\raisebox{.*the shortcodes:/\\practiceinfo/g' '{}' \;
+ 1774  git diff
+ 1775  git checkout *.tex
+ 1776  git checkout Gr10*.tex
+ 1777  ll
+ 1778  git status
+ 1779  git checkout ./Gr10*.tex
+ 1780  git rm Gr10-classification_afr.tex
+ 1781  ll
+ 1782  ls
+ 1783  mv Gr10-classification_afr.tex Gr10-classification_afr.tex.junk
+ 1784  git checkout ./Gr10*.tex
+ 1785  git status
+ 1786  git checkout main.tex
+ 1787  meld
+ 1788  git add preamble.tex
+ 1789  git commit -m "changed section heading to darker gray"
+ 1790  git pull
+ 1791  find ./ -name "Gr10*.tex" -exec sed -i 's/\\raisebox{.*the shortcodes:/\\practiceinfo/g' '{}' \;
+ 1792  vim build.sh 
+ 1793  sh build.sh 
+ 1794  grep -r "answers with shortcodes" Gr10*.tex
+ 1795  grep -r "shortcodes" Gr10*.tex
+ 1796  git diff
+ 1797  gvim Gr10-*
+ 1798  gvim Gr10-*.tex
+ 1799  git status
+ 1800  git add ./Gr10-*.tex
+ 1801  git status
+ 1802  git add ../icons/*.eps
+ 1803  git add ../icons/example*
+ 1804  git add ../icons/www-eps*
+ 1805  git status
+ 1806  git rm ../icons/*.eps
+ 1807  git status
+ 1808  git rm ../icons/example*
+ 1809  git rm ../icons/www-eps*
+ 1810  git status
+ 1811  git checkout main.tex
+ 1812  git status
+ 1813  gvim main.tex
+ 1814  cat build.sh 
+ 1815  sh build.sh 
+ 1816  git status
+ 1817  git add Gr10-quanchemchange.tex
+ 1818  git status
+ 1819  git checkout main.tex
+ 1820  git commit -m "removed old shortcode text"
+ 1821  git pull
+ 1822  git push
+ 1823  sh build.sh 
+ 1824  evince main.pdf&
+ 1825  sh build.sh 
+ 1826  vim build.sh 
+ 1827  git status
+ 1828  sh build.sh 
+ 1829  git status
+ 1830  sh build.sh 
+ 1831  evince main.pdf&
+ 1832  sh build.sh 
+ 1833  getnonfreefonts 
+ 1834  getnonfreefonts -l
+ 1835  sh build.sh 
+ 1836  cat build.sh
+ 1837  xelatex
+ 1838  xelatex --interaction nonstopmode -shell-escape main.tex
+ 1839  sh build.sh 
+ 1840  evince main.pdf&
+ 1841  sh build.sh 
+ 1842  vim build.sh 
+ 1843  sh build.sh 
+ 1844  meld
+ 1845  bg
+ 1846  sh build.sh 
+ 1847  git status
+ 1848  meld
+ 1849  git checkout main.tex build.sh
+ 1850  git add preamble.tex 
+ 1851  git checkout Gr10-quanchemchange.tex
+ 1852  git commit -m "tweaked preamble"
+ 1853  git pull
+ 1854  git push
+ 1855  cat main.t
+ 1856  cat main.tex 
+ 1857  sh build.sh 
+ 1858  vim build.sh 
+ 1859  sh build.sh 
+ 1860  gvim main.tex preamble.tex Gr10-ScienceSkills.tex
+ 1861  vim build.sh 
+ 1862  sh build.sh 
+ 1863  cat build.sh 
+ 1864  vim build.sh 
+ 1865  sh build.sh 
+ 1866  git status
+ 1867  meld
+ 1868  git checkout main.tex preamble.tex Gr10-ScienceSkills.tex
+ 1869  git pull
+ 1870  sh build.sh 
+ 1871  git status
+ 1872  git add Gr10-classification.tex preamble.tex
+ 1873  git commit -m "fixed problem with subsections, moved covered margin floats"
+ 1874  git pull
+ 1875  git push
+ 1876  sh build.sh 
+ 1877  git status
+ 1878  git add Gr10-atom.tex
+ 1879  git commit -m "Fixed all but one covered margin float"
+ 1880  git push
+ 1881  git checkout main.tex preamble.tex
+ 1882  git status
+ 1883  git checkout build.sh
+ 1884  git pull
+ 1885  git push
+ 1886  git status
+ 1887  git pull
+ 1888  sh build.sh 
+ 1889  vim build.sh 
+ 1890  sh build.sh 
+ 1891  tig
+ 1892  meld .
+ 1893  sh build.sh 
+ 1894  meld .
+ 1895  bg
+ 1896  sh build.sh 
+ 1897  bg
+ 1898  sh build.sh 
+ 1899  vim build.sh 
+ 1900  sh build.sh 
+ 1901  git status
+ 1902  git add preamble.tex
+ 1903  git commit -m "added nobreak to definitions"
+ 1904  git pull
+ 1905  git push
+ 1906  sh build.sh 
+ 1907  meld .
+ 1908  sh build.sh 
+ 1909  git status
+ 1910  git add Gr10-classification.tex preamble.tex
+ 1911  git commit -m "Tweaked Definition box spacing, added different look for investigations"
+ 1912  git pull
+ 1913  git mergetool
+ 1914  git add Gr10-classification.tex
+ 1915  git commit -m "fixed conflict"
+ 1916  git satus
+ 1917  git status
+ 1918  git push
+ 1919  find . | grep plasma
+ 1920  git pull
+ 1921  sh build.sh 
+ 1922  cp ../../Mathematics-CAPS/Grade10/checkLaTeX.py .
+ 1923  python checkLaTeX.py 
+ 1924  sh build.sh
+ 1925  vim Gr10-transversewaves.tex 
+ 1926  sh build.sh
+ 1927  git add Gr10-transversewaves.tex
+ 1928  git commit -m "fixed mismatched brace causing eq number, removed extra begin"
+ 1929  git status
+ 1930  git pull
+ 1931  git mergetool
+ 1932  git status
+ 1933  git add Gr10-StatesOfMatter.tex Gr10-atom.tex Gr10-classification.tex Gr10-transversewaves.tex
+ 1934  git commit -m "merged, fixed conflict"
+ 1935  python checkLaTeX.py 
+ 1936  git status
+ 1937  git pull
+ 1938  git push
+ 1939  sh build.sh 
+ 1940  ll -h main.pdf
+ 1941  cp main.pdf /home/ewald/Desktop/MechanicalEnergy.pdf
+ 1942  python checkLaTeX.py 
+ 1943  git checkout checkLaTeX.py
+ 1944  vim checkLaTeX.py 
+ 1945  python checkLaTeX.py 
+ 1946  git add Gr10-energy.tex 
+ 1947  git commit -m "fixed mismatched braces and begin/ends"
+ 1948  sh build.sh 
+ 1949  git status
+ 1950  git add Gr10-classification.tex Gr10-energy.tex
+ 1951  git commit 'Minor fixes'
+ 1952  git commit -m 'Minor fixes'
+ 1953  git pull
+ 1954  git push
+ 1955  python checkLaTeX.py 
+ 1956  w
+ 1957  git status
+ 1958  git add Gr10-transversewaves.tex Gr10-chemchange.tex Gr10-ScienceSkills.tex
+ 1959  git commit -m "Fixed mismatched delimiters"
+ 1960  git pull
+ 1961  sh build.sh 
+ 1962  git status
+ 1963  git pull
+ 1964  sh build.sh 
+ 1965  git pull
+ 1966  sh build.sh 
+ 1967  ll -h main.pdf
+ 1968  cp ../../Mathematics-CAPS/Grade10/EverythingMathsTitlePages.tex EverythingScienceTitlePages.tex
+ 1969  cp -r ../../Mathematics-CAPS/Grade10/title_images/ .
+ 1970  git status
+ 1971  cp main.pdf main2.pdf
+ 1972  sh build.sh 
+ 1973  vim build.sh 
+ 1974  sh build.sh 
+ 1975  ~
+ 1976  git status
+ 1977  git add EverythingScienceTitlePages.tex
+ 1978  git add title_images/
+ 1979  git add main.tex
+ 1980  git commit -m "Added frontmatter"
+ 1981  git pull
+ 1982  git status
+ 1983  git push
+ 1984  git pull
+ 1985  vim build.sh 
+ 1986  git pull
+ 1987  git status
+ 1988  git pull
+ 1989  git tag -a v1.0 -m "Version 1.0"
+ 1990  git push --tags
+ 1991  sh build.sh 
+ 1992  ll -h main.pdf
+ 1993  cp main.pdf /media/PETER/EverythingScience-v1.0.pdf
+ 1994  df -h
+ 1995  cp main.pdf /home/ewald/Desktop/EverythingScience-v1.0.pdf
+ 1996  ipython
+ 1997  free -m
+ 1998  who
+ 1999  top
+ 2000  cd SiyavulaBooks/
+ 2001  ll
+ 2002  cd NCSTextbooks/
+ 2003  ll
+ 2004  git pull
+ 2005  mkdir Mathematics
+ 2006  mkdir PhysicalScience
+ 2007  cd Mathematics/
+ 2008  mkdir Grade11
+ 2009  mkdir Grade12
+ 2010  ll
+ 2011  cd ..
+ 2012  ll
+ 2013  git mv Mathematics_Gr11_* Mathematics/Grade11/
+ 2014  git mv Mathematics_Gr11_*.tex Mathematics/Grade11/
+ 2015  git mv Mathematics_Gr12_*.tex Mathematics/Grade12/
+ 2016  git add Mathematics
+ 2017  git add PhysicalScience
+ 2018  mkdir PhysicalScience/Grade11
+ 2019  mkdir PhysicalScience/Grade12
+ 2020  git mv Chemistry_Gr11.tex PhysicalScience/Grade11/
+ 2021  git mv Physics_Gr11.tex PhysicalScience/Grade11/
+ 2022  git mv Chemistry_Gr12.tex PhysicalScience/Grade12/
+ 2023  git mv Physics_Gr12.tex PhysicalScience/Grade12/
+ 2024  git status
+ 2025  vim .gitignore
+ 2026  git add .gitignore
+ 2027  git status
+ 2028  ll
+ 2029  git mv PhysicalScience_Gr11.tex PhysicalScience/Grade11/
+ 2030  ll
+ 2031  git mv PhysicalScience_Gr12.tex PhysicalScience/Grade12/
+ 2032  ll
+ 2033  mkdir PhysicalScience/Grade10
+ 2034  git mv  PhysicalScience_Gr10.tex PhysicalScience/Grade10/
+ 2035  git status
+ 2036  ll
+ 2037  git rm md*
+ 2038  ll
+ 2039  git mv Physics_Gr10.tex PhysicalScience/Grade10/
+ 2040  git mv Chemistry_Gr10.tex PhysicalScience/Grade10/
+ 2041  ll
+ 2042  mkdir Mathematics/Grade10
+ 2043  git mv Mathematics_Gr10.tex Mathematics/Grade10/
+ 2044  ll
+ 2045  rm Mathematics_Gr11_Merged.*
+ 2046  ll
+ 2047  rm *.aux
+ 2048  ll
+ 2049  git status
+ 2050  cd epsimages/
+ 2051  ll
+ 2052  cd ..
+ 2053  ll
+ 2054  du -sh *
+ 2055  git status
+ 2056  cd temp/
+ 2057  ll
+ 2058  cd ..
+ 2059  git commit -m "cleaned up directory structure a bit."
+ 2060  git pull
+ 2061  git push
+ 2062  ll
+ 2063  cd Mathematics/Grade11/
+ 2064  ll
+ 2065  gvim Mathematics_Gr11_Merged.tex 
+ 2066  cp ../../../Mathematics-CAPS/Grade10/build.sh .
+ 2067  vim build.sh 
+ 2068  sh build.sh 
+ 2069  ll ../../
+ 2070  vim Mathematics_Gr11_Merged.log 
+ 2071  cd ..
+ 2072  ll
+ 2073  cd ..
+ 2074  ll
+ 2075  cd NCSTextbooks/
+ 2076  ll
+ 2077  cd ..
+ 2078  ll
+ 2079  cd NCSTextbooks/
+ 2080  ll
+ 2081  cd Mathematics/Grade11/
+ 2082  ll
+ 2083  latex Mathematics_Gr11_Merged.tex
+ 2084  cp ../../*.tex .
+ 2085  ll
+ 2086  rm AuthorListV0-5.tex 
+ 2087  rm DefinitionsV0-5-1.tex 
+ 2088  sh build.sh 
+ 2089  ll
+ 2090  sh build.sh 
+ 2091  latex Mathematics_Gr11_Merged.tex 
+ 2092  ll
+ 2093  dvipdf Mathematics_Gr11_Merged.dvi 
+ 2094  evince Mathematics_Gr11_Merged.pdf 
+ 2095  pdflatex Mathematics_Gr11_Merged.tex 
+ 2096  sh build.sh 
+ 2097  evince Mathematics_Gr11_Merged.pdf 
+ 2098  bg
+ 2099  grep -r epsimages *.tex
+ 2100  grep -r epsimage *.tex
+ 2101  ll ../../
+ 2102  grep -r epsimages *.tex
+ 2103  grep -r eps *.tex
+ 2104  cd ../../epsimages/
+ 2105  ll
+ 2106  ls
+ 2107  cd ../Mathematics/Grade11/
+ 2108  ll
+ 2109  sh build.sh 
+ 2110  gvim Mathematics_Gr11_Merged.tex build.sh 
+ 2111  sh build.sh 
+ 2112  cp -r ../../../Mathematics-CAPS/icons ../../
+ 2113  sh build.sh 
+ 2114  grep -r eps *.tex
+ 2115  sh build.sh 
+ 2116  pdftops 
+ 2117  cd ../../icons/
+ 2118  ll
+ 2119  pdftops www.pdf 
+ 2120  ll
+ 2121  evince www.ps 
+ 2122  sh build.sh 
+ 2123  cd ../Mathematics/Grade11/
+ 2124  sh build.sh 
+ 2125  cat build.sh 
+ 2126  pdflatex --interaction nonstopmode -shell-escape Mathematics_Gr11_Merged.tex
+ 2127  sh build.sh 
+ 2128  git status
+ 2129  git add ../../DefinitionsV0-5-1.tex Mathematics_Gr11_Merged.tex
+ 2130  git commit -m "Started adding the new styles to the preamble."
+ 2131  find ./ -name "*.tex" -exec sed -i '\\section{End of Chapter Exercises}/\\eocexercises/g' '{}' \;
+ 2132  find ./ -name "*.tex" -exec sed -i 's/\\section{End of Chapter Exercises}/\\eocexercises/g' '{}' \;
+ 2133  git checkout *.tex
+ 2134  tail *.tex
+ 2135  tail *.tex | grep START | wc
+ 2136  ll Mathematics_Gr11_.tex
+ 2137  ll Mathematics_Gr11_*.tex
+ 2138  tail *.tex
+ 2139  find ./ -name "*.tex" -exec sed -i 's/\\section{End of Chapter Exercises}/\\begin{eocexercises}{}/g' '{}' \;
+ 2140  find ./ -name "*.tex" -exec sed -i 's/\\section{End of Chapter Exercises}/\\eocexercises/g' '{}' \;
+ 2141  git checkout *.tex
+ 2142  grep -r "End of Chapter Exercises" *.tex
+ 2143  grep -r "End of Chapter" *.tex
+ 2144  grep -r "End of chapter" *.tex
+ 2145  grep -r "End of Chapter" *.tex
+ 2146  find ./ -name "*.tex" -exec sed -i 's/\\section{End of Chapter Exercises}/\\begin{eocexercises}{}/g' '{}' \;
+ 2147  find ./ -name "*.tex" -exec sed -i 's/\\section{End of Chapter Exercises}/\\begin{eocexercises}\{\}/g' '{}' \;
+ 2148  find ./ -name "*.tex" -exec sed -i 's/CHILD SECTION END/\\end{eocexercises}/g' '{}' \;
+ 2149  git checkout *.tex
+ 2150  find ./ -name "*.tex" -exec sed -i 's/\\section{End of Chapter Exercises}/\\begin{eocexercises}\{\}/g' '{}' \;
+ 2151  find ./ -name "*.tex" -exec sed -i 's/\%*.CHILD SECTION END/\\end{eocexercises}/g' '{}' \;
+ 2152  meld .
+ 2153  git checkout *.tex
+ 2154  find ./ -name "*.tex" -exec sed -i 's/\\section{End of Chapter Exercises}/\\begin{eocexercises}\{\}/g' '{}' \;
+ 2155  find ./ -name "*.tex" -exec sed -i 's/eocexercises}{}*.\\/(%*.CHILD SECTION END/)/\1\n\\end{eocexercises}/g' '{}' \;
+ 2156  find ./ -name "*.tex" -exec sed -i 's/eocexercises*.\\/(%*.CHILD SECTION END/)/\1\n\\end{eocexercises}/g' '{}' \;
+ 2157  git checkout *.tex
+ 2158  find ./ -name "*.tex" -exec sed -i 's/\\section{End of Chapter Exercises}\(*.\)%*.CHILD SECTION END/\\begin{eocexercises}\{\}\1\\end{eocexercises}/g' '{}' \;
+ 2159  git checkout *.tex
+ 2160  find ./ -name "*.tex" -exec sed -i 's/\\section{End of Chapter Exercises}/\\begin{eocexercises}\{\}/g' '{}' \;
+ 2161  find ./ -name "*.tex" -exec sed -i 's/\%*.CHILD SECTION END/\\end{eocexercises}/g' '{}' \;
+ 2162  meld .
+ 2163  sh build.sh 
+ 2164  history 
+ 2165  history > commands_used.txt
+ 2166  vim commands_used.txt 
+ 2167  sh build.sh 
+ 2168  find ./ -name "*Ch*.tex" -exec sed -i 's/\\pagebreak//g' '{}' \;
+ 2169  sh build.sh 
+ 2170  git status
+ 2171  git add Mathematics_Gr11_*.tex
+ 2172  git add ../../DefinitionsV0-5-1.tex
+ 2173  git status
+ 2174  git commit -m "Added oecexercises, applied sed to all files to put in the begin/end, removed all pagebreaks, added activity"
+ 2175  git pull
+ 2176  git push
+ 2177  sh build.sh 
+ 2178  git status
+ 2179  git add Mathematics_Gr11_Ch_18-Statistics.tex Mathematics_Gr11_Ch_17-Trigonometry.tex ../../DefinitionsV0-5-1.tex
+ 2180  git commit -m "Added some more new evnironments, tweaked one or two things in the book to make it look better"
+ 2181  git push
+ 2182  cp build.sh ../Grade12/
+ 2183  cd ../Grade12/
+ 2184  sh build.sh 
+ 2185  vim build.sh 
+ 2186  sh build.sh 
+ 2187  vim build.sh 
+ 2188  sh build.sh 
+ 2189  evince Mathematics_Gr12_Merged.pdf 
+ 2190  vim Mathematics_Gr12_Merged.tex 
+ 2191  sh build.sh 
+ 2192  evince Mathematics_Gr12_Merged.pdf &
+ 2193  vim Mathematics_Gr12_Merged.tex 
+ 2194  sh build.sh 
+ 2195  cd ../Grade11/
+ 2196  ll
+ 2197  sh build.sh 
+ 2198  evince Mathematics_Gr11_Merged.pdf &
+ 2199  find ./ -name "*Ch*.tex" -exec sed -i 's/\\margintip/\\Tip/g' '{}' \;
+ 2200  git status
+ 2201  ll
+ 2202  find ./ -name "*Ch*.tex" -exec sed -i 's/\\MarginTip/\\Tip/g' '{}' \;
+ 2203  git status
+ 2204  sh build.sh 
+ 2205  git status
+ 2206  git add Mathematics_Gr11_Ch_6-Finance.tex 
+ 2207  git commit -m "Grade 11 book mostly done, one or two little niggles remain, needs shortcodes, practiceinfo and rich media"
+ 2208  history | grep sed
+ 2209  ll
+ 2210  git add commands_used.txt
+ 2211  find ./ -name "*Ch*.tex" -exec sed -i 's/\\begin{eocexercises}/\\practiceinfo\n\\begin{eocexercises}/g' '{}' \;
+ 2212  git checkout *.tex
+ 2213  find ./ -name "*Ch*.tex" -exec sed -i 's/\\end{eocexercises}/\\practiceinfo\n\\end{eocexercises}/g' '{}' \;
+ 2214  cd ../../icons/
+ 2215  ll
+ 2216  pdftops aplus.pdf 
+ 2217  pdftops help.pdf 
+ 2218  pdftops video.pdf 
+ 2219  ll
+ 2220  git add *.ps
+ 2221  cd ../Mathematics/Grade11/
+ 2222  ll
+ 2223  sh build.sh 
+ 2224  history > commands_used.txt 
