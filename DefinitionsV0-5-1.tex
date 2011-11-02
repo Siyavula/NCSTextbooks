@@ -387,15 +387,19 @@
 
 
 \newcommand{\Definition}[2]{
-\vspace{3mm}
-\begin{center}
-\colorbox{lightgray}{\begin{minipage}[t]{0.95\textwidth}
-\rput(-1.5,0){\psflag}\noindent%
-\textbf{Definition: #1}\par
+\begin{mdframed}[nobreak=true, linewidth=1,linecolor=black, skipabove=36pt]%
+\vspace*{10pt}
+\leftskip20pt
+\rightskip20pt
+{\Large\textsl{DEFINITION: } \textit{#1}}
+
+\par\noindent
 #2
-\end{minipage}}
-\end{center}
-\vspace{3mm}}
+
+\vspace*{28pt}
+\end{mdframed}
+}
+
 
 
 \newcommand{\HistoricalNote}[2]{
@@ -469,17 +473,66 @@
 }
 
 \newcommand{\Activity}[3]{
-\vspace{3mm}
-\begin{center}
-\begin{pspicture}(0,-0.1)(10,0.1)\psline[linewidth=1pt]{-}(0,0)(10,0)
-\end{pspicture}
-  \begin{quotation} % or save, then modify margin
-     \textbf{Activity :: #1 : #2}\par #3%
-  \end{quotation} % or set margins back to normal
-\begin{pspicture}(0,-0.1)(10,0.1)\psline[linewidth=1pt]{-}(0,0)(10,0)
-\end{pspicture}
-\end{center}
-\vspace{3mm}}
+%\vspace{3mm}
+%\begin{center}
+%\begin{pspicture}(0,-0.1)(10,0.1)\psline[linewidth=1pt]{-}(0,0)(10,0)
+%\end{pspicture}
+%  \begin{quotation} % or save, then modify margin
+%     \textbf{Activity :: #1 : #2}\par #3%
+%  \end{quotation} % or set margins back to normal
+%\begin{pspicture}(0,-0.1)(10,0.1)\psline[linewidth=1pt]{-}(0,0)(10,0)
+%\end{pspicture}
+%\end{center}
+%\vspace{3mmi}
+\setlength{\saveparindentlength}{\parindent}
+\setlength{\parindent}{0pt}
+
+\ifdimless{\pagegoal-\pagetotal}{4em}%4em play with this 
+{\clearpage\vspace*{-\topskip}}{} 
+
+\begin{quotation}
+\vspace*{25.6pt}
+{  \fontsize{12}\bfseries\itshape
+\begin{tikzpicture}[remember picture,overlay]
+    \node[anchor=west ,text centered, xshift=-40pt]
+      {\begin{tikzpicture}[remember picture, overlay]
+        \draw[color=white, draw=black, linewidth=1pt] (0,0) rectangle
+          (0.2\textwidth, 28pt);
+       \node[anchor=west, yshift=14pt, xshift=4pt, text centered]
+              { \bfseries ~ \color{black} Activity:};
+       \end{tikzpicture}
+    };
+    
+% now the white bar to the end of the paragraph
+    \node[anchor=west, xshift=45pt]{
+      \begin{tikzpicture}[remember picture, overlay]
+        \draw[fill=white, draw=black, linewidth=1pt] (0,0) rectangle
+          (0.8\textwidth-5pt,28pt);
+         \node[anchor=west, yshift=14pt, xshift=0pt, text centered]
+              { \textit{#2} };
+
+       \end{tikzpicture}
+
+
+      };
+   \end{tikzpicture}
+
+}
+
+\begin{mdframed}[leftline=true, topline=false, bottomline=false, rightline=false, linecolor=siyavula-dark-gray, linewidth=10pt]
+\vspace{5pt}
+
+#3
+
+\end{mdframed}
+\end{quotation}
+\setlength{\parindent}{\saveparindentlength}
+
+
+}
+
+% End of Activity
+
 
 \newcommand{\Aim}[1]{\par\noindent\textbf{Aim:} \par\noindent #1}
 \newcommand{\Apparatus}[1]{\par\noindent\textbf{Apparatus:} \par\noindent #1}
@@ -498,6 +551,24 @@
 \@addtoreset{exercisecounter}{chapter}
 \makeatother
 
+\newenvironment{eocexercises}[1]
+{
+\vspace*{1cm}
+\eocexercisesheading
+\addcontentsline{toc}{section}{End of chapter exercises}
+%\hrule width \textwidth height 1pt\\
+\begin{quotation}
+\noindent
+%\vspace{.5cm}
+\setlength{\parindent}{0pt}
+%\textbf{\textit{End of chapter exercises:}
+%#1}
+\par
+}%
+{%
+\end{quotation}
+\setlength{\parindent}{\saveparindentlength}
+}
 
 
 \newcommand{\Exercise}[2]{
@@ -823,5 +894,38 @@
 }
 \par
 %\vspace{\baselineskip}
+}
+
+
+\newcommand{\eocexercisesheading}{
+\par \vspace*{3\baselineskip} 
+{\normalfont \sffamily\fontsize{16}\bfseries
+\begin{tikzpicture}[remember picture,overlay]
+    \node[anchor=west, yshift=6\baselineskip, xshift=0., text centered]
+      {\begin{tikzpicture}[remember picture, overlay]
+        \draw[color=white, draw=black, very thick] (0,0) rectangle
+          (0.3\textwidth,1.5cm);
+       \node[anchor=west, yshift=0.75cm, text centered]
+              { ~~  \color{black} Chapter \chapterlabel };
+       \end{tikzpicture}
+    };
+    
+% now the gray bar to the end of the paragraph
+    \node[anchor=west, xshift=0.31\textwidth]{
+      \begin{tikzpicture}[remember picture, overlay]
+        \draw[fill=siyavula-gray, color=siyavula-gray] (0,0) rectangle
+          (0.69\textwidth,1.5cm);
+            \node[anchor=west, yshift=0.75cm, text centered]
+              {   \color{black} End of Chapter Exercises };
+
+       \end{tikzpicture}
+
+
+      };
+   \end{tikzpicture}
+
+}
+\par
+\vspace{\baselineskip}
 }
 
