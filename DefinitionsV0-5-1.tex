@@ -1,17 +1,17 @@
-\evensidemargin = 0.46cm
-\oddsidemargin = 0.46cm
-\topmargin = -1.54cm
-\headheight = 1cm
-\headsep = 0.5cm
-\textwidth = 14cm
-\textheight = 25.7cm
-\footskip = 1.25cm
-\setlength{\parindent}{0ex}
-\setlength{\parskip}{2ex}
+%\evensidemargin = 0.46cm
+%\oddsidemargin = 0.46cm
+%\topmargin = -1.54cm
+%\headheight = 1cm
+%\headsep = 0.5cm
+%\textwidth = 14cm
+%\textheight = 25.7cm
+%\footskip = 1.25cm
+%\setlength{\parindent}{0ex}
+%\setlength{\parskip}{2ex}
 \pagestyle{headings}
-\marginparsep = 0.5cm
-\marginparwidth = 2cm
-\hbadness=10000
+%\marginparsep = 0.5cm
+%\marginparwidth = 2cm
+%\hbadness=10000
 
 \def\beforepreface{
 \pagenumbering{roman}
@@ -127,7 +127,22 @@
 \newcommand{\ud}{\mathrm{d}}
 \newcommand{\comment}[1]{}
 
+
+
 %===========================================================================%
+% New style colours
+
+\definecolor{siyavula-gray}{RGB}{242,242,242}
+\definecolor{siyavula-dark-gray}{RGB}{205,204,204}
+
+%===========================================================================%
+% Classico font as per Peter JOhn
+\renewcommand*\sfdefault{uop}
+\renewcommand*\familydefault{\sfdefault}
+
+%===========================================================================%
+
+
 
 % This is an environment for conveniently writing out the syllabus for a
 % particular section. using \item for each relevant entry from the syllabus
@@ -176,9 +191,13 @@
 
 % can we deprecate the use of this, and use \westep instead
 \newcommand{\westep}[1]
-{\par \par%\pagebreak[1]
- \textbf{\textit{Step \arabic{stepcounter} : #1}}\par
- \addtocounter{stepcounter}{1}}
+{\par \vspace{3mm}%\pagebreak[1]
+\leftskip20pt
+\noindent
+\textit{Step \arabic{stepcounter}} : \textit{\textbf{#1}}
+\par\noindent
+\leftskip50pt
+\addtocounter{stepcounter}{1}}
 
 \ifx\setlinejoinmode\undefined
  \newcommand{\setlinejoinmode}[1]{}
@@ -361,6 +380,12 @@
 \end{quotation}
 \vspace{3mm}}
 
+
+
+
+
+
+
 \newcommand{\Definition}[2]{
 \vspace{3mm}
 \begin{center}
@@ -463,19 +488,24 @@
 \newcommand{\Conclusions}[1]{\par\noindent\textbf{Conclusions:} \par\noindent
 #1}
 
+
+
+%EZ new counters for exercises, 
+\newcounter{exercisecounter}
+\setcounter{exercisecounter}{1}
+% make it reset for new chapters
+\makeatletter
+\@addtoreset{exercisecounter}{chapter}
+\makeatother
+
+
+
 \newcommand{\Exercise}[2]{
-\vspace{3mm}
-\begin{center}
-\begin{pspicture}(0,-0.2)(5,0.2)\psline[linewidth=1pt]{-}(0,0)(5,0)
-\end{pspicture}
-  \begin{quotation} % or save, then modify margin
-     \rput(-2.5,0){\psqmark}\noindent%
-     \textbf{Exercise: #1}\par #2%
-  \end{quotation} % or set margins back to normal
-\begin{pspicture}(0,-0.2)(5,0.2)\psline[linewidth=1pt]{-}(0,0)(5,0)
-\end{pspicture}
-\end{center}
-\vspace{3mm}}
+\vspace*{1cm}
+\exercisesheading
+#2
+}
+
 
 \newtheorem{Theorem}{Theorem}
 \newtheorem{Lemma}{This is a leemmma}
@@ -490,44 +520,65 @@
 \textbf{R.T.P.}:{#5} \par
 \textbf{Proof}:{#6}
 }
+
+
+
+\newcounter{stepcounter}
+\setcounter{stepcounter}{1}
+
+
+\newcounter{workedexamplecounter}
+\setcounter{workedexamplecounter}{1}
+
 \newenvironment{wex}[3]
-{% This is a picture at the beginning, a line or bar or something else
-% this command puts a bar in the margin and sets the bar width
-% Now we set margins
-% \begin{center}
-%\pagebreak
-%\begin{flushleft}
-%\begin{pspicture}(0,0)(10,0.01)
-% \psline[linecolor=gray,linewidth=3pt]{-}(0,0)(10,0)
-% \psline[linecolor=gray]{-}(0,0)(0,-2)
-%\end{pspicture}
-%\end{flushleft}
-%\end{center}
+{\newlength{\myfloatsep}
+\setlength{\myfloatsep}{\floatsep}
+\setlength{\floatsep}{2mm}
 \begin{quotation}
 \noindent
-\vspace{.5cm}
-\setlength{\parindent}{0pt}
-%% Title and counter
-\rput(-2.0,0){\pspencil}\noindent
-\begin{mdframed}[linewidth =2,margin=40]
-\textbf{\textit{Worked Example \arabic{workedexamplecounter}: }
-#1}\par
-\textbf{Question:} #2\par
-\textbf{Answer}\par #3%
+\newlength{\oldparindent}
+\setlength{\oldparindent}{\parindent}
+\setlength{\parindent}{20pt}
+
+\ifdimless{\pagegoal-\pagetotal}{4cm}%4em play with this 
+{\clearpage\vspace*{-\topskip}}{} 
+
+
+\begin{mdframed}[linewidth=1pt,linecolor=black, leftmargin=10pt, innertopmargin=8pt, innerbottommargin=6pt, skipbelow=0pt]
+{\Large\textbf{\textit{Worked Example \arabic{workedexamplecounter}:}} } {\Large\textit{#1}}
+\vspace*{0pt}
+\end{mdframed}
+\vspace*{-2pt}
+\begin{mdframed}[linecolor=siyavula-gray,backgroundcolor=siyavula-gray, leftmargin=10pt, skipbelow=18pt]
+{\large\textbf{\textit{QUESTION}}} \vspace*{4pt} 
+\hrule
+\vspace*{18pt}
+\noindent
+\textit{\noindent #2}
+\vspace*{28pt}
+\par\noindent
+\textbf{\textit{SOLUTION}}\vspace*{4pt}
+\hrule
+\vspace*{18pt}
+\noindent
+ #3%
+\vspace*{28pt}
+\hrule
 \addtocounter{workedexamplecounter}{1}\setcounter{stepcounter}{1}%
-\par%\vspace{.25cm}
+%\vspace{.25cm}
 }%
 {%
 \end{mdframed}
 \end{quotation}
 %\nopagebreak[4]
-\begin{flushright}
 %\begin{pspicture}(0,0)(10,0.01)
 % \psline[linecolor=gray,linewidth=3pt]{-}(0,0)(10,0)
 % \psline[linecolor=gray]{-}(10,0)(10,2)
 %\end{pspicture}
-\end{flushright}
-\setlength{\parindent}{\saveparindentlength}}
+\setlength{\parindent}{\oldparindent}
+\setlength{\floatsep}{\myfloatsep}
+}
+
 
 \newcommand{\MarginCompass}{\marginpar{\begin{center}\pscompass\end{center}}}
 
@@ -637,4 +688,140 @@
 % just remove sections form header - too long
 \renewcommand{\sectionmark}[1]{\markright{}{}}
 
+
+
+
+
+
+
+% Fancy headers 
+
+\newcounter{shortcodecounter}
+\setcounter{shortcodecounter}{1}
+
+
+
+
+\usepackage[explicit]{titlesec}
+
+\newcommand*\chapterlabel{}
+
+\titleformat{\chapter}
+  {\gdef\chapterlabel{}
+   \normalfont\sffamily\fontsize{38}\bfseries\slshape}
+  {\gdef\chapterlabel{\thechapter\ }}{0pt}
+  {\begin{tikzpicture}[remember picture,overlay]
+    \node[yshift=-4cm] at (current page.north west)
+      {\begin{tikzpicture}[remember picture, overlay]
+        \shade[left color=white, right color=gray] (0,0) rectangle
+          (1.2\paperwidth,4cm);
+        \node[anchor=west,text centered, yshift=2.5cm, xshift=1cm]
+              {
+              \begin{minipage}{1.2\textwidth}
+              \raggedright
+              \phantom{xxx}\color{black} #1
+              \end{minipage}
+              };
+        \node[anchor=west,text centered, yshift=2.0cm, xshift=0.85\paperwidth]
+              {\begin{minipage}{\textwidth}
+              \color{white}\chapterlabel
+              \end{minipage}
+              };
+      \end{tikzpicture}
+      };
+   \end{tikzpicture}
+  }
+\titlespacing*{\chapter}{1.5cm}{1cm}{1cm}
+
+
+
+\newcommand*\sectionlabel{}
+\titleformat{\section}
+  {\gdef\sectionlabel{}
+   \normalfont\sffamily\fontsize{22}\normalfont\itshape}
+  {\gdef\sectionlabel{\thesection}}{0pt}
+{
+\begin{tikzpicture}[remember picture,overlay]
+   \node[anchor=west, yshift=-1.5cm, xshift=-4.0cm]
+      {\begin{tikzpicture}[remember picture, overlay]
+        \draw[fill=siyavula-gray, color=siyavula-dark-gray, xshift=-\marginparwidth] (0,0) rectangle
+          (1.5\paperwidth,2.0cm);
+        \node[anchor=west,text centered ,yshift=1.0cm, xshift=\hoffset+0.45\marginparwidth]
+              {
+              \begin{minipage}{0.85\textwidth}
+              \raggedright
+              \color{black} #1
+              \end{minipage}
+              };
+        \node[anchor=east,text centered, yshift=1.0cm, xshift=\hoffset+0.45\marginparwidth+1.1\textwidth]
+              {\Large\color{black} \raisebox{-0.25em}{\includegraphics[scale=0.3]{../../icons/www.ps}}~P\arabic{shortcodecounter}};
+       \end{tikzpicture}
+      };
+   \end{tikzpicture}
+\addtocounter{shortcodecounter}{1}
+}
+\titlespacing*{\section}{1cm}{1cm}{2cm}
+
+
+
+
+\newcommand*\subsectionlabel{}
+\titleformat{\subsection}
+  {\gdef\subsectionlabel{}
+   \normalfont\sffamily\fontsize{18}\bfseries\slshape}
+  {\gdef\subsectionlabel{\thesubsection}}{0pt}
+  {\begin{tikzpicture}[remember picture,overlay]
+   \node[anchor=west, yshift=-1.5cm, xshift=-0.5cm]
+      {\begin{tikzpicture}[remember picture, overlay]
+        \draw[fill=siyavula-gray, color=siyavula-gray] (0,0) rectangle
+          (0.915\paperwidth,1.5cm);
+        \node[anchor=west,text centered ,yshift=0.75cm, xshift=\hoffset+0.02\marginparwidth]
+              { \begin{minipage}{0.85\textwidth}
+                \color{black} #1
+                \end{minipage}
+                };
+        \node[anchor=east,text centered, yshift=0.75cm, xshift=\hoffset+0.05\marginparwidth+1.1\textwidth]
+              {\Large\color{black} \raisebox{-0.25em}{\includegraphics[scale=0.3]{../../icons/www.ps}}~P\arabic{shortcodecounter}};
+       \end{tikzpicture}
+      };
+   \end{tikzpicture}
+\addtocounter{shortcodecounter}{1}
+  }
+\titlespacing*{\subsection}{0cm}{1cm}{2cm}
+
+
+
+
+
+
+
+\newcommand{\exercisesheading}{
+\addtocounter{exercisecounter}{1}
+ \par  \vspace*{2\baselineskip}
+{  \fontsize{12}\bfseries\itshape
+\begin{tikzpicture}[remember picture,overlay]
+    \node[anchor=west ,text centered]
+      {\begin{tikzpicture}[remember picture, overlay]
+        \draw[color=white, draw=black, line width=1pt] (0,0) rectangle
+          (0.3\textwidth, 28pt);
+       \node[anchor=west, yshift=14pt, xshift=4pt, text centered]
+              { \bfseries ~ \color{black} Exercise \chapterlabel~-~\arabic{exercisecounter}   };
+       \end{tikzpicture}
+    };
+    
+% now the gray bar to the end of the paragraph
+    \node[anchor=west, xshift=0.335\textwidth]{
+      \begin{tikzpicture}[remember picture, overlay]
+        \draw[fill=white, color=white] (0,0) rectangle
+          (0.655\textwidth,28pt);
+       \end{tikzpicture}
+
+
+      };
+   \end{tikzpicture}
+
+}
+\par
+%\vspace{\baselineskip}
+}
 
