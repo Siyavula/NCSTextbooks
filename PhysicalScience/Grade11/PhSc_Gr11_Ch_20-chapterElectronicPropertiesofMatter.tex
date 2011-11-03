@@ -1,0 +1,439 @@
+\chapter{Electronic Properties of Matter}
+\label{p:mm:ep11}
+
+\section{Introduction}
+
+We can study many different features of solids. Just a few of the things we could study are how hard or soft they are, what their magnetic properties are or how well they conduct heat. The thing that we are interested in, in this chapter are their electronic properties. Simply, how well do they conduct electricity and how do they do it.
+
+We are only going to discuss materials that form a 3-dimensional lattice. This means that the atoms that make up the material have a regular pattern (carbon, silicon, etc.). We won't discuss materials where the atoms are jumbled together in a irregular way (plastic, glass, rubber etc.).
+
+\section{Conduction}
+%\begin{syllabus}
+%\item The learner must be able to explain how energy levels of electrons in an atom combine with those of other atoms in the formation of crystals.
+%\item The learner must be able to explain how the resulting energy levels are more closely spaced than those in the individual atoms, forming energy bands; and thus
+%\item The learner must be able to explain the existence of energy bands in metal crystals as the result of superposition of energy levels.
+%\item The learner must be able to explain and contrast the conductivity of conductors, semi-conductors and insulators using energy band theory.
+%\end{syllabus}
+
+We know that there are materials that do conduct electricity, called conductors, like the copper wires in the circuits you build. There are also materials that do not conduct electricity, called insulators, like the plastic covering on the copper wires.
+
+Conductors come in two major categories: metals (e.g. copper) and semi-conductors (e.g. silicon). Metals conduct very well and semi-conductors don't. One very interesting difference is that metals conduct less as they become hotter but semi-conductors conduct more.
+
+What is different about these substances that makes them conduct differently? That is what we are about to find out.
+
+We have learnt that electrons in an atom have discrete energy levels. When an electron is given the right amount of energy, it can jump to a higher energy level, while if it loses the right amount of energy it can drop to a lower energy level. The lowest energy level is known as the ground state.
+
+\begin{center}
+\begin{pspicture}(0,0)(5,5)
+%\psgrid[gridcolor=gray]
+\psline{->}(0,0)(0,5)
+\uput[u](0,5){energy}
+\psline(0,0.5)(5,0.5)
+\uput[r](5,0.5){ground state}
+\psline(0,1.5)(5,1.5)
+\uput[r](5,1.5){first energy level}
+\psline(0,2.25)(5,2.25)
+\uput[r](5,2.25){second energy level}
+\psline(0,2.75)(5,2.75)
+\uput[r](5,2.75){third energy level}
+\psline(0,3)(5,3)
+\uput[r](5,3){fourth energy level}
+\uput[r](0,4){\parbox[r]{4.5cm}{energy levels of the electrons in a single atom}}
+\end{pspicture}
+\end{center}
+
+When two atoms are far apart from each other they don't influence each other. Look at the picture below. There are two atoms depicted by the black dots. When they are far apart their electron clouds (the gray clouds) are distinct. The dotted line depicts the distance of the outermost electron energy level that is occupied.
+\begin{center}
+\begin{pspicture}(-5,-2)(5,2)
+\pscircle[linestyle=dotted,linecolor=lightgray,fillstyle=ccslope,slopebegin=black,slopeend=white](-3,0){2}
+\pscircle[linestyle=dotted,linecolor=lightgray,fillstyle=ccslope,slopebegin=black,slopeend=white](3,0){2}
+\psdot[dotscale=2](3,0)
+\psdot[dotscale=2](-3,0)
+\end{pspicture}
+\end{center}
+In  some lattice structures the atoms would be closer together. If they are close enough their electron clouds, and therefore electron energy levels start to overlap. Look at the picture below. In this picture the two atoms are closer together. The electron clouds now overlap. The overlapping area is coloured in solid gray to make it easier to see.
+
+\begin{center}
+\begin{pspicture}(-5,-2)(5,2)
+\pscircle[linestyle=dotted,linecolor=lightgray,fillstyle=ccslope,slopebegin=black,slopeend=white](-1,0){2}
+\pscircle[linestyle=dotted,linecolor=lightgray,fillstyle=ccslope,slopebegin=black,slopeend=white](1,0){2}
+\pscustom[linestyle=dotted,linecolor=gray,fillstyle=solid,fillcolor=lightgray]{%
+\psarc(-1,0){2}{300}{60}  % B
+\psarc(1,0){2}{120}{240}}  % B
+\psdot[dotscale=2](1,0)
+\psdot[dotscale=2](-1,0)
+\end{pspicture}
+\end{center}
+
+When this happens we might find two electrons with the same energy and spin in the same space. We know that this is not allowed from the Pauli exclusion principle. Something must change to allow the overlapping to happen. The change is that the energies of the energy levels change a tiny bit so that the electrons are not in exactly the same spin and energy state at the same time.
+
+So if we have 2 atoms then in the overlapping area we will have twice the number of electrons and energy levels but the energy levels from the different atoms will be very very close in energy. If we had 3 atoms then there would be 3 energy levels very close in energy and so on. In a solid there may be very many energy levels that are very close in energy. These groups of energy levels are called bands. The spacing between these bands determines whether the solid is a conductor or an insulator.
+
+\begin{center}
+\begin{pspicture}(0,0)(5,5.6)
+%\psgrid[gridcolor=gray]
+\psline{->}(0,0)(0,5)
+\uput[u](0,5){energy}
+\multirput(0,0)(0,0.1){10}{\psline(0,0)(5,0)}
+\multirput(0,2)(0,0.1){10}{\psline(0,0)(5,0)}
+\rput*(2.5,2.5){conduction band}
+\rput*(2.5,1.5){forbidden band}
+\rput*(2.5,0.5){valence band}
+\rput(5.2,0.5){\Huge \}}
+\rput(5.2,1.5){\Huge \}}
+\rput(5.2,2.5){\Huge \}}
+\uput[r](5.2,2.5){energy levels}
+\uput[r](5.2,1.5){energy gap}
+\uput[r](5.2,0.5){energy levels}
+\uput[r](0,4){\parbox[r]{4.5cm}{Energy levels of the electrons in atoms making up a solid}}
+\end{pspicture}
+\end{center}
+
+In a gas, the atoms are spaced far apart and they do not influence each other. However, the atoms in a solid greatly influence each other. The forces that bind these atoms together in a solid affect how the electrons of the atoms behave, by causing the individual energy levels of an atom to break up and form energy bands. The resulting energy levels are more closely spaced than those in the individual atoms. The energy bands still contain discrete energy levels, but there are now many more energy levels than in the single atom.
+
+In crystalline solids, atoms interact with their neighbors, and the energy levels of the electrons in isolated atoms turn into bands. Whether a material conducts or not is determined by its band structure.
+
+\begin{center}
+\begin{pspicture}(-0.4,-0.6)(9.4,4)
+%\psgrid[gridcolor=gray]
+
+\rput(0,0){
+\psframe[fillstyle=solid,fillcolor=lightgray](-0.4,0)(2.4,1)
+\rput*(1,0.5){valence band}
+\rput(0,1){
+\psframe[fillstyle=solid,fillcolor=darkgray](-0.4,0)(2.4,1)
+\rput*(1,0.5){conduction band}}
+\uput[d](1,0){conductor}}
+
+\rput(3.5,0){
+\psframe[fillstyle=solid,fillcolor=lightgray](-0.4,0)(2.4,1)
+\rput*(1,0.5){valence band}
+\rput(0,1.5){
+\psframe[fillstyle=solid,fillcolor=darkgray](-0.4,0)(2.4,1)
+\rput*(1,0.5){conduction band}}
+\uput[d](1,0){semiconductor}}
+
+\rput(7,0){
+\psframe[fillstyle=solid,fillcolor=lightgray](-0.4,0)(2.4,1)
+\rput*(1,0.5){valence band}
+\rput(0,3){
+\psframe[fillstyle=solid,fillcolor=darkgray](-0.4,0)(2.4,1)
+\rput*(1,0.5){conduction band}}
+\uput[d](1,0){insulator}}
+\uput[r](0,4){\parbox{4.5cm}{band structure in conductors, semiconductors and insulators}}
+\end{pspicture}
+\end{center}
+
+Electrons follow the Pauli exclusion principle, meaning that two electrons cannot occupy the same state. Thus electrons in a solid fill up the energy bands up to a certain level (this is called the Fermi energy). Bands which are completely full of electrons cannot conduct electricity, because there is no state of nearby energy to which the electrons can jump. Materials in which all bands are full are insulators.
+
+\subsection{Metals}
+
+Metals are good conductors because they have unfilled spaces in the valence energy band. In the absence of an electric field, there are electrons traveling in all directions. When an electric field is applied the mobile electrons flow. Electrons in this band can be accelerated by the electric field because there are plenty of nearby unfilled spaces in the band.
+
+\subsection{Insulator}
+
+The energy diagram for the insulator shows the insulator with a very wide energy gap. The wider this gap, the greater the amount of energy required to move the electron from the valence band to the conduction band. Therefore, an insulator requires a large amount of energy to obtain a small amount of current. The insulator ``insulates" because of the wide forbidden band or energy gap.
+
+\subsubsection{Breakdown}
+
+A solid with filled bands is an insulator. If we raise the temperature the electrons gain thermal energy. If there is enough energy added then electrons can be thermally excited from the valence band to the conduction band. The fraction of electrons excited in this way depends on:
+\begin{itemize}
+\item the temperature and
+\item the band gap, the energy difference between the two bands.
+\end{itemize}
+Exciting these electrons into the conduction band leaves behind positively charged holes in the valence band, which can also conduct electricity.
+
+\subsection{Semi-conductors}
+
+A semi-conductor is very similar to an insulator. The main difference between semiconductors and insulators is the size of the band gap between the conduction and valence bands. The band gap in insulators is larger than the band gap in semiconductors.
+
+In semi-conductors at room temperature, just as in insulators, very few electrons gain enough thermal energy to leap the band gap, which is necessary for conduction. For this reason, pure semi-conductors and insulators, in the absence of applied fields, have roughly similar electrical properties. The smaller band gaps of semi-conductors, however, allow for many other means besides temperature to control their electrical properties. The most important one being that for a certain amount of applied voltage, more current will flow in the semiconductor than in the insulator.
+
+\Exercise{Conduction}{
+\begin{enumerate}
+\item{Explain how energy levels of electrons in an atom combine with those of other atoms in the formation of crystals.}
+\item{Explain how the resulting energy levels are more closely spaced than those in the individual atoms, forming energy bands.}
+\item{Explain the existence of energy bands in metal crystals as the result of superposition of energy levels.}
+\item{Explain and contrast the conductivity of conductors, semi-conductors and insulators using energy band theory.}
+\item{What is the main difference in the energy arrangement between an isolated atom and the atom in a solid?}
+\item{What determines whether a solid is an insulator, a semiconductor, or a conductor?}
+\end{enumerate}
+\practiceinfo
+
+\begin{tabular}[h]{cccccc}
+(1.) aaa & (2.) aaa & (3.) aaa & (4.) aaa & (5.) aaa & (6.) aaa & 
+ \end{tabular}
+}
+
+\section{Intrinsic Properties and Doping}
+
+%\begin{syllabus}
+%\item The learner must be able to explain the process of doping.
+%\item The learner must be able to explain how doping improves the conductivity of semi-conductors.
+%\end{syllabus}
+
+We have seen that the size of the energy gap between the valence band and the conduction band determines whether a solid is a conductor or an insulator. However, we have seen that there is a material known as a semi-conductor. A semi-conductor is a solid whose band gap is smaller than that of an insulator and whose electrical properties can be modified by a process known as \textit{doping}.
+
+\Definition{Doping}{Doping is the deliberate addition of impurities to a pure semiconductor material to change its electrical properties.}
+
+Semiconductors are often the Group IV elements in the periodic table. The most common semiconductor elements are silicon (Si) and germanium (Ge). The most important property of Group IV elements is that they have 4 valence electrons.
+
+\Extension{Band Gaps of Si and Ge}{Si has a band gap of $1.744\times10^{-19}$~J while Ge has a band gap of $1.152\times10^{-19}$~J.}
+
+So, if we look at the arrangement of for example Si atoms in a crystal, they would look like that shown in Figure~\ref{fig:SiCrystal}.
+
+\begin{figure}[htbp]
+\begin{center}
+\begin{pspicture}(-0.4,-0.4)(3.2,3.2)
+%\psgrid[gridcolor=gray,subgriddiv=10]
+\def\SiAtom{\pscircle(0,0){0.25}\rput(0,0){Si}\psdots(-0.1,0.35)(0.1,-0.35)(-0.35,0.1)(0.35,-0.1)}
+\multirput(0,0)(0.7,0){5}{\multirput(0,0)(0,0.7){5}{\SiAtom}}
+\end{pspicture}
+\caption{Arrangement of atoms in a Si crystal.}
+\label{fig:SiCrystal}
+\end{center}
+\end{figure}
+
+The main aim of doping is to make sure there are either too many (surplus) or too few electrons (deficiency). Depending on what situation you want to create you use different elements for the doping.
+
+\subsection{Surplus}
+
+A surplus of electrons is created by adding an element that has more valence electrons than Si to the Si crystal. This is known as \textit{n-type} doping and elements used for n-type doping usually come from Group V in the periodic table. Elements from Group V have 5 valence electrons, one more than the Group IV elements.
+
+A common n-type dopant (substance used for doping) is arsenic (As). The combination of a semiconductor and an n-type dopant is known as an n-type semiconductor. A Si crystal doped with As is shown in Figure~\ref{fig:SiAs}. When As is added to a Si crystal, 4 of the 5 valence electrons in As bond with the 4 Si valence electrons. The fifth As valence electron is free to move around.
+
+It takes only a few As atoms to create enough free electrons to allow an electric current to flow through the silicon. Since n-type dopants `donate' their free atoms to the semiconductor, they are known as \textit{donor atoms}.
+
+\begin{figure}[htbp]
+\begin{center}
+\begin{pspicture}(-0.4,-0.4)(3.2,3.2)
+%\psgrid[gridcolor=gray,subgriddiv=10]
+\def\SiAtom{\pscircle(0,0){0.25}\rput(0,0){Si}\psdots(-0.1,0.35)(0.1,-0.35)(-0.35,0.1)(0.35,-0.1)}
+\multirput(0,0)(0.7,0){5}{\multirput(0,0)(0,0.7){5}{\SiAtom}}
+\rput(1.4,1.4){\pscircle[fillstyle=solid,fillcolor=white](0,0){0.25}\rput(0,0){As}}
+\psdot(1.7,1.7)
+\psline{<-}(1.7,1.7)(3.5,1.7)
+\uput[r](3.5,1.7){extra electron}
+\end{pspicture}
+\caption{Si crystal doped with As. For each As atom present in the Si crystal, there is one extra electron. This combination of Si and As is known as an n-type semiconductor, because of its overall surplus of electrons.}
+\label{fig:SiAs}
+\end{center}
+\end{figure}
+
+\subsection{Deficiency}
+
+A deficiency of electrons is created by adding an element that has less valence electrons than Si to the Si crystal. This is known as \textit{p-type} doping and elements used for p-type doping usually come from Group III in the periodic table. Elements from Group III have 3 valence electrons, one less than the semiconductor elements that come from Group IV. A common p-type dopant is boron (B). The combination of a semiconductor and a p-type dopant is known as an p-type semiconductor. A Si crystal doped with B is shown in Figure~\ref{fig:SiB}. When B is mixed into the silicon crystal, there is a Si valence electron that is left unbonded.
+
+The lack of an electron is known as a \textit{hole} and has the effect of a positive charge. Holes can conduct current. A hole happily accepts an electron from a neighbor, moving the hole over a space. Since p-type dopants `accept' electrons, they are known as \textit{acceptor atoms}.
+
+\begin{figure}[htbp]
+\begin{center}
+\begin{pspicture}(-0.4,-0.4)(3.2,3.2)
+%\psgrid[gridcolor=gray,subgriddiv=10]
+\def\SiAtom{\pscircle(0,0){0.25}\rput(0,0){Si}\psdots(-0.1,0.35)(0.1,-0.35)(-0.35,0.1)(0.35,-0.1)}
+\multirput(0,0)(0.7,0){5}{\multirput(0,0)(0,0.7){5}{\SiAtom}}
+\rput(1.4,1.4){\pscircle[fillstyle=solid,fillcolor=white](0,0){0.25}\rput(0,0){B}\psdots[dotstyle=o](0.35,-0.1)}
+%\psdot[dotstyle=o](1.75,1.35)
+\psline{<-}(1.8,1.3)(3.5,1.3)
+\uput[r](3.5,1.3){missing electron or hole}
+\end{pspicture}
+\caption{Si crystal doped with B. For each B atom present in the Si crystal, there is one less electron. This combination of Si and B is known as a p-type semiconductor, because of its overall deficiency of electrons.}
+\label{fig:SiB}
+\end{center}
+\end{figure}
+
+Donor (n-type) impurities have extra valence electrons with energies very close to the conduction band which can be easily thermally excited to the conduction band. Acceptor (p-type) impurities capture electrons from the valence band, allowing the easy formation of holes.
+
+\begin{center}
+\begin{pspicture}(-0.4,-0.6)(9.4,4)
+%\psgrid[gridcolor=gray]
+
+\rput(0,0){
+\psframe[fillstyle=solid,fillcolor=lightgray](-0.4,0)(2.4,1)
+\rput*(1,0.5){valence band}
+\rput(0,3){
+\psframe[fillstyle=solid,fillcolor=darkgray](-0.4,0)(2.4,1)
+\rput*(1,0.5){conduction band}}
+\uput[d](1,0){intrinsic semiconductor}
+}
+
+\rput(3.5,0){
+\psframe[fillstyle=solid,fillcolor=lightgray](-0.4,0)(2.4,1)
+\rput*(1,0.5){valence band}
+\rput(0,3){
+\psframe[fillstyle=solid,fillcolor=darkgray](-0.4,0)(2.4,1)
+\rput*(1,0.5){conduction band}}
+\uput[d](1,0){n-type semiconductor}
+\psline[linestyle=dashed](-0.4,2.6)(2.4,2.6)
+\uput[d](1,2.6){donor atom}
+}
+
+\rput(7,0){
+\psframe[fillstyle=solid,fillcolor=lightgray](-0.4,0)(2.4,1)
+\rput*(1,0.5){valence band}
+\rput(0,3){
+\psframe[fillstyle=solid,fillcolor=darkgray](-0.4,0)(2.4,1)
+\rput*(1,0.5){conduction band}}
+\uput[d](1,0){p-type semiconductor}
+\psline[linestyle=dashed](-0.4,1.4)(2.4,1.4)
+\uput[u](1,1.4){acceptor atom}
+}
+\pcline{->}(-1,0)(-1,4)
+\aput{:U}{Energy}
+\end{pspicture}
+\end{center}
+
+The energy level of the donor atom is close to the conduction band and it is relatively easy for electrons to enter the conduction band. The energy level of the acceptor atom is close to the valence band and it is relatively easy for electrons to leave the valence band and enter the vacancies.
+
+\Exercise{Intrinsic Properties and Doping}{
+\begin{enumerate}
+\item Explain the process of doping using detailed diagrams for p-type and n-type semiconductors.
+\item{Draw a diagram showing a Ge crystal doped with As. What type of semiconductor is this?}
+\item{Draw a diagram showing a Ge crystal doped with B. What type of semiconductor is this?}
+\item Explain how doping improves the conductivity of semi-conductors.
+\item{Would the following elements make good p-type dopants or good n-type dopants?
+\begin{enumerate}
+\item{B}
+\item{P}
+\item{Ga}
+\item{As}
+\item{In}
+\item{Bi}
+\end{enumerate}}
+\end{enumerate}
+\practiceinfo
+
+\begin{tabular}[h]{cccccc}
+(1.) aaa & (2.) aaa & (3.) aaa & (4.) aaa & (5.) aaa & 
+ \end{tabular}
+
+}
+
+\section{The p-n junction}
+%\begin{syllabus}
+%\item The learner must be able to compare p and n type semi-conductors
+%\item The learner must be able to explain how a p - n junction works.
+%\item The learner must be able to give everyday examples of the application of semi-conductors
+%\end{syllabus}
+
+\subsection{Differences between p- and n-type semi-conductors}
+We have seen that the addition of specific elements to semiconductor materials turns them into p-type semiconductors or n-type semiconductors. The differences between n- and p-type semiconductors are summarised in Table~\ref{tab:pn}.
+
+%\begin{table}[htbp]
+%\begin{center}
+%\caption{Differences between p- and n-type semiconductors \nts{summarise the differences from the previous section}}
+%\label{tab:pn}
+%\begin{tabular}{|l|c|c|}\hline
+%Property&p-type&n-type\\\hline\hline
+%\hline
+%\end{tabular}
+%\end{center}
+%\end{table}
+
+\subsection{The p-n Junction}
+When p-type and n-type semiconductors are placed in contact with each other, a p-n junction is formed. Near the junction, electrons and holes combine to create a depletion region.
+
+\begin{figure}[htbp]
+\begin{center}
+\begin{pspicture}(1,1)(6,3.6)
+%\psgrid[gridcolor=gray,subgriddiv=10]
+\psframe[fillstyle=solid,fillcolor=lightgray](1,1)(3,3)
+\psframe[fillstyle=solid,fillcolor=white](3,1)(4,3)
+\psframe[fillstyle=solid,fillcolor=gray](4,1)(6,3)
+\multirput(1,1)(0.2,0){10}{\multirput(0,0)(0,0.2){10}{\psdot[dotstyle=o](0.1,0.1)}}
+\multirput(4,1)(0.2,0){10}{\multirput(0,0)(0,0.2){10}{\psdot(0.1,0.1)}}
+\uput[u](2,3){p-type}
+\uput[u](5,3){n-type}
+\pcline[linestyle=none](3.5,1)(3.5,3)
+\lput{:U}{\footnotesize{depletion band}}
+\bput{:U}{}
+\end{pspicture}
+\caption{The p-n junction forms between p- and n-type semiconductors. The free electrons from the n-type material combine with the holes in the p-type material near the junction. There is a small potential difference across the
+junction. The area near the junction is called the depletion region because there are few holes and few free electrons in this region.}
+\label{fig:pnjunction}
+\end{center}
+\end{figure}
+
+Electric current flows more easily across a p-n junction in one direction than in the other. If the positive pole of a battery is connected to the p-side of the junction, and the negative pole to the n-side, charge flows across the junction. If the battery is connected in the opposite direction, very little charge can flow.
+
+This might not sound very useful at first but the p-n junction forms the basis for computer chips, solar cells, and other electronic devices.
+
+\subsection{Unbiased}
+
+In a p-n junction, without an external applied voltage (no bias), an equilibrium condition is reached in which a potential difference is formed across the junction.
+
+P-type is where you have more "holes"; n-type is where you have more electrons in the material. Initially, when you put them together to form a junction, holes near the junction tends to "move" across to the n-region, while the electrons in the n-region drift across to the p-region to "fill" some holes. This current will quickly stop as the potential barrier is built up by the migrated charges. So in steady state no current flows.
+
+Then now when you put a potential different across the terminals you have two cases: forward biased and reverse biased.
+
+\subsection{Forward biased}
+
+Forward-bias occurs when the p-type semiconductor material is connected to the positive terminal of a battery and the n-type semiconductor material is connected to the negative terminal.
+
+\begin{center}
+\begin{pspicture}(0,-2)(7,3)
+\psframe(2,1)(3.1,2.5)
+\uput[r](2.3,1.6){P}
+\psframe(3.1,1)(4.2,2.5)
+\uput[r](3.5,1.6){N}
+\psline(2,1.25)(1,1.25)(1,-1)(3.0,-1)
+\psline(4.2,1.25)(5.2,1.25)(5.2,-1)(3.2,-1)
+\psline[linewidth=2pt](3,-1.5)(3,-0.5)
+\psline[linewidth=2pt](3.2,-1.2)(3.2,-0.8)
+\end{pspicture}
+\end{center}
+
+The electric field from the external potential different can easily overcome the small internal field (in the so-called depletion region, created by the initial drifting of charges): usually anything bigger than 0.6V would be enough. The external field then attracts more e- to flow from n-region to p-region and more holes from p-region to n-region and you have a forward biased situation. the diode is forward biased and so current will flow.
+
+
+\subsection{Reverse biased}
+
+
+\begin{center}
+\begin{pspicture}(0,-2)(7,3)
+\psframe(2,1)(3.1,2.5)
+\uput[r](2.3,1.6){N}
+\psframe(3.1,1)(4.2,2.5)
+\uput[r](3.5,1.6){P}
+\psline(2,1.25)(1,1.25)(1,-1)(3.0,-1)
+\psline(4.2,1.25)(5.2,1.25)(5.2,-1)(3.2,-1)
+\psline[linewidth=2pt](3,-1.5)(3,-0.5)
+\psline[linewidth=2pt](3.2,-1.2)(3.2,-0.8)
+\end{pspicture}
+\end{center}
+
+In this case the external field pushes e- back to the n-region while more holes into the p-region, as a result you get no current flow. Only the small number of thermally released minority carriers (holes in the n-type region and e- in the p-type region) will be able to cross the junction and form a very small current, but for all practical purposes, this can be ignored.
+
+Of course if the reverse biased potential is large enough you get what is called avalanche break down and current flow in the opposite direction. In many cases, except for Zener diodes, you most likely will destroy the diode.
+
+
+\subsection{Real-World Applications of Semiconductors}
+
+Semiconductors form the basis of modern electronics. Every electrical appliance usually has some semiconductor-based technology inside it. The fundamental uses of semiconductors are in microchips (also known as integrated circuits) and microprocessors.
+
+Integrated circuits are miniaturised circuits. The use of integrated circuits makes it possible for electronic devices (like a cellular telephone or a hi-fi) to get smaller.
+
+Microprocessors are a special type of integrated circuit.
+%\nts{more is needed but I'm not that knowledgable and I'm tired of Googling...}
+
+\Activity{Research Project}{Semiconductors}{Assess the impact on society of the invention of transistors, with particular reference to their use in microchips (integrated circuits) and microprocessors.}
+
+\Exercise{The p-n junction}{
+\begin{enumerate}
+\item Compare p- and n-type semi-conductors.
+\item Explain how a p-n junction works using a diagram.
+\item Give everyday examples of the application.
+\end{enumerate}}
+
+\begin{eocexercises}{}
+\begin{enumerate}
+\item{What is a conductor?}
+\item{What is an insulator?}
+\item{What is a semiconductor?}
+\end{enumerate}
+\practiceinfo
+
+\begin{tabular}[h]{cccccc}
+(1.) aaa & (2.) aaa & (3.) aaa & 
+ \end{tabular}
+\end{eocexercises}

@@ -1,0 +1,1313 @@
+\chapter{The Physics of Music}
+\label{p:wsl:pm11}
+
+
+\section{Introduction}
+What is your favorite musical instrument? How do you play it? Do you pluck a string, like a guitar?
+Do you blow through it, like a flute? Do you hit it, like a drum?
+All musical instruments work by making standing waves. Each instrument has a unique sound because of the special waves made in it.
+These waves could be in the strings of a guitar or violin.
+They could also be in the skin of a drum or a tube of air in a trumpet.
+These waves are picked up by the air and later reach your ear as sound.
+
+In Grade 10, you learned about standing waves and boundary conditions. We saw a rope that was:
+\begin{itemize}
+\item{fixed at both ends}
+\item{fixed at one end and free at the other}
+\end{itemize}
+
+
+
+We also saw a pipe that was:
+\begin{itemize}
+\item{closed at both ends}
+\item{open at both ends}
+\item{open at one end, closed at the other}
+\end{itemize}
+
+String and wind instruments are good examples of standing waves on strings and pipes.
+
+One way to describe standing waves is to count nodes.
+Recall that a node is a point on a string that does not move as the wave changes.
+The anti-nodes are the highest and lowest points on the wave. There is a node at each end of a fixed string.
+There is also a node at the closed end of a pipe.
+But an open end of a pipe has an anti-node.
+
+What causes a standing wave? There are incident and reflected waves traveling back and forth on our string or pipe.
+For some frequencies, these waves combine in just the right way so that the whole wave appears to be standing still.
+These special cases are called harmonic frequencies, or \textbf{harmonics}.
+They depend on the length and material of the medium.
+
+\Definition{Harmonic}{A \textbf{harmonic} frequency is a frequency at which standing waves can be made in a particular object or on a particular instrument.}
+
+\section{Standing Waves in String Instruments}
+Let us look at a basic "instrument": a string pulled tight and fixed at both ends.
+When you pluck the string, you hear a certain pitch. This pitch is made by a certain frequency.
+What causes the string to emit sounds at this pitch?
+
+You have learned that the frequency of a standing wave depends on the length of the wave.
+The wavelength depends on the nodes and anti-nodes.
+The longest wave that can "fit" on the string is shown in Figure~\ref{fig:harmonics}.
+This is called the \textbf{fundamental} or \textbf{natural frequency} of the string.
+The string has nodes at both ends. The wavelength of the fundamental is twice the length of the string.
+
+Now put your finger on the center of the string.  Hold it down gently and pluck it.
+The standing wave now has a node in the middle of the string.  There are three nodes.
+We can fit a whole wave between the ends of the string.
+This means the wavelength is equal to the length of the string.
+This wave is called the first harmonic.
+As we add more nodes, we find the second harmonic, third harmonic, and so on.
+We must keep the nodes equally spaced or we will lose our standing wave.
+
+\begin{figure}[htbp]
+\begin{center}
+\begin{pspicture}(0,-0.8)(3.6,6)
+%\psgrid[gridcolor=gray]
+\rput(0,4.8){\psplot[xunit=0.0111,plotstyle=curve]{0}{360}{0.5 x
+mul sin}
+\psplot[xunit=0.0111,plotstyle=curve]{0}{360}{0.5 x mul sin neg}
+\psline[linecolor=lightgray,linestyle=dashed](0,0)(4,0)
+\uput[r](4,0){fundamental frequency}}
+\rput(0,2.6){\psplot[xunit=0.0111,plotstyle=curve]{0}{360}{x
+sin}\psplot[xunit=0.0111,plotstyle=curve]{0}{360}{x sin neg}
+\psline[linecolor=lightgray,linestyle=dashed](0,0)(4,0)
+\uput[r](4,0){first harmonic}}
+\rput(0,0.4){\psplot[xunit=0.0111,plotstyle=curve]{0}{360}{1.5 x mul
+sin}\psplot[xunit=0.0111,plotstyle=curve]{0}{360}{1.5 x mul sin
+neg}
+\psline[linecolor=lightgray,linestyle=dashed](0,0)(4,0)
+\uput[r](4,0){second harmonic}}
+\end{pspicture}
+\caption{Harmonics on a string fixed at both ends.}
+\label{fig:harmonics}
+\end{center}
+\end{figure}
+
+\Activity{Investigation}{Waves on a String Fixed at Both Ends}{This chart shows various waves on a string. The string length $L$ is the dashed line. \\
+\begin{enumerate}
+\item{Fill in the:
+\begin{itemize}
+\item{number of nodes}
+\item{number of anti-nodes}
+\item{wavelength in terms of $L$}
+\end{itemize}
+The first and last waves are done for you.
+\begin{center}
+\begin{tabular}{|c|c|c|c|} \hline
+Wave & Nodes & Antinodes & Wavelength \\ \hline
+\begin{pspicture}(0,-0.6)(2,0.6)
+\psline[linecolor=lightgray, linestyle=dashed](0,0)(2,0)
+\scalebox{0.5}{
+\psplot[xunit=0.0111,plotstyle=curve]{0}{360}{0.5 x mul sin neg}
+\psplot[xunit=0.0111,plotstyle=curve]{0}{360}{0.5 x mul sin}	}
+\end{pspicture}	&
+\begin{pspicture}(-1,-0.6)(1,0.6)
+\rput(0,0){2}	% All this to center text!
+\end{pspicture}  &
+\begin{pspicture}(-1,-0.6)(1,0.6)
+\rput(0,0){1}	% All this to center text!
+\end{pspicture}  &
+\begin{pspicture}(-1,-0.6)(1,0.6)
+\rput(0,0){2$L$}% All this to center text!
+\end{pspicture}   \\ \hline
+\begin{pspicture}(0,-0.6)(2,0.6)
+\psline[linecolor=lightgray, linestyle=dashed](0,0)(2,0)
+\scalebox{0.5}{
+\psplot[xunit=0.0111,plotstyle=curve]{0}{360}{x sin neg}
+\psplot[xunit=0.0111,plotstyle=curve]{0}{360}{x sin}
+}
+\end{pspicture} & & & \\ \hline
+\begin{pspicture}(0,-0.6)(2,0.6)
+\psline[linecolor=lightgray, linestyle=dashed](0,0)(2,0)
+\scalebox{0.5}{
+\psplot[xunit=0.0111,plotstyle=curve]{0}{360}{1.5 x mul sin neg}
+\psplot[xunit=0.0111,plotstyle=curve]{0}{360}{1.5 x mul sin}
+}
+\end{pspicture} & & & \\ \hline
+\begin{pspicture}(0,-0.6)(2,0.6)
+\psline[linecolor=lightgray, linestyle=dashed](0,0)(2,0)
+\scalebox{0.5}{
+\psplot[xunit=0.0111,plotstyle=curve]{0}{360}{2 x mul sin neg}
+\psplot[xunit=0.0111,plotstyle=curve]{0}{360}{2 x mul sin}	}
+\end{pspicture}	&
+\begin{pspicture}(-1,-0.6)(1,0.6)
+\rput(0,0){5}	% All this to center text!
+\end{pspicture}  &
+\begin{pspicture}(-1,-0.6)(1,0.6)
+\rput(0,0){4}	% All this to center text!
+\end{pspicture}  &
+\begin{pspicture}(-1,-0.6)(1,0.6)
+\rput(0,0){$\frac{L}{2}$}% All this to center text!
+\end{pspicture} \\ \hline
+\end{tabular}
+\end{center}
+}
+\item{Use the chart to find a formula for the wavelength in terms of the number of nodes.} \\
+\end{enumerate}
+}
+
+You should have found this formula:
+\nequ{\lambda=\frac{2L}{n-1}}
+Here, $n$ is the number of nodes.  $L$ is the length of the
+string. The frequency $f$ is:
+
+\nequ{f=\frac{v}{\lambda}}
+Here, $v$ is the velocity of the wave. This may seem confusing.
+The wave is a \emph{standing} wave, so how can it have a velocity?
+But one standing wave is made up of many waves that travel back and forth on the string.
+Each of these waves has the same velocity. This speed depends on the mass and tension of the string.
+
+\begin{wex}
+{Harmonics on a String}
+{We have a standing wave on a string that is 65 cm long. The wave has a velocity of 143 m.s$^{-1}$.
+Find the frequencies of the fundamental, first, second, and third harmonics.}
+{
+\westep{Identify what is given and what is asked:}
+\begin{eqnarray*}
+\rm{L} &=& 65 \ \rm{cm} = 0.65 \ \rm{m} \\
+v &=& 143 \ \rm{m.s}^{-1} \\
+f &=& ?
+\end{eqnarray*}
+To find the frequency we will use $f = \frac{v}{\lambda}$ \\
+
+\westep{Find the wavelength for each harmonic:}
+To find $f$ we need the wavelength of each harmonic ($\lambda = \frac{2L}{n-1}$).
+The wavelength is then substituted into $f = \frac{v}{\lambda}$ to find the harmonics.
+The table below shows the calculations.
+
+\begin{center}
+%\begin{tabular}{|c|p{0.5cm}|p{0.5cm}|p{0.5cm}|}\hline
+\begin{tabular}{|l|c|c|c|} \hline
+\begin{tabular}{c} \ \\ \ \\ \end{tabular} & \textbf{Nodes} & \begin{tabular}{c}\textbf{Wavelength} \\ $\lambda = \frac{2L}{n-1}$ \end{tabular} & \begin{tabular}{c}\textbf{Frequency}\\$f = \frac{v}{\lambda}$ \end{tabular} \\ \hline
+Fundamental frequency $f_{o}$ & 2 & $\frac{2(0,65)}{2-1}$ = 1,3 & $\frac{143}{1,3}$ = 110 Hz \\\hline
+First harmonic $f_{1}$ & 3 & $\frac{2(0,65)}{3-1} = 0,65 $ \ \ \  & $\frac{143}{0,65}$ = 220 Hz \\\hline
+Second harmonic $f_{2}$ & 4 & $\frac{2(0,65)}{4-1} = 0,43 $ \ \ \ & $\frac{143}{0,43} = 330$ Hz  \\\hline
+Third harmonic $f_{3}$ & 5 & $\frac{2(0,65)}{5-1} = 0,33 $ \ \ \ & $\frac{143}{0,33} = 440$ Hz  \\\hline
+\end{tabular}
+\end{center}
+
+
+110 Hz is the natural frequency of the A string on a guitar.
+The third harmonic, at 440 Hz, is the note that orchestras use for tuning.}
+\end{wex}
+
+\Extension{Guitar}{Guitars use strings with high tension.
+The length, tension and mass of the strings affect the pitches you hear.
+High tension and short strings make high frequencies; low tension and long strings make low frequencies.
+When a string is first plucked, it vibrates at many frequencies.
+All of these except the harmonics are quickly filtered out. The harmonics make up the tone we hear.
+
+The body of a guitar acts as a large wooden soundboard. Here is how a soundboard works:
+the body picks up the vibrations of the strings. It then passes these vibrations to the air.
+A sound hole allows the soundboard of the guitar to vibrate more freely.
+It also helps sound waves to get out of the body.
+
+The neck of the guitar has thin metal bumps on it called frets.
+Pressing a string against a fret shortens the length of that string.
+This raises the natural frequency and the pitch of that string.
+
+Most guitars use an "equal tempered" tuning of 12 notes per octave.
+A 6 string guitar has a range of 4 $\frac{1}{2}$ octaves with pitches from 82.407 Hz (low E)
+to 2093 kHz (high C). Harmonics may reach over 20 kHz, in the inaudible range.
+\begin{center}
+\scalebox{0.8} % Change this value to rescale the drawing.
+{
+\begin{pspicture}(0,-3.876816)(9.885938,3.876816) \definecolor{color377b}{rgb}{0.08627450,0.04705882,0.04705882} \psline[linewidth=0.02cm,fillcolor=color377b,doubleline=true,doublesep=0.02](4.18,2.9568162)(4.48,2.796816) \psline[linewidth=0.02cm,fillcolor=color377b,doubleline=true,doublesep=0.02](3.92,2.4768162)(4.22,2.316816) \psline[linewidth=0.02cm,fillcolor=color377b,doubleline=true,doublesep=0.02](3.78,2.2368162)(4.08,2.076816) \psline[linewidth=0.02cm,fillcolor=color377b,doubleline=true,doublesep=0.02](3.64,1.9968162)(3.94,1.8368161) \psline[linewidth=0.02cm,fillcolor=color377b,doubleline=true,doublesep=0.02](3.52,1.7768161)(3.82,1.616816) \psline[linewidth=0.02cm,fillcolor=color377b,doubleline=true,doublesep=0.02](3.4,1.5368161)(3.7,1.3768162) \psline[linewidth=0.02cm,fillcolor=color377b,doubleline=true,doublesep=0.02](3.26,1.3168161)(3.56,1.1568161) \psline[linewidth=0.02cm,fillcolor=color377b,doubleline=true,doublesep=0.02](3.16,1.0968161)(3.46,0.9368161) \psline[linewidth=0.02cm,fillcolor=color377b,doubleline=true,doublesep=0.02](3.0,0.8968161)(3.3,0.7368161) \psline[linewidth=0.02cm,fillcolor=color377b,doubleline=true,doublesep=0.02](2.9,0.6568161)(3.2,0.4968161) \psline[linewidth=0.02cm,fillcolor=color377b,doubleline=true,doublesep=0.02](2.78,0.4768161)(3.08,0.3168161) \psline[linewidth=0.02cm,fillcolor=color377b,doubleline=true,doublesep=0.02](2.68,0.2768161)(2.98,0.1168161) \psline[linewidth=0.02cm,fillcolor=color377b,doubleline=true,doublesep=0.02](2.58,0.0968161)(2.88,-0.06318389) \psline[linewidth=0.02cm,fillcolor=color377b,doubleline=true,doublesep=0.02](2.48,-0.0431839)(2.78,-0.2031839) \psline[linewidth=0.02cm,fillcolor=color377b,doubleline=true,doublesep=0.02](2.42,-0.1631839)(2.72,-0.3231839) \psline[linewidth=0.02cm,fillcolor=color377b,doubleline=true,doublesep=0.02](2.36,-0.2631839)(2.66,-0.4231839) \psline[linewidth=0.02cm,fillcolor=color377b,doubleline=true,doublesep=0.02](4.04,2.7368162)(4.38,2.5368161) \psline[linewidth=0.02cm,fillcolor=color377b,doubleline=true,doublesep=0.02](4.28,3.156816)(4.62,2.9768162) \psbezier[linewidth=0.04](2.74,0.4968161)(2.5,0.6368161)(2.14,0.6968161)(1.8,0.3768161)(1.46,0.0568161)(1.5412558,-0.5595761)(1.34,-0.8831839)(1.1387441,-1.2067916)(1.1,-0.9631839)(0.56,-1.4031839)(0.02,-1.8431839)(0.11526374,-2.7895515)(0.96,-3.323184)(1.8047363,-3.8568163)(2.8687515,-3.3244164)(2.86,-2.5031838)(2.8512485,-1.6819514)(2.76,-1.7831839)(2.88,-1.4831839)(3.0,-1.1831839)(3.58,-0.6631839)(3.58,-0.3431839)(3.58,-0.02318389)(3.36,0.2768161)(3.14,0.3168161) \psbezier[linewidth=0.04,fillcolor=color377b](1.34,-3.4831839)(1.7,-3.683184)(2.7,-3.683184)(3.0,-3.0231838)(3.3,-2.363184)(2.9,-2.123184)(3.08,-1.6231838)(3.26,-1.1231838)(3.68,-0.8631839)(3.74,-0.6031839)(3.8,-0.3431839)(3.76,0.07681610)(3.2,0.2968161) \rput{-26.990808}(0.6111867,0.94451004){\psellipse[linewidth=0.04,dimen=outer,fillstyle=solid,fillcolor=color377b](2.2733724,-0.8010828)(0.25262824,0.3639826)} \rput{-210.56396}(3.8130887,-2.6515872){\psellipse[linewidth=0.04,dimen=outer](2.2687922,-0.80486655)(0.3635264,0.51368535)} \rput{-25.358118}(1.1215806,0.3934178){\psframe[linewidth=0.04,dimen=outer](1.9092686,-2.203509)(0.9610243,-2.388414)} \rput{-29.524796}(-0.17041595,1.8490239){\psframe[linewidth=0.04,dimen=outer](3.6416314,3.4273822)(3.2048702,-0.9316416)} \pscustom[linewidth=0.04] { \newpath \moveto(3.26,0.5368161) \lineto(3.25,0.4868161) \curveto(3.245,0.4618161)(3.245,0.4118161)(3.25,0.3868161) \curveto(3.255,0.3618161)(3.275,0.3218161)(3.29,0.3068161) \curveto(3.305,0.29181612)(3.32,0.2718161)(3.32,0.2568161) } \psline[linewidth=0.04cm,fillcolor=color377b](4.66,3.0168161)(2.5,-0.8231839) \psline[linewidth=0.04cm,fillcolor=color377b](4.34,3.2168162)(4.68,3.856816) \psline[linewidth=0.04cm,fillcolor=color377b](5.0,3.7368162)(5.16,3.576816) \psline[linewidth=0.04cm,fillcolor=color377b](5.16,3.576816)(4.82,3.076816) \psline[linewidth=0.04cm,fillcolor=color377b](5.18,3.596816)(4.78,3.116816) \psline[linewidth=0.04cm,fillcolor=color377b](5.14,3.576816)(4.76,3.076816) \pscustom[linewidth=0.04] { \newpath \moveto(4.64,3.0368161) \lineto(4.71,3.076816) \curveto(4.745,3.096816)(4.785,3.116816)(4.8,3.116816) } \pscustom[linewidth=0.04] { \newpath \moveto(4.68,3.056816) \lineto(4.74,3.056816) \curveto(4.77,3.056816)(4.795,3.0618162)(4.79,3.066816) \curveto(4.785,3.0718162)(4.775,3.076816)(4.77,3.076816) \curveto(4.765,3.076816)(4.77,3.0918162)(4.78,3.106816) } \pscustom[linewidth=0.04] { \newpath \moveto(4.68,3.856816) \lineto(4.75,3.856816) \curveto(4.785,3.856816)(4.825,3.8418162)(4.83,3.826816) \curveto(4.835,3.8118162)(4.835,3.796816)(4.83,3.796816) \curveto(4.825,3.796816)(4.835,3.796816)(4.85,3.796816) \curveto(4.865,3.796816)(4.9,3.801816)(4.92,3.806816) \curveto(4.94,3.8118162)(4.97,3.801816)(4.98,3.7868161) \curveto(4.99,3.771816)(5.0,3.7468162)(5.0,3.7168162) } \psellipse[linewidth=0.04,dimen=outer](5.01,3.2268162)(0.07,0.09) \psellipse[linewidth=0.04,dimen=outer](4.89,3.086816)(0.07,0.09) \pscustom[linewidth=0.04] { \newpath \moveto(4.58,3.7568161) \lineto(4.56,3.7268162) \curveto(4.55,3.711816)(4.545,3.681816)(4.55,3.666816) \curveto(4.555,3.6518161)(4.55,3.636816)(4.52,3.636816) } \pscustom[linewidth=0.04] { \newpath \moveto(4.5,3.596816) \lineto(4.46,3.566816) \curveto(4.44,3.551816)(4.425,3.5168161)(4.43,3.4968162) \curveto(4.435,3.4768162)(4.44,3.451816)(4.44,3.4368162) } \pscustom[linewidth=0.04] { \newpath \moveto(4.36,3.396816) \lineto(4.33,3.356816) \curveto(4.315,3.336816)(4.315,3.306816)(4.33,3.296816) \curveto(4.345,3.2868161)(4.36,3.271816)(4.36,3.2568161) } \psline[linewidth=0.02cm,fillcolor=color377b,doubleline=true,doublesep=0.04](5.06,3.4368162)(4.6,3.676816) \psline[linewidth=0.06cm,fillcolor=color377b](4.96,3.616816)(4.6,3.136816) \psline[linewidth=0.06cm,fillcolor=color377b](4.78,3.7168162)(4.5,3.2168162) \psline[linewidth=0.02cm,fillcolor=color377b,doubleline=true,doublesep=0.04](4.82,3.136816)(4.4,3.356816) \psline[linewidth=0.02cm,fillcolor=color377b,doubleline=true,doublesep=0.04](4.9,3.296816)(4.5,3.4968162) \psline[linewidth=0.02cm,fillcolor=color377b,doubleline=true,doublesep=0.04](1.7,-2.403184)(1.12,-2.143184) \psline[linewidth=0.02cm,fillcolor=color377b](4.36,3.156816)(1.26,-2.2431839) \psline[linewidth=0.02cm,fillcolor=color377b](4.42,3.156816)(1.32,-2.2831838) \psline[linewidth=0.02cm,fillcolor=color377b](4.44,3.136816)(1.38,-2.2831838) \psline[linewidth=0.02cm,fillcolor=color377b](4.5,3.096816)(1.44,-2.3031838) \psline[linewidth=0.02cm,fillcolor=color377b](4.56,3.096816)(1.48,-2.343184) \psline[linewidth=0.02cm,fillcolor=color377b](4.62,3.096816)(1.54,-2.363184) \psline[linewidth=0.02cm,fillcolor=color377b](4.38,3.1968162)(4.66,3.656816) \psline[linewidth=0.02cm,fillcolor=color377b](4.42,3.176816)(4.6,3.4768162) \psline[linewidth=0.02cm,fillcolor=color377b](4.46,3.156816)(4.56,3.316816) \psline[linewidth=0.02cm,fillcolor=color377b](4.5,3.136816)(4.6,3.2768161) \psline[linewidth=0.02cm,fillcolor=color377b](4.54,3.096816)(4.74,3.396816) \psline[linewidth=0.02cm,fillcolor=color377b](4.6,3.076816)(4.96,3.4968162) \psdots[dotsize=0.06](1.24,-2.2231839) \psdots[dotsize=0.06](1.32,-2.2631838) \psdots[dotsize=0.06](1.4,-2.2831838) \psdots[dotsize=0.06](1.42,-2.343184) \psdots[dotsize=0.06](1.48,-2.343184) \psdots[dotsize=0.06](1.54,-2.363184) \psdots[dotsize=0.06](1.26,-2.2231839) \psellipse[linewidth=0.04,dimen=outer](5.11,3.406816)(0.07,0.09) \psline[linewidth=0.02cm,fillcolor=color377b,arrowsize=0.05291667cm 5.1,arrowlength=1.4,arrowinset=0.4]{<-}(5.16,3.576816)(6.2,3.576816) \psline[linewidth=0.02cm,fillcolor=color377b,arrowsize=0.05291667cm 5.1,arrowlength=1.4,arrowinset=0.4]{<-}(4.96,3.056816)(6.2,3.056816) \psline[linewidth=0.02cm,fillcolor=color377b,arrowsize=0.05291667cm 5.1,arrowlength=1.4,arrowinset=0.4]{<-}(4.14,2.056816)(6.22,2.056816) \psline[linewidth=0.02cm,fillcolor=color377b,arrowsize=0.05291667cm 5.1,arrowlength=1.4,arrowinset=0.4]{<-}(3.82,1.476816)(6.2,1.476816) \psline[linewidth=0.02cm,fillcolor=color377b,arrowsize=0.05291667cm 5.1,arrowlength=1.4,arrowinset=0.4]{<-}(3.28,0.3768161)(6.22,0.3768161) \psline[linewidth=0.02cm,fillcolor=color377b,arrowsize=0.05291667cm 5.1,arrowlength=1.4,arrowinset=0.4]{<-}(3.78,-0.4231839)(6.22,-0.4431839) \psline[linewidth=0.02cm,fillcolor=color377b,arrowsize=0.05291667cm 5.1,arrowlength=1.4,arrowinset=0.4]{<-}(2.62,-0.9231839)(6.2,-0.9231839) \psline[linewidth=0.02cm,fillcolor=color377b,arrowsize=0.05291667cm 5.1,arrowlength=1.4,arrowinset=0.4]{<-}(2.34,-1.9231839)(6.2,-1.9231839) \psline[linewidth=0.02cm,fillcolor=color377b,arrowsize=0.05291667cm 5.1,arrowlength=1.4,arrowinset=0.4]{<-}(1.9,-2.423184)(6.22,-2.423184)
+%\usefont{T1}{ptm}{m}{n}
+\rput(7.124375,3.586816){headstock}
+%\usefont{T1}{ptm}{m}{n}
+\rput(6.5485935,3.086816){peg}
+%\usefont{T1}{ptm}{m}{n}
+\rput(6.5532813,2.086816){fret}
+%\usefont{T1}{ptm}{m}{n}
+\rput(6.644375,1.486816){neck}
+%\usefont{T1}{ptm}{m}{n}
+\rput(6.5873437,0.3868161){heel}
+%\usefont{T1}{ptm}{m}{n}
+\rput(6.46625,-0.4131839){rib}
+%\usefont{T1}{ptm}{m}{n}
+\rput(6.8403125,-0.9131839){rosette}
+%\usefont{T1}{ptm}{m}{n}
+\rput(8.035625,-1.9331839){hollow wooden body}
+%\usefont{T1}{ptm}{m}{n}
+\rput(6.7803125,-2.413184){bridge}
+\end{pspicture}
+}
+\end{center}
+}
+
+\Extension{Piano}{Let us look at another stringed instrument: the piano.
+The piano has strings that you cannot see. When a key is pressed, a felt-tipped hammer hits a
+string inside the piano. The pitch depends on the length, tension and mass of the string.
+But there are many more strings than keys on a piano. This is because the short and thin
+strings are not as loud as the long and heavy strings.  To make up for this, the higher
+keys have groups of two to four strings each.
+
+The soundboard in a piano is a large cast iron plate. It picks up vibrations
+from the strings. This heavy plate can withstand over 200 tons of pressure from string tension!
+Its mass also allows the piano to sustain notes for long periods
+of time.
+
+The piano has a wide frequency range, from 27,5 Hz (low A) to 4186,0 Hz
+(upper C). But these are just the fundamental frequencies. A piano plays complex,
+rich tones with over 20 harmonics per note. Some of these are out of the range of human hearing.
+Very low piano notes can be heard mostly because of their higher harmonics.
+
+\begin{center}
+\scalebox{1} % Change this value to rescale the drawing.
+{
+\begin{pspicture}(0,-3.7196875)(9.475264,3.6896875)
+\definecolor{color377b}{rgb}{0.08627450,0.04705882,0.04705882}
+\psline[linewidth=0.02cm,fillcolor=color377b](1.41,3.6796875)(0.43,3.1796875)
+\psline[linewidth=0.02cm,fillcolor=color377b](1.41,3.6796875)(5.41,3.1796875)
+\psline[linewidth=0.02cm,fillcolor=color377b](4.43,2.6596875)(5.41,3.1596875)
+\psline[linewidth=0.02cm,fillcolor=color377b](0.43,3.1796875)(4.45,2.6596875)
+\psline[linewidth=0.02cm,fillcolor=color377b](0.43,3.1596875)(0.43,3.0996876)
+\psline[linewidth=0.02cm,fillcolor=color377b](0.43,3.0996876)(4.43,2.5796876)
+\psline[linewidth=0.02cm,fillcolor=color377b](4.43,2.5796876)(5.41,3.0796876)
+\psline[linewidth=0.02cm,fillcolor=color377b](5.41,3.0796876)(5.43,3.1796875)
+\psline[linewidth=0.02cm,fillcolor=color377b](4.43,2.6596875)(4.43,2.5796876)
+\psdots[dotsize=0.1](5.41,3.1396875)
+\psdots[dotsize=0.1](4.43,2.6196876)
+\psdots[dotsize=0.1](0.43,3.1396875)
+\psline[linewidth=0.03cm,fillcolor=color377b](5.41,3.1596875)(5.405889,-1.7903125)
+\psline[linewidth=0.03cm,fillcolor=color377b](0.43,3.1396875)(0.43,1.1796875)
+\psline[linewidth=0.03cm,fillcolor=color377b](0.03,0.3796875)(0.03,-2.0203125)
+\psline[linewidth=0.03cm,fillcolor=color377b](0.01,-2.0203125)(0.23,-2.0403125)
+\psline[linewidth=0.03cm,fillcolor=color377b](0.05,0.3996875)(0.25,0.3596875)
+\psline[linewidth=0.03cm,fillcolor=color377b](0.21,0.3596875)(0.23,-2.0203125)
+\psbezier[linewidth=0.03,fillcolor=color377b](0.43,1.2196875)(0.41,0.8596875)(0.35,0.6396875)(0.29,0.5996875)(0.23,0.5596875)(0.37,0.5996875)(0.01,0.3796875)
+\psline[linewidth=0.03cm,fillcolor=color377b](0.65,2.8996875)(4.21,2.3996875)
+\psline[linewidth=0.03cm,fillcolor=color377b](4.19,2.3996875)(4.19,0.8796875)
+\psline[linewidth=0.03cm,fillcolor=color377b](0.65,2.8996875)(0.64988893,1.3796875)
+\psbezier[linewidth=0.03,fillcolor=color377b](0.61,1.1796875)(0.59,0.8196875)(0.53,0.5996875)(0.47,0.5596875)(0.41,0.5196875)(0.55,0.5596875)(0.19,0.3396875)
+\psline[linewidth=0.03cm,fillcolor=color377b](0.21,0.1196875)(0.3658889,0.1896875)
+\psline[linewidth=0.03cm,fillcolor=color377b](0.63,1.3796875)(4.19,0.8796875)
+\psline[linewidth=0.03cm,fillcolor=color377b](0.73,0.5796875)(4.17,0.0996875)
+\psline[linewidth=0.03cm,fillcolor=color377b](0.23,0.1196875)(3.89,-0.4003125)
+\psline[linewidth=0.03cm,fillcolor=color377b](4.45,2.5996876)(4.45,0.6396875)
+\psline[linewidth=0.03cm,fillcolor=color377b](3.87,-0.1403125)(3.87,-2.5403125)
+\psline[linewidth=0.03cm,fillcolor=color377b](3.89,-0.1203125)(4.09,-0.1603125)
+\psline[linewidth=0.03cm,fillcolor=color377b](4.05,-0.1603125)(4.07,-2.5403125)
+\psbezier[linewidth=0.03,fillcolor=color377b](4.27,0.6996875)(4.25,0.3396875)(4.19,0.1196875)(4.13,0.0796875)(4.07,0.0396875)(4.21,0.0796875)(3.85,-0.1403125)
+\psbezier[linewidth=0.03,fillcolor=color377b](4.45,0.6596875)(4.43,0.2996875)(4.37,0.0796875)(4.31,0.0396875)(4.25,0.0)(4.39,0.0396875)(4.03,-0.1803125)
+\psline[linewidth=0.03cm,fillcolor=color377b](3.89,-2.5203125)(4.05,-2.5403125)
+\psline[linewidth=0.03cm,fillcolor=color377b](0.23,-0.0603125)(3.91,-0.5803125)
+\psline[linewidth=0.03cm,fillcolor=color377b](0.21,-2.0403125)(0.63,-1.8203125)
+\psline[linewidth=0.03cm,fillcolor=color377b](4.07,-2.5203125)(4.49,-2.3003125)
+\psline[linewidth=0.03cm,fillcolor=color377b](4.49,-2.3003125)(5.41,-1.8003125)
+\psline[linewidth=0.03cm,fillcolor=color377b](0.79,0.4796875)(4.05,0.0196875)
+\psline[linewidth=0.03cm,fillcolor=color377b](0.3658889,0.2696875)(3.85,-0.2203125)
+\psline[linewidth=0.03cm,fillcolor=color377b](0.37,0.2596875)(0.79,0.4796875)
+\psline[linewidth=0.03cm,fillcolor=color377b](0.39,0.1796875)(3.85,-0.3003125)
+\psline[linewidth=0.02cm,fillcolor=color377b](0.5058889,0.2696875)(0.8658889,0.4696875)
+\psline[linewidth=0.02cm,fillcolor=color377b](0.59,0.2396875)(1.01,0.4596875)
+\psline[linewidth=0.02cm,fillcolor=color377b](0.71,0.2196875)(1.13,0.4396875)
+\psline[linewidth=0.02cm,fillcolor=color377b](0.85,0.1996875)(1.27,0.4196875)
+\psline[linewidth=0.02cm,fillcolor=color377b](1.09,0.1596875)(1.51,0.3796875)
+\psline[linewidth=0.02cm,fillcolor=color377b](1.23,0.1596875)(1.65,0.3796875)
+\psline[linewidth=0.02cm,fillcolor=color377b](1.35,0.1396875)(1.77,0.3596875)
+\psline[linewidth=0.03cm,fillcolor=color377b](0.61,-0.1003125)(0.61,-1.8203125)
+\psline[linewidth=0.03cm,fillcolor=color377b](0.61,-1.8203125)(3.85,-2.2803125)
+\psline[linewidth=0.03cm,fillcolor=color377b](0.75,0.8996875)(4.11,0.4196875)
+\psline[linewidth=0.03cm,fillcolor=color377b](0.85,0.9596875)(4.25,0.4796875)
+\pscustom[linewidth=0.05]
+{
+\newpath
+\moveto(0.89000005,0.9796875)
+\lineto(0.8400001,0.9496875)
+\curveto(0.81500006,0.9346875)(0.81000006,0.8996875)(0.83000004,0.8796875)
+}
+\pscustom[linewidth=0.05]
+{
+\newpath
+\moveto(4.19,0.4796875)
+\lineto(4.14,0.4496875)
+\curveto(4.115,0.4346875)(4.11,0.3996875)(4.13,0.3796875)
+}
+\psline[linewidth=0.03cm,fillcolor=color377b](0.85,0.8596875)(0.77,0.5796875)
+\psline[linewidth=0.03cm,fillcolor=color377b](4.19,0.4796875)(4.09,0.1196875)
+\psline[linewidth=0.03cm,fillcolor=color377b](4.19,0.4596875)(4.15,0.1596875)
+\psline[linewidth=0.03cm,fillcolor=color377b](4.21,0.4396875)(4.13,0.1196875)
+\psline[linewidth=0.03cm,fillcolor=color377b](0.83,0.8596875)(0.75,0.5996875)
+\psline[linewidth=0.04cm,fillcolor=color377b](0.75,0.5196875)(4.09,0.0796875)
+\psline[linewidth=0.04cm,fillcolor=color377b](0.73,0.5596875)(4.07,0.0396875)
+\psdots[dotsize=0.1](3.89,-0.1603125)
+\psdots[dotsize=0.1](4.05,-0.1803125)
+\psdots[dotsize=0.1](0.05,0.3596875)
+\psdots[dotsize=0.1](0.19,0.3596875)
+\psline[linewidth=0.04cm,fillcolor=color377b](1.57,-1.9403125)(1.57,-1.8003125)
+\psline[linewidth=0.04cm,fillcolor=color377b](1.57,-1.8003125)(2.61,-1.9603125)
+\psline[linewidth=0.04cm,fillcolor=color377b](2.57,-1.9603125)(2.57,-2.0803125)
+\psline[linewidth=0.04cm,fillcolor=color377b](1.81,-1.9003125)(1.59,-2.0603125)
+\psline[linewidth=0.04cm,fillcolor=color377b](1.89,-1.9403125)(1.73,-2.1203125)
+\psline[linewidth=0.04cm,fillcolor=color377b](1.79,-1.9003125)(1.91,-1.9203125)
+\psline[linewidth=0.04cm,fillcolor=color377b](1.97,-1.9403125)(2.11,-1.9603125)
+\psline[linewidth=0.04cm,fillcolor=color377b](2.21,-1.9803125)(2.35,-2.0003126)
+\psline[linewidth=0.04cm,fillcolor=color377b](1.99,-1.9603125)(1.85,-2.1803124)
+\psline[linewidth=0.04cm,fillcolor=color377b](2.09,-1.9603125)(2.03,-2.2003126)
+\psline[linewidth=0.04cm,fillcolor=color377b](2.19,-1.9803125)(2.21,-2.2003126)
+\psline[linewidth=0.04cm,fillcolor=color377b](2.33,-2.0003126)(2.33,-2.2403126)
+\psdots[dotsize=0.2](1.63,-2.0603125)
+\psdots[dotsize=0.2](1.97,-2.1403124)
+\psdots[dotsize=0.2](2.25,-2.2003126)
+\pscustom[linewidth=0.04]
+{
+\newpath
+\moveto(1.71,-2.1203125)
+\lineto(1.6700001,-2.1403124)
+\curveto(1.6500001,-2.1503124)(1.6500001,-2.1553125)(1.6700001,-2.1503124)
+\curveto(1.69,-2.1453125)(1.73,-2.1303124)(1.7500001,-2.1203125)
+}
+\pscustom[linewidth=0.04]
+{
+\newpath
+\moveto(1.8100001,-1.9603125)
+\lineto(1.7500001,-2.0203125)
+\curveto(1.72,-2.0503125)(1.69,-2.0703125)(1.69,-2.0603125)
+}
+\pscustom[linewidth=0.04]
+{
+\newpath
+\moveto(1.8100001,-1.9403125)
+\lineto(1.7800001,-2.0003126)
+\curveto(1.7650001,-2.0303125)(1.74,-2.0703125)(1.73,-2.0803125)
+}
+\pscustom[linewidth=0.04]
+{
+\newpath
+\moveto(1.85,-1.9203125)
+\lineto(1.83,-1.9503125)
+\lineto(1.83,-1.9503125)
+}
+\pscustom[linewidth=0.04]
+{
+\newpath
+\moveto(2.01,-1.9603125)
+\lineto(2.01,-2.0303125)
+\curveto(2.01,-2.0653124)(2.0,-2.1003125)(1.99,-2.1003125)
+}
+\pscustom[linewidth=0.04]
+{
+\newpath
+\moveto(2.0700002,-1.9803125)
+\lineto(2.04,-2.0403125)
+\curveto(2.025,-2.0703125)(2.01,-2.1103125)(2.01,-2.1203125)
+}
+\pscustom[linewidth=0.04]
+{
+\newpath
+\moveto(2.23,-2.0003126)
+\lineto(2.23,-2.0603125)
+\curveto(2.23,-2.0903125)(2.225,-2.1403124)(2.22,-2.1603124)
+}
+\pscustom[linewidth=0.04]
+{
+\newpath
+\moveto(2.1899998,-2.0203125)
+\lineto(2.1799998,-2.0903125)
+\curveto(2.175,-2.1253126)(2.1599998,-2.1803124)(2.1499999,-2.2003126)
+}
+\pscustom[linewidth=0.04]
+{
+\newpath
+\moveto(2.27,-2.0203125)
+\lineto(2.26,-2.0603125)
+\lineto(2.26,-2.0603125)
+}
+\pscustom[linewidth=0.04]
+{
+\newpath
+\moveto(2.27,-2.0403125)
+\lineto(2.27,-2.1103125)
+\curveto(2.27,-2.1453125)(2.27,-2.1703124)(2.27,-2.1603124)
+}
+\pscustom[linewidth=0.04]
+{
+\newpath
+\moveto(2.31,-2.0003126)
+\lineto(2.31,-2.0703125)
+\curveto(2.31,-2.1053126)(2.3,-2.1503124)(2.29,-2.1603124)
+}
+\pscustom[linewidth=0.04]
+{
+\newpath
+\moveto(1.83,-1.9603125)
+\lineto(1.77,-2.0103126)
+\lineto(1.77,-2.0103126)
+}
+\pscustom[linewidth=0.04]
+{
+\newpath
+\moveto(1.83,-1.9403125)
+\lineto(1.7800001,-1.9703125)
+\curveto(1.7550001,-1.9853125)(1.71,-2.0203125)(1.69,-2.0403125)
+}
+\psline[linewidth=0.02cm,fillcolor=color377b](3.37,-0.1603125)(3.37,-0.2203125)
+\psline[linewidth=0.03cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{<-}(5.425889,2.7696874)(6.585889,2.7896874)
+\psline[linewidth=0.03cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{<-}(3.9058888,0.2896875)(6.585889,0.2896875)
+\psline[linewidth=0.03cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{<-}(3.285889,-1.3303125)(6.585889,-1.3103125)
+\psline[linewidth=0.03cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{<-}(2.285889,0.3896875)(2.285889,0.8896875)
+\psline[linewidth=0.03cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{<-}(2.305889,-2.2503126)(2.285889,-2.7103126)
+\psline[linewidth=0.03cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{<-}(1.9858888,-2.2503126)(1.9858888,-3.1103125)
+\psline[linewidth=0.03cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{<-}(1.5858889,-2.1103125)(1.5858889,-3.5103126)
+\psline[linewidth=0.03cm](2.285889,0.8896875)(6.585889,0.8896875)
+\psline[linewidth=0.03cm](2.305889,-2.7103126)(6.585889,-2.7103126)
+\psline[linewidth=0.03cm](2.005889,-3.1103125)(6.585889,-3.1103125)
+\psline[linewidth=0.03cm](1.6058888,-3.4903126)(6.585889,-3.5103126)
+\pspolygon[linewidth=0.02,fillstyle=vlines,hatchwidth=0.0020,hatchangle=0,hatchsep=0.04](4.185889,2.3896875)(4.185889,0.8896875)(0.64588886,1.3896875)(0.64588886,2.9096875)
+\psline[linewidth=0.03cm](0.3658889,0.2696875)(0.3658889,0.1696875)
+\psline[linewidth=0.02cm,fillcolor=color377b](1.19,-1.2403125)(1.61,-1.0203125)
+\psline[linewidth=0.02cm,fillcolor=color377b](1.49,-1.3403125)(1.91,-1.1203125)
+\psline[linewidth=0.02cm,fillcolor=color377b](0.97,0.1796875)(1.39,0.3996875)
+\psline[linewidth=0.02cm,fillcolor=color377b](1.47,0.1196875)(1.89,0.3396875)
+\psline[linewidth=0.02cm,fillcolor=color377b](2.01,0.0396875)(2.43,0.2596875)
+\psline[linewidth=0.02cm,fillcolor=color377b](1.57,-1.0403125)(1.99,-0.8203125)
+\psline[linewidth=0.02cm,fillcolor=color377b](1.87,0.0596875)(2.29,0.2796875)
+\psline[linewidth=0.02cm,fillcolor=color377b](1.59,0.0996875)(2.01,0.3196875)
+\psline[linewidth=0.02cm,fillcolor=color377b](1.73,0.0796875)(2.15,0.2996875)
+\psline[linewidth=0.02cm,fillcolor=color377b](2.15,0.0196875)(2.57,0.2396875)
+\psline[linewidth=0.02cm,fillcolor=color377b](2.27,0.0)(2.69,0.2196875)
+\psline[linewidth=0.02cm,fillcolor=color377b](2.41,-0.0203125)(2.83,0.1996875)
+\psline[linewidth=0.02cm,fillcolor=color377b](2.55,-0.0203125)(2.97,0.1996875)
+\psline[linewidth=0.02cm,fillcolor=color377b](2.65,-0.0603125)(3.07,0.1596875)
+\psline[linewidth=0.02cm,fillcolor=color377b](2.95,-0.1003125)(3.37,0.1196875)
+\psline[linewidth=0.02cm,fillcolor=color377b](2.79,-0.0803125)(3.21,0.1396875)
+\psline[linewidth=0.02cm,fillcolor=color377b](3.09,-0.1203125)(3.51,0.0996875)
+\psline[linewidth=0.02cm,fillcolor=color377b](3.23,-0.1403125)(3.65,0.0796875)
+\psline[linewidth=0.02cm,fillcolor=color377b](3.39,-0.1403125)(3.81,0.0796875)
+\psline[linewidth=0.02cm,fillcolor=color377b](3.51,-0.1603125)(3.93,0.0596875)
+\psline[linewidth=0.02cm,fillcolor=color377b](3.63,-0.1803125)(4.05,0.0396875)
+\psline[linewidth=0.02cm,fillcolor=color377b](3.75,-0.2003125)(3.8858888,-0.1303125)
+\psline[linewidth=0.03cm](0.5058889,0.2496875)(0.5058889,0.1696875)
+\psline[linewidth=0.03cm](0.38588887,0.2496875)(0.4058889,0.1696875)
+\psline[linewidth=0.03cm](0.58588886,0.2496875)(0.58588886,0.1696875)
+\psline[linewidth=0.03cm](0.70588887,0.2096875)(0.70588887,0.1496875)
+\psline[linewidth=0.03cm](0.8258889,0.1896875)(0.8258889,0.1096875)
+\psline[linewidth=0.03cm](0.9658889,0.1896875)(0.9658889,0.1096875)
+\psline[linewidth=0.03cm](1.1058888,0.1696875)(1.1058888,0.0896875)
+\psline[linewidth=0.03cm](1.2258888,0.1496875)(1.2258888,0.0496875)
+\psline[linewidth=0.03cm](1.3458889,0.1296875)(1.3458889,0.0496875)
+\psline[linewidth=0.03cm](1.4658889,0.1096875)(1.4658889,0.0496875)
+\psline[linewidth=0.03cm](1.5858889,0.0896875)(1.5858889,0.0296875)
+\psline[linewidth=0.03cm](1.745889,0.0696875)(1.745889,0.0096875)
+\psline[linewidth=0.03cm](1.8658888,0.0496875)(1.8658888,-0.0103125)
+\psline[linewidth=0.03cm](2.005889,0.0296875)(2.005889,-0.0303125)
+\psline[linewidth=0.03cm](2.1458888,0.0296875)(2.1458888,-0.0703125)
+\psline[linewidth=0.03cm](2.265889,-0.0103125)(2.265889,-0.0703125)
+\psline[linewidth=0.03cm](2.3858888,-0.0303125)(2.3858888,-0.0903125)
+\psline[linewidth=0.03cm](2.525889,-0.0303125)(2.525889,-0.1103125)
+\psline[linewidth=0.03cm](2.6658888,-0.0703125)(2.6658888,-0.1103125)
+\psline[linewidth=0.03cm](2.805889,-0.0903125)(2.805889,-0.1503125)
+\psline[linewidth=0.03cm](2.945889,-0.0903125)(2.945889,-0.1703125)
+\psline[linewidth=0.03cm](3.1058888,-0.1303125)(3.1058888,-0.1903125)
+\psline[linewidth=0.03cm](3.225889,-0.1303125)(3.225889,-0.2103125)
+\psline[linewidth=0.03cm](3.3458889,-0.1503125)(3.3458889,-0.2303125)
+\psline[linewidth=0.03cm](3.485889,-0.1903125)(3.485889,-0.2303125)
+\psline[linewidth=0.03cm](3.6058888,-0.1903125)(3.6058888,-0.2503125)
+\psline[linewidth=0.03cm](3.725889,-0.2103125)(3.725889,-0.2903125)
+\psline[linewidth=0.03cm](3.485889,-0.1503125)(3.485889,-0.2103125)
+\psline[linewidth=0.03cm](3.8258889,-0.2303125)(3.8258889,-0.2903125)
+\psline[linewidth=0.06cm,fillcolor=color377b](2.205889,0.1496875)(2.4058888,0.2696875)
+\psline[linewidth=0.06cm,fillcolor=color377b](2.3458889,0.1296875)(2.545889,0.2496875)
+\psline[linewidth=0.06cm,fillcolor=color377b](1.7858889,0.2096875)(1.9858888,0.3296875)
+\psline[linewidth=0.06cm,fillcolor=color377b](1.6658889,0.2296875)(1.8658888,0.3496875)
+\psline[linewidth=0.06cm,fillcolor=color377b](1.4258889,0.2496875)(1.625889,0.3696875)
+\psline[linewidth=0.06cm,fillcolor=color377b](2.065889,0.1696875)(2.265889,0.2896875)
+\psline[linewidth=0.06cm,fillcolor=color377b](1.3058889,0.2696875)(1.5058889,0.3896875)
+\psline[linewidth=0.06cm,fillcolor=color377b](1.1658889,0.2896875)(1.3658888,0.4096875)
+\psline[linewidth=0.06cm,fillcolor=color377b](0.8858889,0.3296875)(1.1458889,0.4696875)
+\psline[linewidth=0.06cm,fillcolor=color377b](0.7858889,0.3496875)(0.9858889,0.4696875)
+\psline[linewidth=0.06cm,fillcolor=color377b](2.6058888,0.0896875)(2.805889,0.2096875)
+\psline[linewidth=0.06cm,fillcolor=color377b](2.725889,0.0696875)(2.9258888,0.1896875)
+\psline[linewidth=0.06cm,fillcolor=color377b](2.985889,0.0296875)(3.185889,0.1496875)
+\psline[linewidth=0.06cm,fillcolor=color377b](3.1658888,0.0096875)(3.3658888,0.1296875)
+\psline[linewidth=0.06cm,fillcolor=color377b](3.285889,-0.0103125)(3.485889,0.1096875)
+\psline[linewidth=0.06cm,fillcolor=color377b](3.565889,-0.0503125)(3.765889,0.0696875)
+\psline[linewidth=0.06cm,fillcolor=color377b](3.685889,-0.0703125)(3.8858888,0.0496875)
+\psdots[dotsize=0.03](2.005889,-3.1103125)
+\psdots[dotsize=0.03](2.305889,-2.7103126)
+\psdots[dotsize=0.03](1.6058888,-3.4903126)
+\psdots[dotsize=0.03](2.285889,0.8896875)
+%\usefont{T1}{ptm}{m}{n}
+\rput(7.847764,2.7996874){wooden body}
+%\usefont{T1}{ptm}{m}{n}
+\rput(7.4544826,0.8996875){keyboard}
+%\usefont{T1}{ptm}{m}{n}
+\rput(7.7044826,0.2996875){music stand}
+%\usefont{T1}{ptm}{m}{n}
+\rput(7.6880765,-1.3003125){soundboard}
+%\usefont{T1}{ptm}{m}{n}
+\rput(7.8508887,-3.5003126){soft pedal}
+%\usefont{T1}{ptm}{m}{n}
+\rput(8.046826,-3.1003125){sustain (sostuneto) pedal}
+%\usefont{T1}{ptm}{m}{n}
+\rput(7.8068266,-2.7003126){damper pedal}
+\end{pspicture}
+}
+\end{center}
+}
+
+\section{Standing Waves in Wind Instruments}
+A wind instrument is an instrument that is usually made with a pipe or thin tube.
+Examples of wind instruments are recorders, clarinets, flutes, organs etc.
+
+When one plays a wind instrument, the air that is pushed through the pipe vibrates
+and standing waves are formed. Just like with strings, the wavelengths of the standing waves
+will depend on the length of the pipe and whether it is open or closed at each end. Let's
+consider each of the following situations:
+\begin{itemize}
+\item A pipe with both ends open, like a flute or organ pipe.
+\item A pipe with one end open and one closed, like a clarinet.
+\end{itemize}
+If you blow across a small hole in a pipe or reed, it makes a sound. If both ends are open, standing waves
+will form according to figure~\ref{fig:musicwaves}. You will notice that there is an anti-node at each end.
+In the next activity you will find how this affects the wavelengths.
+
+\begin{figure}[htbp]
+\begin{center}
+\begin{pspicture}(-2,-1.2)(2,6)
+%\psgrid
+\rput(0,4.8){\psplot[xunit=0.0111,plotstyle=curve]{-180}{180}{0.5
+x mul sin}
+\psplot[xunit=0.0111,plotstyle=curve]{-180}{180}{0.5 x mul sin
+neg}
+\psline[linecolor=gray,linestyle=dashed](-2,1)(2,1)
+\psline[linecolor=gray,linestyle=dashed](-2,-1)(2,-1)
+\uput[r](2,0){fundamental frequency}}
+\rput(0,2.4){\psplot[xunit=0.0111,plotstyle=curve]{-180}{180}{x
+cos}\psplot[xunit=0.0111,plotstyle=curve]{-180}{180}{x cos neg}
+\psline[linecolor=gray,linestyle=dashed](-2,1)(2,1)
+\psline[linecolor=gray,linestyle=dashed](-2,-1)(2,-1)
+\uput[r](2,0){first harmonic}}
+\rput(0,0){\psplot[xunit=0.0111,plotstyle=curve]{-180}{180}{1.5 x
+mul sin}\psplot[xunit=0.0111,plotstyle=curve]{-180}{180}{1.5 x mul
+sin neg}
+\psline[linecolor=gray,linestyle=dashed](-2,1)(2,1)
+\psline[linecolor=gray,linestyle=dashed](-2,-1)(2,-1)
+\uput[r](2,0){second harmonic}}
+\end{pspicture}
+\caption{Harmonics in a pipe open at both ends.}\label{fig:musicwaves}
+\end{center}
+\end{figure}
+
+
+
+\Activity{Investigation}{Waves in a Pipe Open at Both Ends}{This chart shows some standing waves in a pipe open at both ends.
+The pipe (shown with dashed lines) has length L. \\
+\begin{enumerate}
+\item{Fill in the:
+\begin{itemize}
+\item{number of nodes}
+\item{number of anti-nodes}
+\item{wavelength in terms of $L$}
+\end{itemize}
+The first and last waves are done for you.
+\begin{center}
+\begin{tabular}{|c|c|c|c|} \hline
+Wave & Nodes & Antinodes & Wavelength \\ \hline
+\begin{pspicture}(-1,-0.6)(1,0.6)
+\psplot[xunit=0.0111,plotstyle=curve]{-90}{90}{x sin 2 div}
+\psplot[xunit=0.0111,plotstyle=curve]{-90}{90}{x sin 2 div neg}
+\psline[linecolor=gray,linestyle=dashed](-1,0.5)(1,0.5)
+\psline[linecolor=gray,linestyle=dashed](-1,-0.5)(1,-0.5)
+\end{pspicture}	&
+\begin{pspicture}(-1,-0.6)(1,0.6)
+\rput(0,0){1}	% All this to center text!
+\end{pspicture}  &
+\begin{pspicture}(-1,-0.6)(1,0.6)
+\rput(0,0){2}	% All this to center text!
+\end{pspicture}  &
+\begin{pspicture}(-1,-0.6)(1,0.6)
+\rput(0,0){2$L$}% All this to center text!
+\end{pspicture}   \\ \hline
+\begin{pspicture}(-1,-0.6)(1,0.6)
+\psplot[xunit=0.0111,plotstyle=curve]{-90}{90}{2 x mul cos 2 div}
+\psplot[xunit=0.0111,plotstyle=curve]{-90}{90}{2 x mul cos 2 div neg}
+\psline[linecolor=gray,linestyle=dashed](-1,0.5)(1,0.5)
+\psline[linecolor=gray,linestyle=dashed](-1,-0.5)(1,-0.5)
+\end{pspicture}	&  & & \\ \hline
+\begin{pspicture}(-1,-0.6)(1,0.6)
+\psplot[xunit=0.0111,plotstyle=curve]{-90}{90}{3 x mul sin 2 div}
+\psplot[xunit=0.0111,plotstyle=curve]{-90}{90}{3 x mul sin 2 div neg}
+\psline[linecolor=gray,linestyle=dashed](-1,0.5)(1,0.5)
+\psline[linecolor=gray,linestyle=dashed](-1,-0.5)(1,-0.5)
+\end{pspicture}	&  & & \\ \hline
+\begin{pspicture}(-1,-0.6)(1,0.6)
+\psplot[xunit=0.0111,plotstyle=curve]{-90}{90}{4 x mul cos 2 div}
+\psplot[xunit=0.0111,plotstyle=curve]{-90}{90}{4 x mul cos 2 div neg}
+\psline[linecolor=gray,linestyle=dashed](-1,0.5)(1,0.5)
+\psline[linecolor=gray,linestyle=dashed](-1,-0.5)(1,-0.5)
+\end{pspicture}	&
+\begin{pspicture}(-1,-0.6)(1,0.6)
+\rput(0,0){4}	% All this to center text!
+\end{pspicture}  &
+\begin{pspicture}(-1,-0.6)(1,0.6)
+\rput(0,0){5}	% All this to center text!
+\end{pspicture}  &
+\begin{pspicture}(-1,-0.6)(1,0.6)
+\rput(0,0){$\frac{L}{2}$}% All this to center text!
+\end{pspicture} \\ \hline
+\end{tabular}
+\end{center}
+}
+\item{Use the chart to find a formula for the wavelength in terms of the number of nodes.} \\
+\end{enumerate}
+}
+
+The formula is different because there are more anti-nodes than nodes.  The right formula is:
+
+\nequ{\lambda_n=\frac{2L}{n}}
+Here, $n$ is still the number of nodes.
+
+\begin{wex}{The Organ Pipe}
+{
+\begin{minipage}{0.5\textwidth}
+An open organ pipe is 0,853 m long.  The speed of sound
+in air is 345 m.s$^{-1}$.  Can this pipe play middle C? (Middle C
+has a frequency of about 262 Hz)
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+\begin{center}
+\scalebox{0.8} % Change this value to rescale the drawing.
+{
+\begin{pspicture}(0,-3.48)(3.4584374,3.46)
+\definecolor{color115b}{rgb}{0.6,0.6,0.6}
+\psbezier[linewidth=0.04](0.02,3.28)(0.02,2.48)(0.0,0.6)(0.04,-0.04)(0.08,-0.68)(0.62,-3.46)(0.62,-3.22)
+\psbezier[linewidth=0.04](1.52,3.28)(1.52,2.48)(1.54,0.6)(1.5,-0.04)(1.46,-0.68)(0.92,-3.46)(0.92,-3.22)
+\psbezier[linewidth=0.04,fillstyle=solid,fillcolor=color115b](0.28,0.13423729)(0.28,1.68)(1.32,1.52)(1.28,0.08)
+\psbezier[linewidth=0.04](0.28,0.05830508)(0.28,-0.56)(1.32,-0.496)(1.28,0.08)
+\psframe[linewidth=0.04,dimen=outer,fillstyle=solid,fillcolor=black](1.3,0.22)(0.26,-0.04)
+\psframe[linewidth=0.02799999,dimen=outer](0.3,0.9)(0.2,-0.12)
+\psframe[linewidth=0.02799999,dimen=outer](1.4,0.92)(1.3,-0.14)
+\psellipse[linewidth=0.04,dimen=outer](0.77,3.25)(0.77,0.21)
+\psline[linewidth=0.04cm](0.62,-3.22)(0.92,-3.22)
+\psline[linewidth=0.02799999cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{<->}(2.12,3.26)(2.1,-3.22)
+\rput(2.8126562,0.29){0,853 m}
+\end{pspicture}
+}
+\end{center}
+\end{minipage}
+}
+{The main frequency of a note is the fundamental frequency.
+The fundamental frequency of the open pipe has one node.
+\westep{To find the frequency we will use the equation:}
+\begin{equation*}
+f = \frac{v}{\lambda}
+\end{equation*}
+We need to find the wavelength first.
+\begin{eqnarray*}
+\lambda &=& \frac{2L}{n} \\
+&=& \frac{2(0,853)}{1} \\
+&=& 1,706 \ \rm{m}
+\end{eqnarray*}
+\westep{Now we can calculate the frequency:}
+\begin{eqnarray*}
+f &=& \frac{v}{\lambda} \\
+&=& \frac{345}{1,706} \\
+&=& 202 \ \rm{Hz}
+\end{eqnarray*}
+
+This is lower than  262 Hz, so this pipe will not play middle C.  We will need a shorter pipe for a higher pitch.}
+\end{wex}
+
+\begin{wex}{The Flute}
+{
+\begin{minipage}{0.5\textwidth}
+A flute can be modeled as a metal pipe open at both ends.  (One end looks closed but the flute has
+an \emph{embouchure}, or hole for the player to blow across.
+This hole is large enough for air to escape on that side as well.)
+If the fundamental note of a flute is middle C (262 Hz) , how long
+is the flute? The speed of sound in air is 345 m.s$^{-1}$.
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+\scalebox{.1}{
+\begin{pspicture}(0,-25.969778)(42.366943,25.969778)
+\definecolor{color1320b}{rgb}{0.0784,0.0392,0.0392}
+\definecolor{color6366}{rgb}{0.549,0.529,0.529}
+\definecolor{color1b}{rgb}{0.8,0.8,0.8}
+\definecolor{color1620b}{rgb}{0.9333,0.9333,0.9333}
+\pspolygon[linewidth=0.0020,linecolor=white,fillstyle=solid,fillcolor=color1620b](2.4195104,24.78239)(1.9531661,25.5877)(2.2000196,25.503656)(2.350016,25.444487)(2.4844098,25.372805)(2.6971178,25.107557)(2.7471669,25.045147)(2.6161644,24.88882)
+\pspolygon[linewidth=0.0020,linecolor=color1620b,fillstyle=solid,fillcolor=color1620b](2.738648,24.32049)(3.081907,24.59576)(4.161351,23.025919)(5.0966787,21.827602)(5.819148,21.022594)(5.5536013,21.066011)(5.338104,21.047018)(5.057105,20.94986)(4.080849,22.422993)(3.167305,23.690052)
+\pspolygon[linewidth=0.0020,linecolor=color1620b,fillstyle=solid,fillcolor=color1620b](11.171146,14.444592)(10.439105,15.421381)(9.581942,16.554195)(8.868744,17.443548)(8.799851,17.593395)(8.768496,17.696432)(9.985273,16.211088)(11.311571,14.557202)
+\pspolygon[linewidth=0.0020,linecolor=color1620b,fillstyle=solid,fillcolor=color1620b](8.645028,16.443773)(8.772789,16.700048)(8.881858,16.915697)(9.332449,16.225937)(9.857964,15.570625)(10.514931,14.687452)(10.905901,14.231884)(10.534527,13.959705)(9.893162,14.85539)(9.170542,15.788461)
+\pspolygon[linewidth=0.0020,linecolor=color1620b,fillstyle=solid,fillcolor=color1620b](11.686938,14.089122)(12.70043,12.825305)(12.560005,12.712694)(12.075118,13.349314)(11.530911,13.964)
+\pspolygon[linewidth=0.0020,linecolor=color1620b,fillstyle=solid,fillcolor=color1620b](13.016778,12.079165)(13.20401,12.229312)(16.041199,8.659388)(15.93507,8.599916)(15.841454,8.524843)(14.993711,9.613941)(13.820651,11.108708)
+\pspolygon[linewidth=0.0020,linecolor=color1620b,fillstyle=solid,fillcolor=color1620b](17.008333,6.973846)(17.133154,7.073944)(17.232952,7.2052474)(19.757334,4.02539)(19.601307,3.9002676)(19.470304,3.7439396)(18.77565,4.8019824)(17.852835,5.984696)
+\pspolygon[linewidth=0.0020,linecolor=color1620b,fillstyle=solid,fillcolor=color1620b](20.780699,2.3336675)(20.861803,2.4243438)(20.95851,2.527532)(21.534073,1.8098085)(21.440456,1.7347351)(21.34684,1.6596617)(21.046547,2.034126)
+\pspolygon[linewidth=0.0020,linecolor=color1620b,fillstyle=solid,fillcolor=color1620b](23.070438,-0.5216239)(23.207773,-0.43712866)(23.285786,-0.37456745)(23.936422,-1.1859071)(23.845898,-1.2328656)(23.749191,-1.336054)(23.40503,-0.842949)
+\pspolygon[linewidth=0.0020,linecolor=color1620b,fillstyle=solid,fillcolor=color1620b](25.404047,-3.4955559)(25.569496,-3.4141512)(25.663113,-3.3390777)(26.276213,-4.1036096)(26.185686,-4.150568)(26.08898,-4.253756)(25.788687,-3.8792918)
+\pspolygon[linewidth=0.0020,linecolor=color1620b,fillstyle=solid,fillcolor=color1620b](27.740746,-6.4413733)(28.04353,-6.275473)(28.556128,-6.914224)(28.419197,-6.9996786)(28.247568,-7.137313)(27.98157,-6.709709)
+\pspolygon[linewidth=0.0020,linecolor=color1620b,fillstyle=solid,fillcolor=color1620b](38.792446,-20.446554)(38.98277,-20.268293)(39.110683,-20.14008)(40.502632,-21.843863)(41.954052,-23.653774)(41.851166,-23.813192)(41.59843,-24.041504)(40.48145,-22.424854)(39.449265,-21.201664)
+\pspolygon[linewidth=0.0020,linecolor=color1620b,fillstyle=solid,fillcolor=color1620b](29.729591,-8.40995)(29.55178,-8.603815)(29.955263,-9.074986)(30.139856,-9.337141)(30.258797,-9.549398)(30.343142,-9.558669)(30.472382,-9.496048)(30.633562,-9.505229)
+\pspolygon[linewidth=0.0020,linecolor=color1620b,fillstyle=solid,fillcolor=color1620b](12.254431,12.486339)(11.864065,12.2058735)(11.410384,12.867517)(10.909894,13.491625)(11.237551,13.754382)
+\pspolygon[linewidth=0.0020,linecolor=color1620b,fillstyle=solid,fillcolor=color1620b](12.314656,11.516114)(12.689121,11.816408)(14.090643,9.940845)(15.573419,8.027896)(15.639371,7.7218723)(15.723866,7.5845385)(15.414904,7.3624086)(13.178152,10.311466)
+\pspolygon[linewidth=0.0020,linecolor=color1620b,fillstyle=solid,fillcolor=color1620b](37.80948,-21.234825)(38.008247,-21.101063)(38.09033,-21.009605)(38.214172,-20.91029)(38.814762,-21.659218)(39.285664,-22.358324)(40.52894,-23.796785)(41.06794,-24.466919)(40.814396,-24.670244)(40.67787,-24.779726)(39.923733,-23.769386)(38.562176,-22.01559)
+\pspolygon[linewidth=0.0020,linecolor=color1620b,fillstyle=solid,fillcolor=color1620b](34.69269,-17.068747)(34.86835,-16.927883)(34.94945,-16.837206)(35.071182,-16.765223)(35.111813,-16.783916)(36.329063,-18.37143)(37.1059,-19.312296)(37.80766,-20.159546)(37.67069,-20.295023)(37.405697,-20.50753)(36.721832,-19.54338)(35.67188,-18.206255)
+\pspolygon[linewidth=0.0020,linecolor=color1620b,fillstyle=solid,fillcolor=color1620b](31.559237,-13.121128)(31.665365,-13.061658)(31.718506,-13.095953)(31.821543,-13.064597)(31.940184,-13.020729)(32.10578,-13.067387)(32.29965,-13.245197)(32.59685,-13.647777)(32.91599,-14.109676)(33.241306,-14.515347)(33.6573,-15.00212)(34.010735,-15.41088)(34.32663,-15.772833)(34.60808,-16.059862)(34.43027,-16.253727)(34.18028,-16.428564)(34.221252,-16.472614)(32.57582,-14.356831)
+\pspolygon[linewidth=0.0020,linecolor=color1620b,fillstyle=solid,fillcolor=color1620b](30.251482,-11.298554)(30.413841,-11.245264)(30.554264,-11.132654)(30.672905,-11.088786)(30.688507,-11.076274)(30.826143,-11.247903)(30.910637,-11.385237)(31.007645,-11.538174)(30.992043,-11.550686)(30.86413,-11.678899)(30.839256,-11.775755)(30.783327,-12.0257)(30.489214,-11.595005)
+\pspolygon[linewidth=0.0020,linecolor=color1620b,fillstyle=solid,fillcolor=color1620b](28.318115,-8.695846)(28.567759,-8.495649)(28.886595,-8.701425)(28.98051,-8.882476)(29.212063,-9.235157)(29.462309,-9.547211)(29.843857,-9.959061)(29.731546,-10.074761)(29.576801,-10.40395)(29.582003,-10.399779)(29.012619,-9.625826)
+\pspolygon[linewidth=0.0020,linecolor=color1620b,fillstyle=solid,fillcolor=color1620b](26.524105,-6.340296)(26.706524,-6.1427345)(26.709616,-6.1146197)(26.903479,-6.29243)(27.091013,-6.398408)(27.222466,-6.6262674)(27.485224,-6.9539237)(27.751072,-7.253465)(28.098173,-7.590393)(28.08272,-7.7309675)(28.117317,-7.933953)(28.207994,-8.015057)(28.009415,-8.174303)(27.961441,-8.187138)
+\pspolygon[linewidth=0.0020,linecolor=color1620b,fillstyle=solid,fillcolor=color1620b](16.07421,7.147663)(16.236868,6.9448285)(16.611935,6.7328725)(19.465027,2.9193354)(19.340206,2.8192375)(19.152973,2.6690905)(15.833988,6.90375)
+\pspolygon[linewidth=0.0020,linecolor=color1620b,fillstyle=solid,fillcolor=color1620b](19.58148,2.1667142)(19.709393,2.2949271)(19.8716,2.4762795)(20.347065,1.8833773)(20.647358,1.5089129)(21.166391,1.053495)(21.247946,0.75998396)(21.466986,0.42290574)(21.20483,0.23831257)(21.154781,0.3007233)
+\pspolygon[linewidth=0.0020,linecolor=color1620b,fillstyle=solid,fillcolor=color1620b](21.693638,-0.19007066)(21.754314,-0.14141195)(21.867378,-0.07638018)(22.033127,-0.25110018)(22.27071,-0.4194888)(22.5551,-0.5503407)(22.968153,-1.1932918)(23.584194,-1.801646)(23.60937,-1.9609138)(23.643965,-2.1638992)(23.737883,-2.3449504)(23.878757,-2.6165276)(24.035086,-2.74753)(23.875591,-2.8754327)(23.807226,-2.8789837)
+\pspolygon[linewidth=0.0020,linecolor=color1620b,fillstyle=solid,fillcolor=color1620b](24.260094,-3.438734)(24.3197,-3.3652968)(24.476105,-3.265509)(24.704266,-3.3901799)(24.876196,-3.50867)(25.06079,-3.7708254)(25.245382,-4.0329804)(25.445578,-4.2826233)(25.933405,-4.763066)(25.911772,-4.9598703)(26.01511,-5.1846395)(26.13096,-5.425011)(26.318645,-5.6590514)(26.143925,-5.824801)
+\pspolygon[linewidth=0.0020,fillstyle=solid,fillcolor=color1b](37.402073,-22.74082)(37.548977,-22.597376)(37.658348,-22.407122)(37.730183,-22.170061)(37.74733,-22.028126)(37.72351,-21.867771)(38.1784,-22.630995)(38.515022,-23.181417)(39.144066,-23.933165)(39.729916,-24.565727)(40.207794,-24.900328)(40.42514,-25.008036)(40.061905,-25.273687)(39.842148,-25.42428)(39.702103,-25.510952)(39.591713,-25.47129)
+\pspolygon[linewidth=0.0020,fillstyle=solid,fillcolor=color1b](34.24899,-18.808943)(34.411194,-18.627592)(34.56692,-18.246344)(34.576042,-18.033937)(34.532024,-17.787233)(34.967163,-18.617567)(35.402,-19.191776)(35.827415,-19.722267)(36.224567,-20.121607)(36.587273,-20.446022)(36.281097,-20.383913)(36.02188,-20.412329)(35.800205,-20.487553)(35.675385,-20.58765)
+\pspolygon[linewidth=0.0020,fillstyle=solid,fillcolor=color1b](10.87612,10.336873)(11.537613,10.918617)(13.251941,8.652987)(14.872351,6.568408)(18.0381,2.492866)(22.123571,-2.7935045)(25.154625,-6.5412397)(27.166004,-9.081387)(29.9842,-12.435814)(32.06123,-15.02586)(33.40298,-16.53917)(32.99995,-16.452187)(32.662724,-16.543163)(32.509785,-16.640171)(29.994825,-13.50403)(27.95533,-10.960793)(28.005228,-10.895142)(27.830057,-10.676703)(27.755135,-10.71115)(26.388208,-9.038572)(26.40042,-8.79805)(26.29693,-8.445218)(26.024752,-8.073845)(25.771416,-7.7899055)(25.611998,-7.6870184)(25.4464,-7.640361)(25.302734,-7.6530232)(23.338312,-5.2034016)(20.08822,-1.1185886)(16.74436,3.0192137)(13.300404,7.281837)(13.80278,7.710344)(13.736978,7.8883047)(13.6118555,8.044332)(13.418141,8.09408)(12.965664,7.7312245)(12.16488,8.729796)(12.63296,9.105164)(12.6359005,9.261341)(12.538893,9.414277)(12.310733,9.538949)(12.032975,9.341843)(11.814537,9.166672)(11.314048,9.790779)
+\pspolygon[linewidth=0.0020,fillstyle=solid,fillcolor=color1b](9.362138,12.224798)(10.173477,12.875435)(11.122367,11.611084)(10.363117,10.9765835)
+\pspolygon[linewidth=0.0020,fillstyle=solid,fillcolor=color1b](6.0839305,16.312702)(6.529424,15.926495)(6.7415504,15.788965)(7.000724,15.6635275)(7.377819,15.658292)(7.7207212,15.7538185)(7.95851,15.893235)(9.854477,13.388718)(8.986771,12.692879)(7.7355466,14.253147)
+\pspolygon[linewidth=0.0040,linecolor=color6366,fillstyle=solid,fillcolor=color1b](0.52540463,23.21218)(0.4193052,23.460371)(0.31872693,23.661716)(0.3090042,23.96156)(0.28058833,24.220776)(0.31782413,24.430092)(0.33945724,24.626896)(0.39862707,24.776892)(0.47649002,24.967516)(0.5044545,25.092487)(0.75213456,24.67583)(1.3547117,23.90286)(0.95233417,23.570679)
+\pspolygon[linewidth=0.0040,linecolor=color6366,fillstyle=solid,fillcolor=color1b](0.87957597,22.794506)(1.6620625,23.457146)(2.8371167,21.851929)(4.074136,20.161589)(3.9278316,19.736624)(3.9001682,19.355526)(4.007293,19.005611)(4.1827397,18.684847)(3.0316803,20.110846)(2.606266,20.641335)
+\psbezier[linewidth=0.03](0.5307386,23.228043)(0.31650773,23.495188)(0.01500005,24.700203)(0.7454125,25.32749)(1.4758251,25.954777)(2.6260128,25.429546)(2.8648503,25.099834)
+\psbezier[linewidth=0.03](0.5307386,23.228043)(0.7797104,23.427702)(1.4643832,23.976759)(1.6977946,24.163939)(1.9312057,24.351118)(2.6003175,24.8877)(2.8648503,25.099834)(3.1293828,25.311972)(3.4775074,24.877863)(3.1995852,24.682423)(2.921663,24.486982)(2.7431886,24.314896)(2.0325296,23.746527)(1.3218703,23.178158)(1.1477377,23.064423)(0.8810343,22.823109)(0.6143309,22.581797)(0.28176677,23.028385)(0.5307386,23.228043)
+\psbezier[linewidth=0.03](6.132652,20.878609)(5.2614636,21.515312)(3.451432,20.216726)(3.9873013,19.105972)(4.523171,17.995216)(5.634386,16.745317)(6.508235,15.931708)(7.382084,15.118099)(9.37329,16.479916)(8.800444,17.613237)(8.227597,18.746561)(7.0038404,20.241903)(6.132652,20.878609)
+\psline[linewidth=0.03cm](3.1949537,24.702549)(6.4575586,20.602133)
+\psline[linewidth=0.03cm](0.8670631,22.81011)(4.2703934,18.56618)
+\psbezier[linewidth=0.03,fillstyle=solid,fillcolor=color1320b](6.8855295,19.783327)(6.551812,20.052261)(5.9536853,19.634058)(6.185081,19.200632)(6.4164767,18.767208)(6.858043,18.26103)(7.1991386,17.926067)(7.540234,17.591105)(8.200652,18.026295)(7.955254,18.469473)(7.7098565,18.912651)(7.2192473,19.514395)(6.8855295,19.783327)
+\psbezier[linewidth=0.03](9.018714,12.708991)(9.190343,12.846626)(11.234295,14.485729)(11.359117,14.585828)(11.483938,14.6859255)(11.829879,14.232887)(11.725054,14.129506)(11.620229,14.026124)(9.571883,12.402817)(9.384651,12.252669)(9.197419,12.102523)(8.847084,12.571357)(9.018714,12.708991)
+\psline[linewidth=0.03cm](8.672226,17.840456)(11.315398,14.5764065)
+\psline[linewidth=0.03cm](6.0221066,16.381804)(8.987508,12.683967)
+\psbezier[linewidth=0.03](10.363855,10.96767)(10.535485,11.105306)(12.579437,12.744409)(12.704258,12.844507)(12.82908,12.944605)(13.376377,12.358035)(13.204747,12.2204)(13.033118,12.082766)(11.035974,10.481198)(10.864345,10.343564)(10.692715,10.20593)(10.192225,10.830036)(10.363855,10.96767)
+\psline[linewidth=0.03cm](11.675163,14.095813)(12.676143,12.847598)
+\psline[linewidth=0.03cm](9.350363,12.231489)(10.363855,10.96767)
+\psbezier[linewidth=0.03](11.134185,9.303763)(11.471264,9.522802)(11.754115,9.106151)(11.959784,8.841823)(12.165451,8.577494)(12.450222,8.302048)(12.172701,8.00874)(11.895181,7.7154326)(11.547993,8.148375)(11.370718,8.369434)(11.193444,8.590494)(10.797107,9.084723)(11.134185,9.303763)
+\psbezier[linewidth=0.03](12.244685,7.887008)(12.538045,8.096627)(12.852102,7.7049994)(13.05777,7.440671)(13.263438,7.1763425)(13.529515,6.86027)(13.28011,6.5638714)(13.030705,6.2674727)(12.645979,6.747224)(12.468705,6.9682827)(12.291431,7.1893415)(11.951325,7.67739)(12.244685,7.887008)
+\psbezier[linewidth=0.03](15.873397,8.540956)(16.422647,9.006917)(16.891209,8.396957)(17.045103,8.1987505)(17.198997,8.000543)(17.555164,7.4028625)(17.05588,7.0024705)(16.556593,6.602079)(16.328281,6.8548126)(16.021366,7.2150955)(15.714451,7.5753784)(15.324146,8.074994)(15.873397,8.540956)
+\psbezier[linewidth=0.03](11.752864,9.107711)(11.998311,9.304543)(12.141489,9.41936)(12.264213,9.517776)(12.386936,9.616192)(12.746008,9.211952)(12.617633,9.098018)(12.489259,8.984082)(12.291301,8.84731)(12.096057,8.679751)
+\psbezier[linewidth=0.03](12.888389,7.659751)(13.13968,7.8612685)(13.286266,7.9788203)(13.411912,8.079579)(13.537558,8.180338)(13.897134,7.776505)(13.765574,7.660017)(13.634016,7.5435286)(13.431601,7.4031806)(13.231581,7.231792)
+\psbezier[linewidth=0.03](16.104364,7.1660047)(15.8829975,6.984822)(15.724993,6.8617754)(15.605191,6.765703)(15.48539,6.669631)(15.126824,7.0742755)(15.252014,7.185657)(15.377205,7.2970386)(15.570704,7.430236)(15.761171,7.5939646)
+\psline[linewidth=0.03cm](10.864345,10.343564)(11.815275,9.15776)
+\psline[linewidth=0.03cm](12.165618,8.720884)(12.966402,7.722312)
+\psline[linewidth=0.03cm](13.204747,12.2204)(16.069313,8.656297)
+\psline[linewidth=0.03cm](17.249292,7.2088475)(19.786186,4.0133877)
+\psline[linewidth=0.03cm](25.328497,-7.6931405)(13.304232,7.3010397)
+\psbezier[linewidth=0.03](21.480103,1.7570248)(22.183943,2.2701807)(22.820988,1.4479427)(23.007595,1.1874014)(23.1942,0.9268601)(23.898119,0.13261291)(23.243683,-0.39219868)(22.589247,-0.9170103)(21.911753,-0.15284489)(21.688255,0.10374938)(21.46476,0.36034366)(20.776262,1.2438687)(21.480103,1.7570248)
+\psbezier[linewidth=0.03](19.63729,3.9196181)(20.187431,4.360658)(20.492151,3.9642413)(20.79348,3.590607)(21.094809,3.2169728)(21.223835,2.705164)(20.82475,2.3851264)(20.425665,2.065089)(20.034996,2.2645326)(19.694075,2.65769)(19.353155,3.0508475)(19.087145,3.4785783)(19.63729,3.9196181)
+\psline[linewidth=0.03cm](20.962337,2.5467348)(21.562925,1.797806)
+\psbezier[linewidth=0.03](23.901146,-1.1980637)(24.604986,-0.6849076)(25.242031,-1.5071458)(25.428638,-1.7676873)(25.615244,-2.028229)(26.319162,-2.822476)(25.664726,-3.3472874)(25.01029,-3.872099)(24.332796,-3.1079333)(24.109299,-2.851339)(23.885803,-2.5947452)(23.197306,-1.7112198)(23.901146,-1.1980637)
+\psbezier[linewidth=0.03](26.222242,-4.156393)(26.926083,-3.6432374)(27.513079,-4.4030643)(27.749735,-4.726017)(27.98639,-5.0489697)(28.640259,-5.7808056)(27.985823,-6.3056173)(27.331387,-6.8304286)(26.653893,-6.0662627)(26.430395,-5.809668)(26.2069,-5.553074)(25.518402,-4.6695485)(26.222242,-4.156393)
+\psbezier[linewidth=0.03](28.377165,-7.0428886)(28.927307,-6.6018486)(29.232027,-6.9982657)(29.533356,-7.3719)(29.834684,-7.7455344)(29.96371,-8.257343)(29.564627,-8.57738)(29.16554,-8.897418)(28.774872,-8.697974)(28.433952,-8.304817)(28.09303,-7.9116592)(27.827023,-7.483929)(28.377165,-7.0428886)
+\psbezier[linewidth=0.03](25.051548,-7.8383236)(25.540668,-7.4462185)(25.762733,-7.7551003)(26.113075,-8.191976)(26.463417,-8.62885)(26.536577,-8.980368)(26.18435,-9.262829)(25.832123,-9.54529)(25.457941,-9.332624)(25.118853,-8.937998)(24.779762,-8.543371)(24.562428,-8.230429)(25.051548,-7.8383236)
+\psline[linewidth=0.03cm](26.379524,-9.003766)(27.75587,-10.720061)
+\psline[linewidth=0.03cm](23.302126,-0.3709673)(23.94025,-1.1667043)
+\psline[linewidth=0.03cm](25.679453,-3.3354778)(26.292553,-4.100009)
+\psline[linewidth=0.03cm](28.031755,-6.268783)(28.557268,-6.924095)
+\psbezier[linewidth=0.03](28.051817,-10.865322)(27.894932,-10.9930935)(27.78348,-11.080509)(27.698742,-11.148462)(27.614004,-11.216416)(27.418358,-11.002496)(27.507828,-10.924861)(27.597298,-10.847227)(27.732323,-10.750719)(27.867962,-10.636059)
+\psline[linewidth=0.03cm](27.833885,-10.6575)(28.009056,-10.875938)
+\psline[linewidth=0.03cm](27.943554,-10.954102)(32.535545,-16.680286)
+\psbezier[linewidth=0.03](32.507435,-16.677198)(33.119026,-16.161104)(33.97289,-16.809471)(34.157875,-17.071316)(34.342857,-17.33316)(34.942425,-18.211086)(34.237213,-18.802254)(33.532,-19.393421)(32.78457,-18.659702)(32.534412,-18.373215)(32.28426,-18.086727)(31.89584,-17.19329)(32.507435,-16.677198)
+\psbezier[linewidth=0.03](35.67612,-20.596561)(36.287716,-20.08047)(37.14158,-20.728838)(37.32656,-20.990679)(37.511543,-21.252522)(38.11111,-22.130453)(37.4059,-22.721617)(36.700687,-23.312782)(35.95326,-22.579067)(35.703102,-22.292578)(35.452946,-22.006088)(35.064526,-21.112656)(35.67612,-20.596561)
+\psline[linewidth=0.03cm](34.237213,-18.802254)(35.66361,-20.580957)
+\psline[linewidth=0.03cm](37.390297,-22.734129)(39.617477,-25.511408)
+\psbezier[linewidth=0.03](19.481367,2.9229357)(18.935274,2.485007)(18.637936,2.229239)(18.95715,1.8503217)(19.276365,1.4714043)(19.63155,1.0114254)(23.352526,-3.6306827)(27.0735,-8.272791)(26.95208,-8.119304)(27.24592,-8.485723)(27.539762,-8.85214)(27.775745,-9.114441)(28.5997,-8.479538)
+\psbezier[linewidth=0.03](26.306355,-5.6836853)(25.89193,-6.0620236)(25.765982,-5.841029)(25.631277,-5.673055)(25.496574,-5.5050817)(24.46385,-4.21728)(24.329147,-4.049306)(24.194443,-3.881332)(23.914995,-3.5967994)(24.495535,-3.233794)
+\psbezier[linewidth=0.03](24.020222,-2.7689543)(23.639576,-3.125478)(23.39257,-2.9133716)(23.267448,-2.7573447)(23.142326,-2.6013176)(21.819118,-0.9193183)(21.681484,-0.7476888)(21.54385,-0.5760592)(21.3781,-0.40133914)(21.827488,-0.06659911)
+\psbezier[linewidth=0.03](21.45212,0.40148148)(21.046452,0.07616318)(20.891653,0.23618902)(20.768091,0.39130732)(20.64453,0.54642564)(19.86721,1.5147007)(19.742086,1.6707276)(19.616964,1.8267546)(19.341846,2.0419512)(19.872337,2.4673674)
+\psbezier[linewidth=0.03](28.200281,-8.045401)(27.781279,-8.418029)(27.687382,-8.237005)(27.580153,-8.103291)(27.472923,-7.9695764)(26.650833,-6.944434)(26.543604,-6.81072)(26.436375,-6.677006)(26.260965,-6.4582725)(26.738468,-6.1266227)
+\psbezier[linewidth=0.03](24.913404,-7.9747415)(24.641226,-7.6033673)(20.402365,-2.0298173)(19.964437,-1.4837234)(19.526508,-0.9376294)(18.666254,0.16707093)(17.822657,0.38784656)(16.979057,0.6086222)(16.210081,1.1199692)(16.503292,1.4576492)(16.796501,1.7953292)(17.599623,1.4651842)(17.987202,1.2376256)(18.37478,1.0100671)(18.571886,0.73230946)(18.64696,0.63869333)
+\psbezier[linewidth=0.03](17.609045,1.4214666)(17.421362,1.6555068)(17.812332,1.1999387)(17.52146,1.5306855)(17.230587,1.8614324)(16.67786,1.7514611)(16.025036,1.7663116)(15.372212,1.7811623)(14.928103,2.2710261)(15.212042,2.5243614)(15.49598,2.7776968)(16.63294,2.7665384)(17.30815,2.3081808)
+\psbezier[linewidth=0.03](15.212042,2.5243614)(14.980791,2.6209173)(14.933682,2.8395057)(15.120914,2.9896524)(15.308146,3.1397994)(16.038834,3.3155727)(16.957806,2.7450562)
+\psbezier[linewidth=0.03](33.778786,-16.760036)(35.15182,-15.658959)(35.50141,-15.455524)(35.21672,-15.068545)(34.93203,-14.681567)(34.353374,-13.9919615)(34.112553,-13.723625)(33.87173,-13.455289)(33.64108,-13.870982)(33.360085,-13.968142)(33.079086,-14.065301)(32.860195,-13.856282)(32.62879,-13.631664)(32.397392,-13.407046)(32.137577,-12.923213)(31.86909,-13.035974)(31.600603,-13.148734)(30.598038,-13.209259)(30.743738,-12.272043)(30.88944,-11.334826)(31.189133,-11.197043)(31.877308,-12.055192)(32.56548,-12.913341)(33.034763,-13.56247)(33.268803,-13.374787)(33.502846,-13.187103)(33.602642,-13.0557995)(33.31177,-12.725054)(33.0209,-12.394309)(32.129288,-11.186568)(31.69151,-10.768537)(31.25373,-10.350505)(31.204285,-10.8003435)(30.402065,-11.238573)(29.599848,-11.676803)(29.455278,-10.921091)(29.557865,-10.505548)(29.660452,-10.090005)(30.125141,-9.486628)(30.593674,-9.495448)(31.062206,-9.50427)(31.280945,-9.585222)(31.665432,-9.840895)(32.04992,-10.096567)(32.581764,-10.823713)(35.94756,-15.020835)(39.31335,-19.217957)(39.30717,-19.274187)(39.29835,-19.74272)(39.28953,-20.211252)(38.375004,-20.76518)(37.563663,-21.415817)
+\psbezier[linewidth=0.03](34.341686,-17.334097)(35.383976,-16.523891)(35.920498,-15.914182)(36.39596,-16.507084)(36.871426,-17.099987)(38.110138,-18.644651)(38.419853,-19.062834)(38.729572,-19.481016)(38.604748,-19.581116)(37.10998,-20.754175)
+\psline[linewidth=0.03cm](29.73342,-8.390747)(30.621788,-9.498538)
+\psline[linewidth=0.03cm](31.57272,-10.684343)(33.47767,-13.027837)
+\psline[linewidth=0.03cm](33.950043,-13.648852)(35.301365,-15.333942)
+\psline[linewidth=0.03cm](36.064613,-16.285707)(38.542038,-19.375038)
+\psline[linewidth=0.03cm](39.13011,-20.108364)(41.97039,-23.650173)
+\psbezier[linewidth=0.03](39.66592,-25.507881)(39.842396,-25.536133)(41.94876,-23.84698)(41.97039,-23.650173)(41.992023,-23.453367)(42.233746,-23.658888)(42.257874,-23.75291)(42.281998,-23.846933)(42.35194,-24.062027)(42.127323,-24.293428)(41.902702,-24.524828)(40.51629,-25.64119)(40.28311,-25.797983)(40.04994,-25.954779)(39.776295,-25.933235)(39.642803,-25.798738)(39.509308,-25.664242)(39.489445,-25.47963)(39.66592,-25.507881)
+\pspolygon[linewidth=0.0020,fillstyle=solid,fillcolor=color1b](4.5489993,20.080936)(4.408268,19.876926)(4.3222384,19.557268)(4.3283644,19.288723)(4.4568324,18.867619)(4.7450957,18.46072)(5.0222373,18.067688)(5.3327446,17.63305)(5.6668587,17.240131)(6.0677047,16.763998)(6.347571,16.50988)(6.627892,16.278915)(6.9318194,16.08967)(7.2616243,16.057905)(7.559426,16.137203)
+\pspolygon[linewidth=0.0020,linecolor=color1620b,fillstyle=solid,fillcolor=color1620b](31.187794,-10.675881)(31.322037,-10.619501)(31.434496,-10.631864)(31.571981,-10.67543)(32.02875,-11.30896)(32.720016,-12.138992)(33.248623,-12.766191)(33.489445,-13.034527)(33.427185,-13.212638)(33.271156,-13.33776)(32.34819,-12.026984)
+\pspolygon[linewidth=0.0020,linecolor=color1620b,fillstyle=solid,fillcolor=color1620b](33.63092,-13.818353)(33.771347,-13.705743)(33.90559,-13.649363)(34.046314,-13.792877)(34.75642,-14.710345)(35.281937,-15.365658)(35.25397,-15.49063)(35.091763,-15.671982)(34.30334,-14.56095)
+\pspolygon[linewidth=0.0020,linecolor=color1620b,fillstyle=solid,fillcolor=color1620b](35.611095,-16.383524)(35.817173,-16.320812)(36.004555,-16.298729)(36.723934,-17.131851)(37.64675,-18.314566)(38.538208,-19.394241)(38.444744,-19.597378)(38.31065,-19.78182)(37.02174,-18.04668)
+\end{pspicture}
+}
+\end{minipage}
+}
+{
+We can calculate the length of the flute from $\lambda = \frac{2L}{n}$ but
+\westep{We need to calculate the wavelength first:}
+
+\begin{eqnarray*}
+f &=& \frac{v}{\lambda} \\
+262 &=& \frac{345}{\lambda} \\
+\lambda &=& \frac{345}{262} = 1,32 \ \rm{m}
+\end{eqnarray*}
+
+\westep{Using the wavelength, we can now solve for $L$:}
+\begin{eqnarray*}
+\lambda &=& \frac{2L}{n} \\
+&=& \frac{2L}{1} \\
+L &=& \frac{1,32}{2} =  0,66 \ \rm{m}
+\end{eqnarray*}
+}
+\end{wex}
+
+Now let's look at a pipe that is open on one end and closed on the other.
+This pipe has a node at one end and an antinode at the other. An example of a musical
+instrument that has a node at one end and an antinode at the other is a clarinet. In the
+activity you will find out how the wavelengths are affected.
+
+\begin{figure}[htbp]
+\begin{center}
+\begin{pspicture}(0,-1.2)(4,6)
+%\psgrid[gridcolor=gray]
+\rput(0,4.8){\psplot[xunit=0.0111,plotstyle=curve]{0}{360}{0.25 x
+mul sin}
+\psplot[xunit=0.0111,plotstyle=curve]{0}{360}{0.25 x mul sin
+neg}
+\psline[linecolor=gray,linestyle=dashed](4,1)(0,1)(0,-1)(4,-1)
+\uput[r](4,0){fundamental frequency}}
+\rput(0,2.4){\psplot[xunit=0.0111,plotstyle=curve]{0}{360}{0.75 x
+mul sin}\psplot[xunit=0.0111,plotstyle=curve]{0}{360}{0.75 x mul
+sin neg}
+\psline[linecolor=gray,linestyle=dashed](4,1)(0,1)(0,-1)(4,-1)
+\uput[r](4,0){first harmonic}}
+\rput(0,0){\psplot[xunit=0.0111,plotstyle=curve]{0}{360}{1.25 x
+mul sin}\psplot[xunit=0.0111,plotstyle=curve]{0}{360}{1.25 x mul
+sin neg}
+\psline[linecolor=gray,linestyle=dashed](4,1)(0,1)(0,-1)(4,-1)
+\uput[r](4,0){second harmonic}}
+\end{pspicture}
+\caption{Harmonics in a pipe open at one end.}
+\end{center}
+\end{figure}
+
+\Activity{Investigation}{Waves in a Pipe open at One End}{This chart shows some standing waves in a pipe open at \emph{one} end. The pipe (shown as dashed lines) has length L. \\
+\begin{enumerate}
+\item{Fill in the:
+\begin{itemize}
+\item{number of nodes}
+\item{number of anti-nodes}
+\item{wavelength in terms of $L$}
+\end{itemize}
+The first and last waves are done for you.
+\begin{center}
+\begin{tabular}{|c|c|c|c|} \hline
+Wave & Nodes & Antinodes & Wavelength \\ \hline
+\begin{pspicture}(0,-0.6)(2,0.6)
+\psplot[xunit=0.0111,plotstyle=curve]{0}{180}{x 2 div sin 2 div}
+\psplot[xunit=0.0111,plotstyle=curve]{0}{180}{x 2 div sin 2 div neg}
+\psline[linecolor=gray,linestyle=dashed](2,0.5)(0,0.5)(0,-0.5)(2,-0.5)
+\end{pspicture}	&
+\begin{pspicture}(-1,-0.6)(1,0.6)
+\rput(0,0){1}	% All this to center text!
+\end{pspicture}  &
+\begin{pspicture}(-1,-0.6)(1,0.6)
+\rput(0,0){1}	% All this to center text!
+\end{pspicture}  &
+\begin{pspicture}(-1,-0.6)(1,0.6)
+\rput(0,0){4$L$}% All this to center text!
+\end{pspicture}   \\ \hline
+\begin{pspicture}(0,-0.6)(2,0.6)
+\psplot[xunit=0.0111,plotstyle=curve]{0}{180}{x 1.5 mul sin 2 div}
+\psplot[xunit=0.0111,plotstyle=curve]{0}{180}{x 1.5 mul sin 2 div neg}
+\psline[linecolor=gray,linestyle=dashed](2,0.5)(0,0.5)(0,-0.5)(2,-0.5)
+\end{pspicture}	&  & & \\ \hline
+\begin{pspicture}(0,-0.6)(2,0.6)
+\psplot[xunit=0.0111,plotstyle=curve]{0}{180}{x 2.5 mul sin 2 div}
+\psplot[xunit=0.0111,plotstyle=curve]{0}{180}{x 2.5 mul sin 2 div neg}
+\psline[linecolor=gray,linestyle=dashed](2,0.5)(0,0.5)(0,-0.5)(2,-0.5)
+\end{pspicture}	&  & & \\ \hline
+\begin{pspicture}(0,-0.6)(2,0.6)
+\psplot[xunit=0.0111,plotstyle=curve]{0}{180}{x 3.5 mul sin 2 div}
+\psplot[xunit=0.0111,plotstyle=curve]{0}{180}{x 3.5 mul sin 2 div neg}
+\psline[linecolor=gray,linestyle=dashed](2,0.5)(0,0.5)(0,-0.5)(2,-0.5)
+\end{pspicture}	&
+\begin{pspicture}(-1,-0.6)(1,0.6)
+\rput(0,0){4}	% All this to center text!
+\end{pspicture}  &
+\begin{pspicture}(-1,-0.6)(1,0.6)
+\rput(0,0){4}	% All this to center text!
+\end{pspicture}  &
+\begin{pspicture}(-1,-0.6)(1,0.6)
+\rput(0,0){$\frac{4L}{7}$}% All this to center text!
+\end{pspicture} \\ \hline
+\end{tabular}
+\end{center}
+}
+\item{Use the chart to find a formula for the wavelength in terms of the number of nodes.} \\
+\end{enumerate}
+}
+
+The right formula for this pipe is:
+
+\nequ{\lambda_n=\frac{4L}{2n-1}}
+
+A long wavelength has a low frequency and low pitch. If you took your pipe from the last example and covered one end, you should hear a much lower note!  Also, the wavelengths of the harmonics for this tube are \emph{not} integer multiples of each other.
+
+\begin{wex}
+{The Clarinet}
+{A clarinet can be modeled as a wooden pipe closed on one end and open on the other. The player blows into a small slit on one end. A reed then vibrates in the mouthpiece. This makes the standing wave in the air. What is the fundamental frequency of a clarinet 60 cm long? The speed of sound in air is 345 m.s$^{-1}$.}
+{
+\westep{Identify what is given and what is asked:}
+We are given:
+\begin{eqnarray*}
+L &=& 60 \ \rm{cm}\\
+v &=& 345 \ \rm{m.s^{-1}} \\
+f &=& ?
+\end{eqnarray*}
+
+\westep{To find the frequency we will use the equation $f=\frac{v}{\lambda}$
+but we need to find the wavelength first:}
+
+\begin{eqnarray*}
+\lambda &=& \frac{4L}{2n-1}\\
+&=& \frac{4(0,60)}{2(1)-1} \\
+&=& 2,4 \ \rm{m}
+\end{eqnarray*}
+
+\westep{Now, using the wavelength you have calculated, find the frequency:}
+\begin{eqnarray*}
+f &=& \frac{v}{\lambda}\\
+&=& \frac{345}{2,4} \\
+&=& 144 \ \rm{Hz}
+\end{eqnarray*}
+
+This is closest to the D below middle C. This note is one of the lowest notes on a clarinet.
+}
+\end{wex}
+
+\Extension{Musical Scale}{The 12 tone scale popular in Western music took centuries to develop. This scale is also called the 12-note Equal Tempered scale. It has an octave divided into 12 steps.  (An \textbf{octave} is the main interval of most scales. If you double a frequency, you have raised the note one octave.)  All steps have equal ratios of frequencies. But this scale is not perfect. If the octaves are in tune, all the other intervals are slightly mistuned.  No interval is badly out of tune.  But none is perfect.
+
+For example, suppose the base note of a scale is a frequency of
+110 Hz ( a low A). The first harmonic is 220 Hz.  This note is
+also an A, but is one octave higher.  The second harmonic is at
+330 Hz (close to an E). The third is 440 Hz (also an A).  But
+not all the notes have such simple ratios.  Middle C has a frequency of about 262 Hz.  This is not a simple multiple of 110 Hz. So the interval between C and A is a little out of tune.
+
+Many other types of tuning exist.  Just Tempered scales are tuned
+so that all intervals are simple ratios of frequencies.
+There are also equal tempered scales with more or less notes
+per octave.  Some scales use as many as  31 or 53 notes.}
+
+\section{Resonance}
+Resonance is the tendency of a system to vibrate at a maximum amplitude at the natural frequency
+of the system.
+
+Resonance takes place when a system is made to vibrate at its natural frequency as a result of vibrations
+that are received from another source of the same frequency. In the following investigation you will
+measure the speed of sound using resonance.
+
+\Activity{Experiment}{Using resonance to measure the speed of sound}
+{
+\Aim{ To measure the speed of sound using resonance}
+\Apparatus{
+\begin{itemize}
+\item one measuring cylinder
+\item a high frequency (512 Hz) tuning fork
+\item some water
+\item a ruler or tape measure
+\end{itemize}}
+
+\Method{
+\begin{enumerate}
+\item Make the tuning fork vibrate by hitting it on the sole of your shoe or something else that has a rubbery texture.
+A hard surface is not ideal as you can more easily damage the tuning fork. Be careful to hold the tuning fork by its handle. Don't touch the fork because it will damp the vibrations. \label{step:res1}
+
+\item Hold the vibrating tuning fork about 1 cm above the cylinder mouth and start adding water to the cylinder
+at the same time. Keep doing this until the first resonance occurs. Pour out or add a little water until you find the level
+at which the loudest sound (i.e. the resonance) is made.\label{step:res2}
+
+\item When the water is at the resonance level, use a ruler or tape measure to measure the distance ($L_{A}$) between the top of the cylinder
+and the water level.\label{step:res3}
+
+\item Repeat the steps~\ref{step:res1-step:res1} above, this time adding more water until you find the next resonance.
+Remember to hold the tuning fork at the same height of about 1 cm above the cylinder mouth and adjust the water level
+to get the loudest sound.
+
+\item Use a ruler or tape measure to find the new distance ($L_{B}$) from the top of the cylinder to the new water level.
+\end{enumerate}}
+\Conclusions{
+The difference between the two resonance water levels (i.e. $L = L_{A}-L_{B}$) is half a wavelength, or the same as
+the distance between a compression and rarefaction. Therefore, since you know the wavelength, and you know the frequency
+of the tuning fork, it is easy to calculate the speed of sound!}
+}
+
+%\begin{figure}[h!]
+\begin{center}
+\scalebox{1} % Change this value to rescale the drawing.
+{
+\begin{pspicture}(0,-3.0290067)(8.33566,3.0290067)
+\definecolor{color32}{rgb}{0.6,0.6,0.6}
+\definecolor{color59b}{rgb}{0.8,0.8,0.8}
+\psline[linewidth=0.04cm](2.816875,2.170993)(2.816875,-2.829007)
+\psline[linewidth=0.04cm](3.856875,2.170993)(3.856875,-2.829007)
+\psellipse[linewidth=0.04,dimen=outer](3.346875,-2.8690069)(0.55,0.08)
+\psellipse[linewidth=0.04,dimen=outer](3.336875,-2.8890069)(0.68,0.14)
+\psellipse[linewidth=0.04,dimen=outer](3.346875,2.170993)(0.55,0.08)
+\psframe[linewidth=0.04,linecolor=color59b,dimen=outer,fillstyle=solid,fillcolor=color59b](3.836875,-1.3890069)(2.836875,-2.8690069)
+\psellipse[linewidth=0.04,linecolor=color32,dimen=outer](3.346875,-1.4290068)(0.55,0.08)
+\psellipse[linewidth=0.04,linecolor=color59b,dimen=outer,fillstyle=solid,fillcolor=color59b](3.306875,-2.8690069)(0.49,0.04)
+\psline[linewidth=0.04cm](5.976875,2.170993)(5.976875,-2.829007)
+\psline[linewidth=0.04cm](7.016875,2.170993)(7.016875,-2.829007)
+\psellipse[linewidth=0.04,dimen=outer](6.506875,-2.8690069)(0.55,0.08)
+\psellipse[linewidth=0.04,dimen=outer](6.496875,-2.8890069)(0.68,0.14)
+\psellipse[linewidth=0.04,dimen=outer](6.506875,2.170993)(0.55,0.08)
+\psframe[linewidth=0.04,linecolor=color59b,dimen=outer,fillstyle=solid,fillcolor=color59b](6.996875,0.47099316)(5.996875,-2.849007)
+\psellipse[linewidth=0.04,linecolor=color32,dimen=outer](6.506875,0.41099316)(0.55,0.08)
+\psellipse[linewidth=0.04,linecolor=color59b,dimen=outer,fillstyle=solid,fillcolor=color59b](6.466875,-2.8690069)(0.49,0.04)
+\psline[linewidth=0.04cm](2.3253932,2.479561)(2.4308472,2.2419071)
+\psline[linewidth=0.04cm](2.4308472,2.2419071)(3.4180253,2.6799474)
+\psline[linewidth=0.04cm](3.4180253,2.6799474)(3.4504728,2.6068232)
+\psline[linewidth=0.04cm](3.4504728,2.6068232)(2.3536081,2.1201115)
+\psline[linewidth=0.04cm](2.3536081,2.1201115)(2.2968252,2.248079)
+\psline[linewidth=0.04cm](2.3172812,2.497842)(3.3044593,2.9358826)
+\psline[linewidth=0.04cm](3.3044593,2.9358826)(3.2720118,3.0090067)
+\psline[linewidth=0.04cm](3.2720118,3.0090067)(2.1751473,2.5222952)
+\psline[linewidth=0.04cm](2.2400422,2.3760467)(2.1832592,2.5040143)
+\psline[linewidth=0.04cm](2.2502115,2.4024396)(1.7017791,2.1590838)
+\psline[linewidth=0.04cm](1.7017791,2.1590838)(1.766674,2.0128353)
+\psline[linewidth=0.04cm](1.766674,2.0128353)(2.2968252,2.248079)
+\psline[linewidth=0.04cm](7.609739,2.166881)(7.740115,2.39183)
+\psline[linewidth=0.04cm](7.740115,2.39183)(6.805712,2.9333932)
+\psline[linewidth=0.04cm](6.805712,2.9333932)(6.845828,3.0026083)
+\psline[linewidth=0.04cm](6.845828,3.0026083)(7.8840537,2.4008713)
+\psline[linewidth=0.04cm](7.8840537,2.4008713)(7.813851,2.279745)
+\psline[linewidth=0.04cm](7.59971,2.1495774)(6.665307,2.6911407)
+\psline[linewidth=0.04cm](6.665307,2.6911407)(6.625191,2.6219256)
+\psline[linewidth=0.04cm](6.625191,2.6219256)(7.663417,2.0201886)
+\psline[linewidth=0.04cm](7.7436485,2.1586187)(7.6734457,2.0374923)
+\psline[linewidth=0.04cm](7.7163157,2.1513438)(8.235429,1.8504754)
+\psline[linewidth=0.04cm](8.235429,1.8504754)(8.31566,1.9889055)
+\psline[linewidth=0.04cm](8.31566,1.9889055)(7.813851,2.279745)
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{<->}(2.636875,2.190993)(2.636875,-1.4890069)
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{<->}(5.796875,2.190993)(5.796875,0.39099318)
+\usefont{T1}{ptm}{m}{n}
+\rput(2.2482812,0.48099315){$L_{1}$}
+\usefont{T1}{ptm}{m}{n}
+\rput(5.4682813,1.4809932){$L_{2}$}
+\psline[linewidth=0.04cm](1.316875,2.3509932)(1.756875,2.3709931)
+\psline[linewidth=0.04cm](1.536875,-2.049007)(2.716875,-2.049007)
+\usefont{T1}{ptm}{m}{n}
+\rput(0.801875,2.5609932){tuning}
+\usefont{T1}{ptm}{m}{n}
+\rput(0.7710937,2.2809932){fork}
+\usefont{T1}{ptm}{m}{n}
+\rput(0.7320312,-1.8590069){measuring}
+\usefont{T1}{ptm}{m}{n}
+\rput(0.681875,-2.1590068){cylinder}
+\usefont{T1}{ptm}{m}{n}
+\rput(3.915,2.460993){1 cm}
+\end{pspicture}
+}
+\end{center}
+%\end{figure}
+
+
+\begin{IFact}{Soldiers march out of time on bridges to avoid stimulating the bridge to vibrate
+at its natural frequency.}
+\end{IFact}
+
+\begin{wex}{Resonance}
+{A 512 Hz tuning fork can produce a resonance in a cavity where the air column is 18,2 cm long. It can also produce
+a second resonance when the length of the air column is 50,1 cm. What is the speed of sound in the cavity?}
+{
+\westep{Identify what is given and what is asked:}
+\begin{eqnarray*}
+L_{1} &=& 18,2 \ \rm{cm} \\
+L_{2} &=& 50,3 \ \rm{cm} \\
+f &=& 512 \ \rm{Hz} \\
+v &=& ?
+\end{eqnarray*}
+Remember that:
+\begin{eqnarray*}
+v &=& f \times \lambda
+\end{eqnarray*}
+
+We have values for $f$ and so to calculate $v$, we need to first find $\lambda$.
+You know that the difference in the length of the air column between two resonances is half a wavelength.
+
+\westep{Calculate the difference in the length of the air column between the two resonances:}
+\begin{eqnarray*}
+L_{2} - L_{1} &=& 32,1 \ \rm{cm}
+\end{eqnarray*}
+Therefore 32,1 cm = $\frac{1}{2}\times \lambda$\\
+So,
+\begin{eqnarray*}
+\lambda &=& 2 \times 32,1 \ \rm{cm} \\
+&=& 64,2 \ \rm{cm} \\
+&=& 0,642 \ \rm{m}
+\end{eqnarray*}
+
+\westep{Now you can substitute into the equation for $v$ to find the speed of sound:}
+\begin{eqnarray*}
+v &=& f \times \lambda \\
+&=& 512 \times 0,642 \\
+&=& 328,7 \ \rm{m.s}^{-1}
+\end{eqnarray*}
+}
+\end{wex}
+
+From the investigation you will notice that the column of air will make a sound at a certain length.
+This is where resonance takes place.
+
+\begin{center}
+\scalebox{1} % Change this value to rescale the drawing.
+{
+\begin{pspicture}(0,-3.0290067)(3.6565626,3.0290067)
+\definecolor{color32}{rgb}{0.6,0.6,0.6}
+\definecolor{color59b}{rgb}{0.8,0.8,0.8}
+\psline[linewidth=0.04cm](2.4565625,2.170993)(2.4565625,-2.829007)
+\psline[linewidth=0.04cm](3.4965625,2.170993)(3.4965625,-2.829007)
+\psellipse[linewidth=0.04,dimen=outer](2.9865625,-2.8690069)(0.55,0.08)
+\psellipse[linewidth=0.04,dimen=outer](2.9765625,-2.8890069)(0.68,0.14)
+\psellipse[linewidth=0.04,dimen=outer](2.9865625,2.170993)(0.55,0.08)
+\psframe[linewidth=0.04,linecolor=color59b,dimen=outer,fillstyle=solid,fillcolor=color59b](3.4765625,-1.3890069)(2.4765625,-2.8690069)
+\psellipse[linewidth=0.04,linecolor=color32,dimen=outer](2.9865625,-1.4290068)(0.55,0.08)
+\psellipse[linewidth=0.04,linecolor=color59b,dimen=outer,fillstyle=solid,fillcolor=color59b](2.9465625,-2.8690069)(0.49,0.04)
+\psline[linewidth=0.04cm](1.9650806,2.479561)(2.0705347,2.2419071)
+\psline[linewidth=0.04cm](2.0705347,2.2419071)(3.0577128,2.6799474)
+\psline[linewidth=0.04cm](3.0577128,2.6799474)(3.0901604,2.6068232)
+\psline[linewidth=0.04cm](3.0901604,2.6068232)(1.9932958,2.1201115)
+\psline[linewidth=0.04cm](1.9932958,2.1201115)(1.9365127,2.248079)
+\psline[linewidth=0.04cm](1.9569687,2.497842)(2.9441469,2.9358826)
+\psline[linewidth=0.04cm](2.9441469,2.9358826)(2.9116993,3.0090067)
+\psline[linewidth=0.04cm](2.9116993,3.0090067)(1.8148348,2.5222952)
+\psline[linewidth=0.04cm](1.8797297,2.3760467)(1.8229467,2.5040143)
+\psline[linewidth=0.04cm](1.8898989,2.4024396)(1.3414667,2.1590838)
+\psline[linewidth=0.04cm](1.3414667,2.1590838)(1.4063616,2.0128353)
+\psline[linewidth=0.04cm](1.4063616,2.0128353)(1.9365127,2.248079)
+\psline[linewidth=0.04cm](0.9565625,2.3509932)(1.3965625,2.3709931)
+\usefont{T1}{ptm}{m}{n}
+\rput(0.4415625,2.5609932){tuning}
+\usefont{T1}{ptm}{m}{n}
+\rput(0.41078126,2.2809932){fork}
+\psbezier[linewidth=0.04](2.9835625,-1.3690069)(2.9645624,-1.4890069)(2.3965626,-0.8090068)(2.5275626,-0.00900683)(2.6585624,0.79099315)(3.4965625,1.3709931)(3.4965625,2.170993)
+\psbezier[linewidth=0.04,linestyle=dashed,dash=0.16cm 0.16cm](2.9895625,-1.3890069)(3.0085626,-1.5090069)(3.5765624,-0.82900685)(3.4455626,-0.02900683)(3.3145626,0.7709932)(2.4765625,1.3509932)(2.4765625,2.150993)
+\usefont{T1}{ptm}{m}{n}
+\rput(1.4403125,0.98099315){node}
+\usefont{T1}{ptm}{m}{n}
+\rput(1.435,-0.23900683){antinode}
+\usefont{T1}{ptm}{m}{n}
+\rput(1.4403125,-1.3790069){node}
+\psline[linewidth=0.04cm](1.8365625,-1.3890069)(3.0165625,-1.3890069)
+\psline[linewidth=0.04cm](1.8765625,0.9509932)(2.8565626,0.9509932)
+\psline[linewidth=0.04cm](2.0765624,-0.22900684)(2.4565625,-0.22900684)
+\end{pspicture}
+}
+\end{center}
+
+
+
+\section{Music and Sound Quality}
+In the sound chapter, we referred to the quality of sound as its
+tone.  What makes the tone of a note played on an instrument?
+When you pluck a string or vibrate air in a tube, you hear mostly the fundamental frequency. Higher harmonics are present, but are fainter. These are called \textbf{overtones}.  The tone of a note depends on its mixture of overtones.  Different instruments have different
+mixtures of overtones.  This is why the same note sounds
+different on a flute and a piano.
+
+Let us see how overtones can change the shape of a wave:
+
+\begin{figure}[H]
+\begin{center}
+\begin{pspicture}(0,-10.4)(4,1.2)
+%\psgrid[gridcolor=gray]
+\rput(0,0){
+%\psaxes{->}(0,0)(0,-1.2)(4.4,1.2)
+\psplot[xunit=0.0056,plotstyle=curve]{0}{720}{x sin}
+\uput[r](4.5,0){fundamental frequency}}
+\rput(0,-3){
+%\psaxes{->}(0,0)(0,-3.4)(4.4,1.2)
+\psplot[xunit=0.0056,plotstyle=curve]{0}{720}{x 1.5 mul sin}
+\rput(0,-2.4){\psplot[xunit=0.0056,plotstyle=curve]{0}{720}{x 2
+mul sin}}
+\uput[r](4.5,0){higher frequencies}
+\uput[r](4.5,-2.4){higher frequencies}}
+\rput(0,-9){
+%\psaxes{->}(0,0)(0,-1.2)(4.4,2.4)
+\psplot[xunit=0.0056,plotstyle=curve]{0}{720}{x sin 0.5 x mul sin
+add 0.25 x mul sin add}
+\uput[r](4.5,0){resultant waveform}}
+\end{pspicture}
+\end {center}
+\caption{The quality of a tone depends on its mixture of
+harmonics.}
+\label{sound:wave}
+\end{figure}
+
+The resultant waveform is very different from the fundamental
+frequency.  Even though the two waves have the same main
+frequency, they do not sound the same!
+
+\summary{aaa}
+\begin{enumerate}
+\item Instruments produce sound because they form standing waves in strings or pipes.
+\item The fundamental frequency of a string or a pipe is its natural frequency. The wavelength
+of the fundamental frequency is twice the length of the string or pipe when both ends are fixed or both ends are open. It is four times the length of the pipe when one end is closed and one end is open.
+\item When the string is fixed at both ends, or the pipe is open at both ends the first harmonic is formed when the standing wave forms one whole
+wavelength in the string or pipe. The second harmonic is formed when the
+standing wave forms 1$\frac{1}{2}$ wavelengths in the string or pipe.
+\item When a pipe is open at one end and closed at the other, the first harmonic is formed when the standing wave forms $\frac{11}{3}$ wavelengths in the pipe.
+\item The frequency of a wave can be calculated with the equation $f = \frac{v}{\lambda}$.
+\item The wavelength of a standing wave in a string fixed at both ends can be calculated using
+$\lambda_{n} = \frac{2L}{n-1}$.
+\item The wavelength of a standing wave in a pipe with both ends open can be calculated using
+$\lambda_{n} = \frac{2L}{n}$.
+\item The wavelength of a standing wave in a pipe with one end open can be calculated using
+$\lambda_{n} = \frac{4L}{2n-1}$.
+\item Resonance takes place when a system is made to vibrate at its natural frequency as a
+result of vibrations received from another source of the same frequency.
+\end{enumerate}
+
+\Extension{Waveforms}{
+Below are some examples of the waveforms produced by a flute, clarinet and saxophone for different frequencies (i.e. notes):
+
+\scalebox{1} % Change this value to rescale the drawing.
+{
+\begin{pspicture}(0,-5.42)(10.683437,5.44)
+\definecolor{color174}{rgb}{0.4,0.4,0.4}
+\psbezier[linewidth=0.04](2.3,2.56)(2.3,1.76)(2.52,3.58)(2.74,4.32)(2.96,5.06)(2.94,3.06)(3.2,3.9)(3.46,4.74)(3.6,5.42)(3.78,4.16)(3.96,2.9)(4.3,4.24)(4.32,3.26)(4.34,2.28)(4.36,2.62)(4.36,2.62)(4.36,2.62)(4.46,2.24)(4.36,2.62)
+\psbezier[linewidth=0.04,linecolor=color174](4.36,2.56)(4.36,1.76)(4.58,3.58)(4.8,4.32)(5.02,5.06)(5.0,3.06)(5.26,3.9)(5.52,4.74)(5.66,5.42)(5.84,4.16)(6.02,2.9)(6.36,4.24)(6.38,3.26)(6.4,2.28)(6.42,2.62)(6.42,2.62)(6.42,2.62)(6.52,2.24)(6.42,2.62)
+\psbezier[linewidth=0.04,linecolor=color174](0.22,2.56)(0.22,1.76)(0.44,3.58)(0.66,4.32)(0.88,5.06)(0.86,3.06)(1.12,3.9)(1.38,4.74)(1.52,5.42)(1.7,4.16)(1.88,2.9)(2.22,4.24)(2.24,3.26)(2.26,2.28)(2.28,2.62)(2.28,2.62)(2.28,2.62)(2.38,2.24)(2.28,2.62)
+\rput(8.285,3.79){Flute waveform}
+\psbezier[linewidth=0.04](2.24,1.2491626)(2.3520188,0.5008866)(2.3223054,1.6186147)(2.4764843,0.897931)(2.6306632,0.17724735)(2.6382892,0.897931)(2.700522,0.2718226)(2.7627547,-0.3542858)(2.88722,1.0811822)(2.9992387,0.9284729)(3.1112578,0.7757635)(3.073918,-1.2400001)(3.235723,-0.78187203)(3.3975282,-0.32374394)(3.372635,-0.12522176)(3.484654,-0.53753704)(3.5966728,-0.94985235)(3.53444,-0.3390149)(3.6464589,0.11911322)(3.7584777,0.5772413)(3.775436,-0.03138687)(3.85805,0.72995067)(3.9406643,1.4912883)(4.0074086,-1.1331036)(4.1692133,-0.29320207)
+\psbezier[linewidth=0.04](4.119427,-0.3848277)(4.1692133,-0.7666011)(4.393251,1.86)(4.4803767,1.1728078)
+\psbezier[linewidth=0.04,linecolor=color174](4.48,1.2091626)(4.592019,0.46088663)(4.5623055,1.5786146)(4.716484,0.857931)(4.870663,0.13724734)(4.878289,0.857931)(4.9405217,0.2318226)(5.0027547,-0.39428583)(5.12722,1.0411823)(5.2392387,0.88847286)(5.351258,0.7357635)(5.313918,-1.2800001)(5.4757233,-0.82187206)(5.637528,-0.36374393)(5.612635,-0.16522177)(5.7246537,-0.57753706)(5.836673,-0.98985237)(5.77444,-0.37901488)(5.886459,0.07911322)(5.9984775,0.53724134)(6.0154357,-0.07138687)(6.09805,0.6899507)(6.180664,1.4512882)(6.2474084,-1.1731036)(6.4092135,-0.33320206)
+\psbezier[linewidth=0.04,linecolor=color174](6.3594275,-0.4248277)(6.4092135,-0.8066011)(6.633251,1.82)(6.720377,1.1328079)
+\psbezier[linewidth=0.04,linecolor=color174](0.02,1.2091626)(0.13201885,0.46088663)(0.10230537,1.5786146)(0.25648424,0.857931)(0.4106631,0.13724734)(0.41828924,0.857931)(0.48052192,0.2318226)(0.5427546,-0.39428583)(0.66722,1.0411823)(0.7792388,0.88847286)(0.8912577,0.7357635)(0.8539181,-1.2800001)(1.0157231,-0.82187206)(1.177528,-0.36374393)(1.152635,-0.16522177)(1.2646538,-0.57753706)(1.3766727,-0.98985237)(1.31444,-0.37901488)(1.4264588,0.07911322)(1.5384777,0.53724134)(1.5554358,-0.07138687)(1.63805,0.6899507)(1.7206641,1.4512882)(1.7874085,-1.1731036)(1.9492135,-0.33320206)
+\psbezier[linewidth=0.04,linecolor=color174](1.8994273,-0.4248277)(1.9492135,-0.8066011)(2.1732512,1.82)(2.260377,1.1328079)
+\rput(8.4925,0.37){Clarinet waveform}
+\psbezier[linewidth=0.04,linecolor=color174](4.2,-1.9)(4.54,-2.32)(4.54,-5.18)(4.82,-3.14)(5.1,-1.1)(5.34,-5.4)(5.54,-4.36)(5.74,-3.32)(5.86,-1.92)(5.96,-1.98)
+\psbezier[linewidth=0.04,linecolor=color174](0.7,-1.8)(1.04,-2.22)(1.04,-5.08)(1.32,-3.04)(1.6,-1.0)(1.84,-5.3)(2.04,-4.26)(2.24,-3.22)(2.36,-1.82)(2.46,-1.88)
+\psbezier[linewidth=0.04](2.44,-1.86)(2.78,-2.28)(2.78,-5.14)(3.06,-3.1)(3.34,-1.06)(3.58,-5.36)(3.78,-4.32)(3.98,-3.28)(4.1,-1.88)(4.2,-1.94)
+\rput(8.7829685,-2.89){Saxophone waveform}
+\rput(8.823125,-3.35){C$_{4}$, 256 Hz}
+\rput(8.525625,-0.11){E$_{\flat}$, 156 Hz}
+\rput(8.295625,3.39){B$_{4}$, 247 Hz}
+\end{pspicture}
+}
+}
+
+\begin{eocexercises}{}
+\begin{enumerate}
+\item{A guitar string with a length of 70~cm is plucked. The speed of a wave in the string is 400~\ms. Calculate the frequency of the first, second, and third harmonics.}
+\item{A pitch of Middle D (first harmonic = 294 Hz) is sounded out by a vibrating guitar string. The length of the string is 80~cm. Calculate the speed of the standing wave in the guitar string.}
+\item{The frequency of the first harmonic for a guitar string is 587 Hz (pitch of D5). The speed of the wave is 600~\ms. Find the length of the string.}
+\item{Two notes which have a frequency ratio of 2:1 are said to be separated by an octave. A note which is separated by an octave from middle C (256 Hz) is
+\begin{enumerate}
+\item 254 Hz
+\item 128 Hz
+\item 258 Hz
+\item 512 Hz
+\end{enumerate}}
+\item{Playing a middle C on a piano keyboard generates a sound at a frequency of 256~Hz. If the speed of sound in air is 345~\ms, calculate the wavelength of the sound corresponding to the note of middle C.}
+
+\item What is resonance? Explain how you would demonstrate what resonance is if you have a measuring cylinder, tuning fork and water available.
+
+\item A tuning fork with a frequency of 256 Hz produced resonance in an air column of length 25,2 cm and at 89,5 cm. Calculate the speed of sound in the air column.
+
+\end{enumerate}
+\practiceinfo
+
+\begin{tabular}[h]{cccccc}
+(1.) aaa & (2.) aaa & (3.) aaa & (4.) aaa & (5.) aaa & (6.) aaa & (7.) aaa & 
+ \end{tabular}
+\end{eocexercises}
+
+% CHILD SECTION END
+
+
+
+% CHILD SECTION START
+

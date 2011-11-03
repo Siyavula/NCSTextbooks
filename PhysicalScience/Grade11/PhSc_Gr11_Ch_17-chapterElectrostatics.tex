@@ -1,0 +1,1731 @@
+\chapter{Electrostatics}
+\label{p:em:es11}
+
+\section{Introduction}
+In Grade 10, you learnt about the force between charges. In this
+chapter you will learn exactly how to determine this force and
+about a basic law of electrostatics.
+
+
+
+\section{Forces between charges - Coulomb's Law}
+%\begin{syllabus}
+%\item State Coulomb's Law (in words and mathematically)
+%\item Solve problems using Coulomb's Law to calculate the force exerted on a charge by one or more charges in one dimension.
+%\item Solve problems using Coulomb's Law to calculate the force exerted on a charge by one or more charges in two dimensions
+%\item Note: Here is another context in which to apply superposition - the forces exerted on a charge due to several other charges can be superposed to find the net force acting on the charge. Make a link to Grade 11 Mechanics. Get learners to draw free body diagrams showing the forces acting on charges. Also link to N3-- two charges exert forces of equal magnitude on one another in opposite directions. When substituting into the Coulomb's Law equation, it is not necessary to include the signs of the charges. Instead, select a positive direction. Then forces that tend to move the charge in this direction are added, while forces that act in the opposite direction are subtracted. Make a link with Grade 11 Mechanics, Newton's Law of Universal Gravitation. The two equations have the same form. They both represent the force exerted by particles (masses or charges) on each other that interact by means of a field.
+%\end{syllabus}
+
+Like charges repel each other while opposite charges attract each other. If the charges are at rest then the force between
+them is known as the \textbf{electrostatic force}. The
+electrostatic force between charges increases when the magnitude
+of the charges increases or the distance between the charges
+decreases.\\
+
+The electrostatic force was first studied in detail by
+Charles Coulomb around 1784. Through his observations he was able
+to show that the electrostatic force between two point-like
+charges is inversely proportional to the square of the distance
+between the objects. He also discovered that the force is
+proportional to the product of the charges on the two objects. That is:\\
+
+\begin{eqnarray*}
+F \propto \frac{Q_1 Q_2}{r^2},
+\end{eqnarray*}
+where $Q_1$ is the charge on the one point-like object, $Q_2$ is
+the charge on the second, and $r$ is the distance between the two.
+The magnitude of the electrostatic force between two point-like
+charges is given by \textit{Coulomb's Law}.\\
+
+\Definition{Coulomb's Law}{Coulomb's Law states that the
+magnitude of the electrostatic force between two point charges is
+directly proportional to the magnitudes of each charge and
+inversely proportional to the square of the distance between the
+charges:
+
+\begin{equation*}
+\label{eq:Coulomb-force} F = k \frac{Q_1Q_2}{r^2}
+\end{equation*}
+The proportionality constant $k$ is called the
+\textit{electrostatic constant} and has the value:
+
+\begin{equation*}
+k=8,99\times 10^9 {\rm N\cdot m^2 \cdot C^{-2}.}
+\end{equation*}}
+
+\Extension{Similarity of Coulomb's Law to Newton's Universal Law
+of Gravitation.}{Notice how similar Coulomb's Law is to the form
+of Newton's Universal Law of Gravitation between two point-like
+particles:
+\begin{eqnarray*}
+F_G=G\frac{m_1m_2}{r^2},
+\end{eqnarray*}
+where $m_1$ and $m_2$ are the masses of the two particles, $r$ is
+the distance between them, and $G$ is the gravitational constant.
+
+Both laws represent the force exerted by particles (masses or
+charges) on each other that interact by means of a field.\\
+}
+Khan Academy video on electrostatics, part 1: SIYAVULA-VIDEO:http://cnx.org/content/m39002/latest/#electrostatics-1
+\begin{wex}{Coulomb's Law I}
+{Two point-like charges carrying charges of $+3\times 10^{-9}{\rm
+C}$ and $-5\times 10^{-9}{\rm C}$ are $2\emm$ apart. Determine the
+magnitude of the force between them and state whether it is
+attractive or repulsive.} { \westep{Determine what is required} We
+are required to find the force between two point charges given the
+charges and the distance between them.
+
+\westep{Determine how to approach the problem} We can use
+Coulomb's Law to find the force. \nequ{F = k \frac{Q_1Q_2}{r^2}}
+
+\westep{Determine what is given} We are given:
+\begin{itemize}
+\item{$Q_1=+3\times 10^{-9}{\rm C}$}
+\item{$Q_2=-5\times 10^{-9}{\rm C}$}
+\item{$r=2\emm$}
+\end{itemize}
+We know that $k=8,99\times 10^9 {\rm N\cdot m^2 \cdot C^{-2}}$.\\
+
+We can draw a diagram of the situation.
+
+\begin{center}
+\begin{pspicture}(-1.0,-0.8)(6,1)
+%\psgrid
+\pscircle(0,0.4){0.25} \pscircle(5,0.4){0.25}
+\rput(0,0.85){$Q_1=+3\times 10^{-9}{\rm C}$}
+\rput(5,0.85){$Q_2=-5\times 10^{-9}{\rm C}$} \psdots(0,0.4)(5,0.4)
+\pcline[offset=-0.2cm]{<->}(0,0)(5,0) \bput{:U}{2 m}
+\end{pspicture}
+\end{center}
+
+\westep{Check units} All quantities are in SI units.
+
+\westep{Determine the magnitude of the force} Using Coulomb's Law
+we have
+
+\begin{eqnarray*}
+F &=& k\frac{Q_1Q_2}{r^2}\\
+&=& (8,99\times10^{9} {\rm N\cdot m^2/C^2}) \frac{(3\times 10^{-9}{\rm C})(5\times 10^{-9}{\rm C})}{(2 {\rm m})^2}\\
+&=& 3,37\times10^{-8} \rm N
+\end{eqnarray*}
+
+Thus the {\em magnitude} of the force is
+$3,37\times10^{-8}\rm{N}$. However since both point charges have
+opposite signs, the force will be attractive.}
+\end{wex}
+
+Next is another example that demonstrates the difference in
+magnitude between the gravitational force and the electrostatic
+force.
+
+\begin{wex}{Coulomb's Law II}
+{Determine the electrostatic force and gravitational force between
+two electrons $10^{-10}\rm{m}$ apart (i.e. the forces felt inside an atom).}
+{ \westep{Determine what is required} We are required to calculate
+the electrostatic and gravitational forces between two electrons,
+a given distance apart.
+
+\westep{Determine how to approach the problem} We can use:
+\nequ{F_e = k \frac{Q_1Q_2}{r^2}} to calculate the electrostatic
+force and \nequ{F_g = G \frac{m_1m_2}{r^2}} to calculate the gravitational force.
+
+\westep{Determine what is given}
+\begin{itemize}
+\item{$Q_1=Q_2=1,6 \times 10^{-19}\;\rm{C}$(The charge on an electron)}
+\item{$m_1=m_2=9,1 \times 10^{-31}\ekg$(The mass of an electron)}
+\item{$r=1\times10^{-10}\rm{m}$}
+\end{itemize}
+We know that:
+\begin{itemize}
+\item{$k=8,99\times 10^9\; \mathrm{N \cdot m^2 \cdot C^{-2}}$}
+\item{$G=6,67\times 10^{-11}\;\mathrm{N \cdot m^2 \cdot kg^{-2}}$}
+\end{itemize}
+All quantities are in SI units.\\
+
+We can draw a diagram of the situation.
+
+\begin{center}
+\begin{pspicture}(-1.0,-0.8)(6,1)
+%\psgrid
+\pscircle(0,0.4){0.25} \pscircle(5,0.4){0.25}
+\rput(0,0.85){$Q_1=-1,60\times 10^{-19}\rm C$}
+\rput(5,0.85){$Q_2=-1,60\times 10^{-19}\rm C$}
+\psdots(0,0.4)(5,0.4) \pcline[offset=-0.2cm]{<->}(0,0)(5,0)
+\bput{:U}{$10^{-10}\rm{m}$}
+\end{pspicture}
+\end{center}
+
+\westep{Calculate the electrostatic force}
+\begin{eqnarray*}
+F_e&=&k\frac{Q_1 Q_2}{r^2}\\
+&=&(8,99\times10^{9})
+\frac{(-1,60\times10^{-19})(-1,60\times10^{-19})}{(10^{-10})^2}\\
+&=&2,30\times10^{-8}\;\rm N
+\end{eqnarray*}
+
+Hence the {\em magnitude} of the electrostatic force between the
+electrons is $2,30\times10^{-8}\rm N$. Since electrons carry the
+same charge, the force is repulsive.
+
+\westep{Calculate the gravitational force}
+
+\begin{eqnarray*}
+F_g&=&G\frac{m_1m_2}{r^2}\\
+&=&(6,67\times10^{-11}{\rm N\cdot m^2/kg^2})\frac{(9.11\times10^{-31}{\rm C}) (9.11\times10^{-31}{\rm kg})}{(10^{-10}{\rm m})^2}\\
+&=&5,54\times10^{-51}{\rm N}
+\end{eqnarray*}
+
+The magnitude of the gravitational force between the electrons is
+$5,54\times10^{-51}\rm N$. This is an attractive force.\\
+
+Notice that the gravitational force between the electrons is much
+smaller than the electrostatic force. For this reason, the
+gravitational force is usually neglected when determining the
+force between two charged objects.}
+\end{wex}
+
+\Tip{We can apply Newton's Third Law to charges because, two
+charges exert forces of equal magnitude on one another in opposite
+directions.}
+
+\Tip{Coulomb's Law}{When substituting into the Coulomb's Law
+equation, one may choose a positive direction thus making it unnecessary to include the signs of the charges.
+Instead, select a positive direction. Those forces that tend to
+move the charge in this direction are added, while forces acting
+in the opposite direction are subtracted.}
+
+\begin{wex}{Coulomb's Law III}{Three point charges are in a straight line.
+Their charges are $Q_1$ = $+2\times 10^{-9}{\rm C}$, $Q_2$ = $+1\times
+10^{-9}{\rm C}$ and $Q_3$ = $-3\times 10^{-9}{\rm C}$. The distance between
+$Q_1$ and $Q_2$ is $2\times 10^{-2}\rm{m}$ and the distance between $Q_2$ and
+$Q_3$ is $4\times 10^{-2}\rm{m}$. What is the net electrostatic force on $Q_2$
+from the other two charges?
+%\scalebox{1} % Change this value to rescale the drawing.
+%{
+\begin{pspicture}(0,-1.0265625)(8.19,1.0265625)
+\pscircle[linewidth=0.04,dimen=outer](3.2109375,0.19){0.45}
+\pscircle[linewidth=0.04,dimen=outer](7.6109376,0.19){0.45}
+\pscircle[linewidth=0.04,dimen=outer](0.5109375,0.19){0.45}
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{<->}(0.4609375,-0.58)(3.2609375,-0.58)
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{<->}(3.2609375,-0.58)(7.6609373,-0.58)
+\rput(3.1759374,0.83){+1 nC}
+\rput(7.6425,0.83){-3 nC}
+\rput(0.4759375,0.83){+2 nC}
+\rput(1.8676562,-0.87){2 m}
+\rput(5.264375,-0.87){3 m}
+\end{pspicture}
+%}
+}{
+\westep{Determine what is required}
+We are needed to calculate the net force on $Q_2$. This force is the sum of the two electrostatic forces - the forces between $Q_1$ on $Q_2$ and $Q_3$ on $Q_2$.
+\westep{Determine how to approach the problem}
+\begin{itemize}
+\item{We need to calculate the two electrostatic forces on $Q_2$, using Coulomb's Law.}
+\item{We then need to add up the two forces using our rules for adding vector quantities, because force is a vector quantity.}
+\end{itemize}
+\westep{Determine what is given}
+We are given all the charges and all the distances.
+\westep{Calculate the forces.}
+Force of $Q_1$ on $Q_2$:
+\begin{eqnarray*}
+F &=& k\frac{Q_1Q_2}{r^2}\\
+&=& (8,99\times10^{9}) \frac{(2\times 10^{-9})(1\times 10^{-9})}{(2\times 10^{-4})}\\
+&=& 4,5\times10^{-5} \rm N
+\end{eqnarray*}
+Force of $Q_3$ on $Q_2$:
+\begin{eqnarray*}
+F &=& k\frac{Q_2Q_3}{r^2}\\
+&=& (8,99\times10^{9}) \frac{(1\times 10^{-9})(3\times 10^{-9})}{(4\times 10^{-4}}\\
+&=& 1,69\times10^{-5} \rm N
+\end{eqnarray*}
+Both forces act in the same direction because the force between $Q_1$ and $Q_2$
+is repulsive (like charges) and the force between $Q_2$ and $Q_3$ is attractive
+(unlike charges).\\
+Therefore,
+\begin{eqnarray*}
+F_{tot} &=& 4,50\times10^{-5} + 4,50\times10^{-5} \\
+&=& 6,19\times10^{-5} \rm N\\
+\end{eqnarray*}
+}
+\end{wex}
+
+We mentioned in Chapter~\ref{p:em:es10} that charge placed on a
+spherical conductor spreads evenly along the surface. As a result,
+if we are far enough from the charged sphere, electrostatically,
+it behaves as a point-like charge. Thus we can treat spherical
+conductors (e.g. metallic balls) as point-like charges, with all
+the charge acting at the centre.
+
+\begin{wex}{Coulomb's Law: challenging question}
+{In the picture below, X is a small negatively charged sphere with
+a mass of 10kg. It is suspended from the roof by an insulating
+rope which makes an  angle of $60^{\circ}$ with the roof. Y is a
+small positively charged sphere which has the same magnitude of
+charge as X. Y is fixed to the wall by means of an insulating
+bracket. Assuming the system is in equilibrium, what is the
+magnitude of the charge on X?
+
+\begin{center}
+\begin{pspicture}(-1.9,-1.5)(4.4,2.2)
+\pscircle(0,0){0.35} \pscircle(3,0){0.35} \rput(0,0){--}
+\rput(3,0){+} \rput(0.6,0.4){10kg}
+% \rput(5.75,0.85){$-1.60\times 10^{-19}\rm C$}
+\psline{<->}(0,-0.8)(3,-0.8)
+\psline[linestyle=dotted]{-}(0,-0.2)(0,-0.95)
+\psline[linestyle=dotted]{-}(3,-0.2)(3,-0.95)
+\psline{-}(-0.175,0.303)(-1.050,1.818)
+\psline[linewidth=2pt]{-}(-1.8,1.818)(0.5,1.818)
+\psline[linewidth=4pt]{-}(3.35,0)(4,0)
+\psline[linewidth=2pt]{-}(4,1)(4,-1) \rput(1.5,-1.1){50cm}
+\rput(-0.45,1.55){$60^o$} \psarc{<-}(-1.050,1.818){1.05}{-60}{0}
+\rput(-0.54,0){X} \rput(2.65,0.45){Y}
+\multiput(-1.7,1.9)(0.2,0){11}{/}
+\multiput(4.0,0.6)(0,-0.4){5}{$\backslash$}
+\end{pspicture}
+\end{center}}
+{How are we going to determine the charge on X? Well, if we know
+the force between X and Y we can use Coulomb's Law to determine
+their charges as we know the distance between them. So, firstly,
+we need to determine the magnitude of the electrostatic force
+between X and Y. \westep{} Is everything in S.I. units? The
+distance between X and Y is $50{\rm cm}=0,5\rm m$, and the mass of
+X is 10kg.
+
+\westep{Draw a force diagram} Draw the forces on X (with
+directions) and label.
+
+\begin{center}
+\begin{pspicture}(-1.3,-2)(4.5,2)
+\pscircle*(0,0){0.1} \psline{->}(0,0)(-1,1.732)
+\rput(1.4,1.3){$T$: tension from the rope}
+\psline{->}(0,0)(1.5,0) \rput(2.6,0.24){$F_E$: electrostatic
+force} \psline{->}(0,0)(0,-1.5) \rput(1.8,-1.3){$F_g$:
+gravitational force} \psline[linestyle=dotted]{-}(0,0)(-1.2,0)
+\psarc{->}(0,0){1}{120}{180} \rput(-0.5,0.2){$60^{\circ}$}
+\rput(0.3,-0.2){X}
+\end{pspicture}
+\end{center}
+
+\westep{Calculate the magnitude of the electrostatic force, $F_E$}
+Since nothing is moving (system is in equilibrium) the vertical
+and horizontal components of the gravitational force must cancel the vertical and horizontal components of the electrostatic force. Thus
+
+\begin{eqnarray*}
+F_E=T\cos(60^{\circ});\qquad\qquad F_g=T\sin(60^{\circ}).
+\end{eqnarray*}
+The only force we know is the gravitational force $F_g=mg$. Now we
+can calculate the magnitude of $T$ from above:
+
+\begin{eqnarray*}
+T=\frac{F_g}{\sin(60^{\circ})}=\frac{(10)(10)}{\sin(60^ {\circ})}=115,5{\rm N}.
+\end{eqnarray*}
+Which means that $F_E$ is:
+
+\nequ{ F_E=T\cos(60^{\circ})=115,5 \cdot
+\cos(60^{\circ})=57,75\rm N }
+
+\westep{} Now that we know the magnitude of the electrostatic
+force between X and Y, we can calculate their charges using
+Coulomb's Law. Don't forget that the magnitudes of the charges on
+X and Y are the same: $Q_{\rm X}=Q_{\rm Y}$. The magnitude of
+the electrostatic force is
+
+\begin{eqnarray*}
+F_E &=& k\frac{Q_{\rm X}Q_{\rm Y}}{r^2}= k\frac{Q_{\rm X}^2}{r^2}\\
+% \therefor
+Q_{\rm X}&=&\sqrt{\frac{F_E r^2}{k}}\\
+&=&\sqrt{\frac{(57.75)(0.5)^2}{8.99\times10^{9}}}\\
+&=&5.66\times10^{-5}{\rm C}
+\end{eqnarray*}
+Thus the charge on X is $-5.66\times10^{-5}{\rm C}$.}
+\end{wex}
+
+\Exercise{Electrostatic forces}{
+\begin{enumerate}
+\item Calculate the electrostatic force between two charges of $+6{\rm nC}$ and $+1{\rm nC}$ if they are separated by a distance of $2 {\rm mm}$.
+\item Calculate the distance between two charges of $+4{\rm nC}$ and $-3{\rm nC}$ if the electrostaticforce between them is $0,005 {\rm N}$.
+\item Calculate the charge on two identical spheres that are similiarly charged if they are separated by $20 {\rm cm}$ and the electrostatic force between them is $0,06 {\rm N}$.
+\end{enumerate}
+\practiceinfo
+
+\begin{tabular}[h]{cccccc}
+(1.) aaa & (2.) aaa & (3.) aaa & 
+ \end{tabular}
+}
+
+\section{Electric field around charges}
+%\begin{syllabus}
+%\item Describe an electric field as a region of space in which an electric charge experiences a force. The direction of the electric field at a point is the direction that a positive test charge would move if placed at that point.
+%\item Draw electric field lines for various configurations of charges.
+%\item Define the magnitude of the electric field at a point as the force per unit charge (E = F/q). E and F are vectors.
+%\item Deduce that the force acting on a charge in an electric field is F = Eq
+%\item Calculate the electric field at a point due to a number of point charges, using the equation E=kQ/r.r to determine the contribution to the field due to each charge.
+%\item Note: Here is another opportunity to discuss field, one of the big ideas. Discuss the fact that electric field lines, like magnetic field lines (see Grade 10), are a way of representing the electric field at a point. Arrows on the field lines indicate the direction of the field, i.e. the direction a positive test charge would move. Electric field lines therefore point away from positive charges and towards negative charges. Field lines are drawn closer together where the field is stronger. Also, the number of field lines passing through a surface is proportional to the charge enclosed by the surface.The electric fields due to a number of charges can be superposed. As with Coulomb's Law calculations, do not substitute the sign of the charge into the equation for electric field. Instead, choose a positive direction, and then either add or subtract the contribution to the electric field due to each charge depending upon whether it points in the positive or negative direction, respectively.
+%\end{syllabus}
+
+% e = f/q, f=ma
+% test charge
+% Fields lines
+% parallel plates
+% point charges
+
+We have learnt that objects that carry charge feel forces from all
+other charged objects. It is useful to determine what the effect
+from a charge would be at every point surrounding it. To do this we
+need some sort of reference. We know that the force that one
+charge feels due to another depends on both charges ($Q_1$ and
+$Q_2$). How then can we talk about forces if we only have one
+charge? The solution to this dilemma is to introduce a \emph{test
+charge}. We then determine the force that would be exerted on it
+if we placed it at a certain location. If we do this for every
+point surrounding a charge we know what would happen if we put a
+test charge at any location.\\
+
+This map of what would happen at any point is called an electric field map. It
+is a map of the electric field \emph{due to} a charge. It tells us, at each point in space,
+how large the force on a test charge would be and in what
+direction the force would be. Our map consists of the vectors that
+describe the force on the test charge if it were placed there.
+
+\Definition{Electric field}{A collection of electric charges gives rise to a 'field of vectors' in the surrounding region of space, called an \textbf{electric field}. The direction of
+the electric field at a point is the direction that a positive
+test charge would move if placed at that point.}
+
+\subsection{Electric field lines}
+The electric field maps depend very much on the charge or charges that the map is
+being made for. We will start off with the simplest possible case.
+Take a single positive charge with no other charges around it.
+First, we will look at what effects it would have on a test charge
+at a number of points.\\
+
+Electric field lines, like the magnetic field lines that were
+studied in Grade 10, are a way of representing the electric field
+at a point.
+\begin {itemize}
+\item Arrows on the field lines indicate the direction of
+the field, i.e. the direction a positive test charge would move.
+\item Electric field lines therefore point away from positive charges
+and towards negative charges.
+\item Field lines are drawn closer
+together where the field is stronger.
+\end{itemize}
+
+\subsection{Positive charge acting on a test charge}
+At each point we calculate the force on a test charge, $q$, and
+represent this force by a vector.
+
+\begin{center}
+\begin{pspicture}(-3.3,-3.3)(3.3,3.3)
+%\psgrid
+\pscircle(0,0){.6} \rput(0,0){+Q} \SpecialCoor
+\def\arrlines{\psline{->}(0.6;0)(1.6;0)
+\psline{->}(2;0)(2.5;0) \psline{->}(3;0)(3.3;0)} \degrees[1.2]
+\multido{\n=0.0+.1}{12}{%
+\rput{\n}{\arrlines}}
+\end{pspicture}
+\end{center}
+
+We can see that at every point the positive test charge, $q$,
+would experience a force pushing it away from the charge, $Q$.
+This is because both charges are positive and so they repel. Also
+notice that at points further away the vectors are shorter. That
+is because the force is smaller if you are further away.
+
+\subsubsection{Negative charge acting on a test charge}
+If the charge, Q, were negative we would have the following result.
+\begin{center}
+\begin{pspicture}(-3.3,-3.3)(3.3,3.3)
+%\psgrid
+\pscircle(0,0){.6} \rput(0,0){-Q} \SpecialCoor
+\def\arrlines{\psline{<-}(0.6;0)(1.6;0)
+\psline{<-}(2;0)(2.5;0) \psline{<-}(3;0)(3.3;0)} \degrees[1.2]
+\multido{\n=0.0+.1}{12}{%
+\rput{\n}{\arrlines}}
+\end{pspicture}
+\end{center}
+
+Notice that it is \textbf{almost} identical to the positive charge
+case. This is important -- the arrows are the same length because
+the magnitude of the charge is the same and so is the magnitude of
+the test charge. Thus the \textbf{magnitude} (size) of the force is the
+same. The arrows point in the opposite direction because the
+charges now have opposite sign and so the positive test charge is
+\textbf{attracted} to the charge. Now, to make things simpler, we
+draw continuous lines showing the path that the test charge would
+travel. This means we don't have to work out the magnitude of the
+force at many different points.
+
+\subsubsection{Electric field map due to a positive charge}
+
+\begin{center}
+\begin{pspicture}(-2.6,-2.6)(2.6,2.6)
+%\psgrid
+\pscircle(0,0){.6} \rput(0,0){+Q} \SpecialCoor
+\def\arrlines{\psline{->}(0.6;0)(2.6;0)}
+\degrees[1.2]
+\multido{\n=0.0+.1}{12}{%
+\rput{\n}{\arrlines}}
+\end{pspicture}
+\end{center}
+
+\textbf{Some important points to remember about electric fields:}
+\begin{itemize}
+\item There is an electric field at \textbf{every point} in space
+surrounding a charge.
+\item Field lines are merely a \textbf{representation} -- they are not
+real. When we draw them, we just pick convenient places to
+indicate the field in space.
+\item Field lines usually start at a \textbf{right-angle} ($90^o$) to the
+charged object causing the field.
+\item Field lines \textbf{never} cross.
+\end{itemize}
+
+
+\subsection{Combined charge distributions}
+We will now look at the field of a positive charge and a negative charge
+placed next to each other. The net resulting field would be the
+addition of the fields from each of the charges. To start off with
+let us sketch the field maps for each of the charges separately.
+
+\subsubsection{Electric field of a negative and a positive charge in isolation}
+
+\begin{center}
+\begin{pspicture}(-5.4,-2.6)(5.4,2.6)
+%\psgrid
+\rput(-2.8,0){\pscircle(0,0){.6} \rput(0,0){+Q} \SpecialCoor
+\def\arrlines{\psline{->}(0.6;0)(2.4;0)}
+\degrees[1.2]
+\multido{\n=0.0+.1}{12}{%
+\rput{\n}{\arrlines}}}
+
+\rput(2.8,0){\pscircle(0,0){.6} \rput(0,0){-Q} \SpecialCoor
+\def\arrlines{\psline{<-}(0.6;0)(2.4;0)}
+\degrees[1.2]
+\multido{\n=0.0+.1}{12}{%
+\rput{\n}{\arrlines}}}
+\end{pspicture}
+\end{center}
+
+
+Notice that a test charge starting off directly between the two
+would be pushed away from the positive charge and pulled towards
+the negative charge in a straight line. The path it would follow
+would be a straight line between the charges.
+
+\begin{center}
+\begin{pspicture}(-3,-1)(9,1)
+
+
+\cnode[](0,0){.6}{mycircle} \rput(0,0){+Q}
+%lines between charges:
+\psline{->}(0.6,0)(5.4,0) \cnode[](6,0){.6}{mycircle}
+\rput(6,0){-Q}
+\end{pspicture}
+\end{center}
+Now let's consider a test charge starting off a bit higher than
+directly between the charges. If it starts closer to the positive
+charge the force it feels from the positive charge is greater, but
+the negative charge also attracts it, so it would experience a force away from
+the positive charge with a tiny force attracting it towards the
+negative charge. If it were a bit further from the positive charge the
+force from the negative and positive charges change and in fact they would be
+equal in magnitude if the forces were at equal distances from the charges. After that
+point the negative charge starts to exert a stronger force on the
+test charge. This means that the test charge would move towards the
+negative charge with only a small force away from the positive
+charge.
+
+\begin{center}
+
+\begin{pspicture}(-3,-1)(9,2)
+\cnode[](0,0){.6}{mycircle} \rput(0,0){+Q}
+%lines between charges:
+\pscurve{->}(0.519615,0.3)(3.0 ,1.)(5.48038,0.3)
+\cnode[](6,0){.6}{mycircle} \rput(6,0){-Q}
+\end{pspicture}
+\end{center}
+Now we can fill in the other lines quite easily using the same
+ideas. The resulting field map is:
+
+\begin{center}
+
+\begin{pspicture}(-3,-3)(9,3)
+\cnode[](0,0){.6}{mycircle} \rput(0,0){+Q}
+%lines between charges:
+\psline{->}(0.6,0)(5.4,0) \pscurve{->}(0.519615,0.3)(3.0
+,1.)(5.48038,0.3) \pscurve{->}(0.519615,-0.3)(3.0
+,-1)(5.48038,-0.3)
+\pscurve{->}(0.3,0.519615)(2.0,2.2)(4.0,2.2)(5.7,0.519615)
+\pscurve{->}(0.3,-0.519615)(2.0,-2.2)(4.0,-2.2)(5.7,-0.519615)
+\pscurve{->}(0,0.6)(0.0,1.6)(0.3,2.6)
+\pscurve{->}(0,-0.6)(0.0,-1.6)(0.2,-2.6)
+\pscurve{<-}(6,0.6)(6.0,1.6)(5.8,2.6)
+\pscurve{<-}(6,-0.6)(6.0,-1.6)(5.8,-2.6)
+\cnode[](6,0){.6}{mycircle}
+% lines on away sides:
+%top left:
+\psline{->}(-0.3,0.519615)(-1.3,2.25167)
+\psline{->}(-0.519615,0.3)(-2.25167,1.3)
+\psline{->}(-0.6,0)(-2.6,0)
+%bottom left:
+\psline{->}(-0.519615,-0.3)(-2.25167,-1.3)
+\psline{->}(-0.3,-0.519615)(-1.3,-2.25167)
+%top right
+\psline{<-}(6.6,0)(8.6,0) \psline{<-}(6.51962,0.3)(8.25167,1.3)
+\psline{<-}(6.3,0.519615)(7.3,2.25167)
+%bottom right
+\psline{<-}(6.3,-0.519615)(7.3,-2.25167)
+\psline{<-}(6.51962,-0.3)(8.25167,-1.3)
+
+\rput(6,0){-Q}
+\end{pspicture}
+\end{center}
+
+\subsubsection{Two like charges : both positive}
+For the case of two positive charges things look a little
+different. We can't just turn the arrows around the way we did
+before. In this case the test charge is repelled by both charges.
+This tells us that a test charge will never cross half way because
+the force of repulsion from both charges will be equal in
+magnitude.
+
+\begin{center}
+\begin{pspicture}(-5.4,-2.6)(5.4,2.6)
+%\psgrid
+\rput(-2.8,0){\pscircle(0,0){.6} \rput(0,0){+Q} \SpecialCoor
+\def\arrlines{\psline{->}(0.6;0)(2.4;0)}
+\degrees[1.2]
+\multido{\n=0.0+.1}{12}{%
+\rput{\n}{\arrlines}}}
+
+\rput(2.8,0){\pscircle(0,0){.6} \rput(0,0){+Q} \SpecialCoor
+\def\arrlines{\psline{->}(0.6;0)(2.4;0)}
+\degrees[1.2]
+\multido{\n=0.0+.1}{12}{%
+\rput{\n}{\arrlines}}}
+\end{pspicture}
+\end{center}
+
+The field directly between the charges cancels out in the middle.
+The force has equal magnitude and opposite direction. Interesting
+things happen when we look at test charges that are not on a line
+directly between the two.
+
+\begin{center}
+
+\begin{pspicture}(-3,-1)(9,3)
+%Left circle
+\cnode[](0,0){.6}{mycircle} \rput(0,0){+Q}
+%middle lines
+\pscurve{->}(0.5638, 0.2052)(0.6108,
+0.2223)(2,0.95)(2.7,2.7)(2.7,3.0)
+%Right circle
+\cnode[](6,0){.6}{mycircle} \rput(6,0){+Q}
+\end{pspicture}
+\end{center}
+We know that a charge the same distance below the middle will
+experience a force along a reflected line, because the problem is
+symmetric (i.e. if we flipped vertically it would look the same).
+This is also true in the horizontal direction. So we use this fact
+to easily draw in the next four lines.
+
+\begin{center}
+
+\begin{pspicture}(-3,-3)(9,3)
+%Left circle
+\cnode[](0,0){.6}{mycircle} \rput(0,0){+Q}
+
+%middle lines
+\pscurve{->}(0.5638, 0.2052)(0.6108,
+0.2223)(2,0.95)(2.7,2.7)(2.7,3.0) \pscurve{->}(0.5638,
+-0.2052)(0.6108, -0.2223)(2, -0.95)(2.7, -2.7)(2.7, -3.0)
+%top and bottom lines
+\cnode[](6,0){.6}{mycircle} \rput(6,0){+Q} \pscurve{->}(5.4362,
+0.2052)(5.3892, 0.2223)(4, 0.95)(3.3, 2.7)(3.3, 3.0)
+\pscurve{->}(5.4362, -0.2052)(5.3892, -0.2223)(4, -0.95)(3.3,
+-2.7)(3.3, -3.0)
+%\pscurve{->}()()()()()
+\end{pspicture}
+\end{center}
+Working through a number of possible starting points for the test
+charge we can show the electric field map to be:
+
+\begin{center}
+
+\begin{pspicture}(-3,-3)(9,3)
+%Left circle
+\cnode[](0,0){.6}{mycircle} \rput(0,0){+Q}
+\psline{->}(-0.6,0)(-2.6,0)
+%middle lines
+\pscurve{->}(0.5638, 0.2052)(0.6108,
+0.2223)(2,0.95)(2.7,2.7)(2.7,3.0) \pscurve{->}(0.5638,
+-0.2052)(0.6108, -0.2223)(2, -0.95)(2.7, -2.7)(2.7, -3.0)
+\pscurve{->}(0.4388, 0.4092)(0.4754, 0.4433)(1.5, 1.3)(2, 2.7)(2,
+3) \pscurve{->}(0.4388, -0.4092)(0.4754, -0.4433)(1.5, -1.3)(2,
+-2.7)(2, -3) \pscurve{->}(0.2440, 0.5481)(0.2644, 0.5938)(0.8,
+1.4)(1.1, 2.2)(1.15, 3.0) \pscurve{->}(0.2440, -0.5481)(0.2644,
+-0.5938)(0.8, -1.4)(1.1, -2.2)(1.15, -3.0)
+%top and bottom lines
+\pscurve{->}(0, 0.6)(0.0, 1.6)(-0.3, 2.8) \pscurve{->}(0,
+-0.6)(0.0, -1.6)(-0.3, -2.8)
+\psline{->}(-0.519615,0.3)(-2.25167,1.3)
+\psline{->}(-0.519615,-0.3)(-2.25167,-1.3) \pscurve{->}(-0.3,
+0.5196)(-0.325, 0.5629)(-1.6, 2.2) \pscurve{->}(-0.3,
+-0.5196)(-0.325, -0.5629)(-1.6, -2.2)
+%Right circle
+\cnode[](6,0){.6}{mycircle} \rput(6,0){+Q}
+\psline{->}(6.6,0)(8.6,0) \pscurve{->}(5.4362, 0.2052)(5.3892,
+0.2223)(4, 0.95)(3.3, 2.7)(3.3, 3.0) \pscurve{->}(5.4362,
+-0.2052)(5.3892, -0.2223)(4, -0.95)(3.3, -2.7)(3.3, -3.0)
+\pscurve{->}(5.5612, 0.4092)(5.5246, 0.4433)(4.5, 1.3)(4, 2.7)(4,
+3) \pscurve{->}(5.5612, -0.4092)(5.5246, -0.4433)(4.5, -1.3)(4,
+-2.7)(4, -3) \pscurve{->}(5.756, 0.5481)(5.7356, 0.5938)(5.2,
+1.4)(4.9, 2.2)(4.85, 3.0) \pscurve{->}(5.756, -0.5481)(5.7356,
+-0.5938)(5.2, -1.4)(4.9, -2.2)(4.85, -3.0)
+%top and bottom lines
+\pscurve{->}(6, 0.6)(6.0, 1.6)(6.3, 2.8) \pscurve{->}(6,
+-0.6)(6.0, -1.6)(6.3, -2.8) \psline{->}(6.519615,0.3)(8.25167,1.3)
+\psline{->}(6.519615,-0.3)(8.25167,-1.3) \pscurve{->}(6.3,
+0.5196)(6.325, 0.5629)(7.6, 2.2) \pscurve{->}(6.3, -0.5196)(6.325,
+-0.5629)(7.6, -2.2)
+%\pscurve{->}()()()()()
+\end{pspicture}
+\end{center}
+
+\subsubsection{Two like charges : both negative}
+We can use the fact that the direction of the force is reversed
+for a test charge if you change the sign of the charge that is
+influencing it. If we change to the case where both charges are
+negative we get the following result:
+
+\begin{center}
+
+\begin{pspicture}(-3,-3)(9,3)
+%Left circle
+\cnode[](0,0){.6}{mycircle} \rput(0,0){-Q}
+\psline{<-}(-0.6,0)(-2.6,0)
+%middle lines
+\pscurve{<-}(0.5638, 0.2052)(0.6108,
+0.2223)(2,0.95)(2.7,2.7)(2.7,3.0) \pscurve{<-}(0.5638,
+-0.2052)(0.6108, -0.2223)(2, -0.95)(2.7, -2.7)(2.7, -3.0)
+\pscurve{<-}(0.4388, 0.4092)(0.4754, 0.4433)(1.5, 1.3)(2, 2.7)(2,
+3) \pscurve{<-}(0.4388, -0.4092)(0.4754, -0.4433)(1.5, -1.3)(2,
+-2.7)(2, -3) \pscurve{<-}(0.2440, 0.5481)(0.2644, 0.5938)(0.8,
+1.4)(1.1, 2.2)(1.15, 3.0) \pscurve{<-}(0.2440, -0.5481)(0.2644,
+-0.5938)(0.8, -1.4)(1.1, -2.2)(1.15, -3.0)
+%top and bottom lines
+\pscurve{<-}(0, 0.6)(0.0, 1.6)(-0.3, 2.8) \pscurve{<-}(0,
+-0.6)(0.0, -1.6)(-0.3, -2.8)
+\psline{<-}(-0.519615,0.3)(-2.25167,1.3)
+\psline{<-}(-0.519615,-0.3)(-2.25167,-1.3) \pscurve{<-}(-0.3,
+0.5196)(-0.325, 0.5629)(-1.6, 2.2) \pscurve{<-}(-0.3,
+-0.5196)(-0.325, -0.5629)(-1.6, -2.2)
+%Right circle
+\cnode[](6,0){.6}{mycircle} \rput(6,0){-Q}
+\psline{<-}(6.6,0)(8.6,0) \pscurve{<-}(5.4362, 0.2052)(5.3892,
+0.2223)(4, 0.95)(3.3, 2.7)(3.3, 3.0) \pscurve{<-}(5.4362,
+-0.2052)(5.3892, -0.2223)(4, -0.95)(3.3, -2.7)(3.3, -3.0)
+\pscurve{<-}(5.5612, 0.4092)(5.5246, 0.4433)(4.5, 1.3)(4, 2.7)(4,
+3) \pscurve{<-}(5.5612, -0.4092)(5.5246, -0.4433)(4.5, -1.3)(4,
+-2.7)(4, -3) \pscurve{<-}(5.756, 0.5481)(5.7356, 0.5938)(5.2,
+1.4)(4.9, 2.2)(4.85, 3.0) \pscurve{<-}(5.756, -0.5481)(5.7356,
+-0.5938)(5.2, -1.4)(4.9, -2.2)(4.85, -3.0)
+%top and bottom lines
+\pscurve{<-}(6, 0.6)(6.0, 1.6)(6.3, 2.8) \pscurve{<-}(6,
+-0.6)(6.0, -1.6)(6.3, -2.8) \psline{<-}(6.519615,0.3)(8.25167,1.3)
+\psline{<-}(6.519615,-0.3)(8.25167,-1.3) \pscurve{<-}(6.3,
+0.5196)(6.325, 0.5629)(7.6, 2.2) \pscurve{<-}(6.3, -0.5196)(6.325,
+-0.5629)(7.6, -2.2)
+%\pscurve{->}()()()()()
+\end{pspicture}
+\end{center}
+
+\subsection{Parallel plates}
+One very important example of electric fields which is used
+extensively is the electric field between two charged parallel
+plates. In this situation the electric field is constant. This is
+used for many practical purposes and later we will explain how
+Millikan used it to measure the charge on the electron.
+
+\subsubsection{Field map for oppositely charged parallel plates}
+
+\begin{center}
+\begin{pspicture}(0,0)(6.6,4.5)
+\psset{xunit=.66cm} \psset{yunit=.66cm}
+\psframe[dimen=inner](0.2,6.0)(9.8,6.8)
+\psframe[dimen=inner](0.2,.2)(9.8,1)
+\pscurve{<-}(0.2,1)(-.2,3.5)(0.2,6.)
+\pscurve{<-}(9.8,1)(10.2,3.5)(9.8,6.)
+\multido{\n=0.0+1}{9}{%
+\rput(\n,0){\psline{<-}(1,1)(1,6) \rput(1,6.4){+} \rput(1,.6){-}}
+}
+\end{pspicture}
+\end{center}
+This means that the force that a test charge would feel at any
+point between the plates would be identical in magnitude and
+direction. The fields on the edges exhibit fringe effects,
+\emph{i.e. they bulge outwards}. This is because a test charge
+placed here would feel the effects of charges only on one side
+(either left or right depending on which side it is placed). Test
+charges placed in the middle experience the effects of charges on
+both sides so they balance the components in the horizontal
+direction. This is clearly not the case on the edges.
+
+\subsubsection{Strength of an electric field}
+When we started making field maps we drew arrows to indicate the
+strength of the field and the direction. When we moved to lines
+you might have asked ``Did we forget about the field strength?''.
+We did not. Consider the case for a single positive charge again:
+
+\begin{center}
+\begin{pspicture}(-3,-3)(3,3)
+\cnode[](0,0){.6}{mycircle} \rput(0,0){+Q} \degrees[1.2]
+\multido{\n=0.0+.1}{12}{%
+\rput{\n}{\psline{->}(0.6,0)(2.6,0)}}
+\end{pspicture}
+\end{center}
+
+Notice that as you move further away from the charge the field
+lines become more spread out. In field map diagrams, the closer together
+field lines are, the stronger the field. Therefore, the electric field is stronger closer to the charge (the electric field lines are closer together) and weaker further from the charge (the electric field lines are further apart).\\
+
+The magnitude of the electric field at a point as the force per
+unit charge. Therefore,
+\begin{equation*}
+E=\frac{F}{q}
+\end{equation*}
+E and F are vectors. From this we see that the force on a charge
+$q$ is simply:
+\begin{equation*}
+F=E \cdot q
+\end{equation*}
+
+The force between two electric charges is given by:
+\begin{equation*}
+F=k\frac{Qq}{r^2}.
+\end{equation*} (if we make the one charge $Q$ and the other $q$.)
+Therefore, the electric field can be written as:
+\begin{equation*}
+E=k\frac{Q}{r^2}
+\end{equation*}
+The electric field is the force per unit of charge and hence has
+units of newtons per coulomb.
+
+As with Coulomb's law calculations, do not substitute the sign of
+the charge into the equation for electric field. Instead, choose a
+positive direction, and then either add or subtract the
+contribution to the electric field due to each charge depending
+upon whether it points in the positive or negative direction,
+respectively.
+Khan Academy video on electrostatics, part 2: SIYAVULA-VIDEO:http://cnx.org/content/m39005/latest/#electrostatics-2
+Phet simulation on electric fields: SIYAVULA-SIMULATION:http://cnx.org/content/m39005/latest/#Electric-fields
+\begin{wex}{Electric field 1}{Calculate the electric field strength $30 {\rm
+{cm}}$ from a $5 {\rm {nC}}$ charge.
+\begin{pspicture}(0,-1.0265625)(3.6053126,1.0265625)
+\psdots[dotsize=0.248](0.4209375,0.4)
+\rput(0.4159375,0.83){+5nC}
+\rput(3.4553125,0.43){x}
+\psline[linewidth=0.04cm,arrowsize=0.05cm 4.0,arrowlength=1.85,arrowinset=0.4]{<->}(0.4609375,-0.52)(3.4009376,-0.5)
+\psline[linewidth=0.04cm,linestyle=dotted,dotsep=0.16cm](0.4009375,0.14)(0.4009375,-0.48)
+\psline[linewidth=0.04cm,linestyle=dotted,dotsep=0.16cm](3.4609375,0.18)(3.4609375,-0.44)
+\rput(1.944375,-0.87){30 cm}
+\end{pspicture}
+}{
+\westep{Determine what is required}
+We need to calculate the electric field a distance from a given charge.
+\westep{Determine what is
+given} We are given the magnitude of the charge and the distance from the charge.
+\westep{Determine how to approach the problem} We will use the equation:
+\begin{equation*}
+E=k\frac{Q}{r^2}.
+\end{equation*}
+\westep{Solve the problem}
+\begin{eqnarray*}
+E &=& k\frac{Q}{r^2}\\
+&=& \frac {(8.99\times10^{9})(5 \times10^{-9})}{(0,3)^2}\\
+&=& 4,99 \times10^{2} {\rm N.C^{-1}}
+\end{eqnarray*}
+}
+\end{wex}
+
+\begin{wex}{Electric field 2}{Two charges of $Q_1$ = $+3 {\rm {nC}}$ and  $Q_2$ =
+$-4 {\rm {nC}}$ are separated by a distance of $50 {\rm {cm}}$. What is the electric
+field strength at a point that is $20 {\rm {cm}}$ from  $Q_1$ and $50 {\rm {cm}}$
+from $Q_2$? The point lies beween $Q_1$ and $Q_2$.
+
+\begin{pspicture}(0,-1.0565625)(12.97,1.0565625)
+\psdots[dotsize=0.248](0.4209375,0.37)
+\usefont{T1}{ptm}{m}{n}
+\rput(0.4159375,0.8){+3nC}
+\usefont{T1}{ptm}{m}{n}
+\rput(3.4553125,0.4){x}
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 4.0,arrowlength=1.85,arrowinset=0.4]{<->}(0.4609375,-0.55)(3.4009376,-0.53)
+\psline[linewidth=0.04cm,linestyle=dotted,dotsep=0.16cm](0.4009375,0.11)(0.4009375,-0.51)
+\psline[linewidth=0.04cm,linestyle=dotted,dotsep=0.16cm](3.4609375,0.15)(3.4609375,-0.47)
+\usefont{T1}{ptm}{m}{n}
+\rput(1.935625,-0.9){10 cm}
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 4.0,arrowlength=1.85,arrowinset=0.4]{<->}(3.5409374,-0.53)(12.440937,-0.49)
+\usefont{T1}{ptm}{m}{n}
+\rput(8.064375,-0.9){30 cm}
+\psdots[dotsize=0.248](12.520938,0.43)
+\usefont{T1}{ptm}{m}{n}
+\rput(12.4825,0.86){-4nC}
+\psline[linewidth=0.04cm,linestyle=dotted,dotsep=0.16cm](12.500937,0.17)(12.500937,-0.45)
+\end{pspicture}
+}{
+\westep{Determine what is required}
+We need to calculate the electric field a distance from two given charges.
+\westep{Determine what is given}
+We are given the magnitude of the charges and
+the distances from the charges.
+\westep{Determine how to approach the problem} We will use the equation:
+\begin{equation*}
+E=k\frac{Q}{r^2}.
+\end{equation*}
+We need to work out the electric field for each charge separately and then add them to get the resultant field.
+\westep{Solve the problem}
+We first solve for $Q_1$:
+\begin{eqnarray*}
+E &=& k\frac{Q}{r^2}\\
+&=& \frac {(8.99\times10^{9})(3 \times10^{-9})}{(0,2)^2}\\
+&=& 6,74 \times10^{2} {\rm N.C^{-1}}\\
+\end{eqnarray*}
+Then for $Q_2$:
+\begin{eqnarray*}
+E &=& k\frac{Q}{r^2}\\
+&=& \frac {(8.99\times10^{9})(4 \times10^{-9})}{(0,3)^2}\\
+&=& 2,70 \times10^{2} {\rm N.C^{-1}}\\
+\end{eqnarray*}
+We need to add the two electric fields beacuse both are in the same direction. The field is away from $Q_1$ and towards $Q_2$.
+Therefore,
+
+$E_{total} = 6,74 \times10{2} + 2,70 \times10^{2} = 9,44 \times10{2}
+{\rm N.C^{-1}}$
+}
+\end{wex}
+
+\section{Electrical potential energy and potential}
+%\begin{syllabus}
+%\item Define the electrical potential energy of a charge as the energy it has because of its position relative to other charges that it interacts with
+%\item Use the equation U=kQ1Q2/r to calculate the potential energy of a charge due to other charges.
+%\item Define the electric potential at a point as the electrical potential energy per unit charge, i.e. the potential energy a positive test charge would have if it were placed at that point.
+%\item Explain lightning in terms of electric potential and potential difference and describe measures that can be taken to reduce the risk of being struck by lightning
+%\item Note: Electrical potential energy due to other charges can be positive or negative depending on whether the force between the charges is attractive (U is negative) or repulsive (U is positive). Link electric potential to voltage (Grade 10 and 11), which is the potential difference between two points in a circuit. Lightning provides a good everyday context in which to show the dangers associated with a high potential difference. Since lightning is so common in South Africa and causes so much damage, it is worth spending time discussing it and helping learners think about how to protect themselves and their families.
+%\end{syllabus}
+
+The \textit{electrical potential energy} of a charge is the energy
+it has because of its position relative to other charges that it
+interacts with. The potential energy of a charge $Q_1$ relative to
+a charge $Q_2$ a distance $r$ away is calculated by:\\
+\begin{equation*}
+U=\frac{kQ_1Q_2}{r}
+\end{equation*}
+Khan Academy video on potential energy: SIYAVULA-VIDEO:http://cnx.org/content/m39013/latest/#electrostatics-3
+\begin{wex}{Electrical potential energy 1}{What is the electric potential energy of a $7 {\rm nC}$ charge that is 2 cm from a $20 {\rm nC}$ charge?}
+
+{
+\westep{Determine what is required}
+We need to calculate the electric potential energy (U).
+\westep{Determine what is given}
+We are given both charges and the distance between them.
+\westep{Determine how to approach the problem}
+We will use the equation:\\
+\begin{equation*}
+U=\frac{kQ_1Q_2}{r}
+\end{equation*}
+\westep{Solve the problem}
+\begin{eqnarray*}
+U &=& \frac{kQ_1Q_2}{r}\\
+&=& \frac {(8.99\times10^{9})(7 \times10^{-9})(20 \times10^{-9})}{(0,02)}\\
+&=& 6,29 \times10{-5} {\rm J}\\
+\end{eqnarray*}}
+\end{wex}
+
+\subsection{Electrical potential}
+The electrical potential at a point is the electrical potential
+energy per unit charge, i.e. the potential energy a positive test
+charge would have if it were placed at that point.\\
+
+Consider a positive test charge $+Q$ placed at A in the electric
+field of another positive point charge.
+
+\begin{center}
+\begin{pspicture}(-3.3,-3.3)(3.3,3.3)
+%\psgrid
+\pscircle(0,0){.6} \rput(0,0){+} \SpecialCoor
+\def\arrlines{\psline{->}(0.6;0)(1.6;0)
+\psline{->}(2;0)(2.5;0) \psline{->}(3;0)(3.3;0)} \degrees[1.2]
+\multido{\n=0.0+.1}{12}{%
+\rput{\n}{\arrlines}} \pscircle*(1.1, 0){0.1}
+\psdot[dotsize=3pt,dotstyle=o](2.7,0) \rput(1.2,0.25){+Q}
+\uput[d](1.1,0){A} \uput[d](2.7,0){B}
+\end{pspicture}
+\end{center}
+
+The test charge moves towards B under the influence of the
+electric field of the other charge.
+In the process the test charge loses electrical potential energy
+and gains kinetic energy. Thus, at A, the test charge has more
+potential energy than at B -- {\bf A is said to have a higher
+electrical potential than B}. \\
+
+The potential energy of a charge at
+a point in a field is defined as the work required to move that
+charge from infinity to that point.
+
+\Definition {Potential difference}{The {\bf potential difference between two points} in an electric
+field is defined as the {\bf work required to move a unit positive
+test charge from the point of lower potential to that of higher
+potential}.}
+If an amount of work $W$ is required to move a charge
+$Q$ from one point to another, then the potential difference
+between the two points is given by,
+
+\begin{eqnarray}
+V &=&{W\over Q}\nonumber\hspace{2cm}
+\mathrm{unit:J.C^{-1}\;or\;V\;(the\;volt)}
+\end{eqnarray}
+
+From this equation we can define the volt.
+
+\Definition {The Volt}{One volt is the potential
+difference between two points in an electric field if one joule of
+work is done in moving one coulomb of charge from the one point to
+the other.}
+
+\begin{wex}{Potential difference}{What is the potential difference between two points in an electric field if it takes $600 {\rm J}$ of energy to move a charge of $2 {\rm C}$ between these two points?}{
+\westep{Determine what is required}
+We need to calculate the potential difference (V) between two points in an electric field.
+\westep{Determine what is given}
+We are given both the charges and the energy or work done to move the charge between the two points.
+\westep{Determine how to approach the problem}
+We will use the equation:\\
+\begin{equation*}
+V=\frac{W}{Q}
+\end{equation*}
+\westep{Solve the problem}
+\begin{eqnarray*}
+V &=& \frac{W}{Q}\\
+&=& \frac {600}{2}\\
+&=& 300 {\rm V}\\
+\end{eqnarray*}}
+\end{wex}
+
+
+
+\subsection{Real-world application: lightning}
+
+Lightning is an atmospheric discharge of electricity, usually, but
+not always, during a rain storm. An understanding of lightning is
+important for power transmission lines as engineers need to
+know about lightning in order to adequately protect lines and
+equipment.
+\Extension {Formation of lightning}{
+\begin {enumerate}
+\item \textbf{Charge separation}\\
+The first process in the generation of lightning is charge separation.
+The mechanism by which charge separation happens is still the subject of research.
+One theory is that opposite charges are driven apart and energy is stored in the
+electric field between them. Cloud electrification appears to require strong
+updrafts which carry water droplets upward, supercooling them to $-10$ to
+$-20$~$^{\circ}$C. These collide with ice crystals to form a soft ice-water
+mixture called graupel. The collisions result in a slight positive charge being
+transferred to ice crystals, and a slight negative charge to the graupel.
+Updrafts drive lighter ice crystals upwards, causing the cloud top to accumulate
+increasing positive charge. The heavier negatively charged graupel falls towards
+the middle and lower portions of the cloud, building up an increasing negative
+charge. Charge separation and accumulation continue until the electrical
+potential becomes sufficient to initiate lightning discharges, which occurs when
+the gathering of positive and negative charges forms a sufficiently strong
+electric field.\\
+
+\item \textbf{Leader formation}\\
+As a thundercloud moves over the Earth's surface, an equal but opposite charge
+is induced in the Earth below, and the induced ground charge follows the
+movement of the cloud.
+An initial bipolar discharge, or path of ionized air, starts from a negatively
+charged mixed water and ice region in the thundercloud. The discharge ionized
+channels are called leaders. The negative charged leaders, called a "stepped
+leader", proceed generally downward in a number of quick jumps, each up to 50
+metres long. Along the way, the stepped leader may branch into a number of paths
+as it continues to descend. The progression of stepped leaders takes a
+comparatively long time (hundreds of milliseconds) to approach the ground. This
+initial phase involves a relatively small electric current (tens or hundreds of
+amperes), and the leader is almost invisible compared to the subsequent
+lightning channel.
+When a step leader approaches the ground, the presence of opposite charges on
+the ground enhances the electric field. The electric field is highest on trees
+and tall buildings. If the electric field is strong enough, a conductive
+discharge (called a positive streamer) can develop from these points. As the
+field increases, the positive streamer may evolve into a hotter, higher current
+leader which eventually connects to the descending stepped leader from the
+cloud. It is also possible for many streamers to develop from many different
+objects at the same time, with only one connecting with the leader and forming the
+main discharge path. Photographs have been taken on which non-connected
+streamers are clearly visible. When the two leaders meet, the electric current
+greatly increases. The region of high current propagates back up the positive
+stepped leader into the cloud with a "return stroke" that is the most luminous
+part of the lightning discharge.\\
+\item \textbf{Discharge}
+When the electric field becomes strong enough, an electrical discharge (the bolt
+of lightning) occurs within clouds or between clouds and the ground. During the
+strike, successive portions of air become a conductive discharge channel as the
+electrons and positive ions of air molecules are pulled away from each other and
+forced to flow in opposite directions.
+The electrical discharge rapidly superheats the discharge channel, causing the
+air to expand rapidly and produce a shock wave heard as thunder. The rolling and
+gradually dissipating rumble of thunder is caused by the time delay of sound
+coming from different portions of a long stroke.
+\end{enumerate}}
+
+Estimating distance of a lightning strike. The flash of a
+lightning strike and resulting thunder occur at roughly the same
+time. But light travels at 300~000 kilometres in a second, almost
+a million times the speed of sound. Sound travels at the slower
+speed of 330~m/s in the same time, so the flash of lightning is
+seen before thunder is heard. By counting the seconds between the
+flash and the thunder and dividing by 3, you can estimate your
+distance from the strike and initially the actual storm cell (in
+kilometres).
+Presentation on lightning: SIYAVULA-PRESENTATION:http://cnx.org/content/m39013/latest/#slidesharefigure
+\section{Capacitance and the parallel plate capacitor}
+\label{p:em:es11:c}
+
+%\begin{syllabus}
+%\item Describe a parallel plate capacitor as a device that consists of two oppositely charged conducting plates separated by a small distance, which stores charge.
+%\item Define capacitance as the charge stored per volt, measured in farad (F). Mathematically, C=Q/V.
+%\item Solve problems involving the charge stored by, and voltage across, capacitors.
+%\item Use the equation C=e0A/d to determine the capacitance of a capacitor of given dimensions or design a capacitor of given capacitance.
+%\item Calculate the electric field between the plates of a parallel plate capacitor using the equation E=V/d.
+%\item Explain using words and pictures why inserting a dielectric between the plates of a parallel plate capacitor increases its capacitance.
+%\item Note: Note that Q is the magnitude of the charge stored on either plate, not on both plates added together. Since one plate stores positive charge and the other stores negative charge, the total charge on the two plates is zero. When a dielectric is inserted between the plates of a parallel plate capacitor the dielectric becomes polarised so an electric field is induced in the dielectric that opposes the field between the plates. When the two electric fields are superposed, the new field between the plates becomes smaller. Thus the voltage between the plates decreases so the capacitance increases.
+%\end{syllabus}
+
+\subsection{Capacitors and capacitance}
+
+A parallel plate capacitor is a device that consists of two
+oppositely charged conducting plates separated by a small
+distance, which stores charge. When voltage is applied to the
+capacitor, usually by connecting it to an energy source (e.g. a battery) in a circuit, electric charge of equal magnitude, but opposite
+polarity, builds up on each plate.\\
+
+\begin{figure}[H]
+\begin{center}
+\begin{pspicture}(-2,-2)(2,2)
+%\psgrid
+
+
+%battery
+\pnode(-1,.5){A}
+\pnode(-1,-.5){B}
+
+%capacitor
+\pnode(-1,-1){C}
+\pnode(2,-1){D}
+
+%resistor
+\pnode(-1,1){E}
+\pnode(2,1){F}
+
+%draw wiring
+\wire(A)(E)
+\wire(F)(D)
+\wire(C)(B)
+
+%draw battery
+\battery[ labeloffset=-.8 ](A)(B){$E$}
+
+%draw capacitor
+\capacitor[ labeloffset=-0.8 ](C)(D){$C$}
+
+%draw resistor
+\resistor[ dipolestyle = rectangle, labeloffset=.6](E)(F){$R$}
+\end{pspicture}
+\end{center}
+\caption{A capacitor (C) connected in series with a resistor (R) and an energy source (E).}
+\end{figure}
+
+
+\Definition{Capacitance}{Capacitance is the charge stored per volt
+and is measured in Farads (F).}
+
+Mathematically, capacitance is the ratio of the charge on a single
+plate to the voltage across the plates of the capacitor:
+\nequ{C=\frac{Q}{V}.}\\
+
+Capacitance is measured in Farads (F).  Since capacitance is defined
+as $C=\frac{Q}{V}$, the units are in terms of charge over
+potential difference. The unit of charge is the coulomb and the
+unit of the potential difference is the volt.  One farad is
+therefore the capacitance if one coulomb of charge was stored on a
+capacitor for every volt applied.\\
+
+1~C of charge is a very large amount of charge.  So, for a small
+amount of voltage applied, a 1~F capacitor can store a enormous
+amount of charge. Therefore, capacitors are often denoted in terms
+of microfarads ($1\times10^{-6}$), nanofarads ($1\times10^{-9}$),
+or  picofarads ($1\times10^{-12}$).
+
+\Tip{$Q$ is the magnitude of the charge stored on either
+plate, not on both plates added together. Since one plate stores
+positive charge and the other stores negative charge, the total
+charge on the two plates is zero.}
+
+\begin{wex}{Capacitance}{Suppose that a 5 V battery is connected in a circuit to
+a 5~pF capacitor.  After the battery has been connected for a long time, what is
+the charge stored on each of the plates?}
+{To begin remember that after a voltage has been applied for a
+long time the capacitor is fully charged. The relation between
+voltage and the maximum charge of a capacitor is found in equation
+~\ref{eq:cap}. \nequ{CV =  Q}
+
+Inserting the given values of $C=5 {\rm F}$ and $V= 5 {\rm V}$, we find that:
+
+\begin{eqnarray*}
+Q &=& CV \\
+&=& (5\times10^{-12}F)(5V) \\
+& = & 2,5\times10^{-11}C
+\end{eqnarray*}
+
+}
+\end{wex}
+
+\subsection{Dielectrics}
+The electric field between the plates of a capacitor is affected by the substance between them. The substance between the plates is called a dielectric. Common substances used as dielectrics are mica, perspex, air, paper and glass.\\
+When a dielectric is inserted between the plates of a parallel
+plate capacitor the dielectric becomes polarised so an electric
+field is induced in the dielectric that opposes the field between
+the plates. When the two electric fields are superposed, the new
+field between the plates becomes smaller. Thus the voltage between
+the plates decreases so the capacitance increases.\\
+
+In every capacitor, the dielectric stops the charge on one plate
+from travelling to the other plate.  However, each capacitor is
+different in how much charge it allows to build up on the
+electrodes per voltage applied.  When scientists started studying
+capacitors they discovered the property that the voltage applied
+to the capacitor was proportional to the maximum charge that would
+accumulate on the electrodes.  The constant that made this
+relation into an equation was called the capacitance, C. The
+capacitance was different for different capacitors. But, it stayed
+constant no matter how much voltage was applied.  So, it predicts
+how much charge will be stored on a capacitor when different
+voltages are applied.
+
+\subsection{Physical properties of the capacitor and capacitance}
+
+The capacitance of a capacitor is proportional to the surface area of the
+conducting plate and inversely proportional to the distance
+between the plates. It also depends on the dielectric between the plates. We say that it is proportional to the permittivity of
+the \textit{dielectric}. The dielectric is the non-conducting
+substance that separates the plates. As mentioned before, dielectrics can be air, paper, mica, perspex
+or glass.\\
+
+The capacitance of a parallel-plate capacitor is given by:
+\nequ{C=\epsilon_0 \frac{A}{d}} where $\epsilon_0$ is, in this case, the
+permittivity of air, $A$ is the area of the plates and $d$ is the
+distance between the plates.
+
+
+\begin{wex}{Capacitance}{What is the capacitance of a capacitor in which the
+dielectric is air, the area of the plates is $0,001 {\rm m^2}$ and the distance
+between the plates is $0,02 {\rm m}$?}{
+\westep{Determine what is required}
+We need to determine the capacitance of the capacitor.
+\westep{Determine how to approach the problem}
+We can use the formula:
+\nequ{C=\epsilon_0 \frac{A}{d}}
+\westep{Determine what is given.}
+We are given the area of the plates, the distance between the plates and that the dielectric is air.
+\westep{Determine the capacitance}
+\begin{eqnarray}
+C &=& \epsilon_0\frac{A}{d}\\
+&=& \frac {(8,9 \times 10 {-12})(0,001)}{0,02}\\
+&=& 4,45 \times 10^{-13} {\rm F}
+\end{eqnarray}
+
+}\end{wex}
+
+\subsection{Electric field in a capacitor}
+
+The electric field strength between the plates of a capacitor can be calculated using the formula:\\
+$E = \frac{V}{d}$ \\
+where $E$ is the electric field in ${\rm J.C^{-1}}$, $V$ is the potential difference in volts (${\rm V}$) and $d$ is the distance between the plates in metres (${\rm m}$).\\
+
+\begin{wex}{Electric field in a capacitor}{What is the strength of the electric field in a capacitor which has a potential difference of $300 {\rm V}$ between its parallel plates that are $0,02 {\rm m}$ apart?}{
+\westep{Determine what is required}
+We need to determine the electric field between the plates of the capacitor.
+\westep{Determine how to approach the problem}
+We can use the formula:\\
+$E = \frac{V}{d}$\\
+\westep{Determine what is given.}
+We are given the potential difference and the distance between the plates.
+\westep{Determine the electric field}
+\begin{eqnarray}
+E &=&\frac{V}{d}\\
+&=& \frac {300}{0,02}\\
+&=& 1,50 \times 10^{4} {\rm J.C^{-1}}\\
+\end{eqnarray}
+}
+\end{wex}
+
+
+\Exercise{Capacitance and the parallel plate capacitor}{
+\begin{enumerate}
+\item
+Determine the capacitance of a capacitor which stores $9 \times 10^{-9} {\rm C}$
+when a potential difference of 12 V is applied to it.
+\item
+What charge will be stored on a $5 {\rm \mu F}$ capacitor if a potential
+difference of $6 {\rm V}$ is maintained between its plates?
+\item
+What is the capacitance of a capacitor that uses air as its dielectric if it has an area of $0,004 {\rm m^2}$ and a distance of $0,03 {\rm m}$ between its plates?
+\item
+What is the strength of the electric field between the plates of a charged capacitor if the plates are $2 {\rm mm}$ apart and have a potential difference of $200 {\rm V}$ across them?
+\end{enumerate}
+\practiceinfo
+
+\begin{tabular}[h]{cccccc}
+(1.) aaa & (2.) aaa & (3.) aaa & (4.) aaa & 
+ \end{tabular}
+}
+Phet simulation on capacitance: SIYAVULA-SIMULATION:http://cnx.org/content/m39008/latest/#id63458
+\section{A capacitor as a circuit device}
+%\begin{syllabus}
+%\item Describe what happens to a capacitor in a DC circuit over time.
+%\item Describe how a charged capacitor can be used to provide a large potential difference for a very short time.
+%\item Note: When a capacitor is connected in a DC circuit, current will flow until the capacitor is fully charged. After that, no further current will flow. If the charged capacitor is connected to another circuit with no source of emf in it, the capacitor will discharge through the circuit, creating a potential difference for a short time. This is useful, for example, in a camera flash.
+%\end{syllabus}
+
+\subsection{A capacitor in a circuit}
+When a capacitor is connected in a DC circuit, current will flow
+until the capacitor is fully charged. After that, no further
+current will flow. If the charged capacitor is connected to
+another circuit with no source of emf in it, the capacitor will
+discharge through the circuit, creating a potential difference for
+a short time. This is useful, for example, in a camera flash.\\
+
+Initially, the electrodes have no net charge.  A
+voltage source is applied to charge a capacitor.  The voltage source creates an electric
+field, causing the electrons to move. The charges move around the
+circuit stopping at the left electrode.  Here they are unable to
+travel across the dielectric, since electrons cannot travel
+through an insulator. The charge begins to accumulate, and an
+electric field forms pointing from the left electrode to the right
+electrode.  This is the opposite direction of the electric field
+created by the voltage source. When this electric field is equal
+to the electric field created by the voltage source, the electrons
+stop moving.  The capacitor is then fully charged, with a positive
+charge on the left electrode and a negative charge on the right
+electrode.\\
+
+If the voltage is removed, the capacitor will discharge.  The
+electrons begin to move because in the absence of the voltage
+source, there is now a net electric field.  This field is due to
+the imbalance of charge on the electrodes--the field across the
+dielectric. Just as the electrons flowed to the positive electrode
+when the capacitor was being charged, during discharge, the
+electrons flow to negative electrode.  The charges cancel, and
+there is no longer an electric field across the dielectric.
+
+\subsection{Real-world applications: capacitors}
+Capacitors are used in many different types of circuitry.  In car
+speakers, capacitors are often used to aid the power supply when
+the speakers require more power than the car battery can provide.
+Capacitors are also used in processing electronic signals in
+circuits, such as smoothing voltage spikes due to inconsistent
+voltage sources. This is important for protecting sensitive electronic components in a circuit.
+Presentation on electrostatics: SIYAVULA-PRESENTATION:http://cnx.org/content/m39008/latest/#slidesharefigure1
+
+\summary{aaa}
+\begin{enumerate}
+\item Objects can be \textbf{positively}, \textbf{negatively} charged or \textbf{neutral}.
+\item Charged objects feel a force with a magnitude. This is known as Coulomb's law:
+
+\begin{equation*}
+F = k \frac{Q_1Q_2}{r^2}
+\end{equation*}
+
+\item The electric field due to a point charge is given by the equation:
+\begin{equation*}
+E = \frac{kQ}{r^2}
+\end{equation*}
+
+\item The force is attractive for unlike charges and repulsive for
+like charges.
+
+\item Electric fields start on positive charges and end on negative
+charges.
+
+\item A charge in an electric field, just like a mass under gravity,
+has potential energy which is related to the work to move it.
+\item A capacitor is a device that stores charge in a circuit.
+
+\item The electrical potential energy between two point charges is given by:
+\begin{equation*}
+U = \frac{kQ_{1}Q_{2}}{r^2}
+\end{equation*}
+
+\item Potential difference is measured in volts and is given by the equation:
+\begin{equation*}
+V = \frac{W}{q}
+\end{equation*}
+
+\item The electric field is constant between equally charged parallel
+plates. The electric field is given by:
+\begin{equation*}
+E = \frac{V}{d}
+\end{equation*}
+
+\item The capacitance of a capacitor can be calculated as
+\begin{equation*}
+C = \frac{Q}{V} = \frac{\epsilon _{0}A}{d}
+\end{equation*}
+\end{enumerate}
+
+\begin{eocexercises}{}
+\begin{enumerate}
+
+\item Two charges of $+3{\rm nC}$ and $-5{\rm nC}$ are separated by a distance of $40 {\rm cm}$. What is the electrostatic force between the two charges?
+\item {Two insulated metal spheres carrying charges of  $+6{\rm nC}$ and $-10{\rm nC}$ are separated by a distance of 20 mm.
+\begin {enumerate}
+\item {What is the electrostatic force between the spheres?}
+\item {The two spheres are touched and then separated by a distance of $60 {\rm mm}$. What are the new charges on the spheres?}
+\item {What is new electrostatic force between the spheres at this distance?}
+\end {enumerate}}
+\item The electrostatic force between two charged spheres of $+3{\rm nC}$ and $+4{\rm nC}$ respectively is $0,04 {\rm N}$. What is the distance between the spheres?
+\item Calculate the potential difference between two parallel plates if it takes $5000 {\rm J}$ of energy to move $25 {\rm C}$ of charge between the plates?
+\item {Draw the electric field pattern lines between:
+\begin {enumerate}
+\item {two equal positive point charges.}
+\item {two equal negative point charges.}
+\end {enumerate}}
+\item Calculate the electric field between the plates of a capacitor if the plates are $20 {\rm mm}$ apart and the potential difference between the plates is $300 {\rm V}$.
+\item Calculate the electrical potential energy of a $6 {\rm nC}$ charge that is $20 {\rm cm}$ from a $10 {\rm nC}$ charge.
+\item What is the capacitance of a capacitor if it has a charge of $0,02 {\rm C}$ on each of its plates when the potential difference between the plates is $12 {\rm V}$?
+\item{[SC 2003/11] Two small identical metal spheres, on insulated stands, carry charges -$q$ and $+3q$ respectively. When the centres of the spheres are separated by a distance $d$ the one exerts an electrostatic force of magnitude $F$ on the other.
+
+\begin{center}
+\begin{pspicture}(0,0)(4.6,2)
+\SpecialCoor
+%\psgrid
+\psframe(0,0)(0.5,0.5) \psline[linewidth=2pt](0.25,1.5)(0.25,0.5)
+\pscircle(0.25,1.75){0.25} \rput(4,0){\psframe(0,0)(0.5,0.5)
+\psline[linewidth=2pt](0.25,1.5)(0.25,0.5)
+\pscircle(0.25,1.75){0.25}} \psline{<->}(0.25,1.75)(4.25,1.75)
+\uput[u](2.25,1.750){$d$} \uput[u](0.25,2){$-q$}
+\uput[u](4.25,2){$+3q$}
+\end{pspicture}
+\end{center}
+The spheres are now made to touch each other and are then brought
+back to the same distance $d$ apart. What will be the magnitude of
+the electrostatic force which one sphere now exerts on the other?
+
+\begin{enumerate}
+\item{$\frac{1}{4}F$}
+\item{$\frac{1}{3}F$}
+\item{$\frac{1}{2}F$}
+\item{$3F$}
+\end{enumerate}}
+\item{[SC 2003/11] Three point charges of magnitude +1 $\mu$C, +1 $\mu$C and -1 $\mu$C respectively are placed on the three corners of an equilateral triangle as shown.
+
+\begin{center}
+\begin{pspicture}(-2,-0.6)(2,3.2)
+\SpecialCoor \psline(0,0)({3;120}) \psline(0,0)({3;60})
+\psline({3;60})({3;120}) \psdots(0,0)({3;60})({3;120})
+\uput[u]({3;120}){+1 $\mu$C} \uput[u]({3;60}){+1 $\mu$C}
+\uput[d](0,0){-1 $\mu$C}
+\end{pspicture}
+\end{center}
+
+Which vector best represents the direction of the resultant force
+acting on the -1 $\mu$C charge as a result of the forces exerted
+by the other two charges?
+
+\begin{center}
+\begin{tabular}{cccc}
+\begin{pspicture}(0,0)(2,2)
+\SpecialCoor \rput(1,0){\psline{->}(0,0)({2;90})}
+\end{pspicture}
+&
+\begin{pspicture}(0,0)(2,2)
+\SpecialCoor \rput(1,0){\psline{->}({2;90})(0,0)}
+\end{pspicture}
+&
+\begin{pspicture}(0,0)(2,2)
+\SpecialCoor \rput(1.75,0.25){\psline{->}(0,0)({2;135})}
+\end{pspicture}
+&
+\begin{pspicture}(0,0)(2,2)
+\SpecialCoor \rput(0.25,0.25){\psline{->}(0,0)({2;45})}
+\end{pspicture}\\
+(a)&(b)&(c)&(d)\\
+\end{tabular}
+\end{center}}
+
+
+
+\item{[IEB 2003/11 HG1 - Force Fields]
+\begin{enumerate}
+\item{Write a statement of Coulomb's law.}
+
+\item{Calculate the magnitude of the force exerted by a point charge of +2 nC on another point charge of -3 nC separated by a distance of 60 mm.}
+
+\item{Sketch the electric field between two point charges of +2 nC and -3 nC, respectively, placed 60 mm apart from each other.}
+\end{enumerate}}
+
+\item{[IEB 2003/11 HG1 - Electrostatic Ping-Pong]
+
+Two charged parallel metal plates, X and Y, separated by a
+distance of 60 mm, are connected to a DC supply of emf 2 000 V
+in series with a microammeter. An initially uncharged conducting
+sphere (a graphite-coated ping pong ball) is suspended from an
+insulating thread between the metal plates as shown in the
+diagram.
+
+\scalebox{1} % Change this value to rescale the drawing.
+{
+\begin{pspicture}(0,-1.481875)(9.536875,1.495)
+\rput{-270.0}(2.64625,-5.19625){\psframe[linewidth=0.04,dimen=outer](4.12125,1.375)(3.72125,-3.925)}
+\rput{-270.0}(5.14625,-2.69625){\psframe[linewidth=0.04,dimen=outer](4.12125,3.875)(3.72125,-1.425)}
+\rput{-270.0}(7.79625,-7.74625){\pscircle[linewidth=0.04,dimen=outer](7.77125,0.025){0.45}}
+\usefont{T1}{ptm}{m}{n}
+\rput(7.7875,0.0050){V}
+\psbezier[linewidth=0.04](6.52125,-1.225)(7.52125,-1.425)(7.82125,-1.025)(7.82125,-0.425)
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(1.72125,0.175)(1.72125,1.075)
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(1.72125,-0.225)(1.72125,-1.125)
+\usefont{T1}{ptm}{m}{n}
+\rput(1.823125,-0.015){32 mm}
+\usefont{T1}{ptm}{m}{n}
+\rput(0.51984376,1.245){plate A}
+\usefont{T1}{ptm}{m}{n}
+\rput(0.50203127,-1.255){plate B}
+\usefont{T1}{ptm}{m}{n}
+\rput(4.4804688,0.545){S}
+\usefont{T1}{ptm}{m}{n}
+\rput(4.4379687,-0.815){Q}
+\usefont{T1}{ptm}{m}{n}
+\rput(8.905781,-0.015){+1000V}
+\psdots[dotsize=0.12](4.22125,0.575)
+\psdots[dotsize=0.12](4.22125,-1.025)
+\psbezier[linewidth=0.04](6.52125,1.275)(7.52125,1.475)(7.82125,1.075)(7.82125,0.475)
+\end{pspicture}
+}
+
+When the ping pong ball is moved to the right to touch the
+positive plate, it acquires a charge of +9 nC. It is then
+released. The ball swings to and fro between the two plates,
+touching each plate in turn.
+
+\begin{enumerate}
+\item{How many electrons have been removed from the ball when it acquires a charge of +9 nC?}
+\item{Explain why a current is established in the circuit.}
+\item{Determine the current if the ball takes 0,25 s to swing from Y to X.}
+\item{Using the same graphite-coated ping pong ball, and the same two metal plates, give TWO ways in which this current could be increased.}
+\item{Sketch the electric field between the plates X and Y.}
+\item{How does the electric force exerted on the ball change as it moves from Y to X?}
+\end{enumerate}}
+
+
+
+\item{[IEB 2005/11 HG] A positive charge $Q$ is released from rest at the centre of a uniform electric field.
+\begin{center}
+\begin{pspicture}(0,0)(5,2.6)
+\SpecialCoor
+%\psgrid[gridcolor=lightgray]
+\psframe(0,0)(5,0.2) \uput[ul](5,0.2){negative plate}
+\psdot(2.5,1) \uput[l](2.5,1){$+Q$}
+\rput(0,2){\psframe(0,0)(5,0.2)\uput[ul](5,0.2){positive plate}}
+\end{pspicture}
+\end{center}
+How does $Q$ move immediately after it is released?
+\begin{enumerate}
+\item{It accelerates uniformly.}
+\item{It moves with an increasing acceleration.}
+\item{It moves with constant speed.}
+\item{It remains at rest in its initial position.}
+\end{enumerate}}
+
+
+\item{[SC 2002/03 HG1]
+The sketch below shows two sets of parallel plates which are
+connected together. A potential difference of 200~V is applied
+across both sets of plates. The distances between the two sets of
+plates are 20~mm and 40~mm respectively.
+
+\begin{center}
+\begin{pspicture}(0,-3)(5,1)
+%\psgrid[gridcolor=lightgray]
+\pnode(0,0){A} \pnode(2,0){B} \pnode(0,-2){C} \pnode(2,-2){D}
+\pnode(2.5,1){E} \pnode(2.5,-3){F} \pnode(4.5,1){G}
+\pnode(4.5,-3){H} \pnode(1,-1){P} \pnode(3,-2.9){R}
+
+\psline(A)(B)(E)(G) \psline(C)(D)(F)(H) \battery(G)(H){200~V}
+\pcline{<->}(0.5,0)(0.5,-2) \lput*{:U}{20~mm}
+\pcline{<->}(3.9,1)(3.9,-3) \lput*{:U}{40~mm} \psdots(P)(R)
+\uput[ur](R){R} \uput[r](P){P} \uput[u](A){A} \uput[u](B){B}
+\uput[d](C){C} \uput[d](D){D}
+\end{pspicture}
+\end{center}
+When a charged particle Q is placed at point R, it experiences a
+force of magnitude $F$. Q is now moved to point P, halfway between
+plates AB and CD. Q now experiences a force of magnitude .
+\begin{enumerate}
+\item{$\frac{1}{2}F$}
+\item{$F$}
+\item{$2F$}
+\item{$4F$}
+\end{enumerate}}
+
+\item{[SC 2002/03 HG1]
+The electric field strength at a distance $x$ from a point charge
+is $E$. What is the magnitude of the electric field strength at a
+distance $2x$ away from the point charge?
+\begin{enumerate}
+\item{$\frac{1}{4}E$}
+\item{$\frac{1}{2}E$}
+\item{$2E$}
+\item{$4E$}
+\end{enumerate}}
+
+\item{[IEB 2005/11 HG1]
+
+An electron (mass 9,11 $\times$ 10$^{-31}$ kg) travels
+horizontally in a vacuum. It enters the shaded regions between two
+horizontal metal plates as shown in the diagram below.
+
+\begin{center}
+\begin{pspicture}(0,-1.6)(5,4.6)
+% \psgrid[gridcolor=lightgray]
+\psframe[linestyle=none,fillstyle=solid,fillcolor=lightgray](0,0.2)(5,2.8)
+\psframe(0,0)(5,0.2) \psframe(0,2.8)(5,3)
+\psline(2.5,4)(2.5,3)\uput[u](2.5,4){+400~V}
+\psline(2.5,0)(2.5,-1)\uput[d](2.5,-1){0~V}
+\psline{->}(-1.5,1.5)(0,1.5)\uput[u](0,1.5){P} \psdot(0,1.5)
+\end{pspicture}
+\end{center}
+
+A potential difference of 400 V is applied across the places which are separated by 8 mm.\\
+
+The electric field intensity in the shaded region between the
+metal plates is uniform. Outside this region, it is zero.
+
+\begin{enumerate}
+\item{Explain what is meant by the phrase \textbf{``the electric field intensity is uniform''}.}
+\item{Copy the diagram and draw the following:
+\begin{enumerate}
+\item{The electric field between the metal plates.}
+\item{An arrow showing the direction of the electrostatic force on the electron when it is at \textbf{P}.}
+\end{enumerate}
+}
+\item{Determine the magnitude of the electric field intensity between the metal plates.}
+
+\item{Calculate the magnitude of the electrical force on the electron during its passage through the electric field between the plates.}
+
+\item{Calculate the magnitude of the acceleration of the electron (due to the electrical force on it) during its passage through the electric field between the plates.}
+
+\item{After the electron has passed through the electric field between these plates, it collides with phosphorescent paint on a TV screen and this causes the paint to glow. What energy transfer takes place during this collision?}
+\end{enumerate}}
+
+\item{[IEB 2004/11 HG1] A positively-charged particle is placed in a uniform electric field. Which of the following pairs of statements correctly describes the potential energy of the charge, and the force which the charge experiences in this field?
+
+Potential energy --- Force
+\begin{enumerate}
+\item{Greatest near the negative plate --- Same everywhere in the field}
+\item{Greatest near the negative plate --- Greatest near the positive and negative plates}
+\item{Greatest near the positive plate --- Greatest near the positive and negative plates}
+\item{Greatest near the positive plate --- Same everywhere in the field}
+\end{enumerate}
+}
+
+\item{[IEB 2004/11 HG1 - TV Tube]
+
+A speck of dust is attracted to a TV screen. The screen is
+negatively charged, because this is where the electron beam
+strikes it. The speck of dust is neutral.
+
+\begin{enumerate}
+\item{What is the name of the electrostatic process which causes dust to be attracted to a TV screen?}
+\item{Explain why a neutral speck of dust is attracted to the negatively-charged TV screen?}
+\item{Inside the TV tube, electrons are accelerated through a uniform electric field. Determine the magnitude of the electric force exerted on an electron when it accelerates through a potential difference of 2 000 V over a distance of 50 mm.}
+\item{How much kinetic energy (in J) does one electron gain while it accelerates over this distance?}
+\item{The TV tube has a power rating of 300 W. Estimate the maximum number of electrons striking the screen per second.}
+\end{enumerate}}
+
+\item{[IEB 2003/11 HG1] A point charge is held stationary between two charged parallel plates that are separated by a distance d. The point charge experiences an electrical force F due to the electric field E between the parallel plates.\\
+
+What is the electrical force on the point charge when the plate
+separation is increased to 2d?
+
+\begin{enumerate}
+\item{$\tfrac{1}{4}$ F}
+\item{$\tfrac{1}{2}$ F}
+\item{2 F}
+\item{4 F}
+\end{enumerate}
+}
+
+\item{[IEB 2001/11 HG1] - \textbf{Parallel Plates}\\
+
+A distance of 32 mm separates the horizontal parallel plates A and B.\\
+B is at a potential of +1 000 V.
+
+\scalebox{1} % Change this value to rescale the drawing.
+{
+\begin{pspicture}(0,-1.481875)(9.536875,1.495)
+\rput{-270.0}(2.64625,-5.19625){\psframe[linewidth=0.04,dimen=outer](4.12125,1.375)(3.72125,-3.925)}
+\rput{-270.0}(5.14625,-2.69625){\psframe[linewidth=0.04,dimen=outer](4.12125,3.875)(3.72125,-1.425)}
+\rput{-270.0}(7.79625,-7.74625){\pscircle[linewidth=0.04,dimen=outer](7.77125,0.025){0.45}}
+\usefont{T1}{ptm}{m}{n}
+\rput(7.7875,0.0050){V}
+\psbezier[linewidth=0.04](6.52125,-1.225)(7.52125,-1.425)(7.82125,-1.025)(7.82125,-0.425)
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(1.72125,0.175)(1.72125,1.075)
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(1.72125,-0.225)(1.72125,-1.125)
+\usefont{T1}{ptm}{m}{n}
+\rput(1.823125,-0.015){32 mm}
+\usefont{T1}{ptm}{m}{n}
+\rput(0.51984376,1.245){plate A}
+\usefont{T1}{ptm}{m}{n}
+\rput(0.50203127,-1.255){plate B}
+\usefont{T1}{ptm}{m}{n}
+\rput(4.4804688,0.545){S}
+\usefont{T1}{ptm}{m}{n}
+\rput(4.4379687,-0.815){Q}
+\usefont{T1}{ptm}{m}{n}
+\rput(8.905781,-0.015){+1000V}
+\psdots[dotsize=0.12](4.22125,0.575)
+\psdots[dotsize=0.12](4.22125,-1.025)
+\psbezier[linewidth=0.04](6.52125,1.275)(7.52125,1.475)(7.82125,1.075)(7.82125,0.475)
+\end{pspicture}
+}
+
+\begin{enumerate}
+\item{Draw a sketch to show the electric field lines between the plates A and B.}
+\item{Calculate the magnitude of the electric field intensity (strength) between the plates.}\\
+
+A tiny charged particle is stationary at S, 8 mm below plate A
+that is at zero electrical potential. It has a charge of 3,2
+$\times$ 10$^{-12}$ C.
+\item{State whether the charge on this particle is positive or negative.}
+\item{Calculate the force due to the electric field on the charge.}
+\item{Determine the mass of the charged particle.}\\
+
+The charge is now moved from S to Q.
+\item{What is the magnitude of the force exerted by the electric field on the charge at Q?}
+\item{Calculate the work done when the particle is moved from S to Q.}
+\end{enumerate}}
+
+\end{enumerate}
+\practiceinfo
+
+\begin{tabular}[h]{cccccc}
+(1.) aaa & (2.) aaa & (3.) aaa & (4.) aaa & (5.) aaa & (6.) aaa & (7.) aaa & (8.) aaa & (9.) aaa & (10.) aaa & (11.) aaa & (12.) aaa & (13.) aaa & (14.) aaa & (15.) aaa & (16.) aaa & (17.) aaa & (18.) aaa & (19.) aaa & (20.) aaa & (21.) aaa & (22.) aaa & (23.) aaa & (24.) aaa & (25.) aaa & 
+ \end{tabular}
+\end{eocexercises}
+
+% CHILD SECTION END
+
+
+
+% CHILD SECTION START
+
