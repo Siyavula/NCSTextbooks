@@ -1,0 +1,542 @@
+\chapter{Colour} 
+\label{p:wsl:c12} 
+
+
+\section{Introduction} 
+The light that human beings can see is called \textit{visible light}. Visible light is actually just a small part of the large spectrum of electromagnetic radiation which you will learn more about in Chapter~\ref{p:em:emr12}. We can think of electromagnetic radiation and visible light as transverse waves. We know that transverse waves can be described by their amplitude, frequency (or wavelength) and velocity. The velocity of a wave is given by the product of its frequency and wavelength:
+\begin{equation}
+v = f \times \lambda
+\end{equation}\label{eq:wavespeed} 
+
+However, electromagnetic radiation, including visible light, is special because, no matter what the frequency, it all moves at a \textbf{constant velocity} (in vacuum) which is known as the speed of light. The speed of light has the symbol $c$ and is:
+\begin{eqnarray*}
+c &=& 3 \times 10^{8}~~\rm{m.s^{-1}}
+\end{eqnarray*} 
+
+Since the \textit{speed of light} is $c$, we can then say:
+\begin{equation}
+c = f \times \lambda
+\end{equation}
+
+
+
+
+\section{Colour and Light} 
+%\begin{syllabus} 
+%\item The learner must know that each colour is associated with light of a particular frequency 
+%\item The learner must be able to use the equation $c=f\lambda$ to calculate the wavelength of light of a given frequency and vice versa. 
+%\item The learner must be able to explain why when white light is refracted through a prism it separates into light of different colours by referring to the difference in the speed of light of different frequencies in glass 
+%\item Notes: Link to Grade 10 and 11, wavelength and frequency, refraction. Link to Grade 12 Electricity and Magnetism, Electromagnetic Spectrum 
+%\end{syllabus} 
+
+Our eyes are sensitive to visible light over a range of wavelengths from 390~nm to 780~nm (1 nm = $1 \times 10^{-9}$ m). The different \textbf{colours} of light we see are related to specific \textit{frequencies} (and \textit{wavelengths}) of visible light. The wavelengths and frequencies are listed in table~\ref{t:colour:Colours}. 
+
+\begin{table}[H]
+\begin{center}
+\begin{tabular}{ | l | c | c |}
+\hline
+\textbf{Colour} & \textbf{Wavelength range (nm)} & \textbf{Frequency range (Hz)} \\ \hline \hline
+violet & 390 - 455 & 769 - 659 $\times 10^{12}$\\ \hline
+blue & 455 - 492 & 659 - 610 $\times 10^{12}$\\ \hline
+green & 492 - 577  & 610 - 520 $\times 10^{12}$\\ \hline
+yellow & 577 - 597 & 520 - 503 $\times 10^{12}$\\ \hline
+orange & 597 - 622 & 503 - 482 $\times 10^{12}$\\ \hline
+red & 622 - 780  & 482 - 385 $\times 10^{12}$\\ \hline
+\hline
+\end{tabular}
+\end{center}
+\caption{Colours, wavelengths and frequencies of light in the visible spectrum.}
+\label{t:colour:Colours}
+\end{table}
+
+You can see from table~\ref{t:colour:Colours} that \textbf{violet} light has the \textit{shortest wavelengths} and \textit{highest frequencies} while \textbf{red} light has the \textit{longest wavelengths} and \textit{lowest frequencies}.
+
+
+\begin{wex}{Calculating the frequency of light given the wavelength}
+{A streetlight emits light with a wavelength of 520 nm.
+\begin{enumerate}
+\item What colour is the light? (Use table~\ref{t:colour:Colours} to determine the colour)
+\item What is the frequency of the light? 
+\end{enumerate}
+}
+{
+\westep{What is being asked and what information are we given?}
+We need to determine the colour and frequency of light with a wavelength of $\lambda = 520$ nm = $520 \times 10^{-9}$ m.
+
+\westep{Compare the wavelength of the light to those given in table~\ref{t:colour:Colours} }
+We see from table~\ref{t:colour:Colours} that light with wavelengths between 492 - 577 nm is green. 520 nm falls into this range, therefore the colour of the light is green.
+
+\westep{Next we need to calculate the frequency of the light}
+We know that 
+\begin{eqnarray*}
+c &=& f \times \lambda 
+\end{eqnarray*}
+We know $c$ and we are given that $\lambda = 520 \times 10^{-9}$ m. So we can substitute in these values and solve for the frequency $f$.
+(\textbf{NOTE:} Don't forget to always change units into S.I. units! 1 nm = $1 \times 10^{-9}$ m.)
+
+\begin{eqnarray*}
+f &=& \frac{c}{\lambda} \\
+ & = & \frac{3 \times 10^{8}}{520 \times 10^{-9}} \\
+ & = & 577 \times 10^{12}~~\rm{Hz}
+\end{eqnarray*}
+
+The frequency of the green light is $577 \times 10^{12}$ Hz
+}
+\end{wex}
+
+
+\begin{wex}{Calculating the wavelength of light given the frequency}
+{A streetlight also emits light with a frequency of 490$ \times 10^{12}$ Hz.
+\begin{enumerate}
+\item What colour is the light? (Use table~\ref{t:colour:Colours} to determine the colour)
+\item What is the wavelength of the light? 
+\end{enumerate}
+}
+{
+\westep{What is being asked and what information are we given?}
+We need to find the colour and wavelength of light which has a frequency of 490$ \times 10^{12}$ Hz and which is emitted by the streetlight.
+
+\westep{Compare the wavelength of the light to those given in table~\ref{t:colour:Colours}}
+We can see from table~\ref{t:colour:Colours} that orange light has frequencies between 503 - 482$\times 10^{12}$ Hz. The light from the streetlight has $f = 490\times 10^{12}$ Hz which fits into this range. Therefore the light must be orange in colour.
+
+\westep{Next we need to calculate the wavelength of the light}
+We know that 
+\begin{eqnarray*}
+c &=& f \times \lambda 
+\end{eqnarray*}
+We know $c = 3 \times 10^{8}~~\rm{m.s^{-1}}$ and we are given that $f = 490 \times 10^{12}$ Hz. So we can substitute in these values and solve for the wavelength $\lambda$.
+\begin{eqnarray*}
+\lambda &=& \frac{c}{f} \\
+&=& \frac{3 \times 10^{8}}{490\times 10^{12}} \\
+&=& 6.122 \times 10{-7}~~\rm{m} \\
+&=& 612 \times 10^{-9}~~\rm{m} \\
+&=& 612~~\rm{nm}
+\end{eqnarray*}
+
+Therefore the orange light has a wavelength of 612 nm.
+
+}
+\end{wex}
+
+
+\begin{wex}
+{Frequency of Green}{The wavelength of green light ranges between 500~nm an d 565~nm. Calculate the range of frequencies that correspond to this range of wavelengths.}{
+\westep{Determine how to approach the problem}
+Use 
+\nequ{c = f \times \lambda} 
+to determine $f$.
+
+\westep{Calculate frequency corresponding to upper limit of wavelength range}
+\begin{eqnarray*}
+c &=& f \times \lambda\\
+f&=&\frac{c}{\lambda}\\
+&=&\frac{3 \times 10^8 \ems}{565 \times 10^{-9}\emm}\\
+&=&5,31 \times 10^{14}\;\rm{Hz}
+\end{eqnarray*}
+
+\westep{Calculate frequency corresponding to lower limit of wavelength range}
+\begin{eqnarray*}
+c &=& f \times \lambda\\
+f&=&\frac{c}{\lambda}\\
+&=&\frac{3 \times 10^8 \ems}{500 \times 10^{-9}\emm}\\
+&=&6,00 \times 10^{14}\;\rm{Hz}
+\end{eqnarray*}
+
+\westep{Write final answer}
+The range of frequencies of green light is $5,31 \times 10^{14}\;\rm{Hz}$ to $6,00 \times 10^{14}\;\rm{Hz}$.
+}
+\end{wex}
+
+\Exercise{Calculating wavelengths and frequencies of light}
+{
+\begin{enumerate}
+\item Calculate the frequency of light which has a wavelength of 400 nm. (Remember to use S.I. units)
+\item Calculate the wavelength of light which has a frequency of $550\times 10^{12}$ Hz.
+\item What colour is light which has a wavelength of $470\times 10^{-9}$ m and what is its frequency?
+\item What is the wavelength of light with a frequency of $510 \times 10^{12}$ Hz and what is its color?
+\end{enumerate}
+}
+
+\subsection{Dispersion of white light}
+
+White light, like the light which comes from the sun, is made up of \textit{all} the visible wavelengths of light. In other words, white light is a \textit{combination} of all the colours of visible light. 
+
+%In Chapter~\ref{p:wsl:go10}, 
+You learnt that the speed of light is different in different substances. The speed of light in different substances depends on the frequency of the light. For example, when white light travels through glass, light of the different frequencies is slowed down by different amounts. The lower the frequency, the less the speed is reduced which means that red light (lowest frequency) is slowed down \textit{less} than violet light (highest frequency). We can see this when white light is incident on a glass prism. 
+
+Have a look at the picture below. When the white light hits the edge of the prism, the light which travels through the glass is refracted  as it moves from the less dense medium (air) to the more dense medium (glass). 
+
+%\begin{figure}[htbp]
+\begin{center}
+\begin{pspicture}(0,-2)(5,3)
+%\psgrid[gridcolor=gray]
+\pnode(0,1.4){w0}
+\pnode(0.8,1.4){w1}
+
+\pnode(2.25,1.3){r1}
+\pnode(2.31,1.2){o1}
+\pnode(2.36,1.1){y1}
+\pnode(2.42,1){g1}
+\pnode(2.48,0.9){b1}
+\pnode(2.54,0.8){i1}
+\pnode(2.60,0.7){v1}
+
+\pnode(5,0.5){r2}
+\pnode(5,0.1){o2}
+\pnode(5,-0.3){y2}
+\pnode(5,-0.7){g2}
+\pnode(5,-1.1){b2}
+\pnode(5,-1.5){i2}
+\pnode(5,-1.9){v2}
+
+\rput(0,0){\pspolygon(0;0)(3;60)(3;0)}
+\arrowLine(w0)(w1){1}
+\psline(w1)(r1)
+\psline(w1)(o1)
+\psline(w1)(y1)
+\psline(w1)(g1)
+\psline(w1)(b1)
+\psline(w1)(i1)
+\psline(w1)(v1)
+
+\psline(r1)(r2)
+\psline(o1)(o2)
+\psline(y1)(y2)
+\psline(g1)(g2)
+\psline(b1)(b2)
+\psline(i1)(i2)
+\psline(v1)(v2)
+
+\uput[r](r2){red}
+\uput[r](o2){orange}
+\uput[r](y2){yellow}
+\uput[r](g2){green}
+\uput[r](b2){blue}
+\uput[r](i2){indigo}
+\uput[r](v2){violet}
+\uput[l](w0){white light}
+\end{pspicture}
+\end{center}
+%\caption{Dispersion of light through a prism.}
+%\end{figure}
+
+\begin{itemize}
+\item The \textbf{red} light which is slowed down the \textit{least}, is refracted the \textit{least}. 
+\item The \textbf{violet} light which is slowed down the \textit{most}, is refracted the \textit{most}. 
+\end{itemize}
+When the light hits the other side of the prism it is again refracted but the angle of the prism edge allows the light to remain separated into its different colours.
+White light is therefore separated into its different colours by the prism and we say that the white light has been \textbf{dispersed} by the prism.
+
+
+The dispersion effect is also responsible for why we see rainbows. When sunlight hits drops of water in the atmosphere, the white light is dispersed into its different colours by the water.
+
+
+
+
+\section{Addition and Subtraction of Light} 
+
+\subsection{Additive Primary Colours}
+The primary colours of light are \textbf{red}, \textbf{green} and \textbf{blue}. When all the primary colours are superposed (added together), white light is produced. Red, green and blue are therefore called the \textit{additive primary colours}. All the other colours can be produced by different combinations of red, green and blue. 
+
+\subsection{Subtractive Primary Colours}
+The subtractive primary colours are obtained by subtracting one of the three additive primary colours from white light. The subtractive primary colours are \textbf{yellow}, \textbf{magenta} and \textbf{cyan}. Magenta appears as a pinkish-purplish colour and cyan looks greenish-blue. You can see how the primary colours of light add up to the different subtractive colours in the illustration below.
+
+\begin{center}
+\scalebox{1} % Change this value to rescale the drawing.
+{
+\begin{pspicture}(0,-2.6096666)(9.02,2.6296666)
+\rput(0.86,2.0053334){\LARGE red}
+\rput(2.71,1.9053334){\LARGE green}
+\rput(4.75,2.0253334){\LARGE blue}
+\rput(7.08,2.0253334){\LARGE white}
+\rput(1.59,2.0053334){\LARGE +}
+\rput(3.79,2.0053334){\LARGE +}
+\rput(5.95,2.0253334){\LARGE =}
+\rput(0.88,-0.35466668){\LARGE red}
+\rput(2.71,-0.45466668){\LARGE green}
+\rput(1.61,-0.35466668){\LARGE +}
+\rput(7.27,-0.35466668){\LARGE yellow}
+\rput(5.99,-0.35466668){\LARGE =}
+\rput(0.88,-1.1546667){\LARGE red}
+\rput(1.61,-1.1546667){\LARGE +}
+\rput(4.77,-1.1746666){\LARGE blue}
+\rput(7.45,-1.1746666){\LARGE magenta}
+\rput(5.97,-1.1746666){\LARGE =}
+\rput(2.71,-2.1){\LARGE green}
+\rput(4.77,-1.9946667){\LARGE blue}
+\rput(6.99,-1.9546666){\LARGE cyan}
+\rput(3.81,-1.9746667){\LARGE +}
+\rput(5.97,-1.9546666){\LARGE =}
+\psframe[linewidth=0.04,dimen=outer](5.54,0.25033334)(0.18,-2.6096666)
+\psbezier[linewidth=0.04](0.50035554,2.5683334)(0.0,2.527)(0.038488887,1.5143334)(0.50035554,1.4936666)(0.9622222,1.473)(7.86,1.4903333)(8.275111,1.4936666)(8.690222,1.497)(8.7,2.5503333)(8.32,2.5703332)(7.94,2.5903332)(1.0007111,2.6096666)(0.50035554,2.5683334)
+\rput(2.72,0.91533333){PRIMARY COLOURS}
+\rput(7.15,0.89533335){SUBTRACTIVE}
+\rput(7.28,0.51533335){PRIMARY COLOURS}
+\end{pspicture} 
+}
+\end{center}
+
+\Activity{Experiment}{Colours of light}
+{
+\Aim{To investigate the additive properties of colours and determine the complementary colours of light.}
+
+\Apparatus{You will need two battery operated torches with flat bulb fronts, a large piece of white paper, and some pieces of cellophane paper of the following colours: red, blue, green, yellow, cyan, magenta. (You should easily be able to get these from a newsagents.)}
+
+\noindent Make a table in your workbook like the one below: \\
+
+\begin{tabular}{ | l | c | c | c |}
+\hline
+\textbf{Colour 1} & \textbf{Colour 2} & \textbf{Final colour prediction}  & \textbf{Final colour measured}\\ \hline \hline
+red & blue &  & \\ \hline
+red & green & & \\ \hline
+green & blue &  & \\ \hline
+magenta & green & & \\ \hline
+yellow & blue & & \\ \hline
+cyan & red & & \\ \hline
+\end{tabular} \\
+
+\noindent Before you begin your experiment, use what you know about colours of light to write down in the third column "Final colour prediction", what you think the result of adding the two colours of light will be. You will then be able to test your predictions by making the following measurements:
+
+\Method{Proceed according to the table above. Put the correct colour of cellophane paper over each torch bulb. e.g. the first test will be to put red cellophane on one torch and blue cellophane on the other. Switch on the torch with the red cellophane over it and shine it onto the piece of white paper. \\
+\noindent What colour is the light? \\
+\noindent Turn off that torch and turn on the one with blue cellophane and shine it onto the white paper. \\
+\noindent What colour is the light?\\ 
+\noindent Now shine both torches with their cellophane coverings onto the same spot on the white paper. What is the colour of the light produced? Write this down in the fourth column of your table. \\
+\noindent Repeat the experiment for the other colours of cellophane so that you can complete your table.}
+
+\textbf{Questions:}\\
+\begin{enumerate}
+\item How did your predictions match up to your measurements? 
+\item Complementary colours of light are defined as the colours of light which, when added to one of the primary colours, produce white light. From your completed table, write down the complementary colours for red, blue and green.
+\end{enumerate}
+}
+
+\subsection{Complementary Colours}
+Complementary colours are two colours of light which add together to give white. 
+
+\Activity{Investigation}{Complementary colours for red, green and blue}{
+Complementary colours are two colours which add together to give white. Place a tick in the box where the colours in the first column added to the colours in the top row give white.
+
+\begin{center}
+\begin{tabular}{|c||c|c|c|}\hline
+&\textbf{magenta}&\textbf{yellow}&\textbf{cyan}\\
+&(=red+blue)&(=red+green)&(=blue+green)\\\hline\hline
+red&&&\\\hline
+green&&&\\\hline
+blue&&&\\\hline
+\end{tabular}
+\end{center}}
+
+You should have found that the complementary colours for red, green and blue are: 
+\begin{itemize}
+\item{Red and Cyan}
+\item{Green and Magenta}
+\item{Blue and Yellow}
+\end{itemize}
+
+
+\subsection{Perception of Colour}
+The light-sensitive lining on the back inside half of the human eye is called the retina. 
+The retina contains two kinds of light sensitive cells or \textit{photoreceptors}: the rod cells (sensitive to low light) and the cone cells (sensitive to normal daylight) which enable us to see. The rods are not sensitive to colour but work well in dimly lit conditions. This is why it is possible to see in a dark room, but it is hard to see any colours. Only your rods are sensitive to the low light levels and so you can only see in black, white and grey.
+The cones enable us to see colours.
+Normally, there are three kinds of cones, each containing a different pigment. The cones are activated when the pigments absorb light. 
+The three types of cones are sensitive to (i.e. absorb) red, blue and green light respectively. Therefore we can perceive \textit{all} the different colours in the visible spectrum when the different types of cones are stimulated by different amounts since they are just combinations of the three primary colours of light.
+
+The rods and cones have different response times to light. The cones react quickly when bright light falls on them. The rods take a longer time to react. This is why it takes a while (about 10 minutes) for your eyes to adjust when you enter a dark room after being outside on a sunny day. 
+
+
+\begin{IFact}
+{Color blindness in humans is the inability to perceive differences between some or all colors that other people can see. Most often it is a genetic problem, but may also occur because of eye, nerve, or brain damage, or due to exposure to certain chemicals. The most common forms of human color blindness result from problems with either the middle or long wavelength sensitive cone systems, and involve difficulties in discriminating reds, yellows, and greens from one another. This is called "red-green color blindness". Other forms of color blindness are much rarer. They include problems in discriminating blues from yellows, and the rarest forms of all, complete color blindness or monochromasy, where one cannot distinguish any color from grey, as in a black-and-white movie or photograph.}
+\end{IFact}
+Phet simulation on colour vision: SIYAVULA-SIMULATION:http://cnx.org/content/m39506/latest/#id63458
+\begin{wex}{Seeing Colours}{When blue and green light fall on an eye, is cyan light being created? Discuss.}{Cyan light is not created when blue and green light fall on the eye. The blue and green receptors are stimulated to make the brain believe that cyan light is being created.}
+\end{wex}
+
+\subsection{Colours on a Television Screen}
+If you look very closely at a colour cathode-ray television screen or cathode-ray computer screen, you will see that there are very many small red, green and blue dots called \textit{phosphors} on it. These dots are caused to fluoresce (glow brightly) when a beam of electrons from the cathode-ray tube behind the screen hits them. Since different combinations of the three primary colours of light can produce any other colour, only red, green and blue dots are needed to make pictures containing all the colours of the visible spectrum.
+
+\Exercise{Colours of light}
+{
+\begin{enumerate}
+\item List the three primary colours of light.
+\item What is the term for the phenomenon whereby white light is split up into its different colours by a prism?
+\item What is meant by the term ``complementary colour'' of light?
+\item When white light strikes a prism which colour of light is refracted the most and which is refracted the least? Explain your answer in terms of the speed of light in a medium.
+\end{enumerate}
+}
+
+
+\section{Pigments and Paints}
+
+We have learnt that white light is a combination of all the colours of the visible spectrum and that each colour of light is related to a different frequency. But what gives everyday objects around us their different colours? 
+
+Pigments are substances which give an object its colour by absorbing certain frequencies of light and reflecting other frequencies. For example, a red pigment absorbs all colours of light except red which it reflects. Paints and inks contain pigments which gives the paints and inks different colours. 
+
+
+\subsection{Colour of opaque objects}
+Objects which you \textit{cannot} see through (i.e. they are not transparent) are called \textbf{opaque}. Examples of some opaque objects are metals, wood and bricks. The colour of an opaque object is determined by the colours (therefore \textit{frequencies}) of light which it \textit{reflects}. For example, when white light strikes a blue opaque object such as a ruler, the ruler will absorb all frequencies of light \textit{except} blue, which will be reflected. The reflected blue light is the light which makes it into our eyes and therefore the object will appear blue.
+
+Opaque objects which appear white do not absorb any light. They reflect all the frequencies.
+Black opaque objects absorb all frequencies of light. They do not reflect at all and therefore appear to have no colour.
+
+\begin{wex}
+{Colour of Opaque Objects}{If we shine white light on a sheet of paper that can only reflect green light, what is the colour of the paper?}{Since the colour of an object is determined by that frequency of light that is \textit{reflected}, the sheet of paper will appear green, as this is the only frequency that is reflected. All the other frequencies are absorbed by the paper.}
+\end{wex}
+
+\begin{wex}{Colour of an opaque object II}
+{The cover of a book appears to have a magenta colour. What colours of light does it reflect and what colours does it absorb?}
+{We know that magenta is a combination of red and blue primary colours of light. Therefore the object must be reflecting blue and red light and absorb green. }
+\end{wex}
+
+\subsection{Colour of transparent objects}
+If an object is \textbf{transparent} it means that you can see through it. For example, glass, clean water and some clear plastics are transparent. The colour of a transparent object is determined by the colours (frequencies) of light which it \textit{transmits} (allows to pass through it). For example, a cup made of green glass will appear green because it absorbs all the other frequencies of light \textit{except} green, which it transmits. This is the light which we receive in our eyes and the object appears green. 
+
+
+\begin{wex}
+{Colour of Transparent Objects}{If white light is shone through a glass plate that absorbs light of all frequencies except red, what is the colour of the glass plate?}
+{Since the colour of an object is determined by that frequency of light that is \textit{transmitted}, the glass plate will appear red, as this is the only frequency that is not absorbed.}
+\end{wex}
+
+
+
+\subsection{Pigment primary colours}
+The primary pigments and paints are \textbf{cyan}, \textbf{magenta} and \textbf{yellow}. When pigments or paints of these three colours are mixed together in equal amounts they produce \textbf{black}. Any other colour of paint can be made by mixing the primary pigments together in different quantities. The primary pigments are related to the primary colours of light in the following way:
+
+\begin{center}
+\scalebox{1} % Change this value to rescale the drawing.
+{
+\begin{pspicture}(0,-2.74)(8.6,2.78)
+\rput(0.77,1.755){\LARGE cyan}
+\rput(2.81,1.755){\LARGE magenta}
+\rput(5.25,1.775){\LARGE yellow}
+\rput(7.37,1.775){\LARGE black}
+\rput(1.55,1.755){\LARGE +}
+\rput(4.17,1.755){\LARGE +}
+\rput(6.39,1.775){\LARGE =}
+\rput(7.39,-0.585){\LARGE blue}
+\rput(6.41,-0.585){\LARGE =}
+\rput(7.51,-1.405){\LARGE green}
+\rput(6.39,-1.405){\LARGE =}
+\rput(7.24,-2.185){\LARGE red}
+\rput(6.39,-2.185){\LARGE =}
+\psframe[linewidth=0.04,dimen=outer](8.6,2.26)(0.0,1.26)
+\rput(4.4,2.585){PRIMARY PIGMENTS}
+\rput(0.69,-0.625){\LARGE cyan}
+\rput(2.73,-0.625){\LARGE magenta}
+\rput(1.47,-0.625){\LARGE +}
+\rput(0.69,-1.445){\LARGE cyan}
+\rput(5.17,-1.425){\LARGE yellow}
+\rput(1.47,-1.445){\LARGE +}
+\rput(2.75,-2.205){\LARGE magenta}
+\rput(5.19,-2.185){\LARGE yellow}
+\rput(4.11,-2.205){\LARGE +}
+\rput(7.62,0.805){PRIMARY}
+\rput(7.63,0.465){COLOURS}
+\rput(7.64,0.145){OF LIGHT}
+\rput(1.9,0.705){PRIMARY PIGMENTS}
+\psframe[linewidth=0.04,dimen=outer](8.6,1.12)(6.62,-2.74)
+\end{pspicture} 
+}
+\end{center}
+
+
+
+\begin{IFact}
+{Colour printers only use 4 colours of ink: cyan, magenta, yellow and black. All the other colours can be mixed from these!}
+\end{IFact}
+
+\begin{wex}{Pigments}{What colours of light are absorbed by a green pigment?}
+{If the pigment is green, then green light must be \textit{reflected}. Therefore, red and blue light are absorbed.}
+\end{wex}
+
+\begin{wex}{Primary pigments}
+{I have a ruler which reflects red light and absorbs all other colours of light. What colour does the ruler appear in white light? What primary pigments must have been mixed to make the pigment which gives the ruler its colour? }
+{\westep{What is being asked and what are we given?}
+We need to determine the colour of the ruler and the pigments which were mixed to make the colour.
+\westep{An opaque object appears the colour of the light it reflects}
+The ruler reflects red light and absorbs all other colours. Therefore the ruler appears to be red.
+\westep{What pigments need to be mixed to get red?}
+Red pigment is produced when magenta and yellow pigments are mixed. Therefore magenta and yellow pigments were mixed to make the red pigment which gives the ruler its colour.
+}
+\end{wex}
+
+\begin{wex}{Paint Colours}{If cyan light shines on a dress that contains a pigment that is capable of absorbing blue, what colour does the dress appear?}
+{
+\westep{Determine the component colours of cyan light}
+Cyan light is made up of blue and green light.
+\westep{Determine solution}
+If the dress absorbs the blue light then the green light must be reflected, so the dress will appear green!}
+\end{wex}
+Presentation on colour: SIYAVULA-PRESENTATION:http://cnx.org/content/m39505/latest/#slidesharefigure
+
+
+\section{End of Chapter Exercises}
+\begin{enumerate}
+
+\item{Calculate the wavelength of light which has a frequency of $570 \times 10^{12}$ Hz.}
+
+\item{Calculate the frequency of light which has a wavelength of 580 nm.}
+
+\item{Complete the following sentence: When white light is dispersed by a prism, light of the colour ? is refracted the most and light of colour ? is refracted the least.}
+
+\item{What are the two types of photoreceptor found in the retina of the human eye called and which type is sensitive to colours?}
+
+\item{What color do the following shirts appear to the human eye when the lights in a room are turned off and the room is completely dark?
+\begin{enumerate}
+\item{red shirt}
+\item{blue shirt}
+\item{green shirt}
+\end{enumerate}}
+\item{Two light bulbs, each of a different colour, shine on a sheet of white paper. Each light bulb can be a primary colour of light - red, green, and blue. Depending on which primary colour of light is used, the paper will appear a different color. What colour will the paper appear if the lights are:
+\begin{enumerate}
+\item{red and blue?}
+\item{red and green?}
+\item{green and blue?}
+\end{enumerate}}
+
+\item{
+Match the primary colour of light on the left to its complementary colour on the right:
+\begin{center}
+\begin{tabular}{ll}
+\textbf{Column A} & \textbf{Column B} \\ \hline
+red   \ \ \ & yellow \\
+green \ \ \ \ \ \ \ \ \ & cyan \\
+blue  \ \ \ & magenta \\
+\end{tabular}
+\end{center}
+} 
+
+\item{
+Which combination of colours of light gives magenta?
+\renewcommand{\labelenumii}{\Alph{enumii}}
+\begin{enumerate}
+\item red and yellow
+\item green and red
+\item blue and cyan
+\item blue and red
+\end{enumerate}
+}
+
+\item{
+Which combination of colours of light gives cyan?
+\renewcommand{\labelenumii}{\Alph{enumii}}
+\begin{enumerate}
+\item yellow and red
+\item green and blue
+\item blue and magenta
+\item blue and red
+\end{enumerate}
+}
+
+\item{If yellow light falls on an object whose pigment absorbs green light, what colour will the object appear?}
+
+\item{If yellow light falls on a blue pigment, what colour will it appear?}
+
+\end{enumerate}
+
+% CHILD SECTION END 
+
+
+
+% CHILD SECTION START 
+
