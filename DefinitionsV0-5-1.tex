@@ -991,3 +991,27 @@
 \vspace{\baselineskip}
 }
 
+
+
+\newcommand{\summary}[1]{
+\vspace{6\baselineskip} \par
+{\normalfont \sffamily\fontsize{22}\bfseries
+\begin{tikzpicture}[remember picture,overlay]
+    \node[anchor=west, xshift=-0.4\paperwidth]
+      {\begin{tikzpicture}[remember picture, overlay]
+        \draw[fill=siyavula-gray, color=siyavula-gray] (0,0) rectangle
+          (1.2\paperwidth,2cm);
+        \node[anchor=west,text centered ,yshift=1.cm, xshift=0.3\paperwidth]
+              {  \phantom{xxx} \color{black} Chapter \chapterlabel | Summary  };
+       \end{tikzpicture}
+      };
+   \end{tikzpicture}
+
+}
+\par
+\vspace{\baselineskip}
+\addcontentsline{toc}{section}{Summary}
+
+See the summary presentation (\raisebox{-0.2em}{\includegraphics[height=1em]{../../icons/video.ps}} Presentation: #1 at www.everythingmaths.co.za)
+
+}
