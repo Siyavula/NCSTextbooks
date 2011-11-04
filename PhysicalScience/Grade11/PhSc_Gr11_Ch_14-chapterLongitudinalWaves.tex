@@ -1,0 +1,963 @@
+\chapter{Longitudinal Waves}
+\label{p:wsl:lw11}
+
+\section{Introduction}
+In Grade 10 we studied pulses and waves. We looked at transverse waves more closely. In this chapter we look at another type of wave called \emph{longitudinal} waves. In transverse waves, the motion of the particles in the medium were perpendicular to the direction of the wave. In longitudinal waves, the particles in the medium move \emph{parallel} (in the \emph{same} direction as) to the motion of the wave. Examples of transverse waves are water waves or light waves. An example of a longitudinal wave is a sound wave.
+
+\section{What is a \emph{longitudinal wave}?}
+
+\Definition{Longitudinal waves}{ A longitudinal wave is a wave where the particles in the medium move parallel to the direction of propagation of the wave.}
+
+When we studied transverse waves we looked at two different motions: the motion of the particles of the medium and the motion of the wave itself. We will do the same for longitudinal waves.
+
+The question is how do we construct such a wave?
+
+To create a transverse wave, we flick the end of for example a rope up and down. The particles move up and down and return to their equilibrium position. The wave moves from left to right and will be displaced.
+
+\begin{center}
+\begin{pspicture}(-0.2,-2)(5,1.4)
+%\psgrid[gridcolor=lightgray]
+\rput(0,0.8){\psline[linewidth=2pt](0,0)(5,0)}
+\uput[d](2.5,0.8){flick rope up and down at one end}
+\rput(-0.2,0){\psline{<->}(0,0.6)(0,1.2)}
+\rput(0,-1){\psplot[xunit=0.0055,linewidth=2pt]{0}{900}{x sin}}
+\end{pspicture}
+\end{center}
+
+A longitudinal wave is seen best in a spring that is hung from a ceiling. Do the following investigation to find out more about longitudinal waves.
+
+\Activity{Investigation}{Investigating longitudinal waves}{
+\begin{enumerate}
+\item Take a spring and hang it from the ceiling. Pull the free end of the spring and release it. Observe what happens.
+
+\begin{center}
+\begin{pspicture}(-3,0)(1,3)
+%\psgrid[gridcolor=gray,subgriddiv=10]
+\psset{unit=0.6}
+\rput{90}(0,0){\pccoil[coilarm=0,coilwidth=0.5,coilheight=0.6](0,0)(4.9,0)}
+\rput(0.5,0){\psline{<->}(0,0)(0,0.6)}
+\rput(-0.5,2.2){
+\psbezier[linewidth=0.04](0.26595977,0.036545016)(0.2546078,-0.08423818)(0.02,0.013059396)(0.10703192,0.10029171)(0.19406384,0.187524)(0.26595977,0.07680608)(0.26217577,0.043255195)(0.25839177,0.009704308)(0.48164758,-0.060752556)(0.4475916,0.070095904)(0.41353562,0.20094436)(0.2508238,0.13719767)(0.26595977,0.036545016)(0.28109577,-0.06410764)(0.41353562,-0.013781314)(0.38704768,-0.18489084)
+\psbezier[linewidth=0.04](0.26595977,0.02647975)(0.23515671,-0.03849855)(0.10703192,-0.09094836)(0.21205442,-0.2009443)
+}
+\rput(-2,2.2){ribbon}
+\psline{-}(-1.1,2.2)(-0.4,2.2)
+\uput[r](0.5,0.3){pull on spring and release}
+\end{pspicture}
+\end{center}
+
+\item In which direction does the disturbance move?
+
+\item What happens when the disturbance reaches the ceiling?
+
+\item Tie a ribbon to the middle of the spring. Watch carefully what happens to the ribbon when the free end of the spring is pulled and released. Describe the motion of the ribbon.
+\end{enumerate}
+}
+
+From the investigation you will have noticed that the disturbance moves parallel to the direction in which the spring was pulled. The spring was pulled down and the wave moved up and down. The ribbon in the investigation represents one particle in the medium. The particles in the medium move in the same direction as the wave. The ribbon moves from rest upwards, then back to its original position, then down and then back to its original position.
+
+\begin{figure}[htbp]
+\begin{center}
+\begin{pspicture}(0,-1)(10,1)
+%\psgrid[gridcolor=gray,subgriddiv=10]
+\psline{->}(0,0.75)(1,0.75)\uput[r](1,0.75){direction of motion of wave}
+\pccoil[coilarm=0,coilwidth=0.5,coilheight=0.4](0,0)(1,0)
+\pccoil[coilarm=0,coilwidth=0.5,coilheight=0.8](1,0)(3,0)
+\pccoil[coilarm=0,coilwidth=0.5,coilheight=0.4](3,0)(4,0)
+\pccoil[coilarm=0,coilwidth=0.5,coilheight=0.8](4,0)(6,0)
+\pccoil[coilarm=0,coilwidth=0.5,coilheight=0.4](6,0)(7,0)
+\pccoil[coilarm=0,coilwidth=0.5,coilheight=0.8](7,0)(9,0)
+\pccoil[coilarm=0,coilwidth=0.5,coilheight=0.4](9,0)(10,0)
+\psline{->}(0,-0.75)(1,-0.75)\uput[r](1,-0.75){direction of motion of particles in spring}
+\end{pspicture}
+\caption{Longitudinal wave through a spring}
+\label{fig:p:wsl:lw11:lw}
+\end{center}
+\end{figure}
+
+\section{Characteristics of Longitudinal Waves}
+
+As in the case of transverse waves the following properties can be defined for longitudinal waves:
+wavelength, amplitude, period, frequency and wave speed. However instead of peaks and troughs, longitudinal waves have \textit{compressions} and \textit{rarefactions}.
+
+\Definition{Compression}{ A \textbf{compression} is a region in a longitudinal wave where the particles are closest together.}
+
+\Definition{Rarefaction}{ A \textbf{rarefaction} is a region in a longitudinal wave where the particles are furthest apart.}
+
+\subsection{Compression and Rarefaction}
+As seen in Figure~\ref{fig:p:wsl:lw11:cr}, there are regions where the medium is compressed and other regions where the medium is spread out in a longitudinal wave.
+
+The region where the medium is compressed is known as a \textbf{compression} and the region where the medium is spread out is known as a \textbf{rarefaction}.
+
+\begin{figure}[htbp]
+\begin{center}
+\begin{pspicture}(0,-1.4)(10,1.4)
+%\psgrid[gridcolor=gray,subgriddiv=10]
+\psline(0.5,0.75)(9.5,0.75)
+\psline{->}(0.5,0.75)(0.5,0.3)
+\rput(3,0){\psline{->}(0.5,0.75)(0.5,0.3)}
+\rput(6,0){\psline{->}(0.5,0.75)(0.5,0.3)}
+\rput(9,0){\psline{->}(0.5,0.75)(0.5,0.3)}
+\uput[u](5,0.75){compressions}
+
+\psline(2,-0.75)(8,-0.75)
+\rput(2,0){\psline{->}(0,-0.75)(0,-0.3)}
+\rput(5,0){\psline{->}(0,-0.75)(0,-0.3)}
+\rput(8,0){\psline{->}(0,-0.75)(0,-0.3)}
+\uput[d](5,-0.75){rarefactions}
+
+\pccoil[coilarm=0,coilwidth=0.5,coilheight=0.4](0,0)(1,0)
+\pccoil[coilarm=0,coilwidth=0.5,coilheight=0.8](1,0)(3,0)
+\pccoil[coilarm=0,coilwidth=0.5,coilheight=0.4](3,0)(4,0)
+\pccoil[coilarm=0,coilwidth=0.5,coilheight=0.8](4,0)(6,0)
+\pccoil[coilarm=0,coilwidth=0.5,coilheight=0.4](6,0)(7,0)
+\pccoil[coilarm=0,coilwidth=0.5,coilheight=0.8](7,0)(9,0)
+\pccoil[coilarm=0,coilwidth=0.5,coilheight=0.4](9,0)(10,0)
+\end{pspicture}
+\caption{Compressions and rarefactions on a longitudinal wave}
+\label{fig:p:wsl:lw11:cr}
+\end{center}
+\end{figure}
+
+\subsection{Wavelength and Amplitude}
+\Definition{Wavelength}{ The \textbf{wavelength} in a longitudinal wave is the distance between two consecutive points that are in phase.}
+
+The wavelength in a longitudinal wave refers to the distance between two consecutive compressions or between two consecutive rarefactions.
+
+\Definition{Amplitude}{ The \textbf{amplitude} is the maximum displacement from a position of rest.}
+
+\begin{figure}[htbp]
+\begin{center}
+\begin{pspicture}(0,-1.4)(10,1.4)
+%\psgrid[gridcolor=gray,subgriddiv=10]
+\multirput(0,0)(3,0){3}{\psline{<->}(0,0.75)(3,0.75)}
+\multirput(0,0)(3,0){4}{\psline{->}(0,0.75)(0,0.3)}
+\multirput(1.5,0)(3,0){3}{\uput[u](0,0.75){$\lambda$}}
+\multirput(1,0)(3,0){3}{\psline{<->}(0,-0.75)(3,-0.75)}
+\multirput(1,0)(3,0){4}{\psline{->}(0,-0.75)(0,-0.3)}
+\multirput(2.5,0)(3,0){3}{\uput[d](0,-0.75){$\lambda$}}
+\multirput(0,0)(3,0){3}{
+\pccoil[coilarm=0,coilwidth=0.5,coilheight=0.4](0,0)(1,0)
+\pccoil[coilarm=0,coilwidth=0.5,coilheight=0.8](1,0)(3,0)}
+\pccoil[coilarm=0,coilwidth=0.5,coilheight=0.4](9,0)(10,0)
+\end{pspicture}
+\caption{Wavelength on a longitudinal wave}
+\label{fig:p:wsl:lw11:w}
+\end{center}
+\end{figure}
+
+The amplitude is the distance from the equilibrium position of the medium to a compression or a rarefaction.
+
+\subsection{Period and Frequency}
+
+\Definition{Period}{ The \textbf{period} of a wave is the time taken by the wave to move one wavelength.}
+
+\Definition{Frequency}{ The \textbf{frequency} of a wave is the number of wavelengths per second. }
+
+The \emph{period} of a longitudinal wave is the time taken by the wave to move one wavelength. As for transverse waves, the symbol $T$ is used to represent period and period is measured in seconds (s).
+
+The \textit{frequency} $f$ of a wave is the number of wavelengths per second. Using this definition and the fact that the period is the time taken for 1 wavelength, we can define:
+\begin{equation*}
+f=\frac{1}{T}
+\end{equation*}
+or alternately,
+\begin{equation*}
+T=\frac{1}{f}.
+\end{equation*}
+
+\subsection{Speed of a Longitudinal Wave}
+The speed of a longitudinal wave is defined as:
+
+\nequ{v=f\cdot \lambda}
+
+where \\
+$v$ = speed in m.s$^{-1}$\\
+$f$ = frequency in Hz\\
+$\lambda$ = wavelength in m
+
+\begin{wex}
+{Speed of longitudinal waves}{The musical note �A� is a sound wave. The note has a frequency of 440 Hz and a wavelength of 0,784~m. Calculate the speed of the musical note.}{
+\westep{Determine what is given and what is required}
+\begin{eqnarray*}
+f &=& 440 \ \rm{Hz} \\
+\lambda &=& 0,784\ \rm{m}
+\end{eqnarray*}
+We need to calculate the speed of the musical note ``A''.
+
+\westep{Determine how to approach based on what is given}
+We are given the frequency and wavelength of the note. We can therefore use:
+\nequ{v=f\cdot \lambda}
+
+\westep{Calculate the wave speed}
+\begin{eqnarray*}
+v&=&f\cdot \lambda\\
+&=&(440\;\rm{Hz})(0,784\emm)\\
+&=&345\ems
+\end{eqnarray*}
+
+\westep{Write the final answer}
+The musical note ``A'' travels at 345~\ms.
+}
+\end{wex}
+
+\begin{wex}
+{Speed of longitudinal waves}{A longitudinal wave travels into a medium in which its speed increases.
+How does this affect its... (write only \emph{increases, decreases, stays the same}).
+\begin{enumerate}
+\item period?
+\item wavelength?
+\end{enumerate}
+}{
+\westep{Determine what is required}
+We need to determine how the period and wavelength of a longitudinal wave change when its speed increases.
+
+\westep{Determine how to approach based on what is given}
+We need to find the link between period, wavelength and wave speed.
+
+\westep{Discuss how the period changes}
+We know that the frequency of a longitudinal wave is dependent on the frequency of the vibrations that lead to the creation of the longitudinal wave. Therefore, the frequency is always unchanged, irrespective of any changes in speed. Since the period is the inverse of the frequency, the period remains the same.
+
+\westep{Discuss how the wavelength changes}
+The frequency remains unchanged. According to the wave equation
+\begin{equation*}
+v = f\lambda
+\end{equation*}
+if $f$ remains the same and $v$ increases, then $\lambda$, the wavelength, must also increase.
+}
+\end{wex}
+
+%\Advanced{Dispersion}{Dispersion is a property of waves where the speed of the wave through a medium depends
+%on the frequency. So if two waves enter the same dispersive medium and have different frequencies they will
+%have different speeds in that medium even if they both entered with the same speed.}
+
+\section{Graphs of Particle Position, Displacement, Velocity and Acceleration}
+
+When a longitudinal wave moves through the medium, the particles in the medium \textbf{only} move back and forth relative to the direction of motion of the wave. We can see this in Figure~\ref{p:wsl:lw11:motionparticle} which shows the motion of the particles in a medium as a longitudinal wave moves through the medium.
+
+\begin{figure}[htbp]
+\begin{center}
+\begin{pspicture}(-1,-2)(10,10)
+%\psgrid[gridcolor=lightgray,subgriddiv=10]
+\psline[linestyle=dashed](0,-2)(0,10)
+\rput(0,10){\uput[l](-1,0){$t=0$ s}\psline(-1,0)(10,0)\multirput(0,0)(1,0){11}{\psdot(0,0)}}
+\def\one{\psdot(0,0)\uput[u](0,0){0}}
+\def\two{\psdot(1,0)\uput[u](1,0){1}}
+\def\three{\psdot(2,0)\uput[u](2,0){2}}
+\def\four{\psdot(3,0)\uput[u](3,0){3}}
+\def\five{\psdot(4,0)\uput[u](4,0){4}}
+\def\six{\psdot(5,0)\uput[u](5,0){5}}
+\def\seven{\psdot(6,0)\uput[u](6,0){6}}
+\def\eight{\psdot(7,0)\uput[u](7,0){7}}
+\def\nine{\psdot(8,0)\uput[u](8,0){8}}
+\def\ten{\psdot(9,0)\uput[u](9,0){9}}
+
+\multido{\n=0+1}{11}{\uput[u](\n,10){\n}}
+
+\rput(0,9){\uput[l](-1,0){$t=1$ s}
+\psline(-1,0)(10,0)
+\multirput(1,0)(1,0){10}{\psdot(0,0)}
+\rput(0.5,0){\one}
+}
+
+\rput(0,8){\uput[l](-1,0){$t=2$ s}
+\psline(-1,0)(10,0)
+\multirput(2,0)(1,0){9}{\psdot(0,0)}
+\rput(0.8,0){\one}
+\rput(0.5,0){\two}
+}
+
+\rput(0,7){\uput[l](-1,0){$t=3$ s}
+\psline(-1,0)(10,0)
+\multirput(3,0)(1,0){8}{\psdot(0,0)}
+\rput(0.9,0){\one}
+\rput(0.8,0){\two}
+\rput(0.5,0){\three}
+}
+
+\rput(0,6){\uput[l](-1,0){$t=4$ s}
+\psline(-1,0)(10,0)
+\multirput(4,0)(1,0){7}{\psdot(0,0)}
+\rput(0.8,0){\one}
+\rput(0.9,0){\two}
+\rput(0.8,0){\three}
+\rput(0.5,0){\four}
+}
+
+\rput(0,5){\uput[l](-1,0){$t=5$ s}
+\psline(-1,0)(10,0)
+\multirput(5,0)(1,0){6}{\psdot(0,0)}
+\rput(0.5,0){\one}
+\rput(0.8,0){\two}
+\rput(0.9,0){\three}
+\rput(0.8,0){\four}
+\rput(0.5,0){\five}
+}
+
+\rput(0,4){\uput[l](-1,0){$t=6$ s}
+\psline(-1,0)(10,0)
+\multirput(6,0)(1,0){5}{\psdot(0,0)}
+\rput(0.0,0){\one}
+\rput(0.5,0){\two}
+\rput(0.8,0){\three}
+\rput(0.9,0){\four}
+\rput(0.8,0){\five}
+\rput(0.5,0){\six}
+}
+
+\rput(0,3){\uput[l](-1,0){$t=7$ s}
+\psline(-1,0)(10,0)
+\multirput(7,0)(1,0){4}{\psdot(0,0)}
+\rput(-0.5,0){\one}
+\rput(0.0,0){\two}
+\rput(0.5,0){\three}
+\rput(0.8,0){\four}
+\rput(0.9,0){\five}
+\rput(0.8,0){\six}
+\rput(0.5,0){\seven}
+}
+
+\rput(0,2){\uput[l](-1,0){$t=8$ s}
+\psline(-1,0)(10,0)
+\multirput(8,0)(1,0){3}{\psdot(0,0)}
+\rput(-0.8,0){\one}
+\rput(-0.5,0){\two}
+\rput(0.0,0){\three}
+\rput(0.5,0){\four}
+\rput(0.8,0){\five}
+\rput(0.9,0){\six}
+\rput(0.8,0){\seven}
+\rput(0.5,0){\eight}
+}
+
+\rput(0,1){\uput[l](-1,0){$t=9$ s}
+\psline(-1,0)(10,0)
+\multirput(9,0)(1,0){2}{\psdot(0,0)}
+\rput(-0.9,0){\one}
+\rput(-0.8,0){\two}
+\rput(-0.5,0){\three}
+\rput(0.0,0){\four}
+\rput(0.5,0){\five}
+\rput(0.8,0){\six}
+\rput(0.9,0){\seven}
+\rput(0.8,0){\eight}
+\rput(0.5,0){\nine}
+}
+
+\rput(0,0){\uput[l](-1,0){$t=10$ s}
+\psline(-1,0)(10,0)
+\multirput(10,0)(1,0){1}{\psdot(0,0)}
+\rput(-0.8,0){\one}
+\rput(-0.9,0){\two}
+\rput(-0.8,0){\three}
+\rput(-0.5,0){\four}
+\rput(0.0,0){\five}
+\rput(0.5,0){\six}
+\rput(0.8,0){\seven}
+\rput(0.9,0){\eight}
+\rput(0.8,0){\nine}
+\rput(0.5,0){\ten}
+}
+
+\rput(0,-1){\uput[l](-1,0){$t=11$ s}
+\psline(-1,0)(10,0)
+\rput(-0.5,0){\one}
+\rput(-0.8,0){\two}
+\rput(-0.9,0){\three}
+\rput(-0.8,0){\four}
+\rput(-0.5,0){\five}
+\rput(0.0,0){\six}
+\rput(0.5,0){\seven}
+\rput(0.8,0){\eight}
+\rput(0.9,0){\nine}
+\rput(0.8,0){\ten}
+}
+
+\rput(0,-2){\uput[l](-1,0){$t=12$ s}
+\psline(-1,0)(10,0)
+\rput(0.0,0){\one}
+\rput(-0.5,0){\two}
+\rput(-0.8,0){\three}
+\rput(-0.9,0){\four}
+\rput(-0.8,0){\five}
+\rput(-0.5,0){\six}
+\rput(0.0,0){\seven}
+\rput(0.5,0){\eight}
+\rput(0.8,0){\nine}
+\rput(0.9,0){\ten}
+}
+\end{pspicture}
+\caption{Positions of particles in a medium at different times as a longitudinal wave moves through it. The wave moves to the right. The dashed line shows the equilibrium position of particle 0.}
+\label{p:wsl:lw11:motionparticle}
+\end{center}
+\end{figure}
+
+\Tip{A particle in the medium \textbf{only} moves back and forth when a longitudinal wave moves through the medium.}
+
+%As in Chapter~\ref{p:wsl:tw10},
+We can draw a graph of the particle's change in position from its starting point as a function of time. For the wave shown in Figure~\ref{p:wsl:lw11:motionparticle}, we can draw the graph shown in Figure~\ref{p:wsl:lw11:motionparticlepositiongraph} for particle 0. The graph for each of the other particles will be identical.
+
+\begin{figure}[h!]
+\begin{center}
+\begin{pspicture}(-5,-1)(14,2)
+\psset{xunit=0.5}
+\psaxes[labels=none,dx=1,dy=1,Dx=1]{<->}(0,0)(0,-1)(13,1)
+\psplot[xunit=0.033333,plotstyle=curve]{0}{360}{x sin}
+\psdots(0,0)
+\psdots(1,0.5)
+\psdots(2,0.866)
+\psdots(3,1)
+\psdots(4,0.866)
+\psdots(5,0.5)
+\psdots(6,0)
+\psdots(7,-0.5)
+\psdots(8,-0.866)
+\psdots(9,-1)
+\psdots(10,-0.866)
+\psdots(11,-0.5)
+\psdots(12,0)
+\uput[r](13,0){$t$}
+\rput[c](0,1.3){$x$}
+\rput[c](1.0,-0.3){1}
+\rput[c](2,-0.3){2}
+\rput[c](3,-0.3){3}
+\rput[c](4,-0.3){4}
+\rput[c](5,-0.3){5}
+\rput[c](6,-0.3){6}
+\rput[c](7,-0.3){7}
+\rput[c](8,-0.3){8}
+\rput[c](9,-0.3){9}
+\rput[c](10,-0.3){10}
+\rput[c](11,-0.3){11}
+\rput[c](12,-0.3){12}
+\end{pspicture}
+\caption{Graph of particle displacement as a function of time for the longitudinal wave shown in Figure~\ref{p:wsl:lw11:motionparticle}.}
+\label{p:wsl:lw11:motionparticlepositiongraph}
+\end{center}
+\end{figure}
+
+The graph of the particle's velocity as a function of time is obtained by taking the gradient of the position vs. time graph. The graph of velocity vs. time for the position vs. time graph shown in Figure~\ref{p:wsl:lw11:motionparticlepositiongraph} is shown is Figure~\ref{p:wsl:lw11:motionparticlevelocitygraph}.
+
+\begin{figure}[h!]
+\begin{center}
+\begin{pspicture}(-5,-1)(14,2)
+\psset{xunit=0.5}
+\psaxes[labels=none,dx=1,dy=1,Dx=1]{<->}(0,0)(0,-1)(13,1)
+\psplot[xunit=0.033333,plotstyle=curve]{0}{360}{x cos}
+\psdots(0,1)(1,0.866)(2,0.5)(3,0)(4,-0.5)(5,-0.866)(6,-1)(7,-0.866)(8,-0.5)(9,0)(10,0.5)(11,0.866)(12,1)
+\uput[r](13,0){$t$}
+\rput[c](0,1.3){$v$}
+\rput[c](1.0,-0.3){1}
+\rput[c](2,-0.3){2}
+\rput[c](3,-0.3){3}
+\rput[c](4,-0.3){4}
+\rput[c](5,-0.3){5}
+\rput[c](6,-0.3){6}
+\rput[c](7,-0.3){7}
+\rput[c](8,-0.3){8}
+\rput[c](9,-0.3){9}
+\rput[c](10,-0.3){10}
+\rput[c](11,-0.3){11}
+\rput[c](12,-0.3){12}
+\end{pspicture}
+\caption{Graph of velocity as a function of time.}
+\label{p:wsl:lw11:motionparticlevelocitygraph}
+\end{center}
+\end{figure}
+
+The graph of the particle's acceleration as a function of time is obtained by taking the gradient of the velocity vs. time graph. The graph of acceleration vs. time for the position vs. time graph shown in Figure~\ref{p:wsl:lw11:motionparticlepositiongraph} is shown is Figure~\ref{p:wsl:lw11:motionparticleaccelerationgraph}.
+
+\begin{figure}[h!]
+\begin{center}
+\begin{pspicture}(-5,-1)(14,2)
+\psset{xunit=0.5}
+\psaxes[labels=none,dx=1,dy=1,Dx=1]{<->}(0,0)(0,-1)(13,1)
+\psplot[xunit=0.033333,plotstyle=curve]{0}{360}{x sin neg}
+\psdots(0,-0)
+\psdots(1,-0.5)
+\psdots(2,-0.866)
+\psdots(3,-1)
+\psdots(4,-0.866)
+\psdots(5,-0.5)
+\psdots(6,0)
+\psdots(7,0.5)
+\psdots(8,0.866)
+\psdots(9,1)
+\psdots(10,0.866)
+\psdots(11,0.5)
+\psdots(12,0)
+\uput[r](13,0){$t$}
+\rput[c](0,1.3){$a$}
+\rput[c](1.0,-0.3){1}
+\rput[c](2,-0.3){2}
+\rput[c](3,-0.3){3}
+\rput[c](4,-0.3){4}
+\rput[c](5,-0.3){5}
+\rput[c](6,-0.3){6}
+\rput[c](7,-0.3){7}
+\rput[c](8,-0.3){8}
+\rput[c](9,-0.3){9}
+\rput[c](10,-0.3){10}
+\rput[c](11,-0.3){11}
+\rput[c](12,-0.3){12}
+\end{pspicture}
+\caption{Graph of acceleration as a function of time.}
+\label{p:wsl:lw11:motionparticleaccelerationgraph}
+\end{center}
+\end{figure}
+
+\section{Sound Waves}
+Sound waves coming from a tuning fork are caused by the vibrations of the tuning fork which push against the air particles in front of it. As the air particles are pushed together a compression is formed. The particles behind the compression move further apart causing a rarefaction. As the particles continue to push against each other,
+the sound wave travels through the air. Due to this motion of the particles, there is a constant variation in the pressure in the air. Sound waves are therefore pressure waves. This means that in media where the particles are closer together, sound waves will travel quicker.
+
+Sound waves travel faster through liquids, like water, than through the air because water is denser than air (the particles are closer together). Sound waves travel faster in solids than in liquids.
+
+\begin{figure}[h!]
+\begin{center}
+\scalebox{1} % Change this value to rescale the drawing.
+{
+\begin{pspicture}(0,-1.3159375)(10.862187,1.3159375)
+\psline[linewidth=0.04cm](1.5942917,-0.29788056)(1.8169739,-0.30129474)
+\psline[linewidth=0.04cm](1.8169739,-0.30129474)(1.8345535,0.44497925)
+\psline[linewidth=0.04cm](1.9030713,0.44392854)(1.8835384,-0.3852649)
+\psline[linewidth=0.04cm](1.8835384,-0.3852649)(1.7636325,-0.38342634)
+\psline[linewidth=0.04cm](1.5771624,-0.29761782)(1.5947421,0.44865623)
+\psline[linewidth=0.04cm](1.5262243,0.4497069)(1.5066916,-0.3794867)
+\psline[linewidth=0.04cm](1.6437267,-0.38158786)(1.5238208,-0.37974924)
+\psline[linewidth=0.04cm](1.6269228,-0.36750528)(1.6171566,-0.7821023)
+\psline[linewidth=0.04cm](1.6171566,-0.7821023)(1.7541916,-0.7842031)
+\psline[linewidth=0.04cm](1.7541916,-0.7842031)(1.7636325,-0.38342634)
+\psline[linewidth=0.04cm](1.8345535,0.44497925)(1.9030713,0.44392854)
+\psline[linewidth=0.04cm](1.5947421,0.44865623)(1.5262243,0.4497069)
+\psdots[dotsize=0.04](2.0484376,0.2296875)
+\psdots[dotsize=0.04](2.1284375,0.2496875)
+\psdots[dotsize=0.04](2.0884376,0.2096875)
+\psdots[dotsize=0.04](2.0084374,0.1296875)
+\psdots[dotsize=0.04](2.1084375,0.0896875)
+\psdots[dotsize=0.04](2.1684375,0.1696875)
+\psdots[dotsize=0.04](2.1284375,0.1696875)
+\psdots[dotsize=0.04](2.0684376,0.1296875)
+\psdots[dotsize=0.04](2.0684376,-0.0103125)
+\psdots[dotsize=0.04](2.1484375,-0.0303125)
+\psdots[dotsize=0.04](2.1684375,0.1296875)
+\psdots[dotsize=0.04](2.2684374,0.1896875)
+\psdots[dotsize=0.04](2.2884376,0.1096875)
+\psdots[dotsize=0.04](2.2884376,0.0096875)
+\psdots[dotsize=0.04](2.2484374,-0.0103125)
+\psdots[dotsize=0.04](2.1884375,-0.1103125)
+\psdots[dotsize=0.04](2.0684376,-0.1503125)
+\psdots[dotsize=0.04](1.9684376,-0.0903125)
+\psdots[dotsize=0.04](2.0084374,-0.0103125)
+\psdots[dotsize=0.04](2.1684375,-0.1103125)
+\psdots[dotsize=0.04](2.2284374,-0.1503125)
+\psdots[dotsize=0.04](2.2284374,0.0296875)
+\psdots[dotsize=0.04](2.1884375,0.0896875)
+\psdots[dotsize=0.04](2.2284374,0.2296875)
+\psdots[dotsize=0.04](2.3084376,0.1696875)
+\psdots[dotsize=0.04](2.3084376,-0.0703125)
+\psdots[dotsize=0.04](2.2684374,-0.1303125)
+\psdots[dotsize=0.04](2.1884375,-0.2103125)
+\psdots[dotsize=0.04](2.1084375,-0.2103125)
+\psdots[dotsize=0.04](2.0484376,-0.1703125)
+\psdots[dotsize=0.04](1.9884375,-0.1903125)
+\psdots[dotsize=0.04](2.0084374,-0.2103125)
+\psdots[dotsize=0.04](2.0884376,-0.2303125)
+\psdots[dotsize=0.04](2.1884375,-0.2903125)
+\psdots[dotsize=0.04](2.2684374,-0.2303125)
+\psdots[dotsize=0.04](2.3084376,-0.1303125)
+\psdots[dotsize=0.04](2.3084376,0.0096875)
+\psdots[dotsize=0.04](2.0484376,0.0496875)
+\psdots[dotsize=0.04](2.0884376,-0.0903125)
+\psdots[dotsize=0.04](2.0284376,-0.0703125)
+\psdots[dotsize=0.04](2.2284374,0.1296875)
+\psdots[dotsize=0.04](2.0084374,-0.2703125)
+\psdots[dotsize=0.04](2.2684374,0.2496875)
+\psdots[dotsize=0.04](2.3484375,0.2496875)
+\psdots[dotsize=0.04](2.3484375,0.1696875)
+\psdots[dotsize=0.04](2.4284375,0.2296875)
+\psdots[dotsize=0.04](2.4084375,0.2296875)
+\psdots[dotsize=0.04](2.4484375,0.0496875)
+\psdots[dotsize=0.04](2.4284375,0.1496875)
+\psdots[dotsize=0.04](2.3484375,0.1096875)
+\psdots[dotsize=0.04](2.3684375,0.0096875)
+\psdots[dotsize=0.04](2.3684375,0.0096875)
+\psdots[dotsize=0.04](2.3084376,0.0496875)
+\psdots[dotsize=0.04](2.4484375,-0.0903125)
+\psdots[dotsize=0.04](2.3684375,-0.1303125)
+\psdots[dotsize=0.04](2.3284376,-0.1103125)
+\psdots[dotsize=0.04](2.4084375,-0.0703125)
+\psdots[dotsize=0.04](2.4684374,-0.0303125)
+\psdots[dotsize=0.04](2.4684374,-0.1503125)
+\psdots[dotsize=0.04](2.4284375,-0.1903125)
+\psdots[dotsize=0.04](2.3484375,-0.2303125)
+\psdots[dotsize=0.04](2.3084376,-0.2503125)
+\psdots[dotsize=0.04](2.3884375,-0.2903125)
+\psdots[dotsize=0.04](2.4884374,-0.2503125)
+\psdots[dotsize=0.04](2.2284374,-0.0503125)
+\psdots[dotsize=0.04](2.1084375,-0.2903125)
+\psdots[dotsize=0.04](2.0084374,0.0696875)
+\psdots[dotsize=0.04](2.0084374,0.2296875)
+\psdots[dotsize=0.04](2.0484376,0.2696875)
+\psdots[dotsize=0.04](2.4484375,0.1496875)
+\psdots[dotsize=0.04](2.4684374,0.2296875)
+\psdots[dotsize=0.04](2.5484376,0.2296875)
+\psdots[dotsize=0.04](2.7284374,0.1896875)
+\psdots[dotsize=0.04](2.7684374,-0.0703125)
+\psdots[dotsize=0.04](2.5884376,-0.0103125)
+\psdots[dotsize=0.04](2.6684375,0.1096875)
+\psdots[dotsize=0.04](2.8684375,0.0296875)
+\psdots[dotsize=0.04](3.3084376,-0.0903125)
+\psdots[dotsize=0.04](3.1484375,0.0896875)
+\psdots[dotsize=0.04](2.9884374,0.1296875)
+\psdots[dotsize=0.04](3.0084374,0.1896875)
+\psdots[dotsize=0.04](3.2084374,0.1696875)
+\psdots[dotsize=0.04](2.8084376,0.2696875)
+\psdots[dotsize=0.04](3.0684376,-0.0703125)
+\psdots[dotsize=0.04](2.6284375,-0.2303125)
+\psdots[dotsize=0.04](2.7884376,-0.2703125)
+\psdots[dotsize=0.04](3.0284376,-0.2503125)
+\psdots[dotsize=0.04](2.9084375,-0.0903125)
+\psdots[dotsize=0.04](3.2284374,-0.2503125)
+\psdots[dotsize=0.04](3.2684374,0.0296875)
+\psdots[dotsize=0.04](3.1284375,0.2496875)
+\psdots[dotsize=0.04](3.3284376,0.2496875)
+\psdots[dotsize=0.04](3.4884374,0.2096875)
+\psdots[dotsize=0.04](3.6884375,0.2496875)
+\psdots[dotsize=0.04](3.6484375,0.0696875)
+\psdots[dotsize=0.04](3.6084375,-0.1103125)
+\psdots[dotsize=0.04](3.3484375,0.0496875)
+\psdots[dotsize=0.04](3.4884374,0.0696875)
+\psdots[dotsize=0.04](3.4484375,-0.1703125)
+\psdots[dotsize=0.04](3.3284376,-0.2303125)
+\psdots[dotsize=0.04](3.5484376,-0.2703125)
+\psdots[dotsize=0.04](3.6684375,-0.2703125)
+\psdots[dotsize=0.04](3.7884376,0.2496875)
+\psdots[dotsize=0.04](3.8684375,0.2696875)
+\psdots[dotsize=0.04](3.8284376,0.2296875)
+\psdots[dotsize=0.04](3.7484374,0.1496875)
+\psdots[dotsize=0.04](3.8484375,0.1096875)
+\psdots[dotsize=0.04](3.9084375,0.1896875)
+\psdots[dotsize=0.04](3.8684375,0.1896875)
+\psdots[dotsize=0.04](3.8084376,0.1496875)
+\psdots[dotsize=0.04](3.8084376,0.0096875)
+\psdots[dotsize=0.04](3.8884375,-0.0103125)
+\psdots[dotsize=0.04](3.9084375,0.1496875)
+\psdots[dotsize=0.04](4.0084376,0.2096875)
+\psdots[dotsize=0.04](4.0284376,0.1296875)
+\psdots[dotsize=0.04](4.0284376,0.0296875)
+\psdots[dotsize=0.04](3.9884374,0.0096875)
+\psdots[dotsize=0.04](3.9284375,-0.0903125)
+\psdots[dotsize=0.04](3.8084376,-0.1303125)
+\psdots[dotsize=0.04](3.7084374,-0.0703125)
+\psdots[dotsize=0.04](3.7484374,0.0096875)
+\psdots[dotsize=0.04](3.9084375,-0.0903125)
+\psdots[dotsize=0.04](3.9684374,-0.1303125)
+\psdots[dotsize=0.04](3.9684374,0.0496875)
+\psdots[dotsize=0.04](3.9284375,0.1096875)
+\psdots[dotsize=0.04](3.9684374,0.2496875)
+\psdots[dotsize=0.04](4.0484376,0.1896875)
+\psdots[dotsize=0.04](4.0484376,-0.0503125)
+\psdots[dotsize=0.04](4.0084376,-0.1103125)
+\psdots[dotsize=0.04](3.9284375,-0.1903125)
+\psdots[dotsize=0.04](3.8484375,-0.1903125)
+\psdots[dotsize=0.04](3.7884376,-0.1503125)
+\psdots[dotsize=0.04](3.7284374,-0.1703125)
+\psdots[dotsize=0.04](3.7484374,-0.1903125)
+\psdots[dotsize=0.04](3.8284376,-0.2103125)
+\psdots[dotsize=0.04](3.9284375,-0.2703125)
+\psdots[dotsize=0.04](4.0084376,-0.2103125)
+\psdots[dotsize=0.04](4.0484376,-0.1103125)
+\psdots[dotsize=0.04](4.0484376,0.0296875)
+\psdots[dotsize=0.04](3.7884376,0.0696875)
+\psdots[dotsize=0.04](3.8284376,-0.0703125)
+\psdots[dotsize=0.04](3.7684374,-0.0503125)
+\psdots[dotsize=0.04](3.9684374,0.1496875)
+\psdots[dotsize=0.04](3.7484374,-0.2503125)
+\psdots[dotsize=0.04](4.0084376,0.2696875)
+\psdots[dotsize=0.04](4.0884376,0.2696875)
+\psdots[dotsize=0.04](4.0884376,0.1896875)
+\psdots[dotsize=0.04](4.1684375,0.2496875)
+\psdots[dotsize=0.04](4.1484375,0.2496875)
+\psdots[dotsize=0.04](4.1884375,0.0696875)
+\psdots[dotsize=0.04](4.1684375,0.1696875)
+\psdots[dotsize=0.04](4.0884376,0.1296875)
+\psdots[dotsize=0.04](4.1084375,0.0296875)
+\psdots[dotsize=0.04](4.1084375,0.0296875)
+\psdots[dotsize=0.04](4.0484376,0.0696875)
+\psdots[dotsize=0.04](4.1884375,-0.0703125)
+\psdots[dotsize=0.04](4.1084375,-0.1103125)
+\psdots[dotsize=0.04](4.0684376,-0.0903125)
+\psdots[dotsize=0.04](4.1484375,-0.0503125)
+\psdots[dotsize=0.04](4.2084374,-0.0103125)
+\psdots[dotsize=0.04](4.2084374,-0.1303125)
+\psdots[dotsize=0.04](4.1684375,-0.1703125)
+\psdots[dotsize=0.04](4.0884376,-0.2103125)
+\psdots[dotsize=0.04](4.0484376,-0.2303125)
+\psdots[dotsize=0.04](4.1284375,-0.2703125)
+\psdots[dotsize=0.04](4.2284374,-0.2303125)
+\psdots[dotsize=0.04](3.9684374,-0.0303125)
+\psdots[dotsize=0.04](3.8484375,-0.2703125)
+\psdots[dotsize=0.04](3.7484374,0.0896875)
+\psdots[dotsize=0.04](3.7484374,0.2496875)
+\psdots[dotsize=0.04](3.7884376,0.2896875)
+\psdots[dotsize=0.04](4.1884375,0.1696875)
+\psdots[dotsize=0.04](4.2084374,0.2496875)
+\psdots[dotsize=0.04](4.2884374,0.2496875)
+\psdots[dotsize=0.04](4.4684377,0.2096875)
+\psdots[dotsize=0.04](4.5084376,-0.0503125)
+\psdots[dotsize=0.04](4.3284373,0.0096875)
+\psdots[dotsize=0.04](4.4084377,0.1296875)
+\psdots[dotsize=0.04](4.6084375,0.0496875)
+\psdots[dotsize=0.04](5.0484376,-0.0703125)
+\psdots[dotsize=0.04](4.8884373,0.1096875)
+\psdots[dotsize=0.04](4.7284374,0.1496875)
+\psdots[dotsize=0.04](4.7484374,0.2096875)
+\psdots[dotsize=0.04](4.9484377,0.1896875)
+\psdots[dotsize=0.04](4.5484376,0.2896875)
+\psdots[dotsize=0.04](4.8084373,-0.0503125)
+\psdots[dotsize=0.04](4.3684373,-0.2103125)
+\psdots[dotsize=0.04](4.5284376,-0.2503125)
+\psdots[dotsize=0.04](4.7684374,-0.2303125)
+\psdots[dotsize=0.04](4.6484375,-0.0703125)
+\psdots[dotsize=0.04](4.9684377,-0.2303125)
+\psdots[dotsize=0.04](5.0084376,0.0496875)
+\psdots[dotsize=0.04](4.8684373,0.2696875)
+\psdots[dotsize=0.04](5.0684376,0.2696875)
+\psdots[dotsize=0.04](5.2284374,0.2296875)
+\psdots[dotsize=0.04](5.4284377,0.2696875)
+\psdots[dotsize=0.04](5.3884373,0.0896875)
+\psdots[dotsize=0.04](5.3484373,-0.0903125)
+\psdots[dotsize=0.04](5.0884376,0.0696875)
+\psdots[dotsize=0.04](5.2284374,0.0896875)
+\psdots[dotsize=0.04](5.1884375,-0.1503125)
+\psdots[dotsize=0.04](5.0684376,-0.2103125)
+\psdots[dotsize=0.04](5.2884374,-0.2503125)
+\psdots[dotsize=0.04](5.4084377,-0.2503125)
+\psdots[dotsize=0.04](5.5084376,0.2296875)
+\psdots[dotsize=0.04](5.5884376,0.2496875)
+\psdots[dotsize=0.04](5.5484376,0.2096875)
+\psdots[dotsize=0.04](5.4684377,0.1296875)
+\psdots[dotsize=0.04](5.5684376,0.0896875)
+\psdots[dotsize=0.04](5.6284375,0.1696875)
+\psdots[dotsize=0.04](5.5884376,0.1696875)
+\psdots[dotsize=0.04](5.5284376,0.1296875)
+\psdots[dotsize=0.04](5.5284376,-0.0103125)
+\psdots[dotsize=0.04](5.6084375,-0.0303125)
+\psdots[dotsize=0.04](5.6284375,0.1296875)
+\psdots[dotsize=0.04](5.7284374,0.1896875)
+\psdots[dotsize=0.04](5.7484374,0.1096875)
+\psdots[dotsize=0.04](5.7484374,0.0096875)
+\psdots[dotsize=0.04](5.7084374,-0.0103125)
+\psdots[dotsize=0.04](5.6484375,-0.1103125)
+\psdots[dotsize=0.04](5.5284376,-0.1503125)
+\psdots[dotsize=0.04](5.4284377,-0.0903125)
+\psdots[dotsize=0.04](5.4684377,-0.0103125)
+\psdots[dotsize=0.04](5.6284375,-0.1103125)
+\psdots[dotsize=0.04](5.6884375,-0.1503125)
+\psdots[dotsize=0.04](5.6884375,0.0296875)
+\psdots[dotsize=0.04](5.6484375,0.0896875)
+\psdots[dotsize=0.04](5.6884375,0.2296875)
+\psdots[dotsize=0.04](5.7684374,0.1696875)
+\psdots[dotsize=0.04](5.7684374,-0.0703125)
+\psdots[dotsize=0.04](5.7284374,-0.1303125)
+\psdots[dotsize=0.04](5.6484375,-0.2103125)
+\psdots[dotsize=0.04](5.5684376,-0.2103125)
+\psdots[dotsize=0.04](5.5084376,-0.1703125)
+\psdots[dotsize=0.04](5.4484377,-0.1903125)
+\psdots[dotsize=0.04](5.4684377,-0.2103125)
+\psdots[dotsize=0.04](5.5484376,-0.2303125)
+\psdots[dotsize=0.04](5.6484375,-0.2903125)
+\psdots[dotsize=0.04](5.7284374,-0.2303125)
+\psdots[dotsize=0.04](5.7684374,-0.1303125)
+\psdots[dotsize=0.04](5.7684374,0.0096875)
+\psdots[dotsize=0.04](5.5084376,0.0496875)
+\psdots[dotsize=0.04](5.5484376,-0.0903125)
+\psdots[dotsize=0.04](5.4884377,-0.0703125)
+\psdots[dotsize=0.04](5.6884375,0.1296875)
+\psdots[dotsize=0.04](5.4684377,-0.2703125)
+\psdots[dotsize=0.04](5.7284374,0.2496875)
+\psdots[dotsize=0.04](5.8084373,0.2496875)
+\psdots[dotsize=0.04](5.8084373,0.1696875)
+\psdots[dotsize=0.04](5.8884373,0.2296875)
+\psdots[dotsize=0.04](5.8684373,0.2296875)
+\psdots[dotsize=0.04](5.9084377,0.0496875)
+\psdots[dotsize=0.04](5.8884373,0.1496875)
+\psdots[dotsize=0.04](5.8084373,0.1096875)
+\psdots[dotsize=0.04](5.8284373,0.0096875)
+\psdots[dotsize=0.04](5.8284373,0.0096875)
+\psdots[dotsize=0.04](5.7684374,0.0496875)
+\psdots[dotsize=0.04](5.9084377,-0.0903125)
+\psdots[dotsize=0.04](5.8284373,-0.1303125)
+\psdots[dotsize=0.04](5.7884374,-0.1103125)
+\psdots[dotsize=0.04](5.8684373,-0.0703125)
+\psdots[dotsize=0.04](5.9284377,-0.0303125)
+\psdots[dotsize=0.04](5.9284377,-0.1503125)
+\psdots[dotsize=0.04](5.8884373,-0.1903125)
+\psdots[dotsize=0.04](5.8084373,-0.2303125)
+\psdots[dotsize=0.04](5.7684374,-0.2503125)
+\psdots[dotsize=0.04](5.8484373,-0.2903125)
+\psdots[dotsize=0.04](5.9484377,-0.2503125)
+\psdots[dotsize=0.04](5.6884375,-0.0503125)
+\psdots[dotsize=0.04](5.5684376,-0.2903125)
+\psdots[dotsize=0.04](5.4684377,0.0696875)
+\psdots[dotsize=0.04](5.4684377,0.2296875)
+\psdots[dotsize=0.04](5.5084376,0.2696875)
+\psdots[dotsize=0.04](5.9084377,0.1496875)
+\psdots[dotsize=0.04](5.9284377,0.2296875)
+\psdots[dotsize=0.04](6.0084376,0.2296875)
+\psdots[dotsize=0.04](6.1884375,0.1896875)
+\psdots[dotsize=0.04](6.2284374,-0.0703125)
+\psdots[dotsize=0.04](6.0484376,-0.0103125)
+\psdots[dotsize=0.04](6.1284375,0.1096875)
+\psdots[dotsize=0.04](6.3284373,0.0296875)
+\psdots[dotsize=0.04](6.7684374,-0.0903125)
+\psdots[dotsize=0.04](6.6084375,0.0896875)
+\psdots[dotsize=0.04](6.4484377,0.1296875)
+\psdots[dotsize=0.04](6.4684377,0.1896875)
+\psdots[dotsize=0.04](6.6684375,0.1696875)
+\psdots[dotsize=0.04](6.2684374,0.2696875)
+\psdots[dotsize=0.04](6.5284376,-0.0703125)
+\psdots[dotsize=0.04](6.0884376,-0.2303125)
+\psdots[dotsize=0.04](6.2484374,-0.2703125)
+\psdots[dotsize=0.04](6.4884377,-0.2503125)
+\psdots[dotsize=0.04](6.3684373,-0.0903125)
+\psdots[dotsize=0.04](6.6884375,-0.2503125)
+\psdots[dotsize=0.04](6.7284374,0.0296875)
+\psdots[dotsize=0.04](6.5884376,0.2496875)
+\psdots[dotsize=0.04](6.7884374,0.2496875)
+\psdots[dotsize=0.04](6.9484377,0.2096875)
+\psdots[dotsize=0.04](7.1484375,0.2496875)
+\psdots[dotsize=0.04](7.1084375,0.0696875)
+\psdots[dotsize=0.04](7.0684376,-0.1103125)
+\psdots[dotsize=0.04](6.8084373,0.0496875)
+\psdots[dotsize=0.04](6.9484377,0.0696875)
+\psdots[dotsize=0.04](6.9084377,-0.1703125)
+\psdots[dotsize=0.04](6.7884374,-0.2303125)
+\psdots[dotsize=0.04](7.0084376,-0.2703125)
+\psdots[dotsize=0.04](7.1284375,-0.2703125)
+\rput(4.0528126,-1.1053125){\small compressions}
+\psline[linewidth=0.04cm](3.9484375,-0.9903125)(3.9484375,-0.6303125)
+\psline[linewidth=0.04cm](2.2484374,-0.6303125)(5.7484374,-0.6303125)
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(2.2684374,-0.6303125)(2.2884376,-0.3303125)
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(3.9484375,-0.6103125)(3.9684374,-0.3103125)
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(5.7284374,-0.6303125)(5.7484374,-0.3303125)
+\psline[linewidth=0.04cm](4.7284374,0.9896875)(4.7284374,0.6296875)
+\psline[linewidth=0.04cm](3.0284376,0.6296875)(6.5284376,0.6296875)
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(3.0484376,0.6296875)(3.0684376,0.3296875)
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(4.7284374,0.6096875)(4.7484374,0.3096875)
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(6.5084376,0.6296875)(6.5284376,0.3296875)
+\rput(4.685625,1.1146874){\small rarefactions}
+\rput(0.5132812,0.2346875){\small tuning}
+\rput(0.4678125,-0.1053125){\small fork}
+\psline[linewidth=0.04cm](0.9284375,0.0096875)(1.4084375,0.0096875)
+\rput(9.066093,0.2146875){\small column of air in front}
+\rput(9.035313,-0.1053125){\small of tuning fork}
+\end{pspicture}
+}
+\end{center}
+\caption{Sound waves are pressure waves and need a medium through which to travel.}
+\end{figure}
+
+\Tip{A sound wave is different from a light wave. \\
+\begin{itemize}
+\item{A sound wave is produced by an oscillating object while a light wave is not.}\\
+\end{itemize}
+
+Also, because a sound wave is a mechanical wave (i.e. that it needs a medium) it is not capable of traveling through a vacuum, whereas a light wave can travel through a vacuum.}
+
+\Tip{A sound wave is a pressure wave. This means that regions of high pressure (compressions) and low pressure (rarefactions) are created as the sound source vibrates. These compressions and rarefactions arise because the source vibrates longitudinally and the longitudinal motion of air produces pressure fluctuations.}
+
+Sound will be studied in more detail in Chapter~\ref{p:wsl:s11}.
+
+\section{Seismic Waves}
+Seismic waves are waves from vibrations in the Earth (core, mantle, oceans). Seismic waves also occur on other planets, for example the moon and can be natural (due to earthquakes, volcanic eruptions or meteor strikes) or man-made (due to explosions or anything that hits the earth hard). Seismic P-waves (P for pressure) are longitudinal waves which can travel through solid and liquid.
+
+\summary{aaa}
+\begin{enumerate}
+\item A longitudinal wave is a wave where the particles in the medium move parallel to the direction in which the wave is travelling.
+
+\item Longitudinal waves consist of areas of higher pressure, where the particles in the medium are closest together (compressions) and areas of lower pressure, where the particles in the medium are furthest apart (rarefactions).
+
+\item The wavelength of a longitudinal wave is the distance between two consecutive compressions, or two consecutive rarefactions.
+
+\item The relationship between the period ($T$) and frequency ($f$) is given by
+$$T = \frac{1}{f} \textnormal{ or } f = \frac{1}{T}.$$
+
+\item The relationship between wave speed ($v$), frequency ($f$) and wavelength ($\lambda$) is given by
+$$v = f \lambda.$$
+
+\item Graphs of position vs time, velocity vs time and acceleration vs time can be drawn and are summarised in figures %\ref{}, \ref{} and \ref{}.
+
+\item Sound waves are examples of longitudinal waves. The speed of sound depends on the medium, temperature and pressure. Sound waves travel faster in solids than in liquids, and faster in liquids than in gases. Sound waves also travel faster at higher temperatures and higher pressures.
+\end{enumerate}
+
+\begin{eocexercises}{}
+\begin{enumerate}
+\item{Which of the following is not a longitudinal wave?
+\begin{enumerate}
+\item{seismic P-wave}
+\item{light}
+\item{sound}
+\item{ultrasound}
+\end{enumerate}}
+
+\item{Which of the following media can sound not travel through?
+\begin{enumerate}
+\item solid
+\item liquid
+\item gas
+\item vacuum
+\end{enumerate}}
+
+\item{Select a word from Column B that best fits the description in Column A:
+
+\begin{center}
+\begin{tabular}{ll}
+\textbf{Column A} & \textbf{Column B} \\ \hline
+waves in the air caused by vibrations & longitudinal waves \\
+waves that move in one direction, but medium moves in another & frequency \\
+waves and medium that move in the same direction & white noise \\
+the distance between consecutive points of a wave which are in phase & amplitude \\
+how often a single wavelength goes by & sound waves \\
+half the difference between high points and low points of waves & standing waves \\
+the distance a wave covers per time interval & transverse waves \\
+the time taken for one wavelength to pass a point & wavelength \\
+& music \\
+& sounds \\
+& wave speed \\
+\end{tabular}
+\end{center}
+}
+\item{A longitudinal wave has a crest to crest distance of 10~m. It takes the wave 5 s to pass a point.
+\begin{enumerate}
+\item What is the wavelength of the longitudinal wave?
+\item What is the speed of the wave?
+\end{enumerate}}
+
+\item A flute produces a musical sound travelling at a speed of 320 m.s$^{-1}$. The frequency of the note is 256 Hz. Calculate:
+\begin{enumerate}
+\item the period of the note
+\item the wavelength of the note
+\end{enumerate}
+
+\item{A person shouts at a cliff and hears an echo from the cliff 1~s later. If the speed of sound is 344~\ms, how far away is the cliff?}
+
+\item A wave travels from one medium to another and the speed of the wave decreases. What will the effect be on the ... (write only \emph{increases, decreases} or \emph{remains the same})
+\begin{enumerate}
+\item wavelength?
+\item period?
+\end{enumerate}
+\end{enumerate}
+\practiceinfo
+
+\begin{tabular}[h]{cccccc}
+(1.) aaa & (2.) aaa & (3.) aaa & (4.) aaa & (5.) aaa & (6.) aaa & (7.) aaa & 
+ \end{tabular}
+\end{eocexercises}
+
+
+% CHILD SECTION END
+
+
+
+% CHILD SECTION START
+

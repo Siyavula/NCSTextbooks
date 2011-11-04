@@ -1,0 +1,1120 @@
+\chapter{Statistics}
+\label{m:s12}
+
+
+%\nts{Status: This chapter is mostly incomplete, because the level of details required is possibly too high for school. Assistance is required from syllabus advisors as to exactly what is required.}
+
+\section{Introduction}
+In this chapter, you will use the mean, median, mode and standard deviation of a set of data to identify whether the data is normally distributed or whether it is skewed. You will learn more about populations and selecting different kinds of samples in order to avoid bias. You will work with lines of best fit, and learn how to find a regression equation and a correlation coefficient. You will analyse these measures in order to draw conclusions and make predictions.
+
+\section{Normal Distribution}
+\Activity{Investigation}{}
+{You are given a table of data below. 
+\begin{center}
+\begin{tabular}{|cccccccc|}
+\hline
+$75$ & $67$ & $70$ & $71$ & $71$ & $73$ & $74$ & $75$ \\
+$80$ & $75$ &$77$&$78$&$78$&$78$&$78$&$79$\\
+$91$&$81$&$82$&$82$&$83$&$86$&$86$&$87$\\
+\hline
+\end{tabular}
+\end{center}
+\begin{enumerate}
+\item Calculate the mean, median, mode and standard deviation of the data.
+\item What percentage of the data is within one standard deviation of the mean?
+\item Draw a histogram of the data using intervals $60\leq x< 64$; $64\leq x <68$; etc.
+\item Join the midpoints of the bars to form a frequency polygon.
+\end{enumerate}
+}
+If large numbers of data are collected from a population, the graph will often have a bell shape. If the data was, say, examination results, a few learners usually get very high marks, a few very low marks and most get a mark in the middle range. We say a distribution is \emph{normal} if
+\begin{itemize}
+\item the mean, median and mode are equal.
+\item it is symmetric around the mean.
+\item $\pm 68\%$ of the sample lies within one standard deviation of the mean, $95\%$ within two standard deviations and $99\%$ within three standard deviations of the mean.
+\end{itemize}
+
+%\begin{figure}[h!]
+\begin{center}
+\begin{pspicture}(-4.6,-1.6)(4.6,3)
+%\psgrid
+%\psplot[plotpoints=300,xunit=0.9,yunit=11]{-6.5}{6.5}{x 0 1.5 GAUSS}
+\psplot[plotpoints=300,xunit=0.9,yunit=11]{-6.5}{6.5}{1 3.76 div  2.718 x x mul 4.5 div neg exp mul}
+\psline[xunit=0.9,yunit=11]{-}(-6.5,0)(6.5,0)
+\psline[xunit=0.9,yunit=11,linestyle=dashed]{-}(1.05,0)(1.05,0.2)
+\uput[d](1.05,0){\small $\bar{x}+\sigma$}
+\psline[xunit=0.9,yunit=11]{-}(0,0)(0,0.02)
+\uput[d](0,0){\small $\bar{x}$}
+\psline[xunit=0.9,yunit=11,linestyle=dashed]{-}(-1.05,0)(-1.05,0.2)
+\uput[d](-1.05,0){\small $\bar{x}-\sigma$}
+\psline[xunit=0.9,yunit=11,linestyle=dashed]{-}(-2.1,0)(-2.1,0.2)
+\uput[d](2.1,0){\small $\bar{x}+2\sigma$}
+\psline[xunit=0.9,yunit=11,linestyle=dashed]{-}(2.1,0)(2.1,0.2)
+\uput[d](-2.1,0){\small $\bar{x}-2\sigma$}
+\psline[xunit=0.9,yunit=11,linestyle=dashed]{-}(3.15,0)(3.15,0.2)
+\uput[d](3.15,0){\small $\bar{x}+3\sigma$}
+\psline[xunit=0.9,yunit=11,linestyle=dashed]{-}(-3.15,0)(-3.15,0.2)
+\uput[d](-3.15,0){\small $\bar{x}-3\sigma$}
+\psline[xunit=0.9,yunit=11]{<-}(-1.05,0.2)(-0.55,0.2)
+\psline[xunit=0.9,yunit=11]{->}(0.55,0.2)(1.05,0.2)
+\rput(0,2.2){$68\%$}
+\psline[xunit=0.9,yunit=11]{<-}(-2.1,0.12)(-0.6,0.12)
+\psline[xunit=0.9,yunit=11]{->}(0.6,0.12)(2.1,0.12)
+\rput(0,1.32){$95\%$}
+\psline[xunit=0.9,yunit=11]{<-}(-3.15,0.06)(-0.6,0.06)
+\psline[xunit=0.9,yunit=11]{->}(0.6,0.06)(3.15,0.06)
+\rput(0,0.66){$99\%$}
+\end{pspicture}
+%\caption{A transverse wave, showing the direction of motion of the wave perpendicular to the direction in which the particles move.}
+%\label{fig:p:wsl:tw10:transverse:spring}
+\end{center}
+%\end{figure}
+
+What happens if the test was very easy or very difficult? Then the distribution may not be symmetrical. If extremely high or extremely low scores are added to a distribution, then the mean tends to shift towards these scores and the curve becomes skewed.
+
+\begin{minipage}{0.6\textwidth}
+If the test was very difficult, the mean score is shifted to the left. In this case, we say the distribution is \emph{positively skewed}, or \emph{skewed right}.\\\\
+
+If it was very easy, then many learners would get high scores, and the mean of the distribution would be shifted to the right. We say the distribution is \emph{negatively skewed}, or \emph{skewed left}.
+\end{minipage}
+\begin{minipage}{0.3\textwidth}
+\begin{center}
+\begin{pspicture}(-0.2,-0.5)(4.3,2)
+%\psgrid
+%\psplot[plotpoints=300,xunit=0.6,yunit=4]{0}{6.5}{x 0 1.5 GAUSS x 2 exp mul}
+\psplot[plotpoints=300,xunit=0.6,yunit=4]{0}{6.5}{1 3.76 div  2.718 x x mul 4.5 div neg exp mul x 2 exp mul}
+\psline[xunit=0.9,yunit=11]{-}(0,0)(4.25,0)
+\uput[d](2.1,0){Skewed right}
+\end{pspicture}
+
+\begin{pspicture}(0.2,-1.0)(-4.3,2)
+%\psgrid
+%\psplot[plotpoints=300,xunit=0.6,yunit=4]{0}{-6.5}{x 0 1.5 GAUSS x 2 exp mul}
+\psplot[plotpoints=300,xunit=0.6,yunit=4]{0}{-6.5}{1 3.76 div  2.718 x x mul 4.5 div neg exp mul x 2 exp mul}
+\psline[xunit=0.9,yunit=11]{-}(0,0)(-4.25,0)
+\uput[d](-2.1,0){Skewed left}
+\end{pspicture}
+\end{center}
+\end{minipage}
+
+\Exercise{Normal Distribution}{
+\begin{enumerate}
+\item Given the pairs of normal curves below, sketch the graphs on the same set of axes and show any relation between them. An important point to remember is that the area beneath the curve corresponds to $100\%$.
+\begin{enumerate}
+\item Mean $= 8$, standard deviation $= 4$ and Mean $= 4$, standard deviation $= 8$
+\item Mean $= 8$, standard deviation $= 4$ and Mean $= 16$, standard deviation $= 4$
+\item Mean $= 8$, standard deviation $= 4$ and Mean $= 8$, standard deviation $= 8$
+\end{enumerate}
+
+\item After a class test, the following scores were recorded:
+\begin{center}
+\begin{tabular}{|c|c|}\hline
+\textbf{Test Score} & \textbf{Frequency} \\\hline
+$3$ & $1$ \\\hline
+$4$ & $7$ \\\hline
+$5$ & $14$ \\\hline
+$6$ & $21$ \\\hline
+$7$ & $14$ \\\hline
+$8$ & $6$ \\\hline
+$9$ & $1$ \\\hline
+Total & $64$ \\\hline
+Mean & $6$ \\\hline
+Standard Deviation & $1,2$ \\\hline
+\end{tabular}
+\end{center}
+\begin{enumerate}
+\item Draw the histogram of the results.
+\item Join the midpoints of each bar and draw a frequency polygon.
+\item What mark must one obtain in order to be in the top $2\%$ of the class?
+\item Approximately $84\%$ of the pupils passed the test. What was the pass mark? 
+\item Is the distribution normal or skewed?
+\end{enumerate}
+
+\item In a road safety study, the speed of $175$ cars was monitored along a specific stretch of highway in order to find out whether there existed any link between high speed and the large number of accidents along the route. A frequency table of the results is drawn up below.
+\begin{center}
+\begin{tabular}{|c|c|}\hline
+\textbf{Speed (km.h$^{-1}$)} & \textbf{Number of cars (Frequency)} \\\hline
+ $50$ & $19$ \\\hline
+ $60$ & $28$ \\\hline
+ $70$ & $23$ \\\hline
+ $80$ & $56$ \\\hline
+ $90$ & $20$ \\\hline
+ $100$ & $16$ \\\hline
+ $110$ & $8$ \\\hline
+ $120$ & $5$ \\\hline
+\end{tabular}
+\end{center}
+The mean speed was determined to be around $82$ \kph while the median speed was worked out to be around $84,5$ \kph.
+\begin{enumerate}
+\item Draw a frequency polygon to visualise the data in the table above.
+\item Is this distribution symmetrical or skewed left or right? Give a reason fro your answer.
+\end{enumerate}
+
+\end{enumerate}
+}
+
+\section{Extracting a Sample Population}
+Suppose you are trying to find out what percentage of South Africa's population owns a car. One way of doing this might be to send questionnaires to peoples homes, asking them whether they own a car. However, you quickly run into a problem: you cannot hope to send every person in the country a questionnaire, it would be far to expensive. Also, not everyone would reply. The best you can do is send it to a few people, see what percentage of these own a car, and then use this to estimate what percentage of the entire country own cars. This smaller group of people is called the \emph{sample population}. \\ \\
+The sample population must be carefully chosen, in order to avoid biased results. How do we do this? \\
+First, it must be \emph{representative}. If all of our sample population comes from a very rich area, then almost all will have cars. But we obviously cannot conclude from this that almost everyone in the country has a car! We need to send the questionnaire to rich as well as poor people. \\
+Secondly, the \emph{size} of the sample population must be large enough. It is no good having a sample population consisting of only two people, for example. Both may very well not have cars. But we obviously cannot conclude that no one in the country has a car! The larger the sample population size, the more likely it is that the statistics of our sample population corresponds to the statistics of the entire population.\\ \\
+So how does one ensure that ones sample is representative? There are a variety of methods available, which we will look at now. \\
+
+\begin{enumerate}
+\item[] \textbf{Random Sampling.} Every person in the country has an equal chance of being selected. It is unbiased and also independant, which means that the selection of one person has no effect on the selection on another. One way of doing this would be to give each person in the country a number, and then ask a computer to give us a list of random numbers. We could then send the questionnaire to the people corresponding to the random numbers.
+\item[]  \textbf{Systematic Sampling.} Again give every person in the country a number, and then, for example, select every hundredth person on the list. So person with number $1$ would be selected, person with number $100$ would be selected, person with number $200$ would be selected, etc.
+\item[] \textbf{Stratified Sampling.} We consider different subgroups of the population, and take random samples from these. For example, we can divide the population into male and female, different ages, or into different income ranges. 
+\item[] \textbf{Cluster Sampling.} Here the sample is concentrated in one area. For example, we consider all the people living in one urban area.
+\end{enumerate}
+
+\Exercise{Sampling}
+{
+\begin{enumerate}
+\item Discuss the advantages, disadvantages and possible bias when using
+\begin{enumerate}
+\item systematic sampling
+\item random sampling
+\item cluster sampling
+\end{enumerate}
+\item Suggest a suitable sampling method that could be used to obtain information on:
+\begin{enumerate}
+\item passengers views on availability of a local taxi service.
+\item views of learners on school meals.
+\item defects in an item made in a factory.
+\item medical costs of employees in a large company.
+\end{enumerate}
+\item $2\%$ of a certain magazines' subscribers is randomly selected. The random number $16$ out of $50$, is selected. Then subscribers with numbers $16; 66; 116; 166; \ldots$ are chosen as a sample. What kind of sampling is this?
+\end{enumerate}
+}
+
+\section{Function Fitting and Regression Analysis}
+
+In Grade 11 we recorded two sets of data (bivariate data) on a scatter plot and then we drew a line of best fit as close to as many of the data items as possible. Regression analysis is a method of finding out exactly which function best fits a given set of data. We can find out the equation of the regression line by drawing and estimating, or by using an algebraic method called ``the least squares method'', available on most scientific calculators. The linear regression equation is written $\hat{y} = a+bx$ (we say y-hat) or $y = A + Bx$. Of course these are both variations of a more familiar equation $y = mx + c$.
+
+Suppose you are doing an experiment with washing dishes. You count how many dishes you begin with, and then find out how long it takes to finish washing them. So you plot the data on a graph of time taken versus number of dishes. This is plotted below.\\
+\begin{center}
+\scalebox{0.9} % Change this value to rescale the drawing.
+{
+\begin{pspicture}(0,-4.1)(11.500491,4.1)
+\rput(1.4586158,-2.6967187){\psaxes[linewidth=0.04,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4,dx=1.3cm,dy=0.55cm,Dy=20]{<->}(0,0)(0,0)(9,6)}
+\psline[linewidth=0.024cm](1.4386158,-2.6767187)(9.438616,1.6232812)
+% \usefont{T1}{ptm}{m}{n}
+\rput(5.6147094,-3.7667189){Number of dishes}
+% \usefont{T1}{ptm}{m}{n}
+\rput{91.22912}(0.51057386,0.119950734){\rput(0.18564707,0.33328125){Time taken (seconds)}}
+\usefont{T1}{ptm}{m}{n}
+\rput(10.7,-2.6667187){$d$}
+\usefont{T1}{ptm}{m}{n}
+\rput(1.4500221,3.6){$t$}
+
+\psdots[dotsize=0.12](4.0386157,-0.6767188)
+\psdots[dotsize=0.12](2.7386158,-1.6767187)
+\psdots[dotsize=0.12](5.438616,-1.1767187)
+\psdots[dotsize=0.12](6.5386157,-0.17671876)
+\psdots[dotsize=0.12](8.138616,2.1232812)
+\psdots[dotsize=0.12](9.238616,1.0232812)
+\end{pspicture} 
+}
+\end{center}
+
+If $t$ is the time taken, and $d$ the number of dishes, then it looks as though $t$ is proportional to $d$, ie. $t=m\cdot d$, where $m$ is the constant of proportionality. There are two questions that interest us now.
+\begin{enumerate}
+\item How do we find $m$? One way you have already learnt, is to draw a line of best-fit through the data points, and then measure the gradient of the line. But this is not terribly precise. Is there a better way of doing it?
+\item How well does our line of best fit really fit our data?  If the points on our plot don't all lie close to the line of best fit, but are scattered everywhere, then the fit is not 'good', and our assumption that $t=m\cdot d$ might be incorrect. Can we find a quantitative measure of how well our line really fits the data?
+\end{enumerate}
+In this chapter, we answer both of these questions, using the techniques of \emph{regression analysis}.
+Phet simulation for curve fitting: SIYAVULA-SIMULATION:http://cnx.org/content/m39305/latest/#curve-fitting
+\begin{wex}{Fitting by hand}
+{Use the data given to draw a scatter plot and line of best fit. Now write down the equation of the line that best seems to fit the data.\\ \\
+\begin{tabular}{l|l|l|l|l|l|l}
+$x$&$1,0$&$2,4$&$3,1$&$4,9$&$5,6$&$6,2$\\
+\hline
+$y$&$2,5$&$2,8$&$3,0$&$4,8$&$5,1$&$5,3$
+\end{tabular} \\ \\
+}
+{
+\westep{Drawing the graph}
+The first step is to draw the graph. This is shown below.\\
+\scalebox{0.8} % Change this value to rescale the drawing.
+{
+\begin{pspicture}(0,-3.6521354)(10.687708,3.9)
+\rput(0.66583335,-2.9263022){\psaxes[linewidth=0.04,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4,dx=1.3cm,dy=0.8cm]{<->}(0,0)(0,0)(9,6)}
+\psline[linewidth=0.024cm](0.6458333,-1.7863021)(9.345834,1.793698)
+\usefont{T1}{ptm}{m}{n}
+\rput(10.387239,-2.896302){$x$}
+\usefont{T1}{ptm}{m}{n}
+\rput(0.6972396,3.5036979){$y$}
+\psdots[dotsize=0.12](3.8458333,-0.6063021)
+\psdots[dotsize=0.12](2.0458333,-0.9063021)
+\psdots[dotsize=0.12](4.8058333,-0.4463021)
+\psdots[dotsize=0.12](7.005833,1.0136979)
+\psdots[dotsize=0.12](8.065833,1.293698)
+\psdots[dotsize=0.12](8.925834,1.6336979)
+\psline[linewidth=0.024cm,linestyle=dashed,dash=0.16cm 0.16cm](4.5658336,-2.906302)(4.5658336,-0.16630208)
+\psline[linewidth=0.024cm,linestyle=dashed,dash=0.16cm 0.16cm](4.5658336,-0.16630208)(0.68583333,-0.16630208)
+\end{pspicture} 
+}
+\westep{Calculating the equation of the line}
+The equation of the line is 
+$$y=mx+c$$
+From the graph we have drawn, we estimate the y-intercept to be $1,5$. We estimate that $y=3,5$ when $x=3$. So we have that points $(3;3,5)$ and $(0;1,5)$ lie on the line. The gradient of the line, $m$, is given by
+\begin{eqnarray*}
+m&=&\frac{y_2-y_1}{x_2-x_1}\\
+&=&\frac{3,5-1,5}{3-0}\\
+&=&\frac{2}{3}
+\end{eqnarray*}
+So we finally have that the equation of the line of best fit is
+$$y=\frac{2}{3}x+1,5$$
+
+}
+\end{wex}
+
+\subsection{The Method of Least Squares}
+We now come to a more accurate method of finding the line of best-fit. The method is very simple. Suppose we guess a line of best-fit. Then at at every data point, we find the distance between the data point and the line. If the line fitted the data perfectly, this distance should be zero for all the data points. The worse the fit, the larger the differences. We then square each of these distances, and add them all together. 
+
+\begin{center}
+\scalebox{1} 
+{
+\begin{pspicture}(0,-2.108125)(8.842813,2.108125)
+\psline[linewidth=0.024cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{<-}(0.1809375,1.5096875)(0.1809375,-1.8903126)
+\psline[linewidth=0.024cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(0.1809375,-1.9103125)(8.180938,-1.9103125)
+\psline[linewidth=0.024cm](1.1809375,-1.1903125)(6.5809374,0.7096875)
+\psdots[dotsize=0.12](2.1809375,-1.1903125)
+\psdots[dotsize=0.12](3.1809375,0.7096875)
+\psdots[dotsize=0.12](4.1809373,-0.5903125)
+\psdots[dotsize=0.12](5.1809373,0.7096875)
+\psdots[dotsize=0.12](6.1809373,0.0096875)
+\psline[linewidth=0.024cm,linestyle=dashed,dash=0.1cm 0.1cm](5.1809373,0.7096875)(5.1809373,0.2096875)
+\psline[linewidth=0.024cm,linestyle=dashed,dash=0.1cm 0.1cm](3.1809375,0.7096875)(3.1809375,-0.4903125)
+\psline[linewidth=0.024cm,linestyle=dashed,dash=0.1cm 0.1cm](2.1809375,-1.1903125)(2.1809375,-0.8503125)
+\psline[linewidth=0.024cm,linestyle=dashed,dash=0.1cm 0.1cm](4.1809373,-0.5903125)(4.1809373,-0.1303125)
+\psline[linewidth=0.024cm,linestyle=dashed,dash=0.1cm 0.1cm](6.1809373,0.0096875)(6.1809373,0.5896875)
+\usefont{T1}{ptm}{m}{n}
+\rput(0.23234375,1.9196875){$y$}
+\usefont{T1}{ptm}{m}{n}
+\rput(8.532344,-1.8803124){$x$}
+\end{pspicture} 
+}
+\end{center}
+%\\ \\
+The best-fit line is then the line that minimises the sum of the squared distances. \\
+Suppose we have a data set of $n$ points  $\{(x_1;y_1), (x_2;y_2), \ldots , (x_n;y_n)\}$. We also have a line $f(x)=mx+c$ that we are trying to fit to the data. The distance between the first data point and the line, for example, is 
+ $$\text{distance}=y_1-f(x_1)=y_1-(mx_1+c)$$
+We now square each of these distances and add them together. Lets call this sum $S(m,c)$. Then we have that
+\begin{eqnarray*}
+S(m,c)&=&(y_1-f(x_1))^2+(y_2-f(x_2))^2+\cdots+(y_n-f(x_n))^2\\
+&=&\sum^n_{i=1}(y_i-f(x_i))^2
+\end{eqnarray*} 
+Thus our problem is to find the value of $m$ and $c$ such that $S(m,c)$ is minimised. Let us call these minimising values $m_0$ and $c_0$. Then the line of best-fit is $f(x)=m_0 x+c_0$. We can find $m_0$ and $c_0$ using calculus, but it is tricky, and we will just give you the result, which is that
+\begin{eqnarray*}
+m_0&=&\frac{n\sum^n_{i=1}x_iy_i-\sum^n_{i=1}x_i\sum^n_{i=1}y_i}{n\sum^n_{i=1}(x_i)^2-\left(\sum^n_{i=1}x_i\right )^2}\\
+c_0&=&\frac{1}{n}\sum^n_{i=1}y_i-\frac{m_0}{n}\sum^n_{i=0}x_i=\bar{y}-m_0\bar{x}
+\end{eqnarray*}
+Khan Academy video on regression lines:SIYAVULA-VIDEO:http://cnx.org/content/m39324/latest/#regression-1
+\begin{wex}{Method of Least Squares}
+{In the table below, we have the records of the maintenance costs in Rands, compared with the age of the appliance in months. We have data for five appliances.\\ \\
+\begin{center}
+\begin{tabular}{|l|c|c|c|c|c|}\hline
+\textbf{appliance} & $1$ & $2$ & $3$ & $4$ & $5$ \\\hline
+\textbf{age} ($x$) & $5$ & $10$ & $15$ & $20$ & $30$ \\\hline
+\textbf{cost} ($y$)& $90$ & $140$ & $250$ & $300$ & $380$ \\\hline
+\end{tabular}
+\end{center}
+}
+
+{
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}\hline
+\textbf{appliance}& $x$ & $y$ & $xy$ & $x^2$\\\hline
+$1$ & $5$ & $90$ & $450$ & $25$ \\\hline
+$2$ & $10$ & $140$ & $1400$ & $100$\\\hline
+$3$ & $15$ & $250$ & $3750$ & $225$ \\\hline
+$4$ & $20$ & $300$ & $6000$ & $400$\\\hline
+$5$ & $30$ & $380$ & $11400$ & $900$ \\\hline
+\textbf{Total} & $80$ & $1160$ & $23000$ & $1650$ \\\hline
+\end{tabular}
+\end{center}
+\begin{eqnarray*}
+b &=& \frac{n \sum{xy} - \sum{x}\sum{y}}{n\sum{x^2} - \left(\sum{x}\right)^2} = \frac{5\times 23000 - 80\times 1160}{5\times 1650 - 80^2} = 12\\
+a &=& \bar{y} - b\bar{x} = \frac{1160}{5} - \frac{12\times 80}{5} = 40\\
+&\therefore& \hat{y} = 40 + 12x
+\end{eqnarray*}
+}
+\end{wex}
+
+\subsection{Using a Calculator}
+
+\begin{wex}{Using the Sharp EL-531VH calculator
+}{% Queston
+Find a regression equation for the following data:
+\begin{center}
+\begin{tabular}{|l|c|c|c|c|c|}\hline
+Days ($x$) & $1$ & $2$ & $3$ & $4$ & $5$ \\\hline
+Growth in m ($y$) & $1,00$ & $2,50$ & $2,75$ & $3,00$ & $3,50$ \\\hline
+\end{tabular}
+\end{center}
+}{% Answer
+\westep{Getting your calculator ready}
+Using your calculator, change the mode from normal to ``Stat $xy$''. This mode enables you to type in bivariate data.
+
+
+\westep{Entering the data}
+Key in the data as follows:
+\begin{center}
+\begin{tabular}{c c c c c}
+1 & \fbox{$(x,y)$} & $1$ & \fbox{DATA} & $n$ $= 1$ \\
+2 & \fbox{$(x,y)$} & $2,5$ & \fbox{DATA} & $n$ $= 2$ \\
+3 & \fbox{$(x,y)$} & $2,75$ & \fbox{DATA} & $n$ $= 3$ \\
+4 & \fbox{$(x,y)$} & $3,0$ & \fbox{DATA} & $n$ $= 4$ \\
+5 & \fbox{$(x,y)$} & $3,5$ & \fbox{DATA} & $n$ $= 5$ \\
+\end{tabular}
+\end{center}
+
+\westep{Getting regression results from the calculator}
+Ask for the values of the regression coefficients $a$ and $b$.
+\begin{center}
+\begin{tabular}{c c c c c}
+\fbox{RCL} & $a$ & gives & $a = 0,9$\\
+\fbox{RCL} & $b$ & gives & $b = 0,55$ \\
+\end{tabular}
+\end{center}
+\begin{equation*}
+\therefore \hat{y} = 0,9 + 0,55x
+\end{equation*}
+}
+
+\end{wex}
+
+\begin{wex}{Using the CASIO fx-82ES Natural Display calculator
+}{% Question
+Using a calculator determine the least squares line of best fit for the following data set of marks.
+
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+Learner & $1$ & $2$ & $3$ & $4$ & $5$ \\ \hline
+Chemistry (\%) & $52$ & $55$ & $86$ & $71$ & $45$ \\ \hline
+Accounting (\%) & $48$ & $64$ & $95$ & $79$ & $50$ \\ \hline
+\end{tabular}
+
+For a Chemistry mark of $65\%$, what mark does the least squares line predict for Accounting?
+}{% Answer
+\westep{Getting your calculator ready}
+Switch on the calculator. Press [MODE] and then select STAT by pressing [2]. The following screen will appear:
+\begin{center}
+\begin{tabular}{|c c c c|}\hline
+$1$ & $1-VAR$ & $2$ & $A + BX$ \\
+$3$ & $\_ + CX^2$ & $4$ & $ln~X$ \\
+$5$ & $e \hat{ } X$ & $6$ & $A \cdot B$ $\hat{ } X$ \\
+$7$ & $A \cdot X \hat{ } B$ & $8$ & $1/X$ \\\hline
+\end{tabular}
+\end{center}
+Now press [2] for linear regression. Your screen should look something like this:
+\begin{center}
+\begin{tabular}{c|c c c|c c c}
+ & & $x$ & & & $y$ &\\
+$1$& & & & & & \\
+$2$& & & & & & \\
+$3$& & & & & & \\
+\end{tabular}
+\end{center}
+
+\westep{Entering the data}
+Press [52] and then [=] to enter the first mark under $x$. Then enter the other values, in the same way, for the $x$-variable (the Chemistry marks) in the order in which they are given in the data set. Then move the cursor across and up and enter $48$ under $y$ opposite $52$ in the $x$-column. Continue to enter the other $y$-values (the Accounting marks) in order so that they pair off correctly with the corresponding $x$-values.
+
+\begin{center}
+\begin{tabular}{c|c c c|c c c}
+ & & $x$ & & & $y$ &\\
+$1$& & $52$ & & & & \\
+$2$& & $55$ & & & & \\
+$3$& & & & & & \\
+\end{tabular}
+\end{center}
+
+Then press [AC]. The screen clears but the data remains stored.
+
+\begin{center}
+\begin{tabular}{|c c c c|}\hline
+$1$: & Type & $2$: & Data \\
+$3$: & Edit & $4$: & Sum \\
+$5$: & Var & $6$: & MinMax \\
+$7$: & Reg &  &  \\\hline
+\end{tabular}
+\end{center}
+
+Now press [SHIFT][1] to get the stats computations screen shown below. Choose Regression by pressing [7].
+
+\begin{center}
+\begin{tabular}{|c c c c|}\hline
+$1$: & $A$ & $2$: & $B$ \\
+$3$: & $r$ & $4$: & $\hat{x}$ \\
+$5$: & $\hat{y}$ & & \\ \hline
+\end{tabular}
+\end{center}
+
+\westep{Getting regression results from the calculator}
+\begin{enumerate}
+
+\item[a)] Press [1] and [=] to get the value of the $y$-intercept, $a = -5,065\ldots= -5,07 $ (to two decimal places)\\
+Finally, to get the slope, use the following key sequence: [SHIFT][1][7][2][=]. The calculator gives $b = 1,169\ldots = 1,17$ (to two decimal places)\\
+
+The equation of the line of regression is thus:\\
+$\hat{y} =-5,07  + 1,17 x$\\
+
+\item[b)] Press [AC][65][SHIFT][1][7][5][=]\\
+ This gives a (predicted) Accounting mark of $\hat{} = 70,94 = 71$\%
+\end{enumerate}
+
+}
+\end{wex}
+
+\Exercise{}{
+\begin{enumerate}
+\item The table below lists the exam results for five students in the subjects of Science and Biology.
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|}\hline
+Learner & $1$ & $2$ & $3$ & $4$ & $5$ \\\hline
+Science \% & $55$ & $66$ & $74$ & $92$ & $47$ \\\hline
+Biology \% & $48$ & $59$ & $68$ & $84$ & $53$ \\\hline
+\end{tabular}
+\end{center}
+\begin{enumerate}
+\item Use the formulae to find the regression equation coefficients $a$ and $b$.
+\item Draw a scatter plot of the data on graph paper.
+\item Now use algebra to find a more accurate equation.
+\end{enumerate}
+
+\item Footlengths and heights of seven students are given in the table below.
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|}\hline
+ Height (cm) & $170$ & $163$ & $131$ & $181$ & $146$ & $134$ & $166$ \\\hline
+ Footlength (cm) & $27$ & $23$ & $20$ & $28$ & $22$ & $20$ & $24$ \\\hline
+\end{tabular}
+\end{center}
+\begin{enumerate}
+\item Draw a scatter plot of the data on graph paper.
+\item Indentify and describe any trends shown in the scatter plot.
+\item Find the equation of the least squares line by using algebraic methods and draw the line on your graph.
+\item Use your equation to predict the height of a student with footlength $21,6$ cm.
+\item Use your equation to predict the footlength of a student $176$ cm tall.
+\end{enumerate}
+
+\item Repeat the data in Question 2 and find the regression line using a calculator.
+
+\end{enumerate}
+}
+
+
+
+
+\subsection{Correlation Coefficients}
+
+Once we have applied regression analysis to a set of data, we would like to have a number that tells us exactly how well the data fits the function. A correlation coefficient, $r$, is a tool that tells us to what degree there is a relationship between two sets of data. The correlation coefficient $r \in \left[-1; 1\right]$ when $r = -1$, there is a perfect negative correlation, when $r = 0$, there is no correlation and $r = 1$ is a perfect positive correlation.
+
+% insert 5 small graphs - examples of correlation
+\begin{center}
+\begin{tabular}{c c c c c}
+\scalebox{0.45} % Change this value to rescale the drawing.
+{
+\begin{pspicture}(0,-2.8329687)(5.7228127,2.8329687)
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{<-}(0.5809375,2.7345312)(0.5809375,-2.2654688)
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(0.5809375,-2.2654688)(5.5809374,-2.2654688)
+\usefont{T1}{ptm}{m}{n}
+\rput(0.23234375,2.6445312){$y$}
+\usefont{T1}{ptm}{m}{n}
+\rput(5.4223437,-2.6554687){$x$}
+\psdots[dotsize=0.06](0.5809375,-2.1654687)
+\psdots[dotsize=0.06](0.7809375,-2.0654688)
+\psdots[dotsize=0.06](0.9809375,-1.9654688)
+\psdots[dotsize=0.06](1.0809375,-1.8654687)
+\psdots[dotsize=0.06](1.1809375,-1.6654687)
+\psdots[dotsize=0.06](1.3809375,-1.4654688)
+\psdots[dotsize=0.06](1.6809375,-1.3654687)
+\psdots[dotsize=0.06](1.7809376,-1.2654687)
+\psdots[dotsize=0.06](2.0809374,-1.1654687)
+\psdots[dotsize=0.06](2.3809376,-0.86546874)
+\psdots[dotsize=0.06](2.6809375,-0.66546875)
+\psdots[dotsize=0.06](2.8809376,-0.46546876)
+\psdots[dotsize=0.06](3.1809375,-0.26546875)
+\psdots[dotsize=0.06](3.5809374,0.13453124)
+\psdots[dotsize=0.06](3.8809376,0.33453125)
+\psdots[dotsize=0.06](4.2809377,0.63453126)
+\psdots[dotsize=0.06](4.5809374,0.9345313)
+\psdots[dotsize=0.06](4.9809375,1.5345312)
+\psdots[dotsize=0.06](5.3809376,1.6345313)
+\psdots[dotsize=0.06](0.6809375,-1.9654688)
+\psdots[dotsize=0.06](1.1809375,-1.6654687)
+\psdots[dotsize=0.06](1.3809375,-1.5654688)
+\psdots[dotsize=0.06](1.5809375,-1.2654687)
+\psdots[dotsize=0.06](1.8809375,-0.96546876)
+\psdots[dotsize=0.06](2.1809375,-0.96546876)
+\psdots[dotsize=0.06](2.4809375,-0.86546874)
+\psdots[dotsize=0.06](2.5809374,-0.66546875)
+\psdots[dotsize=0.06](2.6809375,-0.46546876)
+\psdots[dotsize=0.06](2.1809375,-0.5654687)
+\psdots[dotsize=0.06](2.0809374,-0.7654688)
+\psdots[dotsize=0.06](2.1809375,-0.86546874)
+\psdots[dotsize=0.06](2.4809375,-0.5654687)
+\psdots[dotsize=0.06](2.8809376,-0.26546875)
+\psdots[dotsize=0.06](3.0809374,-0.06546875)
+\psdots[dotsize=0.06](3.3809376,0.13453124)
+\psdots[dotsize=0.06](3.6809375,0.43453124)
+\psdots[dotsize=0.06](4.0809374,0.63453126)
+\psdots[dotsize=0.06](4.3809376,0.9345313)
+\psdots[dotsize=0.06](4.6809373,1.3345313)
+\psdots[dotsize=0.06](4.9809375,1.5345312)
+\psdots[dotsize=0.06](5.2809377,1.8345313)
+\psdots[dotsize=0.06](4.6809373,1.0345312)
+\psdots[dotsize=0.06](4.2809377,0.7345312)
+\psdots[dotsize=0.06](4.0809374,0.7345312)
+\psdots[dotsize=0.06](4.4809375,1.1345313)
+\psdots[dotsize=0.06](4.9809375,1.3345313)
+\psdots[dotsize=0.06](5.2809377,1.6345313)
+\psdots[dotsize=0.06](3.3809376,0.13453124)
+\psdots[dotsize=0.06](3.1809375,-0.16546875)
+\psdots[dotsize=0.06](3.3809376,0.03453125)
+\psdots[dotsize=0.06](3.1809375,-0.06546875)
+\psdots[dotsize=0.06](3.3809376,-0.06546875)
+\psdots[dotsize=0.06](1.3809375,-1.3654687)
+\psdots[dotsize=0.06](0.8809375,-1.8654687)
+\psdots[dotsize=0.06](1.0809375,-1.4654688)
+\psdots[dotsize=0.06](1.4809375,-1.4654688)
+\psdots[dotsize=0.06](4.2809377,0.7345312)
+\psdots[dotsize=0.06](3.8809376,0.43453124)
+\psdots[dotsize=0.06](4.3809376,0.9345313)
+\psdots[dotsize=0.06](4.9809375,1.5345312)
+\psdots[dotsize=0.06](4.8809376,1.3345313)
+\psdots[dotsize=0.06](5.1809373,1.6345313)
+\psdots[dotsize=0.06](5.4809375,1.9345312)
+\psdots[dotsize=0.06](4.6809373,1.2345313)
+\psdots[dotsize=0.06](4.1809373,0.9345313)
+\psdots[dotsize=0.06](5.1809373,1.5345312)
+\psdots[dotsize=0.06](5.1809373,1.4345312)
+\psdots[dotsize=0.06](2.3809376,-0.5654687)
+\psdots[dotsize=0.06](2.2809374,-0.66546875)
+\end{pspicture} 
+}
+
+& 
+
+\scalebox{0.45} % Change this value to rescale the drawing.
+{
+\begin{pspicture}(0,-2.8329687)(5.7228127,2.8329687)
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{<-}(0.5809375,2.7345312)(0.5809375,-2.2654688)
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(0.5809375,-2.2654688)(5.5809374,-2.2654688)
+\usefont{T1}{ptm}{m}{n}
+\rput(0.23234375,2.6445312){$y$}
+\usefont{T1}{ptm}{m}{n}
+\rput(5.4223437,-2.6554687){$x$}
+\psdots[dotsize=0.06](0.5809375,-2.1654687)
+\psdots[dotsize=0.06](0.7809375,-2.0654688)
+\psdots[dotsize=0.06](0.8809375,-1.8654687)
+\psdots[dotsize=0.06](1.1809375,-1.3654687)
+\psdots[dotsize=0.06](1.4809375,-1.2654687)
+\psdots[dotsize=0.06](1.9809375,-0.66546875)
+\psdots[dotsize=0.06](2.1809375,-0.46546876)
+\psdots[dotsize=0.06](2.5809374,-0.16546875)
+\psdots[dotsize=0.06](2.9809375,0.03453125)
+\psdots[dotsize=0.06](3.5809374,0.13453124)
+\psdots[dotsize=0.06](4.1809373,0.7345312)
+\psdots[dotsize=0.06](4.7809377,1.1345313)
+\psdots[dotsize=0.06](5.1809373,1.4345312)
+\psdots[dotsize=0.06](5.5809374,1.8345313)
+\psdots[dotsize=0.06](0.9809375,-1.9654688)
+\psdots[dotsize=0.06](1.4809375,-1.9654688)
+\psdots[dotsize=0.06](2.0809374,-1.3654687)
+\psdots[dotsize=0.06](2.4809375,-1.0654688)
+\psdots[dotsize=0.06](3.1809375,-0.66546875)
+\psdots[dotsize=0.06](4.0809374,-0.16546875)
+\psdots[dotsize=0.06](4.9809375,0.53453124)
+\psdots[dotsize=0.06](5.3809376,1.1345313)
+\psdots[dotsize=0.06](5.5809374,1.6345313)
+\psdots[dotsize=0.06](4.9809375,1.5345312)
+\psdots[dotsize=0.06](4.4809375,1.1345313)
+\psdots[dotsize=0.06](3.9809375,0.83453125)
+\psdots[dotsize=0.06](2.9809375,-0.26546875)
+\psdots[dotsize=0.06](2.2809374,-0.86546874)
+\psdots[dotsize=0.06](1.7809376,-1.1654687)
+\psdots[dotsize=0.06](2.6809375,-0.5654687)
+\psdots[dotsize=0.06](3.1809375,-0.46546876)
+\psdots[dotsize=0.06](3.7809374,0.03453125)
+\psdots[dotsize=0.06](4.3809376,0.53453124)
+\psdots[dotsize=0.06](5.0809374,1.0345312)
+\psdots[dotsize=0.06](3.4809375,0.63453126)
+\psdots[dotsize=0.06](2.9809375,-0.06546875)
+\psdots[dotsize=0.06](3.6809375,-0.16546875)
+\psdots[dotsize=0.06](4.1809373,0.33453125)
+\psdots[dotsize=0.06](3.6809375,0.33453125)
+\psdots[dotsize=0.06](2.1809375,-0.86546874)
+\psdots[dotsize=0.06](1.4809375,-1.3654687)
+\psdots[dotsize=0.06](1.2809376,-1.5654688)
+\psdots[dotsize=0.06](1.5809375,-1.6654687)
+\psdots[dotsize=0.06](1.7809376,-1.4654688)
+\psdots[dotsize=0.06](1.4809375,-0.86546874)
+\psdots[dotsize=0.06](1.9809375,-0.7654688)
+\psdots[dotsize=0.06](1.9809375,-1.1654687)
+\psdots[dotsize=0.06](1.1809375,-1.3654687)
+\psdots[dotsize=0.06](0.9809375,-1.6654687)
+\psdots[dotsize=0.06](3.6809375,0.63453126)
+\psdots[dotsize=0.06](3.8809376,0.63453126)
+\psdots[dotsize=0.06](2.9809375,0.13453124)
+\psdots[dotsize=0.06](3.2809374,0.03453125)
+\psdots[dotsize=0.06](3.3809376,0.33453125)
+\psdots[dotsize=0.06](3.2809374,-0.36546874)
+\psdots[dotsize=0.06](3.6809375,-0.26546875)
+\psdots[dotsize=0.06](3.2809374,-0.06546875)
+\psdots[dotsize=0.06](4.9809375,1.1345313)
+\psdots[dotsize=0.06](4.4809375,0.7345312)
+\psdots[dotsize=0.06](4.6809373,0.83453125)
+\psdots[dotsize=0.06](4.4809375,0.53453124)
+\psdots[dotsize=0.06](5.5809374,1.0345312)
+\psdots[dotsize=0.06](5.4809375,1.5345312)
+\psdots[dotsize=0.06](4.3809376,1.0345312)
+\psdots[dotsize=0.06](4.0809374,0.23453125)
+\psdots[dotsize=0.06](4.8809376,0.63453126)
+\psdots[dotsize=0.06](4.2809377,1.4345312)
+\psdots[dotsize=0.06](5.0809374,1.7345313)
+\psdots[dotsize=0.06](4.0809374,1.2345313)
+\psdots[dotsize=0.06](3.3809376,0.63453126)
+\psdots[dotsize=0.06](1.6809375,-0.46546876)
+\psdots[dotsize=0.06](0.9809375,-1.2654687)
+\psdots[dotsize=0.06](4.6809373,0.33453125)
+\end{pspicture} 
+}
+
+& 
+
+\scalebox{0.45} % Change this value to rescale the drawing.
+{
+\begin{pspicture}(0,-2.8329687)(5.7228127,2.8329687)
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{<-}(0.5809375,2.7345312)(0.5809375,-2.2654688)
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(0.5809375,-2.2654688)(5.5809374,-2.2654688)
+\usefont{T1}{ptm}{m}{n}
+\rput(0.23234375,2.6445312){$y$}
+\usefont{T1}{ptm}{m}{n}
+\rput(5.4223437,-2.6554687){$x$}
+\psdots[dotsize=0.06](0.5809375,-2.1654687)
+\psdots[dotsize=0.06](0.6809375,-1.9654688)
+\psdots[dotsize=0.06](0.7809375,-1.6654687)
+\psdots[dotsize=0.06](0.9809375,-1.1654687)
+\psdots[dotsize=0.06](1.4809375,-0.5654687)
+\psdots[dotsize=0.06](1.6809375,-0.06546875)
+\psdots[dotsize=0.06](2.3809376,0.43453124)
+\psdots[dotsize=0.06](2.8809376,0.9345313)
+\psdots[dotsize=0.06](4.2809377,1.5345312)
+\psdots[dotsize=0.06](5.2809377,2.0345314)
+\psdots[dotsize=0.06](0.9809375,-2.0654688)
+\psdots[dotsize=0.06](1.8809375,-2.1654687)
+\psdots[dotsize=0.06](4.9809375,0.13453124)
+\psdots[dotsize=0.06](5.2809377,0.63453126)
+\psdots[dotsize=0.06](5.4809375,1.4345312)
+\psdots[dotsize=0.06](5.5809374,1.9345312)
+\psdots[dotsize=0.06](0.9809375,-1.5654688)
+\psdots[dotsize=0.06](1.9809375,-0.96546876)
+\psdots[dotsize=0.06](2.8809376,0.13453124)
+\psdots[dotsize=0.06](3.8809376,1.0345312)
+\psdots[dotsize=0.06](4.9809375,1.4345312)
+\psdots[dotsize=0.06](4.7809377,0.83453125)
+\psdots[dotsize=0.06](4.0809374,0.23453125)
+\psdots[dotsize=0.06](2.8809376,-0.86546874)
+\psdots[dotsize=0.06](2.2809374,-1.1654687)
+\psdots[dotsize=0.06](1.8809375,-1.4654688)
+\psdots[dotsize=0.06](2.9809375,-1.2654687)
+\psdots[dotsize=0.06](3.6809375,-0.46546876)
+\psdots[dotsize=0.06](2.8809376,-0.26546875)
+\psdots[dotsize=0.06](1.8809375,-0.5654687)
+\psdots[dotsize=0.06](1.0809375,-1.4654688)
+\psdots[dotsize=0.06](1.5809375,-1.8654687)
+\psdots[dotsize=0.06](3.0809374,-1.0654688)
+\psdots[dotsize=0.06](3.9809375,-0.36546874)
+\psdots[dotsize=0.06](4.3809376,0.23453125)
+\psdots[dotsize=0.06](4.1809373,0.63453126)
+\psdots[dotsize=0.06](3.6809375,0.43453124)
+\psdots[dotsize=0.06](2.9809375,0.13453124)
+\psdots[dotsize=0.06](1.9809375,-0.7654688)
+\psdots[dotsize=0.06](2.4809375,0.13453124)
+\psdots[dotsize=0.06](3.5809374,1.1345313)
+\psdots[dotsize=0.06](4.2809377,1.5345312)
+\psdots[dotsize=0.06](5.0809374,1.8345313)
+\psdots[dotsize=0.06](5.1809373,1.8345313)
+\psdots[dotsize=0.06](4.1809373,0.7345312)
+\psdots[dotsize=0.06](3.2809374,0.33453125)
+\psdots[dotsize=0.06](3.1809375,0.63453126)
+\psdots[dotsize=0.06](2.5809374,0.23453125)
+\psdots[dotsize=0.06](1.7809376,-0.86546874)
+\psdots[dotsize=0.06](2.0809374,-1.3654687)
+\psdots[dotsize=0.06](1.7809376,-1.8654687)
+\psdots[dotsize=0.06](3.3809376,-1.1654687)
+\psdots[dotsize=0.06](3.8809376,-0.46546876)
+\psdots[dotsize=0.06](4.4809375,0.13453124)
+\psdots[dotsize=0.06](4.9809375,1.0345312)
+\psdots[dotsize=0.06](3.3809376,-0.16546875)
+\psdots[dotsize=0.06](2.9809375,-0.5654687)
+\psdots[dotsize=0.06](2.4809375,-0.66546875)
+\psdots[dotsize=0.06](1.6809375,-1.2654687)
+\psdots[dotsize=0.06](1.8809375,-1.4654688)
+\psdots[dotsize=0.06](2.8809376,-1.0654688)
+\psdots[dotsize=0.06](3.6809375,-0.36546874)
+\psdots[dotsize=0.06](4.6809373,0.83453125)
+\psdots[dotsize=0.06](1.7809376,-0.86546874)
+\psdots[dotsize=0.06](2.3809376,-0.06546875)
+\psdots[dotsize=0.06](1.8809375,-0.26546875)
+\psdots[dotsize=0.06](2.1809375,-0.5654687)
+\psdots[dotsize=0.06](3.2809374,0.7345312)
+\psdots[dotsize=0.06](4.3809376,1.3345313)
+\psdots[dotsize=0.06](4.7809377,1.5345312)
+\psdots[dotsize=0.06](4.4809375,1.0345312)
+\psdots[dotsize=0.06](2.3809376,-1.3654687)
+\psdots[dotsize=0.06](1.5809375,-1.6654687)
+\end{pspicture} 
+}
+
+& 
+
+\scalebox{0.45} % Change this value to rescale the drawing.
+{
+\begin{pspicture}(0,-2.8329687)(5.7228127,2.8329687)
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{<-}(0.5809375,2.7345312)(0.5809375,-2.2654688)
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(0.5809375,-2.2654688)(5.5809374,-2.2654688)
+\usefont{T1}{ptm}{m}{n}
+\rput(0.23234375,2.6445312){$y$}
+\usefont{T1}{ptm}{m}{n}
+\rput(5.4223437,-2.6554687){$x$}
+\psdots[dotsize=0.06](0.5809375,-2.1654687)
+\psdots[dotsize=0.06](0.7809375,2.4345312)
+\psdots[dotsize=0.06](2.1809375,2.4345312)
+\psdots[dotsize=0.06](3.6809375,2.1345313)
+\psdots[dotsize=0.06](5.0809374,2.2345312)
+\psdots[dotsize=0.06](4.8809376,1.0345312)
+\psdots[dotsize=0.06](3.9809375,1.0345312)
+\psdots[dotsize=0.06](2.8809376,1.5345312)
+\psdots[dotsize=0.06](1.4809375,1.8345313)
+\psdots[dotsize=0.06](1.2809376,0.7345312)
+\psdots[dotsize=0.06](1.4809375,0.43453124)
+\psdots[dotsize=0.06](3.2809374,0.63453126)
+\psdots[dotsize=0.06](4.3809376,0.63453126)
+\psdots[dotsize=0.06](4.8809376,0.03453125)
+\psdots[dotsize=0.06](3.9809375,-0.46546876)
+\psdots[dotsize=0.06](3.0809374,-0.46546876)
+\psdots[dotsize=0.06](1.4809375,-0.7654688)
+\psdots[dotsize=0.06](1.3809375,-1.3654687)
+\psdots[dotsize=0.06](2.5809374,-1.5654688)
+\psdots[dotsize=0.06](4.1809373,-1.6654687)
+\psdots[dotsize=0.06](5.0809374,-1.3654687)
+\psdots[dotsize=0.06](3.9809375,-1.0654688)
+\psdots[dotsize=0.06](2.6809375,-0.7654688)
+\psdots[dotsize=0.06](1.8809375,-0.5654687)
+\psdots[dotsize=0.06](1.0809375,-0.16546875)
+\psdots[dotsize=0.06](2.7809374,0.03453125)
+\psdots[dotsize=0.06](3.9809375,0.13453124)
+\psdots[dotsize=0.06](3.5809374,0.83453125)
+\psdots[dotsize=0.06](2.3809376,1.2345313)
+\psdots[dotsize=0.06](1.6809375,1.4345312)
+\psdots[dotsize=0.06](1.3809375,0.7345312)
+\psdots[dotsize=0.06](2.3809376,0.63453126)
+\psdots[dotsize=0.06](2.0809374,0.03453125)
+\psdots[dotsize=0.06](3.5809374,1.4345312)
+\psdots[dotsize=0.06](4.2809377,1.8345313)
+\psdots[dotsize=0.06](4.6809373,1.2345313)
+\psdots[dotsize=0.06](4.8809376,-0.96546876)
+\psdots[dotsize=0.06](4.6809373,-1.1654687)
+\psdots[dotsize=0.06](4.0809374,-0.46546876)
+\psdots[dotsize=0.06](3.1809375,-1.2654687)
+\psdots[dotsize=0.06](2.5809374,-1.1654687)
+\psdots[dotsize=0.06](3.5809374,-1.4654688)
+\psdots[dotsize=0.06](2.7809374,-1.6654687)
+\psdots[dotsize=0.06](1.7809376,-1.7654687)
+\psdots[dotsize=0.06](1.1809375,-1.1654687)
+\psdots[dotsize=0.06](0.8809375,0.03453125)
+\psdots[dotsize=0.06](1.2809376,1.1345313)
+\psdots[dotsize=0.06](3.1809375,1.7345313)
+\psdots[dotsize=0.06](4.2809377,2.0345314)
+\psdots[dotsize=0.06](3.1809375,1.7345313)
+\psdots[dotsize=0.06](2.2809374,0.23453125)
+\psdots[dotsize=0.06](2.4809375,0.53453124)
+\psdots[dotsize=0.06](3.1809375,0.13453124)
+\end{pspicture} 
+}
+
+&
+
+\scalebox{0.45} % Change this value to rescale the drawing.
+{
+\begin{pspicture}(0,-2.8329687)(5.7228127,2.8329687)
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{<-}(0.5809375,2.7345312)(0.5809375,-2.2654688)
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(0.5809375,-2.2654688)(5.5809374,-2.2654688)
+\usefont{T1}{ptm}{m}{n}
+\rput(0.23234375,2.6445312){$y$}
+\usefont{T1}{ptm}{m}{n}
+\rput(5.4223437,-2.6554687){$x$}
+\psdots[dotsize=0.06](0.5809375,-2.1654687)
+\psdots[dotsize=0.06](0.9809375,1.9345312)
+\psdots[dotsize=0.06](1.3809375,1.7345313)
+\psdots[dotsize=0.06](1.6809375,1.4345312)
+\psdots[dotsize=0.06](1.9809375,1.1345313)
+\psdots[dotsize=0.06](2.1809375,0.7345312)
+\psdots[dotsize=0.06](2.5809374,0.33453125)
+\psdots[dotsize=0.06](2.8809376,-0.16546875)
+\psdots[dotsize=0.06](3.0809374,-0.36546874)
+\psdots[dotsize=0.06](3.3809376,-0.66546875)
+\psdots[dotsize=0.06](3.7809374,-1.0654688)
+\psdots[dotsize=0.06](4.2809377,-1.4654688)
+\psdots[dotsize=0.06](4.7809377,-1.5654688)
+\psdots[dotsize=0.06](4.5809374,-1.4654688)
+\psdots[dotsize=0.06](4.3809376,-1.1654687)
+\psdots[dotsize=0.06](4.1809373,-1.0654688)
+\psdots[dotsize=0.06](3.8809376,-0.7654688)
+\psdots[dotsize=0.06](3.5809374,-0.26546875)
+\psdots[dotsize=0.06](3.2809374,-0.16546875)
+\psdots[dotsize=0.06](3.0809374,0.13453124)
+\psdots[dotsize=0.06](2.8809376,0.43453124)
+\psdots[dotsize=0.06](2.6809375,0.53453124)
+\psdots[dotsize=0.06](2.4809375,0.9345313)
+\psdots[dotsize=0.06](2.2809374,1.1345313)
+\psdots[dotsize=0.06](1.9809375,1.3345313)
+\psdots[dotsize=0.06](1.6809375,1.6345313)
+\psdots[dotsize=0.06](1.4809375,1.8345313)
+\psdots[dotsize=0.06](1.2809376,1.9345312)
+\psdots[dotsize=0.06](1.9809375,1.0345312)
+\psdots[dotsize=0.06](2.2809374,0.7345312)
+\psdots[dotsize=0.06](2.5809374,0.23453125)
+\psdots[dotsize=0.06](2.8809376,-0.06546875)
+\psdots[dotsize=0.06](3.1809375,-0.46546876)
+\psdots[dotsize=0.06](3.6809375,-0.86546874)
+\psdots[dotsize=0.06](3.9809375,-0.96546876)
+\psdots[dotsize=0.06](4.2809377,-1.3654687)
+\psdots[dotsize=0.06](3.7809374,-0.46546876)
+\psdots[dotsize=0.06](3.3809376,-0.26546875)
+\psdots[dotsize=0.06](2.8809376,0.13453124)
+\psdots[dotsize=0.06](2.6809375,0.63453126)
+\psdots[dotsize=0.06](2.2809374,1.0345312)
+\psdots[dotsize=0.06](1.8809375,1.4345312)
+\psdots[dotsize=0.06](1.3809375,1.8345313)
+\psdots[dotsize=0.06](3.2809374,-0.26546875)
+\psdots[dotsize=0.06](3.8809376,-0.96546876)
+\psdots[dotsize=0.06](4.0809374,-1.1654687)
+\psdots[dotsize=0.06](4.6809373,-1.5654688)
+\psdots[dotsize=0.06](1.7809376,1.6345313)
+\psdots[dotsize=0.06](1.4809375,1.6345313)
+\psdots[dotsize=0.06](1.3809375,2.0345314)
+\psdots[dotsize=0.06](2.2809374,1.3345313)
+\psdots[dotsize=0.06](2.6809375,0.7345312)
+\psdots[dotsize=0.06](3.2809374,-0.16546875)
+\psdots[dotsize=0.06](3.3809376,-0.36546874)
+\psdots[dotsize=0.06](2.8809376,-0.06546875)
+\psdots[dotsize=0.06](2.6809375,0.33453125)
+\psdots[dotsize=0.06](2.1809375,0.7345312)
+\psdots[dotsize=0.06](2.4809375,0.63453126)
+\psdots[dotsize=0.06](3.4809375,-0.06546875)
+\psdots[dotsize=0.06](4.1809373,-1.0654688)
+\psdots[dotsize=0.06](4.4809375,-1.5654688)
+\psdots[dotsize=0.06](4.3809376,-1.3654687)
+\psdots[dotsize=0.06](3.7809374,-0.66546875)
+\psdots[dotsize=0.06](3.4809375,-0.46546876)
+\psdots[dotsize=0.06](1.6809375,1.4345312)
+\psdots[dotsize=0.06](1.2809376,2.2345312)
+\psdots[dotsize=0.06](1.1809375,2.0345314)
+\psdots[dotsize=0.06](4.6809373,-1.6654687)
+\psdots[dotsize=0.06](3.1809375,0.03453125)
+\psdots[dotsize=0.06](2.8809376,0.03453125)
+\psdots[dotsize=0.06](2.1809375,0.7345312)
+\psdots[dotsize=0.06](1.8809375,1.0345312)
+\psdots[dotsize=0.06](1.7809376,0.83453125)
+\psdots[dotsize=0.06](2.5809374,0.13453124)
+\psdots[dotsize=0.06](2.9809375,-0.5654687)
+\psdots[dotsize=0.06](2.0809374,0.43453124)
+\psdots[dotsize=0.06](2.2809374,0.53453124)
+\psdots[dotsize=0.06](1.6809375,1.1345313)
+\psdots[dotsize=0.06](3.2809374,-0.96546876)
+\psdots[dotsize=0.06](2.6809375,0.33453125)
+\psdots[dotsize=0.06](2.9809375,1.1345313)
+\psdots[dotsize=0.06](2.2809374,1.7345313)
+\psdots[dotsize=0.06](3.0809374,0.63453126)
+\psdots[dotsize=0.06](3.3809376,0.03453125)
+\psdots[dotsize=0.06](3.9809375,-0.5654687)
+\end{pspicture} 
+}\\
+Positive, strong & Positive, fairly strong & Positive, weak & No association & Negative, fairly strong \\
+$r \approx 0,9$ & $r \approx 0,7$ & $r \approx 0,4$ & $r = 0$ & $r \approx -0,7$ \\
+
+\end{tabular}
+\end{center}
+
+We often use the correlation coefficient $r^2$ in order to examine the strength of the correlation only. 
+
+In this case:\\
+
+\begin{center}
+\begin{tabular}{|c|c|}\hline
+$r^2 = 0$ & no correlation \\
+$0 < r^2 < 0,25$ & very weak\\
+$0,25 < r^2 < 0,5$ & weak \\
+$0,5 < r^2 < 0,75$ & moderate \\
+$0,75 < r^2 < 0,9$ & strong\\
+$0,9 < r^2 < 1$ & very strong\\
+$r^2 = 1$ & perfect correlation \\\hline
+\end{tabular}
+\end{center}
+
+The correlation coefficient $r$ can be calculated using the formula
+\begin{equation*}
+ r = \frac{1}{n-1}\sum{\left(\frac{x-\bar{x}}{s_x}\right)\left(\frac{y-\bar{y}}{s_y}\right)}
+\end{equation*}
+\begin{itemize}
+\item where $n$ is the number of data points,
+\item $s_x$ is the standard deviation of the $x$-values and
+\item $s_y$ is the standard deviation of the $y$-values.
+\end{itemize}
+
+This is known as the Pearson's product moment correlation coefficient. It is a long calculation and much easier to do on the calculator where you simply follow the procedure for the regression equation, and go on to find $r$.
+
+\begin{eocexercises}{}
+\begin{enumerate}
+\item Below is a list of data concerning 12 countries and their respective carbon dioxide (CO$_2$) emmission levels per person and the gross domestic product (GDP is a measure of products produced and services delivered within a country in a year) per person. 
+\begin{center}
+\begin{tabular}{|c|c|c|}\hline
+ & CO$_2$ emmissions per capita ($x$) & GDP per capita ($y$) \\\hline
+ South Africa & $8,1$ & $3~938$ \\\hline 
+ Thailand & $2,5$ & $2~712$ \\\hline
+ Italy & $7,3$ & $20~943$ \\\hline
+ Australia & $17,0$ & $23~893$ \\\hline
+ China & $2,5$ & $816$ \\\hline
+ India & $0,9$ & $463$\\\hline
+ Canada & $16,0$ & $22~537$ \\\hline
+ United Kingdom & $9,0$ & $21~785$ \\\hline
+ United States & $19,9$ & $31~806$ \\\hline
+ Saudi Arabia & $11,0$ & $6~853$ \\\hline
+ Iran & $3,8$ & $1~493$ \\\hline
+ Indonesia & $1,2$ & $986$ \\\hline
+\end{tabular}
+\end{center}
+\begin{enumerate}
+\item Draw a scatter plot of the data set and your estimate of a line of best fit.
+\item Calculate equation of the line of regression using the method of least squares.
+\item Draw the regression line equation onto the graph.
+\item Calculate the correlation coefficient $r$.
+\item What conclusion can you reach, regarding the relationship between CO$_2$ emission and GDP per capita for the countries in the data set?
+\end{enumerate}
+
+\item A collection of data on the peculiar investigation into a foot size and height of students was recorded in the table below. Answer the questions to follow.
+\begin{center}
+\begin{tabular}{|c|c|}\hline
+Length of right foot (cm) & Height (cm)\\\hline
+ $25,5$ & $163,3$ \\\hline
+ $26,1$ & $164,9$ \\\hline 
+ $23,7$ & $165,5$ \\\hline
+ $26,4$ & $173,7$ \\\hline
+ $27,5$ & $174,4$ \\\hline
+ $24$ & $156$ \\\hline
+ $22,6$ & $155,3$ \\\hline
+ $27,1$ & $169,3$ \\\hline
+\end{tabular}
+\end{center}
+\begin{enumerate}
+\item Draw a scatter plot of the data set and your estimate of a line of best fit.
+\item Calculate equation of the line of regression using the method of least squares or your calculator.
+\item Draw the regression line equation onto the graph.
+\item Calculate the correlation coefficient $r$.
+\item What conclusion can you reach, regarding the relationship between the length of the right foot and height of the students in the data set?
+\end{enumerate}
+\item
+A class wrote two tests, and the marks for each were recorded in the table below. Full marks in the first test was $50$, and the second test was out of $30$.
+
+\begin{enumerate}
+\item Is there a strong association between the marks for the first and second test? Show why or why not.
+
+\item One of the learners (in Row 18) did not write the second test. Given her mark for the first test, calculate an expected mark for the second test.
+\end{enumerate}
+
+\begin{tabular}{|c|c|c|}
+\hline
+Learner & Test 1 & Test 2 \\
+& (Full marks: $50$) & (Full marks: $30$) \\ \hline
+$1$ & $42$ & $25$ \\ \hline
+$2$ & $32$ & $19$ \\ \hline
+$3$ & $31$ & $20$ \\ \hline
+$4$ & $42$ & $26$ \\ \hline
+$5$ & $35$ & $23$ \\ \hline
+$6$ & $23$ & $14$ \\ \hline
+$7$ & $43$ & $24$ \\ \hline
+$8$ & $23$ & $12$ \\ \hline
+$9$ & $24$ & $14$ \\ \hline
+$10$ & $15$ & $10$ \\ \hline
+$11$ & $19$ & $11$ \\ \hline
+$12$ & $13$ & $10$ \\ \hline
+$13$ & $36$ & $22$ \\ \hline
+$14$ & $29$ & $17$ \\ \hline
+$15$ & $29$ & $17$ \\ \hline
+$16$ & $25$ & $16$ \\ \hline
+$17$ & $29$ & $18$ \\ \hline
+$18$ & $17$ & \\ \hline
+$19$ & $30$ & $19$ \\ \hline
+$20$ & $28$ & $17$ \\
+\hline
+\end{tabular}
+
+\item
+A fast food company produces hamburgers. The number of hamburgers made, and the costs are recorded over a week.\\
+
+\begin{tabular}{|c|c|}
+\hline
+Hamburgers made & Costs \\
+\hline
+$495$ & R$2~382$ \\ \hline
+$550$ & R$2~442$ \\ \hline
+$515$ & R$2~484$ \\ \hline
+$500$ & R$2~400$ \\ \hline
+$480$ & R$2~370$ \\ \hline
+$530$ & R$2~448$ \\ \hline
+$585$ & R$2~805$ \\ \hline
+\end{tabular}
+
+
+\begin{enumerate}
+\item Find the linear regression function that best fits the data.
+
+\item If the total cost in a day is R$2~500$, estimate the number of hamburgers produced.
+
+\item What is the cost of $490$ hamburgers?
+
+\end{enumerate}
+
+\item
+The profits of a new shop are recorded over the first 6 months. The owner wants to predict his future sales. The profits so far have been R$90~000$; R$93~000$; R$99~500$; R$102~000$; R$101~300$; R$109~000$. 
+
+\begin{enumerate}
+\item For the profit data, calculate the linear regression function.
+
+\item Give an estimate of the profits for the next two months.
+
+\item The owner wants a profit of R$130~000$. Estimate how many months this will take.
+\end{enumerate}
+
+\item
+A company produces sweets using a machine which runs for a few hours per day. The number of hours running the machine and the number of sweets produced are recorded.
+
+\begin{tabular}{|c|c|}
+\hline
+Machine hours & Sweets produced\\
+\hline
+$3,80$ & $275$ \\ \hline
+$4,23$ & $287$ \\ \hline
+$4,37$ & $291$ \\ \hline
+$4,10$ & $281$ \\ \hline
+$4,17$ & $286$ \\ 
+\hline
+
+\hline
+\end{tabular}
+
+Find the linear regression equation for the data, and estimate the machine hours needed to make $300$ sweets.
+
+
+\end{enumerate}
+
+
+% CHILD SECTION END 
+
+
+
+% CHILD SECTION START 
+\practiceinfo
+\end{eocexercises}

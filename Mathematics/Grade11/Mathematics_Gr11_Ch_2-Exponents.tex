@@ -1,0 +1,178 @@
+\chapter{Exponents}
+\label{m:ng11}  
+
+\section{Introduction}
+In Grade 10 we studied exponential numbers and learnt that there were six laws that made working with exponential numbers easier. There is one law that we did not study in Grade 10. This will be described here.
+
+\section{Laws of Exponents}
+%\begin{syllabus}
+%\item Simplify expressions using the laws of exponents for rational exponents.
+%\item Understand that not all numbers are real. (This requires the recognition but not the study of non-real numbers.)
+%\end{syllabus}
+
+In Grade 10, we worked only with indices that were integers. What happens when the index is not an integer, but is a rational number? This leads us to the final law of exponents,
+
+\begin{equation}
+\label{eq:mn:e:law7}
+a^{\frac{m}{n}}= \sqrt[n]{a^m}
+\end{equation}
+
+\subsection{Exponential Law 7: $a^{\frac mn}=\sqrt[n]{a^m}$}
+We say that $x$ is an $n$th root of $b$ if $x^n=b$ and we write $x=\sqrt[n]{b}$. $n^{\rm th}$ roots written with the radical symbol, $\sqrt{~}$, are referred to as surds. For example, $(-1)^4=1$, so $-1$ is a $4^{th}$ root of 1. Using Law 6 from Grade 10, we notice that
+\begin{equation}
+\label{eq:mn:e:law7:col} 
+(a^{\frac mn})^n=a^{\frac mn\times{n}}=a^m
+\end{equation}
+therefore $a^{\frac mn}$ must be an $n$th root of $a^m$. We can therefore say
+\begin{equation}
+\label{eq:mn:e:law7:proof}
+a^{\frac mn}=\sqrt[n]{a^m}
+\end{equation}
+
+For example,
+\nequ{2^{\frac{2}{3}} =\sqrt[3]{2^2}}
+
+A number may not always have a real $n$th root. For example, if $n=2$ and
+$a=-1$, then there is no real number such that $x^2=-1$ because $x^2 \geq 0 $ for all real numbers $x$.
+
+\Extension{Complex Numbers}{There are numbers which can solve problems like
+$x^2=-1$, but they are beyond the scope of this book. They are called
+\textit{complex numbers}.}
+
+It is also possible for more than one $n$th root of a number to exist. For example, $(-2)^2=4$ and $2^2=4$, so both $-2$ and $2$ are $2^{nd}$ (square) roots of $4$. Usually, if there is more than one root, we choose the positive real solution and move on.
+
+\begin{wex}{Rational Exponents}
+{Simplify without using a calculator: \nequ{\left(\frac{5}{4^{-1}-9^{-1}}\right)^\frac{1}{2}}}{
+\westep{Rewrite negative exponents as numbers with positive indices}
+\begin{eqnarray*}
+&=&\left(\frac{5}{\frac{1}{4}-\frac{1}{9}}\right)^\frac{1}{2}\\
+\end{eqnarray*}
+\westep{Simplify inside brackets} 
+\begin{eqnarray*}
+&=&\left(\frac{5}{\frac{9-4}{36}}\right)^\frac{1}{2}\\
+&=&\left(\frac{5}{1}\div \frac{5}{36}\right)^\frac{1}{2}\\
+&=&(6^2)^\frac{1}{2}
+\end{eqnarray*}
+\westep{Apply exponential Law 6}
+\begin{eqnarray*}
+&=&6
+\end{eqnarray*}
+}
+\end{wex}
+
+\begin{wex}{More rational Exponents}
+{Simplify: \nequ{(16x^4)^{\frac{3}{4}}}}
+{
+\westep{Convert the number coefficient to a product of it's prime factors}
+\begin{eqnarray*}
+&=&(2^{4}x^{4})^{\frac{3}{4}}\\
+\end{eqnarray*}
+\westep{Apply exponential laws}
+\begin{eqnarray*}
+&=&2^{4\times{\frac{3}{4}}}.x^{4 \times{\frac{3}{4}}}\\
+&=&2^3.x^3\\
+&=&8x^3\\
+\end{eqnarray*}
+}
+\end{wex}
+
+%Khan Academy video on rational exponents & exponent laws 1: SIYAVULA-VIDEO:http://cnx.org/content/m32625/latest/#exponents-1
+%Khan Academy video on rational exponents & exponent laws 2: SIYAVULA-VIDEO:http://cnx.org/content/m32625/latest/#exponents-2
+
+
+\Exercise{Applying laws}
+{
+Use all the laws to:
+\begin{enumerate}
+\item{Simplify:
+
+\begin{enumerate}
+\item$(x^0)+5x^0-(0,25)^{-0,5}+8^{\frac{2}{3}}$ 
+\item$s^{\frac{1}{2}}\div s^{\frac{1}{3}}$\\
+\item$(64m^6)^\frac{2}{3}$\\
+\item $\dfrac{12m^{\frac{7}{9}}}{8m^{-\frac{11}{9}}}$\\
+
+\end{enumerate}
+}
+\item{Re-write the following expression as a power of $x$:
+\nequ{x\sqrt{x\sqrt{x\sqrt{x\sqrt{x}}}}}}
+\end{enumerate}
+}
+
+\section{Exponentials in the Real World}
+In Grade 10 Finance, you used exponentials to calculate different types of interest, for example on a savings account or on a loan and compound growth. 
+
+\begin{wex}{Exponentials in the Real world}
+{A type of bacteria has a very high exponential growth rate at $80\%$ every hour. If there are $10$ bacteria, determine how many there will be in five hours, in one day and in one week?}{ 
+\westep{ Population = Initial population $~\times~ (1~+~ $growth~percentage$)^{time~period~ in~hours}$}
+Therefore, in this case:\\
+$Population = 10(1,8)^n$,   where $n$ = number of hours
+\westep{In 5 hours}
+$Population =10(1,8)^5 = 189$
+\westep{In 1 day = 24 hours}
+$Population = 10(1,8)^{24} = 13~382~588$
+\westep{in 1 week = 168 hours}
+$Population = 10(1,8)^{168} = 7,687 ~\times 10^{43}$\\
+Note this answer is given in scientific notation as it is a very big number.}
+\end{wex}
+
+\begin{wex}{More Exponentials in the Real world} 
+{A species of extremely rare, deep water fish has an very long lifespan and rarely has children. If there are a total $821$ of this type of fish and their growth rate is $2\%$ each month, how many will there be in half of a year? What will the population be in ten years and in one hundred years?}{
+\westep{Population = Initial population $~\times ~(1+ ~$growth percentage$)^{time~period~ in~ months}$}
+Therefore, in this case:\\
+Population = $821(1,02)^n$,   where $n$ = number of months
+\westep{In half a year = 6 months}
+Population = $821(1,02)^6 = 925$
+\westep{In 10 years = 120 months}
+Population = $821(1,02)^{120} = 8~838$
+\westep{in 100 years = 1~200 months}
+Population = $821(1,02)^{1~200} = 1,716 \times 10^{13}$\\
+Note this answer is also given in scientific notation as it is a very big number.}
+\end{wex}
+
+\begin{eocexercises}{}
+\begin{enumerate}
+\item{Simplify as far as possible:
+\begin{enumerate}
+\item{$8^{-\frac{2}{3}}$}
+\item{$\sqrt{16}+8^{-\frac{2}{3}}$}
+\end{enumerate}}
+\item{Simplify:
+\begin{center}
+\begin{tabular}{p{4cm}p{4cm}}
+(a) $(x^3)^\frac{4}{3}$ & (b) $(s^2)^\frac{1}{2}$\\
+(c) $(m^5)^\frac{5}{3}$& (d) $(-m^2)^\frac{4}{3}$\\
+(e) $-(m^2)^\frac{4}{3}$&(f) $(3y^\frac{4}{3})^4$\\
+\end{tabular}
+\end{center}}
+
+\item{Simplify as much as you can:
+\nequ{\frac{3a^{-2}b^{15}c^{-5}}{\left(a^{-4}b^{3}c\right)^{\frac{-5}{2}}}}}
+
+\item{Simplify as much as you can:
+\nequ{\left(9a^6b^4\right)^{\frac{1}{2}}}
+}
+
+\item{Simplify as much as you can:
+\nequ{\left(a^{\frac{3}{2}}b^{\frac{3}{4}}\right)^{16}}
+}
+ \item{Simplify:
+\nequ{x^3\sqrt{x}}}
+
+\item{Simplify:
+\nequ{\sqrt[3]{x^4b^5}}}
+
+\item{Re-write the following expression as a power of $x$:
+\nequ{\frac{x\sqrt{x\sqrt{x\sqrt{x\sqrt{x}}}}}{\sqrt[3]{x}}}}
+
+\end{enumerate}
+
+
+
+\practiceinfo
+\end{eocexercises} 
+
+
+
+% CHILD SECTION START 
+

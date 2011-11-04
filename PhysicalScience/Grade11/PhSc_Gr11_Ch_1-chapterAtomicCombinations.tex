@@ -1,0 +1,1945 @@
+\chapter{Atomic Combinations}
+\label{chap:bonding}
+
+When you look at the matter, or physical substances, around you, you will realise that atoms seldom exist on their own. More often, the things around us are made up of different atoms that have been joined together. This is called \textbf{chemical bonding}. Chemical bonding is one of the most important processes in chemistry because it allows all sorts of different molecules and combinations of atoms to form, which then make up the objects in the complex world around us. There are, however, some atoms that \textit{do} exist on their own, and which do not bond with others. The \textbf{noble gases} in Group 8 of the Periodic Table behave in this way. They include elements like neon (Ne), helium (He) and argon (Ar). The important question then is, why do some atoms bond but others do not?
+
+
+% CHILD SECTION START
+
+\section{Why do atoms bond?}
+\label{sec:bonding:why do atoms bond}
+
+As we begin this section, it's important to remember that what we will go on to discuss is a \textit{model} of bonding, that is based on a particular \textit{model} of the atom. You will remember from the discussion on atoms
+%section \ref{sec:atom:models}
+that a model is a \textit{representation} of what is happening in reality. In the model of the atom that you are familiar with, the atom is made up of a central nucleus, surrounded by electrons that are arranged in fixed energy levels (sometimes called \textit{shells}). Within each energy level, electrons move in \textit{orbitals} of different shapes. The electrons in the outermost energy level of an atom are called the \textbf{valence electrons}. This model of the atom is useful in trying to understand how different types of bonding take place between atoms.\\
+
+You will remember from these earlier discussions of electrons and energy levels in the atom, that electrons always try to occupy the \textit{lowest} possible energy level. In the same way, an atom also prefers to exist in the lowest possible energy state so that it is most \textit{stable}. An atom is most stable when all its valence electron orbitals are \textit{full}. In other words, the outer energy level of the atom contains the maximum number of electrons that it can. A stable atom is also an \textit{unreactive} one, and is unlikely to bond with other atoms. This explains why the noble gases are unreactive and why they exist as atoms, rather than as molecules. Look for example at the electron configuration of neon (1s$^{2}$ 2s$^{2}$ 2p$^{6}$). Neon has eight valence electrons in its valence energy shell. This is the maximum that it can hold and so neon is very stable and unreactive, and will not form new bonds. Other atoms, whose valence energy levels are not full, are more likely to bond in order to become more stable. We are going to look a bit more closely at some of the energy changes that take place when atoms bond.
+
+
+% CHILD SECTION END
+
+
+
+% CHILD SECTION START
+
+\section{Energy and bonding}
+
+Let's start by imagining that there are two hydrogen atoms approaching one another. As they move closer together, there are three forces that act on the atoms at the same time. These forces are shown in figure \ref{fig:bondingforces} and are described below:\\
+
+\begin{figure}[!h]
+\begin{center}
+\begin{pspicture}(-4,-1.5)(4,2)
+%\psgrid[gridcolor=lightgray]
+
+\def\bondingforces{\psellipse(-2,0)(1.2,1.2)
+\psellipse(2,0)(1.2,1.2)
+\psellipse(-2,0)(0.4,0.4)
+\psellipse(2,0)(0.4,0.4)
+\rput(-2,0){\textbf{+}}
+\rput(2,0){\textbf{+}}
+\psline(-2.1,0.9)(-1.9,0.9)
+\psline(2.1,0.9)(1.9,0.9)
+\psline[arrows=<->](-1.7,0.9)(1.7,0.9)
+\psline[arrows=<->](-1.7,0.8)(1.5,0.1)
+\psline[arrows=<->](-1.5,0)(1.5,0)
+\rput(0,1.1){(1)}
+\rput(0,0.6){(2)}
+\rput(0,0.2){(3)}}
+\rput(0,0){\psset{unit=1.5}\bondingforces}
+\end{pspicture}
+\end{center}
+\caption{Forces acting on two approaching atoms: (1) repulsion between electrons, (2) attraction between protons and electrons and (3) repulsion between protons.}
+\label{fig:bondingforces}
+\end{figure}
+
+\begin{enumerate}
+\item{\textbf{repulsive force} between the electrons of the atoms, since like charges repel}
+\item{\textbf{attractive force} between the nucleus of one atom and the electrons of another}
+\item{\textbf{repulsive force} between the two positively-charged nuclei}
+\end{enumerate}
+
+Now look at figure \ref{fig:bonding:energy} to understand the energy changes that take place when the two atoms move towards each other. \\
+
+\begin{figure}[!h]
+\begin{center}
+\scalebox{1.2}{
+\begin{pspicture}(-4,-4)(6,4)
+%\psgrid
+
+\psaxes[ticks=none,labels=none](-4,0)(-4,-3.5)(6,3.5)
+\psplot{-3.6}{6}{0.15 x 10 add mul -12 exp 0.15 x 10 add mul -6 exp sub
+10 mul}
+
+\rput{90}(-5,0){Energy}
+\psline{->}(-4.7,-2.5)(-4.7,2.5)
+\uput[l](-4,3){+}
+\uput[l](-4,0){0}
+\uput[l](-4,-3){-}
+
+\rput[u](3.5,1){Distance between atomic nuclei}
+\psline{->}(1,0.6)(6,0.6)
+\uput[u](6,0){A}
+
+\pnode(-2.5,0){qTop}
+\pnode(-2.5,-2.5){qBottom}
+\pnode(-4,0.4){pLeft}
+\pnode(-2.5,0.4){pRight}
+
+\ncline{<->}{qTop}{qBottom}
+\Aput{Q}
+\ncline{<->}{pLeft}{pRight}
+\Aput{P}
+
+\uput[d](-2.5,-2.5){X}
+
+\end{pspicture}
+}
+\caption{Graph showing the change in energy that takes place as atoms move closer together}
+\label{fig:bonding:energy}
+\end{center}
+\end{figure}
+
+In the example of the two hydrogen atoms, where the resultant force between them is attraction, the energy of the system is zero when the atoms are far apart (point A), because there is no interaction between the atoms. When the atoms move closer together, attractive forces dominate and the atoms are pulled towards each other. As this happens, the \textit{potential energy} of the system decreases because energy would now need to be \textit{supplied} to the system in order to move the atoms apart. However, as the atoms continue to move closer together (i.e. \textit{left} along the horizontal axis of the graph), repulsive forces start to dominate and this causes the potential energy of the system to rise again. At some point, the attractive and repulsive effects are balanced, and the energy of the system is at its minimum (point X). It is at this point, when the energy is at a minimum, that bonding takes place.\\
+
+The distance marked 'P' is the \textbf{bond length}, i.e. the distance between the nuclei of the atoms when they bond. 'Q' represents the \textbf{bond energy} i.e. the amount of energy that must be added to the system to break the bonds that have formed. \textbf{Bond strength} means how strongly one atom attracts and is held to another. The strength of a bond is related to the bond length, the size of the bonded atoms and the number of bonds between the atoms. In general, the shorter the bond length, the stronger the bond between the atoms, and the smaller the atoms involved, the stronger the bond. The greater the number of bonds between the atoms, the greater the bond strength.
+Phet simulation on atomic interactions:SIYAVULA-SIMULATION:http://cnx.org/content/m38892/latest/#id63458
+
+% CHILD SECTION END
+
+
+
+% CHILD SECTION START
+
+\section{What happens when atoms bond?}
+\label{sec:bonding:what happens}
+
+A \textbf{chemical bond} is formed when atoms are held together by attractive forces. This attraction occurs when electrons are \textit{shared} between atoms, or when electrons are \textit{exchanged} between the atoms that are involved in the bond. The sharing or exchange of electrons takes place so that the outer energy levels of the atoms involved are filled and the atoms are more stable. If an electron is \textbf{shared}, it means that it will spend its time moving in the electron orbitals around \textit{both} atoms. If an electron is \textbf{exchanged} it means that it is transferred from one atom to another, in other words one atom \textit{gains} an electron while the other \textit{loses} an electron.
+
+\Definition{Chemical bond}{A chemical bond is the physical process that causes atoms and molecules to be attracted to each other, and held together in more stable chemical compounds.}
+
+The type of bond that is formed depends on the elements that are involved. In this section, we will be looking at three types of chemical bonding: \textbf{covalent}, \textbf{ionic} and \textbf{metallic bonding}.
+
+You need to remember that it is the \textit{valence electrons} that are involved in bonding and that atoms will try to fill their outer energy levels so that they are more stable.
+
+
+% CHILD SECTION END
+
+
+
+% CHILD SECTION START
+
+\section{Covalent Bonding}
+\label{subsec:bonding:covalent}
+
+\subsection{The nature of the covalent bond}
+
+Covalent bonding occurs between the atoms of \textbf{non-metals}. The outermost orbitals of the atoms overlap so that unpaired electrons in each of the bonding atoms can be shared. By overlapping orbitals, the outer energy shells of all the bonding atoms are filled. The shared electrons move in the orbitals around \textit{both} atoms. As they move, there is an attraction between these negatively charged electrons and the positively charged nuclei, and this force holds the atoms together in a covalent bond.
+
+\Definition{Covalent bond}{Covalent bonding is a form of chemical bonding where pairs of electrons are shared between atoms.}
+
+Below are a few examples. Remember that it is only the \textit{valence electrons} that are involved in bonding, and so when diagrams are drawn to show what is happening during bonding, it is only these electrons that are shown. Circles and crosses represent electrons in different atoms.\\
+The following simulation allows you to build some simple covalent molecules.
+Phet simulation on covalent molecules:SIYAVULA-SIMULATION:http://cnx.org/content/m38895/latest/#id6348
+\begin{wex}{Covalent bonding}{How do hydrogen and chlorine atoms bond covalently in a molecule of hydrogen chloride?}{\westep{Determine the electron configuration of each of the bonding atoms.}
+A chlorine atom has 17 electrons, and an electron configuration of 1s$^{2}$ 2s$^{2}$ 2p$^{6}$ 3s$^{2}$ 3p$^{5}$. A hydrogen atom has only 1 electron, and an electron configuration of 1s$^{1}$.
+\westep{Determine the number of valence electrons for each atom, and how many of the electrons are paired or unpaired.}
+Chlorine has 7 valence electrons. One of these electrons is unpaired. Hydrogen has 1 valence electron and it is unpaired.
+\westep{Look to see how the electrons can be shared between the atoms so that the outermost energy levels of both atoms are full.}
+The hydrogen atom needs one more electron to complete its valence shell. The chlorine atom also needs one more electron to complete its shell. Therefore \textit{one pair of electrons} must be shared between the two atoms. In other words, one electron from the chlorine atom will spend some of its time orbiting the hydrogen atom so that hydrogen's valence shell is full. The hydrogen electron will spend some of its time orbiting the chlorine atom so that chlorine's valence shell is also full. A molecule of hydrogen chloride is formed (figure \ref{fig:bonding:hydrogen chloride}). Notice the shared electron pair in the overlapping orbitals.
+\begin{figure}[H]
+\begin{center}
+\scalebox{0.7}{
+\begin{pspicture}(-7,-4.5)(7,1.5)
+%\psgrid
+\rput(-3.5,-1.8){\textbf{+}}
+% Lower left
+\uput[u](-5,-2){
+\pscircle(0,0){1}
+\qdisk(0.83,0.45){0.2}
+\pscircle(3.5,0){1.5}
+\uput{0}[u](0,-.2){\scalebox{2}{H}}
+
+\rput(1.25,0){
+\uput[d](0.83,-0.1){ \scalebox{2}{x}}
+\uput{0.01}[l](2.25,1.5){ \scalebox{2}{x}}
+\uput{0.01}[r](2.25,1.5){ \scalebox{2}{x}}
+\uput[u](3.65,0){ \scalebox{2}{x}}
+\uput[d](3.65,0){ \scalebox{2}{x}}
+\uput{0.01}[l](2.25,-1.45){ \scalebox{2}{x}}
+\uput{0.01}[r](2.25,-1.45){ \scalebox{2}{x}}
+\uput{0}[u](2.25,-.2){\scalebox{2}{Cl}}
+}
+}
+
+% \psline{->}(0.5,2)(1.5,2)
+\psline{->}(0.65,-2)(1.65,-2)
+
+% Lower right
+\uput[u](3,-2){
+\pscircle(0,0){1}
+\pscircle(2.25,0){1.5}
+\qdisk(0.83,0.45){0.2}
+\uput{0}[u](0,-.2){\scalebox{2}{H}}
+
+\uput[d](0.83,-0.1){ \scalebox{2}{x}}
+\uput{0.01}[l](2.25,1.5){ \scalebox{2}{x}}
+\uput{0.01}[r](2.25,1.5){ \scalebox{2}{x}}
+\uput[u](3.65,0){ \scalebox{2}{x}}
+\uput[d](3.65,0){ \scalebox{2}{x}}
+\uput{0.01}[l](2.25,-1.45){ \scalebox{2}{x}}
+\uput{0.01}[r](2.25,-1.45){ \scalebox{2}{x}}
+\uput{0}[u](2.25,-.2){\scalebox{2}{Cl}}
+}
+\psline(-4,-1.5)(-3.5,-4)
+\psline(-3,-2.5)(-3.5,-4)
+\rput(-3.5,-4.4){\Large{unpaired electrons}}
+\psline[arrows=<-](-1.5,0)(0,1)
+\rput(2,1.5){\Large{paired electrons in valence energy level}}
+\psline[arrows=<-](3.8,-2.6)(3.8,-4)
+\rput(3.8,-4.5){\Large{overlap of electron orbitals and}}
+\rput(3.8,-5){\Large{sharing of electron pair}}
+\end{pspicture}
+}
+\end{center}
+\caption{Covalent bonding in a molecule of hydrogen chloride}
+\label{fig:bonding:hydrogen chloride}
+\end{figure}
+}
+\end{wex}
+
+\begin{wex}{Covalent bonding involving multiple bonds}{How do nitrogen and hydrogen atoms bond to form a molecule of ammonia (NH$_{3}$)?\\}
+{\westep{Determine the electron configuration of each of the bonding atoms.}
+
+A nitrogen atom has 7 electrons, and an electron configuration of 1s$^{2}$ 2s$^{2}$ 2p$^{3}$. A hydrogen atom has only 1 electron, and an electron configuration of 1s$^{1}$.
+
+\westep{Determine the number of valence electrons for each atom, and how many of the electrons are paired or unpaired.}
+
+Nitrogen has 5 valence electrons meaning that 3 electrons are unpaired. Hydrogen has 1 valence electron and it is unpaired.
+
+\westep{Look to see how the electrons can be shared between the atoms so that the outer energy shells of all atoms are full.}
+
+Each hydrogen atom needs one more electron to complete its valence energy shell. The nitrogen atom needs three more electrons to complete its valence energy shell. Therefore \textit{three pairs of electrons} must be shared between the four atoms involved. The nitrogen atom will share three of its electrons so that each of the hydrogen atoms now have a complete valence shell. Each of the hydrogen atoms will share its electron with the nitrogen atom to complete its valence shell (figure \ref{fig:bonding:ammonia}).
+
+\begin{figure}[H]
+\scalebox{0.7}{
+\begin{pspicture}(-9,1)(9,7)
+%\psgrid
+\rput(-3.5,4.2){\textbf{+}}
+% Upper left
+\uput[u](-5,4){
+\rput(-1.75,0.25){\scalebox{ 2}{ {\bf 3} }}
+\pscircle(-0.25,0){1}
+\qdisk(0.58,0.45){0.2}
+\uput{0}[u](-0.25,-.2){\scalebox{2}{H}}
+
+\rput(1.25,0){
+\pscircle(2.25,0){1.5}
+\uput[d](0.83,-0.1){ \scalebox{2}{x}} % left side
+
+\uput{0.01}[l](2.25,1.5){ \scalebox{2}{x}} % top
+\uput{0.01}[r](2.25,1.5){ \scalebox{2}{x}}
+
+\uput[u](3.65,0){ \scalebox{2}{x}} % right side
+\uput{0.01}[l](2.25,-1.45){ \scalebox{2}{x}} % bottom
+\uput{0}[u](2.25,-.2){\scalebox{2}{N}} % N label
+}
+}
+
+\psline{->}(0.5,4)(1.5,4)
+
+% Upper right
+\uput[u](3,4){
+\rput(-0.25,0){
+\pscircle(2.25,0){1.5}
+\uput[d](0.83,-0.1){ \scalebox{2}{x}} % left side
+
+\uput{0.01}[l](2.25,1.5){ \scalebox{2}{x}} % top
+\uput{0.01}[r](2.25,1.5){ \scalebox{2}{x}}
+
+\uput{0.3}[u](3.65,0){ \scalebox{2}{x}} % right side
+\uput{0.1}[r](2.25,-1.4){ \scalebox{2}{x}} % bottom
+\uput{0}[u](2.25,-.2){\scalebox{2}{N}} % N label
+}
+\rput(0,0){
+\pscircle(-0.25,0){1}
+\qdisk(0.58,0.45){0.2}
+\uput{0}[u](-0.25,-.2){\scalebox{2}{H}}
+}
+\rput(4.5,0){
+\pscircle(-0.25,0){1}
+\qdisk(-1.1,-0.45){0.2}
+\uput{0}[u](-0.25,-.2){\scalebox{2}{H}}
+}
+\rput(2.25,-2.25){
+\pscircle(-0.25,0){1}
+\qdisk(-0.75,0.9){0.2}
+\uput{0}[u](-0.25,-.2){\scalebox{2}{H}}
+}
+}
+\end{pspicture}
+}
+\caption{Covalent bonding in a molecule of ammonia}
+\label{fig:bonding:ammonia}
+\end{figure}
+}
+\end{wex}
+
+
+The above examples all show \textbf{single covalent bonds}, where only one pair of electrons is shared between \textit{the same two atoms}. If two pairs of electrons are shared between the same two atoms, this is called a \textbf{double bond}. A \textbf{triple bond} is formed if three pairs of electrons are shared.\\
+
+\begin{wex}{Covalent bonding involving a double bond}{How do oxygen atoms bond covalently to form an oxygen molecule?\\}
+{
+\westep{Determine the electron configuration of the bonding atoms.}
+Each oxygen atom has 8 electrons, and their electron configuration is 1s$^{2}$ 2s$^{2}$ 2p$^{4}$.
+
+\westep{Determine the number of valence electrons for each atom and how many of these electrons are paired and unpaired.}
+Each oxygen atom has 6 valence electrons, meaning that each atom has 2 unpaired electrons.
+
+\westep{Look to see how the electrons can be shared between atoms so that the outer energy shells of all the atoms are full.}
+
+Each oxygen atom needs two more electrons to complete its valence energy shell. Therefore \textit{two pairs of electrons} must be shared between the two oxygen atoms so that both valence shells are full. Notice that the two electron pairs are being shared between \textit{the same two} atoms, and so we call this a \textbf{double bond} (figure \ref{fig:bonding:oxygen}).
+
+\begin{figure}[H]
+\scalebox{0.7}{
+\begin{pspicture}(-9,-4)(9,1)
+%\psgrid
+\rput(-3.4,-1.8){\textbf{+}}
+% Lower left
+\uput[u](-5,-2){
+\rput(-2.5,0){
+\pscircle(2.25,0){1.5}
+\uput[u](0.83,-0.1){ \scalebox{2}{x}} % left side
+\uput[d](0.83,-0.1){ \scalebox{2}{x}} % left side
+
+\uput{0.01}[l](2.25,1.5){ \scalebox{2}{x}} % top
+\uput{0.01}[r](2.25,1.5){ \scalebox{2}{x}}
+
+\uput[u](3.65,0){ \scalebox{2}{x}} % right side
+\uput{0.01}[l](2.25,-1.45){ \scalebox{2}{x}} % bottom
+\uput{0}[u](2.25,-.2){\scalebox{2}{O}} % O label
+}
+\rput(1.25,0){
+\pscircle(2.25,0){1.5}
+\uput[d](0.83,-0.1){ \qdisk(0,0){0.2} } % left side
+
+\uput{0.3}[l](2.25,1.5){ \qdisk(0,0){0.2}} % top
+\uput{0.3}[r](2.25,1.5){ \qdisk(0,0){0.2}}
+
+\uput{0.3}[u](3.65,0){ \qdisk(0,0){0.2}} % right side
+\uput{0.3}[d](3.65,0){ \qdisk(0,0){0.2}} % right side
+\uput{0.3}[l](2.25,-1.45){ \qdisk(0,0){0.2}} % bottom
+\uput{0}[u](2.25,-.2){\scalebox{2}{O}} % O label
+}
+}
+
+
+\psline{->}(0.65,-2)(1.65,-2)
+
+
+% Lower right
+\uput[u](3,-2){
+\rput(-1.5,0){
+\pscircle(2.25,0){1.5}
+\uput[u](0.83,-0.1){ \scalebox{2}{x}} % left side
+\uput[d](0.83,-0.1){ \scalebox{2}{x}} % left side
+
+\uput{0.01}[l](2.25,1.5){ \scalebox{2}{x}} % top
+\uput{0.01}[r](2.25,1.5){ \scalebox{2}{x}}
+
+\uput[u](3.4,0){ \scalebox{2}{x}} % right side
+\uput[d](3.4,0){ \scalebox{2}{x}} % right side
+\uput{0}[u](2.25,-.2){\scalebox{2}{O}} % O label
+}
+\rput(1.25,0){
+\pscircle(2.25,0){1.5}
+\uput{0.35}[u](1.06,-0.02){ \qdisk(0,0){0.2} } % left side
+\uput{0.35}[d](1.06,-0.02){ \qdisk(0,0){0.2} } % left side
+
+\uput{0.3}[l](2.25,1.5){ \qdisk(0,0){0.2}} % top
+\uput{0.3}[r](2.25,1.5){ \qdisk(0,0){0.2}}
+
+\uput{0.3}[u](3.65,0){ \qdisk(0,0){0.2}} % right side
+\uput{0.3}[d](3.65,0){ \qdisk(0,0){0.2}} % right side
+\uput{0}[u](2.25,-.2){\scalebox{2}{O}} % O label
+}
+}
+
+\end{pspicture}
+}
+\caption{A double covalent bond in an oxygen molecule}
+\label{fig:bonding:oxygen}
+\end{figure}
+}
+\end{wex}
+
+You will have noticed in the above examples that the number of electrons that are involved in bonding varies between atoms. We say that the \textbf{valency} of the atoms is different.
+
+\Definition{Valency}{The number of electrons in the outer shell of an atom which are able to be used to form bonds with other atoms.}
+
+In the first example, the valency of both hydrogen and chlorine is one, therefore there is a single covalent bond between these two atoms. In the second example, nitrogen has a valency of three and hydrogen has a valency of one. This means that three hydrogen atoms will need to bond with a single nitrogen atom. There are three \textit{single} covalent bonds in a molecule of ammonia. In the third example, the valency of oxygen is two. This means that each oxygen atom will form two bonds with another atom. Since there is only one other atom in a molecule of O$_{2}$, a \textit{double covalent} bond is formed between these two atoms.
+
+\Tip{There is a relationship between the valency
+of an element and its position on the Periodic Table. For the elements in groups 1 to 4, the valency is the
+same as the group number. For elements in groups 5 to 7, the valency is calculated by subtracting the group number from 8. For example, the valency of fluorine (group 7) is 8-7=1, while the valency of calcium (group 2) is 2. Some elements have more than one possible valency, so you always need to be careful when you are writing a chemical formula. Often, if there is more than one possibility in terms of valency, the valency will be written in a bracket after the element symbol e.g. carbon (IV) oxide, means that in this molecule carbon has a valency of 4.}
+
+
+\Exercise{Covalent bonding and valency\\}{
+\begin{enumerate}
+\item{Explain the difference between the \textit{valence electrons} and the \textit{valency} of an element.}
+\item{Complete the table below by filling in the number of valence electrons and the valency for each of the elements shown:
+\begin{center}
+\begin{tabular}{|p{2cm}|p{2.5cm}|p{2.5cm}|p{2cm}|}\hline
+\textbf{Element} & \textbf{No. of valence electrons} & \textbf{No. of electrons needed to fill outer shell} & \textbf{Valency}\\\hline
+F & & &\\\hline
+Ar & & &\\\hline
+C & & &\\\hline
+N & & &\\\hline
+O & & &\\\hline
+\end{tabular}
+\end{center}
+}
+\item{Draw simple diagrams to show how electrons are arranged in the following covalent molecules:
+\begin{enumerate}
+\item{Water (H$_{2}$O)}
+\item{Chlorine (Cl$_{2}$)}
+\end{enumerate}
+}
+\end{enumerate}
+}
+
+
+
+% CHILD SECTION END
+
+
+
+% CHILD SECTION START
+
+\section{Lewis notation and molecular structure}
+
+Although we have used diagrams to show the structure of molecules, there are other forms of notation that can be used, such as \textbf{Lewis notation} and \textbf{Couper notation}. \textbf{Lewis notation} uses dots and crosses to represent the \textbf{valence electrons} on different atoms. The chemical symbol of the element is used to represent the nucleus and the core electrons of the atom.\\
+
+So, for example, a hydrogen atom would be represented like this:
+\begin{center}
+\begin{pspicture}(1.5,1.5)(2.5,2.1)
+%\psgrid[gridcolor=lightgray]
+\rput(2,2){\Large \textbf{H}}
+\rput(2.5,2){$\bullet$}
+\end{pspicture}
+\end{center}
+
+A chlorine atom would look like this:
+\begin{center}
+\begin{pspicture}(-1,-0.6)(2,0.4)
+%\psgrid[gridcolor=lightgray]
+\rput(1,0){\Large \textbf{Cl}}
+\uput{9pt}[d](1,0){$\times$ $\times$}
+\rput{90}(1,0){\uput{9pt}[d](0,0){$\times$ $\times$}}
+\rput{180}(1,0){\uput{9pt}[d](0,0){$\times$ $\times$}}
+\rput{270}(1,0){\uput{9pt}[d](0,0){$\times$}}
+\end{pspicture}
+\end{center}
+
+A molecule of hydrogen chloride would be shown like this:
+
+\begin{center}
+\begin{pspicture}(-1,-0.6)(2,0.6)
+%\psgrid[gridcolor=lightgray]
+\rput(1,0){\Large \textbf{Cl}}
+\uput{9pt}[d](1,0){$\times$ $\times$}
+\rput{90}(1,0){\uput{9pt}[d](0,0){$\times$ $\times$}}
+\rput{180}(1,0){\uput{9pt}[d](0,0){$\times$ $\times$}}
+\rput{270}(1,0){\uput{9pt}[d](0,0){$\times$ $\bullet$}}
+\rput(0,0){\Large \textbf{H}}
+\end{pspicture}
+\end{center}
+
+The dot and cross in between the two atoms, represent the pair of electrons that are shared in the covalent bond.
+
+\begin{wex}{Lewis notation: Simple molecules\\}{Represent the molecule $H_{2}O$ using Lewis notation\\}
+{\westep{For each atom, determine the number of valence electrons in the atom, and represent these using dots and crosses. }
+
+The electron configuration of hydrogen is 1s$^{1}$ and the electron configuration for oxygen is 1s$^{2}$ 2s$^{2}$ 2p$^{4}$. Each hydrogen atom has one valence electron, which is unpaired, and the oxygen atom has six valence electrons with two unpaired.
+
+\begin{figure}[H]
+\begin{center}
+\begin{pspicture}(-2,-0.5)(2,0.5)
+%\psgrid[gridcolor=gray]
+\rput(-1,0){\Large \textbf{H}}
+\uput{10pt}[r](-1,0){$\bullet$}
+\rput(1,0){\Large \textbf{O}}
+\uput{9pt}[d](1,0){$\times$}
+\rput{90}(1,0){\uput{9pt}[d](0,0){$\times$ $\times$}}
+\rput{180}(1,0){\uput{9pt}[d](0,0){$\times$ $\times$}}
+\rput{270}(1,0){\uput{9pt}[d](0,0){$\times$}}
+\rput(-1.5,0){\Large 2}
+\end{pspicture}
+\end{center}
+\end{figure}
+
+\westep{Arrange the electrons so that the outermost energy level of each atom is full.}
+The water molecule is represented below.
+
+\begin{figure}[H]
+\begin{center}
+\begin{pspicture}(-0.2,-0.4)(2,0.4)
+%\psgrid[gridcolor=gray]
+\rput(0.1,0){\Large \textbf{H}}
+\rput(1,0){\Large \textbf{O}}
+\uput{9pt}[d](1,0){$\times$ $\bullet$}
+\rput{90}(1,0){\uput{9pt}[d](0,0){$\times$ $\times$}}
+\rput{180}(1,0){\uput{9pt}[d](0,0){$\times$ $\times$}}
+\rput{270}(1,0){\uput{9pt}[d](0,0){$\times$ $\bullet$}}
+\rput(1,-0.8){\Large \textbf{H}}
+\end{pspicture}
+\end{center}
+\end{figure}
+}
+\end{wex}
+
+
+\begin{wex}{Lewis notation: Molecules with multiple bonds\\}{Represent the molecule HCN using Lewis notation\\}
+{\westep{For each atom, determine the number of valence electrons that the atom has from its electron configuration.}
+
+The electron configuration of hydrogen is 1s$^{1}$, the electron configuration of nitrogen is 1s$^{2}$ 2s$^{2}$ 2p$^{3}$ and for carbon is 1s$^{2}$ 2s$^{2}$ 2p$^{2}$. This means that hydrogen has one valence electron which is unpaired, carbon has four valence electrons, all of which are unpaired, and nitrogen has five valence electrons, three of which are unpaired.
+
+\begin{figure}[H]
+\begin{center}
+\begin{pspicture}(-2,-0.5)(4,0.5)
+%\psgrid[gridcolor=gray]
+\rput(-1,0){\Large \textbf{H}}
+\uput{10pt}[r](-1,0){$\bullet$}
+\rput(1,0){\Large \textbf{C}}
+\uput{9pt}[d](1,0){$\times$}
+\rput{90}(1,0){\uput{9pt}[d](0,0){$\times$}}
+\rput{180}(1,0){\uput{9pt}[d](0,0){$\times$}}
+\rput{270}(1,0){\uput{9pt}[d](0,0){$\times$}}
+\rput(3,0){\Large \textbf{N}}
+\uput{9pt}[d](3,0){$\bullet$}
+\rput{90}(3,0){\uput{9pt}[d](0,0){$\bullet$}}
+\rput{180}(3,0){\uput{9pt}[d](0,0){$\bullet$ $\bullet$}}
+\rput{270}(3,0){\uput{9pt}[d](0,0){$\bullet$}}
+\end{pspicture}
+\end{center}
+\end{figure}
+
+
+\westep{Arrange the electrons in the HCN molecule so that the outermost energy level in each atom is full.}
+The HCN molecule is represented below. Notice the three electron pairs between the nitrogen and carbon atom. Because these three covalent bonds are between the same two atoms, this is a \textit{triple} bond.
+
+\begin{figure}[H]
+\begin{center}
+\begin{pspicture}(-2,-0.4)(4,0.4)
+%\psgrid[gridcolor=gray]
+\rput(0.1,0){\Large \textbf{H}}
+\rput(1,0){\Large \textbf{C}}
+\rput{270}(1,0){\uput{9pt}[d](0,0){$\times$ $\bullet$}}
+\rput{90}(1,0){\uput{9pt}[d](0,0){$\times$ $\times$ $\times$}}
+\rput(2,0){\Large \textbf{N}}
+\rput{90}(2,0){\uput{9pt}[d](0,0){$\bullet$ $\bullet$}}
+\rput{270}(2,0){\uput{9pt}[d](0,0){$\bullet$ $\bullet$ $\bullet$}}
+\end{pspicture}
+\end{center}
+\end{figure}
+}
+\end{wex}
+
+\begin{wex}{Lewis notation: Atoms with variable valencies\\}{Represent the molecule H$_{2}$S using Lewis notation\\}
+
+{\westep{Determine the number of valence electrons for each atom.}
+Hydrogen has an electron configuration of 1s$^{1}$ and sulfur has an electron configuration of 1s$^{2}$ 2s$^{2}$ 2p$^{6}$ 3s$^{2}$ 3p$^{4}$. Each hydrogen atom has one valence electron which is unpaired, and sulfur has six valence electrons. Although sulfur has a variable valency, we know that the sulfur will be able to form 2 bonds with the hydrogen atoms. In this case, the valency of sulfur must be two.
+
+\begin{figure}[H]
+\begin{center}
+\begin{pspicture}(-2,-0.4)(2,0.4)
+%\psgrid[gridcolor=gray]
+\rput(-1,0){\Large \textbf{H}}
+\uput{10pt}[r](-1,0){$\bullet$}
+\rput(-1.5,0){\Large 2}
+\rput(1,0){\Large \textbf{S}}
+\uput{9pt}[d](1,0){$\times$}
+\rput{90}(1,0){\uput{9pt}[d](0,0){$\times$ $\times$}}
+\rput{180}(1,0){\uput{9pt}[d](0,0){$\times$ $\times$}}
+\rput{270}(1,0){\uput{9pt}[d](0,0){$\times$}}
+\end{pspicture}
+\end{center}
+\end{figure}
+
+
+\westep{Arrange the atoms in the molecule so that the outermost energy level in each atom is full.}
+The H$_{2}$S molecule is represented below.\\
+
+\begin{figure}[H]
+\begin{center}
+\begin{pspicture}(-0.2,-0.4)(2,0.4)
+%\psgrid[gridcolor=gray]
+\rput(0.1,0){\Large \textbf{H}}
+\rput(1,0){\Large \textbf{S}}
+\uput{9pt}[d](1,0){$\times$ $\bullet$}
+\rput{90}(1,0){\uput{9pt}[d](0,0){$\times$ $\times$}}
+\rput{180}(1,0){\uput{9pt}[d](0,0){$\times$ $\times$}}
+\rput{270}(1,0){\uput{9pt}[d](0,0){$\times$ $\bullet$}}
+\rput(1,-0.8){\Large \textbf{H}}
+\end{pspicture}
+\end{center}
+\end{figure}
+}
+\end{wex}
+
+Another way of representing molecules is using \textbf{Couper notation}. In this case, only the electrons that are involved in the bond between the atoms are shown. A line is used for each covalent bond. Using Couper notation, a molecule of water and a molecule of HCN would be represented as shown in figures \ref{fig:couper:water} and \ref{fig:couper:HCN} below.
+
+\begin{figure}[!h]
+\begin{center}
+\begin{pspicture}(-0,-0.8)(2,0.5)
+%\psgrid[gridcolor=gray]
+\rput(0.1,0){\Large \textbf{H}}
+\rput(1,0){\Large \textbf{O}}
+\rput(1,-0.8){\Large \textbf{H}}
+\psline(0.4,0)(0.7,0)
+\psline(1,-0.2)(1,-0.5)
+\end{pspicture}
+\caption{A water molecule represented using Couper notation}
+\label{fig:couper:water}
+\end{center}
+\end{figure}
+
+\begin{figure}[!h]
+\begin{center}
+\begin{pspicture}(-0,-0.8)(2,0.5)
+%\psgrid[gridcolor=gray]
+\rput(0.1,0){\Large \textbf{H}}
+\rput(1,0){\Large \textbf{C}}
+\psline(1.3,0.1)(1.7,0.1)
+\psline(1.3,0)(1.7,0)
+\psline(1.3,-0.1)(1.7,-0.1)
+\rput(2,0){\Large \textbf{N}}
+\psline(0.4,0)(0.7,0)
+\end{pspicture}
+\end{center}
+\caption{A molecule of HCN represented using Couper notation}
+\label{fig:couper:HCN}
+\end{figure}
+
+\Extension{Dative covalent bonds\\}{
+
+A \textbf{dative covalent bond} (also known as a coordinate covalent bond) is a description of covalent bonding between two atoms in which both electrons shared in the bond come from the same atom. This happens when a Lewis base (an electron donor) donates a pair of electrons to a Lewis acid (an electron acceptor). Lewis acids and bases will be discussed in section \ref{sec:reactiontypes:acid-base} in chapter \ref{chap:reactiontypes}. \\
+
+One example of a molecule that contains a dative covalent bond is the ammonium ion (NH$_{4}^{+}$) shown in the figure below. The hydrogen ion H$^{+}$ does not contain any electrons, and therefore the electrons that are in the bond that forms between this ion and the nitrogen atom, come only from the nitrogen.
+
+\begin{center}
+\begin{pspicture}(-1,-2)(10,2)
+%\psgrid[gridcolor=gray]
+\rput(0.1,0){\Large \textbf{H}}
+\rput(1,0){\Large \textbf{N}}
+\uput{9pt}[d](1,0){$\times$ $\bullet$}
+\rput{90}(1,0){\uput{9pt}[d](0,0){$\times$ $\times$}}
+\rput{180}(1,0){\uput{9pt}[d](0,0){$\times$ $\times$}}
+\rput{270}(1,0){\uput{9pt}[d](0,0){$\times$ $\bullet$}}
+\rput(1,-0.8){\Large \textbf{H}}
+\rput(1.9,0){\Large \textbf{H}}
+\rput(2.8,0){\Large \textbf{+}}
+\rput(4,0){\Large \textbf{[H]$^{+}$}}
+\psline[arrows=->](5,0)(6,0)
+\rput(6.8,0){
+\rput(0.1,0){\Large \textbf{H}}
+\rput(1,0){\Large \textbf{N}}
+\uput{9pt}[d](1,0){$\times$ $\bullet$}
+\rput{90}(1,0){\uput{9pt}[d](0,0){$\times$ $\times$}}
+\rput{180}(1,0){\uput{9pt}[d](0,0){$\times$ $\times$}}
+\rput{270}(1,0){\uput{9pt}[d](0,0){$\times$ $\bullet$}}
+\rput(1,-0.8){\Large \textbf{H}}
+\rput(1.9,0){\Large \textbf{H}}
+\rput(1,0.8){\Large \textbf{H}}
+}
+
+\end{pspicture}
+\end{center}
+
+}
+
+\Exercise{Atomic bonding and Lewis notation\\}{
+
+\begin{enumerate}
+\item{Represent each of the following \textit{atoms} using Lewis notation:
+\begin{enumerate}
+\item{beryllium}
+\item{calcium}
+\item{lithium}
+\end{enumerate}
+}
+\item{Represent each of the following \textit{molecules} using Lewis notation:
+\begin{enumerate}
+\item{bromine gas (Br$_{2}$)}
+\item{carbon dioxide (CO$_{2}$)}
+\end{enumerate}
+}
+\item{Which of the two molecules listed above contains a double bond?}
+
+\item{Two chemical reactions are described below.
+\begin{itemize}
+\item{nitrogen and hydrogen react to form NH$_{3}$}
+\item{carbon and hydrogen bond to form a molecule of CH$_{4}$}
+\end{itemize}
+
+For each reaction, give:
+\begin{enumerate}
+\item{the valency of each of the atoms involved in the reaction}
+\item{the Lewis structure of the product that is formed}
+\item{the chemical formula of the product}
+\item{the name of the product}
+\end{enumerate}
+}
+\item{A chemical compound has the following Lewis notation:
+
+\begin{center}
+\begin{pspicture}(1,-1)(2,0.4)
+%\psgrid[gridcolor=gray]
+\rput(0.1,0){\Large \textbf{X}}
+\rput(1,0){\Large \textbf{Y}}
+\uput{9pt}[d](1,0){$\times$ $\bullet$}
+\rput{90}(1,0){\uput{9pt}[d](0,0){$\times$ $\times$}}
+\rput{180}(1,0){\uput{9pt}[d](0,0){$\times$ $\times$}}
+\rput{270}(1,0){\uput{9pt}[d](0,0){$\times$ $\bullet$}}
+\rput(1,-0.8){\Large \textbf{H}}
+\end{pspicture}
+\end{center}
+
+
+\begin{enumerate}
+\item{How many valence electrons does element Y have?}
+\item{What is the valency of element Y?}
+\item{What is the valency of element X?}
+\item{How many covalent bonds are in the molecule?}
+\item{Suggest a name for the elements X and Y.}
+\end{enumerate}
+}
+
+\end{enumerate}
+\practiceinfo
+
+\begin{tabular}[h]{cccccc}
+(1.) aaa & (2.) aaa & (3.) aaa & (4.) aaa & (5.) aaa & (6.) aaa & (7.) aaa & 
+ \end{tabular}
+}
+
+
+
+% CHILD SECTION END
+
+
+
+% CHILD SECTION START
+
+\section{Electronegativity}
+
+\textbf{Electronegativity} is a measure of how strongly an atom pulls a shared electron pair towards it. The table below shows the electronegativities (obtained from www.thecatalyst.org/electabl.html) of a number of elements:
+
+\begin{table}[!h]
+\begin{center}
+\caption{Table of electronegativities for selected elements}
+\begin{tabular}{|l|c|}\hline
+\textbf{Element} & \textbf{Electronegativity}\\\hline
+Hydrogen (H) & 2.1\\\hline
+Sodium (Na) & 0.9\\\hline
+Magnesium (Mg) & 1.2\\\hline
+Calcium (Ca) & 1.0\\\hline
+Chlorine (Cl) & 3.0\\\hline
+Bromine (Br) & 2.8\\\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\Definition{Electronegativity}{Electronegativity is a chemical property which describes the power of an atom to attract electrons towards itself.}
+
+The greater the electronegativity of an element, the stronger its attractive pull on electrons. For example, in a molecule of hydrogen bromide (HBr), the electronegativity of bromine (2.8) is higher than that of hydrogen (2.1), and so the shared electrons will spend more of their time closer to the bromine atom. Bromine will have a slightly negative charge, and hydrogen will have a slightly positive charge. In a molecule like hydrogen ($H_{2}$) where the electronegativities of the atoms in the molecule are the same, both atoms have a neutral charge. \\
+
+\begin{IFact}{
+The concept of electronegativity was introduced by \textit{Linus Pauling} in 1932, and this became very useful in predicting the nature of bonds between atoms in molecules. In 1939, he published a book called 'The Nature of the Chemical Bond', which became one of the most influential chemistry books ever published. For this work, Pauling was awarded the Nobel Prize in Chemistry in 1954. He also received the Nobel Peace Prize in 1962 for his campaign against above-ground nuclear testing.
+}
+\end{IFact}
+
+\subsection{Non-polar and polar covalent bonds}
+
+Electronegativity can be used to explain the difference between two
+types of covalent bonds. \textbf{Non-polar covalent bonds} occur between two
+identical non-metal atoms, e.g. H$_2$, Cl$_2$ and O$_2$. Because the two atoms
+have the same electronegativity, the electron pair in the covalent
+bond is shared equally between them. However, if two different
+non-metal atoms bond then the shared electron pair will be pulled more
+strongly by the atom with the highest electronegativity. As a result, a \textbf{polar covalent bond} is formed where one atom will have a slightly negative charge and the other a slightly
+positive charge. This is represented using the symbols $\delta^{+}$ (slightly positive) and $\delta^{-}$ (slightly negative). So, in a molecule such as hydrogen chloride (HCl), hydrogen is $H^{\delta^{+}}$ and chlorine is $Cl^{\delta^{-}}$.
+
+\subsection{Polar molecules}
+
+Some molecules with polar covalent bonds are \textbf{polar molecules},
+e.g. H$_2$O. But not \textit{all} molecules with polar covalent bonds are polar. An example is $CO_{2}$. Although $CO_{2}$ has two polar covalent bonds (between
+C$^{\delta +}$ atom and the two O$^{\delta -}$ atoms), the molecule itself is not polar. The
+reason is that CO$_2$ is a linear molecule and is therefore
+symmetrical. So there is no difference in charge between the two ends
+of the molecule. The \textit{polarity} of molecules affects properties such as \textit{solubility}, \textit{melting points} and \textit{boiling points}.
+
+\Definition{Polar and non-polar molecules\\}{
+
+A \textbf{polar molecule} is one that has one end with a slightly positive charge, and one end with a slightly negative charge. A \textbf{non-polar molecule} is one where the charge is equally spread across the molecule.
+}
+Presentation on polar molecules:SIYAVULA-PRESENTATION:http://cnx.org/content/m38898/latest/#slidesharefigure
+\Exercise{Electronegativity\\}{
+
+\begin{enumerate}
+\item{In a molecule of hydrogen chloride (HCl),
+\begin{enumerate}
+\item{What is the electronegativity of hydrogen}
+\item{What is the electronegativity of chlorine?}
+\item{Which atom will have a slightly positive charge and which will have a slightly negative charge in the molecule?}
+\item{Is the bond a non-polar or polar covalent bond?}
+\item{Is the molecule polar or non-polar?}
+\end{enumerate}
+}
+
+\item{Complete the table below:
+
+\begin{tabular}{|p{1.4cm}|p{2.7cm}|p{2.6cm}|p{2.6cm}|}\hline
+\textbf{Molecule} & \textbf{Difference in electronegativity between atoms} & \textbf{Non-polar/polar covalent bond} & \textbf{Polar/non-polar molecule}\\\hline
+H$_{2}$O & & & \\\hline
+HBr & & & \\\hline
+F$_{2}$ & & & \\\hline
+CH$_{4}$ & & & \\\hline
+\end{tabular}
+}
+\end{enumerate}
+\practiceinfo
+
+\begin{tabular}[h]{cccccc}
+(1.) aaa & (2.) aaa & 
+ \end{tabular}
+}
+
+% CHILD SECTION END
+
+
+
+% CHILD SECTION START
+
+\section{Ionic Bonding}
+
+\subsection{The nature of the ionic bond}
+
+You will remember that when atoms bond, electrons are either \textit{shared} or they are \textit{transferred} between the atoms that are bonding. In covalent bonding, electrons are shared between the atoms. There is another type of bonding, where electrons are \textit{transferred} from one atom to another. This is called \textbf{ionic bonding}.\\
+
+Ionic bonding takes place when the difference in electronegativity between the two atoms is more than 1.7. This usually happens when a metal atom bonds with a non-metal atom. When the difference in electronegativity is large, one atom will attract the shared electron pair much more strongly than the other, causing electrons to be transferred from one atom to the other.
+
+\Definition{Ionic bond}{
+An ionic bond is a type of chemical bond based on the electrostatic forces between two oppositely-charged ions. When ionic bonds form, a metal donates one or more electrons, due to having a low electronegativity, to form a positive ion or cation. The non-metal atom has a high electronegativity, and therefore readily gains electrons to form a negative ion or anion. The two ions are then attracted to each other by electrostatic forces.
+}
+
+\textbf{Example 1:}\\
+
+In the case of NaCl, the difference in electronegativity is 2.1. Sodium has only one valence electron, while chlorine has seven. Because the electronegativity of chlorine is higher than the electronegativity of sodium, chlorine will attract the valence electron of the sodium atom very strongly. This electron from sodium is transferred to chlorine. Sodium loses an electron and forms a $Na^{+}$ ion. Chlorine gains an electron and forms a $Cl^{-}$ ion. The attractive force between the positive and negative ion holds the molecule together.\\
+
+The balanced equation for the reaction is:
+
+\begin{equation*}
+Na + Cl \rightarrow NaCl
+\end{equation*}
+
+This can be represented using Lewis notation:
+
+\begin{figure}[!h]
+\begin{center}
+\begin{pspicture}(-3,-1.4)(6,1)
+%\psgrid
+\psline[linearc=0.25]{->}(-1.5,-0.2)(-1.2,-0.6)(-0.8,-0.2)
+\rput(-1.2,-0.8){electron transer from}
+\rput(-1.2,-1.1){sodium to chlorine}
+\rput(-1.1,0){\textbf{+}}
+\rput(-2.1,0){ \scalebox{2}{Na}}
+\uput{15pt}[r](-2.1,0){$\bullet$}
+\rput(-0.3,0){
+\uput{0.05}[l](0,0.5){$\times$}		% Top
+\uput{0.05}[r](0,0.5){$\times$}
+\uput{0.05}[u](0.5,0){$\times$}		% Right
+\uput{0.05}[d](0.5,0){$\times$}
+\uput{0.05}[l](0,-0.5){$\times$}		% Bottom
+\uput{0.05}[r](0,-0.5){$\times$}
+\uput{0.05}[u](-0.5,0){$\times$}		% Left
+\rput(-0.2,0){ \scalebox{2}{Cl}}
+
+}
+
+\psline[arrowsize=0.2]{->}(0.75,0)(1.75,0)
+
+\rput(4.05,0){ \scalebox{2}{[Na]$ ^+ $[\hspace{0.02cm}  Cl \hspace{0.02cm}]$^-$} }
+\rput(4.7,0){
+\uput{0.05}[l](0,0.5){$\times$}		% Top
+\uput{0.05}[r](0,0.5){$\times$}
+\uput{0.05}[u](0.5,0){$\times$}		% Right
+\uput{0.05}[d](0.5,0){$\times$}
+\uput{0.05}[l](0,-0.5){$\times$}		% Bottom
+\uput{0.05}[r](0,-0.5){$\times$}
+\uput{0.05}[u](-0.5,0){$\times$}		% Left
+\uput{0.05}[d](-0.5,0){$\bullet$}
+}
+
+\end{pspicture}
+
+\caption{Ionic bonding in sodium chloride}
+\end{center}
+\end{figure}
+
+
+\textbf{Example 2:}\\
+
+Another example of ionic bonding takes place between magnesium (Mg) and oxygen (O) to form magnesium oxide (MgO). Magnesium has two valence electrons and an electronegativity of 1.2, while oxygen has six valence electrons and an electronegativity of 3.5. Since oxygen has a higher electronegativity, it attracts the two valence electrons from the magnesium atom and these electrons are transferred from the magnesium atom to the oxygen atom. Magnesium loses two electrons to form $Mg^{2+}$, and oxygen gains two electrons to form $O^{2-}$. The attractive force between the oppositely charged ions is what holds the molecule together.\\
+
+The balanced equation for the reaction is:
+
+\begin{equation*}
+2Mg + O_{2} \rightarrow 2MgO
+\end{equation*}
+
+Because oxygen is a diatomic molecule, two magnesium atoms will be needed to combine with one oxygen molecule (which has two oxygen atoms) to produce two molecules of magnesium oxide (MgO).
+
+\begin{figure}[!h]
+\begin{center}
+\begin{pspicture}(-3,-1.2)(6,1)
+%\psgrid
+\psline[linearc=0.25]{->}(-1.8,0.6)(-1.2,0.8)(-0.7,0)
+\psline[linearc=0.25]{->}(-1.2,-0.2)(-0.6,-0.6)(-0.2,-0.4)
+\rput(-1,-1){two electrons transferred}
+\rput(-1,-1.3){from Mg to O}
+\rput(-2,0){ \scalebox{2} {Mg}}
+\uput{17pt}[r](-2,0){$\bullet$}
+\uput{12pt}[u](-2,0){$\bullet$}
+
+\rput(0,0){ \scalebox{2} {O}}
+
+\rput(0,0){
+\uput{0.05}[l](0,0.5){$\times$}		% Top
+\uput{0.05}[r](0,0.5){$\times$}
+\uput{0.05}[u](0.5,0){$\times$}		% Right
+\uput{0.05}[d](0.5,0){$\times$}
+\uput{0.05}[r](0,-0.5){$\times$}
+\uput{0.05}[u](-0.5,0){$\times$}		% Left
+
+}
+\psline[arrowsize=0.2]{->}(0.75,0)(1.75,0)
+
+\rput(4.35,0){ \scalebox{2}{[Mg]$ ^{2+} $[\hspace{0.1cm}  O \hspace{0.1cm}]$^{2-}$} }
+\rput(5,0){
+\uput{0.05}[l](0,0.5){$\times$}		% Top
+\uput{0.05}[r](0,0.5){$\times$}
+\uput{0.05}[u](0.5,0){$\times$}		% Right
+\uput{0.05}[d](0.5,0){$\times$}
+\uput{0.1}[l](0,-0.5){$\bullet$}		% Bottom
+\uput{0.05}[r](0,-0.5){$\times$}
+\uput{0.05}[u](-0.5,0){$\times$}		% Left
+\uput{0.1}[d](-0.5,0){$\bullet$}
+}
+
+\end{pspicture}
+
+\end{center}
+\caption{Ionic bonding in magnesium oxide}
+\end{figure}
+
+\Tip{Notice that the number of electrons that is either lost or gained by an atom during ionic bonding, is the same as the \textbf{valency} of that element}
+
+\Exercise{Ionic compounds\\}{
+
+\begin{enumerate}
+\item{Explain the difference between a \textit{covalent} and an \textit{ionic} bond.}
+\item{Magnesium and chlorine react to form magnesium chloride.}
+\begin{enumerate}
+\item{What is the difference in electronegativity between these two elements?}
+\item{Give the chemical formula for:}
+\begin{itemize}
+\item{a magnesium ion}
+\item{a choride ion}
+\item{the ionic compound that is produced during this reaction}
+\end{itemize}
+\item{Write a balanced chemical equation for the reaction that takes place.}
+\end{enumerate}
+\item{Draw Lewis diagrams to represent the following ionic compounds:
+\begin{enumerate}
+\item{sodium iodide (NaI)}
+\item{calcium bromide (CaBr$_{2}$)}
+\item{potassium chloride (KCl)}
+\end{enumerate}
+}
+\end{enumerate}
+\practiceinfo
+
+\begin{tabular}[h]{cccccc}
+(1.) aaa & (2.) aaa & (3.) aaa & 
+ \end{tabular}
+}
+
+\subsection{The crystal lattice structure of ionic compounds}
+
+Ionic substances are actually a combination of lots of ions bonded
+together into a giant molecule. The arrangement of ions in a regular,
+geometric structure is called a \textbf{crystal lattice}. So in
+fact NaCl does not contain one Na and one Cl ion, but rather a lot of
+these two ions arranged in a crystal lattice where the ratio of Na to
+Cl ions is 1:1. The structure of a crystal lattice is shown in figure \ref{fig:atomcomb:crystal lattice}.\\
+
+\begin{figure}[h]
+\begin{center}
+\begin{pspicture}(-3,-3)(3,3)
+%\psgrid
+\psline(2.4,2.4)(4.4,2.4)
+\rput(6.5,2.4){atom of element 1 (e.g. Na)}
+\psline(2.4,0.4)(4.4,0.4)
+\rput(6.5,0.4){atom of element 2 (e.g. Cl)}
+\psline(2.2,-1.8)(4.4,-1.8)
+\rput(6.8,-1.8){ionic bonds hold atoms together}
+\rput(6.8,-2.2){in the lattice structure}
+
+\psset{Alpha=75,Beta=20}
+\psset{xMin=-3,xMax=3,yMin=-3,yMax=3,zMin=-3,zMax=3}
+%   \pstThreeDCoor
+\pstThreeDLine(-2,-2,-2)(-2,-2,2) \pstThreeDLine(-2,-2,2)(-2,2,2)
+\pstThreeDLine(-2,2,2)(-2,2,-2) \pstThreeDLine(-2,2,-2)(-2,-2,-2)
+\pstThreeDLine(-2,-2,0)(-2,2,0) \pstThreeDLine(-2,0,-2)(-2,0,2)
+
+\pstThreeDLine(0,-2,-2)(0,-2,2) \pstThreeDLine(0,-2,2)(0,2,2)
+\pstThreeDLine(0,2,2)(0,2,-2) \pstThreeDLine(0,2,-2)(0,-2,-2)
+\pstThreeDLine(0,-2,0)(0,2,0) \pstThreeDLine(0,0,-2)(0,0,2)
+
+\pstThreeDLine(2,-2,-2)(2,-2,2) \pstThreeDLine(2,-2,2)(2,2,2)
+\pstThreeDLine(2,2,2)(2,2,-2) \pstThreeDLine(2,2,-2)(2,-2,-2)
+\pstThreeDLine(2,-2,0)(2,2,0) \pstThreeDLine(2,0,-2)(2,0,2)
+
+\pstThreeDLine(-2,2,2)(2,2,2) \pstThreeDLine(-2,0,2)(2,0,2)
+\pstThreeDLine(-2,-2,2)(2,-2,2)
+\pstThreeDLine(-2,2,0)(2,2,0) \pstThreeDLine(-2,0,0)(2,0,0)
+\pstThreeDLine(-2,-2,0)(2,-2,0)
+\pstThreeDLine(-2,2,-2)(2,2,-2) \pstThreeDLine(-2,0,-2)(2,0,-2)
+\pstThreeDLine(-2,-2,-2)(2,-2,-2)
+
+\SpecialCoor
+\psset{dotstyle=*,dotscale=3.2}
+\pstThreeDDot(-2,-2,-2)\pstThreeDDot(-2,2,-2)\pstThreeDDot( 0,0,-2)
+\pstThreeDDot( 2,-2,-2)\pstThreeDDot( 2,2,-2)
+\pstThreeDDot(-2,0, 0)\pstThreeDDot( 0,-2, 0)\pstThreeDDot( 0,2, 0)
+\pstThreeDDot( 2,0, 0)
+\pstThreeDDot(-2,-2, 2)\pstThreeDDot(-2,2, 2)\pstThreeDDot( 0,0, 2)
+\pstThreeDDot( 2,-2, 2)\pstThreeDDot( 2,2, 2)
+
+\psset{dotstyle=o,dotscale=3}
+\pstThreeDDot(-2,0,-2)\pstThreeDDot( 0,-2,-2)\pstThreeDDot( 0,2,-2)
+\pstThreeDDot( 2,0,-2)
+\pstThreeDDot(-2,-2, 0)\pstThreeDDot(-2,2, 0)\pstThreeDDot( 0,0, 0)
+\pstThreeDDot( 2,-2, 0)\pstThreeDDot( 2,2, 0)
+\pstThreeDDot(-2,0, 2)\pstThreeDDot( 0,-2, 2)\pstThreeDDot( 0,2, 2)
+\pstThreeDDot( 2,0, 2)
+
+%  \psgrid
+\end{pspicture}
+\end{center}
+\caption{The crystal lattice arrangement in an ionic compound (e.g. NaCl)}
+\label{fig:atomcomb:crystal lattice}
+\end{figure}
+
+\subsection{Properties of Ionic Compounds}
+\label{subsec:bonding:ionic properties}
+
+Ionic compounds have a number of properties:
+
+\begin{itemize}
+\item{Ions are arranged in a lattice structure}
+\item{Ionic solids are crystalline at room temperature}
+\item{The ionic bond is a strong electrical attraction. This means that ionic compounds are often hard and have high melting and boiling points}
+\item{Ionic compounds are brittle, and bonds are broken along planes when the compound is stressed}
+\item{Solid crystals don't conduct electricity, but ionic solutions do}
+\end{itemize}
+
+
+
+% CHILD SECTION END
+
+
+
+% CHILD SECTION START
+
+\section{Metallic bonds}
+
+\subsection{The nature of the metallic bond}
+
+The structure of a metallic bond is quite different from covalent and ionic bonds. In a metal bond, the valence electrons are \textit{delocalised}, meaning that an atom's electrons do not stay around that one nucleus. In a metallic bond, the positive atomic nuclei (sometimes called the 'atomic kernels') are surrounded by a sea of delocalised electrons which are attracted to the nuclei (figure \ref{fig:an:metallic bond}).
+
+\Definition{Metallic bond}{
+Metallic bonding is the electrostatic attraction between the positively charged atomic nuclei of metal atoms and the delocalised electrons in the metal.
+}
+
+\begin{figure}[h]
+\begin{center}
+\begin{pspicture}(-3,-3)(3,3)
+\psset{Alpha=75,Beta=20}
+\psset{xMin=-3,xMax=3,yMin=-3,yMax=3,zMin=-3,zMax=3}
+%  \pstThreeDCoor
+\pstThreeDLine(-2,-2,-2)(-2,-2,2) \pstThreeDLine(-2,-2,2)(-2,2,2)
+\pstThreeDLine(-2,2,2)(-2,2,-2) \pstThreeDLine(-2,2,-2)(-2,-2,-2)
+\pstThreeDLine(-2,-2,0)(-2,2,0) \pstThreeDLine(-2,0,-2)(-2,0,2)
+
+\pstThreeDLine(0,-2,-2)(0,-2,2) \pstThreeDLine(0,-2,2)(0,2,2)
+\pstThreeDLine(0,2,2)(0,2,-2) \pstThreeDLine(0,2,-2)(0,-2,-2)
+\pstThreeDLine(0,-2,0)(0,2,0) \pstThreeDLine(0,0,-2)(0,0,2)
+
+\pstThreeDLine(2,-2,-2)(2,-2,2) \pstThreeDLine(2,-2,2)(2,2,2)
+\pstThreeDLine(2,2,2)(2,2,-2) \pstThreeDLine(2,2,-2)(2,-2,-2)
+\pstThreeDLine(2,-2,0)(2,2,0) \pstThreeDLine(2,0,-2)(2,0,2)
+
+\pstThreeDLine(-2,2,2)(2,2,2) \pstThreeDLine(-2,0,2)(2,0,2)
+\pstThreeDLine(-2,-2,2)(2,-2,2)
+\pstThreeDLine(-2,2,0)(2,2,0) \pstThreeDLine(-2,0,0)(2,0,0)
+\pstThreeDLine(-2,-2,0)(2,-2,0)
+\pstThreeDLine(-2,2,-2)(2,2,-2) \pstThreeDLine(-2,0,-2)(2,0,-2)
+\pstThreeDLine(-2,-2,-2)(2,-2,-2)
+
+\psset{dotstyle=o,dotscale=3.3}
+\pstThreeDDot(-2,-2,-2)\pstThreeDDot(-2,2,-2)\pstThreeDDot( 0,0,-2)
+\pstThreeDDot( 2,-2,-2)\pstThreeDDot( 2,2,-2)
+\pstThreeDDot(-2,0, 0)\pstThreeDDot( 0,-2, 0)\pstThreeDDot( 0,2, 0)
+\pstThreeDDot( 2,0, 0)
+\pstThreeDDot(-2,-2, 2)\pstThreeDDot(-2,2, 2)\pstThreeDDot( 0,0, 2)
+\pstThreeDDot( 2,-2, 2)\pstThreeDDot( 2,2, 2)
+
+\pstThreeDDot(-2,0,-2)\pstThreeDDot( 0,-2,-2)\pstThreeDDot( 0,2,-2)
+\pstThreeDDot( 2,0,-2)
+\pstThreeDDot(-2,-2, 0)\pstThreeDDot(-2,2, 0)\pstThreeDDot( 0,0, 0)
+\pstThreeDDot( 2,-2, 0)\pstThreeDDot( 2,2, 0)
+\pstThreeDDot(-2,0, 2)\pstThreeDDot( 0,-2, 2)\pstThreeDDot( 0,2, 2)
+\pstThreeDDot( 2,0, 2)
+
+\psset{dotstyle=+,dotscale=1.5}
+\pstThreeDDot(-2,-2,-2)\pstThreeDDot(-2,2,-2)\pstThreeDDot( 0,0,-2)
+\pstThreeDDot( 2,-2,-2)\pstThreeDDot( 2,2,-2)
+\pstThreeDDot(-2,0, 0)\pstThreeDDot( 0,-2, 0)\pstThreeDDot( 0,2, 0)
+\pstThreeDDot( 2,0, 0)
+\pstThreeDDot(-2,-2, 2)\pstThreeDDot(-2,2, 2)\pstThreeDDot( 0,0, 2)
+\pstThreeDDot( 2,-2, 2)\pstThreeDDot( 2,2, 2)
+\pstThreeDDot(-2,0,-2)\pstThreeDDot( 0,-2,-2)\pstThreeDDot( 0,2,-2)
+\pstThreeDDot( 2,0,-2)
+\pstThreeDDot(-2,-2, 0)\pstThreeDDot(-2,2, 0)\pstThreeDDot( 0,0, 0)
+\pstThreeDDot( 2,-2, 0)\pstThreeDDot( 2,2, 0)
+\pstThreeDDot(-2,0, 2)\pstThreeDDot( 0,-2, 2)\pstThreeDDot( 0,2, 2)
+\pstThreeDDot( 2,0, 2)
+
+\psset{dotstyle=*,dotsize=2pt}
+\multido{\ixpos=-2+2}{3}{\multido{\iypos=-1+2}{2}{
+\multido{\izpos=-1+2}{2}{\pstThreeDDot(\ixpos,\iypos,\izpos)}
+}
+}
+\multido{\iypos=-2+2}{3}{\multido{\ixpos=-1+2}{2}{
+\multido{\izpos=-1+2}{2}{\pstThreeDDot(\ixpos,\iypos,\izpos)}
+}
+}
+\multido{\izpos=-2+2}{3}{\multido{\iypos=-1+2}{2}{
+\multido{\ixpos=-1+2}{2}{\pstThreeDDot(\ixpos,\iypos,\izpos)}
+}
+}
+
+\end{pspicture}
+\end{center}
+\caption{Positive atomic nuclei (+) surrounded by delocalised electrons ($\bullet$)}
+\label{fig:an:metallic bond}
+\end{figure}
+
+
+\subsection{The properties of metals}
+
+Metals have several unique properties as a result of this arrangement:
+
+\begin{itemize}
+\item{\textit{Thermal conductors}
+
+Metals are good conductors of heat and are therefore used in cooking utensils such as pots and pans. Because the electrons are loosely bound and are able to move, they can transport heat energy from one part of the material to another.}
+
+\item{\textit{Electrical conductors}
+
+Metals are good conductors of electricity, and are therefore used in electrical conducting wires. The loosely bound electrons are able to move easily and to transfer charge from one part of the material to another.}
+
+\item{\textit{Shiny metallic lustre}
+
+Metals have a characteristic shiny appearance and are often used to make jewellery. The loosely bound electrons are able to absorb and reflect light at all frequencies, making metals look polished and shiny.}
+
+\item{\textit{Malleable and ductile}
+
+This means that they can be bent into shape without breaking (malleable) and can be stretched into thin wires (ductile) such as copper, which can then be used to conduct electricity. Because the bonds are not fixed in a particular direction, atoms can slide easily over one another, making metals easy to shape, mould or draw into threads.}
+
+\item{\textit{Melting point}
+
+Metals usually have a high melting point and can therefore be used to make cooking pots and other equipment that needs to become very hot, without being damaged. The high melting point is due to the high strength of metallic bonds.}
+
+\item{\textit{Density}
+
+Metals have a high density because their atoms are packed closely together.}
+
+\end{itemize}
+
+\Exercise{Chemical bonding\\}{
+
+\begin{enumerate}
+\item{Give two examples of everyday objects that contain..
+\begin{enumerate}
+\item{covalent bonds}
+\item{ionic bonds}
+\item{metallic bonds}
+\end{enumerate}
+}
+\item{Complete the table which compares the different types of bonding:
+\begin{center}
+\begin{tabular}{|l|l|l|l|}\hline
+& \textbf{Covalent} & \textbf{Ionic} & \textbf{Metallic}\\\hline
+Types of atoms involved & & & \\\hline
+Nature of bond between atoms & & & \\\hline
+Melting Point (high/low) & & & \\\hline
+Conducts electricity? (yes/no) & & & \\\hline
+Other properties & & & \\\hline
+\end{tabular}
+\end{center}
+}
+
+\item{Complete the table below by identifying the type of bond (covalent, ionic or metallic) in each of the compounds:}
+
+\begin{center}
+\begin{tabular}{|l|c|}\hline
+\textbf{Molecular formula} & \textbf{Type of bond}\\\hline
+H$_{2}$SO$_{4}$ & \\\hline
+FeS & \\\hline
+NaI & \\\hline
+MgCl$_{2}$ & \\\hline
+Zn & \\\hline
+\end{tabular}
+\end{center}
+
+\item{Which of these substances will conduct electricity most effectively? Give a reason for your answer.}
+
+\item{Use your knowledge of the different types of bonding to explain the following statements:
+\begin{enumerate}
+\item{Swimming during an electric storm (i.e. where there is lightning) can be very dangerous.}
+\item{Most jewellery items are made from metals.}
+\item{Plastics are good insulators.}
+\end{enumerate}
+}
+\end{enumerate}
+\practiceinfo
+
+\begin{tabular}[h]{cccccc}
+(1.) aaa & (2.) aaa & (3.) aaa & (4.) aaa & (5.) aaa & 
+ \end{tabular}
+}
+
+
+
+% CHILD SECTION END
+
+
+
+% CHILD SECTION START
+
+\section{Writing chemical formulae}
+
+\subsection{The formulae of covalent compounds}
+
+To work out the formulae of covalent compounds, we need to use the valency of the atoms in the compound. This is because the valency tells us how many bonds each atom can form. This in turn can help to work out how many atoms of each element are in the compound, and therefore what its formula is. The following are some examples where this information is used to write the chemical formula of a compound.\\
+
+\begin{wex}{Formulae of covalent compounds}{Write the chemical formula for water\\}
+{\westep{Write down the elements that make up the compound.}
+A molecule of water contains the elements \textit{hydrogen} and \textit{oxygen}.
+\westep{Determine the valency of each element}
+The valency of hydrogen is 1 and the valency of oxygen is 2. This means that oxygen can form two bonds with other elements and each of the hydrogen atoms can form one.
+\westep{Write the chemical formula}
+Using the valencies of hydrogen and oxygen, we know that in a single water molecule, two hydrogen atoms will combine with one oxygen atom. The chemical formula for water is therefore:
+\begin{center}
+\textbf{H$_2$O}.
+\end{center}}
+\end{wex}
+
+\begin{wex}{Formulae of covalent compounds}{Write the chemical formula for magnesium oxide\\}
+{\westep{Write down the elements that make up the compound.}
+A molecule of magnesium oxide contains the elements \textit{magnesium} and \textit{oxygen}.
+\westep{Determine the valency of each element}
+The valency of magnesium is
+2, while the valency of oxygen is also 2. In a molecule of magnesium oxide, one atom of magnesium will combine with one atom
+of oxygen. \\
+\westep{Write the chemical formula}
+The chemical formula for magnesium oxide is therefore:
+
+\begin{center}
+\textbf{MgO}
+\end{center}}
+\end{wex}
+
+\begin{wex}{Formulae of covalent compounds}{Write the chemical formula for copper (II) chloride.\\}
+
+{\westep{Write down the elements that make up the compound.}
+A molecule of copper (II) chloride contains the elements \textit{copper} and \textit{chlorine}.
+\westep{Determine the valency of each element}
+The valency of copper is 2, while
+the valency of chlorine is 1. In a molecule of copper (II) chloride, two atoms of chlorine will combine with one atom of copper.
+\westep{Write the chemical formula}
+The chemical formula for copper (II) chloride is therefore:
+
+\begin{center}
+\textbf{CuCl$_{2}$}
+\end{center}}
+\end{wex}
+
+\subsection{The formulae of ionic compounds}
+
+The overall charge of an ionic compound will always be zero and so the negative and positive charge must be the same size. We can use this information to work out what the chemical formula of an ionic compound is if we know the charge on the individual ions. In the case of NaCl for example, the charge on the sodium is +1 and the charge on the chlorine is -1. The charges balance (+1-1=0) and therefore the ionic compound is neutral. In MgO, magnesium has a charge of +2 and oxygen has a charge of -2. Again, the charges balance and the compound is neutral. Positive ions are called \textbf{cations} and negative ions are called \textbf{anions}.\\
+
+Some ions are made up of groups of atoms, and these are called \textbf{compound ions}. It is a good idea to learn the compound ions that are shown in table \ref{tab:ac:wcf:compound ion charges}
+
+\begin{table}[h]
+\caption{Table showing common compound ions and their formulae}
+\label{tab:ac:wcf:compound ion charges}
+\begin{center}
+\begin{tabular}{|l|l|}\hline
+\textbf{Name of compound ion} & \textbf{formula}\\\hline
+Carbonate & CO$_3$$^2$$^-$\\\hline
+Sulfate & SO$_4$$^2$$^-$\\\hline
+Hydroxide & OH$^-$\\\hline
+Ammonium & NH$_{4}$$^{+}$\\\hline
+Nitrate & NO$_{3}$$^{-}$\\\hline
+Hydrogen carbonate & HCO$_3$$^-$\\\hline
+Phosphate & PO$_{4}$$^{3-}$\\\hline
+Chlorate & ClO$_{3}$$^{-}$\\\hline
+Cyanide & CN$^{-}$\\\hline
+Chromate & CrO$_{4}$$^{2-}$\\\hline
+Permanganate & MnO$_{4}$$^{-}$\\\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+In the case of ionic compounds, the valency of an ion is the same as its charge (Note: valency is always expressed as a
+\textit{positive} number e.g. valency of the chloride ion is 1 and not -1). Since an ionic compound is always \textit{neutral},
+the positive charges in the compound must balance out the negative. The following are some examples:\\
+
+\begin{wex}{Formulae of ionic compounds}{Write the chemical formula for potassium iodide.\\}
+
+{\westep{Write down the ions that make up the compound.}
+Potassium iodide contains potassium and iodide ions.
+\westep{Determine the valency and charge of each ion.}
+Potassium iodide contains the ions K$^+$ (valency = 1; charge = +1) and I$^-$ (valency = 1; charge = -1). In order to balance the charge in a single molecule, one atom of potassium will be needed for every one atom of iodine.
+\\
+
+\westep{Write the chemical formula}
+The chemical formula for potassium iodide is therefore:
+
+\begin{center}
+\textbf{KI}
+\end{center}}
+\end{wex}
+
+\begin{wex}{Formulae of ionic compounds}{Write the chemical formula for sodium sulfate.\\}
+{\westep{Write down the ions that make up the compound.}
+Sodium sulfate contains sodium ions and sulfate ions.
+\westep{Determine the valency and charge of each ion.}
+Na$^+$ (valency = 1; charge = +1) and SO$_4$$^2$$^-$ (valency = 2; charge = -2).
+
+\westep{Write the chemical formula.}
+Two sodium ions will be needed to balance the charge of the sulfate ion. The chemical formula for sodium sulfate is therefore:
+
+\begin{center}
+\textbf{Na$_2$SO$_4$}
+\end{center}}
+\end{wex}
+
+\begin{wex}{Formulae of ionic compounds}{Write the chemical formula for calcium hydroxide.\\}
+{\westep{Write down the ions that make up the compound.}
+Calcium hydroxide contains calcium ions and hydroxide ions.
+\westep{Determine the valency and charge of each ion.}
+Calcium hydroxide contains the ions Ca$^2$$^+$ (charge = +2) and OH$^-$ (charge = -1). In order to balance the charge in a single molecule, two hydroxide ions will be needed for every ion of calcium.
+\westep{Write the chemical formula.}
+The chemical formula for calcium hydroxide is therefore:
+
+\begin{center}
+\textbf{Ca(OH)$_2$}
+\end{center}}
+\end{wex}
+
+\Exercise{Chemical formulae\\}{
+
+\begin{enumerate}
+\item{
+Copy and complete the table below:\\
+
+\begin{center}
+\begin{tabular}{|l|c|c|c|}\hline
+\textbf{Compound} & \textbf{Cation} & \textbf{Anion} & \textbf{Formula}\\\hline
+& Na$^{+}$ & Cl$^{-}$ & \\\hline
+potassium bromide & & Br$^{-}$ & \\\hline
+& NH$_{4}^{+}$ & Cl$^{-}$ & \\\hline
+potassium chromate & & & \\\hline
+& & & PbI \\\hline
+potassium permanganate & & & \\\hline
+calcium phosphate & & & \\\hline
+\end{tabular}
+\end{center}
+}
+
+\item{Write the chemical formula for each of the following compounds:
+
+\begin{enumerate}
+\item{hydrogen cyanide}
+\item{carbon dioxide}
+\item{sodium carbonate}
+\item{ammonium hydroxide}
+\item{barium sulphate}
+\end{enumerate}
+}
+\end{enumerate}
+\practiceinfo
+
+\begin{tabular}[h]{cccccc}
+(1.) aaa & (2.) aaa & 
+ \end{tabular}
+}
+
+
+
+% CHILD SECTION END
+
+
+
+% CHILD SECTION START
+
+\section{The Shape of Molecules}
+
+\subsection{Valence Shell Electron Pair Repulsion (VSEPR) theory}
+
+The shape of a covalent molecule can be predicted using the Valence Shell Electron Pair Repulsion (VSEPR) theory. This is a model in chemistry that tries to predict the shapes of molecules. Very simply, VSEPR theory says that the valence electron pairs in a molecule will arrange themselves around the central atom of the molecule so that the repulsion between their negative charges is as small as possible. In other words, the valence electron pairs arrange themselves so that they are as far apart as they can be. The number of valence electron pairs in the molecule determines the dhape of that molecule.\\
+
+\Definition{Valence Shell Electron Pair Repulsion Theory\\}{Valence shell electron pair repulsion (VSEPR) theory is a model in chemistry, which is used to predict the shape of individual molecules, based upon the extent of their electron-pair repulsion. \\
+
+VSEPR theory is based on the idea that the geometry of a molecule is mostly determined by repulsion among the pairs of electrons around a central atom. The pairs of electrons may be bonding or non-bonding (also called lone pairs). Only valence electrons of the central atom influence the molecular shape in a meaningful way.}
+
+\subsection{Determining the shape of a molecule}
+
+To predict the shape of a covalent molecule, follow these steps:\\
+
+\textit{Step 1:}
+
+Draw the molecule using Lewis notation. Make sure that you draw \textit{all} the electrons around the molecule's central atom.\\
+
+\textit{Step 2:}
+
+Count the number of electron pairs around the central atom.\\
+
+\textit{Step 3:}
+
+Determine the basic geometry of the molecule using the table below. For example, a molecule with two electron pairs around the central atom has a \textit{linear} shape, and one with four electron pairs around the central atom would have a \textit{tetrahedral} shape. The situation is actually more complicated than this, but this will be discussed later in this section.\\
+
+\begin{table}[!h]
+\begin{center}
+\caption{The effect of electron pairs in determining the shape of molecules}
+\begin{tabular}{|c|l|}\hline
+\textbf{Number of electron pairs} & \textbf{Geometry}\\\hline
+2 & linear \\\hline
+3 & trigonal planar \\\hline
+4 & tetrahedral \\\hline
+5 & trigonal bipyramidal \\\hline
+6 & octahedral \\\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+Figure \ref{fig:bonding:shapes} shows each of these shapes. Remember that the shapes are 3-dimensional, and so you need to try to imagine them in this way. In the diagrams, the thicker lines represents those parts of the molecule that are 'in front' (or coming out of the page), while the dashed lines represent those parts that are 'at the back' (or going into the page) of the molecule.\\
+
+\begin{figure}[!h]
+\begin{center}
+\begin{pspicture}(0,-1.5)(8,4)
+%\psgrid[gridcolor=gray]
+\def\line{\psline(0.1,0)(0.8,0)\pscircle(0.9,0){0.1}}
+\def\lined{\psline[linestyle=dashed](0.1,0)(0.8,0)\pscircle(0.9,0){0.1}}
+\def\linet{\psline[linewidth=2pt](0.1,0)(0.8,0)\pscircle(0.9,0){0.1}}
+
+\rput(1,3){
+\pscircle(-0.9,0){0.1}
+\psline(-0.8,0)(0.8,0)
+\pscircle(0.9,0){0.1}
+\psarc{<->}(0,0){0.5}{0}{180}
+\uput[u](0,0.5){$180^{\circ}$}
+\uput[d](0,0){linear}
+}
+
+\rput(4,3){
+\pscircle(0,0){0.1}
+\rput{90}{\line}
+\rput{210}{\line}
+\rput{330}{\line}
+\psarc{<->}(0,0){0.5}{90}{210}
+\uput{12pt}[ul](0,0){$120^{\circ}$}
+\uput[d](0,-0.5){trigonal planar}
+}
+
+\rput(7,3){
+\pscircle(0,0){0.1}
+\rput{90}{\line}
+\rput{199}{\lined}
+\rput{251}{\linet}
+\rput{-19}{\line}
+\psarcn{<->}(0,0){0.5}{90}{-19}
+\uput{12pt}[ul](0,0){$109^{\circ}$}
+\uput[d](0,-1){tetrahedral}
+}
+
+\rput(2,0.2){
+\pscircle(0,0){0.1}
+\def\line{\psline(0.1,0)(0.8,0)\pscircle(0.9,0){0.1}}
+\rput{0}{\line}
+\rput{90}{\line}
+\rput{120}{\lined}
+\rput{270}{\line}
+\rput{210}{\linet}
+\psarc{<->}(0,0){0.4}{0}{90}
+\uput{12pt}[ur](0,0){$90^{\circ}$}
+\uput[d](0,-1){trigonal bipyramidal}
+}
+
+\rput(6,0.2){
+\pscircle(0,0){0.1}
+\def\line{\psline(0.1,0)(0.8,0)\pscircle(0.9,0){0.1}}
+\rput{45}{\lined}
+\rput{90}{\line}
+\rput{135}{\lined}
+\rput{225}{\linet}
+\rput{270}{\line}
+\rput{315}{\linet}
+\psarc{<->}(0,0){0.4}{45}{90}
+\rput(0.85;62){$90^{\circ}$}
+\uput[d](0,-1){octahedral}
+}
+\end{pspicture}
+\end{center}
+\caption{Some common molecular shapes}
+\label{fig:bonding:shapes}
+\end{figure}
+
+\begin{wex}{The shapes of molecules}{Determine the shape of a molecule of $O_{2}$\\}
+{\westep{Draw the molecule using Lewis notation}
+
+\begin{figure}[H]
+\begin{center}
+\begin{pspicture}(-2,-1)(2,1)
+%\psgrid[gridcolor=gray]
+\rput(-0.6,0){\Large \textbf{O}}
+\rput(0.6,0){\Large \textbf{O}}
+\rput{90}(-0.6,0){\uput{9pt}[d](0,0){$\times$ $\times$}}
+\rput{270}(-0.6,0){\uput{9pt}[d](0,0){$\times$ $\times$}}
+\uput{10pt}[u](-0.6,0){$\times$ $\times$}
+\rput{90}(0.6,0){\uput{9pt}[d](0,0){$\bullet$ $\bullet$}}
+\rput{270}(0.6,0){\uput{9pt}[d](0,0){$\bullet$ $\bullet$}}
+\uput{10pt}[u](0.6,0){$\bullet$ $\bullet$}
+\end{pspicture}
+\end{center}
+\end{figure}
+\westep{Count the number of electron pairs around the central atom}
+
+There are two electron pairs.\\
+\westep{Determine the basic geometry of the molecule}
+Since there are two electron pairs, the molecule must be linear.
+}
+\end{wex}
+
+\begin{wex}{The shapes of molecules\\}{Determine the shape of a molecule of $BF_{3}$\\}
+
+{\westep{Draw the molecule using Lewis notation}
+
+\begin{figure}[H]
+\begin{center}
+\begin{pspicture}(-2,-1)(3,2)
+%\psgrid[gridcolor=gray]
+\rput(-0.3,0){\Large \textbf{F}}
+\rput(0.6,0){\Large \textbf{B}}
+\rput(1.5,0){\Large \textbf{F}}
+\rput(0.6,0.9){\Large \textbf{F}}
+
+\uput{10pt}[u](-0.3,0){$\bullet$ $\bullet$}
+\rput{270}(-0.3,0){\uput{9pt}[d](0,0){$\bullet$ $\bullet$}}
+\uput{10pt}[d](-0.3,0){$\bullet$ $\bullet$}
+
+\rput{90}(0.6,0){\uput{9pt}[d](0,0){$\times$ $\bullet$}}
+\rput{270}(0.6,0){\uput{9pt}[d](0,0){$\times$ $\bullet$}}
+\uput{9pt}[u](0.6,0){$\bullet$ $\times$}
+
+\uput{10pt}[u](1.5,0){$\bullet$ $\bullet$}
+\rput{90}(1.5,0){\uput{9pt}[d](0,0){$\bullet$ $\bullet$}}
+\uput{10pt}[d](1.5,0){$\bullet$ $\bullet$}
+
+\uput{10pt}[u](0.6,0.9){$\bullet$ $\bullet$}
+\rput{90}(0.6,0.9){\uput{9pt}[d](0,0){$\bullet$ $\bullet$}}
+\rput{270}(0.6,0.9){\uput{9pt}[d](0,0){$\bullet$ $\bullet$}}
+\end{pspicture}
+\end{center}
+\end{figure}
+\westep{Count the number of electron pairs around the central atom}
+There are three electron pairs.
+\westep{Determine the basic geometry of the molecule}
+Since there are three electron pairs, the molecule must be trigonal planar.
+}
+\end{wex}
+
+\Extension{More about molecular shapes\\}{
+
+Determining the shape of a molecule can be a bit more complicated. In the examples we have used above, we looked only at the number of \textbf{bonding electron pairs} when we were trying to decide on the molecules' shape. But there are also other electron pairs in the molecules. These electrons, which are not involved in bonding but which are also around the central atom, are called \textbf{lone pairs}. The worked example below will give you an indea of how these lone pairs can affect the shape of the molecule.
+}
+
+\begin{wex}{Advanced\\}{Determine the shape of a molecule of $NH_{3}$\\}
+
+{\westep{Draw the molecule using Lewis notation}
+
+\begin{figure}[H]
+\begin{center}
+\begin{pspicture}(-2,-0.8)(3,1)
+%\psgrid[gridcolor=gray]
+\psline[linearc=0.25]{<-}(0.5,0.6)(1,0.9)(1.5,1)
+\rput(3.2,1){lone pair of electrons}
+\rput(-0.3,0){\Large \textbf{H}}
+\rput(0.6,0){\Large \textbf{N}}
+\rput(1.5,0){\Large \textbf{H}}
+\rput(0.6,-0.9){\Large \textbf{H}}
+
+\rput{90}(0.6,0){\uput{9pt}[d](0,0){$\times$ $\bullet$}}
+\rput{270}(0.6,0){\uput{9pt}[d](0,0){$\times$ $\bullet$}}
+\uput{9pt}[u](0.6,0){$\times$ $\times$}
+\uput{9pt}[d](0.6,0){$\times$ $\bullet$}
+\end{pspicture}
+\end{center}
+\end{figure}
+\westep{Count the number of electron pairs around the central atom}
+There are four electron pairs.
+\westep{Determine the basic geometry of the molecule}
+Since there are four electron pairs, the molecule must be tetrahedral.
+\westep{Determine how many lone pairs are around the central atom}
+There is one lone pair of electrons and this will affect the shape of the molecule.\\
+\westep{Determine the final shape of the molecule}
+The lone pair needs more space than the bonding pairs, and therefore pushes the three hydrogen atoms together a little more. The bond angles between the hydrogen and nitrogen atoms in the molecule become 106 degrees, rather than the usual 109 degrees of a tetrahedral molecule. The shape of the molecule is \textit{trigonal pyramidal}.
+}
+\end{wex}
+
+\Activity{Group work}{Building molecular models\\}{
+In groups, you are going to build a number of molecules using marshmallows to represent the atoms in the molecule, and toothpicks to represent the bonds between the atoms. In other words, the toothpicks will hold the atoms (marshmallows) in the molecule together. Try to use different coloured marshmallows to represent different elements.
+
+You will build models of the following molecules:
+
+HCl, $CH_{4}$, $H_{2}O$, HBr and NH$_{3}$\\
+
+For each molecule, you need to:\\
+
+\begin{itemize}
+\item{Determine the basic geometry of the molecule}
+\item{Build your model so that the atoms are as far apart from each other as possible (remember that the electrons around the central atom will try to avoid the repulsions between them).}
+\item{Decide whether this shape is accurate for that molecule or whether there are any lone pairs that may influence it.}
+\item{Adjust the position of the atoms so that the bonding pairs are further away from the lone pairs.}
+\item{How has the shape of the molecule changed?}
+\item{Draw a simple diagram to show the shape of the molecule. It doesn't matter if it is not 100\% accurate. This exercise is only to help you to visualise the 3-dimensional shapes of molecules.\\}
+\end{itemize}
+
+Do the models help you to have a clearer picture of what the molecules look like? Try to build some more models for other molecules you can think of.
+Presentation on shapes on molecules:SIYAVULA-PRESENTATION:http://cnx.org/content/m38905/latest/#slidesharefigure1
+}
+
+
+
+% CHILD SECTION END
+
+
+
+% CHILD SECTION START
+
+\section{Oxidation numbers}
+\label{sec:oxidation numbers}
+
+When reactions occur, an exchange of electrons takes place. \textbf{Oxidation} is the \textit{loss} of electrons from an atom, while \textbf{reduction} is the \textit{gain} of electrons by an atom. By giving elements an oxidation number, it is possible to keep track of whether that element is losing or gaining electrons during a chemical reaction. The loss of electrons in one part of the reaction must be balanced by a gain of electrons in another part of the reaction.
+
+\Definition{Oxidation number}{
+A simplified way of understanding an oxidation number is to say that it is the charge an atom would have if it was in a compound composed of ions.
+}
+
+There are a number of rules that you need to know about oxidation numbers, and these are listed below. These will probably not make much sense at first, but once you have worked through some examples, you will soon start to understand!
+
+\begin{enumerate}
+\item{\textbf{Rule 1:} An element always has an oxidation number of zero, since it is neutral.
+
+In the reaction \rm${H_{2} + Br_{2} \rightarrow 2HBr}$, the oxidation numbers of hydrogen and bromine on the left hand side of the equation are both zero.
+}
+
+\item{\textbf{Rule 2:} In most cases, an atom that is part of a molecule will have an oxidation number that has the same numerical value as its valency.}
+
+\item{\textbf{Rule 3:} Monatomic ions have an oxidation number that is equal to the charge on the ion.
+
+The chloride ion $Cl^{-}$ has an oxidation number of -1, and the magnesium ion $Mg^{2+}$ has an oxidation number of +2.
+}
+\item{\textbf{Rule 4:} In a molecule, the oxidation number for the whole molecule will be zero, unless the molecule has a charge, in which case the oxidation number is equal to the charge.}
+
+\item{\textbf{Rule 5:} Use a table of electronegativities to determine whether an atom has a positive or a negative oxidation number. For example, in a molecule of water, oxygen has a higher electronegativity so it must be negative because it attracts electrons more strongly. It will have a negative oxidation number (-2). Hydrogen will have a positive oxidation number (+1).}
+
+\item{\textbf{Rule 6:} An oxygen atom usually has an oxidation number of -2, although there are some cases where its oxidation number is -1.}
+
+\item{\textbf{Rule 7:} The oxidation number of hydrogen is usually +1. There are some exceptions where its oxidation number is -1.}
+
+\item{\textbf{Rule 8:} In most compounds, the oxidation number of the halogens is -1.}
+
+\end{enumerate}
+
+\Tip{You will notice that the oxidation number of an atom is the same as its valency. Whether an oxidation number os positive or negative, is determined by the electronegativities of the atoms involved.}
+
+\begin{wex}{Oxidation numbers\\}{Give the oxidation numbers for all the atoms in the reaction between sodium and chlorine to form sodium chloride.
+
+\begin{center}
+\rm${Na + Cl \rightarrow NaCl}$
+\end{center}
+}
+
+{\westep{Determine which atom will have a positive or negative oxidation number}
+Sodium will have a positive oxidation number and chlorine will have a negative oxidation number.\\}
+
+{\westep{Determine the oxidation number for each atom}
+Sodium (group 1) will have an oxidation number of +1. Chlorine (group 7) will have an oxidation number of -1. \\}
+
+{\westep{Check whether the oxidation numbers add up to the charge on the molecule}
+In the equation \rm${Na + Cl \rightarrow NaCl}$, the overall charge on the NaCl molecule is +1-1=0. This is correct since NaCl is neutral. This means that, in a molecule of NaCl, sodium has an oxidation number of +1 and chlorine has an oxidation number of -1. The oxidation numbers for sodium and chlorine (on the left hand side of the equation) are zero since these are elements.
+}
+\end{wex}
+
+\begin{wex}{Oxidation numbers\\}{Give the oxidation numbers for all the atoms in the reaction between hydrogen and oxygen to produce water. The unbalanced equation is shown below:
+
+\begin{center}
+\rm${H_{2} + O_{2} \rightarrow H_{2}O}$
+\end{center}
+}
+
+{\westep{Determine which atom will have a positive or negative oxidation number}
+Hydrogen will have a positive oxidation number and oxygen will have a negative oxidation number.\\}
+
+{\westep{Determine the oxidation number for each atom}
+Hydrogen (group 1) will have an oxidation number of +1. Oxygen (group 6) will have an oxidation number of -2. \\}
+
+{\westep{Check whether the oxidation numbers add up to the charge on the molecule}
+In the reaction \rm${H_{2} + O_{2} \rightarrow H_{2}O}$, the oxidation numbers for hydrogen and oxygen (on the left hand side of the equation) are zero since these are elements. In the water molecule, the sum of the oxidation numbers is 2(+1)-2=0. This is correct since the oxidation number of water is zero. Therefore, in water, hydrogen has an oxidation number of +1 and oxygen has an oxidation number of -2.
+}
+\end{wex}
+
+\begin{wex}{Oxidation numbers\\}{Give the oxidation number of sulfur in a sulphate ($SO_{4}^{2-}$) ion\\}
+
+{\westep{Determine which atom will have a positive or negative oxidation number}
+Sulfur has a positive oxidation number and oxygen will have a negative oxidation number.\\}
+
+{\westep{Determine the oxidation number for each atom}
+Oxygen (group 6) will have an oxidation number of -2. The oxidation number of sulfur at this stage is uncertain.\\}
+
+{\westep{Determine the oxidation number of sulfur by using the fact that the oxidation numbers of the atoms must add up to the charge on the molecule}
+In the polyatomic $SO_{4}^{2-}$ ion, the sum of the oxidation numbers must be -2. Since there are four oxygen atoms in the ion, the total charge of the oxygen is -8. If the overall charge of the ion is -2, then the oxidation number of sulfur must be +6.
+}
+\end{wex}
+
+\Exercise{Oxidation numbers\\}{
+
+\begin{enumerate}
+\item{Give the oxidation numbers for each element in the following chemical compounds:
+\begin{enumerate}
+\item{NO$_{2}$}
+\item{BaCl$_{2}$}
+\item{H$_{2}$SO$_{4}$}
+\end{enumerate}
+}
+
+\item{Give the oxidation numbers for the reactants and products in each of the following reactions:
+
+\begin{enumerate}
+\item{$\rm{C + O_{2} \rightarrow CO_{2}}$}
+\item{$\rm{N_{2} + 3H_{2} \rightarrow 2NH_{3}}$}
+\item{Magnesium metal burns in oxygen}
+\end{enumerate}
+}
+\end{enumerate}
+\practiceinfo
+
+\begin{tabular}[h]{cccccc}
+(1.) aaa & (2.) aaa & 
+ \end{tabular}
+}
+
+\summary{aaa}
+
+\begin{itemize}
+\item{A \textbf{chemical bond} is the physical process that causes atoms and molecules to be attracted together and to be bound in new compounds.}
+\item{Atoms are more \textbf{reactive}, and therefore more likely to bond, when their outer electron orbitals are not full. Atoms are less reactive when these outer orbitals contain the maximum number of electrons. This explains why the noble gases do not combine to form molecules.}
+\item{There are a number of \textbf{forces} that act between atoms: attractive forces between the positive nucleus of one atom and the negative electrons of another; repulsive forces between like-charged electrons, and repulsion between like-charged nuclei.}
+\item{Chemical bonding occurs when the \textbf{energy} of the system is at its lowest.}
+\item{\textbf{Bond length} is the distance between the nuclei of the atoms when they bond.}
+\item{\textbf{Bond energy} is the energy that must be added to the system for the bonds to break.}
+\item{When atoms bond, electrons are either shared or exchanged.}
+\item{\textbf{Covalent bonding} occurs between the atoms of non-metals and involves a sharing of electrons so that the orbitals of the outermost energy levels in the atoms are filled.}
+\item{The \textbf{valency} of an atom is the number of electrons in the outer shell of that atom and valence electrons are able to form bonds with other atoms.}
+\item{A \textbf{double} or \textbf{triple bond} occurs if there are two or three electron pairs that are shared between the same two atoms.}
+\item{A \textbf{dative covalent bond} is a bond between two atoms in which both the electrons that are shared in the bond come from the same atom.}
+\item{\textbf{Lewis} and \textbf{Couper} notation are two ways of representing molecular structure. In Lewis notation, dots and crosses are used to represent the valence electrons around the central atom. In Couper notation, lines are used to represent the bonds between atoms.}
+\item{\textbf{Electronegativity} measures how strongly an atom draws electrons to it.}
+\item{Electronegativity can be used to explain the difference between two types of covalent bonds: \textbf{polar covalent bonds} (between non-identical atoms) and \textbf{non-polar covalent bonds} (between identical atoms).}
+\item{An \textbf{ionic bond} occurs between atoms where the difference in electronegativity is greater than 1.7. An exchange of electrons takes place and the atoms are held together by the electrostatic force of attraction between oppositely-charged ions.}
+\item{Ionic solids are arranged in a \textbf{crystal lattice} structure.}
+\item{Ionic compounds have a number of specific \textbf{properties}, including their high melting and boiling points, brittle nature, the lattice structure of solids and the ability of ionic solutions to conduct electricity.}
+\item{A \textbf{metallic bond} is the electrostatic attraction between the positively charged nuclei of metal atoms and the delocalised electrons in the metal.}
+\item{Metals also have a number of properties, including their ability to conduct heat and electricity, their metallic lustre, the fact that they are both malleable and ductile, and their high melting point and density.}
+\item{The valency of atoms, and the way they bond, can be used to determine the \textbf{chemical formulae} of compounds.}
+\item{The \textbf{shape of molecules} can be predicted using the VSEPR theory, which uses the arrangement of electrons around the central atom to determine the most likely shape of the molecule.}
+\item{\textbf{Oxidation numbers} are used to determine whether an atom has gained or lost electrons during a chemical reaction.}
+\end{itemize}
+
+
+\begin{eocexercises}{}
+
+\begin{enumerate}
+
+\item{Give \textbf{one word/term} for each of the following descriptions.}
+\begin{enumerate}
+\item{The distance between two atoms in a molecule}
+\item{A type of chemical bond that involves the transfer of electrons from one atom to another.}
+\item{A measure of an atom's ability to attract electrons to it.}
+\end{enumerate}
+
+\item{Which ONE of the following best describes the bond formed between an H$^+$ ion and the NH$_3$ molecule?}
+\begin{enumerate}
+\item{Covalent bond}
+\item{Dative covalent (coordinate covalent) bond}
+\item{Ionic Bond}
+\item{Hydrogen Bond}
+\end{enumerate}
+
+\item{Explain the meaning of each of the following terms:}
+\begin{enumerate}
+\item{valency}
+\item{bond energy}
+\item{covalent bond}
+\end{enumerate}
+
+\item{Which of the following reactions will \textit{not} take place? Explain your answer.}
+\begin{enumerate}
+\item{$\rm{H + H \rightarrow H_{2}}$}
+\item{$\rm{Ne + Ne \rightarrow Ne_{2}}$}
+\item{$\rm{Cl + Cl \rightarrow Cl_{2}}$}
+\end{enumerate}
+
+\item{Draw the Lewis structure for each of the following:}
+\begin{enumerate}
+\item{calcium}
+\item{iodine (Hint: Which group is it in? It will be similar to others in that group)}
+\item{hydrogen bromide (HBr)}
+\item{nitrogen dioxide (NO$_{2}$)}
+\end{enumerate}
+
+\item{Given the following Lewis structure, where X and Y each represent a different element...}
+
+\begin{center}
+\begin{pspicture}(-2,-0.8)(3,0.6)
+%\psgrid[gridcolor=gray]
+\rput(-0.3,0){\Large \textbf{X}}
+\rput(0.6,0){\Large \textbf{Y}}
+\rput(1.5,0){\Large \textbf{X}}
+\rput(0.6,-0.9){\Large \textbf{X}}
+
+\rput{90}(0.6,0){\uput{9pt}[d](0,0){$\times$ $\bullet$}}
+\rput{270}(0.6,0){\uput{9pt}[d](0,0){$\times$ $\bullet$}}
+\uput{9pt}[u](0.6,0){$\times$ $\times$}
+\uput{9pt}[d](0.6,0){$\times$ $\bullet$}
+\end{pspicture}
+\end{center}
+
+\begin{enumerate}
+\item{What is the valency of X?}
+\item{What is the valency of Y?}
+\item{Which elements could X and Y represent?}
+\end{enumerate}
+
+\item{A molecule of ethane has the formula C$_{2}$H$_{6}$. Which of the following diagrams (Couper notation) accurately represents this molecule?}
+
+\begin{pspicture}(-8,-5)(8,2)
+%\psgrid[gridcolor=lightgray]
+\rput(-6,0){\textbf{C}}
+\rput(-7,0){\textbf{H}}
+\rput(-6,1){\textbf{H}}
+\rput(-6,-1){\textbf{H}}
+\rput(-5,0){\textbf{C}}
+\rput(-5,1){\textbf{H}}
+\rput(-5,-1){\textbf{H}}
+\rput(-4,0){\textbf{H}}
+\rput(-8,1){\textbf{(a)}}
+\psline(-6.3,0)(-6.7,0)
+\psline(-6,0.3)(-6,0.7)
+\psline(-6,-0.3)(-6,-0.7)
+\psline(-5.7,0)(-5.3,0)
+\psline(-5.7,0.1)(-5.3,0.1)
+\psline(-5,0.3)(-5,0.7)
+\psline(-5,-0.3)(-5,-0.7)
+\psline(-4.7,0)(-4.3,0)
+
+\rput(-1,0){\textbf{C}}
+\rput(-2,0){\textbf{H}}
+\rput(-1,1){\textbf{H}}
+\rput(-1,-1){\textbf{H}}
+\rput(0,0){\textbf{C}}
+\rput(0,-1){\textbf{H}}
+\rput(1,0){\textbf{H}}
+\rput(-3,1){\textbf{(b)}}
+\psline(-1.3,0)(-1.7,0)
+\psline(-1,0.3)(-1,0.7)
+\psline(-1,-0.3)(-1,-0.7)
+\psline(-0.7,0)(-0.3,0)
+\psline(0,-0.3)(0,-0.7)
+\psline(0.3,0)(0.3,0)
+\psline(0.3,0)(0.7,0)
+
+\rput(-8,-3.5){
+\rput(4,0){\textbf{C}}
+\rput(3,0){\textbf{H}}
+\rput(4,1){\textbf{H}}
+\rput(4,-1){\textbf{H}}
+\rput(5,0){\textbf{C}}
+\rput(5,-1){\textbf{H}}
+\rput(6,0){\textbf{H}}
+\rput(2,1){\textbf{(c)}}
+\psline(3.7,0)(3.3,0)
+\psline(4,0.3)(4,0.7)
+\psline(4,-0.3)(4,-0.7)
+\psline(4.3,0)(4.7,0)
+\psline(5,-0.3)(5,-0.7)
+\psline(5.3,0)(5.3,0)
+\psline(5.3,0)(5.7,0)
+\rput(5,1){\textbf{H}}
+\psline(5,0.3)(5,0.7)
+}
+\end{pspicture}
+
+
+\item{Potassium dichromate is dissolved in water.}
+\begin{enumerate}
+\item{Give the name and chemical formula for each of the ions in solution.}
+\item{What is the chemical formula for potassium dichromate?}
+\item{Give the oxidation number for each element in potassium dichromate.}
+\end{enumerate}
+
+\end{enumerate}
+
+\practiceinfo
+
+\begin{tabular}[h]{cccccc}
+(1.) aaa & (2.) aaa & (3.) aaa & (4.) aaa & (5.) aaa & (6.) aaa & (7.) aaa & (8.) aaa & 
+ \end{tabular}
+\end{eocexercises}
+
+
+% CHILD SECTION END
+
+
+
+% CHILD SECTION END
+
+
+
+% CHILD SECTION START
+

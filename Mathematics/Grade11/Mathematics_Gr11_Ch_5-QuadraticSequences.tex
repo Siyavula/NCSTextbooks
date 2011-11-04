@@ -1,0 +1,626 @@
+\chapter{Quadratic Sequences}
+\label{m:pin:g11}
+
+%\begin{syllabus}
+%\item Investigate number patterns (including but not limited to those where there is a constant second difference between consecutive terms in a number pattern, and the general term is therefore quadratic) and hence:
+%\begin{itemize}
+%\item make conjectures and generalisations
+%\item provide explanations and justifications and attempt to prove conjectures.
+%\end{itemize}
+%\end{syllabus}
+
+\section{Introduction}
+In Grade 10, you learned about arithmetic sequences, where the difference between consecutive terms was constant. In this chapter we learn about quadratic sequences.
+
+\section{What is a \textit{Quadratic Sequence}?}
+
+\Definition{Quadratic Sequence}{A quadratic sequence is a sequence of numbers in which the second difference between each consecutive term is constant. This called a common second difference.}
+
+For example, 
+
+\begin{equation}
+\label{eq:mp:s:quadseq:1}
+1; \: 2; \: 4; \: 7; \: 11; \: \ldots
+\end{equation}
+is a quadratic sequence. Let us see why ... 
+
+The first difference is calculated by finding the difference between consecutive terms:
+% \begin{eqnarray*}
+% a_2 - a_1 &= 2 - 1 &= 1 \\
+% a_3 - a_2 &= 4 - 2 &= 2 \\
+% a_4 - a_3 &= 7 - 4 &= 3 \\
+% a_5 - a_4 &= 11 - 7 &= 4
+% \end{eqnarray*}
+
+\begin{center}
+% \begin{tikzpicture}[>=stealth,sloped]
+%      \matrix (tree) [%
+%        matrix of nodes,
+%        minimum size=0.5cm,
+%        column sep=0.5cm,
+%        row sep=1cm,
+%      ]
+%      {
+%  	1 &    & 2 &    & 4 &    & 7 &    & 11\\
+%  	  & +1 &   & +2 &   & +3 &   & +4 &   \\         
+%      };
+% % -------------(FROM: tree-row-column) -- (TO: tree-row-column) node [.....] {LABEL};
+%      \draw[-] (tree-2-2) -- (tree-1-1) node [midway,above] {};
+%      \draw[-] (tree-2-2) -- (tree-1-3) node [midway,below] {};
+%      \draw[-] (tree-2-4) -- (tree-1-3) node [midway,above] {};
+%      \draw[-] (tree-2-4) -- (tree-1-5) node [midway,below] {};
+%      \draw[-] (tree-2-6) -- (tree-1-5) node [midway,below] {};
+%      \draw[-] (tree-2-6) -- (tree-1-7) node [midway,below] {};
+%      \draw[-] (tree-2-8) -- (tree-1-7) node [midway,below] {};
+%      \draw[-] (tree-2-8) -- (tree-1-9) node [midway,below] {};
+% 
+% \end{tikzpicture}
+% \rput(5.7,-0.5){
+\psmatrix[colsep=0.3cm,rowsep=0.3cm]
+ 	1 &    & 2 &    & 4 &    & 7 &    & 11\\
+	  & +1 &   & +2 &   & +3 &   & +4\\
+\endpsmatrix
+\psset{nodesep=3pt,arrows=-}
+\ncline{1,1}{2,2}
+\ncline{1,3}{2,2}
+\ncline{1,3}{2,4}
+\ncline{1,5}{2,4}
+\ncline{1,5}{2,6}
+\ncline{1,7}{2,6}
+\ncline{1,7}{2,8}
+\ncline{1,9}{2,8}
+% }
+% \vspace{1.2cm}
+
+\end{center}
+
+We then work out the \textit{second differences}, which are simply obtained by taking the difference between the consecutive differences \{$1; \: 2; \: 3; \: 4; \: \ldots $\} obtained above:
+%\begin{eqnarray*}
+%2 - 1 &=& 1 \\
+%3 - 2 &=& 1 \\
+%4 - 3 &=& 1 \\
+%\ldots
+%\end{eqnarray*}
+
+\begin{center}
+% \rput(5.7,-0.5){
+\psmatrix[colsep=0.3cm,rowsep=0.3cm]
+ 	1 &    & 2 &	 & 3 &     & 4 &\\
+	  & +1 &    & +1 &    & +1 &\\
+\endpsmatrix
+\psset{nodesep=3pt,arrows=-}
+\ncline{1,1}{2,2}
+\ncline{1,3}{2,2}
+\ncline{1,3}{2,4}
+\ncline{1,5}{2,4}
+\ncline{1,5}{2,6}
+\ncline{1,7}{2,6}
+% }
+% \vspace{1.2cm}
+\end{center}
+
+We then see that the second differences are equal to $1$. Thus, Equation (\ref{eq:mp:s:quadseq:1}) is a \textit{quadratic sequence}. 
+
+Note that the differences between consecutive terms (that is, the first differences) of a quadratic sequence form a sequence where there is a constant difference between consecutive terms. In the above example, the sequence of \{$1; \: 2; \: 3; \: 4; \: \ldots $\}, which is formed by taking the differences between consecutive terms of Equation (\ref{eq:mp:s:quadseq:1}), has a linear formula of the kind $ax+b$. 
+
+\Exercise{Quadratic Sequences}{The following are also examples of quadratic
+sequences:
+\begin{eqnarray*}
+3; \: 6; \: 10; \: 15; \: 21; \: \ldots\\
+4; \: 9; \: 16; \: 25; \: 36; \: \ldots\\
+7; \: 17; \: 31; \: 49; \: 71; \: \ldots\\
+2; \: 10; \: 26; \: 50; \: 82; \: \ldots\\
+31; \: 30; \: 27; \: 22; \: 15; \: \ldots
+\end{eqnarray*}
+Can you calculate the common second difference for each of the above examples?}
+
+% -----------------------------------------------------------------
+
+\subsubsection{General Case}
+If the sequence is quadratic, the $n^{\rm th}$ term should be $T_n = an^2 + bn + c$
+
+%....................USING TABLES..............................
+% \begin{center}
+% \begin{tabular}{ccccccc}
+% TERMS & $a+b+c$ && $4a+2b+c$ && $9a+3b+c$ & \\
+% $1^{\textsf{st}}$ difference && $3a+b$ && $5a+b$ && $7a+b$ \\ 
+% $2^{\textsf{nd}}$ difference &&& $2a$ && $2a$ & \\
+% \end{tabular}
+% \end{center}
+
+\begin{center}
+$
+\psmatrix[colsep=0.3cm,rowsep=0.3cm]
+ 	TERMS 				& a+b+c &      & 4a+2b+c &      & 9a+3b+c &      & 16a+4b+c &\\
+ 	1^{\textsf{st}} ~difference	&	& 3a+b &         & 5a+b &         & 7a+b &\\
+	2^{\textsf{nd}} ~difference	&	&      &    2a   &      &    2a   &
+\endpsmatrix
+\psset{nodesep=3pt,arrows=-}
+\ncline{1,2}{2,3}
+\ncline{1,4}{2,3}
+\ncline{1,4}{2,5}
+\ncline{1,6}{2,5}
+\ncline{1,6}{2,7}
+\ncline{1,8}{2,7}
+\ncline{2,3}{3,4}
+\ncline{2,5}{3,4}
+\ncline{2,5}{3,6}
+\ncline{2,7}{3,6}
+$
+\end{center}
+
+In each case, the second difference is $2a$.
+This fact can be used to find $a$, then $b$ then $c$.
+
+%%**********************EXAMPLE**************************
+
+\begin{wex}{Quadratic sequence}%
+% Question
+{Write down the next two terms and find a formula for the $n^{\rm th}$ term of the sequence $5; 12; 23; 38;\ldots$}%
+% Answer
+{ 
+%%-----------------------step---------------------------
+\westep{Find the first differences between the terms} 
+
+% %..................USING EQUATIONS...................
+% \begin{eqnarray*}
+% a_2 - a_1 &=& 12 - ~5 = 7\\
+% a_3 - a_2 &=& 23 - 12 = 11\\
+% a_4 - a_3 &=& 38 - 23 = 15
+% \end{eqnarray*}
+
+\rput(5.7,-0.5){
+\psmatrix[colsep=0.3cm,rowsep=0.3cm]
+ 	5 &    & 12 &	  & 23 &     & 38 &\\
+	  & +7 &    & +11 &    & +15 &\\
+\endpsmatrix
+\psset{nodesep=3pt,arrows=-}
+\ncline{1,1}{2,2}
+\ncline{1,3}{2,2}
+\ncline{1,3}{2,4}
+\ncline{1,5}{2,4}
+\ncline{1,5}{2,6}
+\ncline{1,7}{2,6}
+}
+\vspace{1.2cm}
+
+i.e. $7 ; 11; 15$.\\
+%%-----------------------step---------------------------
+\westep{Find the second differences between the terms}
+
+% %..................USING EQUATIONS...................
+% \begin{eqnarray*}
+% 11 - 7 = 4\\
+% 15 - 11 = 4
+% \end{eqnarray*}
+
+\rput(5.7,-0.5){
+\psmatrix[colsep=0.3cm,rowsep=0.3cm]
+ 	7 &    & 11 &	  & 15 & \\
+	  & +4 &    & +4  & \\
+\endpsmatrix
+\psset{nodesep=3pt,arrows=-}
+\ncline{1,1}{2,2}
+\ncline{1,3}{2,2}
+\ncline{1,3}{2,4}
+\ncline{1,5}{2,4}
+}
+\vspace{1.2cm}
+
+So the second difference is $4$.
+
+Continuing the sequence, the differences between each term will be:
+
+% %..................USING EQUATIONS...................
+% \begin{eqnarray*}
+% 15 + 4 = 19\\
+% 19 + 4 = 23
+% \end{eqnarray*}
+
+\rput(5.7,-0.5){
+\psmatrix[colsep=0.3cm,rowsep=0.3cm]
+     ...15 &    & 19 &	   & 23... & \\
+	   & +4 &    & +4  & \\
+\endpsmatrix
+\psset{nodesep=3pt,arrows=-}
+\ncline{1,1}{2,2}
+\ncline{2,2}{1,3}
+\ncline{1,3}{2,4}
+\ncline{2,4}{1,5}
+}
+\vspace{1.2cm}
+%%-----------------------step---------------------------
+\westep{Finding the next two terms}
+The next two terms in the sequence willl be:
+
+% %..................USING EQUATIONS...................
+% \begin{eqnarray*}
+% 38 + 19 = 57\\
+% 57 + 23 = 80\\
+% \end{eqnarray*}
+
+\rput(5.7,-0.5){
+\psmatrix[colsep=0.3cm,rowsep=0.3cm]
+     ...38 &     & 57 &	     & 80... \\
+	   & +19 &    & +23  & \\
+\endpsmatrix
+\psset{nodesep=3pt,arrows=-}
+\ncline{1,1}{2,2}
+\ncline{2,2}{1,3}
+\ncline{1,3}{2,4}
+\ncline{2,4}{1,5}
+}
+\vspace{1.2cm}
+
+So the sequence will be:
+$5; 12; 23; 38; 57; 80$.\\
+
+%\westep{We now need to find the formula for this sequence.} 
+%We know that the second difference is $4$. The start of the formula will therefore be $2n^2$.
+
+%%-----------------------step---------------------------
+\westep{Determine values for $a, b$ and $c$}
+\begin{eqnarray*}
+ 2a &=& 4 \\
+\textrm{which gives} \quad a &=& 2\\
+\textrm{And} \quad  3a + b &=& 7\\   
+\therefore \quad 3(2) + b &=& 7\\
+ b &=& 7-6\\
+ b &=& 1\\
+\textrm{And} \quad  a + b + c  &=& 5\\  
+\therefore \quad (2) + (1) + c &=& 5\\
+ c &=& 5-3\\
+ c &=& 2
+\end{eqnarray*}
+
+% \westep{We now need to work out the next part of the sequence.}
+% If $n=1$, you have to get the value of term one, which is $5$ in this particular sequence.  The difference between $2n^2 = 2$ and original number ($5$) is $3$, which leads to $n+2$.\\
+% Check if it works for the second term, i.e. when $n=2$.\\
+% Then $2n^2=8$.  The difference between term two ($12$) and $8$ is $4$, which is can be written as $n+2$.\\
+% So for the sequence $5; 12; 23; 38;\ldots$ the formula for the $n^{\rm th}$ term is $2n^2 + n + 2$.
+
+%%-----------------------step---------------------------
+\westep{Find the rule by substitution}
+\begin{eqnarray*}
+ T_n &=& ax^2 + bx + c\\
+\therefore \quad T_n &=& 2n^2 + n + 2
+\end{eqnarray*}
+}
+\end{wex}
+%%*******************************************************
+
+%%**********************EXAMPLE**************************
+
+\begin{wex}{Quadratic Sequence}
+{The following sequence is quadratic: $8; 22; 42; 68; \ldots$
+Find the rule.}{
+%%-----------------------step---------------------------
+\westep{Assume that the rule is $an^2 +bn + c$}
+% \begin{center}
+% \begin{tabular}{ccccccccc}
+% TERMS & $8$ && $22$ && $42$ && $68$ & \\
+% $1^{\textsf{st}}$ difference && $14$ && $20$ && $26$ \\ 
+% $2^{\textsf{nd}}$ difference &&& $6$ && $6$ && $6$ & \\
+% \end{tabular}
+% \end{center}
+\rput(5.7,-0.9){
+$
+\psmatrix[colsep=0.3cm,rowsep=0.3cm]
+ 	TERMS 				& 8 &     & 22 &     & 42 &     & 68\\
+ 	1^{\textsf{st}} ~difference	&   & +14 &    & +20 &    & +26 &\\
+	2^{\textsf{nd}} ~difference	&   &     & +6 &     & +6
+\endpsmatrix
+\psset{nodesep=3pt,arrows=-}
+\ncline{1,2}{2,3}
+\ncline{1,4}{2,3}
+\ncline{1,4}{2,5}
+\ncline{1,6}{2,5}
+\ncline{1,6}{2,7}
+\ncline{1,8}{2,7}
+\ncline{2,3}{3,4}
+\ncline{2,5}{3,4}
+\ncline{2,5}{3,6}
+\ncline{2,7}{3,6}
+$
+}
+\vspace{2.0cm}
+%%-----------------------step---------------------------
+\westep{Determine values for $a, b$ and $c$}
+\begin{eqnarray*}
+ 2a &=& 6\\
+\textrm{which gives} \quad a &=& 3\\
+\textrm{And} \quad  3a + b &=& 14\\   
+\therefore \quad 9 + b &=& 14\\
+ b &=& 5\\
+\textrm{And} \quad  a + b + c  &=& 8\\  
+\therefore \quad 3 + 5 + c &=& 8\\
+ c &=& 0
+\end{eqnarray*}
+%%-----------------------step---------------------------
+\westep {Find the rule by substitution}
+\begin{eqnarray*}
+ T_n &=& ax^2 + bx + c\\
+\therefore \quad T_n &=& 3n^2 + 5n
+\end{eqnarray*}
+%%-----------------------step---------------------------
+\westep{Check answer}
+For
+\begin{eqnarray*}
+n = 1, ~~T_1 &=& 3(1)^2 + 5(1) = 8\\
+n = 2, ~~T_2 &=& 3(2)^2 + 5(2) = 22\\
+n = 3, ~~T_3 &=& 3(3)^2 + 5(3) = 42
+\end{eqnarray*}
+}
+\end{wex}
+
+%%?????????????????????EXTENSION????????????????????????
+\Extension{Derivation of the $n^{\rm th}$-term of a Quadratic Sequence}{Let the
+$n^{th}$-term for a quadratic sequence be given by
+\begin{eqnarray}
+\label{eq:mp:s:extras:1}
+T_n = an^2 + bn + c
+\end{eqnarray}
+where $a$, $b$ and $c$ are some constants to be determined.
+\begin{eqnarray*}
+T_n &=& an^2 + bn + c
+\end{eqnarray*}
+\begin{eqnarray*}
+T_1 &=& a(1)^2 + b(1) + c
+\end{eqnarray*}
+\begin{eqnarray}
+\label{eq:mp:s:extras:2}
+&=& a + b + c
+\end{eqnarray}
+\begin{eqnarray*}
+T_2 &=& a(2)^2 + b(2) + c
+\end{eqnarray*}
+\begin{eqnarray}
+\label{eq:mp:s:extras:3}
+&=& 4a + 2b + c
+\end{eqnarray}
+\begin{eqnarray*}
+T_3 &=& a(3)^2 + b(3) + c
+\end{eqnarray*}
+\begin{eqnarray}
+\label{eq:mp:s:extras:4}
+&=& 9a + 3b + c
+\end{eqnarray}
+
+The first difference ($d$) is obtained from
+\begin{eqnarray*}
+\textrm {Let } d & \equiv & T_2 - T_1 \\
+\therefore d &=& 3a + b
+\end{eqnarray*}
+\begin{equation}
+\label{eq:mp:s:extras:5}
+\Rightarrow b = d - 3a
+\end{equation}
+
+The common second difference ($D$) is obtained from
+\begin{eqnarray*}
+D &=& (T_3 - T_2) - (T_2 - T_1) \\
+&=& (5a + b) - (3a + b) \\
+&=& 2a
+\end{eqnarray*}
+\begin{equation}
+\label{eq:mp:s:extras:6}
+\Rightarrow a = \frac{D}{2}
+\end{equation}
+
+Therefore, from (\ref{eq:mp:s:extras:5}),
+\begin{equation}
+\label{eq:mp:s:extras:7}
+b = d - \frac{3}{2} \cdot D
+\end{equation}
+
+From (\ref{eq:mp:s:extras:2}),
+\begin{equation*}
+c = T_1 - (a + b) = T_1 - \frac{D}{2} - d + \frac{3}{2} \cdot D
+\end{equation*}
+
+\begin{equation}
+\label{eq:mp:s:extras:8}
+\therefore c = T_1 + D - d
+\end{equation}
+
+Finally, the general equation for the $n^{th}$-term of a quadratic sequence is
+given by
+\begin{equation}
+\label{eq:mp:s:extras:9}
+T_n = \frac{D}{2} \cdot {n^2} + (d - \frac {3} {2} \: D) \cdot n + (T_1 - d + D)
+\end{equation}}
+%%??????????????????????????????????????????????????????
+
+%%**********************EXAMPLE**************************
+
+\begin{wex}{Using a set of equations}
+{Study the following pattern: $1; 7; 19; 37; 61; \ldots$
+\begin{enumerate}
+\item{What is the next number in the sequence?}
+\item{Use variables to write an algebraic statement to generalise the pattern.}
+\item{What will the $100^{th}$ term of the sequence be?}
+\end{enumerate}
+}{
+%%-----------------------step---------------------------
+\westep{The next number in the sequence}
+The numbers go up in multiples of $6$\\
+$1 + 6(1) = 7$,  then $7 + 6(2) = 19$\\
+$19+ 6(3)=37$, then $37+6(4)=61$\\
+Therefore $61 + 6(5) = 91$\\
+The next number in the sequence is $91$.\\
+%%-----------------------step---------------------------
+\westep{Generalising the pattern}
+% \begin{center}
+% \begin{tabular}{cccccccccccc}
+% TERMS & $1$ && $7$ && $19$ && $37$ && $61$ & \\
+% $1^{\textsf{st}}$ difference && $6$ && $12$ && $18$ && $24$ \\ 
+% $2^{\textsf{nd}}$ difference &&& $6$ && $6$ && $6$ && $6$& \\
+% \end{tabular}
+% \end{center}
+
+\rput(5.7,-0.9){
+$
+\psmatrix[colsep=0.3cm,rowsep=0.3cm]
+ 	TERMS 				& 1 &    &  7 &     & 19 &     & 37 &     & 61 &\\
+ 	1^{\textsf{st}} ~difference	&   & +6 &    & +12 &    & +18 &    & +24\\
+	2^{\textsf{nd}} ~difference	&   &    & +6 &     & +6 &     & +6
+\endpsmatrix
+\psset{nodesep=3pt,arrows=-}
+\ncline{1,2}{2,3}
+\ncline{1,4}{2,3}
+\ncline{1,4}{2,5}
+\ncline{1,6}{2,5}
+\ncline{1,6}{2,7}
+\ncline{1,8}{2,7}
+\ncline{1,8}{2,9}
+\ncline{1,10}{2,9}
+\ncline{2,3}{3,4}
+\ncline{2,5}{3,4}
+\ncline{2,5}{3,6}
+\ncline{2,7}{3,6}
+\ncline{2,7}{3,8}
+\ncline{2,9}{3,8}
+$
+}
+\vspace{2.0cm}
+
+The pattern will yield a quadratic equation since the second difference is
+constant\\
+Therefore $T_n = an^2 + bn + c$\\
+For the first term: $n = 1$,  then $T_1 = 1$ \\
+For the second term: $n = 2$, then $T_2 = 7$ \\  
+For the third term:  $n = 3$,  then $T_3 = 19$ \\
+etc....\\
+%%-----------------------step---------------------------
+\westep{Setting up sets of equations}
+\begin{eqnarray*}
+a+b+c &=& 1 \hspace{1cm} \rm {...eqn} (1)\\
+4a + 2b + c &=& 7 \hspace{1cm} \rm {...eqn} (2)\\
+9a + 3b + c &=& 19 \hspace{0.8cm} \rm {...eqn} (3)
+\end{eqnarray*}
+%%-----------------------step---------------------------
+\westep{Solve the sets of equations}
+\begin{eqnarray*}
+&\rm{eqn} (2) - \rm{eqn} (1):& 3a + b = 6 \hspace{1cm} \rm {...eqn} (4)\\
+&\rm{eqn} (3) - \rm{eqn} (2):& 5a + b = 12 \hspace{0.8cm} \rm {...eqn} (5)\\
+&\rm{eqn} (5) - \rm{eqn} (4):& 2a = 6\\
+&\therefore & a = 3, b = -3 ~and~ c = 1
+\end{eqnarray*}
+%%-----------------------step---------------------------
+\westep{Final answer}
+The general formula for the pattern is $T_n = 3n^2 - 3n + 1$\\
+%%-----------------------step---------------------------
+\westep{Term 100}
+Substitute n with $100$:\\
+$3(100)^2 - 3(100) + 1 = 29~701$\\
+The value for term $100$ is $29~701$.
+}
+\end{wex}
+%%*******************************************************
+
+%%?????????????????????EXTENSION????????????????????????
+
+\Extension{Plotting a graph of terms of a quadratic sequence}{Plotting $T_n$ vs.
+$n$ for a quadratic sequence yields a parabolic graph. 
+
+Given the quadratic sequence,
+\begin{eqnarray*}
+3; \: 6; \: 10; \: 15; \: 21; \: \ldots
+\end{eqnarray*}
+
+If we plot each of the terms vs. the corresponding index, we obtain a graph of a parabola.
+
+%\begin{figure}[!htbp]
+\begin{center}
+\begin{pspicture}(-1,-1)(10,8)
+%\psset{yunit=0.7,xunit=0.7}
+%\psgrid[gridcolor=lightgray]
+\rput(-1,0){
+\psaxes[arrows=<->,dx=10,Dx=1,dy=10,Dy=0.5](1,0)(11,8)
+\psplot[plotstyle=curve,arrows=->]{1}{10.5}{x 2 exp 0.05 mul x 0.25 mul add}
+\psplot[plotstyle=dots,arrows=->,plotpoints=10]{1}{10}{x 2 exp 0.05 mul x 0.25 mul add}
+\uput[l](0.4,5){\rotateleft{Term: $T_n$}}
+\uput[r](1.4,0.35){$y$-intercept: $T_1$}
+\multips(1,0)(1,0){10}{\psline(0,-.1)(0,.1)}
+\multido{\n=1+1}{10}{\rput(\n,-0.35){\n}}
+%\multido{\n=1+1}{9}{\rput(0.65,\n){$a_{\n}$}}
+\rput(5,-.9){Index: $n$}
+
+\psline(0.9,0.3)(1.1,0.3)
+\psline(0.9,0.7)(1.1,0.7)
+\psline(0.9,1.2)(1.1,1.2)
+\psline(0.9,1.8)(1.1,1.8)
+\psline(0.9,2.5)(1.1,2.5)
+\psline(0.9,3.3)(1.1,3.3)
+\psline(0.9,4.2)(1.1,4.2)
+\psline(0.9,5.2)(1.1,5.2)
+\psline(0.9,6.3)(1.1,6.3)
+\psline(0.9,7.5)(1.1,7.5)
+\rput(0.65,0.3){$a_1$}
+\rput(0.65,0.7){$a_2$}
+\rput(0.65,1.2){$a_3$}
+\rput(0.65,1.8){$a_4$}
+\rput(0.65,2.5){$a_5$}
+\rput(0.65,3.3){$a_6$}
+\rput(0.65,4.2){$a_7$}
+\rput(0.65,5.2){$a_8$}
+\rput(0.65,6.3){$a_9$}
+\rput(0.65,7.5){$a_{10}$}
+}
+\end{pspicture}
+%\caption{A plot of $a_n$ vs. $n$ for quadratic sequence \{3; 6; 10; 15; 21; \ldots\}.}
+%\label{fig:mp:extra:quadratic}
+\end{center}
+%\end{figure}
+}
+%%??????????????????????????????????????????????????????
+
+\begin{eocexercises}{}
+\begin{enumerate}
+\item{Find the first five terms of the quadratic sequence defined by:
+\nequ{a_n=n^2+2n+1}}
+\item{Determine which of the following sequences is a quadratic sequence by calculating the common second difference:
+\begin{enumerate}
+\item $6; 9; 14; 21; 30;\ldots$
+\item $1; 7; 17; 31; 49;\ldots$
+\item $8; 17; 32; 53; 80;\ldots$
+\item $9; 26; 51; 84; 125;\ldots$
+\item $2; 20; 50; 92; 146;\ldots$
+\item $5; 19; 41; 71; 109;\ldots$
+\item $2; 6; 10; 14; 18;\ldots$
+\item $3; 9; 15; 21; 27;\ldots$
+\item $10; 24; 44; 70; 102;\ldots$
+\item $1; 2,5; 5; 8,5; 13;\ldots$
+\item $2,5; 6; 10,5; 16; 22,5;\ldots$
+\item $0,5; 9; 20,5; 35; 52,5;\ldots$
+\end{enumerate}}
+\item{Given $T_n= 2n^2$, find for which value of $n$, $T_n=242$}
+\item{Given $T_n= (n - 4)^2$, find for which value of $n$, $T_n=36$}
+\item{Given $T_n= n^2+4$, find for which value of $n$, $T_n=85$}
+\item{Given $T_n= 3n^2$, find $T_{11}$}
+\item{Given $T_n= 7n^2+4n$, find $T_{9}$}
+\item{Given $T_n= 4n^2+3n-1$, find $T_{5}$}
+\item{Given $T_n= 1,5n^2$, find $T_{10}$}
+\item{For each of the quadratic sequences, find the common second difference, the formula for the general term and then use the formula to find $a_{100}$.
+\begin{enumerate}
+\item $4;7;12;19;28;\ldots$
+\item $2;8;18;32;50;\ldots$
+\item $7;13;23;37;55;\ldots$
+\item $5;14;29;50;77;\ldots$
+\item $7;22;47;82;127;\ldots$
+\item $3;10;21;36;55;\ldots$
+\item $3;7;13;21;31;\ldots$
+\item $3;9;17;27;39;\ldots$
+\end{enumerate}}
+
+\end{enumerate}
+
+
+
+\practiceinfo
+\end{eocexercises} 
+
+
+
+% CHILD SECTION START 
+

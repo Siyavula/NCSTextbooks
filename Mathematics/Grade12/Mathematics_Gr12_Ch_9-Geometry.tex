@@ -1,0 +1,2193 @@
+\chapter{Geometry}
+\label{m:g12}
+
+\section{Introduction}
+
+\Activity{Discussion}{Discuss these Research Topics}{
+Research one of the following geometrical ideas and describe it to your group:
+\begin{enumerate}
+\item taxicab geometry,
+\item spherical geometry,
+\item fractals,
+\item the Koch snowflake.
+\end{enumerate}
+}
+
+\section{Circle Geometry}
+%\begin{syllabus}
+%\item Accept the following as axioms:
+%\begin{itemize}
+%\item results established in earlier grades;
+%\item a tangent is perpendicular to the radius, drawn at the point of contact with the circle,
+%\end{itemize}
+%and then investigate and prove the theorems of the geometry of circles
+%\begin{itemize}
+%\item the line drawn from the centre of a circle, perpendicular to a chord, bisects the chord and its converse;
+%\item the perpendicular bisector of a chord passes through the centre of the circle;
+%\item the angle subtended by an arc at the centre of a circle is double the size of the angle subtended by the same arc at the circle;
+%\item angles subtended by a chord at the circle on the same side of the chord are equal and its converse;
+%\item the opposite angles of a cyclic quadrilateral are supplementary and its converse;
+%\item two tangents drawn to a circle from the same point outside the circle are equal in length;
+%\item the angles between a tangent and a chord, drawn to the point of contact of the chord, are equal to the angles which the chord subtends in the alternate chord segments and its converse.
+%\end{itemize}
+%\item Use the theorems listed above to:
+%\begin{itemize}
+%\item make and prove or disprove conjectures;
+%\item prove riders.
+%\end{itemize}
+%\end{syllabus}
+
+\subsection{Terminology}
+The following is a recap of terms that are regularly used when referring to circles.
+
+\begin{description}
+\item[arc]{An arc is a part of the circumference of a circle.}
+\item[chord]{A chord is a straight line joining the ends of an arc.}
+\item[radius]{A radius, $r$, is any straight line from the centre of the circle to a point on the circumference.}
+\item[diameter]{A diameter, $\diameter$, is a special chord that passes through the centre of the circle. A diameter is the length of a straight line segment from one point on the circumference to another point on the circumference, that passes through the centre of the circle.}
+\item[segment]{A segment is the part of the circle that is cut off by a chord. A chord divides a circle into two segments.}
+\item[tangent]{A tangent is a line that makes contact with a circle at one point on the circumference. ($AB$ is a tangent to the circle at point $P$) in Figure~\ref{fig:mg:circ:circledefinitions}.}\end{description}
+
+\begin{figure}[htbp]
+\begin{center}
+\begin{pspicture}(-2,-2.2)(2,2)
+%\psgrid
+\pscircle{1.95}
+\psdots(0,0)(0,-1.95)
+
+\uput[l](-1.95,-1.95){A}
+\uput[r](1.95,-1.95){B}
+\uput[d](0,0){O}
+\uput[d](0,-1.95){P}
+\SpecialCoor
+\pstextpath[c](0,-0.25){\psarc[linewidth=3pt](0,0){1.95}{310}{360}}{arc}
+\pstextpath[c](0,-0.3){\psline({1.95;155})({1.95;25})}{chord}
+\pstextpath[c](1,-0.25){\psline(-1.95,-1.95)(1.95,-1.95)}{tangent}
+\pstextpath[c](1,-0.25){\psline(-1.95,0)(1.95,0)}{diameter}
+\pstextpath[c](0,0.150){\psline({1.95;235})(0,0)}{radius}
+\psarc*[fillcolor=lightgray](0,0){1.95}{25}{155}
+\rput*[fillcolor=white](0,1.2){segment}
+
+\end{pspicture}
+\end{center}
+\caption{Parts of a circle}
+
+\label{fig:mg:circ:circledefinitions}
+\end{figure}
+
+\subsection{Axioms}
+An axiom is an established or accepted principle. For this section, the following are accepted as axioms.
+\begin{enumerate}
+\item{The Theorem of Pythagoras, which states that the square on the hypotenuse of a right-angled triangle is equal to the sum of the squares on the other two sides. In $\triangle ABC$, this means that $(AB)^2 + (BC)^2 = (AC)^2$
+
+\begin{figure}[htbp]
+\begin{center}
+\begin{pspicture}(0,0)(3,3)
+%\psgrid
+\pspolygon(3,0)(0,0)(0,3)
+\uput[r](3,0){C}
+\uput[l](0,0){B}
+\uput[ul](0,3){A}
+\rput(0,0){\psline(0.2,0)(0.2,0.2)(0,0.2)}
+\end{pspicture}
+\end{center}
+\caption{A right-angled triangle}
+\label{fig:mg:circ:pythagoras}
+\end{figure}
+}
+\item{A tangent is perpendicular to the radius, drawn at the point of contact with the circle.}
+\end{enumerate}
+
+\subsection{Theorems of the Geometry of Circles}
+A theorem is a general proposition that is not self-evident but is proved by reasoning (these proofs need not be learned for examination purposes).
+
+\begin{mytheorem}
+{theorem:circle1}{The line drawn from the centre of a circle, perpendicular to a chord, bisects the chord.}{
+\begin{center}
+\begin{pspicture}(-2.5,-2.5)(2.5,2.5)
+%\psgrid
+\pscircle{2.5}
+%\psarc[linewidth=2pt]{1.95}{65}{95}
+\psline(-2,-1.5)(2,-1.5)
+\psline(0,0)(0,-1.5)
+\psline[linestyle=dashed](0,0)(-2,-1.5)
+\psline[linestyle=dashed](0,0)(2,-1.5)
+\rput(0,-1.5){\psline(0.2,0)(0.2,0.2)(0,0.2)}
+\psdot(0,0)
+\uput[l](-2,-1.5){A}
+\uput[r](2,-1.5){B}
+\uput[r](0,0){O}
+\uput[d](0,-1.5){P}
+\end{pspicture}
+\end{center}
+
+Consider a circle, with centre $O$. Draw a chord $AB$ and draw a perpendicular line from the centre of the circle to intersect the chord at point $P$.
+
+\textbf{The aim is to prove that $AP$ = $BP$}
+
+\begin{enumerate}
+\item{$\triangle OAP$ and $\triangle OBP$ are right-angled triangles.}
+\item{$OA=OB$ as both of these are radii and $OP$ is common to both triangles.}
+\end{enumerate}
+
+Apply the Theorem of Pythagoras to each triangle, to get:
+\begin{eqnarray*}
+OA^2 &=& OP^2 + AP^2\\
+OB^2 &=& OP^2 + BP^2
+\end{eqnarray*}
+
+However, $OA = OB$. So,
+\begin{eqnarray*}
+OP^2 + AP^2 &=& OP^2 + BP^2\\
+\therefore AP^2 &=& BP^2\\
+\mbox{and } AP &=& BP
+\end{eqnarray*}
+
+This means that $OP$ bisects $AB$.}
+\end{mytheorem}
+
+\begin{mytheorem}
+{theorem:circle2}{The line drawn from the centre of a circle, that bisects a chord, is perpendicular to the chord.}{
+\begin{center}
+\begin{pspicture}(-2.5,-2.5)(2.5,2.5)
+%\psgrid
+\pscircle{2.5}
+%\psarc[linewidth=2pt]{1.95}{65}{95}
+\psline(-2,-1.5)(2,-1.5)
+\psline(0,0)(0,-1.5)
+\psline[linestyle=dashed](0,0)(-2,-1.5)
+\psline[linestyle=dashed](0,0)(2,-1.5)
+\psline(-1,-1.7)(-1,-1.3)
+\psline(-1.2,-1.7)(-1.2,-1.3)
+\psline(1,-1.7)(1,-1.3)
+\psline(1.2,-1.7)(1.2,-1.3)
+
+\psdot(0,0)
+\uput[l](-2,-1.5){$A$}
+\uput[r](2,-1.5){$B$}
+\uput[r](0,0){$O$}
+\uput[d](0,-1.5){$P$}
+\end{pspicture}
+\end{center}
+
+Consider a circle, with centre $O$. Draw a chord $AB$ and draw a line from the centre of the circle to bisect the chord at point $P$.
+
+\textbf{The aim is to prove that $OP \perp AB$}
+
+In $\triangle OAP$ and $\triangle OBP$,
+
+\begin{enumerate}
+\item{$AP=PB$ (given)}
+\item{$OA=OB$ (radii)}
+\item{$OP$ is common to both triangles.}
+\end{enumerate}
+
+$\therefore \triangle OAP \equiv \triangle OBP$ (SSS).
+
+\begin{eqnarray*}
+\hat{OPA}&=&\hat{OPB}\\
+\hat{OPA}+\hat{OPB} &=& 180^{\circ}\quad\mbox{($APB$ is a straight line)}\\
+\therefore \hat{OPA}&=& \hat{OPB} = 90^{\circ}\\
+\therefore OP &\perp& AB
+\end{eqnarray*}
+}
+\end{mytheorem}
+
+\begin{mytheorem}
+{theorem:circle3}{The perpendicular bisector of a chord passes through the centre of the circle.}{
+\begin{center}
+\begin{pspicture}(-2.5,-2.5)(2.5,2.5)
+%\psgrid
+\pscircle{2.5}
+%\psarc[linewidth=2pt]{1.95}{65}{95}
+\psline(-2,-1.5)(2,-1.5)
+\psline(0,0)(0,-1.5)
+\psline(0,0)(-2,-1.5)
+\psline(0,0)(2,-1.5)
+\rput(0,-1.5){\psline(0.2,0)(0.2,0.2)(0,0.2)}
+\psdot(0,0)
+\psline(-1,-1.7)(-1,-1.3)
+\psline(-1.2,-1.7)(-1.2,-1.3)
+\psline(1,-1.7)(1,-1.3)
+\psline(1.2,-1.7)(1.2,-1.3)
+
+\uput[l](-2,-1.5){$A$}
+\uput[r](2,-1.5){$B$}
+\uput[r](0,0){$Q$}
+\uput[d](0,-1.5){$P$}
+\end{pspicture}
+\end{center}
+
+Consider a circle. Draw a chord $AB$. Draw a line $PQ$ perpendicular to $AB$ such that $PQ$ bisects $AB$ at point $P$. Draw lines $AQ$ and $BQ$.
+
+\textbf{The aim is to prove that $Q$ is the centre of the circle, by showing that $AQ=BQ$.}
+
+In $\triangle OAP$ and $\triangle OBP$,
+
+\begin{enumerate}
+\item{$AP=PB$ (given)}
+\item{$\angle QPA=\angle QPB$ ($QP\perp AB$)}
+\item{$QP$ is common to both triangles.}
+\end{enumerate}
+
+$\therefore \triangle QAP \equiv \triangle QBP$ (SAS).
+
+From this, $QA=QB$. Since the centre of a circle is the only point inside a circle that has points on the circumference at an equal distance from it, $Q$ must be the centre of the circle.}
+\end{mytheorem}
+
+%\subsection{Exercises}
+
+\Exercise{Circles I}{
+
+\item Find the value of $x$:
+
+\begin{center}
+% Generated with LaTeXDraw 2.0.5
+% Thu Sep 02 02:47:09 SAST 2010
+% \usepackage[usenames,dvipsnames]{pstricks}
+% \usepackage{epsfig}
+% \usepackage{pst-grad} % For gradients
+% \usepackage{pst-plot} % For axes
+\scalebox{1} % Change this value to rescale the drawing.
+{
+\begin{pspicture}(0,-6.3365626)(9.558906,6.3365626)
+\usefont{T1}{ptm}{m}{n}
+\rput(0.12234375,6.1284375){1.}
+\pscircle[linewidth=0.04,dimen=outer](2.324375,4.2884374){1.71}
+\psline[linewidth=0.04cm](1.614375,2.7584374)(3.9343748,3.7784376)
+\psline[linewidth=0.04cm](2.324375,4.2884374)(2.774375,3.2584374)
+\rput{23.8}(1.559983,-0.78577447){\psframe[linewidth=0.04,dimen=outer](2.7543752,3.4184377)(2.534375,3.198438)}
+\psline[linewidth=0.04cm,dotsize=0.07055555cm 2.0]{o-}(2.334375,4.258437)(1.614375,2.7584374)
+\usefont{T1}{ptm}{m}{it}
+\rput(2.3151565,4.5034375){\scriptsize O}
+\usefont{T1}{ptm}{m}{it}
+\rput(2.73375,3.9434378){\scriptsize x}
+\usefont{T1}{ptm}{m}{it}
+\rput(1.8021874,3.7234373){\scriptsize 5}
+\usefont{T1}{ptm}{m}{it}
+\rput(1.4726564,2.5434375){\scriptsize P}
+\usefont{T1}{ptm}{m}{it}
+\rput(2.814844,3.1034374){\scriptsize Q}
+\usefont{T1}{ptm}{m}{it}
+\rput(4.0910935,3.7634375){\scriptsize R}
+\usefont{T1}{ptm}{m}{it}
+\rput(2.6115623,2.2434373){\scriptsize PR=8}
+\usefont{T1}{ptm}{m}{n}
+\rput(5.332813,6.1084375){2.}
+\pscircle[linewidth=0.04,dimen=outer](7.444375,4.2684374){1.71}
+\usefont{T1}{ptm}{m}{it}
+\rput(7.435157,4.4834375){\scriptsize O}
+\usefont{T1}{ptm}{m}{it}
+\rput(7.6010933,3.8234377){\scriptsize 4}
+\usefont{T1}{ptm}{m}{it}
+\rput(5.8126564,3.2434373){\scriptsize P}
+\usefont{T1}{ptm}{m}{it}
+\rput(7.374844,3.2034373){\scriptsize Q}
+\usefont{T1}{ptm}{m}{it}
+\rput(9.031094,3.3434374){\scriptsize R}
+\usefont{T1}{ptm}{m}{it}
+\rput(7.370156,2.2834375){\scriptsize PR=6}
+\psline[linewidth=0.04cm](7.4343753,4.2784376)(7.4343753,3.3784375)
+\psline[linewidth=0.04cm](6.014375,3.3784375)(8.894375,3.3784375)
+\psframe[linewidth=0.04,dimen=outer](7.4543753,3.5784373)(7.234375,3.3584373)
+\psline[linewidth=0.04cm,dotsize=0.07055555cm 2.0]{-o}(5.994375,3.3784375)(7.4343753,4.258437)
+\usefont{T1}{ptm}{m}{it}
+\rput(6.61375,3.9634373){\scriptsize x}
+\usefont{T1}{ptm}{m}{n}
+\rput(0.13328126,1.6684376){3.}
+\pscircle[linewidth=0.04,dimen=outer](2.344375,-0.1715624){1.71}
+\psline[linewidth=0.04cm](2.344375,-0.1715624)(2.594375,-1.3815624)
+\psline[linewidth=0.04cm,dotsize=0.07055555cm 2.0]{o-}(2.354375,-0.2015624)(1.474375,1.2984376)
+\usefont{T1}{ptm}{m}{it}
+\rput(2.4951563,0.0034376){\scriptsize O}
+\usefont{T1}{ptm}{m}{it}
+\rput(2.67375,-0.7365624){\scriptsize x}
+\usefont{T1}{ptm}{m}{it}
+\rput(2.10625,0.6234376){\scriptsize 10}
+\usefont{T1}{ptm}{m}{it}
+\rput(1.2526562,-1.7365624){\scriptsize P}
+\usefont{T1}{ptm}{m}{it}
+\rput(2.6348436,-1.6365623){\scriptsize Q}
+\usefont{T1}{ptm}{m}{it}
+\rput(3.8910935,-1.1365623){\scriptsize R}
+\usefont{T1}{ptm}{m}{it}
+\rput(2.6315622,-2.2165625){\scriptsize PR=8}
+\psline[linewidth=0.04cm](1.454375,-1.6215624)(3.748572,-1.1264251)
+\rput{12.015911}(-0.21818373,-0.54585075){\psframe[linewidth=0.04,dimen=outer](2.594156,-1.1994807)(2.3741558,-1.4194807)}
+\usefont{T1}{ptm}{m}{n}
+\rput(5.3132815,1.6284376){4.}
+\pscircle[linewidth=0.04,dimen=outer](7.504375,-0.2115624){1.71}
+\psline[linewidth=0.04cm,dotsize=0.07055555cm 2.0]{o-}(7.514375,-0.2415624)(6.634375,1.2184377)
+\usefont{T1}{ptm}{m}{it}
+\rput(7.575156,-0.4365624){\scriptsize O}
+\usefont{T1}{ptm}{m}{it}
+\rput(6.71375,-0.2965624){\scriptsize x}
+\usefont{T1}{ptm}{m}{it}
+\rput(6.2996874,0.6034376){\scriptsize 6}
+\usefont{T1}{ptm}{m}{it}
+\rput(5.652656,0.1234376){\scriptsize P}
+\usefont{T1}{ptm}{m}{it}
+\rput(6.434844,1.3634377){\scriptsize Q}
+\usefont{T1}{ptm}{m}{it}
+\rput(8.211095,1.5034376){\scriptsize R}
+\psline[linewidth=0.04cm](5.8343754,0.1184376)(8.094376,1.3784376)
+\psline[linewidth=0.04cm](5.8543754,0.1384376)(7.4743752,-0.2415624)
+\usefont{T1}{ptm}{m}{it}
+\rput(7.2796874,1.1034375){\scriptsize 6}
+\usefont{T1}{ptm}{m}{it}
+\rput(6.870312,1.0834374){\scriptsize 2}
+\usefont{T1}{ptm}{m}{it}
+\rput(7.1740627,0.6634376){\scriptsize S}
+\usefont{T1}{ptm}{m}{n}
+\rput(0.22328126,-2.6715627){5.}
+\pscircle[linewidth=0.04,dimen=outer](2.4243748,-4.511563){1.71}
+\psline[linewidth=0.04cm,dotsize=0.07055555cm 2.0]{o-}(2.4343748,-4.5415626)(2.4343748,-2.8015623)
+\usefont{T1}{ptm}{m}{it}
+\rput(2.3951561,-4.7965627){\scriptsize O}
+\usefont{T1}{ptm}{m}{it}
+\rput(2.27375,-3.0165627){\scriptsize x}
+\usefont{T1}{ptm}{m}{it}
+\rput(1.5285938,-3.8165624){\scriptsize 8}
+\usefont{T1}{ptm}{m}{it}
+\rput(0.59265625,-3.9765625){\scriptsize P}
+\usefont{T1}{ptm}{m}{it}
+\rput(4.2710934,-3.9765625){\scriptsize R}
+\usefont{T1}{ptm}{m}{it}
+\rput(2.5451562,-3.8165624){\scriptsize U}
+\psline[linewidth=0.04cm](0.814375,-3.9815626)(4.054375,-3.9815626)
+\psline[linewidth=0.04cm](1.294375,-3.2415626)(3.554375,-3.2415626)
+\psframe[linewidth=0.04,dimen=outer](2.454375,-3.2234373)(2.2084374,-3.4634373)
+\psframe[linewidth=0.04,dimen=outer](2.454375,-3.8015628)(2.254375,-4.0015626)
+\psline[linewidth=0.04cm](0.794375,-3.9815626)(2.374375,-4.5415626)
+\psline[linewidth=0.04cm](2.474375,-4.5215626)(3.534375,-3.2415626)
+\usefont{T1}{ptm}{m}{it}
+\rput(1.5462501,-4.4765625){\scriptsize 10}
+\usefont{T1}{ptm}{m}{it}
+\rput(1.8221874,-3.4565625){\scriptsize 5}
+\usefont{T1}{ptm}{m}{it}
+\rput(2.5795312,-3.4365623){\scriptsize T}
+\usefont{T1}{ptm}{m}{it}
+\rput(3.6748438,-3.1565626){\scriptsize Q}
+\usefont{T1}{ptm}{m}{it}
+\rput(1.0140625,-3.1365626){\scriptsize S}
+\usefont{T1}{ptm}{m}{n}
+\rput(5.3678126,-2.6915624){6.}
+\pscircle[linewidth=0.04,dimen=outer](7.5843754,-4.531563){1.71}
+\psline[linewidth=0.04cm,dotsize=0.07055555cm 2.0]{o-}(7.594375,-4.5615625)(7.594375,-2.8215623)
+\usefont{T1}{ptm}{m}{it}
+\rput(7.555156,-4.8165627){\scriptsize O}
+\usefont{T1}{ptm}{m}{it}
+\rput(7.29375,-4.636563){\scriptsize x}
+\usefont{T1}{ptm}{m}{it}
+\rput(5.7326565,-4.0565624){\scriptsize P}
+\usefont{T1}{ptm}{m}{it}
+\rput(9.431093,-3.9965625){\scriptsize R}
+\usefont{T1}{ptm}{m}{it}
+\rput(7.374062,-5.0765624){\scriptsize S}
+\rput{43.54821}(-0.55520195,-5.6929655){\psframe[linewidth=0.04,dimen=outer](6.9449577,-3.4559033)(6.7519474,-3.6269877)}
+\rput{-41.82017}(5.1309834,3.5064993){\psframe[linewidth=0.04,dimen=outer](7.254375,-4.8615627)(7.054375,-5.0615625)}
+\usefont{T1}{ptm}{m}{it}
+\rput(6.8821874,-4.156563){\scriptsize 5}
+\usefont{T1}{ptm}{m}{it}
+\rput(6.699531,-3.7965627){\scriptsize T}
+\usefont{T1}{ptm}{m}{it}
+\rput(7.554844,-2.6565626){\scriptsize Q}
+\usefont{T1}{ptm}{m}{it}
+\rput(8.391093,-6.2165627){\scriptsize R}
+\psline[linewidth=0.04cm](7.574375,-2.8415625)(5.9543753,-4.0815625)
+\psline[linewidth=0.04cm](5.9543753,-4.0615625)(8.294375,-6.0415626)
+\psline[linewidth=0.04cm](7.154375,-5.0615625)(7.554375,-4.6215625)
+\psline[linewidth=0.04cm](7.534375,-4.5015626)(6.714375,-3.5015626)
+\usefont{T1}{ptm}{m}{it}
+\rput(7.0020313,-5.2765627){\scriptsize 25}
+\usefont{T1}{ptm}{m}{it}
+\rput(6.5754685,-3.3765626){\scriptsize 24}
+\end{pspicture} 
+}
+
+% \begin{pspicture}(0,-6.5709376)(9.624375,6.5709376) \usefont{T1}{ptm}{m}{n} %\rput(1.4103125,6.3590627){find the value of} \usefont{T1}{ptm}{m}{it} %\rput(3.1342187,6.3590627){x} \usefont{T1}{ptm}{m}{n} \rput(3.365125,6.3590627){:}
+% \usefont{T1}{ptm}{m}{n} \rput(0.18609375,5.8990626){a)} \pscircle[linewidth=0.04,dimen=outer](2.3359375,4.0590625){1.71} \psline[linewidth=0.04cm](1.4259375,2.6290624)(1.4259375,2.6290624) \psline[linewidth=0.04cm](1.6259375,2.5290625)(3.9459374,3.5490625) \psline[linewidth=0.04cm](2.3359375,4.0590625)(2.7859375,3.0290625) \rput{23.8}(1.468403,-0.8099466){\psframe[linewidth=0.04,dimen=outer](2.7659376,3.1890626)(2.5459375,2.9690626)} \psline[linewidth=0.04cm,dotsize=0.07055555cm 2.0]{o-}(2.3459375,4.0290623)(1.6259375,2.5290625) \usefont{T1}{ptm}{m}{it} \rput(2.3489063,4.2740626){\scriptsize O} \usefont{T1}{ptm}{m}{it} \rput(2.73,3.7140625){\scriptsize x} \usefont{T1}{ptm}{m}{it} \rput(1.8365625,3.4940624){\scriptsize 5} \usefont{T1}{ptm}{m}{it} \rput(1.4832813,2.3140626){\scriptsize P} \usefont{T1}{ptm}{m}{it} \rput(2.8489063,2.8740625){\scriptsize Q} \usefont{T1}{ptm}{m}{it} \rput(4.142031,3.5340624){\scriptsize R} \usefont{T1}{ptm}{m}{it} \rput(2.6446874,2.0140624){\scriptsize PR=8} \usefont{T1}{ptm}{m}{n} \rput(5.4078126,5.8790627){b)} \pscircle[linewidth=0.04,dimen=outer](7.4559374,4.0390625){1.71} \psline[linewidth=0.04cm](6.5459375,2.6090624)(6.5459375,2.6090624) \usefont{T1}{ptm}{m}{it} \rput(7.4689064,4.2540627){\scriptsize O} \usefont{T1}{ptm}{m}{it} \rput(7.639531,3.5940626){\scriptsize 4} \usefont{T1}{ptm}{m}{it} \rput(5.8232813,3.0140624){\scriptsize P} \usefont{T1}{ptm}{m}{it} \rput(7.4089065,2.9740624){\scriptsize Q} \usefont{T1}{ptm}{m}{it} \rput(9.082031,3.1140625){\scriptsize R} \usefont{T1}{ptm}{m}{it} \rput(7.4035935,2.0540626){\scriptsize PR=6} \psline[linewidth=0.04cm](7.4459376,4.0490627)(7.4459376,3.1490624) \psline[linewidth=0.04cm](6.0259376,3.1490624)(8.905937,3.1490624) \psframe[linewidth=0.04,dimen=outer](7.4659376,3.3490624)(7.2459373,3.1290624) \psline[linewidth=0.04cm,dotsize=0.07055555cm 2.0]{-o}(6.0059376,3.1490624)(7.4459376,4.0290623) \usefont{T1}{ptm}{m}{it} \rput(6.61,3.7340624){\scriptsize x} \usefont{T1}{ptm}{m}{n} \rput(0.19546875,1.4390625){c)} \pscircle[linewidth=0.04,dimen=outer](2.3559375,-0.4009375){1.71} \psline[linewidth=0.04cm](1.4459375,-1.8309375)(1.4459375,-1.8309375) \psline[linewidth=0.04cm](2.3559375,-0.4009375)(2.6059375,-1.6109375) \psline[linewidth=0.04cm,dotsize=0.07055555cm 2.0]{o-}(2.3659375,-0.4309375)(1.4859375,1.0690625) \usefont{T1}{ptm}{m}{it} \rput(2.5289063,-0.2259375){\scriptsize O} \usefont{T1}{ptm}{m}{it} \rput(2.67,-0.9659375){\scriptsize x} \usefont{T1}{ptm}{m}{it} \rput(2.1475,0.3940625){\scriptsize 10} \usefont{T1}{ptm}{m}{it} \rput(1.2632812,-1.9659375){\scriptsize P} \usefont{T1}{ptm}{m}{it} \rput(2.6689062,-1.8659375){\scriptsize Q} \usefont{T1}{ptm}{m}{it} \rput(3.9420311,-1.3659375){\scriptsize R} \usefont{T1}{ptm}{m}{it} \rput(2.6646874,-2.4459374){\scriptsize PR=8} \psline[linewidth=0.04cm](1.4659375,-1.8509375)(3.7601347,-1.3558003) \rput{12.015911}(-0.26568246,-0.5532835){\psframe[linewidth=0.04,dimen=outer](2.6057184,-1.4288557)(2.3857183,-1.6488557)} \usefont{T1}{ptm}{m}{n} \rput(5.3754687,1.3990625){d)} \pscircle[linewidth=0.04,dimen=outer](7.5159373,-0.4409375){1.71} \psline[linewidth=0.04cm](6.6059375,-1.8709375)(6.6059375,-1.8709375) \psline[linewidth=0.04cm,dotsize=0.07055555cm 2.0]{o-}(7.5259376,-0.4709375)(6.6459374,0.9890625) \usefont{T1}{ptm}{m}{it} \rput(7.6089063,-0.6659375){\scriptsize O} \usefont{T1}{ptm}{m}{it} \rput(6.71,-0.5259375){\scriptsize x} \usefont{T1}{ptm}{m}{it} \rput(6.343125,0.3740625){\scriptsize 6} \usefont{T1}{ptm}{m}{it} \rput(5.6632814,-0.1059375){\scriptsize P} \usefont{T1}{ptm}{m}{it} \rput(6.4689064,1.1340625){\scriptsize Q} \usefont{T1}{ptm}{m}{it} \rput(8.262032,1.2740625){\scriptsize R} \psline[linewidth=0.04cm](5.8459377,-0.1109375)(8.105938,1.1490625) \psline[linewidth=0.04cm](5.8659377,-0.0909375)(7.4859376,-0.4709375) \usefont{T1}{ptm}{m}{it} \rput(7.323125,0.8740625){\scriptsize 6} \usefont{T1}{ptm}{m}{it} \rput(6.9021873,0.8540625){\scriptsize 2} \usefont{T1}{ptm}{m}{it} \rput(7.1984377,0.4340625){\scriptsize S} \usefont{T1}{ptm}{m}{n} \rput(0.28546876,-2.9009376){e)} \pscircle[linewidth=0.04,dimen=outer](2.4359374,-4.7409377){1.71} \psline[linewidth=0.04cm](1.5259376,-6.1709375)(1.5259376,-6.1709375) \psline[linewidth=0.04cm,dotsize=0.07055555cm 2.0]{o-}(2.4459374,-4.7709374)(2.4459374,-3.0309374) \usefont{T1}{ptm}{m}{it} \rput(2.4289062,-5.0259376){\scriptsize O} \usefont{T1}{ptm}{m}{it} \rput(2.27,-3.2459376){\scriptsize x} \usefont{T1}{ptm}{m}{it} \rput(1.5635937,-4.0459375){\scriptsize 8} \usefont{T1}{ptm}{m}{it} \rput(0.60328126,-4.2059374){\scriptsize P} \usefont{T1}{ptm}{m}{it} \rput(4.322031,-4.2059374){\scriptsize R} \usefont{T1}{ptm}{m}{it} \rput(2.5732813,-4.0459375){\scriptsize U} \psline[linewidth=0.04cm](0.8259375,-4.2109375)(4.0659375,-4.2109375) \psline[linewidth=0.04cm](1.3059375,-3.4709375)(3.5659375,-3.4709375) \psframe[linewidth=0.04,dimen=outer](2.4659376,-3.6709375)(2.2659376,-3.8709376) \psframe[linewidth=0.04,dimen=outer](2.4659376,-4.0309377)(2.2659376,-4.2309375) \psline[linewidth=0.04cm](0.8059375,-4.2109375)(2.3859375,-4.7709374) \psline[linewidth=0.04cm](2.4859376,-4.7509375)(3.5459375,-3.4709375) \usefont{T1}{ptm}{m}{it} \rput(1.5875,-4.7059374){\scriptsize 10} \usefont{T1}{ptm}{m}{it} \rput(1.8565625,-3.6859374){\scriptsize 5} \usefont{T1}{ptm}{m}{it} \rput(2.5939062,-3.6659374){\scriptsize T} \usefont{T1}{ptm}{m}{it} \rput(3.7089062,-3.3859375){\scriptsize Q} \usefont{T1}{ptm}{m}{it} \rput(1.0384375,-3.3659375){\scriptsize S} \usefont{T1}{ptm}{m}{n} \rput(5.418125,-2.9209375){f)} \pscircle[linewidth=0.04,dimen=outer](7.5959377,-4.7609377){1.71} \psline[linewidth=0.04cm](6.6859374,-6.1909375)(6.6859374,-6.1909375) \psline[linewidth=0.04cm,dotsize=0.07055555cm 2.0]{o-}(7.6059375,-4.7909374)(7.6059375,-3.0509374) \usefont{T1}{ptm}{m}{it} \rput(7.5889063,-5.0459375){\scriptsize O} \usefont{T1}{ptm}{m}{it} \rput(7.29,-4.8659377){\scriptsize x} \usefont{T1}{ptm}{m}{it} \rput(5.7432814,-4.2859373){\scriptsize P} \usefont{T1}{ptm}{m}{it} \rput(9.482031,-4.2259374){\scriptsize R} \usefont{T1}{ptm}{m}{it} \rput(7.3984375,-5.3059373){\scriptsize S} \rput{43.54821}(-0.71400595,-5.7543902){\psframe[linewidth=0.04,dimen=outer](6.9459376,-3.8709376)(6.7459373,-4.0709376)} \rput{-41.82017}(5.2868752,3.4557738){\psframe[linewidth=0.04,dimen=outer](7.2659373,-5.0909376)(7.0659375,-5.2909374)} \usefont{T1}{ptm}{m}{it} \rput(6.9165626,-4.3859377){\scriptsize 5} \usefont{T1}{ptm}{m}{it} \rput(6.7139063,-4.0259376){\scriptsize T} \usefont{T1}{ptm}{m}{it} \rput(7.5889063,-2.8859375){\scriptsize Q} \usefont{T1}{ptm}{m}{it} \rput(8.442031,-6.4459376){\scriptsize R} \psline[linewidth=0.04cm](7.5859375,-3.0709374)(5.9659376,-4.3109374) \psline[linewidth=0.04cm](5.9659376,-4.2909374)(8.305938,-6.2709374) \psline[linewidth=0.04cm](7.1659374,-5.2909374)(7.5659375,-4.8509374) \psline[linewidth=0.04cm](7.5459375,-4.7509375)(6.7259374,-3.7509375) \usefont{T1}{ptm}{m}{it} \rput(7.032031,-5.5059376){\scriptsize 25} \usefont{T1}{ptm}{m}{it} \rput(6.610156,-3.6059375){\scriptsize 24} 
+% \end{pspicture} 
+\end{center}
+
+}
+
+\begin{mytheorem}
+{theorem:circle4}{The angle subtended by an arc at the centre of a circle is double the size of the angle subtended by the same arc at the circumference of the circle.}{
+
+\begin{center}
+\begin{pspicture}(-2.5,-2.5)(2.5,2.5)
+%\psgrid
+\pscircle{2.5}
+%\psarc[linewidth=2pt]{1.95}{65}{95}
+\psline(-2,-1.5)(1.5,2)
+\psline(2,-1.5)(1.5,2)
+\psdot(0,0)
+\psline(-2,-1.5)(0,0)(2,-1.5)
+\psline[linestyle=dashed](1.5,2)(-0.75,-1)
+\psline(-2,-1.5)(2,-1.5)
+\uput[l](-2,-1.5){$A$}
+\uput[r](2,-1.5){$B$}
+\uput[r](0,0){O}
+\uput[ur](1.5,2){$P$}
+\uput[d](-0.75,-1){$R$}
+
+\end{pspicture}
+\end{center}
+
+Consider a circle, with centre $O$ and with $A$ and $B$ on the circumference. Draw a chord $AB$. Draw radii $OA$ and $OB$. Select any point $P$ on the circumference of the circle. Draw lines $PA$ and $PB$. Draw $PO$ and extend to $R$.
+
+
+\textbf{The aim is to prove that $\hat{AOB} = 2 \cdot \hat{APB}$.}
+
+$\hat{AOR}=\hat{PAO}+\hat{APO}$ (exterior angle = sum of interior opp. angles)
+
+But, $\hat{PAO}=\hat{APO}$ ($\triangle AOP$ is an isosceles $\triangle$)
+
+$\therefore$ $\hat{AOR}=2\hat{APO}$
+
+Similarly, $\hat{BOR}=2\hat{BPO}$.
+
+So,
+\begin{eqnarray*}
+\hat{AOB} &=&\hat{AOR} + \hat{BOR}\\
+&=&2\hat{APO}+2\hat{BPO}\\
+&=&2(\hat{APO}+\hat{BPO})\\
+&=&2(\hat{APB})
+\end{eqnarray*}
+}
+\end{mytheorem}
+
+\Exercise{Circles II}{
+\item Find the angles ($a$ to $f$) indicated in each diagram:
+\begin{center}
+\scalebox{0.9} % Change this value to rescale the drawing. 
+{ 
+\begin{pspicture}(0,-5.20625)(16.8975,5.20625) 
+\pscircle[linewidth=0.01,dimen=outer](2.58875,3.0859375){1.92} 
+\psdots[dotsize=0.09](2.58875,3.0859375) 
+\pscircle[linewidth=0.01,dimen=outer](8.70875,3.1059375){1.92} 
+\psdots[dotsize=0.09](8.70875,3.1059375) 
+\pscircle[linewidth=0.01,dimen=outer](2.48875,-2.9140625){1.92} 
+\psdots[dotsize=0.09](2.48875,-2.9140625) 
+\pscircle[linewidth=0.01,dimen=outer](8.62875,-2.9140625){1.92} 
+\psdots[dotsize=0.09](8.62875,-2.9140625) 
+\pscircle[linewidth=0.01,dimen=outer](14.68875,3.1059375){1.92} 
+\psdots[dotsize=0.09](14.68875,3.1059375) 
+\pscircle[linewidth=0.01,dimen=outer](14.64875,-2.9140625){1.92} 
+\psdots[dotsize=0.09](14.64875,-2.9140625) 
+\psline[linewidth=0.01cm](2.56875,3.0859375)(0.68875,3.0859375) 
+\psline[linewidth=0.01cm](4.48875,3.0859375)(2.60875,3.0859375) 
+\psline[linewidth=0.01cm](0.68875,3.0859375)(1.68875,4.7659373) 
+\psline[linewidth=0.01cm](1.68875,4.7659373)(4.50875,3.0659375) 
+\psline[linewidth=0.01cm](8.68875,3.1059375)(8.68875,1.2259375) 
+\psline[linewidth=0.01cm](8.72875,3.1059375)(10.60875,3.1059375) 
+\psline[linewidth=0.01cm](8.66875,1.2259375)(7.40875,4.5059376) 
+\psline[linewidth=0.01cm](7.40875,4.5059376)(10.60875,3.1259375) 
+\psline[linewidth=0.01cm](14.66875,3.1059375)(13.76875,1.4259375) 
+\psline[linewidth=0.01cm](14.68875,3.1259375)(15.40875,1.3459375) 
+\psline[linewidth=0.01cm](13.76875,1.4859375)(16.38875,3.9659376) 
+\psline[linewidth=0.01cm](16.36875,3.9659376)(15.42875,1.3659375) 
+\psline[linewidth=0.01cm](2.48875,-2.8940625)(1.88875,-1.1140625) 
+\psline[linewidth=0.01cm](2.48875,-2.9140625)(1.66875,-4.6140623) 
+\psline[linewidth=0.01cm](1.64875,-4.6140623)(0.64875,-2.4340625) 
+\psline[linewidth=0.01cm](0.64875,-2.4340625)(1.86875,-1.1340625) 
+\psline[linewidth=0.01cm](8.60875,-2.9140625)(7.48875,-4.4140625) 
+\psline[linewidth=0.01cm](9.76875,-1.3940625)(8.64875,-2.8940625) 
+\psline[linewidth=0.01cm](8.60875,-2.8940625)(9.52875,-4.5540624) 
+\psline[linewidth=0.01cm](9.52875,-4.5540624)(9.78875,-1.3940625) 
+\psline[linewidth=0.01cm](7.46875,-4.4140625)(9.52875,-4.5740623) 
+\psline[linewidth=0.01cm](14.62875,-2.9140625)(14.16875,-4.7340627) 
+\psline[linewidth=0.01cm](14.64875,-2.9140625)(16.42875,-2.2340624) 
+\psline[linewidth=0.01cm](16.42875,-2.2340624)(14.16875,-4.7540627) 
+\psline[linewidth=0.01cm](14.16875,-4.7540627)(15.86875,-4.3540626) 
+\psline[linewidth=0.01cm](15.86875,-4.3540626)(16.40875,-2.2540624) 
+\usefont{T1}{ptm}{m}{n} \rput(1.6048437,5.0159373){J} 
+\usefont{T1}{ptm}{m}{n} \rput(0.38765624,3.0359375){H} 
+\usefont{T1}{ptm}{m}{n} \rput(4.746406,3.0359375){K} 
+\usefont{T1}{ptm}{m}{n} \rput(7.1048436,4.5959377){J} 
+\usefont{T1}{ptm}{m}{n} \rput(13.564844,1.1759375){J} 
+\usefont{T1}{ptm}{m}{n} \rput(14.024844,-5.0040627){J} 
+\usefont{T1}{ptm}{m}{n} \rput(7.284844,-4.6440625){J} 
+\usefont{T1}{ptm}{m}{n} \rput(0.38484374,-2.4640625){J} 
+\usefont{T1}{ptm}{m}{n} \rput(1.5076562,-4.9240627){H} 
+\usefont{T1}{ptm}{m}{n} \rput(8.627656,0.8959375){H} 
+\usefont{T1}{ptm}{m}{n} \rput(9.687656,-4.8240623){H} 
+\usefont{T1}{ptm}{m}{n} \rput(15.527657,1.0559375){H}
+\usefont{T1}{ptm}{m}{n} \rput(16.047657,-4.6440625){H} 
+\usefont{T1}{ptm}{m}{n} \rput(10.866406,3.0759375){K} 
+\usefont{T1}{ptm}{m}{n} \rput(10.006406,-1.2440625){K} 
+\usefont{T1}{ptm}{m}{n} \rput(16.626406,4.1159377){K} 
+\usefont{T1}{ptm}{m}{n} \rput(16.726406,-2.1440625){K} 
+\usefont{T1}{ptm}{m}{n} \rput(1.7864063,-0.8440625){K} 
+\usefont{T1}{ptm}{m}{n} \rput(2.6103125,2.7959375){O} 
+
+\usefont{T1}{ptm}{m}{n} \rput(2.1703124,-2.9040625){O} 
+\usefont{T1}{ptm}{m}{n} \rput(8.530313,3.2359376){O} 
+\usefont{T1}{ptm}{m}{n} \rput(8.410313,-2.7040625){O} 
+\usefont{T1}{ptm}{m}{n} \rput(14.610312,3.3759375){O} 
+\usefont{T1}{ptm}{m}{n} \rput(14.470312,-2.6440625){O} 
+\usefont{T1}{ptm}{m}{it} \rput(1.7332813,4.4559374){a} 
+\usefont{T1}{ptm}{m}{it} \rput(8.907812,2.8559375){b} 
+\usefont{T1}{ptm}{m}{it} \rput(14.653438,2.7159376){c} 
+\usefont{T1}{ptm}{m}{it} \rput(2.9351563,-2.7840624){d} 
+\usefont{T1}{ptm}{m}{it} \rput(7.835,-4.2440624){e} 
+\usefont{T1}{ptm}{m}{it} \rput(15.74375,-4.2171874){f} 
+\usefont{T1}{ptm}{m}{n} \rput(7.9375,4.0109377){\small $45^{\circ}$} 
+\usefont{T1}{ptm}{m}{n} \rput(15.672188,2.9909375){\small $20^{\circ}$} 
+\usefont{T1}{ptm}{m}{n} \rput(1.070625,-2.5290625){\small $100^{\circ}$} 
+\usefont{T1}{ptm}{m}{n} \rput(9.448906,-2.2690625){\small $30^{\circ}$} 
+\usefont{T1}{ptm}{m}{n} \rput(14.930625,-3.1690626){\small 120$^{\circ}$}
+\psarc[linewidth=0.01](2.51875,-2.9040625){0.23}{241.69925}{114.443954} 
+\usefont{T1}{ptm}{m}{n} \rput(0.5709375,5.0628123){1.} 
+\usefont{T1}{ptm}{m}{n} \rput(6.5829687,5.0628123){2.} 
+\usefont{T1}{ptm}{m}{n} \rput(12.579687,5.1228123){3.} 
+\usefont{T1}{ptm}{m}{n} \rput(0.56875,-0.8771875){4.} 
+\usefont{T1}{ptm}{m}{n} \rput(6.5760937,-0.8971875){5.} 
+\usefont{T1}{ptm}{m}{n} \rput(12.565937,-0.8971875){6.} 
+\end{pspicture} 
+}
+\end{center}
+}
+
+\begin{mytheorem}
+{theorem:circle5}{The angles subtended by a chord at the circumference of a circle are equal, if the angles are on the same side of the chord.}{
+
+\begin{center}
+\begin{pspicture}(-2.5,-2.5)(2.5,2.5)
+%\psgrid
+\pscircle{2.5}
+\psdot(0,0)
+\uput[u](0,0){O}
+\uput[l]({2.5;200}){$A$}
+\uput[r]({2.5;290}){$B$}
+\uput[ur]({2.5;45}){$P$}
+\uput[ul]({2.5;120}){$Q$}
+
+\psline({2.5;200})({2.5;120}) %AQ
+\psline({2.5;200})({2.5;45}) %AP
+\psline({2.5;290})({2.5;45}) %BP
+\psline({2.5;290})({2.5;120}) %BQ
+\psline({2.5;200})({2.5;290}) %AB
+\psline[linestyle=dashed]({2.5;200})(0,0)({2.5;290}) %AOB
+
+\end{pspicture}
+\end{center}
+
+Consider a circle, with centre $O$. Draw a chord $AB$. Select any points $P$ and $Q$ on the circumference of the circle, such that both $P$ and $Q$ are on the same side of the chord. Draw lines $PA$, $PB$, $QA$ and $QB$.
+
+\textbf{The aim is to prove that $\hat{AQB} = \hat{APB}$.}
+
+\begin{eqnarray*}
+\hat{AOB}& =& 2\hat{AQB} \; \mbox{($\angle$ at centre = twice $\angle$ at circumference (Theorem 4))}\\
+\mbox{and }\hat{AOB}& =& 2\hat{APB} \; \mbox{($\angle$ at centre = twice $\angle$ at circumference (Theorem 4))}\\
+\therefore 2\hat{AQB}& =& 2\hat{APB}\\
+\therefore \hat{AQB}& =& \hat{APB}\\
+\end{eqnarray*}
+}
+\end{mytheorem}
+
+\begin{mytheorem}
+{theorem:circle5a}{(Converse of Theorem \ref{theorem:circle5}) If a line segment subtends equal angles at two other points on the same side of the line, then these four points lie on a circle.}{
+
+\begin{center}
+\begin{pspicture}(-2.5,-2.5)(2.5,2.5)
+
+%\psgrid
+\pscircle{2.5}
+\uput[l]({2.5;200}){$A$}
+\uput[r]({2.7;280}){$B$}
+\uput[u]({2.5;50}){$R$}
+\uput[ul]({2.5;120}){$Q$}
+\uput[ul]({3.5;45}){$P$}
+
+\psline({2.5;200})({2.5;290}) %AB
+\psline({2.5;200})({2.5;120}) %AQ
+\psline({2.5;200})({3.5;45}) %AR
+\psline({2.5;290})({2.5;50}) %BR
+\psline({2.5;290})({2.5;120}) %BQ
+\psline({2.5;290})({3.5;45}) %BP
+\psline({2.5;200})({3.5;45}) %AP
+
+\end{pspicture}
+\end{center}
+
+Consider a line segment $AB$, that subtends equal angles at points $P$ and $Q$ on the same side of $AB$.
+
+\textbf{The aim is to prove that points $A$, $B$, $P$ and $Q$ lie on the circumference of a circle.}
+
+By contradiction. Assume that point $P$ does not lie on a circle drawn through points $A$, $B$ and $Q$. Let the circle cut $AP$ (or $AP$ extended) at point $R$.
+
+\begin{eqnarray*}
+\hat{AQB}& =& \hat{ARB} \mbox{($\angle$s on same side of chord (Theorem 5))}\\
+\mbox{but }\hat{AQB}& =& \hat{APB} \mbox{ (given)}\\
+\therefore \hat{ARB}& =& \hat{APB} \\
+\mbox{but this cannot be true since } \hat{ARB}&=& \hat{APB}+\hat{RBP} \mbox{ (exterior $\angle$ of $\triangle$)}\\
+\end{eqnarray*}
+$\therefore$ the assumption that the circle does not pass through $P$, must be false, and $A$, $B$, $P$ and $Q$ lie on the circumference of a circle.}
+\end{mytheorem}
+
+\Exercise{Circles III}{
+
+\item Find the values of the unknown letters.
+\begin{center}
+\scalebox{1} % Change this value to rescale the drawing. 
+{
+\begin{pspicture}(0,-8.120156)(10.986875,8.160156) 
+\pscircle[linewidth=0.04,dimen=outer](2.541875,5.6298437){2.19} 
+\pscircle[linewidth=0.04,dimen=outer](8.541875,5.6098437){2.19} 
+\pscircle[linewidth=0.04,dimen=outer](2.541875,0.04984375){2.19} 
+\pscircle[linewidth=0.04,dimen=outer](2.521875,-5.930156){2.19} 
+\pscircle[linewidth=0.04,dimen=outer](8.561875,-5.9101562){2.19} 
+\usefont{T1}{ptm}{m}{n} 
+\rput(0.4940625,7.909844){1.} 
+\usefont{T1}{ptm}{m}{n} 
+\rput(5.9860935,7.869844){2.} 
+\usefont{T1}{ptm}{m}{n} 
+\rput(0.5028125,2.4498436){3.} 
+\usefont{T1}{ptm}{m}{n} 
+\rput(5.991875,2.4498436){4.} 
+\usefont{T1}{ptm}{m}{n} 
+\rput(0.51921874,-3.5501564){5.} 
+\usefont{T1}{ptm}{m}{n} 
+\rput(5.9690623,-3.5501564){6.} 
+\psline[linewidth=0.04cm](0.431875,6.179844)(2.211875,3.4998438) 
+\psline[linewidth=0.04cm](2.211875,3.4798439)(2.431875,7.779844) 
+\psline[linewidth=0.04cm](2.431875,7.799844)(4.551875,4.8798437) 
+\psline[linewidth=0.04cm](4.551875,4.8598437)(0.431875,6.159844) 
+\psline[linewidth=0.04cm](6.511875,6.3398438)(8.871875,3.4598436) 
+\psline[linewidth=0.04cm](8.211875,7.759844)(10.571875,4.8798437) 
+\psline[linewidth=0.04cm](6.511875,6.3398438)(10.571875,4.8598437) 
+\psline[linewidth=0.04cm](8.231875,7.759844)(8.851875,3.4798439) 
+\psline[linewidth=0.04cm](8.851875,3.4598436)(7.131875,3.9598436) 
+\psline[linewidth=0.04cm](7.131875,3.9398437)(10.551875,4.8598437) 
+\psline[linewidth=0.04cm](0.391875,0.41984376)(3.751875,1.8198438) 
+\psline[linewidth=0.04cm](3.751875,1.8398438)(3.511875,-1.8801563) 
+\psline[linewidth=0.04cm](3.511875,-1.8601563)(4.691875,-0.18015625) 
+\psline[linewidth=0.04cm](4.691875,-0.20015626)(0.411875,0.41984376) 
+\pscircle[linewidth=0.04,dimen=outer](8.521875,0.04984375){2.19} 
+\psline[linewidth=0.04cm](6.491875,0.77984375)(8.851875,-2.1001563) 
+\psline[linewidth=0.04cm](8.191875,2.1998436)(10.551875,-0.68015623) 
+\psline[linewidth=0.04cm](6.491875,0.77984375)(10.551875,-0.7001563) 
+\psline[linewidth=0.04cm](8.211875,2.1998436)(8.831875,-2.0801563) 
+\psline[linewidth=0.04cm](1.591875,-3.9601562)(3.891875,-4.260156) 
+\psline[linewidth=0.04cm](3.891875,-4.260156)(0.931875,-7.380156) 
+\psline[linewidth=0.04cm](0.931875,-7.380156)(3.691875,-7.720156) 
+\psline[linewidth=0.04cm](3.711875,-7.720156)(1.591875,-3.9401562) 
+\psline[linewidth=0.04cm](3.731875,-7.740156)(3.911875,-4.300156) 
+\psline[linewidth=0.04cm](0.911875,-7.400156)(2.611875,-3.7401562) 
+\psline[linewidth=0.04cm](3.731875,-7.720156)(2.611875,-3.7601562) 
+\psline[linewidth=0.04cm](6.571875,-5.0401564)(6.691875,-7.0201564) 
+\psline[linewidth=0.04cm](6.551875,-5.0601563)(10.431875,-6.9401565) 
+\psline[linewidth=0.04cm](6.671875,-7.0201564)(10.431875,-6.9801564) 
+\psline[linewidth=0.04cm](10.431875,-6.9801564)(8.371875,-3.7401562) 
+\psline[linewidth=0.04cm](8.371875,-3.7401562)(6.711875,-6.9801564) 
+\psline[linewidth=0.04cm](6.571875,-5.0401564)(8.371875,-3.7401562) 
+\psdots[dotsize=0.12](8.551875,-6.0401564) 
+\psline[linewidth=0.04cm](7.4462404,-0.73035026)(7.376931,-0.31562597) 
+\psline[linewidth=0.04cm](7.376931,-0.31562597)(7.774565,-0.50187075) 
+\psline[linewidth=0.04cm](9.34624,0.44964978)(9.276931,0.86437404) 
+\psline[linewidth=0.04cm](9.276931,0.86437404)(9.674565,0.67812926) 
+\psline[linewidth=0.04cm](7.4862404,4.80965)(7.416931,5.224374) 
+\psline[linewidth=0.04cm](7.416931,5.224374)(7.814565,5.0381293) 
+\psline[linewidth=0.04cm](9.42624,5.92965)(9.356931,6.344374) 
+\psline[linewidth=0.04cm](9.356931,6.344374)(9.754565,6.158129) 
+\usefont{T1}{ptm}{m}{n} \rput(2.4725,7.969844){$A$} 
+\usefont{T1}{ptm}{m}{n} \rput(0.27125,6.2298436){$B$} 
+\usefont{T1}{ptm}{m}{n} \rput(2.2171874,3.2098436){$C$} 
+\usefont{T1}{ptm}{m}{n} \rput(4.7207813,4.6898437){$D$} 
+\usefont{T1}{ptm}{m}{n} \rput(8.1484375,7.929844){$E$} 
+\usefont{T1}{ptm}{m}{n} \rput(6.3046875,6.429844){$F$} 
+\usefont{T1}{ptm}{m}{n} \rput(6.9371877,3.7698438){$G$} 
+\usefont{T1}{ptm}{m}{n} \rput(8.950781,3.2098436){$H$} 
+\usefont{T1}{ptm}{m}{n} \rput(10.750313,4.7898436){$I$} 
+\usefont{T1}{ptm}{m}{n} \rput(3.9879687,2.1098437){$J$} 
+\usefont{T1}{ptm}{m}{n} \rput(0.24953125,0.36984375){$K$} 
+\usefont{T1}{ptm}{m}{n} \rput(3.5689063,-2.1101563){$L$} 
+\usefont{T1}{ptm}{m}{n} \rput(4.9534373,-0.19015625){$M$} 
+\usefont{T1}{ptm}{m}{n} \rput(8.191406,2.3898437){$N$} 
+\usefont{T1}{ptm}{m}{n} \rput(6.2734375,0.8698437){$O$} 
+\usefont{T1}{ptm}{m}{n} \rput(8.831562,-2.3501563){$P$} 
+\usefont{T1}{ptm}{m}{n} \rput(10.746563,-0.8701562){$Q$} 
+\usefont{T1}{ptm}{m}{n} \rput(4.0271873,-4.150156){$R$} 
+\usefont{T1}{ptm}{m}{n} \rput(2.6710937,-3.5301561){$S$} 
+\usefont{T1}{ptm}{m}{n} \rput(1.5026562,-3.7701561){$T$} 
+\usefont{T1}{ptm}{m}{n} \rput(0.78515625,-7.590156){$U$} 
+\usefont{T1}{ptm}{m}{n} \rput(3.865625,-7.9101562){$V$} 
+\usefont{T1}{ptm}{m}{n} \rput(8.3854685,-3.5701563){$W$} 
+\usefont{T1}{ptm}{m}{n} \rput(6.3584375,-4.9101562){$X$} 
+\usefont{T1}{ptm}{m}{n} \rput(6.5401564,-7.2101564){$Y$} 
+\usefont{T1}{ptm}{m}{n} \rput(10.583906,-7.130156){$Z$} 
+\usefont{T1}{ptm}{m}{n} \rput(8.713437,-5.8101563){$O$} 
+\usefont{T1}{ptm}{m}{n} \rput(1.2,5.6648436){\small $21^{\circ}$} 
+\usefont{T1}{ptm}{m}{n} \rput(2.5729687,7.324844){\small $a$} 
+\usefont{T1}{ptm}{m}{n} \rput(9.88375,5.304844){\small $15^{\circ}$} 
+\usefont{T1}{ptm}{m}{n} \rput(7.733281,3.9448438){\small $b$} 
+\usefont{T1}{ptm}{m}{n} \rput(3.8,-1.1551563){\small $24^{\circ}$} 
+\usefont{T1}{ptm}{m}{n} \rput(0.9215625,0.48484376){\small $c$} 
+\usefont{T1}{ptm}{m}{n} \rput(8.613281,-1.6151563){\small $d$} 
+\usefont{T1}{ptm}{m}{n} \rput(7.18375,0.3){\small $17^{\circ}$} 
+\usefont{T1}{ptm}{m}{n} \rput(3.420625,-4.4951563){\small $45^{\circ}$} 
+\usefont{T1}{ptm}{m}{n} \rput(3.6720312,-4.8751564){\small $35^{\circ}$} 
+\usefont{T1}{ptm}{m}{n} \rput(3.7,-6.4351563){\small $12^{\circ}$} 
+\rput{-50.539997}(6.0485053,-1.60724){\psarc[linewidth=0.02](1.321875,-7.2101564){0.29}{352.85962}{180.0}} 
+\usefont{T1}{ptm}{m}{n} \rput(1.6854688,-6.9951563){\small $e$} 
+\usefont{T1}{ptm}{m}{n} \rput(9.912656,-6.4951563){\small $f$} 
+\usefont{T1}{ptm}{m}{n} \rput(7.8120313,-4.4151564){\small $35^{\circ}$} 
+\end{pspicture}
+}
+\end{center}
+
+}
+
+\subsubsection{Cyclic Quadrilaterals}
+Cyclic quadrilaterals are quadrilaterals with all four vertices lying on the circumference of a circle. The vertices of a cyclic quadrilateral are said to be \textit{concyclic}.
+
+\begin{mytheorem}
+{theorem:circle6}{The opposite angles of a cyclic quadrilateral are supplementary.}{
+
+\begin{center}
+\begin{pspicture}(-2.5,-2.5)(2.5,2.5)
+%\psgrid
+\pscircle{2.5}
+\psdot(0,0)
+\uput[u](0,0){O}
+\uput[l]({2.5;200}){$A$}
+\uput[r]({2.7;280}){$B$}
+\uput[ur]({2.5;45}){$P$}
+\uput[ul]({2.5;120}){$Q$}
+\uput[ul](0,0){\tiny{1}}
+\uput[d](0,0){\tiny{2}}
+
+\psarc{<->}{0.4}{200}{45}
+\psarc{<->}{0.5}{45}{200}
+
+\pspolygon({2.5;200})({2.5;290})({2.5;45})({2.5;120}) %BQ
+\psline[linestyle=dashed]({2.5;200})(0,0)({2.5;45}) %AOP
+\end{pspicture}
+\end{center}
+
+Consider a circle, with centre $O$. Draw a cyclic quadrilateral $ABPQ$. Draw $AO$ and $PO$.
+
+\textbf{The aim is to prove that $\hat{ABP} + \hat{AQP}=180^{\circ}$ and $\hat{QAB} + \hat{QPB}=180^{\circ}$.}
+
+\begin{eqnarray*}
+\hat{O}_1& =& 2\hat{ABP} \mbox{ ($\angle$s at centre (Theorem 4))}\\
+\hat{O}_2& =& 2\hat{AQP} \mbox{ ($\angle$s at centre (Theorem 4))}\\
+\mbox{But, } \hat{O}_1+\hat{O}_2&=&360^{\circ}\\
+\therefore 2\hat{ABP}+2\hat{AQP}&=&360^{\circ}\\
+\therefore \hat{ABP}+\hat{AQP}&=&180^{\circ}\\
+\mbox{Similarly, } \hat{QAB}+\hat{QPB}&=&180^{\circ}\\
+\end{eqnarray*}
+}
+\end{mytheorem}
+
+\begin{mytheorem}
+{theorem:circle6a}{(Converse of Theorem \ref{theorem:circle6}) If the opposite angles of a quadrilateral are supplementary, then the quadrilateral is cyclic.}{
+
+\begin{center}
+\begin{pspicture}(-2.5,-2.5)(2.5,2.5)
+%\psgrid
+\pscircle{2.5}
+\uput[l]({2.5;200}){$A$}
+\uput[d]({2.5;290}){$B$}
+\uput[u]({2.5;50}){$R$}
+\uput[ul]({2.5;120}){$Q$}
+\uput[u]({3.5;27}){$P$}
+\pspolygon({2.5;200})({2.5;290})({2.5;45})({2.5;120}) %BQ
+\psline({2.5;120})({3.5;27})({2.5;290})
+\end{pspicture}
+\end{center}
+
+Consider a quadrilateral $ABPQ$, such that $\hat{ABP} + \hat{AQP}=180^{\circ}$ and $\hat{QAB} + \hat{QPB}=180^{\circ}$.
+
+\textbf{The aim is to prove that points $A$, $B$, $P$ and $Q$ lie on the circumference of a circle.}
+
+By contradiction. Assume that point $P$ does not lie on a circle drawn through points $A$, $B$ and $Q$. Let the circle cut $QP$ (or $QP$ extended) at point $R$. Draw $BR$.
+
+\begin{eqnarray*}
+\hat{QAB} + \hat{QRB}&=&180^{\circ} \mbox{ (opp. $\angle$s of cyclic quad. (Theorem 7))}\\
+\mbox{but }\hat{QAB} + \hat{QPB}&=&180^{\circ} \mbox{ (given)}\\
+\therefore \hat{QRB}& =& \hat{QPB} \\
+\mbox{but this cannot be true since } \hat{QRB}&=& \hat{QPB}+\hat{RBP} \mbox{ (exterior $\angle$ of $\triangle$)}\\
+\end{eqnarray*}
+$\therefore$ the assumption that the circle does not pass through $P$, must be false, and $A$, $B$, $P$ and $Q$ lie on the circumference of a circle and $ABPQ$ is a cyclic quadrilateral.}
+\end{mytheorem}
+
+\Exercise{Circles IV}{
+
+\item Find the values of the unknown letters.
+\begin{center}
+\scalebox{1} % Change this value to rescale the drawing. 
+{ 
+\begin{pspicture}(0,-5.5932813)(11.754375,5.5932813) 
+\pscircle[linewidth=0.02,dimen=outer](2.6865625,2.9267187){2.36} 
+\psline[linewidth=0.04cm](1.2065625,4.726719)(0.4465625,2.2867188) 
+\psline[linewidth=0.04cm](0.4465625,2.2867188)(3.4065626,0.70671874) 
+\psline[linewidth=0.04cm](1.2065625,4.746719)(3.8065624,4.9667187) 
+\psline[linewidth=0.04cm](3.8265624,4.9667187)(3.4065626,0.70671874) 
+\usefont{T1}{ptm}{m}{n} \rput(1.093125,4.916719){$X$} 
+\usefont{T1}{ptm}{m}{n} \rput(3.9948437,5.076719){$Y$} 
+\usefont{T1}{ptm}{m}{n} \rput(3.4385939,0.45671874){$Z$} 
+\usefont{T1}{ptm}{m}{n} \rput(0.22015625,2.1167188){$W$} 
+\usefont{T1}{ptm}{m}{n} \rput(0.6925,2.4567187){$a$} 
+\usefont{T1}{ptm}{m}{n} \rput(3.1928124,1.0567187){$b$} 
+\usefont{T1}{ptm}{m}{n} \rput(1.6321875,4.3767185){$106^{\circ}$} 
+\usefont{T1}{ptm}{m}{n} \rput(3.2135937,4.536719){$87^{\circ}$} 
+\pscircle[linewidth=0.02,dimen=outer](8.986563,2.9667187){2.36} 
+\pscircle[linewidth=0.02,dimen=outer](2.6865625,-2.8932812){2.36} 
+\pscircle[linewidth=0.02,dimen=outer](8.986563,-2.9132812){2.36} 
+\psline[linewidth=0.04cm](0.3465625,-2.8332813)(4.4465623,-0.11328125) 
+\psline[linewidth=0.04cm](0.3465625,-2.8132813)(0.9265625,-4.4332814) 
+\psline[linewidth=0.04cm](0.8865625,-4.4132814)(3.4465625,-5.0732813) 
+\psline[linewidth=0.04cm](3.4465625,-5.133281)(3.5465624,-0.69328123) 
+\psline[linewidth=0.04cm](6.6265626,2.9667187)(11.306562,2.9667187) 
+\psdots[dotsize=0.12](9.046562,2.9667187) 
+\psline[linewidth=0.04cm](11.306562,2.9867187)(7.8665624,0.94671875) 
+\psline[linewidth=0.04cm](6.6665626,2.9467187)(7.8465624,0.94671875) 
+\psline[linewidth=0.04cm](7.8465624,0.9267188)(9.766562,0.76671875) 
+\psline[linewidth=0.04cm](9.766562,0.74671876)(11.266562,2.9467187) 
+\psline[linewidth=0.04cm](8.686563,-0.5732812)(6.7065625,-2.4132812) 
+\psline[linewidth=0.04cm](6.7065625,-2.4332812)(8.586562,-5.193281) 
+\psline[linewidth=0.04cm](8.566563,-5.193281)(10.566563,-4.6132812) 
+\psline[linewidth=0.04cm](10.566563,-4.6132812)(8.686563,-0.5732812) 
+\psline[linewidth=0.04cm](6.7065625,-2.4132812)(10.586562,-4.6132812) 
+\usefont{T1}{ptm}{m}{n} \rput(9.028125,3.2167187){$O$} 
+\usefont{T1}{ptm}{m}{n} \rput(6.46625,2.9567187){$P$} 
+\usefont{T1}{ptm}{m}{n} \rput(11.56125,2.9767187){$Q$} 
+\usefont{T1}{ptm}{m}{n} \rput(9.901875,0.51671875){$R$} 
+\usefont{T1}{ptm}{m}{n} \rput(7.7657814,0.6767188){$S$} 
+\usefont{T1}{ptm}{m}{n} \rput(8.6198435,-0.42328125){$U$} 
+\usefont{T1}{ptm}{m}{n} \rput(10.760312,-4.8232813){$V$} 
+\usefont{T1}{ptm}{m}{n} \rput(8.580156,-5.443281){$W$} 
+\usefont{T1}{ptm}{m}{n} \rput(6.473125,-2.5032814){$X$} 
+\usefont{T1}{ptm}{m}{n} \rput(0.06546875,-2.8832812){$H$} 
+\usefont{T1}{ptm}{m}{n} \rput(0.805,-4.7032814){$I$} 
+\usefont{T1}{ptm}{m}{n} \rput(3.5626562,-5.3032813){$J$} 
+\usefont{T1}{ptm}{m}{n} \rput(3.4242187,-0.40328124){$K$} 
+\usefont{T1}{ptm}{m}{n} \rput(4.643594,-0.02328125){$L$} 
+\usefont{T1}{ptm}{m}{n} \rput(0.12875,5.396719){1.} 
+\usefont{T1}{ptm}{m}{n} \rput(6.2207813,5.396719){2.} 
+\usefont{T1}{ptm}{m}{n} \rput(0.1375,-0.30328125){3.} 
+\usefont{T1}{ptm}{m}{n} \rput(6.2065625,-0.30328125){4.} 
+\usefont{T1}{ptm}{m}{n} \rput(7.9125,1.2767187){$a$} 
+\usefont{T1}{ptm}{m}{n} \rput(10.492812,2.7167187){$b$} 
+\usefont{T1}{ptm}{m}{n} \rput(9.680469,0.95671874){$c$} 
+\usefont{T1}{ptm}{m}{n} \rput(7.4109373,2.6367188){$34^{\circ}$} 
+\usefont{T1}{ptm}{m}{n} \rput(1.2,-4.1632814){$114^{\circ}$} 
+\usefont{T1}{ptm}{m}{n} \rput(3.7725,-1){$a$} 
+\usefont{T1}{ptm}{m}{n} \rput(9.8073435,-4.543281){$57^{\circ}$} 
+\usefont{T1}{ptm}{m}{n} \rput(7.2525,-2.9232812){$a$} 
+\usefont{T1}{ptm}{m}{n} \rput(8.553594,-1.1032813){$86^{\circ}$} 
+\end{pspicture} 
+}
+\end{center}
+}
+
+\begin{mytheorem}
+{theorem:circle7}{Two tangents drawn to a circle from the same point outside the circle are equal in length.}{
+
+\begin{center}
+\begin{pspicture}(-3,-2.8)(5.1,2.8)
+%\psgrid
+\pscircle{2.5}
+\psline(5,-1.5)(0.75,2.8)
+\psline(5,-1.5)(-1.15,-2.8)
+\psdot(0,0)
+\uput[ur](1.8,1.8){$A$}
+\uput[d](0.6,-2.4){$B$}
+\uput[ul](0,0){$O$}
+\uput[d](5.1,-1.5){$P$}
+\psline[linestyle=dashed](0,0)(1.8,1.8)
+\psline[linestyle=dashed](0,0)(0.6,-2.4)
+\psline[linestyle=dashed](0,0)(5,-1.5)
+
+\end{pspicture}
+\end{center}
+
+Consider a circle, with centre $O$. Choose a point $P$ outside the circle. Draw two tangents to the circle from point $P$, that meet the circle at $A$ and $B$. Draw lines $OA$, $OB$ and $OP$.
+
+\textbf{The aim is to prove that $AP=BP$.}
+
+In $\triangle OAP$ and $\triangle OBP$,
+
+\begin{enumerate}
+\item{$OA=OB$ (radii)}
+\item{$\angle OAP=\angle OBP=90^{\circ}$ ($OA \perp AP$ and $OB \perp BP$)}
+\item{$OP$ is common to both triangles.}
+\end{enumerate}
+$\triangle OAP \equiv \triangle OBP$ (right angle, hypotenuse, side)
+
+$\therefore AP=BP$
+}
+\end{mytheorem}
+
+\Exercise{Circles V}{
+
+\item Find the value of the unknown lengths.
+\begin{center} 
+\scalebox{1} % Change this value to rescale the drawing. 
+{ 
+\begin{pspicture}(0,-4.9534373)(13.603437,4.9534373) 
+\pscircle[linewidth=0.02,dimen=outer](9.143437,-2.846875){1.58} 
+\pscircle[linewidth=0.02,dimen=outer](11.963437,3.133125){1.64} 
+\pscircle[linewidth=0.02,dimen=outer](2.7634375,2.333125){1.18} 
+% \usefont{T1}{ptm}{m}{n} 
+\rput(0.145625,4.623125){1.} 
+% \usefont{T1}{ptm}{m}{n} 
+\rput(8.017656,4.743125){2.} 
+% \usefont{T1}{ptm}{m}{n} 
+\rput(0.094375,-0.236875){3.} 
+% \usefont{T1}{ptm}{m}{n} 
+\rput(8.083438,-0.236875){4.} 
+\psline[linewidth=0.04cm](9.323438,-1.246875)(13.018835,-2.0538204) 
+\psline[linewidth=0.04cm](9.963437,-4.186875)(12.980635,-2.054173) 
+\psdots[dotsize=0.12](9.323438,-1.266875) 
+\psdots[dotsize=0.12](9.983438,-4.166875) 
+% \usefont{T1}{ptm}{m}{n} 
+\rput(9.29875,-1.036875){R} 
+% \usefont{T1}{ptm}{m}{n} 
+\rput(10.098125,-4.396875){Q} 
+% \usefont{T1}{ptm}{m}{n} 
+\rput(13.202656,-1.996875){S} 
+% \usefont{T1}{ptm}{m}{n} 
+\rput{-10.919821}(0.48545137,2.110726){\rput(11.249375,-1.501875){\small $3~$cm}} 
+\psdots[dotsize=0.148](12.003437,3.113125) 
+\psline[linewidth=0.04cm](12.0344305,3.1427858)(12.292444,1.5434643) 
+\psline[linewidth=0.04cm](12.048632,3.09312)(10.658243,4.15313) 
+\psline[linewidth=0.04cm](10.983438,4.613125)(8.323438,0.993125) 
+\psline[linewidth=0.04cm](8.303437,0.973125)(12.883437,1.613125) 
+\psline[linewidth=0.04cm](11.963437,3.073125)(8.323438,0.993125) 
+\psline[linewidth=0.04cm](2.0034375,4.633125)(1.1834375,0.473125) 
+\psline[linewidth=0.04cm](1.9834375,4.613125)(4.9634376,1.973125) 
+\psline[linewidth=0.04cm](1.1834375,0.453125)(4.9834375,1.973125) 
+\pscircle[linewidth=0.02,dimen=outer](4.7234373,-2.046875){1.64} 
+\psdots[dotsize=0.148](4.7634373,-2.066875) 
+\psline[linewidth=0.04cm](4.7944307,-2.0372143)(5.0234375,-3.666875) 
+\psline[linewidth=0.04cm](4.8086314,-2.08688)(3.4182434,-1.02687) 
+\psline[linewidth=0.04cm](3.7434375,-0.566875)(1.0834374,-4.186875) 
+\psline[linewidth=0.04cm](1.0634375,-4.206875)(6.3034377,-3.466875) 
+\psline[linewidth=0.04cm](4.7234373,-2.106875)(1.0834374,-4.186875) 
+\psline[linewidth=0.04cm](4.7434373,-2.066875)(6.3434377,-2.066875) 
+\psline[linewidth=0.04cm](6.3634377,-2.026875)(6.2443566,-3.5069652) 
+\psline[linewidth=0.04cm](6.2234373,-3.446875)(4.7434373,-2.046875) 
+% \usefont{T1}{ptm}{m}{n} 
+\rput(1.9240625,4.763125){$A$} 
+% \usefont{T1}{ptm}{m}{n} 
+\rput(1.3828125,2.663125){$B$} 
+% \usefont{T1}{ptm}{m}{n} 
+\rput(1.08875,0.323125){$C$} 
+% \usefont{T1}{ptm}{m}{n} 
+\rput(3.3723438,1.023125){$D$} 
+% \usefont{T1}{ptm}{m}{n} 
+\rput(5.16,1.903125){$E$} 
+% \usefont{T1}{ptm}{m}{n} 
+\rput(3.75,3.323125){$F$} 
+% \usefont{T1}{ptm}{m}{n} 
+ \rput(10.50875,4.303125){$G$} 
+% \usefont{T1}{ptm}{m}{n} Circles V
+\rput(8.122344,0.903125){$H$} 
+% \usefont{T1}{ptm}{m}{n} 
+\rput(12.341875,1.283125){$I$} 
+% \usefont{T1}{ptm}{m}{n} 
+\rput(12.2795315,3.243125){$J$} 
+% \usefont{T1}{ptm}{m}{n} 
+\rput(3.3810937,-0.796875){$K$} 
+% \usefont{T1}{ptm}{m}{n} 
+\rput(0.9404687,-4.256875){$L$} 
+% \usefont{T1}{ptm}{m}{n} 
+\rput(5.065,-3.876875){$M$} 
+% \usefont{T1}{ptm}{m}{n} 
+\rput(6.6829686,-3.756875){$N$} 
+% \usefont{T1}{ptm}{m}{n} 
+\rput(4.845,-1.816875){$O$} 
+% \usefont{T1}{ptm}{m}{n} 
+\rput(6.483125,-2.136875){$P$} 
+% \usefont{T1}{ptm}{m}{n} 
+\rput(6.0935936,4.423125){$AE=5~$cm} 
+% \usefont{T1}{ptm}{m}{n} 
+\rput(6.0935936,4.043125){$AC=8~$cm} 
+% \usefont{T1}{ptm}{m}{n} 
+\rput(6.0859375,3.683125){$CE=9~$cm} 
+% \usefont{T1}{ptm}{m}{n} 
+\rput(1.6445312,3.618125){\small $a$} 
+% \usefont{T1}{ptm}{m}{n} 
+\rput(2.2648437,0.638125){\small $b$} 
+% \usefont{T1}{ptm}{m}{n} 
+\rput(4.393125,1.538125){\small $c$} 
+\psdots[dotsize=0.12](1.6234375,2.613125) 
+\psdots[dotsize=0.12](3.5434375,3.193125) 
+\psdots[dotsize=0.12](3.2634375,1.273125) 
+% \usefont{T1}{ptm}{m}{n} 
+\rput(10.2448435,2.318125){\small $d$} 
+% \usefont{T1}{ptm}{m}{n} 
+\rput{-39.207214}(0.20217375,8.153282){\rput(11.506094,3.778125){\small $5~$cm}} 
+% \usefont{T1}{ptm}{m}{n} 
+\rput{8.625821}(0.2865456,-1.6076087){\rput(10.772031,1.078125){\small $8~$cm}} 
+% \usefont{T1}{ptm}{m}{n} 
+\rput{-36.121605}(1.6030521,2.2299926){\rput(4.192656,-1.361875){\small $2~$cm}} 
+% \usefont{T1}{ptm}{m}{n} 
+\rput{54.082447}(-0.7939886,-2.8126023){\rput(2.3353126,-2.201875){\small $6~$cm}} 
+% \usefont{T1}{ptm}{m}{n}
+ \rput(5.7170315,-2.701875){\small $e$} 
+% \usefont{T1}{ptm}{m}{n} 
+\rput(11.744219,-3.181875){\small $f$} 
+% \usefont{T1}{ptm}{m}{n} 
+\rput(4.4384375,-4.796875){$LN=7.5~$cm} 
+\end{pspicture} 
+}
+\end{center}
+
+}
+
+\begin{mytheorem}
+{theorem:circle8}{The angle between a tangent and a chord, drawn at the point of contact of the chord, is equal to the angle which the chord subtends in the alternate segment.}{
+
+\begin{center}
+\begin{pspicture}(-3,-2.8)(5.1,2.8)
+%\psgrid
+\SpecialCoor
+\pscircle{2.5}
+\psdot(0,0)
+\psline[linewidth=2pt]({2.5;150})({2.5;270}) %AB
+\psline({2.5;150})({2.5;200}) %AP
+\psline({2.5;200})({2.5;270}) %BP
+\psline({2.5;150})({2.5;45}) %AQ
+\psline({2.5;45})({2.5;270}) %BQ
+\psline[linestyle=dashed]({2.5;90})({2.5;270}) %BT
+\psline[linestyle=dashed]({2.5;90})({2.5;150}) %AT
+
+\psline(-2.5,-2.5)(2.5,-2.50) %SBQ
+
+\uput[ul](0,0){$O$}
+\uput[l]({2.5;150}){$A$}
+\uput[d]({2.5;270}){$B$}
+\uput[l]({2.5;200}){$P$}
+\uput[u]({2.5;45}){$Q$}
+\uput[u]({2.5;90}){$T$}
+
+\uput[d](-2.5,-2.5){$S$}
+\uput[d](2.5,-2.5){$R$}
+
+\end{pspicture}
+\end{center}
+
+Consider a circle, with centre $O$. Draw a chord $AB$ and a tangent $SR$ to the circle at point $B$. Chord $AB$ subtends angles at points $P$ and $Q$ on the minor and major arcs, respectively.
+
+Draw a diameter $BT$ and join $A$ to $T$.
+
+\textbf{The aim is to prove that $\hat{APB}=\hat{ABR}$ and $\hat{AQB}=\hat{ABS}$.}
+
+First prove that $\hat{AQB}=\hat{ABS}$ as this result is needed to prove that $\hat{APB}=\hat{ABR}$.
+
+\begin{eqnarray}
+\hat{ABS}+\hat{ABT}&=& 90^{\circ} \mbox{ ($TB\perp SR$)}\nonumber\\
+\hat{BAT}&=& 90^{\circ} \mbox{ ($\angle$s at centre)}\nonumber\\
+\therefore \hat{ABT}+\hat{ATB}&=& 90^{\circ} \mbox{ (sum of angles in $\triangle BAT$)}\nonumber\\
+\therefore \hat{ABS}&=&\hat{ATB}\nonumber\\
+\mbox{However, }\hat{AQB}&=&\hat{ATB} \mbox{ (angles subtended by same chord $AB$ (Theorem 5))}\nonumber\\
+\label{l}
+\therefore \hat{AQB}&=&\hat{ABS}\nonumber\\
+\hat{ABS}+\hat{ABR}&=&180^{\circ}\quad \mbox{($SBR$ is a straight line)}\nonumber\\
+\hat{APB}+\hat{AQB}&=&180^{\circ}\quad \mbox{($APBQ$ is a cyclic quad. (Theorem 7)}\nonumber\\
+\mbox{From (\ref{l}),}\quad \hat{AQB}&=&\hat{ABS}\nonumber\\
+\therefore 180^{\circ}-\hat{AQB}&=&180^{\circ}-\hat{ABS}\nonumber\\
+\therefore \hat{APB}&=&\hat{ABR}\nonumber\\
+\end{eqnarray}}
+\end{mytheorem}
+
+\begin{minipage}{\textwidth}
+\Exercise{Circles VI}{
+
+\item Find the values of the unknown letters.
+\begin{center} 
+\scalebox{1} % Change this value to rescale the drawing.
+{
+\begin{pspicture}(0,-10.88)(13.54,10.88)
+\pscircle[linewidth=0.04,dimen=outer](9.7,3.02){2.0}
+\psline[linewidth=0.04cm](7.74,0.32)(12.46,1.74)
+\psline[linewidth=0.04cm](10.48,1.12)(7.78,3.54)
+\psline[linewidth=0.04cm](7.82,3.56)(11.0,4.54)
+\psline[linewidth=0.04cm](11.0,4.54)(10.46,1.16)
+%\usefont{T1}{ptm}{m}{n}
+\rput(7.435,0.385){\small $O$}
+%\usefont{T1}{ptm}{m}{n}
+\rput(12.615156,1.665){\small $P$}
+%\usefont{T1}{ptm}{m}{n}
+\rput(10.467343,0.725){\small $Q$}
+%\usefont{T1}{ptm}{m}{n}
+\rput(11.39,4.585){\small $R$}
+%\usefont{T1}{ptm}{m}{n}
+\rput(7.534844,3.585){\small $S$}
+\pscircle[linewidth=0.04,dimen=outer](9.98,8.04){2.0}
+\psline[linewidth=0.04cm](8.36,5.5)(12.44,6.7)
+\psline[linewidth=0.04cm](10.54,6.06)(7.98,8.2)
+\psline[linewidth=0.04cm](8.02,8.2)(11.32,9.5)
+\psline[linewidth=0.04cm](11.28,9.48)(10.54,6.06)
+%\usefont{T1}{ptm}{m}{n}
+\rput(10.921406,9.065){\small $d$}
+%\usefont{T1}{ptm}{m}{n}
+\rput(8.289687,8.145){\small $c$}
+%\usefont{T1}{ptm}{m}{n}
+\rput(8.075,5.485){\small $O$}
+%\usefont{T1}{ptm}{m}{n}
+\rput(12.595157,6.625){\small $P$}
+%\usefont{T1}{ptm}{m}{n}
+\rput(10.607344,5.885){\small $Q$}
+%\usefont{T1}{ptm}{m}{n}
+\rput(11.47,9.565){\small $R$}
+%\usefont{T1}{ptm}{m}{n}
+\rput(7.7548437,8.165){\small $S$}
+%\usefont{T1}{ptm}{m}{n}
+\rput(5.3214064,3.345){\small $g$}
+%\usefont{T1}{ptm}{m}{n}
+\rput(5.655156,4.565){\small $P$}
+%\usefont{T1}{ptm}{m}{n}
+\rput(5.95,3.305){\small $R$}
+\pscircle[linewidth=0.04,dimen=outer](3.66,7.94){2.0}
+\psline[linewidth=0.04cm](0.3,9.0)(5.02,10.42)
+\psline[linewidth=0.04cm](3.0,9.86)(1.98,6.96)
+\psline[linewidth=0.04cm](1.9916915,6.9185925)(5.6683083,8.001408)
+\psline[linewidth=0.04cm](5.64,7.96)(3.0,9.86)
+\psline[linewidth=0.04cm](1.28,9.46)(1.42,9.38)
+\psline[linewidth=0.04cm](1.42,9.36)(1.34,9.18)
+\psline[linewidth=0.04cm](3.58,7.52)(3.7,7.4)
+\psline[linewidth=0.04cm](3.7,7.4)(3.6,7.26)
+%\usefont{T1}{ptm}{m}{n}
+\rput(3.8601563,9.7){\small $33^\circ$}
+%\usefont{T1}{ptm}{m}{n}
+\rput(5.2014065,8.045){\small $b$}
+%\usefont{T1}{ptm}{m}{n}
+\rput(2.1810937,7.205){\small $a$}
+%\usefont{T1}{ptm}{m}{n}
+\rput(0.135,9.065){\small $O$}
+%\usefont{T1}{ptm}{m}{n}
+\rput(5.135156,10.505){\small $P$}
+%\usefont{T1}{ptm}{m}{n}
+\rput(2.9473438,10.005){\small $Q$}
+%\usefont{T1}{ptm}{m}{n}
+\rput(5.79,8.005){\small $R$}
+%\usefont{T1}{ptm}{m}{n}
+\rput(1.7548437,6.785){\small $S$}
+%\usefont{T1}{ptm}{m}{n}
+\rput(10.453594,6.385){\small $e$}
+%\usefont{T1}{ptm}{m}{n}
+\rput(9.5,1.35){\small $h+50^\circ$}
+%\usefont{T1}{ptm}{m}{n}
+\rput(8.202656,3.445){\small $3h$}
+\pscircle[linewidth=0.04,dimen=outer](3.06,-8.76){2.0}
+\psline[linewidth=0.04cm](1.04,-6.32)(5.22,-7.16)
+\psline[linewidth=0.04cm](3.52,-6.84)(1.3,-9.74)
+\psline[linewidth=0.04cm](1.34,-9.72)(5.06,-8.64)
+\psline[linewidth=0.04cm](5.06,-8.66)(3.52,-6.8)
+%\usefont{T1}{ptm}{m}{n}
+\rput(1.9,-9.4){\footnotesize $34^\circ$}
+%\usefont{T1}{ptm}{m}{n}
+\rput(3.106875,-6.935){\small $m$}
+%\usefont{T1}{ptm}{m}{n}
+\rput(0.775,-6.235){\small $O$}
+%\usefont{T1}{ptm}{m}{n}
+\rput(3.6473436,-6.575){\small $Q$}
+%\usefont{T1}{ptm}{m}{n}
+\rput(1.0548438,-9.795){\small $S$}
+\pscircle[linewidth=0.04,dimen=outer](4.02,2.28){2.0}
+\psline[linewidth=0.04cm](2.0,4.72)(6.18,3.88)
+\psline[linewidth=0.04cm](4.48,4.2)(2.12,2.96)
+\psline[linewidth=0.04cm](2.12,2.98)(5.8,3.24)
+\psline[linewidth=0.04cm](5.8,3.22)(4.48,4.2)
+%\usefont{T1}{ptm}{m}{n}
+\rput(5.5,3.905){\small $8^\circ$}
+%\usefont{T1}{ptm}{m}{n}
+\rput(2.9,3.2){\small $f$}
+%\usefont{T1}{ptm}{m}{n}
+\rput(1.735,4.805){\small $O$}
+%\usefont{T1}{ptm}{m}{n}
+\rput(4.5473437,4.525){\small $Q$}
+%\usefont{T1}{ptm}{m}{n}
+\rput(1.9348438,3.025){\small $S$}
+%\usefont{T1}{ptm}{m}{n}
+\rput(3.9,4.065){\small $17^\circ$}
+\pscircle[linewidth=0.04,dimen=outer](3.0,-2.74){2.0}
+\psline[linewidth=0.04cm](7.34,-9.96)(8.68,-6.54)
+\psline[linewidth=0.04cm](11.88,-8.16)(11.6,-9.94)
+\psline[linewidth=0.04cm](8.12,-7.98)(11.84,-8.16)
+\psline[linewidth=0.04cm](11.58,-9.9)(8.1,-7.96)
+%\usefont{T1}{ptm}{m}{n}
+\rput(8.796875,-7.775){\small $52^\circ$}
+%\usefont{T1}{ptm}{m}{n}
+\rput(2.1196876,-1.4){\small $k$}
+%\usefont{T1}{ptm}{m}{n}
+\rput(0.775,-5.295){\small $O$}
+%\usefont{T1}{ptm}{m}{n}
+\rput(3.4473438,-4.935){\small $Q$}
+%\usefont{T1}{ptm}{m}{n}
+\rput(0.85484374,-3.475){\small $S$}
+%\usefont{T1}{ptm}{m}{n}
+\rput(2.791875,-3.975){\small $19^\circ$}
+\pscircle[linewidth=0.04,dimen=outer](9.22,-3.34){2.0}
+\psline[linewidth=0.04cm](1.0,-5.2)(5.6,-4.26)
+\psline[linewidth=0.04cm](2.16,-0.98)(1.12,-3.46)
+\psline[linewidth=0.04cm](2.16,-0.94)(3.5,-4.7)
+\psline[linewidth=0.04cm](3.5,-4.66)(1.12,-3.42)
+%\usefont{T1}{ptm}{m}{n}
+\rput(12.57625,-3.035){\small $l$}
+%\usefont{T1}{ptm}{m}{n}
+\rput(10.335,-1.415){\small $O$}
+%\usefont{T1}{ptm}{m}{n}
+\rput(10.8073435,-4.955){\small $Q$}
+%\usefont{T1}{ptm}{m}{n}
+\rput(1.3348438,1.145){\small $S$}
+\pscircle[linewidth=0.04,dimen=outer](9.96,-8.74){2.0}
+\psline[linewidth=0.04cm](10.0,-1.52)(13.44,-3.2)
+\psline[linewidth=0.04cm](10.32,-1.66)(7.26,-3.62)
+\psline[linewidth=0.04cm](7.28,-3.62)(10.64,-4.68)
+\psline[linewidth=0.04cm](10.66,-4.7)(10.28,-1.72)
+%\usefont{T1}{ptm}{m}{n}
+\rput(3.741875,-4.335){\small $121^\circ$}
+%\usefont{T1}{ptm}{m}{n}
+\rput(8.8,-8.2){\small $p$}
+%\usefont{T1}{ptm}{m}{n}
+\rput(7.095,-9.975){\small $O$}
+%\usefont{T1}{ptm}{m}{n}
+\rput(7.947344,-7.935){\small $Q$}
+%\usefont{T1}{ptm}{m}{n}
+\rput(11.774844,-10.075){\small $S$}
+% \usefont{T1}{ptm}{m}{n}
+\rput(0.88953125,10.17){1.}
+% \usefont{T1}{ptm}{m}{n}
+\rput(7.6179686,10.09){2.}
+% \usefont{T1}{ptm}{m}{n}
+\rput(0.5757812,4.83){3.}
+% \usefont{T1}{ptm}{m}{n}
+\rput(7.1721873,4.55){4.}
+% \usefont{T1}{ptm}{m}{n}
+\rput(0.370625,-0.75){5.}
+% \usefont{T1}{ptm}{m}{n}
+\rput(6.308906,-0.59){6.}
+% \usefont{T1}{ptm}{m}{n}
+\rput(0.1634375,-6.05){7.}
+% \usefont{T1}{ptm}{m}{n}
+\rput(6.046875,-5.97){8.}
+\psline[linewidth=0.04cm](10.58,-4.76)(13.52,-2.58)
+%\usefont{T1}{ptm}{m}{n}
+\rput(13.01,-3.315){\small $R$}
+%\usefont{T1}{ptm}{m}{n}
+\rput(0.77484375,2.325){\small $S$}
+%\usefont{T1}{ptm}{m}{n}
+\rput(6.9351563,-3.655){\small $P$}
+%\usefont{T1}{ptm}{m}{n}
+\rput(10.3,4.0){\footnotesize $4h-70^\circ$}
+%\usefont{T1}{ptm}{m}{n}
+\rput(10.7,1.8){\small $2h-20^\circ$}
+%\usefont{T1}{ptm}{m}{n}
+\rput(5.53,-4.515){\small $R$}
+%\usefont{T1}{ptm}{m}{n}
+\rput(2.13,-0.755){\small $R$}
+%\usefont{T1}{ptm}{m}{n}
+\rput(1.388125,-3.315){\small $j$}
+%\usefont{T1}{ptm}{m}{n}
+\rput(2.9,-4.5){\small $i$}
+\psline[linewidth=0.04cm](3.28,-7.14)(3.5,-7.3)
+\psline[linewidth=0.04cm](3.5,-7.3)(3.7,-7.06)
+%\usefont{T1}{ptm}{m}{n}
+\rput(8.49,-6.475){\small $R$}
+%\usefont{T1}{ptm}{m}{n}
+\rput(5.35,-7.155){\small $R$}
+%\usefont{T1}{ptm}{m}{n}
+\rput(5.264531,-8.615){\small $T$}
+%\usefont{T1}{ptm}{m}{n}
+\rput(3.9335938,-7.135){\small $n$}
+%\usefont{T1}{ptm}{m}{n}
+\rput(4.6659374,-8.575){\small $o$}
+%\usefont{T1}{ptm}{m}{n}
+\rput(12.124531,-8.015){\small $T$}
+\psdots[dotsize=0.12](9.96,-9.0)
+%\usefont{T1}{ptm}{m}{n}
+\rput(9.855,-9.155){\small $O$}
+%\usefont{T1}{ptm}{m}{n}
+\rput(11.461407,-9.655){\small $q$}
+%\usefont{T1}{ptm}{m}{n}
+\rput(11.609688,-8.335){\small $r$}
+\end{pspicture}
+}
+\end{center}
+
+}
+\end{minipage}
+
+\begin{mytheorem}
+{theorem:circle8a}{(Converse of \ref{theorem:circle8}) If the angle formed between a line, that is drawn through the end point of a chord, and the chord, is equal to the angle subtended by the chord in the alternate segment, then the line is a tangent to the circle.}{
+
+\begin{center}
+\begin{pspicture}(-3,-2.8)(5.1,2.8)
+\SpecialCoor
+\pscircle{2.5}
+\psdot(0,0)
+\psline[linewidth=2pt]({2.5;150})({2.5;270}) %AB
+\psline({2.5;150})({2.5;45}) %AQ
+\psline({2.5;45})({2.5;270}) %BQ
+\psline(-2.5,-2.5)(2.5,-2.50) %SBQ
+\rput(0,.38){\psline({3.5;240})({3.5;-50})} %XYZ
+\uput[ul](0,0){$O$}
+\uput[l]({2.5;150}){$A$}
+\uput[d]({2.5;270}){$B$}
+\uput[u]({2.5;45}){$Q$}
+\uput[d](-2.5,-2.5){$S$}
+\uput[d](2.5,-2.5){$R$}
+\rput(0,.38){\uput[u]({3.5;-50}){$Y$}}
+\rput(0,.38){\uput[d]({3.5;240}){$X$}}
+\end{pspicture}
+\end{center}
+
+Consider a circle, with centre $O$ and chord $AB$. Let line $SR$ pass through point $B$. Chord $AB$ subtends an angle at point $Q$ such that $\hat{ABS}=\hat{AQB}$.
+
+\textbf{The aim is to prove that $SBR$ is a tangent to the circle.}
+
+By contradiction. Assume that $SBR$ is not a tangent to the circle and draw $XBY$ such that $XBY$ is a tangent to the circle.
+
+\begin{eqnarray}
+\hat{ABX}&=&\hat{AQB}\quad \mbox{(tan-chord theorem)}\nonumber\\
+\mbox{However, }\quad\hat{ABS}&=&\hat{AQB} \quad \mbox{(given)}\nonumber\\
+\therefore \hat{ABX}&=& \hat{ABS} \label{m}\\
+\mbox{But since, }\quad \hat{ABX}&=&\hat{ABS}+\hat{XBS}\nonumber\\
+\mbox{(\ref{m}) can only be true if, }\quad \hat{XBS}&=&0\nonumber
+\end{eqnarray}
+If $\hat{XBS}$ is zero, then both $XBY$ and $SBR$ coincide and $SBR$ is a tangent to the circle.}
+\end{mytheorem}
+
+\Exercise{Applying Theorem \ref{theorem:circle4}}{
+
+\item{\emph{Show that Theorem} \ref{theorem:circle4} also applies to the following two cases:
+
+\begin{center}
+\begin{pspicture}(-5,-2.5)(5.25,2.5)
+%\psgrid
+
+\rput(-2.5,0){
+\pscircle{2.5}
+%\psarc[linewidth=2pt]{1.95}{65}{95}
+\psline(0,0)({2.5;120}) %OA
+\psline(2,-1.5)(1.5,2) %PB
+\psdot(0,0)
+\psline(0,0)(2,-1.5) %OB
+\psline({2.5;120})(1.5,2) %PA
+
+\psline[linestyle=dashed](1.5,2)(-0.75,-1)
+\SpecialCoor
+\uput[ul]({2.5;120}){$A$}
+\uput[r](2,-1.5){$B$}
+\uput[r](0,0){$O$}
+\uput[ur](1.5,2){$P$}
+\uput[d](-0.75,-1){$R$}}
+
+\rput(2.75,0){
+\pscircle{2.5}
+\psdot(0,0)
+\psline(0,0)({2.5;220}) %OA
+\psline(0,0)({2.5;290}) %OB
+\psline({2.5;290})({2.5;-10}) %PB
+\psline({2.5;220})({2.5;-10}) %PA
+\psline[linestyle=dashed]({2.5;-10})({-1;-10}) %PR
+
+\SpecialCoor
+\uput[dl]({2.5;220}){$A$}
+\uput[dr]({2.5;290}){$B$}
+\uput[u](0,0){$O$}
+\uput[ur]({2.5;-10}){$P$}
+\uput[d]({-1;-10}){$R$}}
+\end{pspicture}
+\end{center}
+
+}
+}
+
+
+
+\begin{wex}{% Title
+Circle Geometry I}
+{% Question
+% \begin{minipage}{0.39\textwidth}
+\begin{center}
+\scalebox{0.75} % Change this value to rescale the drawing.
+{
+\begin{pspicture}(0,-3.75)(8.483438,3.71)
+\pscircle[linewidth=0.02,dimen=outer](3.4871874,0.7){3.01}
+\psline[linewidth=0.02cm](0.4971875,0.69)(7.9971876,0.69)
+\psline[linewidth=0.02cm](3.4971876,0.69)(3.4971876,-3.31)
+\psline[linewidth=0.02cm](3.4971876,-3.31)(7.9971876,0.69)
+\psline[linewidth=0.02cm](3.4971876,0.69)(5.4971876,-1.51)
+\psline[linewidth=0.02cm](5.4971876,-1.51)(0.4771875,0.69)
+\psline[linewidth=0.02cm](5.4971876,-1.51)(6.4771876,0.69)
+\usefont{T1}{ptm}{m}{n}
+\rput(0.12375,0.6){$A$}
+\usefont{T1}{ptm}{m}{n}
+\rput(8.317187,0.7){$D$}
+\usefont{T1}{ptm}{m}{n}
+\rput(3.604375,-3.6){$B$}
+\usefont{T1}{ptm}{m}{n}
+\rput(5.704375,-1.7){$C$}
+\usefont{T1}{ptm}{m}{n}
+\rput(3.6139061,1.0){$O$}
+\usefont{T1}{ptm}{m}{n}
+\rput(6.6992188,1.0){$E$}
+\usefont{T1}{ptm}{m}{n}
+\rput(3.186875,-0.9){$F$}
+\end{pspicture} 
+}
+\end{center}
+% \end{minipage}
+% \begin{minipage}{0.6\textwidth}
+\item $BD$ is a tangent to the circle with centre $O$.\\
+$BO \perp AD$.\\\\
+Prove that:
+\begin{enumerate}
+\item $CFOE$ is a cyclic quadrilateral
+\item $FB = BC$
+\item $\triangle{COE} /// \triangle{CBF}$
+\item $CD^2 = ED \times AD$
+\item $\frac{OE}{BC} = \frac{CD}{CO}$\\\\\\\\
+\end{enumerate}
+
+% \end{minipage}
+}
+{% Answer
+
+\westep{To show a quadrilateral is cyclic, we need a pair of opposite angles to be supplementary, so let's look for that.}
+\begin{eqnarray*}
+\hat{FOE} &=& 90^\circ \mbox{ ($BO \perp OD$)}\\
+\hat{FCE} &=& 90^\circ \mbox{ ($\angle$ subtended by diameter $AE$)}\\
+&\therefore& CFOE \mbox{ is a cyclic quadrilateral (opposite $\angle$'s supplementary)}
+\end{eqnarray*}
+
+\westep{Since these two sides are part of a triangle, we are proving that triangle to be isosceles. The easiest way is to show the angles opposite to those sides to be equal.}
+Let $\hat{OEC} = x$.
+\begin{eqnarray*}
+&\therefore& \hat{FCB} = x \mbox{ ($\angle$ between tangent $BD$ and chord $CE$)}\\
+&\therefore& \hat{BFC} = x \mbox{ (exterior $\angle$ to cyclic quadrilateral $CFOE$)}\\
+&\mbox{and }& BF = BC \mbox{ (sides opposite equal $\angle$'s in isosceles $\triangle{BFC}$)}
+\end{eqnarray*}
+
+\westep{To show these two triangles similar, we will need 3 equal angles. We already have 3 of the 6 needed angles from the previous question. We need only find the missing 3 angles.}
+\begin{eqnarray*}
+\hat{CBF} &=& 180^\circ - 2x \mbox{ (sum of $\angle$'s in $\triangle{BFC}$)}\\
+OC &=& OE \mbox{ (radii of circle $O$)}\\
+&\therefore& \hat{ECO} = x \mbox{ (isosceles $\triangle{COE}$)}\\
+&\therefore& \hat{COE} = 180^\circ - 2x \mbox{ (sum of $\angle$'s in $\triangle{COE}$)}\\
+\end{eqnarray*}
+\begin{itemize}
+\item $\hat{COE} = \hat{CBF}$
+\item $\hat{ECO} = \hat{FCB}$
+\item $\hat{OEC} = \hat{CFB}$
+\end{itemize}
+\begin{eqnarray*}
+&\therefore& \triangle{COE} /// \triangle{CBF} \mbox{ (3 $\angle$'s equal)}\\
+\end{eqnarray*}
+
+\westep{This relation reminds us of a proportionality relation between similar triangles. So investigate which triangles contain these sides and prove them similar. In this case 3 equal angles works well. Start with one triangle.}
+In $\triangle{EDC}$
+\begin{eqnarray*}
+\hat{CED} &=& 180^\circ - x \mbox{ ($\angle$'s on a straight line $AD$)}\\
+\hat{ECD} &=& 90^\circ - x \mbox{ (complementary $\angle$'s)}\\
+\end{eqnarray*}
+\westep{Now look at the angles in the other triangle.}
+In $\triangle{ADC}$
+\begin{eqnarray*}
+\hat{ACD} &=& 180^\circ - x \mbox{ (sum of $\angle$'s $\hat{ACE}$ and $\hat{ECD}$)}\\
+\hat{CAD} &=& 90^\circ - x \mbox{ (sum of $\angle$'s in $\triangle{CAE}$)}\\
+\end{eqnarray*}
+\westep{The third equal angle is an angle both triangles have in common.}
+Lastly, $\hat{ADC} = \hat{EDC}$  since they are the same $\angle$.
+\westep{Now we know that the triangles are similar and can use the proportionality relation accordingly.}
+\begin{eqnarray*}
+&\therefore& \triangle{ADC} /// \triangle{CDE} \mbox{ (3 $\angle$'s equal)}\\
+&\therefore& \frac{ED}{CD} = \frac{CD}{AD}\\
+&\therefore& CD^2 = ED\times AD
+\end{eqnarray*}
+
+\westep{This looks like another proportionality relation with a little twist, since not all sides are contained in 2 triangles. There is a quick observation we can make about the odd side out, $OE$.}
+\begin{eqnarray*}
+OE &=& OC \mbox{ ($\triangle{OEC}$ is isosceles)}
+\end{eqnarray*}
+\westep{With this observation we can limit ourselves to proving triangles $BOC$ and $ODC$ similar. Start in one of the triangles.}
+In $\triangle{BCO}$
+\begin{eqnarray*}
+\hat{OCB} &=& 90^\circ \mbox{ (radius $OC$ on tangent $BD$)}\\
+\hat{CBO} &=& 180^\circ - 2x \mbox{ (sum of $\angle$'s in $\triangle{BFC}$)}\\
+\hat{BOC} &=& 2x - 90^\circ \mbox{ (sum of $\angle$'s in $\triangle{BCO}$)}\\
+\end{eqnarray*}
+\westep{Then we move on to the other one.}
+In $\triangle{OCD}$
+\begin{eqnarray*}
+\hat{OCD} &=& 90^\circ \mbox{ (radius $OC$ on tangent $BD$)}\\
+\hat{COD} &=& 180^\circ - 2x \mbox{ (sum of $\angle$'s in $\triangle{OCE}$)}\\
+\hat{CDO} &=& 2x - 90^\circ \mbox{ (sum of $\angle$'s in $\triangle{OCD}$)}\\
+\end{eqnarray*}
+\westep{Then, once we've shown similarity, we use the proportionality relation, as well as our first observation, appropriately.}
+\begin{eqnarray*}
+&\therefore& \triangle{BOC} /// \triangle{ODC} \mbox{ (3 $\angle$'s equal)} \\
+&\therefore& \frac{CO}{BC} = \frac{CD}{CO} \\
+&\therefore& \frac{OE}{BC} = \frac{CD}{CO} \mbox{ ($OE = CO$ isosceles $\triangle{OEC}$)} \\
+\end{eqnarray*}
+
+}
+\end{wex}
+
+\begin{wex}{% Title
+Circle Geometry II}
+{% Question
+% \begin{minipage}{0.5\textwidth}
+\begin{center}
+\scalebox{0.75} % Change this value to rescale the drawing.
+{
+\begin{pspicture}(0,-4.16)(6.8046875,4.12)
+\pscircle[linewidth=0.02,dimen=outer](3.3171875,1.12){3.0}
+\psline[linewidth=0.02cm](6.3171873,1.12)(6.3171873,-3.88)
+\psline[linewidth=0.02cm](4.8171873,0.86)(4.8171873,-2.82)
+\psline[linewidth=0.02cm](6.3171873,-3.88)(0.5171875,0.12)
+\psline[linewidth=0.02cm](6.3171873,1.12)(4.8171873,-2.84)
+\psline[linewidth=0.02cm](0.5171875,0.12)(6.3171873,-0.96)
+\psline[linewidth=0.02cm](6.2971873,1.12)(0.4971875,0.12)
+\psline[linewidth=0.02cm](4.8171873,0.86)(5.5771875,-0.82)
+\usefont{T1}{ptm}{m}{n}
+\rput(0.12375,-0.05){A}
+\usefont{T1}{ptm}{m}{n}
+\rput(6.644375,-4.01){B}
+\usefont{T1}{ptm}{m}{n}
+\rput(6.644375,1.17){C}
+\usefont{T1}{ptm}{m}{n}
+\rput(4.7171874,-3.17){D}
+\usefont{T1}{ptm}{m}{n}
+\rput(5.7392187,-1.13){E}
+\usefont{T1}{ptm}{m}{n}
+\rput(4.806875,1.27){F}
+\usefont{T1}{ptm}{m}{n}
+\rput(4.5382814,-0.95){G}
+\usefont{T1}{ptm}{m}{n}
+\rput(6.6003127,-1.05){H}
+\end{pspicture} 
+}
+\end{center}
+% \end{minipage}
+% \begin{minipage}{0.33\textwidth}
+\item $FD$ is drawn parallel to the tangent $CB$\\\\
+Prove that:
+\begin{enumerate}
+\item $FADE$ is cyclic
+\item $\triangle{AFE} /// \triangle{CBD}$
+\item $\frac{FC \times AG}{GH} = \frac{DC \times FE}{BD}$\\\\\\\\\\\\\\
+\end{enumerate}
+% \end{minipage}
+}
+{% Answer
+\westep{In this case, the best way to show $FADE$ is a cyclic quadrilateral is to look for equal angles, subtended by the same chord.}
+Let $\angle{BCD} = x$
+\begin{eqnarray*}
+&\therefore& \angle{CAH} = x \mbox{ ($\angle$ between tangent $BC$ and chord $CE$)}\\
+&\therefore& \angle{FDC} = x \mbox{ (alternate $\angle$, $FD \parallel CB$)}\\
+&\therefore& FADE \textnormal{ is a cyclic quadrilateral} \mbox{ (chord $FE$ subtends equal $\angle$'s)}\\
+\end{eqnarray*}
+
+\westep{To show these 2 triangles similar we will need 3 equal angles. We can use the result from the previous question.}
+Let $\angle{FEA} = y$
+\begin{eqnarray*}
+&\therefore& \angle{FDA} = y \mbox{ ($\angle$'s subtended by same chord $AF$ in cyclic quadrilateral $FADE$)}\\
+&\therefore& \angle{CBD} = y \mbox{ (corresponding $\angle$'s, $FD \parallel CB$)}\\
+&\therefore& \angle{FEA} = \angle{CBD}\\
+\end{eqnarray*}
+\westep{We have already proved 1 pair of angles equal in the previous question.}
+\begin{eqnarray*}
+\angle{BCD} &=& \angle{FAE} \mbox{ (above)}\\
+\end{eqnarray*}
+\westep{Proving the last set of angles equal is simply a matter of adding up the angles in the triangles. Then we have proved similarity.} 
+\begin{eqnarray*}
+\angle{AFE} &=& 180^\circ - x - y \mbox{ ($\angle$'s in $\triangle{AFE}$)}\\
+\angle{CDB} &=& 180^\circ - x - y \mbox{ ($\angle$'s in $\triangle{CBD}$)}\\
+&\therefore& \triangle{AFE} /// \triangle{CBD} \mbox{ (3 $\angle$'s equal)}
+\end{eqnarray*}
+
+\westep{This equation looks like it has to do with proportionality relation of similar triangles. We already showed triangles $AFE$ and $CBD$ similar in the previous question. So lets start there.}
+\begin{eqnarray*}
+\frac{DC}{BD} &=& \frac{FA}{FE}\\
+&\therefore& \frac{DC \times FE}{BD} = FA
+\end{eqnarray*}
+\westep{Now we need to look for a hint about side $FA$. Looking at triangle $CAH$ we see that there is a line $FG$ intersecting it parallel to base $CH$. This gives us another proportionality relation.}
+\begin{eqnarray*}
+\frac{AG}{GH} &=& \frac{FA}{FC} \mbox{ ($FG \parallel CH$ splits up lines $AH$ and $AC$ proportionally)}\\
+&\therefore& FA = \frac{FC \times AG}{GH}
+\end{eqnarray*}
+\westep{We have 2 expressions for the side $FA$.}
+\begin{eqnarray*}
+&\therefore& \frac{FC.AG}{GH} = \frac{DC \times FE}{BD}\\
+\end{eqnarray*}
+
+
+}
+\end{wex}
+
+\section{Co-ordinate Geometry}
+%\begin{syllabus}
+%\item Use a two-dimensional Cartesian co-ordinate system to derive and apply:
+%\begin{itemize}
+%\item the equation of a circle (any centre);
+%\item the equation of a tangent to a circle given a point on the circle.
+%\end{itemize}
+%\end{syllabus}
+
+\subsection{Equation of a Circle}
+%\begin{syllabus}
+%\item Use a two-dimensional Cartesian co-ordinate system to derive and apply:
+%\begin{itemize}
+%\item the equation of a circle (any centre);
+%\end{itemize}
+%\end{syllabus}
+
+We know that every point on the circumference of a circle is the same distance away from the centre of the circle. Consider a point $(x_1;y_1)$ on the circumference of a circle of radius $r$ with centre at $(x_0;y_0)$.
+
+\begin{figure}[htbp]
+\begin{center}
+\pspicture(-2,-2)(2,2)
+%\psgrid[gridcolor=lightgray,gridlabels=0,gridwidth=0.5pt,subgriddiv=10]
+\pscircle(0,0){1.5}
+\psdots(1.06,1.06)(0,0)
+\uput[ul](0,0){$(x_0;y_0)$}
+\uput[r](1.06,1.06){$P (x_1;y_1)$}
+\psaxes[dx=0,Dx=10,dy=0,Dy=10,arrows=<->](0,0)(-2,-2)(2,2)
+\psline[linestyle=dashed](0,0)(1.06,1.06)(1.06,0)
+\uput[dr](0,0){$O$}
+\uput[d](1.06,0){$Q$}
+\endpspicture
+\caption{Circle with centre $(x_0;y_0)$ and a point $P$ at $(x_1;y_1)$}
+\label{fig:mg:c:circle}
+\end{center}
+\end{figure}
+
+In Figure \ref{fig:mg:c:circle}, $\triangle OPQ$ is a right-angled triangle. Therefore, from the Theorem of Pythagoras, we know that:
+\nequ{OP^2=PQ^2+OQ^2}
+But,
+\begin{eqnarray*}
+PQ &=& y_1-y_0\\
+OQ &=& x_1-x_0\\
+OP&=& r\\
+\therefore \quad r^2&=&(y_1-y_0)^2+(x_1-x_0)^2
+\end{eqnarray*}
+
+But, this same relation holds for any point $P$ on the circumference. Therefore, we can write:
+\equ{(x-x_0)^2+(y-y_0)^2=r^2}{eq:mg:c:circle}
+for a circle with centre at $(x_0;y_0)$ and radius $r$.
+
+For example, the equation of a circle with centre $(0;0)$ and radius 4 is:
+\begin{eqnarray*}
+(y-y_0)^2+(x-x_0)^2&=&r^2\\
+(y-0)^2+(x-0)^2&=&4^2\\
+x^2+y^2&=&16\\
+\end{eqnarray*}
+Khan Academy video on circles:SIYAVULA-VIDEO:http://cnx.org/content/m39288/latest/#circles-1
+\begin{wex}{Equation of a Circle I}
+{Find the equation of a circle (centre $O$) with a diameter between two points, $P$ at $(-5;5)$ and $Q$ at $(5;-5)$.}{
+\westep{Draw a picture}
+Draw a picture of the situation to help you figure out what needs to be done.
+\begin{center}
+\pspicture(-2,-2)(2,2)
+%\psgrid[gridcolor=lightgray,gridlabels=0,gridwidth=0.5pt,subgriddiv=10]
+\pscircle(0,0){1.414}
+\psdots(-1,1)(1,-1)
+\psline[linestyle=dashed](-1,1)(1,-1)
+\uput[ul](-1,1){$P$}
+\uput[dr](1,-1){$Q$}
+\psaxes[dx=1,Dx=5,dy=1,Dy=5,arrows=<->](0,0)(-2,-2)(2,2)
+\uput[ur](0,0){$O$}
+\endpspicture
+\end{center}
+
+\westep{Find the centre of the circle}
+We know that the centre of a circle lies on the midpoint of a diameter. Therefore the co-ordinates of the centre of the circle is found by finding the midpoint of the line between $P$ and $Q$. Let the co-ordinates of the centre of the circle be $(x_0;y_0)$, let the co-ordinates of $P$ be $(x_1;y_1)$ and let the co-ordinates of $Q$ be $(x_2;y_2)$. Then, the co-ordinates of the midpoint are:
+\begin{eqnarray*}
+x_0&=&\frac{x_1+x_2}{2}\\
+&=&\frac{-5+5}{2}\\
+&=&0\\
+y_0&=&\frac{y_1+y_2}{2}\\
+&=&\frac{5+(-5)}{2}\\
+&=&0
+\end{eqnarray*}
+The centre point of line $PQ$ and therefore the centre of the circle is at $(0;0)$.
+
+\westep{Find the radius of the circle}
+If $P$ and $Q$ are two points on a diameter, then the radius is half the distance between them.
+
+The distance between the two points is:
+\begin{eqnarray*}
+r=\frac{1}{2}PQ &=& \frac{1}{2}\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}\\
+&=& \frac{1}{2}\sqrt{(5-(-5))^2+(-5-5)^2}\\
+&=& \frac{1}{2}\sqrt{(10)^2+(-10)^2}\\
+&=& \frac{1}{2}\sqrt{100+100}\\
+&=& \sqrt{\frac{200}{4}}\\
+&=& \sqrt{50}
+\end{eqnarray*}
+
+\westep{Write the equation of the circle}
+\nequ{x^2+y^2=50}}
+\end{wex}
+
+\begin{wex}{Equation of a Circle II}{Find the center and radius of the circle \\ $x^2 - 14 x + y^2 + 4y = -28$.}{
+\westep{Change to standard form}
+We need to rewrite the equation in the form  $(x - x_0) + (y - y_0) = r^2$ \\
+To do this we need to complete the square \\
+i.e. add and subtract $(\frac{1}{2}$ cooefficient of $x)^2$ and $(\frac{1}{2}$ cooefficient of $y)^2$ \\
+
+\westep{Adding cooefficients}
+\begin{tabular}{ll}
+& $x^2 - 14 x + y^2 + 4y = -28$ \\
+$\therefore$ & $x^2 - 14 x + (7)^2 -(7)^2 + y^2 + 4y + (2)^2 -(2)^2 = -28$ \\
+\end{tabular}
+
+\westep{Complete the squares}
+\begin{tabular}{ll}
+$\therefore$ & $(x - 7)^2 -(7)^2 + (y + 2)^2 -(2)^2 = -28$ \\
+\end{tabular}
+
+\westep{Take the constants to the other side}
+\begin{tabular}{ll}
+$\therefore$ & $(x - 7)^2 -49 + (y + 2)^2 -4 = -28$ \\
+$\therefore$ & $(x - 7)^2 + (y + 2)^2 = -28 + 49 + 4$ \\ 
+$\therefore$ & $(x - 7)^2 + (y + 2)^2 = 25$ \\
+\end{tabular}
+
+\westep{Read the values from the equation}
+\begin{tabular}{ll}
+$\therefore$ & center is $ (7;-2)$ and the radius is $5$ units
+\end{tabular}
+}
+\end{wex}
+
+\subsection{Equation of a Tangent to a Circle at a Point on the Circle}
+%\begin{syllabus}
+%\item Use a two-dimensional Cartesian co-ordinate system to derive and apply:
+%\begin{itemize}
+%\item the equation of a tangent to a circle given a point on the circle.
+%\end{itemize}
+%\end{syllabus}
+
+We are given that a tangent to a circle is drawn through a point $P$ with co-ordinates $(x_1;y_1)$. In this section, we find out how to determine the equation of that tangent.
+
+\begin{figure}[htbp]
+\begin{center}
+\begin{pspicture}(-2,-2)(3,3)
+%\psgrid[gridcolor=lightgray,gridlabels=0,gridwidth=0.5pt,subgriddiv=10]
+\pscircle(0,0){1.5}
+\psdots(1.06,1.06)(0,0)
+\uput[l](0,0){$(x_0;y_0)$}
+\uput[r](1.06,1.06){$P (x_1;y_1)$}
+\psline(1.06,1.06)(0,0)
+\psplot[arrows=<->]{-0.5}{2.5}{x neg 2.1 add}
+\uput[l](0.5,0.5){$f$}
+\uput[u](0.1,2){$g$}
+\uput[l](-1.06,1.06){$h$}
+\end{pspicture}
+\caption{Circle $h$ with centre $(x_0;y_0)$ has a tangent, $g$ passing through point $P$ at $(x_1;y_1)$. Line $f$ passes through the centre and point $P$.}
+\label{fig:mg:c:tangent}
+\end{center}
+\end{figure}
+
+We start by making a list of what we know:
+\begin{enumerate}
+\item{We know that the equation of the circle with centre $(x_0;y_0)$ and radius $r$ is $(x-x_0)^2+(y-y_0)^2=r^2$.}
+\item{We know that a tangent is perpendicular to the radius, drawn at the point of contact with the circle.}
+\end{enumerate}
+
+As we have seen in earlier grades, there are two steps to determining the equation of a straight line:
+\begin{enumerate}
+\item[Step 1:]{Calculate the gradient of the line, $m$.}
+\item[Step 2:]{Calculate the $y$-intercept of the line, $c$.}
+\end{enumerate}
+
+The same method is used to determine the equation of the tangent. First we need to find the gradient of the tangent. We do this by finding the gradient of the line that passes through the centre of the circle and point $P$ (line $f$ in Figure~\ref{fig:mg:c:tangent}), because this line is a radius and the tangent is perpendicular to it.
+
+\equ{m_f=\frac{y_1-y_0}{x_1-x_0}}{fig:mg:c:tangent:radiusm}
+
+The tangent (line $g$) is perpendicular to this line. Therefore,
+\nequ{m_f \times m_g = -1}
+So,
+\nequ{m_g=-\frac{1}{m_f}}
+
+Now, we know that the tangent passes through $(x_1;y_1)$ so the equation is given by:
+\begin{eqnarray*}
+y-y_1&=&m_{g}(x-x_1)\\
+y-y_1&=&-\frac{1}{m_f}(x-x_1)\\
+y-y_1&=&-\frac{1}{\frac{y_1-y_0}{x_1-x_0}}(x-x_1)\\
+y-y_1&=&-\frac{x_1-x_0}{y_1-y_0}(x-x_1)\\
+\end{eqnarray*}
+
+For example, find the equation of the tangent to the circle at point $(1;1)$. The centre of the circle is at $(0;0)$. The equation of the circle is $x^2+y^2=2$.
+
+Use \nequ{y-y_1=-\frac{x_1-x_0}{y_1-y_0}(x-x_1)} with $(x_0;y_0)=(0;0)$ and $(x_1;y_1)=(1;1)$.
+
+\begin{eqnarray*}
+y-y_1&=&-\frac{x_1-x_0}{y_1-y_0}(x-x_1)\\
+y-1&=&-\frac{1-0}{1-0}(x-1)\\
+y-1&=&-\frac{1}{1}(x-1)\\
+y&=&-(x-1)+1\\
+y&=&-x+1+1\\
+y&=&-x+2
+\end{eqnarray*}
+
+\Exercise{Co-ordinate Geometry}{
+\begin{enumerate} 
+\item Find the equation of the cicle: 
+\begin{enumerate} 
+\item with centre $(0;5)$ and radius $5$ 
+\item with centre $(2;0)$ and radius $4$ 
+\item with centre $(5;7)$ and radius $18$ 
+\item with centre $(-2;0)$ and radius $6$ 
+\item with centre $(-5;-3)$ and radius $\sqrt{3}$ 
+\end{enumerate} 
+
+\item 
+\begin{enumerate} 
+\item Find the equation of the circle with centre $(2;1)$ which passes through $(4;1)$. 
+\item Where does it cut the line $y = x + 1$? 
+\item Draw a sketch to illustrate your answers. 
+\end{enumerate} 
+
+\item 
+\begin{enumerate} 
+\item Find the equation of the circle with center $(-3;-2)$ which passes through $(1;-4)$. 
+\item Find the equation of the circle with center $(3;1)$ which passes through $(2;5)$. 
+\item Find the point where these two circles cut each other. 
+\end{enumerate} 
+
+\item Find the center and radius of the following circles: 
+\begin{enumerate} 
+\item $ (x-9)^2 + (y-6)^2 = 36 $ 
+\item $ (x-2)^2 + (y-9)^2 = 1 $ 
+\item $ (x+5)^2 + (y+7)^2 = 12 $ 
+\item $ (x+4)^2 + (y+4)^2 = 23 $ 
+\item $ 3(x-2)^2 + 3(y+3)^2 = 12 $ 
+\item $ x^2 - 3x + 9 = y^2 + 5y + 25 = 17 $ 
+\end{enumerate} 
+
+\item Find the $x$ and $y$ intercepts of the following graphs and draw a sketch to illustrate your answer: 
+\begin{enumerate} 
+\item $ (x+7)^2 + (y-2)^2 = 8 $ 
+\item $ x^2 + (y-6)^2 = 100 $ 
+\item $ (x+4)^2 + y^2 = 16 $ 
+\item $ (x-5)^2 + (y+1)^2 = 25 $ 
+\end{enumerate}
+
+\item Find the center and radius of the following circles: 
+\begin{enumerate} 
+\item $ x^2 + 6x + y^2 - 12y = -20 $ 
+\item $ x^2 + 4x + y^2 - 8y = 0 $ 
+\item $ x^2 + y^2 + 8y = 7 $ 
+\item $ x^2 - 6x + y^2 = 16 $ 
+\item $ x^2 - 5x + y^2 + 3y = -\frac{3}{4} $ 
+\item $ x^2 - 6nx + y^2 + 10ny = 9n^2 $ 
+\end{enumerate} 
+
+\item Find the equation of the tangent to each circle: 
+\begin{enumerate} 
+\item $ x^2 + y^2 = 17 $ at the point $(1;4)$ 
+\item $ x^2 + y^2 = 25 $ at the point $(3;4)$ 
+\item $ (x+1)^2 + (y-2)^2 = 25 $ at the point $(3;5)$ 
+\item $ (x-2)^2 + (y-1)^2 = 13 $ at the point $(5;3)$ 
+\end{enumerate} 
+\end{enumerate}
+}
+
+\section{Transformations}
+%\begin{syllabus}
+%\item Use the compound angle identities to generalise the effect on the co-ordinates of the point $(x ; y)$ after rotation about the origin through an angle $\theta$.
+%\item Demonstrate the knowledge that rigid transformations (translations, reflections, rotations and glide reflections) preserve shape and size, and that enlargement preserves shape but not size.
+%\end{syllabus}
+
+\subsection{Rotation of a Point About an Angle $\theta$}
+
+First we will find a formula for the co-ordinates of $P$ after a rotation of $\theta$.\\
+
+We need to know something about polar co-ordinates and compound angles before we start.
+
+\subsubsection{Polar co-ordinates}
+
+\begin{minipage}{0.5\textwidth}
+\begin{center}
+\scalebox{0.7} % Change this value to rescale the drawing.
+{
+\begin{pspicture}(0,-3.02)(8.02,3.02)
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{<->}(4.0,3.0)(4.0,-3.0)
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{<->}(0.0,0.0)(8.0,0.0)
+\psdots[dotsize=0.12](6.7,2.2)
+\psline[linewidth=0.04cm](6.7,2.2)(4.0,0.0)
+\psline[linewidth=0.04cm](6.7,2.2)(6.7,0.0)
+\usefont{T1}{ptm}{m}{n}
+\rput(5.26,1.51){$r$}
+\usefont{T1}{ptm}{m}{n}
+\rput(6.9878125,1.21){$y$}
+\usefont{T1}{ptm}{m}{n}
+\rput(5.385469,-0.29){$x$}
+\usefont{T1}{ptm}{m}{n}
+\rput(4.791406,0.31){$\alpha$}
+\psarc[linewidth=0.04,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(4.0,0.0){1.2}{0.0}{40.0}
+\usefont{T1}{ptm}{m}{n}
+\rput(7.090781,2.61){$P$}
+\end{pspicture} 
+}
+\end{center}
+\end{minipage}
+\begin{minipage}{0.49\textwidth}
+\begin{tabular}{r p{0.1cm} c}
+Notice that $\sin{\alpha} = \frac{y}{r} \therefore $ $ y = r \sin{\alpha}$\\
+and $\cos{\alpha} = \frac{x}{r} \therefore $ $x = r \cos{\alpha}$\\
+\end{tabular}
+
+so $P$ can be expressed in two ways:
+\begin{enumerate}
+\item[ ] $P(x; y)$ rectangular co-ordinates
+\item[or] $P(r;{\alpha})$ polar co-ordinates.
+\end{enumerate}
+\end{minipage}
+
+\subsubsection{Compound angles}
+(See derivation of formulae in Chapter 12)
+\begin{eqnarray*}
+\sin{(\alpha + \beta)} &=& \sin{\alpha}\cos{\beta} + \sin{\beta}\cos{\alpha}\\
+\cos{(\alpha + \beta)} &=& \cos{\alpha}\cos{\beta} - \sin{\alpha}\sin{\beta}
+\end{eqnarray*}
+
+\subsubsection{Now consider $P'$ after a rotation of $\theta$}
+
+\begin{minipage}{0.6\textwidth}
+\begin{eqnarray*}
+&& P(x; y) = P(r\cos{\alpha}; r\sin{\alpha})\\
+&& P'(r\cos{(\alpha + \theta)}; r\sin{(\alpha + \theta)})
+\end{eqnarray*}
+
+Expand the co-ordinates of $P'$
+
+\begin{eqnarray*}
+x-\textnormal{co-ordinate}&=& r\cos{(\alpha + \theta)} \\
+ &=& r\left[\cos{\alpha}\cos{\theta} - \sin{\alpha}\sin{\theta}\right] \\
+ &=& r\cos{\alpha}\cos{\theta} - r\sin{\alpha}\sin{\theta}\\
+ &=& x\cos{\theta} - y\sin{\theta}
+\end{eqnarray*}
+\begin{eqnarray*}
+y-\textnormal{co-ordinate}&=& r\sin{(\alpha + \theta)} \\
+ &=& r\left[\sin{\alpha}\cos{\theta} + \sin{\theta}\cos{\alpha}\right] \\
+ &=& r\sin{\alpha}\cos{\theta} + r\cos{\alpha}\sin{\theta}\\
+ &=& y\cos{\theta} + x\sin{\theta}
+\end{eqnarray*}
+\end{minipage}
+\begin{minipage}{0.38\textwidth}
+\begin{center}
+\scalebox{0.7} % Change this value to rescale the drawing.
+{
+\begin{pspicture}(0,-3.1792188)(8.02,3.1992188)
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{<->}(4.0,2.8407812)(4.0,-3.1592188)
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{<->}(0.0,-0.15921874)(8.0,-0.15921874)
+\psdots[dotsize=0.12](6.7,2.0407813)
+\psline[linewidth=0.04cm](6.7,2.0407813)(4.0,-0.15921874)
+\psline[linewidth=0.04cm](6.7,2.0407813)(6.7,-0.15921874)
+\usefont{T1}{ptm}{m}{n}
+\rput(4.791406,0.15078124){$\alpha$}
+\psarc[linewidth=0.04,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(4.0,-0.15921874){1.2}{0.0}{40.0}
+\usefont{T1}{ptm}{m}{n}
+\rput(7.5714064,2.4107811){$P = (r\cos{\alpha}; r\sin{\alpha})$}
+\psdots[dotsize=0.12](1.74,2.5607812)
+\usefont{T1}{ptm}{m}{n}
+\rput(1.6114062,3.0107813){$P'$}
+\psline[linewidth=0.04cm](1.7601055,2.5426583)(3.9798944,-0.14109588)
+\psarc[linewidth=0.04,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(4.0,-0.15921874){1.2}{40.0}{128.6598}
+\usefont{T1}{ptm}{m}{n}
+\rput(4.181406,0.6507813){$\theta$}
+\end{pspicture} 
+}
+\end{center}
+\end{minipage}
+
+\begin{center}
+\fbox{which gives the formula $P' = \left[(x\cos{\theta}-y\sin{\theta}; y\cos{\theta}+x\sin{\theta})\right]$.}
+\end{center}
+
+So to find the co-ordinates of $P(1; \sqrt{3})$ after a rotation of $45^\circ$, we arrive at:
+\begin{eqnarray*}
+P' &=& \left[(x\cos{\theta} - y\sin{\theta}); (y\cos{\theta} + x\sin{\theta})\right]\\
+ &=& \left[(1\cos{45^\circ} - \sqrt{3}\sin{45^\circ}); (\sqrt{3}\cos{45^\circ} + 1\sin{45^\circ})\right]\\
+&=& \left[\left(\frac{1}{\sqrt{2}} - \frac{\sqrt{3}}{\sqrt{2}}\right); \left(\frac{\sqrt{3}}{\sqrt{2}} + \frac{1}{\sqrt{2}}\right)\right]\\
+ &=& \left(\frac{1-\sqrt{3}}{\sqrt{2}}; \frac{\sqrt{3}+1}{\sqrt{2}}\right)
+\end{eqnarray*}
+
+
+
+\Exercise{Rotations}{
+\begin{minipage}{0.5\textwidth}
+Any line $OP$ is drawn (not necessarily in the first quadrant), making an angle of $\theta$ degrees with the $x$-axis. Using the co-ordinates of $P$ and the angle $\alpha$, calculate the co-ordinates of $P'$, if the line $OP$ is rotated about the origin through $\alpha$ degrees.
+\begin{center}
+\begin{tabular}{|c|c|c|}\hline
+& $P$ & $\alpha$ \\\hline
+1. & $(2; 6)$ & $60^\circ$ \\\hline
+2. & $(4; 2)$ & $30^\circ$ \\\hline
+3. & $(5; -1)$ & $45^\circ$ \\\hline
+4. & $(-3; 2)$ & $120^\circ$ \\\hline
+5. & $(-4; -1)$ & $225^\circ$ \\\hline
+6. & $(2; 5)$ & $-150^\circ$ \\\hline
+\end{tabular}
+\end{center}
+\end{minipage}
+\begin{minipage}{0.48\textwidth}
+\begin{center}
+\scalebox{1} % Change this value to rescale the drawing.
+{
+\begin{pspicture}(0,-3.02)(5.6,3.02)
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{<->}(2.78,3.0)(2.78,-3.0)
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{<->}(0.0,0.0)(5.58,0.0)
+\psdots[dotsize=0.12](4.38,2.44)
+\psline[linewidth=0.04cm](4.38,2.44)(2.78,0.0)
+\usefont{T1}{ptm}{m}{n}
+\rput(4.6914062,2.83){$P$}
+\usefont{T1}{ptm}{m}{n}
+\rput(2.6114063,-0.23){$O$}
+\usefont{T1}{ptm}{m}{n}
+\rput(3.3614063,0.33){$\theta$}
+\end{pspicture} 
+}
+\end{center}
+\end{minipage}
+}
+
+\subsection{Characteristics of Transformations}
+Rigid transformations like translations, reflections, rotations and glide reflections preserve shape and size, and that enlargement preserves shape but not size.
+
+\Activity{}{Geometric Transformations}
+{
+\begin{minipage}{0.38\textwidth}
+Draw a large 15$\times$15 grid and plot $\triangle{ABC}$ with $A(2;6)$, $B(5;6)$ and $C(5;1)$. Fill in the lines $y = x$ and $y = -x$. \\
+
+Complete the table below , by drawing the images of $\triangle ABC$ under the given transformations. The first one has been done for you.
+\end{minipage}
+\begin{minipage}{0.7\textwidth}
+\begin{center}
+\scalebox{0.75} % Change this value to rescale the drawing.
+{
+\begin{pspicture}(0,-5.0)(10.0,5.0)
+\rput(5.0,0.0){\psaxes[linewidth=0.02,ticksize=0.06cm,dx=1.5cm,dy=1.5cm,Dx=5,Dy=5](0,0)(-5,-5)(5,5)}
+\psline[linewidth=0.02cm,linestyle=dotted,dotsep=0.16cm](1.0,-4.0)(9.0,4.0)
+\psline[linewidth=0.02cm,linestyle=dotted,dotsep=0.16cm](1.0,4.0)(9.0,-4.0)
+\psdots[dotsize=0.12](5.6,1.8)
+\psdots[dotsize=0.12](6.5,1.8)
+\psdots[dotsize=0.12](6.5,0.6)
+\psline[linewidth=0.02cm](6.5,1.8)(6.5,0.6)
+\psline[linewidth=0.02cm](5.6,1.8)(6.5,1.8)
+\psline[linewidth=0.02cm](5.6,1.8)(6.5,0.6)
+\usefont{T1}{ptm}{m}{n}
+\rput(5.6,2.21){$A(2;6)$}
+\usefont{T1}{ptm}{m}{n}
+\rput(6.831406,2.21){$B(5;6)$}
+\usefont{T1}{ptm}{m}{n}
+\rput(6.931406,0.39){$C(5;1)$}
+\usefont{T1}{ptm}{m}{n}
+\rput(1.9314063,-3.89){$y = x$}
+\usefont{T1}{ptm}{m}{n}
+\rput(7.891406,-3.79){$y = -x$}
+\psdots[dotsize=0.12](5.6,-1.8)
+\psdots[dotsize=0.12](6.5,-1.8)
+\psdots[dotsize=0.12](6.5,-0.6)
+\psline[linewidth=0.02cm,linestyle=dashed,dash=0.16cm 0.16cm](6.5,-0.6)(6.5,-1.8)
+\psline[linewidth=0.02cm,linestyle=dashed,dash=0.16cm 0.16cm](5.6,-1.8)(6.5,-1.8)
+\psline[linewidth=0.02cm,linestyle=dashed,dash=0.16cm 0.16cm](6.5,-0.6)(5.6,-1.8)
+\usefont{T1}{ptm}{m}{n}
+\rput(5.521406,-2.19){$A'$}
+\usefont{T1}{ptm}{m}{n}
+\rput(6.7214065,-2.19){$B'$}
+\usefont{T1}{ptm}{m}{n}
+\rput(6.8214064,-0.79){$C'$}
+\end{pspicture} 
+}
+\end{center}
+\end{minipage}
+
+
+
+\begin{center}
+\begin{tabular}{|c|c|l|l|l|}\hline
+& Description & & & \\
+Transformation & (translation, reflection, & Co-ordinates & Lengths & Angles \\
+& rotation, enlargement) & & & \\\hline
+ & & $A'(2;-6)$ & $A'B' = 3$ & $\hat{B}' = 90^\circ$ \\
+$(x; y) \rightarrow (x; -y)$ & reflection about the $x$-axis & $B'(5; -6)$ & $B'C' = 4$ & $\tan{\hat{A}} = 4/3$ \\
+ & & $C'(5; -2)$ & $A'C' = 5$ & $\therefore \hat{A} = 53^\circ, \hat{C} = 37^\circ$ \\\hline
+ & & & & \\
+$(x; y) \rightarrow (x+1; y-2)$ & & & & \\
+ & & & & \\\hline
+ & & & & \\
+$(x; y) \rightarrow (-x; y)$ & & & & \\
+ & & & & \\\hline
+ & & & & \\
+$(x; y) \rightarrow (-y; x)$ & & & & \\
+ & & & & \\\hline
+ & & & & \\
+$(x; y) \rightarrow (-x; -y)$ & & & & \\
+ & & & & \\\hline
+ & & & & \\
+$(x; y) \rightarrow (2x; 2y)$ & & & & \\
+ & & & & \\\hline
+ & & & & \\
+$(x; y) \rightarrow (y; x)$ & & & & \\
+ & & & & \\\hline
+ & & & & \\
+$(x; y) \rightarrow (y; x+1)$ & & & & \\
+ & & & & \\\hline
+\end{tabular}
+\end{center}
+
+% \begin{quotation}
+A transformation that leaves lengths and angles unchanged is called a rigid transformation. Which of the above transformations are rigid?
+% \end{quotation}
+}
+
+\begin{eocexercises}{}
+\begin{enumerate}
+\item $\Delta ABC$ undergoes several transformations forming $\Delta A' B' C'$. Describe the relationship between the angles and sides of $\Delta ABC$ and $\Delta A' B' C'$ (e.g., they are twice as large, the same, etc.)
+
+\begin{tabular}{|c|c|c|c|}
+\hline
+Transformation & Sides & Angles & Area \\
+\hline
+Reflect & & & \\
+\hline
+Reduce by a scale factor of $3$ & & & \\
+\hline
+Rotate by $90^\circ$ & & & \\
+\hline
+Translate $4$ units right & & & \\
+\hline
+Enlarge by a scale factor of $2$ & & & \\
+\hline
+\end{tabular}
+
+\item $\Delta DEF$ has $\hat{E} = 30^\circ$, $DE = 4\,\mbox{cm}$, $EF = 5\,\mbox{cm}$. $\Delta DEF$ is enlarged by a scale factor of $6$ to form $\Delta D'E'F'$.
+\begin{enumerate}
+\item Solve $\Delta DEF$
+\item Hence, solve $\Delta D'E'F'$
+\end{enumerate}
+
+\item $\Delta XYZ$ has an area of $6\,\mbox{cm}^2$. Find the area of $\Delta X'Y'Z'$ if the points have been transformed as follows:
+\begin{enumerate}
+\newcommand{\tf}[1]{\item $(x, y)\rightarrow(#1)$}
+\tf{x+2; y+3}
+\tf{y; x}
+\tf{4x; y}
+\tf{3x; y+2}
+\tf{-x; -y}
+\tf{x; -y+3}
+\tf{4x; 4y}
+\tf{-3x; 4y}
+\end{enumerate}
+
+\end{enumerate}
+
+
+% CHILD SECTION END 
+
+
+
+% CHILD SECTION START 
+\practiceinfo
+\end{eocexercises}

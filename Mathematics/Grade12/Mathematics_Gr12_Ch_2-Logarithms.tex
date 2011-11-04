@@ -1,0 +1,529 @@
+\chapter{Logarithms}
+\label{m:f12:logarithms}
+
+%\begin{syllabus}
+%\item Demonstrate an understanding of the definition of a logarithm and any laws needed to solve real-life problems (e.g. growth and decay or $A=P(1\pm i)^n$).
+%\end{syllabus}
+
+In mathematics many ideas are related. We saw that addition and subtraction are related and that multiplication and division are related. Similarly, exponentials and logarithms are related. 
+
+\textit{Logarithms}, commonly referred to as \textit{logs}, are the inverse of exponentials. The logarithm of a number $x$ in the base $a$ is defined as the number $n$ such that $a^n = x$. 
+
+So, if $a^n = x$, then:
+\begin{equation}
+\label{eq:mn:l}
+\log_{a}(x) = n
+\end{equation}
+
+\Extension{Inverse Function}{When we say ``inverse function'' we mean that the answer becomes the
+question and the question becomes the answer. For example, in the equation $a^{b} = x$ the
+``question'' is ``what is $a$ raised to the power $b$?'' The answer is ``$x$.'' The inverse function
+would be $\log_{a}x=b$ or ``by what power must we raise $a$ to obtain $x$?'' The answer is ``$b$.'' }
+
+The mathematical symbol for logarithm is $\log_{a}(x)$ and it is read ``log to the base $a$ of $x$''. For example, $\log_{10}(100)$ is ``log to the base $10$of $100$.''
+
+\Activity{}{Logarithm Symbols}{Write the following out in words. The first one is done for you.
+\begin{enumerate}
+\item $\log_{2}(4)$ is log to the base $2$ of $4$
+\item $\log_{10}(14)$
+\item $\log_{16}(4)$
+\item $\log_{x}(8)$
+\item $\log_{y}(x)$
+\end{enumerate}}
+
+\section{Definition of Logarithms}
+The logarithm of a number is the value to which the base must be raised to give that number i.e. the exponent.  From the first example of the activity $\log_{2}(4)$ means the power of $2$ that will give $4$.  As $2^2=4$, we see that
+\begin{equation} 
+\log_{2}(4) = 2
+\end{equation}
+The \textit{exponential-form} is then $2^2 = 4$  and the \textit{logarithmic-form} is $\log_{2}4=2$.
+\Definition{Logarithms}{If $a^n = x$, then: $\log_{a}(x) = n$, where $a>0$; $a \neq1$ and $x>0$.}
+
+\Activity{}{Applying the definition}{Find the value of:
+\begin{enumerate}
+\item{$\log_{7}343$}
+\begin{eqnarray*}
+\rm{Reasoning:}\\
+7^3 = 343\\
+\rm{therefore,~} \log_{7}343 = 3
+\end{eqnarray*}
+\item{$\log_{2}8$}
+\item{$\log_{4}\frac{1}{64}$}
+\item{$\log_{10}1~000$}
+\end{enumerate}}
+
+\section{Logarithm Bases}
+Logarithms, like exponentials, also have a base and $\log_{2}(2)$ is not the same as $\log_{10}(2)$. 
+
+We generally use the ``common'' base, $10$, or the \textit{natural} base, $e$.
+
+The number $e$ is an irrational number between $2.71$ and $2.72$. It comes up surprisingly often in Mathematics, but for now suffice it to say that it is one of the two common bases.
+
+\Extension{Natural Logarithm}{The natural logarithm (symbol $\ln$) is widely used in the sciences.
+The natural logarithm is to the base $e$ which is approximately $2.71828183...$. $e$, like $\pi$
+and is an example of an irrational number.}
+
+While the notation $\log_{10}(x)$ and $\log_{e}(x)$ may be used, $\log_{10}(x)$ is often written $\log(x)$ in Science and $\log_{e}(x)$ is normally written as $\ln(x)$ in both Science and Mathematics. So, if you see the $\log$ symbol without a base, it means $\log_{10}$.
+
+It is often necessary or convenient to convert a log from one base to another. An engineer might need an approximate solution to a log in a base for which he does not have a table or calculator function, or it may be algebraically convenient to have two logs in the same base.
+
+Logarithms can be changed from one base to another, by using the change of base formula:
+\begin{equation}
+\label{eq:mf:a:basechange}
+\log_{a}x=\frac{\log_{b}x}{\log_{b}a}
+\end{equation}
+where $b$ is any base you find convenient. Normally $a$ and $b$ are known,
+therefore $\log_{b}a$ is normally a known, if irrational, number.
+
+For example, change $\log_{2}12$ in base $10$ is:
+\begin{equation*}
+\log_{2}12=\frac{\log_{10}12}{\log_{10}2}
+\end{equation*}
+
+\Activity{}{Change of Base}{Change the following to the indicated base:
+\begin{enumerate}
+\item{$\log_{2}(4)$ to base $8$}
+\item{$\log_{10}(14)$ to base $2$}
+\item{$\log_{16}(4)$ to base $10$}
+\item{$\log_{x}(8)$ to base $y$}
+\item{$\log_{y}(x)$ to base $x$}
+\end{enumerate}}
+Khan Academy video on logarithms:SIYAVULA-VIDEO:http://cnx.org/content/m31883/latest/#logs-1
+\section{Laws of Logarithms}
+Just as for the exponents, logarithms have some laws which make working with them easier. These laws are based on the exponential laws and are summarised first and then explained in detail.
+
+\begin{eqnarray}
+\label{eq:mn:l:law1}
+\log_{a}(1)&=&0\\
+\label{eq:mn:l:law2}
+\log_{a}(a)&=&1 \\
+\label{eq:mn:l:law3}
+\log_{a}(x\cdot y) &=& \log_{a}(x) + \log_{a}(y)\\
+\label{eq:mn:l:law4}
+\log_{a}\left(\frac{x}{y}\right) &=& \log_{a}(x) - \log_{a}(y) \\
+\label{eq:mn:l:law5}
+\log_{a}(x^b) &=& b \log_{a}(x)\\
+\label{eq:mn:l:law6}
+\log_{a}\left(\sqrt[b]{x}\right) &=& \frac{\log_{a}(x)}{b}
+\end{eqnarray}
+
+\section{Logarithm Law 1: $\log_{a}1 = 0$}
+\begin{eqnarray*}
+\mbox{Since}\quad a^0&=&1\\
+\mbox{Then,}\quad \log_{a}(1)&=&0\qquad \mbox{by definition of logarithm in Equation~\ref{eq:mn:l}}
+\end{eqnarray*}
+
+For example,
+\nequ{\log_2 1 = 0}
+and
+\nequ{\log_{25} 1 = 0}
+
+\Activity{}{Logarithm Law 1: $\log_{a}1 = 0$}{Simplify the following:
+\begin{enumerate}
+\item{$\log_{2}(1)+5$}
+\item{$\log_{10}(1)\times 100$}
+\item{$3\times\log_{16}(1)$}
+\item{$\log_{x}(1)+2xy$}
+\item{$\frac{\log_{y}(1)}{x}$}
+\end{enumerate}}
+
+\section{Logarithm Law 2: $\log_{a}(a) = 1$}
+\begin{eqnarray*}
+\mbox{Since}\quad a^1&=&a\\
+\mbox{Then,}\quad \log_{a}(a) &=&1\qquad \mbox{by definition of logarithm in Equation~\ref{eq:mn:l}}
+\end{eqnarray*}
+
+For example,
+\nequ{\log_2 2 = 1}
+and
+\nequ{\log_{25} 25 = 1}
+
+\Activity{}{Logarithm Law 2: $\log_{a}(a) = 1$}{Simplify the following:
+\begin{enumerate}
+\item{$\log_{2}(2)+5$}
+\item{$\log_{10}(10)\times 100$}
+\item{$3\times\log_{16}(16)$}
+\item{$\log_{x}(x)+2xy$}
+\item{$\frac{\log_{y}(y)}{x}$}
+\end{enumerate}}
+
+\Tip{Useful to know and remember}{\textit{When the base is $10$ we do not need to state it.} 
+From the work done up to now, it is also useful to summarise the following facts:
+\begin{enumerate}
+\item{$\log 1 = 0$}
+\item{$\log 10 = 1$}
+\item{$\log 100 = 2$}
+\item{$\log 1000 = 3$}
+\end{enumerate}}
+
+\section{Logarithm Law 3: $\log_{a}(x\cdot y) = \log_{a}(x) + \log_{a}(y)$}
+The derivation of this law is a bit trickier than the first two. Firstly, we need to relate $x$ and $y$ to the base $a$. So, assume that $x=a^m$ and $y=a^n$. Then from Equation~\ref{eq:mn:l}, we have that:
+\begin{eqnarray}
+\label{eq:mn:loglaw3:1}
+\log_{a}(x) &=&m\\
+\label{eq:mn:loglaw3:2}
+\mbox{and}\quad \log_{a}(y) &=&n
+\end{eqnarray}
+
+This means that we can write:
+\begin{eqnarray*}
+\log_{a}(x \cdot y)&=&\log_{a}(a^m \cdot a^n)\\
+&=&\log_{a}(a^{m+n}) \qquad \mbox{(Exponential Law Equation (Grade 10))}\\
+&=&\log_{a}(a^{\log_{a}(x)+\log_{a}(y)}) \qquad \mbox{(From Equation~\ref{eq:mn:loglaw3:1} and Equation~\ref{eq:mn:loglaw3:2})}\\
+&=&\log_{a}(x)+\log_{a}(y) \qquad \mbox{(From Equation~\ref{eq:mn:l})}
+\end{eqnarray*}
+
+For example, show that $\log (10 \cdot 100) = \log 10 + \log 100$. Start with calculating the left hand side:
+\begin{eqnarray*}
+\log (10 \cdot 100) &=& \log (1000)\\
+&=& \log (10^3)\\
+&=&3
+\end{eqnarray*}
+The right hand side:
+\begin{eqnarray*}
+\log 10 + \log 100 &=& 1 + 2\\
+&=&3
+\end{eqnarray*}
+Both sides are equal. Therefore, $\log (10 \cdot 100) = \log 10 + \log 100$.
+
+\Activity{}{Logarithm Law 3: $\log_{a}(x\cdot y) = \log_{a}(x) + \log_{a}(y)$}{Write as seperate logs:
+\begin{enumerate}
+\item{$\log_{2}(8\times4)$}
+\item{$\log_{8}(10\times10)$}
+\item{$\log_{16}(xy)$}
+\item{$\log_{z}(2xy)$}
+\item{$\log_{x}(y^2)$}
+\end{enumerate}}
+
+\section{Logarithm Law 4: $\log_{a}\left(\frac{x}{y}\right) = \log_{a}(x) - \log_{a}(y)$}
+
+The derivation of this law is identical to the derivation of Logarithm Law 3 and is left as an exercise.
+
+For example, show that $\log (\frac{10}{100}) = \log 10 - \log 100$. Start with calculating the left hand side:
+\begin{eqnarray*}
+\log \left(\frac{10}{100}\right) &=& \log \left(\frac{1}{10}\right)\\
+&=& \log (10^{-1})\\
+&=&-1
+\end{eqnarray*}
+The right hand side:
+\begin{eqnarray*}
+\log 10 - \log 100 &=& 1 -2 \\
+&=&-1
+\end{eqnarray*}
+Both sides are equal. Therefore, $\log (\frac{10}{100}) = \log 10 - \log 100$.
+
+\Activity{}{Logarithm Law 4: $\log_{a}\left(\frac{x}{y}\right) = \log_{a}(x) - \log_{a}(y)$}{Write as seperate logs:
+\begin{enumerate}
+\item{$\log_{2}(\frac{8}{5})$}
+\item{$\log_{8}(\frac{100}{3})$}
+\item{$\log_{16}(\frac{x}{y})$}
+\item{$\log_{z}(\frac{2}{y})$}
+\item{$\log_{x}(\frac{y}{2})$}
+\end{enumerate}}
+
+\section{Logarithm Law 5: $\log_{a}(x^b) = b \log_{a}(x)$}
+Once again, we need to relate $x$ to the base $a$. So, we let $x=a^m$. Then,
+\begin{eqnarray*}
+\log_{a}(x^b)&=&\log_{a}((a^m)^b)\\
+&=&\log_{a}(a^{m \cdot b}) \quad \mbox{(Exponential Law in Equation (Grade 10))}\\
+\mbox{But,}\quad m &=& \log_{a}(x)\quad \quad \mbox{(Assumption that $x=a^m$)}\\
+\therefore \quad \log_{a}(x^b)&=&\log_{a}(a^{b \cdot \log_{a}(x)})\\
+&=&b \cdot \log_{a}(x) \quad \mbox{(Definition of logarithm in Equation~\ref{eq:mn:l})}
+\end{eqnarray*}
+
+For example, we can show that $\log_{2}(5^3) = 3 \log_{2}(5)$.
+\begin{eqnarray*}
+\log_{2}(5^3) &=& \log_2 (5 \cdot 5 \cdot 5)\\
+&=& \log_2 5 + \log_2 5 + \log_2 5\quad (\because \log_{a}(x \cdot y)=\log_{a}(a^m \cdot a^n))\\
+&=&3 \log_2 5
+\end{eqnarray*}
+Therefore, $\log_{2}(5^3) = 3 \log_{2}(5)$.
+
+\Activity{}{Logarithm Law 5: $\log_{a}(x^b) = b \log_{a}(x)$}{Simplify the following:
+\begin{enumerate}
+\item{$\log_{2}(8^4)$}
+\item{$\log_{8}(10^{10})$}
+\item{$\log_{16}(x^y)$}
+\item{$\log_{z}(y^x)$}
+\item{$\log_{x}(y^{2x})$}
+\end{enumerate}}
+
+\section{Logarithm Law 6: $\log_{a}\left(\sqrt[b]{x}\right) = \frac{\log_{a}(x)}{b}$}
+
+The derivation of this law is identical to the derivation of Logarithm Law 5 and is left as an exercise.
+
+For example, we can show that $\log_{2}(\sqrt[3]{5}) = \frac{\log_{2}5}{3} $.
+\begin{eqnarray*}
+\log_{2}(\sqrt[3]{5}) &=& \log_2 (5^{\frac{1}{3}})\\
+&=& \frac{1}{3} \log_2 5 \quad (\because \log_{a}(x^b) = b \log_{a}(x))\\
+&=&\frac{\log_{2}5}{3}
+\end{eqnarray*}
+Therefore, $\log_{2}(\sqrt[3]{5}) = \frac{\log_{2}5}{3}$.
+
+\Activity{}{Logarithm Law 6: $\log_{a}\left(\sqrt[b]{x}\right) = \frac{\log_{a}(x)}{b}$}{Simplify the following:
+\begin{enumerate}
+\item{$\log_{2}(\sqrt[4]{8})$}
+\item{$\log_{8}(\sqrt[10]{10})$}
+\item{$\log_{16}(\sqrt[y]{x})$}
+\item{$\log_{z}(\sqrt[x]{y})$}
+\item{$\log_{x}(\sqrt[2x]{y})$}
+\end{enumerate}}
+
+\MarginTip{The final answer doesn't have to \textit{look} simple.}
+Khan Academy video on logarithm properties, part 1: SIYAVULA-VIDEO:http://cnx.org/content/m31883/latest/#logs-2
+Khan Academy video on logarithm properties, part 2: SIYAVULA-VIDEO:http://cnx.org/content/m31883/latest/#logs-3
+
+\begin{wex}{Simplification of Logs}{Simplify, without use of a calculator:
+\nequ{3\log 3 + \log 125}}
+{\westep{Try to write any quantities as exponents}
+125 can be written as $5^3$.
+\westep{Simplify}
+\begin{eqnarray*}
+3\log 3 + \log 125 &=&3\log 3 + \log 5^3\\
+&=&3\log 3 + 3\log 5 \quad \because \log_{a}(x^b) = b \log_{a}(x)\\
+&=&3\log 15 \quad \mbox{(Logarithm Law 3)}
+\end{eqnarray*}
+\westep{Final Answer}
+We cannot simplify any further. The final answer is:
+\nequ{3\log 15}}\end{wex}
+\MarginTip{The final answer doesn't have to \textit{look} simple.}
+
+\begin{wex}{Simplification of Logs}{Simplify, without use of a calculator:
+\nequ{8^{\frac{2}{3}}+\log_2 32}}
+{\westep{Try to write any quantities as exponents}
+$8$ can be written as $2^3$. $32$ can be written as $2^5$.
+
+\westep{Re-write the question using the exponential forms of the numbers}
+\nequ{8^{\frac{2}{3}}+\log_2 32 = (2^3)^{\frac{2}{3}}+\log_2 2^5}
+
+\westep{Determine which laws can be used.}
+We can use:
+\nequ{\log_{a}(x^b) = b \log_{a}(x)}
+
+\westep{Apply log laws to simplify}
+\nequ{(2^3)^{\frac{2}{3}}+\log_2 2^5=(2)^{3\times\frac{2}{3}}+5\log_2 2}
+
+\westep{Determine which laws can be used.}
+We can now use $\log_a a =1$
+
+\westep{Apply log laws to simplify}
+\nequ{(2)^{2}+5\log_2 2=2^2+5(1)=4+5=9}
+
+\westep{Final Answer}
+The final answer is:
+\nequ{8^{\frac{2}{3}}+\log_2 32 =9}}
+\end{wex}
+
+
+
+\begin{wex}{Simplify to one log}{Write $2\log {3} + \log {2} -\log {5}$ as the logarithm of a single number.}{
+\westep{Reverse law 5}
+$2\log {3} + \log {2} -\log {5} = \log {3^2} + \log {2} -\log {5}$
+\westep{Apply laws 3 and 4}
+$= \log ({3}^2\times 2 \div 5$)
+\westep{Write the final answer}
+$= \log {3,6}$
+}
+\end{wex}
+\MarginTip{Exponent rule: $\left( x^{b} \right) ^{a}=x^{ab}$}
+
+
+\section{Solving Simple Log Equations}
+
+In Grade 10 you solved some exponential equations by trial and error, because you did not know the great power of logarithms yet.  Now it is much easier to solve these equations by using logarithms.
+
+For example to solve $x$ in $25^x = 50$ correct to two decimal places you simply apply the following reasoning.  If the LHS = RHS then the logarithm of the LHS must be equal to the logarithm of the RHS.  By applying Law 5, you will be able to use your calculator to solve for $x$.
+
+\begin{wex}{Solving Log equations}{Solve for $x$:\quad $25^x = 50$ correct to two decimal places.}{
+\westep{Taking the log of both sides}
+$\log{25^x} = \log{50}$
+\westep{Use Law 5}
+$x \log{25} = \log{50}$
+\westep{Solve for $x$}
+$x = \log{50} \div \log{25}$\\
+$x = 1,21533....$
+\westep{Round off to required decimal place}
+$x=1,22$
+}
+\end{wex}
+
+In general, the exponential equation should be simplified as much as possible. Then the aim is to make the unknown quantity (i.e. $x$) the subject of the equation.
+
+For example, the equation
+\nequ{2^{(x+2)}=1}
+is solved by moving all terms with the unknown to one side of the equation and taking all constants to the other side of the equation
+\begin{eqnarray*}
+2^x\cdot2^2&=&1\\
+2^x &=&\frac{1}{2^2}\\
+\end{eqnarray*}
+Then, take the logarithm of each side. 
+\begin{eqnarray*}
+\log{(2^x)} &=&\log\left(\frac{1}{2^2}\right)\\
+x\log{(2)} &=&-\log{(2^2)}\\
+x\log{(2)} &=&-2\log{(2)} \quad \mbox{Divide both sides by $\log{(2)}$}\\
+\therefore \quad x&=&-2
+\end{eqnarray*}
+Substituting into the original equation, yields
+\nequ{2^{-2+2}=2^{0}=1 \quad \checkmark}
+
+Similarly, $9^{(1-2x)}=3^4$ is solved as follows:
+\begin{eqnarray*}
+9^{(1-2x)}&=&3^4\\
+3^{2(1-2x)}&=&3^4\\
+3^{2-4x}&=&3^4 \quad \mbox{take the logarithm of both sides}\\
+\log(3^{2-4x})&=&\log(3^4)\\
+(2-4x)\log(3)&=&4\log(3) \quad \mbox{divide both sides by $\log(3)$}\\
+2-4x&=&4\\
+-4x&=&2\\
+\therefore x&=&-\frac{1}{2}
+\end{eqnarray*}
+Substituting into the original equation, yields
+\nequ{9^{(1-2(\frac{-1}{2}))}=9^{(1+1)}=3^{2(2)}=3^4 \quad \checkmark}
+
+\begin{wex}{Exponential Equation}{Solve for $x$ in $7 \cdot 5^{(3x+3)}=35$}{
+\westep{Identify the base with $x$ as an exponent}
+There are two possible bases: $5$ and $7$. $x$ is an exponent of $5$.
+\westep{Eliminate the base with no $x$}
+In order to eliminate $7$, divide both sides of the equation by $7$ to give:
+\nequ{5^{(3x+3)}=5}
+\westep{Take the logarithm of both sides}
+\nequ{\log(5^{(3x+3)})=\log(5)}
+\westep{Apply the log laws to make $x$ the subject of the equation.}
+\begin{eqnarray*}
+(3x+3)\log(5)&=&\log(5)\quad \mbox{divide both sides of the equation by $\log(5)$}\\
+3x+3&=&1\\
+3x&=&-2\\
+x&=&-\frac{2}{3}
+\end{eqnarray*}
+\westep{Substitute into the original equation to check answer.}
+\nequ{7 \cdot 5^{((-3\times\frac{2}{3})+3)}=7 \cdot 5^{(-2+3)}=7 \cdot 5^{1}=35 \quad \checkmark}
+}\end{wex}
+
+\Exercise{}{
+Solve for $x$:
+\begin{enumerate}
+\item{$\log_{3}x = 2$}
+\item{$10^{\log 27} = x$}
+\item{$3^{2x-1}=27^{2x-1}$}
+\end{enumerate}
+}
+
+
+\section{Logarithmic Applications in the Real World}
+
+Logarithms are part of a number of formulae used in the Physical Sciences.  There are formulae that deal with earthquakes, with sound, and pH-levels to mention a few.  To work out time periods is growth or decay, logs are used to solve the particular equation.
+
+\begin{wex}{Using the growth formula}{A city grows $5\%$ every two years. How long will it take for the city to triple its size?}{
+\westep{Use the formula}
+$A = P(1 + i)^n$
+Assume $P = x$, then $A = 3x$.
+For this example $n$ represents a period of 2 years, therefore the $n$ is halved for this purpose.
+\westep{Substitute information given into formula}
+\begin{eqnarray*}
+3 &=& (1,05)^{\frac{n}{2}}\\
+\log{3} &=& \frac{n}{2} \times {\log{1,05}}\quad \mbox{(using Law 5)}\\
+n &=& 2 \log{3} \div {\log{1,05}}\\
+n &=& 45,034
+\end{eqnarray*}
+\westep{Final answer}
+So it will take approximately 45 years for the population to triple in size.
+}
+\end{wex}
+
+\Exercise{}{
+\begin{enumerate}
+\item{The population of a certain bacteria is expected to grow exponentially at a rate of $15 \%$ every hour. If the initial population is $5~000$, how long will it take for the population to reach $100~000$?}
+\item{Plus Bank is offering a savings account with an interest rate if $10 \%$ per annum compounded monthly. You can afford to save R$300$ per month. How long will it take you to save R$20~000$?  (Give your answer in years and months)}
+\end{enumerate}
+}
+
+\begin{wex}{Logs in Compound Interest}{I have R$12~000$ to invest.  I need the money to grow to at least R$30~000$.  If it is invested at a compound interest rate of $13\%$ per annum, for how long (in full years) does my investment need to grow? }{
+\westep{The formula to use}
+\begin{equation*}
+A=P(1+i)^n 
+\end{equation*}
+\westep{Substitute and solve for $n$}
+\begin{eqnarray*}
+30000 &<& 12000(1+0,13)^n\\
+1,13^n &>& \frac{5}{2}\\
+n\log(1,13) &>& \log(2,5)\\
+n &>& \log(2,5) \div \log(1,13)\\
+n &>& 7,4972\ldots
+\end{eqnarray*}
+\westep{Determine the final answer}
+In this case we round up, because 7 years will not yet deliver the required R$30~000$.
+The investment need to stay in the bank for at least 8 years.}\end{wex}
+
+\begin{eocexercises}{}
+\begin{enumerate}
+\item{Show that
+\nequ{\log_{a}\left(\frac{x}{y}\right) = \log_{a}(x) - \log_{a}(y)}}
+\item{Show that
+\nequ{\log_{a}\left(\sqrt[b]{x}\right) = \frac{\log_{a}(x)}{b}}}
+\item{Without using a calculator show that:
+\nequ{\log \frac{75}{16}-2\log \frac{5}{9}+\log \frac{32}{243}=\log 2}}
+\item{Given that $5^n=x$ and $n=\log_2y$
+\begin{enumerate}
+\item Write $y$ in terms of $n$
+\item Express $\log_8 4y$ in terms of $n$
+\item Express $50^{n+1}$ in terms of $x$ and $y$
+\end{enumerate}}
+
+\item{Simplify, without the use of a calculator:
+\begin{enumerate}
+\item{$8^{\frac{2}{3}}+\log_2 32$}
+\item{$\log_3 9 - \log_5 \sqrt{5}$}
+\item{$\left(\dfrac{5}{4^{-1}-9^{-1}}\right)^{\dfrac{1}{2}}+\log_3 9^{2,12}$}
+\end{enumerate}}
+\item{Simplify to a single number, without use of a calculator:
+\begin{enumerate}
+\item{$\log_5 125 + \dfrac{\log 32-\log 8}{\log 8}$}
+\item{$\log 3 - \log 0,3$}
+\end{enumerate}}
+\item{Given: \quad $\log_3 6 = a$ and $\log_6 5 = b$
+\begin{enumerate}
+\item{Express $\log_3 2$ in terms of $a$.}
+\item{Hence, or otherwise, find $\log_3 10$ in terms of $a$ and $b$.}
+\end{enumerate}}
+
+\item{Given: \quad $pq^k = qp^{-1}$ \\ \\ Prove: \quad $k = 1 - 2\log_q p$}
+
+\item{Evaluate without using a calculator: $(\log_{ 7} 49)^5 + \log_{ 5} \: \biggl(\dfrac{1}{125}\biggr) - 13\:\log_{ 9} 1$}
+
+\item{If $\log 5 = 0,7$, determine, \textbf{without using a calculator}:
+\begin{enumerate}
+\item{$\log_2 5$}
+\item{$10^{-1,4}$}
+\end{enumerate}}
+
+\item{Given: \qquad $M = \log_2 (x+3) + \log_2 (x-3)$
+\begin{enumerate}
+\item{Determine the values of $x$ for which $M$ is defined.}
+\item{Solve for $x$ if $M = 4$.}
+\end{enumerate}}
+
+\item{Solve: \qquad $\biggl(x^3\biggr)^{\log x} = 10 x^2$ (Answer(s) may be left in surd form, if necessary.)}
+
+\item{Find the value of $(\log_{27} 3)^3$ without the use of a calculator.}
+
+\item{Simplify By using a calculator:  $\log_4 8 + 2 \log_3 \sqrt{27}$}
+
+\item{Write $\log 4500$ in terms of $a$ and $b$ if $2=10^a$ and $9=10^b$.}
+
+\item{Calculate: \qquad $\dfrac{5^{2006} - 5^{2004} + 24}{5^{2004} + 1}$}
+
+\item{Solve the following equation for $x$ without the use of a calculator and using the fact that $\sqrt{10} \approx 3,16:$ $$2\log(x+1) = \dfrac{6}{\log(x+1)}-1$$}
+
+\item{Solve the following equation for $x$: $6^{6x} = 66$ \quad (Give answer correct to two decimal places.)}
+
+\end{enumerate}
+
+
+
+% CHILD SECTION END 
+
+
+
+% CHILD SECTION START 
+\practiceinfo
+\end{eocexercises}

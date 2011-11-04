@@ -1,0 +1,423 @@
+\chapter{Linear Programming}
+\label{m:lp12}
+
+
+%\begin{syllabus}
+%\item Solve linear programming problems by optimising a function in two variables, subject to one or more linear constraints, by establishing optima by means of a search line and further comparing the gradients of the objective function and linear constraint boundary lines.
+%\end{syllabus}
+
+\section{Introduction}
+In Grade 11 you were introduced to linear programming and solved problems by looking at points on the edges of the feasible region. In Grade 12 you will look at how to solve linear programming problems in a more general manner.
+
+\section{Terminology}
+Here is a recap of some of the important concepts in linear programming.
+
+\subsection{Feasible Region and Points}
+Constraints mean that we cannot just take any $x$ and $y$ when looking for the $x$ and $y$ that optimise our objective function. If we think of the variables $x$ and $y$ as a point $(x;y)$ in the $xy$-plane then we call the set of all points in the $xy$-plane that satisfy our constraints the \textbf{feasible region}. Any point in the feasible region is called a \textbf{feasible point}.
+
+For example, the constraints
+\begin{eqnarray*}
+x\geq 0\\
+y\geq 0
+\end{eqnarray*}
+mean that every $(x,y)$ we can consider must lie in the first quadrant of the $xy$ plane. The constraint
+\nequ{x\geq y}
+means that every $(x,y)$ must lie on or below the line $y=x$ and the constraint
+\nequ{x\leq 20}
+means that $x$ must lie on or to the left of the line $x=20$. 
+
+We can use these constraints to draw the feasible region as shown by the shaded region in Figure~\ref{fig:lp:feasible}. 
+
+\Tip{The constraints are used to create bounds of the solution.}
+
+\begin{figure}[!ht]
+\begin{center}
+\begin{pspicture}(3,-0.5)(0,4.2)
+\psset{xunit=0.15,yunit=0.15}
+\pspolygon[linestyle=none,fillstyle=solid,fillcolor=lightgray]
+(0,0)(20,20)(20,0)
+\psaxes[Dx=5,Dy=5]{<->}(0,0)(-5,-5)(25,25)
+\pcline(0,0)(20,20)
+\aput{:U}{$y=x$}
+\pcline(20,0)(20,20)
+\bput{:U}{$x=20$}
+\rput(27,0){$x$}
+\rput(0,27){$y$}
+\end{pspicture}
+\caption{The feasible region corresponding to the constraints $x\geq 0$,
+$y\geq 0$, $x\geq y$ and $x\leq 20$.}
+\label{fig:lp:feasible}
+\end{center}
+\end{figure}
+
+\Tip{
+\begin{center}
+\begin{tabular}{lp{7cm}}
+$ax+by=c$& If $b\neq 0$, feasible points must lie \textit{on} the line $y=-\frac{a}{b}x+\frac{c}{b}$\\
+&If $b=0$, feasible points must lie \textit{on} the line $x=c/a$\\
+$ax+by\leq c$&If $b\neq 0$, feasible points must lie \textit{on} or \textit{below} the line $y=-\frac{a}{b}x+\frac{c}{b}$.\\
+&If $b=0$, feasible points must lie \textit{on} or \textit{to the left of} the line $x=c/a$.\\
+\end{tabular}
+\end{center}
+}
+When a constraint is linear, it means that it requires that any feasible point $(x,y)$ lies on one side of or on a line. Interpreting constraints as graphs in the $xy$ plane is very important since it allows us to construct the feasible region such as in Figure~\ref{fig:lp:feasible}. 
+
+\section{Linear Programming and the Feasible Region}
+If the objective function and all of the constraints are linear then we call the problem of optimising the objective function subject to these constraints a \textbf{linear program}. All optimisation problems we will look at will be linear programs.
+
+The major consequence of the constraints being linear is that \textit{the feasible region is always a polygon.} This is evident since the constraints that define the feasible region all contribute a line segment to its boundary (see Figure~\ref{fig:lp:feasible}). It is also always true that the feasible region is a convex polygon.
+
+The objective function being linear means that \textit{the feasible point(s) that gives the solution of a linear program always lies on one of the vertices of the feasible region}. This is very important since, as we will soon see, it gives us a way of solving linear programs. 
+
+We will now see why the solutions of a linear program always lie on the boundary of the feasible region. Firstly, note that if we think of $f(x,y)$ as lying on the $z$ axis, then the function $f(x,y)=ax+by$ (where $a$ and $b$ are real numbers) is the definition of a plane. If we solve for $y$ in the equation defining the objective function then
+
+\begin{align}
+\nonumber & \quad f(x,y)=ax+by\\
+\therefore & \quad y=\frac{-a}{b}x+\frac{f(x,y)}{b}
+\end{align}
+\label{eq:num:levelline}
+What this means is that if we find all the points where $f(x,y)=c$ for any real number $c$ (i.e. $f(x,y)$ is constant with a value of $c$), then we have the equation of a line. This line we call a \textbf{level line} of the objective function.
+
+Consider again the feasible region described in Figure~\ref{fig:lp:feasible}. Let's say that we have the objective function $f(x,y)=x-2y$ with this feasible region. If we consider Equation~\ref{eq:num:levelline} corresponding to
+\nequ{f(x,y)=-20}
+then we get the level line
+\nequ{y=\frac{1}{2}x+10}
+which has been drawn in Figure~\ref{fig:lp:levelline}. Level lines corresponding to
+\begin{eqnarray*}
+f(x,y)=-10 &\text{or}&y=\frac{x}{2}+5\\
+f(x,y)=0 &\text{or}& y=\frac{x}{2}\\
+f(x,y)=10 &\text{or}& y=\frac{x}{2}-5\\
+f(x,y)=20 &\text{or}& y=\frac{x}{2}-10
+\end{eqnarray*}
+have also been drawn in. It is very important to realise that these are not the only level lines; in fact, there are infinitely many of them and they are \textit{all parallel to each other}. Remember that if we look at any one level line $f(x,y)$ has the \textit{same} value for every point $(x,y)$ that lies on that line. Also, $f(x,y)$ will always have different values on different level lines.
+
+\begin{figure}[!ht]
+\begin{center}
+\begin{pspicture}(3,-1.5)(0,4.2)
+\psset{xunit=0.15,yunit=0.15}
+\pspolygon[linestyle=none,fillstyle=solid,fillcolor=lightgray]
+(0,0)(20,20)(20,0)
+\psaxes[Dx=5,Dy=5]{<->}(0,0)(-5,-5)(25,25)
+\psline(0,0)(20,20)
+\psline(20,20)(20,0)
+\psline[linestyle=dashed, linecolor=gray](-6,7)(26,23)
+\rput[l](27,23){$f(x,y)=-20$}
+\psline[linestyle=dashed, linecolor=gray](-6,2)(26,18)
+\rput[l](27,18){$f(x,y)=-10$}
+\psline[linestyle=dashed, linecolor=gray](-6,-3)(26,13)
+\rput[l](27,13){$f(x,y)=0$}
+\psline[linestyle=dashed, linecolor=gray](-6,-8)(26,8)
+\rput[l](27,8){$f(x,y)=10$}
+\psline[linestyle=dashed, linecolor=gray](5,-7.5)(26,3)
+\rput[l](27,3){$f(x,y)=20$}
+\rput(27,0){$x$}
+\rput(0,27){$y$}
+\end{pspicture}
+\caption{The feasible region corresponding to the constraints $x\geq 0$, $y\geq 0$, $x\geq y$ and $x\leq 20$ with objective function $f(x,y)=x-2y$. The dashed lines represent various level lines of $f(x,y)$.}
+\label{fig:lp:levelline}
+\end{center}
+\end{figure}
+
+If a ruler is placed on the level line corresponding to $f(x,y)=-20$ in Figure~\ref{fig:lp:levelline} and moved down the page parallel to this line then it is clear that the ruler will be moving over level lines which correspond to \textit{larger} values of $f(x,y)$. So if we wanted to maximise $f(x,y)$ then we simply move the ruler down the page until we reach the bottom-most point in the feasible region. This point will then be the feasible point that maximises $f(x,y)$. Similarly, if we wanted to minimise $f(x,y)$ then the top-most feasible point will give the minimum value of $f(x,y)$. 
+
+Since our feasible region is a polygon, these points \textit{will always lie on vertices in the feasible region}. The fact that the value of our objective function along the line of the ruler increases as we move it down and decreases as we move it up depends on this particular example. Some other examples might have that the function increases as we move the ruler up and decreases as we move it down. 
+
+It is a general property, though, of linear objective functions that they will consistently increase or decrease as we move the ruler up or down. Knowing which direction to move the ruler in order to maximise/minimise $f(x,y)=ax+by$ is as simple as looking at the sign of $b$ (i.e. ``is $b$ negative, positive or zero?"). If $b$ is \textit{positive}, then $f(x,y)$ \textit{increases} as we move the ruler up and $f(x,y)$ \textit{decreases} as we move the ruler down. The opposite happens for the case when $b$ is negative: $f(x,y)$ \textit{decreases} as we move the ruler up and $f(x,y)$ \textit{increases} as we move the ruler down. If $b=0$, we need to look at the sign of $a$. 
+
+If $a$ is positive then $f(x,y)$ increases as we move the ruler to the right and decreases if we move the ruler to the left. Once again, the opposite happens for $a$ negative. If we look again at the objective function mentioned earlier,
+\nequ{f(x,y)=x-2y}
+with $a=1$ and $b=-2$, then we should find that $f(x,y)$ increases as we move the ruler down the page since $b=-2<0$. This is exactly what happened in Figure~\ref{fig:lp:levelline}.
+
+The main points about linear programming we have encountered so far are
+\begin{itemize}
+\item The feasible region is always a polygon.
+\item Solutions occur at vertices of the feasible region.
+\item Moving a ruler parallel to the level lines of the objective function up/down to the top/bottom of the feasible region shows us which of the vertices is the solution.
+\item The direction in which to move the ruler is determined by the sign of $b$ and also possibly by the sign of $a$.
+\end{itemize}
+
+These points are sufficient to determine a method for solving any linear program. 
+
+\subsubsection{Method: Linear Programming}
+If we wish to maximise the objective function $f(x,y)$ then:
+\begin{enumerate}
+\item Find the gradient of the level lines of $f(x,y)$ (this is always going to be $-\frac{a}{b}$ as we saw in Equation~\ref{eq:lp:levelline})
+\item Place your ruler on the $xy$ plane, making a line with gradient $-\frac{a}{b}$ (i.e. $b$ units on the $x$-axis and $-a$ units on the $y$-axis)
+\item The solution of the linear program is given by appropriately moving the ruler. Firstly we need to check whether $b$ is negative, positive or zero.
+\begin{enumerate}
+\item If $b>0$, move the ruler up the page, keeping the ruler parallel to the level lines all the time, until it touches the ``highest'' point in the feasible region. This point is then the solution.
+\item If $b<0$, move the ruler in the opposite direction to get the solution at the ``lowest'' point in the feasible region.
+\item If $b=0$, check the sign of $a$
+\begin{enumerate}
+\item If $a<0$ move the ruler to the ``leftmost'' feasible point. This point is then the solution.
+\item If $a>0$ move the ruler to the ``rightmost'' feasible point. This point is then the solution.
+\end{enumerate}
+\end{enumerate}
+\end{enumerate}
+
+\begin{wex}
+{Prizes!}{As part of their opening specials, a furniture store promised to give away at least $40$ prizes with a total value of at least R$2~000$. The prizes are kettles and toasters.
+\begin{enumerate}
+\item{If the company decides that there will be at least $10$ of each prize, write down two more inequalities from these constraints.}
+\item{If the cost of manufacturing a kettle is R$60$ and a toaster is R$50$, write down an objective function $C$ which can be used to determine the cost to the company of both kettles and toasters.}
+\item{Sketch the graph of the feasibility region that can be used to determine all the possible combinations of kettles and toasters that honour the promises of the company.}
+\item{How many of each prize will represent the cheapest option for the company?}
+\item{How much will this combination of kettles and toasters cost?}
+\end{enumerate}
+}
+{
+\westep{Identify the decision variables}
+Let the number of kettles be $x$ and the number of toasters be $y$ and write down two constraints apart from $x\geq 0$ and $y\geq 0$ that must be adhered to.
+\westep{Write constraint equations}
+Since there will be at least $10$ of each prize we can write:
+\nequ{x\geq 10}
+and
+\nequ{y\geq 10}
+Also, the store promised to give away at least $40$ prizes in total. Therefore:
+\nequ{x+y\geq 40}
+\westep{Write the objective function}
+The cost of manufacturing a kettle is R$60$ and a toaster is R$50$. Therefore the cost the total cost $C$ is:
+\nequ{C=60x+50y}
+\westep{Sketch the graph of the feasible region}
+
+\begin{center}
+\psset{unit=0.75}
+\begin{pspicture}(-1,-1)(11,11)
+%\psgrid[gridcolor=gray]
+\psaxes[dx=1,Dx=10,dy=1,Dy=10]{<->}(0,0)(-1,-1)(10.4,10.4)
+\pspolygon[fillcolor=lightgray,fillstyle=solid, linecolor=lightgray](10,10)(1,10)(1,3)(3,1)(10,1)
+\psline{->}(0,1)(10.3,1)
+\psline{->}(1,0)(1,10.3)
+\psplot{0}{4}{4 x sub}
+%\psplot{0}{10}{x 1.2 mul neg 20 add}
+
+\uput[r](10.4,0){$x$}
+\uput[u](0,10.4){$y$}
+\uput[ul](3.5,1){$A$}
+\uput[l](1.7,3.2){$B$}
+\end{pspicture}
+\end{center}
+
+\westep{Determine vertices of feasible region}
+From the graph, the coordinates of vertex $A$ are $(30;10)$ and the coordinates of vertex $B$ are $(10;30)$.
+
+\westep{Draw in the search line}
+The search line is the gradient of the objective function.  That is, if the equation $C = 60x + 50y$ is now written in the standard form $y = ...$, then the gradient is:
+$$ m = -\frac{6}{5},$$ which is shown with the broken line on the graph.
+
+\begin{center}
+\psset{unit=0.75}
+\begin{pspicture}(-1,-1)(11,11)
+%\psgrid[gridcolor=gray]
+\psaxes[dx=1,Dx=10,dy=1,Dy=10]{<->}(0,0)(-1,-1)(10.4,10.4)
+\pspolygon[fillcolor=lightgray,fillstyle=solid, linecolor=lightgray](10,10)(1,10)(1,3)(3,1)(10,1)
+\psline{->}(0,1)(10.3,1)
+\psline{->}(1,0)(1,10.3)
+\psplot{0}{4}{4 x sub}
+\uput[r](10.4,0){$x$}
+\uput[u](0,10.4){$y$}
+\uput[ul](3.5,1){$A$}
+\uput[l](1,3){$B$}
+\psline[linestyle=dashed, linecolor=gray](5,0)(0,6)
+\end{pspicture}
+\end{center}
+
+\westep{Calculate cost at each vertex}
+At vertex $A$, the cost is:
+\begin{eqnarray*}
+C&=&60x+50y\\
+&=&60(30)+50(10)\\
+&=&1~800+500\\
+&=&\mbox{R}2~300
+\end{eqnarray*}
+
+At vertex $B$, the cost is:
+\begin{eqnarray*}
+C&=&60x_k+50y_t\\
+&=&60(10)+50(30)\\
+&=&600+1500\\
+&=&\mbox{R}2~100
+\end{eqnarray*}
+
+\westep{Write the final answer}
+The cheapest combination of prizes is $10$ kettles and $30$ toasters, costing the company R$2~100$.
+}
+\end{wex}
+
+\begin{wex}
+{Search Line Method}{As a production planner at a factory manufacturing lawn cutters your job
+will be to advise the management on how many of each model should be produced per week in
+order to maximise the profit on the local production. The factory is producing two types of
+lawn cutters: Quadrant and Pentagon.
+Two of the production processes that the lawn cutters must go through are: bodywork and engine
+work.
+\begin{itemize}
+\item{The factory cannot operate for less than $360$ hours on engine work for the lawn cutters.}
+\item{The factory has a maximum capacity of $480$ hours for bodywork for the lawn cutters.}
+\item{Half an hour of engine work and half an hour of bodywork is required to produce one
+Quadrant.}
+% \item{One third of an hour of engine work and one fifth of an hour of bodywork is required to produce one
+%Pentagon.}
+\item{The ratio of Pentagon lawn cutters to Quadrant lawn cutters produced per week must be at
+least $3:2$.}
+\item{A minimum of $200$ Quadrant lawn cutters must be produced per week.}
+\end{itemize}
+Let the number of Quadrant lawn cutters manufactured in a week be $x$.\\
+Let the number of Pentagon lawn cutters manufactured in a week be $y$.\\
+Two of the constraints are:
+\nequ{x \ge 200}
+\nequ{3x + 2y \ge 2~160}
+\begin{enumerate}
+\item{Write down the remaining constrain
+%\begin{center}
+%\scalebox{1} % Change this value to rescale the drawing.
+%{
+%\begin{pspicture}(5,-2.97125)(11.683437,2.97125)
+%\definecolor{color12542b}{rgb}{0.6549019607843137,0.6352941176470588,0.6352941176470588}
+%\pspolygon[linewidth=0.04,fillstyle=solid,fillcolor=color12542b](6.24,-1.43125)(11.2,-1.43125)(7.94,-2.45125)
+%\psline[linewidth=0.028222222cm](6.2,-1.43125)(11.28,2.60875)
+%\psline[linewidth=0.028222222cm](11.26,2.5953124)(11.26,-1.41125)
+%\psline[linewidth=0.028222222cm](11.26,2.56875)(7.94,-2.51125)
+%\psdots[dotsize=0.127](6.22,-1.4446876)
+%\psdots[dotsize=0.127](11.26,-1.4246875)
+%\psdots[dotsize=0.127](11.26,2.5753124)
+%\psframe[linewidth=0.028222222,dimen=outer](11.26,-1.09125)(10.9,-1.4446876)
+%
+%\psdots[dotsize=0.127](7.98,-2.4446876)
+%% \usefont{T1}{ptm}{m}{n}
+%\rput(11.430312,2.77875){$D$}
+%% \usefont{T1}{ptm}{m}{n}
+%\rput(11.482344,0.55875){$h$}
+%% \usefont{T1}{ptm}{m}{n}
+%\rput(11.520312,-1.48125){$A$}
+%% \usefont{T1}{ptm}{m}{n}
+%\rput(7.933125,-2.82125){$B$}
+%% \usefont{T1}{ptm}{m}{n}
+%\rput(5.8857813,-1.40125){$C$}
+%% \usefont{T1}{ptm}{m}{n}
+%\rput(6.8079686,-2.16125){$b$}
+%\rput(6.8079686,-1.2){$\theta$}
+%\rput(7.9,-2){$\beta$}
+%\rput(8.8,-1.8){$\alpha$}
+%\psarc[linewidth=0.04](6.8,-1.31125){0.42}{255.96376}{74.74488}
+%\psarc[linewidth=0.04](8.78,-1.67125){0.52}{301.7595}{86.42367}
+%\psarc[linewidth=0.04](8.06,-2.15125){0.5}{42.878902}{185.19443}
+%\end{pspicture}
+%}
+%\end{center}
+ts in terms of $x$ and $y$ to represent the abovementioned
+information.}
+\item{Use graph paper to represent the constraints graphically.}
+\item{Clearly indicate the feasible region by shading it.}
+\item{If the profit on one Quadrant lawn cutter is R$1~200$ and the profit on one Pentagon
+lawn cutter is R$400$, write down an equation that will represent the profit on the
+lawn cutters.}
+\item{Using a search line and your graph, determine the number of Quadrant and
+Pentagon lawn cutters that will yield a maximum profit.}
+\item{Determine the maximum profit per week.}
+\end{enumerate}
+}{\westep{Remaining constraints:}
+\nequ{\frac{1}{2}x + \frac{1}{5}y \le 480}
+\nequ{\frac{y}{x} \ge \frac{3}{2}}
+\westep{Graphical representation\\}
+
+% Generated with LaTeXDraw 1.9.3
+% Wed Apr 02 20:26:05 CAT 2008
+% \usepackage[usenames,dvipsnames]{pstricks}
+% \usepackage{epsfig}
+% \usepackage{pst-grad} % For gradients
+% \usepackage{pst-plot} % For axes
+\scalebox{1} % Change this value to rescale the drawing.
+{
+\begin{pspicture}(0,-4.170469)(6.9175,4.190469)
+\definecolor{color11b}{rgb}{0.8,0.8,0.8}
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{<-}(0.8921875,4.050469)(0.8975,-4.150469)
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(0.4975,-3.7504687)(6.8975,-3.7504687)
+\psline[linewidth=0.04cm](1.8921875,3.3504686)(1.8975,-3.7504687)
+\psline[linewidth=0.04cm](0.8921875,-0.5495312)(4.4921875,-3.7495313)
+\psline[linewidth=0.04cm](0.8921875,3.4504688)(5.6921873,-3.7495313)
+\psline[linewidth=0.04cm](0.8975,-3.7504687)(5.8921876,0.65046877)
+\usefont{T1}{ptm}{m}{n}
+\rput(4.4612503,-3.9804688){$720$}
+\usefont{T1}{ptm}{m}{n}
+\rput(5.7003126,-3.9804688){$960$}
+\rput(6.7003126,-3.9804688){$x$}
+\usefont{T1}{ptm}{m}{n}
+\rput(0.3225,-0.5604688){$1080$}
+\usefont{T1}{ptm}{m}{n}
+\rput(1.946875,-3.9804688){$200$}
+\pspolygon[linewidth=0.04,fillstyle=solid,fillcolor=color11b](1.8921875,1.9904687)(1.8921875,-1.4295312)(2.6921875,-2.1495314)(3.90,-1.09)
+\usefont{T1}{ptm}{m}{n}
+\rput(0.623125,4.099531){$y$}
+\usefont{T1}{ptm}{m}{n}
+\rput(0.64156246,-3.9804688){$0$}
+\usefont{T1}{ptm}{m}{n}
+\rput(0.341875,3.4604688){$2400$}
+\psline[linewidth=0.04cm,linestyle=dashed,dash=0.16cm 0.16cm](0.8921875,-0.14953125)(2.8921876,-3.7495313)
+\end{pspicture} 
+}
+\westep{Profit equation}
+\nequ{P = 1~200x + 400y}
+\westep{Maximum profit}
+By moving the search line upwards, we see that the point of maximum profit is at $(600;900)$. Therefore
+\nequ{P = 1~200(600) + 400(900)}
+\nequ{P = R1~080~000}}
+\end{wex}
+
+\begin{eocexercises}{}
+\begin{enumerate}
+
+\item{Polkadots is a small company that makes two types of cards, type $X$ and type $Y$. With the available labour and material, the company can make not more than $150$ cards of type $X$ and not more than $120$ cards of type $Y$ per week. Altogether they cannot make more than $200$ cards per week.
+
+There is an order for at least $40$ type $X$ cards and $10$ type $Y$ cards per week.
+Polkadots makes a profit of R$5$ for each type $X$ card sold and R$10$ for each type $Y$ card.
+
+Let the number of type $X$ cards be $x$ and the number of type $Y$ cards be $y$, manufactured per week.
+
+\begin{enumerate}
+\item{One of the constraint inequalities which represents the restrictions above is $x\leq 150$. Write the other constraint inequalities.}
+\item{Represent the constraints graphically and shade the feasible region.}
+\item{Write the equation that represents the profit $P$ (the objective function), in terms of $x$ and $y$.}
+\item{On your graph, draw a straight line which will help you to determine how many of each type must be made weekly to produce the maximum $P$}
+\item{Calculate the maximum weekly profit.}
+\end{enumerate}}
+
+\item{A brickworks produces ``face bricks" and ``clinkers". Both types of bricks are produced and sold in batches of a thousand. Face bricks are sold at R$150$ per thousand, and clinkers at R$100$ per thousand, where an income of at least R$9~000$ per month is required to cover costs. The brickworks is able to produce at most $40~000$ face bricks and $90~000$ clinkers per month, and has transport facilities to deliver at most $100~000$ bricks per month. The number of clinkers produced must be at least the same as the number of face bricks produced.
+
+Let the number of face bricks \textit{in thousands} be $x$, and the number of clinkers \textit{in thousands} be $y$.
+\begin{enumerate}
+\item{List all the constraints.}
+\item{Graph the feasible region.}
+\item{If the sale of face bricks yields a profit of R$25$ per thousand and clinkers R$45$ per thousand, use your graph to determine the maximum profit.}
+\item{If the profit margins on face bricks and clinkers are interchanged, use your graph to determine the maximum profit.}
+\end{enumerate}}
+
+\item{A small cell phone company makes two types of cell phones: \textit{Easyhear} and \textit{Longtalk}. Production figures are checked weekly. At most, $42$ \textit{Easyhear} and $60$ \textit{Longtalk} phones can be manufactured each week. At least $30$ cell phones must be produced each week to cover costs. In order not to flood the market, the number of \textit{Easyhear} phones cannot be more than twice the number of \textit{Longtalk} phones. It takes $\tfrac{2}{3}$ hour to assemble an \textit{Easyhear} phone and $\tfrac{1}{2}$ hour to put together a \textit{Longtalk} phone. The trade unions only allow for a $50$-hour week.\\ Let $x$ be the number of \textit{Easyhear} phones and $y$ be the number of \textit{Longtalk} phones manufactured each week.
+\begin{enumerate}
+\item{Two of the constraints are: $$0 \leq x \leq 42 \qquad \mathrm{and} \qquad 0 \leq y \leq 60$$\\ Write down the other three constraints.}
+\item{Draw a graph to represent the feasible region}
+\item{If the profit on an \textit{Easyhear} phone is R$225$ and the profit on a \textit{Longtalk} is R$75$, determine the maximum profit per week.}
+\end{enumerate}}
+
+\item{\textit{Hair for Africa} is a firm that specialises in making two kinds of up-market shampoo, \textit{Glowhair} and \textit{Longcurls}. They must produce at least two cases of \textit{Glowhair} and one case of \textit{Longcurls} per day to stay in the market. Due to a limited supply of chemicals, they cannot produce more than $8$ cases of \textit{Glowhair} and $6$ cases of \textit{Longcurls} per day. It takes half-an-hour to produce one case of \textit{Glowhair} and one hour to produce a case of \textit{Longcurls}, and due to restrictions by the unions, the plant may operate for at most $7$ hours per day. The workforce at \textit{Hair for Africa}, which is still in training, can only produce a maximum of $10$ cases of shampoo per day.
+
+Let $x$ be the number of cases of \textit{Glowhair} and $y$ the number of cases of \textit{Longcurls} produced per day.
+\begin{enumerate}
+\item{Write down the inequalities that represent all the constraints.}
+\item{Sketch the feasible region.}
+\item{If the profit on a case of \textit{Glowhair} is R$400$ and the profit on a case of \textit{Longcurls} is R$300$, determine the maximum profit that \textit{Hair for Africa} can make per day.}
+\end{enumerate}}
+
+\item{A transport contracter has six 5-ton trucks and eight 3-ton trucks.  He must deliver at least $120$ tons of sand per day to a construction site, but he may not deliver more than $180$ tons per day. The 5-ton trucks can each make three trips per day at a cost of R$30$ per trip, and the 3-ton trucks can each make four trips per day at a cost of R$120$ per trip.  How must the contracter utilise his trucks so that he has minimum expense?}
+
+\end{enumerate}
+
+
+
+% CHILD SECTION END 
+
+
+
+% CHILD SECTION START 
+\practiceinfo
+\end{eocexercises}

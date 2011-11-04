@@ -1,0 +1,594 @@
+\chapter{Solving Quadratic Equations}
+\label{m:se:q11}
+
+%\nts{The section on the nature of roots is not in the syllabus and has been included as an `Advanced' section at the end of the chapter.}
+
+\section{Introduction}
+In Grade 10, the basics of solving linear equations, quadratic equations, exponential equations and linear inequalities were studied. This chapter extends on that work. We look at different methods of solving quadratic equations.
+
+\section{Solution by Factorisation}
+%\begin{syllabus}
+%\item Solve quadratic equations by factorisation
+%\end{syllabus}
+
+How to solve quadratic equations by factorisation was discussed in Grade 10. Here is an example to remind you of what is involved.
+
+\begin{wex}{Solution of Quadratic Equations}{Solve the equation $2x^{2} - 5x - 12 = 0$.\\}
+{\westep{Determine whether the equation has common factors}
+This equation has no common factors.\\
+
+\westep{Determine if the equation is in the form $ax^2+bx+c$ with $a>0$}
+The equation is in the required form, with $a=2$, $b=-5$ and $c=-12$.\\
+
+\westep{Factorise the quadratic}
+$2x^{2} - 5x - 12$ has factors of the form:
+\nequ{(2x + s)(x + v)}
+with $s$ and $v$ constants to be determined.
+This multiplies out to
+\nequ{2x^{2} + (s + 2v)x + sv}
+We see that $sv = -12$ and $s + 2v = -5$. This is a set of simultaneous equations in $s$ and $v$, but it is easy to solve numerically. All the options for $s$ and $v$ are considered below.
+
+\begin{center}
+\begin{tabular}{|r|r|r|}\hline\hline
+$~s$ & $~v$ & $s + 2v$ \\\hline\hline
+$~2$ & $-6$ & $-10$ \\
+$-2$ & $~6$ & $~10$ \\
+$~3$ & $-4$ & $~-5$ \\
+$-3$ & $~4$ & $~~5$ \\
+$~4$ & $-3$ & $~-2$ \\
+$-4$ & $~3$ & $~~2$ \\
+$~6$ & $-2$ & $~~2$ \\
+$-6$ & $~2$ & $~-2$ \\\hline
+\end{tabular}
+\end{center}
+We see that the combination $s = 3$ and $v = -4$ gives $s + 2v = -5$.\\
+
+\westep{Write the equation with factors}
+\nequ{(2x + 3)(x - 4) = 0}
+\westep{Solve the equation}
+If two brackets are multiplied together and give 0, then one of the brackets must be 0,  therefore\\
+\nequ{2x+3=0}
+or
+\nequ{x-4=0}
+Therefore, $x=-\frac{3}{2}$ or $x=4$\\
+\westep{Write the final answer}
+The solutions to $2x^{2} - 5x - 12 = 0$ are $x=-\frac{3}{2}$ or $x=4$.
+}\end{wex}
+
+It is important to remember that a quadratic equation has to be in the form    $ax^2+bx+c = 0$ before one can solve it using the factorisation method.
+
+\begin{wex}{Solving quadratic equation by factorisation}
+{Solve for $a$: $a(a-3)=10$\\}{
+\westep{Rewrite the equation in the form $ax^2+bx+c = 0$}
+Remove the brackets and move all terms to one side.\\
+\nequ{a^2-3a-10 = 0}
+\westep{Factorise the trinomial}
+\nequ{(a+2)(a-5)= 0}
+\westep{Solve the equation}
+\nequ{a+ 2 = 0}
+or
+\nequ{a - 5 = 0}
+Solve the two linear equations and check the solutions in the original equation.\\
+\westep{Write the final answer}
+Therefore, $a = -2$ or $a = 5$
+}
+\end{wex}
+
+\begin{wex}{Solving fractions that lead to a quadratic equation}
+{Solve for $b$: $\frac{3b}{b+2}+ 1 = \frac{4}{b+1}$\\}{
+\westep{Multiply both sides over the lowest common denominator}
+\nequ{\frac{3b(b+1)+(b+2)(b+1)}{(b+2)(b+1)}= \frac{4(b+2)}{(b+2)(b+1)}}
+\westep{Determine the restrictions}
+The restrictions are the values for $b$ that would result in the denominator being $0$.  Since a denominator of $0$ would make the fraction undefined, $b$ cannot be these values.
+Therefore, $b \neq -2$  and $b \neq -1$\\
+\westep{Simplify equation to the standard form}
+The denominators on both sides of the equation are equal.  This means we can drop them (by multiplying both sides of the equation by $(b + 2)(b + 1)$) and just work with the numerators.
+\begin{eqnarray*}
+3b^2 + 3b + b^2 + 3b + 2 &=& 4b + 8\\
+4b^2 + 2b - 6 &=& 0\\
+2b^2 + b - 3 &=& 0
+\end{eqnarray*}
+\westep{Factorise the trinomial and solve the equation}
+\begin{eqnarray*}
+(2b+3)(b-1) &=& 0\\
+2b + 3 = 0 &or& b - 1 = 0\\
+b = \frac{-3}{2} &or& b = 1
+\end{eqnarray*}
+\westep{Check solutions in original equation}
+Both solutions are valid\\
+Therefore, $b = \frac{-3}{2}$  or  $b = 1$
+}
+\end{wex}
+
+\Exercise{Solution by Factorisation}{
+Solve the following quadratic equations by factorisation. Some answers may be left in surd form.
+\begin{enumerate}
+\item{$2y^2 - 61 = 101$}
+\item{$2y^2 - 10 = 0$}
+\item{$y^2 - 4 = 10$}
+\item{$2y^2 - 8 = 28$}
+\item{$7y^2 = 28$}
+\item{$y^2 + 28 = 100$}
+\item{$7y^2 + 14y = 0$}
+\item{$12y^2 + 24y + 12 = 0$}
+\item{$16y^2 - 400 = 0$}
+\item{$y^2 - 5y + 6 = 0$}
+\item{$y^2 + 5y - 36 = 0$}
+\item{$y^2 + 2y = 8$}
+\item{$-y^2 - 11y - 24 = 0$}
+\item{$13y - 42 = y^2$}
+\item{$y^2 + 9y + 14 = 0$}
+\item{$y^2 - 5ky + 4k^2 = 0$}
+\item{$y(2y + 1) = 15$}
+\item{$\frac{5y}{y - 2}+\frac{3}{y}+ 2 = \frac{-6}{y^2 - 2y}$}
+\item{$\frac{y-2}{y+1} = \frac{2y+1}{y-7}$}
+\end{enumerate}
+}
+
+\section{Solution by Completing the Square}
+%\begin{syllabus}
+%\item Solve quadratic equations by completing the square
+%\end{syllabus}
+
+We have seen that expressions of the form:
+\nequ{a^2x^2-b^2}
+are known as differences of squares and can be factorised as follows:
+\nequ{(ax-b)(ax+b).}
+This simple factorisation leads to another technique to solve quadratic equations known as \textit{completing the square}.
+
+We demonstrate with a simple example, by trying to solve for $x$ in:
+\equ{x^2-2x-1=0.}{eq:cts:ex1}
+We cannot easily find factors of this term, but the first two terms look similar to the first two terms of the perfect square:
+\nequ{(x-1)^2=x^2-2x+1.}
+However, we can cheat and create a perfect square by adding $2$ to both sides of the equation in (\ref{eq:cts:ex1}) as:
+\begin{eqnarray*}
+x^2-2x-1&=&0\\
+x^2-2x-1+2&=&0+2\\
+x^2-2x+1&=&2\\
+(x-1)^2&=&2\\
+(x-1)^2-2&=&0
+\end{eqnarray*}
+Now we know that:
+\nequ{2=(\sqrt{2})^2}
+which means that:
+\nequ{(x-1)^2-2}
+is a difference of squares.
+Therefore we can write:
+\nequ{(x-1)^2-2=[(x-1)-\sqrt{2}][(x-1)+\sqrt{2}]=0.}
+The solution to $x^2-2x-1=0$ is then:
+\nequ{(x-1)-\sqrt{2}=0}
+or
+\nequ{(x-1)+\sqrt{2}=0.}
+This means $x=1+\sqrt{2}$ or $x=1-\sqrt{2}$. This example demonstrates the use of \textit{completing the square} to solve a quadratic equation.
+
+\subsubsection{Method: Solving Quadratic Equations by Completing the Square}
+\begin{enumerate}
+\item{Write the equation in the form $ax^2+bx+c=0$. e.g. $x^2+2x-3=0$}
+\item{Take the constant over to the right hand side of the equation. e.g. $x^2+2x=3$}
+\item{Make the coefficient of the $x^2$ term $= 1$, by dividing through by the existing coefficient.}
+\item{Take half the coefficient of the $x$ term, square it and add it to both sides of the equation. e.g. in $x^2+2x=3$, half of the coefficient of the $x$ term is $1$ and $1^2=1$. Therefore we add $1$ to both sides to get: $x^2+2x+1=3+1$.}
+\item{Write the left hand side as a perfect square: $(x+1)^2-4=0$}
+\item{You should then be able to factorise the equation in terms of difference of squares and then solve for $x$:\\
+\begin{eqnarray*}
+[(x+1)-2][(x+1)+2)]&=&0\\
+(x-1)(x+3)&=&0\\
+\therefore x=1 \quad &\rm{or}& \quad x=-3
+\end{eqnarray*}
+}
+\end{enumerate}
+
+\begin{wex}{Solving Quadratic Equations by Completing the Square}
+{Solve by completing the square:
+\nequ{x^2 - 10x - 11 = 0}
+}
+{
+
+\westep{Write the equation in the form $ax^2+bx+c=0$}
+\nequ{x^2 - 10x - 11 = 0}
+
+\westep{Take the constant over to the right hand side of the equation}
+\nequ{x^2 - 10x = 11}
+
+\westep{Check that the coefficient of the $x^2$ term is $1$.}
+The coefficient of the $x^2$ term is $1$.\\
+
+\westep{Take half the coefficient of the $x$ term, square it and add it to both sides}
+The coefficient of the $x$ term is $-10$. Therefore, half of the coefficient of the $x$ term will be $\frac{(-10)}{2}=-5$ and the square of it will be
+$(-5)^2=25$. Therefore:
+\nequ{x^2 - 10x +25 = 11+25}
+
+\westep{Write the left hand side as a perfect square}
+\nequ{(x-5)^2 - 36=0}
+
+\westep{Factorise equation as difference of squares}
+\nequ{(x-5)^2 - 36 = 0}
+\nequ{[(x-5)+6][(x-5)-6] = 0}
+
+\westep{Solve for the unknown value}
+\begin{eqnarray*}
+(x+1)(x-11)&=&0\\
+\therefore x=-1 \quad &\rm{or}& \quad x=11
+\end{eqnarray*}
+}
+\end{wex}
+
+\begin{wex}{Solving Quadratic Equations by Completing the Square}{Solve by completing the square:
+\nequ{2x^2 - 8x - 16 = 0}}
+{
+
+\westep{Write the equation in the form $ax^2+bx+c=0$}
+\nequ{2x^2 - 8x - 16 = 0}
+
+\westep{Take the constant over to the right hand side of the equation}
+\nequ{2x^2 - 8x = 16}
+
+\westep{Check that the coefficient of the $x^2$ term is $1$.}
+The coefficient of the $x^2$ term is $2$. Therefore, divide both sides by $2$:
+\nequ{x^2 - 4x = 8}
+
+\westep{Take half the coefficient of the $x$ term, square it and add it to both sides}
+The coefficient of the $x$ term is $-4$; $\frac{(-4)}{2}=-2$ and
+$(-2)^2=4$. Therefore:
+\nequ{x^2 - 4x + 4 = 8 + 4}
+
+\westep{Write the left hand side as a perfect square}
+\nequ{(x - 2)^2 - 12=0}
+
+\westep{Factorise equation as difference of squares}
+\nequ{[(x-2)+\sqrt{12}][(x-2)-\sqrt{12}] = 0}
+
+\westep{Solve for the unknown value}
+\begin{eqnarray*}
+[x-2+\sqrt{12}][x-2-\sqrt{12}]&=&0\\
+\therefore x=2-\sqrt{12} \quad &\rm{or}& \quad x=2+\sqrt{12}
+\end{eqnarray*}
+
+\westep{The last three steps can also be done in a different way}
+Leave the left hand side written as a perfect square
+\nequ{(x - 2)^2 = 12}
+
+\westep{Take the square root on both sides of the equation}
+\nequ{x - 2  = \pm \sqrt{12}}
+
+\westep{Solve for $x$}
+Therefore $x=2-\sqrt{12} \quad \rm${or}$ \quad x=2+\sqrt{12}$\\
+Compare to answer in step 7.
+}
+\end{wex}
+
+%Khan Academy video on solving quadratics 1 - SIYAVULA-VIDEO:http://cnx.org/content/m38838/latest/#quadratics-1
+\Exercise{Solution by Completing the Square}{
+Solve the following equations by completing the square:
+\begin{enumerate}
+\item{$x^2 + 10x - 2 = 0$}
+\item{$x^2+4x+3=0$}
+\item{$x^2+8x-5 = 0$}
+\item{$2x^2+12x+4 = 0$}
+\item{$x^2+5x+9 = 0$}
+\item{$x^2+16x+10=0$}
+\item{$3x^2+6x-2=0$}
+\item{$z^2 + 8z - 6 = 0$}
+\item{$2z^2 - 11z = 0$}
+\item{$5 + 4z - z^2 = 0$}
+\end{enumerate}
+}
+
+\section{Solution by the Quadratic Formula}
+%\begin{syllabus}
+%\item Solve quadratic equations by using the quadratic formula
+%\end{syllabus}
+
+It is not always possible to solve a quadratic equation by factorising and sometimes it is lengthy and tedious to solve a quadratic equation by completing the square. In these situations, you can use the \textit{quadratic formula} that gives the solutions to any quadratic equation.
+
+Consider the general form of the quadratic function:
+\nequ{f(x) = ax^{2} + bx + c.}
+Factor out the $a$ to get:
+\equ{f(x)=a\left(x^2+\frac{b}{a}x+\frac{c}{a}\right).}{eq:cts:ex2}
+Now we need to do some detective work to figure out how to turn (\ref{eq:cts:ex2}) into a perfect square plus some extra terms. We know that for a perfect square:
+\nequ{(m+n)^2=m^2+2mn+n^2}
+and
+\nequ{(m-n)^2=m^2-2mn+n^2}
+The key is the middle term on the right hand side, which is $2\times$ the first term $\times$ the second term of the left hand side.
+In (\ref{eq:cts:ex2}), we know that the first term is $x$ so $2\times$ the second term is $\frac{b}{a}$. This means that the second term is $\frac{b}{2a}$. So,
+\nequ{\left(x+\frac{b}{2a}\right)^2 = x^2 + 2\frac{b}{2a}x + \left(\frac{b}{2a}\right)^2.}
+In general if you add a quantity and subtract the same quantity, nothing has changed. This means if we add and subtract $\left(\frac{b}{2a}\right)^2$ from the right hand side of Equation (\ref{eq:cts:ex2}) we will get:
+\begin{eqnarray}
+f(x)&=&a\left(x^2+\frac{b}{a}x+\frac{c}{a}\right)\\
+&=&a\left(x^2+\frac{b}{a}x+\left(\frac{b}{2a}\right)^2 - \left(\frac{b}{2a}\right)^2+\frac{c}{a}\right)\\
+&=&a\left(\left[x+\left(\frac{b}{2a}\right)\right]^2 - \left(\frac{b}{2a}\right)^2+\frac{c}{a}\right)\\
+&=&a\left[x+\left(\frac{b}{2a}\right)\right]^2 - \frac{b^2}{4a} +c
+\end{eqnarray}
+We set $f(x)=0$ to find its roots, which yields:
+
+\begin{equation}
+a\left(x + \frac{b}{2a}\right)^{2} = \frac{b^{2}}{4a} - c
+\end{equation}
+Now dividing by $a$ and taking the square root of both sides gives the
+expression
+\begin{equation}
+x + \frac{b}{2a} = \pm\sqrt{\frac{b^{2}}{4a^{2}} - \frac{c}{a}}
+\end{equation}
+Finally, solving for $x$ implies that
+\begin{eqnarray*}
+x& =& -\frac{b}{2a} \pm\sqrt{\frac{b^{2}}{4a^{2}} - \frac{c}{a}}\\
+&=& -\frac{b}{2a} \pm \sqrt{\frac{b^{2} - 4ac}{4a^{2}}}
+\end{eqnarray*}
+which can be further simplified to:
+\begin{equation}
+x = \frac{-b \pm \sqrt{b^{2} - 4ac}}{2a}
+\label{eq:qform}
+\end{equation}
+These are the solutions to the quadratic equation. Notice that there are two
+solutions in general, but these may not always exists (depending on the sign of
+the expression $b^{2} - 4ac$ under the square root). These solutions are also
+called the \textit{roots} of the quadratic equation.
+
+\begin{wex}{Using the quadratic formula}{Find the roots of the function $f(x) = 2x^{2} + 3x - 7$.\\}{
+\westep{Determine whether the equation can be factorised}
+The expression cannot be factorised. Therefore, the general quadratic formula must be used.\\
+
+\westep{Identify the coefficients in the equation for use in the formula}
+From the equation:
+\nequ{a=2}
+\nequ{b=3}
+\nequ{c=-7}
+
+\westep{Apply the quadratic formula}
+Always write down the formula first and then substitute the values of $a, b$ and $c$.
+\begin{eqnarray}
+x & =& \frac{-b \pm \sqrt{b^{2} - 4ac}}{2a} \\
+& =& \frac{-(3) \pm \sqrt{(3)^{2} -4(2)(-7)}}{2(2)} \\
+& =& \frac{-3 \pm \sqrt{65}}{4} \\
+& =& \frac{-3 \pm \sqrt{65}}{4}
+\end{eqnarray}
+
+\westep{Write the final answer}
+The two roots of $f(x) = 2x^{2} + 3x - 7$ are $x = \frac{-3 + \sqrt{65}}{4}$ and $\frac{-3 - \sqrt{65}}{4}$.}
+\end{wex}
+
+\begin{wex}{Using the quadratic formula but no solution}{Find the solutions to the quadratic equation $x^{2} - 5x + 8=0$.\\}{
+\westep{Determine whether the equation can be factorised}
+The expression cannot be factorised. Therefore, the general quadratic formula must be used.\\
+
+\westep{Identify the coefficients in the equation for use in the formula}
+From the equation:
+\nequ{a=1}
+\nequ{b=-5}
+\nequ{c=8}
+
+\westep{Apply the quadratic formula}
+\begin{eqnarray}
+x & =& \frac{-b \pm \sqrt{b^{2} - 4ac}}{2a} \\
+& =& \frac{-(-5) \pm \sqrt{(-5)^{2} - 4(1)(8)}}{2(1)} \\
+& =& \frac{5 \pm \sqrt{-7}}{2} \\
+\end{eqnarray}
+
+\westep{Write the final answer}
+Since the expression under the square root is negative these are not
+real solutions ($\sqrt{-7}$ is not a real number). Therefore
+there are no real solutions to the quadratic equation $x^{2} - 5x
++ 8=0$. This means that the graph of the quadratic function $f(x) = x^{2} - 5x + 8$ has no $x$-intercepts, but that the entire graph lies above the $x$-axis.}
+\end{wex}
+%Khan Academy video on the quadratic formula: SIYAVULA-VIDEO:http://cnx.org/content/m38851/latest/#quadratics-2
+\Exercise{Solution by the Quadratic Formula}{
+Solve for $t$ using the quadratic formula.
+\begin{enumerate}
+\item{$3t^2 + t - 4 = 0$}
+\item{$t^2 - 5t + 9 = 0$}
+\item{$2t^2 + 6t + 5 = 0$}
+\item{$4t^2 + 2t + 2 = 0$}
+\item{$-3t^2 + 5t -8 = 0$}
+\item{$-5t^2 + 3t - 3 = 0$}
+\item{$t^2 - 4t + 2 = 0$}
+\item{$9t^2 - 7t - 9 = 0$}
+\item{$2t^2 + 3t + 2 = 0$}
+\item{$t^2 + t +1 = 0$}
+\end{enumerate}
+}
+
+\Tip{
+\begin{itemize}
+\item{In all the examples done so far, the solutions were left in surd form.  Answers can also be given in decimal form, using the calculator.  Read the instructions when answering questions in a test or exam whether to leave answers in surd form, or  in decimal form to an appropriate number of decimal places.}
+\item{Completing the square as a method to solve a quadratic equation is only done when specifically asked.}
+\end{itemize}}
+
+\Exercise{Mixed Exercises}{
+
+Solve the quadratic equations by either factorisation, completing the square or by using the quadratic formula:
+
+\begin{itemize}
+\item{Always try to factorise first, then use the formula if the trinomial cannot be factorised.}
+\item{Do some of them by completing the square and then compare answers to those done using the other methods.}
+\end{itemize}
+\begin{center}
+\begin{tabular}{p{0.3\textwidth}p{0.3\textwidth}p{0.3\textwidth}}
+1. $24y^2 + 61y - 8 = 0$ & 2. $-8y^2 - 16y + 42 = 0$ & 3. $-9y^2 + 24y - 12 = 0$\\
+4. $-5y^2 + 0y + 5 = 0$ & 5. $-3y^2 + 15y - 12 = 0$ & 6. $49y^2 + 0y - 25 = 0$\\
+7. $-12y^2 + 66y - 72 = 0$ & 8. $-40y^2 + 58y - 12 = 0$ & 9. $-24y^2 + 37y + 72 = 0$\\
+10. $6y^2 + 7y - 24 = 0$ & 11. $2y^2 - 5y - 3 = 0$ & 12. $-18y^2 - 55y - 25 = 0$\\
+13. $-25y^2 + 25y - 4 = 0$ & 14. $-32y^2 + 24y + 8 = 0$ & 15. $9y^2 - 13y - 10 = 0$\\
+16. $35y^2 - 8y - 3 = 0$ & 17. $-81y^2 - 99y - 18 = 0$ & 18. $14y^2 - 81y + 81 = 0$\\
+19. $-4y^2 - 41y - 45 = 0$ & 20. $16y^2 + 20y - 36 = 0$ & 21. $42y^2 + 104y + 64 = 0$\\
+22. $9y^2 - 76y + 32 = 0$ & 23. $-54y^2 + 21y + 3 = 0$ & 24. $36y^2 + 44y + 8 = 0$\\
+25. $64y^2 + 96y + 36 = 0$ & 26. $12y^2 - 22y - 14 = 0$ & 27. $16y^2 + 0y - 81 = 0$\\
+28. $3y^2 + 10y - 48 = 0$ & 29. $-4y^2 + 8y - 3 = 0$ & 30. $-5y^2 - 26y + 63 = 0$\\
+31. $x^2-70=11$ & 32. $2x^2-30=2$ & 33. $x^2-16=2-x^2$\\
+34. $2y^2-98=0$ & 35. $5y^2-10=115$ & 36. $5y^2-5=19-y^2$\\
+\end{tabular}
+\end{center}
+}
+
+\section{Finding an Equation When You Know its Roots}
+
+We have mentioned before that the \textit{roots} of a quadratic equation are the solutions or answers you get from solving the quadatic equation.  Working back from the answers, will take you to an equation.
+
+\begin{wex}{Find an equation when roots are given}
+{Find an equation with roots $13$ and $-5$\\}{
+\westep{Write down as the product of two brackets}
+The step before giving the solutions would be:\\
+\nequ{(x-13)(x+5)=0}\\
+Notice that the signs in the brackets are opposite of the given roots.\\
+\westep{Remove brackets}
+\nequ{x^2 -8x - 65 = 0}
+Of course, there would be other possibilities as well when each term on each side of the \textit{equals sign} is multiplied by a constant.}
+\end{wex}
+
+\begin{wex}{Fraction roots}
+{Find an equation with roots $-\frac{3}{2}$  and $4$\\}{
+\westep{Product of two brackets}
+Notice that if $x = -\frac{3}{2}$ then $2x + 3 = 0$\\
+Therefore the two brackets will be:\\
+\nequ{(2x+3)(x-4)=0}
+
+\westep{Remove brackets}
+The equation is:\\
+\nequ{2x^2 - 5x - 12 = 0}
+}
+\end{wex}
+
+\Extension{Theory of Quadratic Equations - Advanced}
+{This section is not in the syllabus, but it gives one a good understanding about some of the solutions of the quadratic equations.
+
+\subsection*{What is the Discriminant of a Quadratic Equation?}
+Consider a general quadratic function of the form $f(x) = ax^{2} + bx + c$. The \emph{discriminant} is defined as:
+\equ{\Delta = b^{2} - 4ac.}{eq:discriminant}
+This is the expression under the square root in the formula for the roots of this function. We have already seen that whether the roots exist or not depends on whether this factor $\Delta$ is negative or positive.
+
+\subsection*{The Nature of the Roots}
+\subsubsection*{Real Roots ($\Delta \geq 0$)}
+Consider $\Delta \geq 0$ for some quadratic function $f(x) = ax^{2} + bx + c$. In this case there are solutions to the equation $f(x) = 0$ given
+by the formula
+\begin{equation}
+x = \frac{-b \pm \sqrt{b^{2} - 4ac}}{2a} = \frac{-b \pm \sqrt{\Delta}}{2a}
+\end{equation}
+If the expression under the square root is non-negative then the square root exists. These are the roots of the function $f(x)$.
+
+There various possibilities are summarised in the figure below.
+\begin{center}
+\begin{pspicture}(-6,-0.4)(6,5)
+%\psgrid[gridcolor=lightgray]
+\rput(0,4.8){\textbf{$\Delta$}}
+\psline(-3,4)(-3,4.4)(3,4.4)(3,4)
+\rput(-3,3.8){\textbf{$\Delta<0$ : imaginary roots}}
+\rput(3,3.8){\textbf{$\Delta\ge 0$ : real roots}}
+%\psline(-3,3.4)(-3,3.6)
+\psline(3,3.4)(3,3.6)
+\psline(4.5,3)(4.5,3.4)(1.5,3.4)(1.5,3)
+\rput(4.5,2.8){$\Delta=0$}
+\rput(4.5,2.4){equal roots}
+\rput(1.5,2.8){$\Delta> 0$}
+\rput(1.5,2.4){unequal roots}
+\rput(0,-0.6){\psline(1.5,2.6)(1.5,2.4)
+\psline(0,2.0)(0,2.4)(3,2.4)(3,2.0)
+\rput(0,1.2){\parbox[l]{2cm}{$\Delta$ a perfect square : rational roots}}
+\rput(3,1){\parbox[l]{2cm}{$\Delta$ not a perfect square : irrational roots}}}
+\end{pspicture}
+\end{center}
+
+\subsubsection*{Equal Roots ($\Delta = 0$)}
+If $\Delta = 0$, then the roots are equal and, from the formula, these
+are given by
+\begin{equation}
+x = -\frac{b}{2a}
+\end{equation}
+
+\subsubsection*{Unequal Roots ($\Delta > 0$)}
+There will be two unequal roots if $\Delta > 0$. The roots of $f(x)$ are \textbf{rational} if $\Delta$ is a perfect square (a number which is the square of a rational number), since, in this case, $\sqrt{\Delta}$ is rational. Otherwise, if $\Delta$ is not a perfect square, then the roots are \textbf{irrational}.
+
+\subsubsection*{Imaginary Roots ($\Delta < 0$)}
+If $\Delta < 0$, then the solution to $f(x) = ax^{2} + bx + c = 0$ contains the square root of a negative number and therefore there are no real solutions. We therefore say that the roots of $f(x)$ are \emph{imaginary} (the graph of the function $f(x)$ does not intersect the $x$-axis).
+}
+%Khan Academy video on discriminant of quadratic equations: SIYAVULA-VIDEO:http://cnx.org/content/m38843/latest/#quadratics-4
+\Extension{Theory of Quadratics - advanced exercises}{
+\Exercise{From past papers}{
+\begin{enumerate}
+
+\item{[IEB, Nov. 2001, HG] Given: $x^2 + bx -2 + k(x^2 + 3x + 2) = 0 $,  $(k \ne -1)$
+\begin{enumerate}
+\item{Show that the discriminant is given by: \\ $$\Delta = k^2 + 6bk + b^2 + 8$$}
+\item{If $b=0$, discuss the nature of the roots of the equation.}
+\item{If $b=2$, find the value(s) of $k$ for which the roots are equal.}
+\end{enumerate}}
+
+\item{[IEB, Nov. 2002, HG] Show that $k^2x^2 + 2 = kx - x^2$ has non-real roots for all real values for $k$.}
+
+\item{[IEB, Nov. 2003, HG] The equation $x^2 + 12x = 3kx^2 + 2$ has real roots.
+\begin{enumerate}
+\item{Find the largest integral value of $k$.}
+\item{Find one rational value of $k$, for which the above equation has rational roots.}
+\end{enumerate}}
+
+\item{[IEB, Nov. 2003, HG] In the quadratic equation $px^2 + qx + r =0$, $p$, $q$ and $r$ are positive real numbers and form a geometric sequence. Discuss the nature of the roots.}
+
+\item{[IEB, Nov. 2004, HG] Consider the equation:$$k = \dfrac{x^2 -4}{2x-5} \qquad \mathrm{where} \;\; x \neq \tfrac{5}{2}$$
+\begin{enumerate}
+\item{Find a value of $k$ for which the roots are equal.}
+\item{Find an integer $k$ for which the roots of the equation will be rational and unequal.}
+\end{enumerate}}
+
+\item{[IEB, Nov. 2005, HG]
+\begin{enumerate}
+\item{Prove that the roots of the equation $x^2-(a+b)x+ab-p^2=0$ are real for all real values of $a$, $b$ and $p$.}
+\item{When will the roots of the equation be equal?}
+\end{enumerate}}
+
+\item{[IEB, Nov. 2005, HG] If $b$ and $c$ can take on only the values $1$; $2$ or $3$, determine all pairs ($b; \: c$) such that $x^2+bx+c=0$ has real roots.}
+\end{enumerate}
+}}
+
+\begin{eocexercises}{}
+\begin{enumerate}
+\item{Solve: $x^2 - x - 1 = 0$ \quad (Give your answer correct to two decimal places.)}
+\item{Solve: $16(x+1) = x^2 (x+1)$}
+\item{Solve: $y^2 + 3 + \dfrac{12}{y^2 + 3} = 7$ \quad
+(Hint:  Let $y^2+3 = k$ and solve for $k$ first and use the answer to solve $y$.)}
+\item{Solve for $x$: $2x^4 - 5x^2 - 12 = 0$}
+\item{Solve for $x$:
+\begin{enumerate}
+\item{$x(x-9)+14 = 0$}
+\item{$x^2  - x = 3$ \quad (Show your answer correct to \textit{one} decimal place.)}
+\item{$x + 2 = \dfrac{6}{x}$ \quad (correct to two decimal places)}
+\item{$\dfrac{1}{x+1}+\dfrac{2x}{x-1} = 1$}
+\end{enumerate}}
+\item{Solve for $x$ in terms of $p$ by completing the square: $x^2 - px - 4 = 0$}
+\item{The equation $ax^2 + bx + c = 0$ has roots $x=\tfrac{2}{3}$ and $x=-4$. Find one set of possible values for $a$, $b$ and $c$.}
+
+\item{The two roots of the equation $4x^2 + px - 9 = 0$ differ by $5$. Calculate the value of $p$.}
+
+\item{ An equation of the form $x^2 + bx + c = 0$ is written
+on the board. Saskia and Sven copy it down incorrectly. Saskia has
+a mistake in the constant term and obtains the solutions $-4$ and $2$.
+Sven has a mistake in the coefficient of $x$ and obtains the solutions
+$1$ and $-15$. Determine the correct equation that was on the
+board.}
+
+\item{Bjorn stumbled across the following formula to solve
+the quadratic equation $ax^2+bx+c=0$ in a foreign textbook.
+$$x = \dfrac{2c}{-b \pm \sqrt{b^2 - 4ac}}$$}
+\begin{enumerate}
+\item{Use this formula to solve the equation:
+\nequ{2x^2 + x - 3 = 0}}
+\item{Solve the equation again, using factorisation, to see if the formula works for this equation.}
+\item{Trying to derive this formula to prove that it always works, Bjorn got stuck along the way. His attempt his shown
+below:}
+\begin{eqnarray*}
+ax^2 + bx + c &=& 0 \\
+a + \dfrac{b}{x} + \dfrac{c}{x^2} &=& 0 \qquad \mbox{Divided by $x^2$ where $x \ne 0$} \\
+\dfrac{c}{x^2} + \dfrac{b}{x} + a &=& 0 \qquad \mbox{Rearranged}\\
+\dfrac{1}{x^2} + \dfrac{b}{cx} + \dfrac{a}{c} &=& 0 \qquad \mbox{Divided by $c$ where $c \ne 0$}\\
+\dfrac{1}{x^2} + \dfrac{b}{cx} &=& -\dfrac{a}{c} \qquad \mbox{Subtracted $\dfrac{a}{c}$ from both sides} \\
+\therefore \dfrac{1}{x^2} + \dfrac{b}{cx} &+& \ldots \qquad \mbox{Got stuck}
+\end{eqnarray*}
+\\
+Complete his derivation.
+\end{enumerate}
+
+\end{enumerate}
+
+\practiceinfo
+\end{eocexercises}
+
+
+
+% CHILD SECTION START
+

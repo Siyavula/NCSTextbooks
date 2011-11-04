@@ -1,0 +1,1109 @@
+\chapter{Work, Energy and Power}
+\label{p:m:wpe12}
+
+%\nts{Status:  Content is complete. More exercises, worked examples and activities are needed.}
+
+\section{Introduction}
+Imagine a vendor carrying a basket of vegetables on her head. Is she doing any work? One would definitely say yes! However, in Physics she is not doing any work! Again, imagine a boy pushing against a wall? Is he doing any work? We can see that his muscles are contracting and expanding. He may even be sweating. But in Physics, he is not doing any work!
+
+If the vendor is carrying a very heavy load for a long distance, we would say she has lot of energy. By this, we mean that she has a lot of stamina. If a car can travel very fast, we describe the car as powerful. So, there is a link between power and speed. However, power means something different in Physics. This chapter describes the links between work, energy and power and what these mean in Physics.
+
+You will learn that work and energy are closely related. You shall see that the energy of an object is its capacity to do work and doing work is the process of transferring energy from one object or form to another. In other
+words,
+
+\begin{itemize}
+\item{an object with lots of energy can do lots of work.}
+\item{when work is done, energy is lost by the object doing work and gained by the object on which the work is done.}
+\end{itemize}
+
+Lifting objects or throwing them requires that you do work on them. Even making electricity flow requires that something do work. Something must have energy and transfer it through doing work to make things happen.
+
+\section{Work}
+%\begin{syllabus}
+%\item when a force exerted on an object causes it to move, work is done on the object (except if the force and displacement are at right angles to each other)
+%The learner should be able to:
+%\begin{itemize}
+%\item Define the work done on an object by a force
+%\item Give examples of when an applied force does and does not do work on an object
+%\item Calculate the work done by an object when a force $F$ applied at angle $\theta$ to the direction of motion causes the object to move a distance $d$, using $W=F\cdot d \cos \theta$
+%\item Notes:  Link to Grade 11 forces. Stress the difference between the everyday use of the word "work" and the physics use. Only the component of the applied force that is parallel to the motion does work on an object. So, for example, a person holding up a heavy book does no work on the book.
+%\end{itemize}
+%\end{syllabus}
+
+\Definition{Work}{When a force exerted on an object causes it to move, work is done on the object (except if the force and displacement are at right angles to each other).}
+
+This means that in order for work to be done, an object must be moved a distance $d$ by a force $F$, such that there is some non-zero component of the force in the direction of the displacement. Work is calculated as:
+\equ{W=F\cdot \Delta x \cos \theta.}{eq:wpeg12:workgeneral}
+where $F$ is the applied force, $\Delta x$ is the displacement of the object and $\theta$ is the angle between the applied force and the direction of motion.
+
+\begin{figure}[htbp]
+\begin{center}
+\begin{pspicture}(0,-1)(2,2)
+%\psgrid[gridcolor=lightgray]
+\psline{->}(0,0)(2;60)
+\psline[linestyle=dashed](2;60)(1,0)
+\psline{->}(0,0)(2;0)
+\uput[l](2;60){$F$}
+\uput[ul](2;0){$\Delta x$}
+\rput(0.5;30){$\theta$}
+\psline{->}(0,-0.2)(1,-0.2)
+\uput[d](0.5,-0.2){$F\cos\theta$}
+\end{pspicture}
+\caption{The force $F$ causes the object to be displaced by $\Delta x$ at angle $\theta$.}
+\label{fig:wpe12:wgeneral}
+\end{center}
+\end{figure}
+
+It is very important to note that for work to be done there must be a component of the applied force in the direction of motion. Forces perpendicular to the direction of motion do no work.
+
+For example work is done on the object in Figure~\ref{fig:wpe12:wparallel}, 
+
+\begin{figure}[htbp]
+\begin{center}
+\begin{pspicture}(-2,-1)(9,4)
+%\psgrid[gridcolor=lightgray]
+\rput(0,1.5){\psframe(0,0)(1,1)
+\psline[linewidth=2pt]{->}(-1,0.5)(0,0.5)
+\uput[l](-1,0.5){$F$}
+%\uput[d](0,0){Initial}
+\rput(3,0){\psframe[linestyle=dashed](0,0)(1,1)
+%\uput[d](0,0){Final}
+}
+\pcline[offset=-8pt]{|->}(0,0)(3,0)
+\lput*{:U}{$\Delta x$}
+}
+\uput[u](1,-1){(a)}
+\rput(7,0){
+\psframe(0,0)(1,1)
+\psline[linewidth=2pt]{->}(-1,0.5)(0,0.5)
+\uput[l](-1,0.5){$F$}
+%\uput[d](0,0){Initial}
+\rput(0,3){\psframe[linestyle=dashed](0,0)(1,1)
+%\uput[d](0,0){Final}
+}
+\pcline[offset=-8pt]{|->}(1,0)(1,3)
+\lput*{:U}{$\Delta y$}
+\uput[u](0,-1){(b)}
+}
+\end{pspicture}
+\caption{(a) The force $F$ causes the object to be displaced by $\Delta x$ in the same direction as the force. $\theta=0^{\circ}$ and $\cos \theta = 1$. Work is done in this situation. (b) A force $F$ is applied to the object. The object is displaced by $\Delta y$ at right angles to the force. $\theta=90^{\circ}$ and $\cos \theta = 0$. Work is not done in this situation.}
+\label{fig:wpe12:wparallel}
+\end{center}
+\end{figure}
+
+\Activity{Investigation}{Is work done?}{Decide whether on not work is done in the following situations. Remember that for work to be done a force must be applied in the direction of motion and there must be a displacement. Give reasons for your answer.
+\begin{enumerate}
+\item{Max pushes against a wall and becomes tired.}
+\item{A book falls off a table and free falls to the ground.}
+\item{A rocket accelerates through space.}
+\item{A waiter holds a tray full of meals above his head with one arm and carries it straight across the room at constant speed. (Careful! This is a tricky question.)}
+\end{enumerate}}
+
+\Tip{\textbf{The Meaning of $\theta$:} The angle $\theta$ is the angle between the force vector and the displacement vector. In the following situations, $\theta=0^{\circ}$.
+\begin{center}
+\begin{pspicture}(0,-1)(10,3)
+%\psgrid
+\def\cart{\psframe(0,0.4)(1,1)\pscircle(0.2,0.2){0.2}\pscircle(0.8,0.2){0.2}}
+\psline[linewidth=2pt](0,0)(3,0)
+\rput(1,0){\cart}
+\psline{->}(0,0.75)(1,0.75)
+\uput[ul](1,0.75){$F$}
+\rput(1,0){\psline{->}(0,-0.2)(1,-0.2)
+\uput[dl](1,-0.2){$\Delta x$}}
+
+\rput{30}(4,0){\psline[linewidth=2pt](0,0)(3,0)
+\rput(1,0){\cart}
+\psline{->}(0,0.75)(1,0.75)
+\uput[ul](1,0.75){$F$}
+\rput(1,0){\psline{->}(0,-0.2)(1,-0.2)
+\uput[dl](1,-0.2){$\Delta x$}}
+}
+
+\rput{-30}(7.4,1.5){\psline[linewidth=2pt](0,0)(3,0)
+\rput(1,0){\cart}
+\psline{->}(0,0.75)(1,0.75)
+\uput[ul](1,0.75){$F$}
+\rput(1,0){\psline{->}(0,-0.2)(1,-0.2)
+\uput[dl](1,-0.2){$\Delta x$}}
+}
+\end{pspicture}
+\end{center}}
+
+As with all physical quantities, work must have units. Following from the definition, work is measured in N$\cdot$m. The name given to this combination of S.I. units is the joule (symbol J).
+
+\Definition{Joule}{1 joule is the work done when an object is moved 1~m under the application of a force of 1~N in the direction of motion.}
+
+The work done by an object can be positive or negative. Since force ($F_{\|}$) and displacement ($s$) are both vectors, the result of the above equation depends on their directions:
+
+\begin{itemize}
+\item{If $F_{\|}$ acts in the same direction as the motion then positive work is being done. In this case the object on which the force is applied gains energy.}
+\item{If the direction of motion and $F_{\|}$ are opposite, then negative
+work is being done. This means that energy is transferred in the opposite direction. For example, if you try to push a car uphill by applying a force up the slope and instead the car rolls down the hill you are doing negative work on the car. Alternatively, the car is doing positive work on you!}
+\end{itemize}
+
+\Tip{The everyday use of the word "work" differs from the physics use. In physics, only the component of the applied force that is parallel to the motion does work on an object. So, for example, a person holding up a heavy book does no work on the book.}
+
+\begin{wex}{Calculating Work Done I}{If you push a box 20~m forward by applying a force of 15~N in the forward direction, what is the work you have done on the box?}
+{\westep{Analyse the question to determine what
+information is provided}
+\begin{itemize}
+\item The force applied is $F$=15~N.
+\item The distance moved is $s$=20~m.
+\item The applied force and distance moved are in the same
+direction. Therefore, $F_{\|}$=15~N.
+\end{itemize}
+These quantities are all in the correct units, so no unit conversions
+are required.
+
+\westep{Analyse the question to determine what is being asked}
+\begin{itemize}
+\item We are asked to find the work done on the box. We know from the
+definition that work done is $W=F_{\|}s$
+\end{itemize}
+
+\westep{Next we substitute the values and calculate the work done}
+
+\begin{eqnarray*}
+W&=&F_{\|} s\\
+&=& (15\ \eN)(20\ \emm)\\
+&=& 300\ \rm{J}
+\end{eqnarray*}
+
+Remember that the answer must be {\em positive} as the applied force and the motion are in the same direction (forwards). In this case, you (the pusher) lose energy, while the box gains energy.}
+\end{wex}
+
+\begin{wex}{Calculating Work Done II}{What is the work done by you on a car, if you try to push the car up a hill by applying a force of 40~N directed up the slope, but it slides downhill 30~cm?}
+{\westep{Analyse the question to determine what
+information is provided}
+\begin{itemize}
+\item The force applied is $F$=40~N
+\item The distance moved is $s$=30~cm. This is expressed in the wrong units
+so we must convert to the proper S.I. units (meters):
+\begin{eqnarray*}
+100\,\rm{cm}&=&1\emm\\
+1\,\rm{cm}&=&\frac{1}{100}\emm\\
+\therefore 30 \times 1\,\rm{cm}&=&30 \times \frac{1}{100}\emm\\
+&=& \frac{30}{100}\emm\\
+&=& 0,3\emm
+\end{eqnarray*}
+\item The applied force and distance moved are in opposite directions.  Therefore, if we take $s$=0.3~m, then $F_{\|}$=-40~N.
+\end{itemize}
+\westep{Analyse the question to determine what is being asked}
+\begin{itemize}
+\item We are asked to find the work done on the car by you. We know
+that work done is $W=F_{\|}s$
+\end{itemize}
+
+\westep{Substitute the values and calculate the work done}
+Again we have the applied force and the distance moved so we can proceed with calculating the work done:
+\begin{eqnarray*}
+W&=&F_{\|} s\\
+&=& (-40\eN)(0.3\emm)\\
+&=& -12\rm{J}
+\end{eqnarray*}
+Note that the answer must be {\em negative} as the applied force and the motion are in opposite directions. In this case the car does work on the person trying to push.}
+\end{wex}
+
+What happens when the applied force and the motion are not parallel? If there is an angle between the direction of motion and the applied force then
+to determine the work done we have to calculate the {\em component} of
+the applied force {\em parallel} to the direction of motion. Note that this
+means a force perpendicular to the direction of motion can do no work.
+
+\begin{wex}{Calculating Work Done III}{Calculate the work done on a box, if it is pulled 5~m along the ground by applying a force of $F$=10~N at an angle of $60^{\circ}$ to the horizontal.
+\begin{center}
+\begin{pspicture}(0,0)(2,2.5)
+%\psgrid
+\psline{-}(0,0)(0,0.5)\psline{-}(0,0.5)(0.5,0.5)
+
+\psline{-}(0.5,0.5)(0.5,0)\psline{-}(0,0)(0.5,0)
+\psline{->}(0.5,0.5)(1.5,2.5)
+\rput(0.9,0.7){$60^{\circ}$}
+\rput(1,2.1){$F$}
+\psline[linestyle=dotted]{-}(0.5,0.5)(2.,0.5)
+\end{pspicture}
+\end{center}}
+
+{\westep{Analyse the question to determine what
+information is provided}
+\begin{itemize}
+\item The force applied is $F$=10~N
+\item The distance moved is $s$=5~m along the ground
+\item The angle between the applied force and the motion is $60^{\circ}$
+\end{itemize}
+These quantities are in the correct units so we do not need to perform
+any unit conversions.
+
+\westep{Analyse the question to determine what is being asked}
+\begin{itemize}
+\item We are asked to find the work done on the box.
+\end{itemize}
+
+\westep{Calculate the component of the applied force in the direction of motion}
+
+Since the force and the motion are not in the same direction, we must
+first calculate the component of the force in the direction of the
+motion.
+
+\begin{center}
+\begin{pspicture}(0,0)(2,2.5)
+%\psgrid
+\psline{-}(0,0)(0,0.5)\psline{-}(0,0.5)(0.5,0.5)
+\psline{-}(0.5,0.5)(0.5,0)\psline{-}(0,0)(0.5,0)
+\psline{->}(0.5,0.5)(1.5,2.5)
+\psline[linestyle=dotted]{->}(0.5,0.5)(1.5,0.5)
+\psline[linestyle=dotted]{->}(1.5,0.5)(1.5,2.5)
+\rput(0.9,0.7){$60^{\circ}$}
+\rput(1,2.1){$F$}\rput(1,0.25){$F_{||}$}
+\rput(1.75,1.5){$F_{\|}$}
+\end{pspicture}
+\end{center}
+
+From the force diagram we see that the component of the applied force
+parallel to the ground is
+\begin{eqnarray*}
+F_{||}&=&F\cdot \cos(60^{\circ})\\
+&=& 10\eN\cdot \cos(60^{\circ})\\
+&=& 5\eN
+\end{eqnarray*}
+
+\westep{Substitute and calculate the work done}
+Now we can calculate the work done on the box:
+\begin{eqnarray*}
+W&=&F_{\|} s\\
+&=& (5\eN)(5\emm) \\
+&=& 25\eJ
+\end{eqnarray*}
+Note that the answer is positive as the component of the force $F_{\|}$ is in the same direction as the motion.}
+\end{wex}
+
+\Exercise{Work}{
+\begin{enumerate}
+\item{A 10~N force is applied to push a block across a friction free surface for a displacement of 5.0 m to the right. The block has a weight of 20~N. Determine the work done by the following forces: normal force, weight, applied force. 
+\begin{center}
+\begin{pspicture}(0,0)(2,2)
+%\psgrid
+\psframe(0.5,0.5)(1.5,1.5)
+\psline[linewidth=2pt](0,0.5)(2,0.5)
+\psline{->}(1,1.5)(1,2)
+\uput[l](1,2){$N$}
+\psline{->}(1,0.5)(1,0)
+\uput[l](1,0){$F_g$}
+\psline{->}(1.5,1)(2,1)
+\uput[r](2,1){$F_{app}$}
+\end{pspicture}
+\end{center}
+}
+\item{A 10~N frictional force slows a moving block to a stop after a displacement of 5.0 m to the right. The block has a weight of 20~N. Determine the work done by the following forces: normal force, weight, frictional force. 
+\begin{center}
+\begin{pspicture}(0,0)(2,2)
+%\psgrid
+\psframe(0.5,0.5)(1.5,1.5)
+\psline[linewidth=2pt](0,0.5)(2,0.5)
+\psline{->}(1,1.5)(1,2)
+\uput[l](1,2){$N$}
+\psline{->}(1,0.5)(1,0)
+\uput[l](1,0){$F_g$}
+\psline{->}(0.5,1)(0,1)
+\uput[l](0,1){$F_{friction}$}
+\end{pspicture}
+\end{center}
+}
+\item{A 10~N force is applied to push a block across a frictional surface at constant speed for a displacement of 5.0 m to the right. The block has a weight of 20~N and the frictional force is 10~N. Determine the work done by the following forces: normal force, weight, frictional force. 
+\begin{center}
+\begin{pspicture}(0,0)(2,2)
+%\psgrid
+\psframe(0.5,0.5)(1.5,1.5)
+\psline[linewidth=2pt](0,0.5)(2,0.5)
+\psline{->}(1,1.5)(1,2)
+\uput[l](1,2){$N$}
+\psline{->}(1,0.5)(1,0)
+\uput[l](1,0){$F_g$}
+\psline{->}(0.5,1)(0,1)
+\uput[l](0,1){$F_{friction}$}
+\psline{->}(1.5,1)(2,1)
+\uput[r](2,1){$F_{app}$}
+\end{pspicture}
+\end{center}
+}
+\item{A 20~N object is sliding at constant speed across a friction free surface for a displacement of 5 m to the right. Determine if there is any work done. 
+\begin{center}
+\begin{pspicture}(0,0)(2,2)
+%\psgrid
+\psframe(0.5,0.5)(1.5,1.5)
+\psline[linewidth=2pt](0,0.5)(2,0.5)
+\psline{->}(1,1.5)(1,2)
+\uput[l](1,2){$N$}
+\psline{->}(1,0.5)(1,0)
+\uput[l](1,0){$F_g$}
+\end{pspicture}
+\end{center}
+}
+\item{A 20~N object is pulled upward at constant speed by a 20~N force for a vertical displacement of 5~m. Determine if there is any work done. 
+\begin{center}
+\begin{pspicture}(0,0)(2,2)
+%\psgrid
+\psframe(0.5,0.5)(1.5,1.5)
+%\psline[linewidth=2pt](0,0.5)(2,0.5)
+\psline{->}(1,1.5)(1,2)
+\uput[l](1,2){$T$}
+\psline{->}(1,0.5)(1,0)
+\uput[l](1,0){$F_g$}
+\end{pspicture}
+\end{center}
+}
+
+\item{Before beginning its descent, a roller coaster is always pulled up the first hill to a high initial height. Work is done on the roller coaster to achieve this initial height. A coaster designer is considering three different incline angles \textbf{of the hill} at which to drag the 2 000~kg car train to the top of the 60~m high hill. In each case, the force applied to the car will be applied parallel to the hill. Her critical question is: which angle would require the least work? Analyze the data, determine the work done in each case, and answer this critical question.
+\begin{center}
+\begin{tabular}{|c|c|c|c|}\hline\hline
+\textbf{Angle of Incline}&\textbf{Applied Force}&\textbf{Distance}&\textbf{Work}\\\hline\hline
+35$^{\circ}$&$1.1\times 10^{4}\eN$&100~m&\\\hline
+45$^{\circ}$&$1.3\times 10^{4}\eN$&90~m&\\\hline
+55$^{\circ}$&$1.5\times 10^{4}\eN$&80~m&\\\hline
+\end{tabular}
+\end{center}
+}
+\item{Big Bertha carries a 150~N suitcase up four flights of stairs (a total height of 12~m) and then pushes it with a horizontal force of 60~N at a constant speed of 0.25 \ms\ for a horizontal distance of 50~m on a frictionless surface. How much work does Big Bertha do on the suitcase during this entire trip?}
+\item{A mother pushes down on a pram with a force of 50~N at an angle of 30$^{\circ}$. The pram is moving on a frictionless surface. If the mother pushes the pram for a horizontal distance of 30~m, how much does she do on the pram?
+\begin{center}
+\begin{pspicture}(1,0)(5.2,4.4)
+%\psgrid[gridcolor=lightgray]
+\psline[linewidth=2pt](0,0)(5,0)	%ground
+\psarc(2.5,2.5){1.5}{180}{360}
+%\psline(1,2.5)(1,3)
+\psarc(1.75,2.5){0.75}{0}{180}
+\psline(2.5,2.5)(4,2.5)
+\psline(4,2.5)(4,3)
+\psdot(4,3)
+\rput(4,3){\psline{<-}(0,0)(1;30)\uput[u](1;30){$F_{app}$}\psline[linestyle=dashed](0,0)(1,0)\rput(0.75;15){$\theta$}}
+\psline(3.2,0.4)(3.2,1.2)
+\psline(1.8,0.4)(1.8,1.2)
+\pscircle(1.8,0.2){0.2}
+\pscircle(3.2,0.2){0.2}
+\end{pspicture}
+\end{center}
+}
+\item{How much work is done by an applied force to raise a 2 000~N lift 5 floors vertically at a constant speed? Each floor is 5~m high.}
+\item{A student with a mass of 60~kg runs up three flights of stairs in 15~s, covering a vertical distance of 10~m. Determine the amount of work done by the student to elevate her body to this height. Assume that her speed is constant.}
+%\item{}
+\end{enumerate}
+}
+
+\section{Energy}
+%\begin{syllabus}
+%\item the work done by an external force on an object/system equals the change in mechanical energy of the object/system
+%The learner should be able to:
+%\begin{itemize}
+%\item Know that an object with larger potential energy has a greater capacity to do work
+%\item Solve problems using the work energy theorem, i.e. the work done on an object is equal to the change in its kinetic energy: W = DEk = Ekf - Eki 
+%\item Notes: Link to grade 10:	 conservation of energy. Give examples showing that objects with greater potential energy can do more work, e.g. a hammer dropped from a greater height can do more work than one dropped from a lower height. NOTE: a force only does work on an object if it stays in contact with the object. For example, a person pushing a trolley does work on the trolley, but the road does no work on the tyres of a car if they turn without slipping (the force is not applied over any distance because a different piece of tyre touches the road every instant).
+%\end{itemize}
+%\end{syllabus}
+
+\subsection{External and Internal Forces}
+In Grade 10, you saw that mechanical energy was conserved in the absence of external forces. It is important to know whether a force is an internal force or an external force in the system, because this is related to whether the force can change an object's total mechanical energy when it does work on an object. 
+
+When an external force (for example friction, air resistance, applied force) does work on an object, the total mechanical energy (KE + PE) of that object changes. If positive work is done, then the object will gain energy. If negative work is done, then the object will lose energy. The gain or loss in energy can be in the form of potential energy, kinetic energy, or both. However, the work which is done is equal to the change in mechanical energy of the object.
+
+\Activity{Investigations}{External Forces}
+{
+We can investigate the effect of external forces on an object's total mechanical energy by rolling a ball along the floor from point A to point B. \\
+
+\scalebox{1} % Change this value to rescale the drawing.
+{
+\begin{pspicture}(0,-0.7)(7.78,0.7)
+\psline[linewidth=0.04cm](0.0,-0.24)(7.76,-0.22)
+\pscircle[linewidth=0.04,dimen=outer](2.3,0.12){0.36}
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(2.76,0.2)(3.76,0.2)
+\usefont{T1}{ptm}{m}{n}
+\rput(4.85,0.525){\small direction of motion of the ball}
+\psdots[dotsize=0.12](0.58,-0.24)
+\psdots[dotsize=0.13](6.58,-0.22)
+\usefont{T1}{ptm}{m}{n}
+\rput(0.59,-0.555){A}
+\usefont{T1}{ptm}{m}{n}
+\rput(6.59,-0.535){B}
+\end{pspicture} 
+}
+
+Find a nice smooth surface (e.g. a highly polished floor), mark off two positions, A and B, and roll the ball between them. 
+
+The total mechanical energy of the ball, at each point, is the sum of its kinetic energy (KE) and gravitational potential energy (PE): \\
+
+\begin{minipage}{.49\textwidth}
+\begin{eqnarray*}
+E_{\rm{total,A}}  & = & \rm{KE}_{A} + \rm{PE}_{A}  \\
+& = & \frac{1}{2}mv_{A}^{2} + mgh_{A} \\
+& = & \frac{1}{2}mv_{A}^{2} + mg(0) \\
+& = & \frac{1}{2}mv_{A}^{2} 
+\end{eqnarray*}
+\end{minipage}
+\begin{minipage}{.49\textwidth}
+\begin{eqnarray*}
+E_{\rm{total,B}}  & = & \rm{KE}_{B} + \rm{PE}_{B}  \\
+& = & \frac{1}{2}mv_{B}^{2} + mgh_{B} \\
+& = & \frac{1}{2}mv_{B}^{2} + mg(0) \\
+& = & \frac{1}{2}mv_{B}^{2} 
+\end{eqnarray*}
+\end{minipage}
+
+In the absence of friction and other external forces, the ball should slide along the floor and its speed should be \textit{the same} at positions A and B. Since there are no external forces acting on the ball, its total mechanical energy at points A and B are equal.\\
+
+\begin{eqnarray*}
+v_{A} & = & v_{B}\\
+\frac{1}{2}mv_{A}^{2} & = & \frac{1}{2}mv_{B}^{2}\\
+E_{\rm{total,A}}  & = & E_{\rm{total,B}} 
+\end{eqnarray*}
+
+Now, let's investigate what happens when there is friction (an \textit{external force}) acting on the ball.\\
+Roll the ball along a rough surface or a carpeted floor. What happens to the speed of the ball at point A compared to point B? \\
+If the surface you are rolling the ball along is very rough and provides a large external frictional force, then the ball should be moving much slower at point B than at point A. \\
+Let's now compare the total mechanical energy of the ball at points A and B: \\
+
+\begin{minipage}{.49\textwidth}
+\begin{eqnarray*}
+E_{\rm{total,A}}  & = & \rm{KE}_{A} + \rm{PE}_{A}  \\
+& = & \frac{1}{2}mv_{A}^{2} + mgh_{A} \\
+& = & \frac{1}{2}mv_{A}^{2} + mg(0) \\
+& = & \frac{1}{2}mv_{A}^{2} 
+\end{eqnarray*}
+\end{minipage}
+\begin{minipage}{.49\textwidth}
+\begin{eqnarray*}
+E_{\rm{total,B}}  & = & \rm{KE}_{B} + \rm{PE}_{B}  \\
+& = & \frac{1}{2}mv_{B}^{2} + mgh_{B} \\
+& = & \frac{1}{2}mv_{B}^{2} + mg(0) \\
+& = & \frac{1}{2}mv_{B}^{2} 
+\end{eqnarray*}
+\end{minipage}
+
+However, in this case, $v_{A} \neq v_{B}$ and therefore $E_{\rm{total,A}}  \neq E_{\rm{total,B}} $. Since 
+\begin{eqnarray*}
+v_{A} & > & v_{B} \\
+E_{\rm{total,A}}  & > &  E_{\rm{total,B}}
+\end{eqnarray*}
+
+Therefore, the ball has lost mechanical energy as it moves across the carpet. 
+However, although the ball has lost mechanical energy, energy in the larger system has still been conserved. In this case, the missing
+energy is the work done by the carpet through applying a frictional force on the ball. In this case the carpet is doing negative work on the ball. 
+}
+
+%\Activity{Investigation}{Internal Forces and Energy Conservation}{
+%Let's investigate how the total mechanical energy in a system changes form when an internal force does work on the system. \\
+%We can do this by using a pendulum hanging by a thin thread. Examine the following:
+
+%\scalebox{1} % Change this value to rescale the drawing.
+%{
+%\begin{pspicture}(0,-2.7428205)(7.799532,2.7188206)
+%\definecolor{color318b}{rgb}{0.6,0.6,0.6}
+%\psline[linewidth=0.042cm](3.18,2.6611793)(5.42,2.6611793)
+%\psline[linewidth=0.03cm](4.28,2.6811793)(4.3,-1.0388206)
+%\pscircle[linewidth=0.042,dimen=outer,fillstyle=solid,fillcolor=color318b](4.3,-1.6188205){0.58}
+%\psline[linewidth=0.03cm,linestyle=dashed,dash=0.16cm 0.16cm](4.2845316,2.6838205)(1.7696021,-0.05733404)
+%\rput{-42.843517}(0.69505125,0.8063853){\pscircle[linewidth=0.042,linestyle=dashed,dash=0.16cm 0.16cm,dimen=outer,fillstyle=solid,fillcolor=color318b](1.375203,-0.48259795){0.58}}
+%\psline[linewidth=0.03cm,linestyle=dashed,dash=0.16cm 0.16cm](4.249403,2.7038207)(6.7643323,-0.03733404)
+%\rput{-42.843517}(2.224418,4.744511){\pscircle[linewidth=0.042,linestyle=dashed,dash=0.16cm 0.16cm,dimen=outer,fillstyle=solid,fillcolor=color318b](7.1587315,-0.46259794){0.58}}
+%\psline[linewidth=0.048cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(3.66,-2.6988206)(5.04,-2.7188206)
+%\rput(1.37,-0.4938206){A}
+%\rput(4.31,-1.6338207){B}
+%\rput(7.18,-0.4738206){C}
+%\rput(4.29,-2.5538206){v}
+%\psline[linewidth=0.042cm](0.38,-0.3988206)(0.38,-1.6388206)
+%\psline[linewidth=0.042cm](0.38,-0.4188206)(0.62,-0.4188206)
+%\rput(0.13,-1.0738206){h}
+%\psline[linewidth=0.042cm](0.38,-1.6188205)(0.62,-1.6188205)
+%\end{pspicture} 
+%}
+%In the picture above, the pendulum swings from point A, through point B and up to point C due to the force from gravity acting on it. 
+%At points A and C, which are both at the same height $h$ above point B, the pendulum stops moving. This means that 
+%
+%}
+
+When an internal force does work on an object by an (for example, gravitational and spring forces), the total mechanical energy (KE + PE) of that object remains constant but the object's energy can change form. For example, as an object falls in a gravitational field from a high elevation to a lower elevation, some of the object's potential energy is changed into kinetic energy. However, the sum of the kinetic and potential energies remain constant. When the only forces doing work are internal forces, energy changes forms - from kinetic to potential (or vice versa); yet the total amount of mechanical energy is conserved.
+
+\subsection{Capacity to do Work}
+Energy is the capacity to do work. When positive work is done on an object, the system doing the work loses energy. In fact, {\bf the energy lost by a system is exactly equal to the work done by the system.} An object with larger potential energy has a greater capacity to do work.
+
+\begin{wex}{Work Done on a System}{Show that a hammer of mass 2~kg does more work when dropped from a height of 10~m than when dropped from a height of 5~m. Confirm that the hammer has a greater potential energy at 10~m than at 5~m.}
+{\westep{Determine what is given and what is required}
+We are given:
+\begin{itemize}
+\item{the mass of the hammer, $m=$2~kg}
+\item{height 1, $h_1$=10~m}
+\item{height 2, $h_2$=5~m}
+\end{itemize}
+We are required to show that the hammer does more work when dropped from $h_1$ than from $h_2$. We are also required to confirm that the hammer has a greater potential energy at 10~m than at 5~m.
+
+\westep{Determine how to approach the problem}
+\begin{enumerate}
+\item{Calculate the work done by the hammer, $W_1$, when dropped from $h_1$ using:
+\nequ{W_1=F_g\cdot h_1.}}
+\item{Calculate the work done by the hammer, $W_2$, when dropped from $h_2$ using:
+\nequ{W_2=F_g\cdot h_2.}}
+\item{Compare $W_1$ and $W_2$}
+\item{Calculate potential energy at $h_1$ and $h_2$ and compare using:
+\equ{\poten=m\cdot g \cdot h.}{eq:pe}}
+\end{enumerate}
+
+\westep{Calculate $W_1$}
+\begin{eqnarray*}
+W_1&=&F_g\cdot h_1\\
+&=&m\cdot g \cdot h_1\\
+&=&(2\ekg)(9.8\emss)(10\emm)\\
+&=&196\eJ
+\end{eqnarray*}
+
+\westep{Calculate $W_2$}
+\begin{eqnarray*}
+W_2&=&F_g\cdot h_2\\
+&=&m\cdot g \cdot h_2\\
+&=&(2\ekg)(9.8\emss)(5\emm)\\
+&=&98\eJ
+\end{eqnarray*}
+
+\westep{Compare $W_1$ and $W_2$}
+We have $W_1$=196~J and $W_2$=98~J. $W_1>W_2$ as required.
+
+\westep{Calculate potential energy}
+From \ref{eq:pe}, we see that:
+\begin{eqnarray*}
+\poten&=&m\cdot g \cdot h\\
+&=&F_g \cdot h\\
+&=&W
+\end{eqnarray*}
+This means that the potential energy is equal to the work done. Therefore, $\poten_1>\poten_2$, because $W_1>W_2$.
+}
+\end{wex}
+
+This leads us to the work-energy theorem.
+
+\Definition{Work-Energy Theorem}{The work-energy theorem states that the work done on an object is equal to the change in its kinetic energy:
+\nequ{W=\Delta \kener=\kener_{f}-\kener_{i}}}
+
+The work-energy theorem is another example of the conservation of energy which you saw in Grade 10. 
+
+\begin{wex}{Work-Energy Theorem}{A brick of mass 1~kg is dropped from a height of 10~m. Calculate the work done on the brick at the point it hits the ground assuming that there is no air resistance?}
+{\westep{Determine what is given and what is required}
+We are given:
+\begin{itemize}
+\item{mass of the brick: $m$=1~kg}
+\item{initial height of the brick: $h_i$=10~m}
+\item{final height of the brick: $h_f$=0~m}
+\end{itemize}
+We are required to determine the work done on the brick as it hits the ground.
+\westep{Determine how to approach the problem}
+The brick is falling freely, so energy is conserved. We know that the work done is equal to the difference in kinetic energy. The brick has no kinetic energy at the moment it is dropped, because it is stationary. When the brick hits the ground, all the brick's potential energy is converted to kinetic energy.
+
+\westep{Determine the brick's potential energy at $h_i$}
+\begin{eqnarray*}
+\poten&=&m\cdot g \cdot h\\
+&=&(1\ekg)(9,8\emss)(10\emm)\\
+&=&98\eJ
+\end{eqnarray*}
+
+\westep{Determine the work done on the brick}
+The brick had 98~J of potential energy when it was released and 0~J of kinetic energy. When the brick hit the ground, it had 0~J of potential energy and 98~J of kinetic energy. Therefore $\kener_i$=0~J and $\kener_f$=98~J.
+
+From the work-energy theorem:
+\begin{eqnarray*}
+W&=&\Delta \kener\\
+&=&\kener_f - \kener_i\\
+&=&98\eJ-0\eJ\\
+&=&98\eJ
+\end{eqnarray*}
+
+\westep{Write the final answer}
+98~J of work was done on the brick.
+}
+\end{wex}
+
+\begin{wex}{Work-Energy Theorem 2}{The driver of a 1 000~kg car traveling at a speed of 16,7~\ms\ applies the car's brakes when he sees a red robot. The car's brakes provide a frictional force of 8000~N. Determine the stopping distance of the car.}
+{
+\westep{Determine what is given and what is required}
+We are given:
+\begin{itemize}
+\item{mass of the car: $m$=1\;000~kg}
+\item{speed of the car: $v$=16,7~\ms}
+\item{frictional force of brakes: $F$=8\;000~N}
+\end{itemize}
+We are required to determine the stopping distance of the car.
+
+\westep{Determine how to approach the problem}
+We apply the work-energy theorem. We know that all the car's kinetic energy is lost to friction. Therefore, the change in the car's kinetic energy is equal to the work done by the frictional force of the car's brakes.
+
+Therefore, we first need to determine the car's kinetic energy at the moment of braking using:
+\nequ{\kener=\frac{1}{2}mv^2}
+This energy is equal to the work done by the brakes. We have the force applied by the brakes, and we can use:
+\nequ{W=F\cdot d}
+to determine the stopping distance.
+
+\westep{Determine the kinetic energy of the car}
+\begin{eqnarray*}
+\kener&=&\frac{1}{2}mv^2\\
+&=&\frac{1}{2}(1\;000\ekg)(16,7\ems)^2\\
+&=&139\;445\eJ
+\end{eqnarray*}
+
+\westep{Determine the work done}
+Assume the stopping distance is $d_0$. Then the work done is:
+\begin{eqnarray*}
+W=F\cdot d\\
+&=&(-8\;000\eN)(d_0)
+\end{eqnarray*}
+The force has a negative sign because it acts in a direction opposite to the direction of motion.
+
+\westep{Apply the work-enemy theorem}
+The change in kinetic energy is equal to the work done.
+
+\begin{eqnarray*}
+\Delta \kener &=&W\\
+\kener_f - \kener_i&=&(-8\;000\eN)(d_0)\\
+0\eJ - 139\;445\eJ&=&(-8\;000\eN)(d_0)\\
+\therefore d_0&=&\frac{139\;445\eJ}{8\;000\eN}\\
+&=&17,4\emm
+\end{eqnarray*}
+\westep{Write the final answer}
+The car stops in 17,4~m.}
+\end{wex}
+
+\Tip{A force only does work on an object for the time that it is in contact with the object. For example, a person pushing a trolley does work on the trolley, but the road does no work on the tyres of a car if they turn without slipping (the force is not applied over any distance because a different piece of tyre touches the road every instant.}
+
+\MarginTip{Energy is conserved!}
+
+\Tip{Energy Conservation: \\
+{\textbf{In the absence of friction}, the work done on an object by a system is equal to the energy gained by the object.
+\nequ{\mbox{Work Done} = \mbox{Energy Transferred}}
+\textbf{In the presence of friction}, only some of the energy lost by the system is transferred to useful energy. The rest is lost to friction.
+\nequ{\mbox{Total Work Done} = \mbox{Useful Work Done + Work Done Against Friction}}} }
+
+In the example of a falling mass the potential energy is known as {\em gravitational potential energy} as it is the gravitational force exerted by the earth which causes the mass to accelerate towards the ground. The gravitational field of the earth is what does the work in this case.
+
+Another example is a rubber-band. In order to stretch a rubber-band we have
+to do work on it. This means we transfer energy to the rubber-band and
+it gains potential energy. This potential energy is called {\em
+elastic potential energy}. Once released, the rubber-band begins to
+move and elastic potential energy is transferred into kinetic energy.
+
+\Extension{Other forms of Potential Energy}{
+\begin{enumerate}
+\item{elastic potential energy - potential energy is stored in a compressed or extended spring or rubber band. This potential energy is calculated by:
+\nequ{\frac{1}{2}kx^2}
+where $k$ is a constant that is a measure of the stiffness of the spring or rubber band and $x$ is the extension of the spring or rubber band.}
+\item{Chemical potential energy is related to the making and breaking of chemical bonds. For example, a battery converts chemical energy into electrical energy.}
+\item{The electrical potential energy of an electrically charged object is defined as the work that must be done to move it from an infinite distance away to its present location, in the absence of any non-electrical forces on the object. This energy is non-zero if there is another electrically charged object nearby otherwise it is given by:
+\nequ{k\frac{q_1q_2}{d}}
+where $k$ is Coulomb's constant. For example, an electric motor lifting an elevator converts electrical energy into gravitational potential energy.}
+\item{Nuclear energy is the energy released when the nucleus of an atom is split or fused. A nuclear reactor converts nuclear energy into heat.}
+\end{enumerate}
+Some of these forms of energy will be studied in later chapters.}
+      
+
+\Activity{Investigation}{Energy Resources}{Energy can be taken from almost anywhere. Power plants use many different types of energy sources, including oil, coal, nuclear, biomass (organic gases), wind, solar, geothermal (the heat from the earth's rocks is very hot underground and is used to turn water to steam), tidal and hydroelectric (waterfalls). Most power stations work by using steam to turn turbines which then drive generators and create an electric current. 
+
+Most of these sources are dependant upon the sun's energy, because
+without it we would not have weather for wind and tides. The sun
+is also responsible for growing plants which decompose into fossil
+fuels like oil and coal. All these sources can be put under 2
+headings, renewable and non-renewable. Renewable sources are
+sources which will not run out, like solar energy and wind power.
+Non-renewable sources are ones which will run out eventually, like
+oil and coal.
+
+It is important that we learn to appreciate conservation in
+situations like this. The planet has a number of linked systems
+and if we don't appreciate the long-term consequences of our
+actions we run the risk of doing damage now that we will only
+suffer from in many years time.
+
+Investigate two types of renewable and two types of non-renewable energy resources, listing advantages and disadvantages of each type. Write up the results as a short report.}
+Presentation on energy: SIYAVULA-PRESENTATION:http://cnx.org/content/m39592/latest/#slidesharefigure
+\Exercise{Energy}{
+\begin{enumerate}
+\item{Fill in the table with the missing information using the positions of the ball in the diagram below combined with the work-energy theorem.
+\begin{center}
+\begin{pspicture}(0,0)(10,5.4)
+\def\ball{\pscircle[fillcolor=darkgray,fillstyle=solid](0,0.2){0.2}}
+\def\effects{\psline(0.1,0.25)(0.1,0.4)\psline(0.2,0.25)(0.2,0.6)\psline(0.3,0.25)(0.3,0.4)}
+%\psgrid[gridcolor=lightgray]
+\psline[linewidth=2pt](0,0)(10,0)
+\psline(1,0)(1,5)(2,5)(3,3)(5,3)(6,1)(8,1)(9,0)
+\rput(1.5,5){\ball}
+\rput(3.2,3){\ball\rput{26}(-0.2,0){\effects}}
+\rput(4.8,3){\ball\rput{90}{\effects}}
+\rput(6.2,1){\ball\rput{26}(-0.2,0){\effects}}
+\rput(7.8,1){\ball\rput{90}{\effects}}
+\rput(9.2,0){\ball\rput{45}(-0.2,0){\effects}}
+\rput(0.8,0){\ball\rput(-0.2,0.2){\effects}}
+\uput[d](1.5,5){A}
+\uput[d](3.2,3){B}
+\uput[d](4.8,3){C}
+\uput[d](6.2,1){D}
+\uput[d](7.8,1){E}
+\uput[d](9.2,0){F}
+\uput[d](0.8,0){G}
+\end{pspicture}
+\end{center}
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|}\hline\hline
+\textbf{position}&\textbf{$\kener$}&\textbf{$\poten$}&\textbf{$v$}\\\hline
+A&&50~J&\\\hline
+B&&30~J&\\\hline
+C&&&\\\hline
+D&&10~J&\\\hline
+E&&&\\\hline
+F&&&\\\hline
+G&&&\\\hline
+\hline
+\end{tabular}
+\end{center}
+}
+\item{A falling ball hits the ground at 10~\ms\ in a vacuum. Would the speed of the ball be increased or decreased if air resistance were taken into account. Discuss using the work-energy theorem.}
+
+\item{
+A pendulum with mass 300g is attached to the ceiling. It is pulled up to point A which is a height h = 30 cm from the equilibrium position. 
+
+\scalebox{1} % Change this value to rescale the drawing.
+{
+\begin{pspicture}(0,-2.7428205)(7.799532,2.7188206)
+\definecolor{color318b}{rgb}{0.6,0.6,0.6}
+\psline[linewidth=0.042cm](3.18,2.6611793)(5.42,2.6611793)
+\psline[linewidth=0.03cm](4.28,2.6811793)(4.3,-1.0388206)
+\pscircle[linewidth=0.042,dimen=outer,fillstyle=solid,fillcolor=color318b](4.3,-1.6188205){0.58}
+\psline[linewidth=0.03cm,linestyle=dashed,dash=0.16cm 0.16cm](4.2845316,2.6838205)(1.7696021,-0.05733404)
+\rput{-42.843517}(0.69505125,0.8063853){\pscircle[linewidth=0.042,linestyle=dashed,dash=0.16cm 0.16cm,dimen=outer,fillstyle=solid,fillcolor=color318b](1.375203,-0.48259795){0.58}}
+\psline[linewidth=0.03cm,linestyle=dashed,dash=0.16cm 0.16cm](4.249403,2.7038207)(6.7643323,-0.03733404)
+\rput{-42.843517}(2.224418,4.744511){\pscircle[linewidth=0.042,linestyle=dashed,dash=0.16cm 0.16cm,dimen=outer,fillstyle=solid,fillcolor=color318b](7.1587315,-0.46259794){0.58}}
+\psline[linewidth=0.048cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(3.66,-2.6988206)(5.04,-2.7188206)
+\usefont{T1}{ptm}{m}{n}
+\rput(1.37,-0.4938206){A}
+\usefont{T1}{ptm}{m}{n}
+\rput(4.31,-1.6338207){B}
+\usefont{T1}{ptm}{m}{n}
+\rput(7.18,-0.4738206){C}
+\usefont{T1}{ptm}{m}{n}
+\rput(4.29,-2.5538206){v}
+\psline[linewidth=0.042cm](0.38,-0.3988206)(0.38,-1.6388206)
+\psline[linewidth=0.042cm](0.38,-0.4188206)(0.62,-0.4188206)
+\usefont{T1}{ptm}{m}{n}
+\rput(0.13,-1.0738206){h}
+\psline[linewidth=0.042cm](0.38,-1.6188205)(0.62,-1.6188205)
+\end{pspicture} 
+}
+Calculate the speed of the pendulum when it reaches point B (the equilibrium point). Assume that there are no external forces acting on the pendulum.
+}
+
+\end{enumerate}
+}
+
+
+\section{Power}
+%\begin{syllabus}
+%\item power (rate at which work is done).
+%The learner should be able to:
+%\begin{itemize}
+%\item Define power as the rate at which work is done or energy is expended
+%\item Calculate the power involved when work is done
+%\item If a force causes an object to move at a constant velocity, calculate the power using P=Fv.
+%\item Apply to real life examples, e.g. the minimum power required of an electric motor to pump water from a borehole of a particular depth at a particular rate, the power of different kinds of cars operating under different conditions
+%\end{itemize}
+%\end{syllabus}
+
+Now that we understand the relationship between work and energy, we are ready to look at a quantity that defines how long it takes for a certain amount of work to be done. For example, a mother pushing a trolley full of groceries can take 30~s or 60~s to push the trolley down an aisle. She does the same amount of work, but takes a different length of time. We use the idea of \textit{power} to describe the rate at which work is done.
+
+\Definition{Power}{Power is defined as the rate at which work is done or the rate at which energy is expended. The mathematical definition for power is:
+\equ{P=F \cdot v}{eq:power}}
+
+(\ref{eq:power}) is easily derived from the definition of work. We know that:
+\begin{equation*}
+W=F\cdot d.
+\end{equation*}
+However, power is defined as the rate at which work is done. Therefore,
+\begin{equation*}
+P=\frac{\Delta W}{\Delta t}.
+\end{equation*}
+This can be written as:
+\begin{eqnarray*}
+P&=&\frac{\Delta W}{\Delta t}\\
+&=&\frac{\Delta(F\cdot d)}{\Delta t}\\
+&=&F\frac{\Delta d}{\Delta t}\\
+&=&F\cdot v
+\end{eqnarray*}
+
+The unit of power is watt (symbol W).
+
+\Activity{Investigation}{Watt}{Show that the W is equivalent to $\mathrm{J\cdot s^{-1}}$.}
+
+\begin{IFact}
+{The unit watt is named after Scottish inventor and engineer James Watt (19 January 1736 - 19 August 1819) whose improvements to the steam engine were fundamental to the Industrial Revolution. A key feature of it was that it brought the engine out of the remote coal fields into factories.}
+\end{IFact}
+
+\Activity{Research Project}{James Watt}{Write a short report 5 pages on the life of James Watt describing his many other inventions.}
+
+\begin{IFact}
+{Historically, the \textit{horsepower} (symbol hp) was the unit used to describe the power delivered by a machine. One horsepower is equivalent to approximately 750~W. The horsepower is sometimes used in the motor industry to describe the power output of an engine. Incidentally, the horsepower was derived by James Watt to give an indication of the power of his steam engine in terms of the power of a horse, which was what most people used to for example, turn a mill wheel.}
+\end{IFact}
+
+\begin{wex}{Power Calculation 1}{Calculate the power required for a force of 10~N applied to move a 10~kg box at a speed of 1~ms over a frictionless surface.}
+{
+\westep{Determine what is given and what is required.}
+We are given:
+\begin{itemize}
+\item{we are given the force, $F$=10~N}
+\item{we are given the speed, $v$=1~\ms}
+\end{itemize}
+We are required to calculate the power required.
+\westep{Draw a force diagram}
+\begin{center}
+\begin{pspicture}(0,-1)(5,2)
+%\psgrid
+\psline[linewidth=2pt](0,0)(5,0)
+\psframe(1.5,0)(3.5,2)
+\psline{->}(2.5,1)(2.5,-1)
+\uput[ur](2.5,-1){$W$}
+\psline{->}(0,1)(1.5,1)
+\uput[ul](1.5,1){$F$}
+\end{pspicture}
+\end{center}
+\westep{Determine how to approach the problem}
+From the force diagram, we see that the weight of the box is acting at right angles to the direction of motion. The weight does not contribute to the work done and does not contribute to the power calculation.
+
+We can therefore calculate power from:
+\nequ{P=F\cdot v}
+
+\westep{Calculate the power required}
+\begin{eqnarray*}
+P&=&F\cdot v\\
+&=&(10\eN)(1\ems)\\
+&=&10\eW
+\end{eqnarray*}
+
+\westep{Write the final answer}
+10~W of power are required for a force of 10~N to move a 10~kg box at a speed of 1~ms over a frictionless surface.}
+\end{wex}
+
+Machines are designed and built to do work on objects. All machines usually have a power rating. The power rating indicates the rate at which that machine can do work upon other objects. 
+
+A car engine is an example of a machine which is given a power rating. The power rating relates to how rapidly the car can accelerate. Suppose that a 50~kW engine could accelerate the car from 0~$\mathrm{km\cdot hr^{-1}}$ to 60$\mathrm{km\cdot hr^{-1}}$ in 16~s. Then a car with four times the power rating (i.e. 200~kW) could do the same amount of work in a quarter of the time. That is, a 200~kW engine could accelerate the same car from 0~$\mathrm{km\cdot hr^{-1}}$ to 60$\mathrm{km\cdot hr^{-1}}$ in 4~s.
+
+\begin{wex}{Power Calculation 2}{A forklift lifts a crate of mass 100~kg at a constant velocity to a height of 8~m over a time of 4~s. The forklift then holds the crate in place for 20~s. Calculate how much power the forklift exerts in lifting the crate? How much power does the forklift exert in holding the crate in place?}
+{
+\westep{Determine what is given and what is required}
+We are given:
+\begin{itemize}
+\item{mass of crate: $m$=100~kg}
+\item{height that crate is raised: $h$=8~m}
+\item{time taken to raise crate: $t_r$=4~s}
+\item{time that crate is held in place: $t_s$=20~s}
+\end{itemize}
+We are required to calculate the power exerted.
+
+\westep{Determine how to approach the problem}
+We can use:
+\nequ{P=F\frac{\Delta x}{\Delta t}}
+to calculate power. The force required to raise the crate is equal to the weight of the crate.
+
+\westep{Calculate the power required to raise the crate}
+\begin{eqnarray*}
+P&=&F\frac{\Delta x}{\Delta t}\\
+&=&m\cdot g\frac{\Delta x}{\Delta t}\\
+&=&(100\ekg)(9,8\emss)\frac{8\emm}{4\es}\\
+&=&1\;960\eW
+\end{eqnarray*}
+
+\westep{Calculate the power required to hold the crate in place}
+While the crate is being held in place, there is no displacement. This means there is no work done on the crate and therefore there is no power exerted.
+\westep{Write the final answer}
+1\;960~W of power is exerted to raise the crate and no power is exerted to hold the crate in place.
+}
+\end{wex}
+
+\Activity{Experiment}{Simple measurements of human power}{You can perform various physical activities, for example lifting measured weights or climbing a flight of stairs to estimate your output power, using a stop watch. Note: the human body is not very efficient in these activities, so your actual power will be much greater than estimated here.}
+
+\Exercise{Power}{
+\begin{enumerate}
+\item{[IEB 2005/11 HG] Which of the following is equivalent to the SI unit of power:
+\begin{enumerate}
+\item{V$\cdot$A}
+\item{V$\cdot$A$^{-1}$}
+\item{$\ep$}
+\item{$\mathrm{kg \cdot m\cdot s^{-2}}$}
+\end{enumerate}}
+\item{Two students, Bill and Bob, are in the weight lifting room of their local gum. Bill lifts the 50~kg barbell over his head 10 times in one minute while Bob lifts the 50~kg barbell over his head 10 times in 10 seconds. Who does the most work? Who delivers the most power? Explain your answers.}
+\item{Jack and Jill ran up the hill. Jack is twice as massive as Jill; yet Jill ascended the same distance in half the time. Who did the most work? Who delivered the most power? Explain your answers.}
+\item{Alex (mass 60~kg) is training for the Comrades Marathon. Part of Alex's training schedule involves push-ups. Alex does his push-ups by applying a force to elevate his center-of-mass by 20~cm. Determine the number of push-ups that Alex must do in order to do 10~J of work. If Alex does all this work in 60~s, then determine Alex's power.}
+\item{When doing a chin-up, a physics student lifts her 40~kg body a distance of 0.25~m in 2~s. What is the power delivered by the student's biceps?}
+\item{The unit of power that is used on a monthly electricity account is \textit{kilowatt-hours} (symbol kWh). This is a unit of energy delivered by the flow of l~kW of electricity for 1 hour. Show how many joules of energy you get when you buy 1~kWh of electricity.}
+\item{An escalator is used to move 20 passengers every minute from the first floor of a shopping mall to the second. The second floor is located 5-meters above the first floor. The average passenger's mass is 70~kg. Determine the power requirement of the escalator in order to move this number of passengers in this amount of time.}
+\item{Calculate the power required for an electric motor to pump 20kg of water up to ground level from a borehole of depth 10m in half a minute.}
+%\item{\nts{need a worked example -for example the power of different kinds of cars operating under different conditions.}}
+%\item{\nts{Some exercises are needed.}}
+\end{enumerate}
+}
+The following two videos provide a summary of some of the concepts covered in this chapter.
+Khan Academy video on work and energy, part 1: SIYAVULA-VIDEO:http://cnx.org/content/m39598/latest/#work-1
+Khan Academy video on work and energy, part 2: SIYAVULA-VIDEO:http://cnx.org/content/m39598/latest/#work-2
+Presentation on work,power and energy: SIYAVULA-PRESENTATION:http://cnx.org/content/m39598/latest/#slidesharefigure1
+\section{Important Equations and Quantities}
+
+\begin{table}[htbp]
+\begin{center}
+\begin{tabular}{|c|c|c|c l|c|}\hline \hline
+% after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+\multicolumn{6}{|c|}{\textbf{Units}}\\ \hline
+Quantity & Symbol & Unit & \multicolumn{2}{c|}{S.I. Units}& Direction \\ \hline
+velocity & $\vec{v}$ & --- & $\frac{m}{s}$ & \textbf{or}$\ \ m.s^{-1}$ & \checkmark \\ \hline
+momentum & $\momen$ & --- & $\frac{kg.m}{s}$ &\textbf{or} $\ kg.m.s^{-1}$ & \checkmark\\ \hline
+energy & $E$ & $J$ & $\frac{kg.m^2}{s^2}$ & \textbf{or} $\ \ekg.m^{2}s^{-2}$ & --- \\ \hline \hline
+Work & $W$ & J & $N.m$ & \textbf{or} $kg.m^2.s^{-2}$ & --- \\ \hline
+Kinetic Energy & $E_{K}$ & J & $N.m$ & \textbf{or} $kg.m^2.s^{-2}$ & --- \\\hline
+Potential Energy & $E_{P}$ & J & $N.m$ & \textbf{or} $kg.m^2.s^{-2}$ & --- \\\hline
+Mechanical Energy & $U$ & J &$N.m$ & \textbf{or} $kg.m^2.s^{-2}$ & --- \\\hline\hline
+Power & P & W & $N.m.s^{-1}$ & \textbf{or} $kg.m^{2}.s^{-3}$ & --- \\\hline\hline
+\end{tabular}
+\end{center}
+\caption{Commonly used units}
+\label{table:collisions::units}
+\end{table}
+
+\textbf{Momentum}:
+\begin{equation}
+\momen = m\vec{v}
+\end{equation}
+
+\textbf{Kinetic energy}:
+\begin{equation}
+E_{k} = \frac{1}{2}m\vec{v}^{2}
+\end{equation}
+
+\begin{description}
+\item[Principle of Conservation of Energy:] Energy is never created nor
+destroyed, but is merely transformed from one form to another.
+\item[Conservation of Mechanical Energy:] In the absence of friction,
+the total mechanical energy of an object is conserved.
+\end{description}
+
+When a force moves     in the direction along which it acts,   work is done.
+
+Work is the process of converting energy.
+
+Energy is the ability to do work.
+
+\section{End of Chapter Exercises}
+\begin{enumerate}
+\item{The force vs. displacement graph shows the amount of force applied to an object by three different people. Abdul applies force to the object for the first 4~m of its displacement, Beth applies force from the 4~m point to the 6~m point, and Charles applies force from the 6~m point to the 8~m point. Calculate the work done by each person on the object? Which of the three does the most work on the object?
+
+\begin{center}
+\begin{pspicture}(0,-4)(7,4)
+%\psgrid[gridcolor=lightgray]
+\psset{unit=0.75}
+\psaxes{<->}(0,0)(0,-5)(9,5)
+\psline(0,-4)(4,0)(6,4)(8,4)
+\psdots(0,-4)(4,0)(6,4)(8,4)
+\pcline[linestyle=none,offset=8pt](0,-4)(4,0)
+\lput*{:U}{Abdul}
+\pcline[linestyle=none,offset=8pt](4,0)(6,4)
+\lput*{:U}{Beth}
+\pcline[linestyle=none,offset=8pt](6,4)(8,4)
+\lput*{:U}{Charles}
+\end{pspicture}
+\end{center}}
+\item{How much work does a person do in pushing a shopping trolley with a force of 200~N over a distance of 80~m in the direction of the force?}
+\item{How much work does the force of gravity do in pulling a 20~kg box down a 45$^{\circ}$ frictionless inclined plane of length 18~m?}
+\item{[IEB 2001/11 HG1] Of which one of the following quantities is kg.m$^2$.s$^{-3}$ the base S.I. unit?
+\begin{enumerate}
+\item{Energy}
+\item{Force}
+\item{Power}
+\item{Momentum}
+\end{enumerate}
+}
+
+\item{[IEB 2003/11 HG1] A motor is used to raise a mass m through a vertical height h in time t.\\
+What is the power of the motor while doing this?
+\begin{enumerate}
+\item{$mght$}
+\item{$\frac{mgh}{t}$}
+\item{$\frac{mgt}{h}$}
+\item{$\frac{ht}{mg}$}
+\end{enumerate}
+}
+
+\item{[IEB 2002/11 HG1] An electric motor lifts a load of mass M vertically through a height h at a constant speed v. Which of the following expressions can be used to correctly calculate the power transferred by the motor to the load while it is lifted at a constant speed?
+
+\begin{enumerate}
+\item{$Mgh$}
+\item{$Mgh + \tfrac{1}{2}$Mv$^2$}
+\item{$Mgv$}
+\item{$Mgv + \tfrac{1}{2}$ $\tfrac{\textrm{Mv}^3}{\textrm{h}}$}
+\end{enumerate}}
+
+\item{[IEB 2001/11 HG1] An escalator is a moving staircase that is powered by an electric motor. People are lifted up the escalator at a constant speed of v through a vertical height h.
+
+What is the energy gained by a person of mass m standing on the escalator when he is lifted from the bottom to the top?
+\begin{center}
+\scalebox{1} % Change this value to rescale the drawing.
+{
+\begin{pspicture}(0,-1.381)(3.64,1.381)
+\psline[linewidth=0.042cm](0.02,-1.02)(0.04,-0.82)
+\psline[linewidth=0.042cm](0.04,-0.82)(0.44,-0.82)
+\psline[linewidth=0.042cm](0.44,-0.84)(0.42,-0.56)
+\psline[linewidth=0.042cm](0.4,-0.58)(0.84,-0.58)
+\psline[linewidth=0.042cm](0.84,-0.58)(0.84,-0.42)
+\psline[linewidth=0.042cm](0.84,-0.42)(1.24,-0.42)
+\psline[linewidth=0.042cm](1.24,-0.42)(1.24,-0.2)
+\psline[linewidth=0.042cm](1.24,-0.2)(1.64,-0.2)
+\psline[linewidth=0.042cm](1.64,-0.2)(1.64,0.0)
+\psline[linewidth=0.042cm](1.64,0.0)(2.02,0.0)
+\psline[linewidth=0.042cm](2.02,0.0)(2.04,0.2)
+\psline[linewidth=0.042cm](2.04,0.2)(2.46,0.2)
+\psline[linewidth=0.042cm](2.46,0.2)(2.46,0.42)
+\psline[linewidth=0.042cm](2.46,0.42)(2.84,0.42)
+\pscircle[linewidth=0.042,dimen=outer](0.13,-0.05){0.13}
+\psline[linewidth=0.042cm](0.16,-0.18)(0.16,-0.64)
+\psline[linewidth=0.042cm](0.16,-0.64)(0.34,-0.8)
+\psline[linewidth=0.042cm](0.16,-0.68)(0.04,-0.84)
+\psline[linewidth=0.042cm](0.06,-0.36)(0.2,-0.42)
+\psline[linewidth=0.042cm](0.2,-0.42)(0.36,-0.34)
+\psbezier[linewidth=0.042](0.02,-1.04)(0.1,0.04535568)(0.32,-0.12)(0.7,0.14)(1.08,0.4)(2.7093678,1.36)(2.88,0.9)(3.0506325,0.44)(2.62,0.4)(2.76,0.48)
+\psline[linewidth=0.042cm](0.04,-1.02)(0.02,-1.36)
+\psline[linewidth=0.042cm](0.02,-1.36)(2.82,0.08)
+\psline[linewidth=0.042cm](2.82,0.08)(2.82,0.46)
+\pscircle[linewidth=0.042,dimen=outer](2.61,1.21){0.13}
+\psline[linewidth=0.042cm](2.64,1.08)(2.64,0.62)
+\psline[linewidth=0.042cm](2.64,0.62)(2.82,0.46)
+\psline[linewidth=0.042cm](2.64,0.58)(2.52,0.42)
+\psline[linewidth=0.042cm](2.54,0.9)(2.68,0.84)
+\psline[linewidth=0.042cm](2.68,0.84)(2.84,0.92)
+\psline[linewidth=0.042cm](3.26,0.42)(3.26,-0.78)
+\psline[linewidth=0.042cm](3.26,-0.78)(3.06,-0.78)
+\psline[linewidth=0.042cm](3.28,0.4)(3.06,0.4)
+\rput(3.51,-0.175){h}
+\end{pspicture} 
+}
+\end{center}		
+
+\begin{enumerate}
+\item{mgh}
+\item{mgh $\sin \theta$}
+\item{$\dfrac{\textrm{mgh}}{\sin \theta}$}
+\item{$\tfrac{1}{2}$mv$^2$}
+\end{enumerate}}
+
+\item{[IEB 2003/11 HG1] In which of the following situations is there no work done on the object?
+
+\begin{enumerate}
+\item{An apple falls to the ground.}
+\item{A brick is lifted from the ground to the top of a building.}
+\item{A car slows down to a stop.}
+\item{A box moves at constant velocity across a frictionless horizontal surface.}
+\end{enumerate}
+}
+
+\end{enumerate}
+
+% CHILD SECTION END 
+
+
+
+% CHILD SECTION START 
+

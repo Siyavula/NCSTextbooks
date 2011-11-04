@@ -1,0 +1,111 @@
+\documentclass[9pt,a4paper,titlepage,twoside,openright]{extbook}
+\renewcommand{\familydefault}{\sfdefault}
+
+\usepackage{float} % for figures to appear where you want them
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\usepackage{changebar}
+%\usepackage{glossaries}
+\usepackage{pst-eucl}        %Jo
+\usepackage{pst-poly}        %Jo
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{pst-3dplot}        %Jo
+\usepackage{pstricks-add}
+
+
+%% ************* NB ************
+%% The order in which pstricks packages are loaded
+%% matters - so I copied the order from pst-all.sty
+%% and then added the two additional packages at the end.
+%% ************* End NB ************
+
+%% ************* Packages ************
+\usepackage{pst-circ}
+\usepackage{pst-lens}
+\usepackage{pst-optic}         %Jo
+%\usepackage{pst-labo}         %Jo
+\usepackage{subfigure}
+\usepackage{multirow}
+\usepackage{amsmath}
+\usepackage{tabularx}
+\usepackage{lscape}
+\usepackage{fancyhdr}
+\usepackage{wasysym}
+\usepackage{url}
+\usepackage{amsmath, amsthm, amsfonts, amssymb}
+\usepackage{eurosym}
+\usepackage{array}
+\usepackage{enumitem}
+\sffamily
+
+\usepackage{mdframed}
+
+%------------Tree Packages------------
+\usepackage{tikz}
+\usetikzlibrary{matrix}
+\usepackage{pst-node}
+\usepackage{pst-tree}
+%-------------------------------------
+\usepackage{bigstrut}
+
+\usepackage{pst-all}
+\usepackage{auto-pst-pdf}
+
+
+\usepackage{extsizes}
+
+
+
+
+
+
+
+
+
+
+
+\input{../../DefinitionsV0-5-1}
+
+\usepackage{extsizes}
+
+\usepackage[paper=a4paper, 
+  lmargin=0.1\paperwidth, rmargin=0.25\paperwidth, 
+  tmargin=1in, bmargin=1in,
+  twoside, centering,
+  includehead, marginsep=3mm, marginparwidth=0.225\paperwidth]{geometry}
+\begin{document}
+
+
+% Stuff copied from thesis
+% Dutch style of paragraph formatting, i.e. no indents. 
+\setlength{\parskip}{1.3ex plus 0.2ex minus 0.2ex}
+\setlength{\parindent}{0pt}
+
+
+\pagestyle{fancy}
+\renewcommand{\sectionmark}[1]{\markright{\thesection}{}}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\cleardoublepage
+\tableofcontents
+\cleardoublepage
+\pagenumbering{arabic}
+
+ \input{Mathematics_Gr12_Ch_1-chapterIntroductiontoBook}
+ \input{Mathematics_Gr12_Ch_2-Logarithms}
+ \input{Mathematics_Gr12_Ch_3-SequencesandSeries}
+ \input{Mathematics_Gr12_Ch_4-Finance}
+ \input{Mathematics_Gr12_Ch_5-FactorisingCubicPolynomials}
+ \input{Mathematics_Gr12_Ch_6-FunctionsandGraphs}
+ \input{Mathematics_Gr12_Ch_7-DifferentialCalculus}
+ \input{Mathematics_Gr12_Ch_8-LinearProgramming}
+ \input{Mathematics_Gr12_Ch_9-Geometry}
+ \input{Mathematics_Gr12_Ch_10-Trigonometry}
+ \input{Mathematics_Gr12_Ch_11-Statistics}
+ \input{Mathematics_Gr12_Ch_12-CombinationsandPermutations}
+ \input{Mathematics_Gr12_Ch_13-chapterGeneralExercises}
+ \input{Mathematics_Gr12_Ch_14-chapterExercisesNotcoveredinSyllabus}
+ \input{Mathematics_Gr12_Ch_15-chapterGNUFreeDocumentationLicenselabelfdl}
+\end{document}

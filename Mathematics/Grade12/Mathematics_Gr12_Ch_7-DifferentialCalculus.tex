@@ -1,0 +1,1319 @@
+\chapter{Differential Calculus}
+\label{m:fg:diff12}
+
+\section{Why Do I Have to Learn This Stuff?}
+Calculus is one of the central branches of mathematics and was developed from algebra and geometry. Calculus is built on the concept of limits, which will be discussed in this chapter. Calculus consists of two complementary ideas: differential calculus and integral calculus. We will only be dealing with differential calculus in this text. Differential calculus is concerned with the instantaneous rate of change of quantities with respect to other quantities, or more precisely, the local behaviour of functions. This can be illustrated by the slope of a function's graph. Examples of typical differential calculus problems include: finding the acceleration and velocity of a free-falling body at a particular moment and finding the optimal number of units a company should produce to maximize its profit.
+
+Calculus is fundamentally different from the mathematics that you have studied previously. Calculus is more dynamic and less static. It is concerned with change and motion. It deals with quantities that approach other quantities. For that reason it may be useful to have an overview of the subject before beginning its intensive study. 
+
+Calculus is a tool to understand many phenomena, both natural and man-made, like how the wind blows, how water flows, how light travels, how sound travels, how the planets move and even economics.
+
+In this section we give a glimpse of some of the main ideas of calculus by showing how limits arise when we attempt to solve a variety of problems.
+
+\Extension{Integral Calculus}{Integral calculus is concerned with the accumulation of quantities, such as areas under a curve, linear distance traveled, or volume displaced. Differential and integral calculus act inversely to each other. Examples of typical integral calculus problems include finding areas and volumes, finding the amount of water pumped by a pump with a set power input but varying conditions of pumping losses and pressure and finding the amount of rain that fell in a certain area if the rain fell at a specific rate.}
+
+
+\section{Limits}
+\label{md:limits}
+%\begin{syllabus}
+%\item The learner must be able to investigate and use instantaneous rate of change of a variable when interpreting models of situations to demonstrate an intuitive understanding of the limit concept in the context of approximating the rate of change or gradient of a function at a point.
+%\end{syllabus}
+
+\subsection{The Tale of Achilles and the Tortoise}
+
+
+One of Zeno's paradoxes can be summarised as:
+\begin{quote}
+Achilles and a tortoise agree to a race, but the tortoise is unhappy because Achilles is very fast. So, the tortoise asks Achilles for a head-start. Achilles agrees to give the tortoise a $1 000\emm$ head start. Does Achilles overtake the tortoise?
+\end{quote}
+
+\IFact{Zeno (circa 490 BC -- circa 430 BC) was a pre-Socratic Greek philosopher of southern Italy who is famous for his paradoxes.}
+
+\IFact{Both Isaac Newton (4 January 1643 -- 31 March 1727) and Gottfried Leibnitz (1 July 1646 -- 14 November 1716 (Hanover, Germany)) are credited with the `invention' of calculus. Newton was the first to apply calculus to general physics, while Leibnitz developed most of the notation that is still in use today.
+
+When Newton and Leibnitz first published their results, there was some controversy over whether Leibnitz's work was independent of Newton's. While Newton derived his results years before Leibnitz, it was only some time after Leibnitz published in 1684 that Newton published. Later, Newton would claim that Leibnitz got the idea from Newton's notes on the subject; however examination of the papers of Leibnitz and Newton show they arrived at their results independently, with Leibnitz starting first with integration and Newton with differentiation. This controversy between Leibnitz and Newton divided English-speaking mathematicians from those in Europe for many years, which slowed the development of mathematical analysis. Today, both Newton and Leibnitz are given credit for independently developing calculus. It is Leibnitz, however, who is credited with giving the new discipline the name it is known by today: calculus. Newton's name for it was "the science of fluxions".}
+
+We know how to solve this problem. We start by writing:
+\begin{eqnarray}
+x_A&=&v_A t\\
+x_t&=&1000\emm+v_t t
+\end{eqnarray}
+where
+\begin{center}
+\begin{tabular}{ll}
+$x_A$&distance covered by Achilles\\
+$v_A$&Achilles' speed\\
+$t$&time taken by Achilles to overtake tortoise\\
+$x_t$&distance covered by the tortoise\\
+$v_t$&the tortoise's speed\\
+\end{tabular}
+\end{center}
+If we assume that Achilles runs at $2\ems$ and the tortoise runs at $0,25\ems$ then Achilles will overtake the tortoise when both of them have covered the same distance. This means that Achilles overtakes the tortoise at a time calculated as:
+\begin{eqnarray}
+x_A&=&x_t\\
+v_A t&=&1000+v_t t\\
+(2\ems)t&=&1000\emm+(0,25\ems)t\\
+(2\ems-0,25\ems)t&=&1000\emm\\
+t&=&\frac{1000\emm}{1\frac{3}{4}\ems}\\
+&=&\frac{1000\emm}{\frac{7}{4}\ems}\\
+&=&\frac{(4)(1000)}{7}\es\\
+&=&\frac{4000}{7}\es\\
+&=&571\frac{3}{7}\es
+\end{eqnarray}
+
+However, Zeno (the Greek philosopher who thought up this problem) looked at it as follows:
+Achilles takes
+\nequ{t=\frac{1000\emm}{2\ems}=500\es}
+to travel the $1~000~\emm$ head start that the tortoise had. However, in these $500~\es$, the tortoise has travelled a further
+\nequ{x=(500\es)(0,25\ems)=125\emm.}
+Achilles then takes another
+\nequ{t=\frac{125\emm}{2\ems}=62,5\es}
+to travel the $125\emm$. In these $62,5\es$, the tortoise travels a further
+\nequ{x=(62,5\es)(0,25\ems)=15,625\emm.}
+Zeno saw that Achilles would always get closer but wouldn't actually overtake the tortoise. 
+
+\subsection{Sequences, Series and Functions}
+So what does Zeno, Achilles and the tortoise have to do with calculus?
+
+Well, in Grades 10 and 11 you studied sequences. For the sequence
+\nequ{0;\frac{1}{2};\frac{2}{3};\frac{3}{4};\frac{4}{5};\ldots}
+which is defined by the expression
+\nequ{a_n=1-\frac{1}{n}}
+the terms get closer to $1$ as $n$ gets larger. Similarly, for the sequence
+\nequ{1;\frac{1}{2};\frac{1}{3};\frac{1}{4};\frac{1}{5};\ldots}
+which is defined by the expression
+\nequ{a_n=\frac{1}{n}}
+the terms get closer to $0$ as $n$ gets larger. We have also seen that the infinite geometric series can have a finite total. The infinite geometric series is
+\begin{eqnarray*}
+S_\infty = \sum_{i=1}^\infty a_1.r^{i-1} = \frac {a_1}{1-r} \qquad \mathrm{ for } \qquad -1 < r < 1 \end{eqnarray*}
+where $a_1$ is the first term of the series and $r$ is the common ratio.
+
+We see that there are some functions where the value of the function gets close to or \textbf{approaches} a certain value.
+
+Similarly, for the function:
+\nequ{y=\frac{x^2 +4x-12}{x+6}}
+The numerator of the function can be factorised as:
+\nequ{y=\frac{(x+6)(x-2)}{x+6}.}
+Then we can cancel the $x+6$ from numerator and denominator and we are left with:
+\nequ{y=x-2.}
+However, we are only able to cancel the $x+6$ term if $x\ne-6$. If $x=-6$, then the denominator becomes $0$ and the function is not defined. This means that the domain of the function does not include $x=-6$. But we can examine what happens to the values for $y$ as $x$ gets closer to $-6$. These values are listed in Table~\ref{tab:m:fg:diff12:limits} which shows that as $x$ gets closer to $-6$, $y$ gets close to 8. 
+
+\begin{table}[htbp]
+\begin{center}
+\caption{Values for the function $y=\dfrac{(x+6)(x-2)}{x+6}$ as $x$ gets close to $-6$.}
+\label{tab:m:fg:diff12:limits}
+\begin{tabular}{|c|c|}\hline
+$x$&$y=\frac{(x+6)(x-2)}{x+6}$\\\hline\hline
+$-9$ & $-11$\\\hline
+$-8 $& $-10$\\\hline
+$-7 $&$ -9$\\\hline
+$-6.5 $&$ -8.5$\\\hline
+$-6.4 $& $-8.4$\\\hline
+$-6.3 $& $-8.3$\\\hline
+$-6.2 $& $-8.2$\\\hline
+$-6.1 $& $-8.1$\\\hline
+$-6.09 $&$ -8.09$\\\hline
+$-6.08 $& $-8.08$\\\hline
+$-6.01 $& $-8.01$\\\hline
+$-5.9 $& $-7.9$\\\hline
+$-5.8 $& $-7.8$\\\hline
+$-5.7 $& $-7.7$\\\hline
+$-5.6 $& $-7.6$\\\hline
+$-5.5$ & $-7.5$\\\hline
+$-5 $& $-7$\\\hline
+$-4 $& $-6$\\\hline
+$-3 $& $-5$\\\hline
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+The graph of this function is shown in Figure~\ref{fig:m:fg:diff12:limitseg}. The graph is a straight line with slope $1$ and intercept $-2$, but with a hole at $x = -6$.
+
+\begin{figure}[htbp]
+\begin{center}
+\begin{pspicture}(-6,-6)(5,5)
+%\psgrid
+\psset{unit=0.5}
+{\psaxes[labels=none]{<->}(0,0)(-10,-10)(5,5)}
+\rput(2,-1){$2$}
+\rput(4,-1){$4$}
+\rput(-2.3,-1){$-2$}
+\rput(-4.3,-1){$-4$}
+\rput(-6.3,-1){$-6$}
+\rput(-8.3,-1){$-8$}
+\rput(-1,2){$2$}
+\rput(-1,4){$4$}
+\rput(-1,-2){$-2$}
+\rput(-1,-4){$-4$}
+\rput(-1,-6){$-6$}
+\rput(-1,-8){$-8$}
+\rput(5,-0.5){$x$}
+\rput(.5,5){$y$}
+\psplot{-7}{4.5}{x 2 sub}
+\psdot[dotstyle=o](-6,-8)
+\end{pspicture}
+\caption{Graph of $y=\frac{(x+6)(x-2)}{x+6}$.}
+\label{fig:m:fg:diff12:limitseg}
+\end{center}
+\end{figure}
+
+%\Extension{Continuity}{We say that a function is continuous if there are no values of the independent variable for which the function is undefined.}
+
+\subsection{Limits}
+We can now introduce a new notation. For the function $y=\dfrac{(x+6)(x-2)}{x+6}$, we can write:
+\nequ{\lim_{x\to-6}\frac{(x+6)(x-2)}{x+6}=-8.}
+This is read: \textit{the limit of $\frac{(x+6)(x-2)}{x+6}$ as $x$ tends to $-6$ is $-8$.}
+
+\Activity{Investigation}{Limits}{If $f(x)=x+1$, determine:
+\begin{center}
+\begin{tabular}{|c|p{2cm}|}\hline
+$f(-0.1)$&\\\hline
+$f(-0.05)$&\\\hline
+$f(-0.04)$&\\\hline
+$f(-0.03)$&\\\hline
+$f(-0.02)$&\\\hline
+$f(-0.01)$&\\\hline
+$f(0.00)$&\\\hline
+$f(0.01)$&\\\hline
+$f(0.02)$&\\\hline
+$f(0.03)$&\\\hline
+$f(0.04)$&\\\hline
+$f(0.05)$&\\\hline
+$f(0.1)$&\\\hline
+\end{tabular}
+\end{center}
+What do you notice about the value of $f(x)$ as $x$ gets close to $0$?
+}
+
+\begin{wex}
+{Limits Notation}{Summarise the following situation by using limit notation: As $x$ gets close to $1$, the value of the function
+\nequ{y=x+2}
+gets close to $3$.}{
+This is written as:
+\nequ{\lim_{x\to1}x+2=3}
+in limit notation.}
+\end{wex}
+
+We can also have the situation where a function has a different value depending on whether $x$ approaches from the left or the right. An example of this is shown in Figure~\ref{fig:m:fg:diff12:limits:lr}.
+
+\begin{figure}[htbp]
+\begin{center}
+\begin{pspicture}(-6,-4)(6,4)
+%\psgrid[gridcolor=gray]
+\psset{unit=0.75}
+\psaxes[labels=none]{<->}(0,0)(-7.5,-5)(7.5,5)
+\psplot{-7.5}{-0.2}{1 x div}
+\psplot{0.2}{7.5}{1 x div}
+\rput(7.7,-0.5){$x$}
+\rput(0.5,5.2){$y$}
+\rput(1,-0.5){$1$}
+\rput(3,-0.5){$3$}
+\rput(5,-0.5){$5$}
+\rput(7,-0.5){$7$}
+\rput(-1.1,-0.5){$-1$}
+\rput(-3.2,-0.55){$-3$}
+\rput(-5.2,-0.5){$-5$}
+\rput(-7.2,-0.5){$-7$}
+\rput(-0.5,1){$1$}
+\rput(-0.5,3){$3$}
+\rput(-0.62,-1){$-1$}
+\rput(-0.685,-3){$-3$}
+
+\end{pspicture}
+\caption{Graph of $y=\frac{1}{x}$.}
+\label{fig:m:fg:diff12:limits:lr}
+\end{center}
+\end{figure}
+
+As $x\to 0$ from the left, $y=\frac{1}{x}$ approaches $-\infty$. As $x\to 0$ from the right, $y=\frac{1}{x}$ approaches $+\infty$. This is written in limits notation as:
+\nequ{\lim_{x\to 0^{-}}\frac{1}{x}=-\infty}
+for $x$ approaching $0$ from the left and
+\nequ{\lim_{x\to 0^{+}}\frac{1}{x}=\infty}
+for $x$ approaching $0$ from the right.
+You can calculate the limit of many different functions using a set method.
+
+\Method{Limits:}{
+If you are required to calculate a limit like $\lim _{x \to a}$ then:
+\begin{enumerate}
+\item{Simplify the expression completely.}
+\item{If it is possible, cancel all common terms.}
+\item{Let $x$ approach $a$.}
+\end{enumerate}}
+
+\begin{wex}{Limits}{Determine \nequ{\lim_{x \to 1}10}}{
+\westep{Simplify the expression}
+There is nothing to simplify.
+\westep{Cancel all common terms}
+There are no terms to cancel.
+
+\westep{Let $x \to 1$ and write final answer}
+\nequ{\lim_{x \to 1}10 = 10}
+}
+\end{wex}
+
+\begin{wex}{Limits}{Determine \nequ{\lim_{x \to 2}x}}{
+\westep{Simplify the expression}
+There is nothing to simplify.
+\westep{Cancel all common terms}
+There are no terms to cancel.
+
+\westep{Let $x \to 2$ and write final answer}
+\nequ{\lim_{x \to 2}x = 2}
+}
+\end{wex}
+
+\begin{wex}{Limits}{Determine \nequ{\lim_{x \to 10}\frac{x^2-100}{x-10}}}{
+\westep{Simplify the expression}
+The numerator can be factorised.
+\nequ{\frac{x^2-100}{x-10}=\frac{(x+10)(x-10)}{x-10}}
+
+\westep{Cancel all common terms}
+$(x-10)$ can be cancelled from the numerator and denominator.
+
+\nequ{\frac{(x+10)(x-10)}{x-10}=x+10}
+
+\westep{Let $x \to 10$ and write final answer}
+\nequ{\lim_{x \to 10}\frac{x^2-100}{x-10} = 20}
+}
+\end{wex}
+
+\subsection{Average Gradient and Gradient at a Point}
+\label{md:lim:grad}
+In Grade 10 you learnt about average gradients on a curve. The average gradient between any two points on a curve is given by the gradient of the straight line that passes through both points. In Grade 11 you were introduced to the idea of a gradient at a single point on a curve. We saw that this was the gradient of the tangent to the curve at the given point, but we did not learn how to determine the gradient of the tangent.
+
+Now let us consider the problem of trying to find the gradient of a tangent $t$ to a curve with equation $y = f(x)$ at a given point $P$.
+
+\begin{center}
+\begin{pspicture}(-2,3)(2,4.6)
+%\psgrid
+\psarc(0,0){4}{60}{120}\uput[dl](4;60){$f(x)$}
+\psline(-2,4)(2,4)
+\psdot(0,4)\uput[u](0,4){$P$}\uput[u](-2,4){$t$}
+\end{pspicture}
+\end{center}
+
+We know how to calculate the average gradient between two points on a curve, but we need two points. The problem now is that we only have one point, namely $P$. To get around the problem we first consider a secant to the curve that passes through point $P$ and another point on the curve $Q$, where $Q$ is an arbitrary distance ($h$) from $P$, as shown in the figure. We can now find the average gradient of the curve between points $P$ and $Q$.
+
+\begin{center}
+\begin{pspicture}(-2,-1)(5,5)
+%\psgrid[gridcolor=gray]
+\psaxes[dx=100,dy=100]{<->}(0,0)(-1,-1)(5,5)
+\rput(3,0){\psarc(0,0){4}{60}{150}
+\uput[dl](4;60){$f(x)$}
+\psdots(0,4)(-1.8,3.6)
+\psline[linestyle=dashed](0,0)(0,4)
+\psline[linestyle=dashed](-1.8,0)(-1.8,3.6)
+\psline[linestyle=dashed](-3,4)(0,4)
+\psline[linestyle=dashed](-3,3.6)(-1.8,3.6)
+\psplot{-3}{2}{0.22 x mul 4 add}
+\uput[u](0,4){$P$}
+\uput[dr](-1.8,3.6){$Q$}
+\uput[d](0,0){$a+h$}
+\uput[d](-1.8,0){$a$}
+\uput[l](-3,4){$f(a+h)$}
+\uput[l](-3,3.6){$f(a)$}
+\uput[u](2,4.4){secant}}
+\rput(5,-0.3){$x$}
+\rput(0.3,5){$y$}
+\end{pspicture}
+\end{center}
+
+If the $x$-coordinate of $P$ is $a+h$, then the $y$-coordinate is $f(a+h)$. Similarly, if the $x$-coordinate of $Q$ is $a$, then the $y$-coordinate is $f(a)$. If we choose $a+h$ as $x_2$ and $a$ as $x_1$, then:
+\nequ{y_1=f(a)}
+\nequ{y_2=f(a+h).}
+We can now calculate the average gradient as:
+\begin{eqnarray}
+\frac{y_2-y_1}{x_2-x_1}&=&\frac{f(a+h)-f(a)}{(a+h)-a}\\
+%\label{md:lim:grad:slope}
+&=&\frac{f(a+h)-f(a)}{h}
+\end{eqnarray}
+
+Now imagine that $Q$ moves along the curve toward $P$. The secant line approaches the tangent line as its limiting position. This means that the average gradient of the secant \textit{approaches} the gradient of the tangent to the curve at $P$. In (\ref{md:lim:grad:slope}) we see that as point $Q$ approaches point $P$, $h$ gets closer to $0$. When $h=0$, points $P$ and $Q$ are equal. We can now use our knowledge of limits to write this as:
+\begin{equation}
+\label{md:lim:grad:lim}
+\mbox{gradient at $P$}=\lim_{h\to 0} \frac{f(a+h)-f(h)}{h}.
+\end{equation}
+and we say that the gradient at point $P$ is the limit of the average gradient as $Q$ approaches $P$ along the curve. 
+
+Khan Academy video on derivatives:SIYAVULA-VIDEO:http://cnx.org/content/m39270/latest/#derivatives-1
+% \Activity{Investigation}{Limits}{
+% The gradient at a point $x$ on a curve defined by $f(x)$ can also be written as:
+% \begin{equation}
+% \lim_{h \to 0}\frac{f(x+h)-f(x)}{h} \label{md:lim:grad:lim-slope}
+% \end{equation}
+% Show that this is equivalent to (\ref{md:lim:grad:lim}).}
+
+\begin{wex}{Limits}{For the function $f(x)=2x^2-5x$, determine the 
+gradient of the tangent to the curve 
+at the point $x=2$.}{\westep{Calculating the gradient at a point}
+We know that the gradient at a point $x$ is given by:
+\nequ{\lim_{h \to 0}\frac{f(x+h)-f(x)}{h}}
+In our case $x=2$. It is simpler to substitute $x=2$ at the end of the calculation.
+\westep{Write $f(x+h)$ and simplify}
+\begin{eqnarray*}
+f(x+h)&=&2(x+h)^2-5(x+h)\\
+&=&2(x^2+2xh+h^2)-5x-5h\\
+&=&2x^2+4xh+2h^2-5x-5h
+\end{eqnarray*}
+\westep{Calculate limit}
+\begin{eqnarray*}
+\lim_{h \to 0}\frac{f(x+h)-f(x)}{h}&=&\frac{2x^2+4xh+2h^2-5x-5h - (2x^2-5x)}{h};\quad h\neq0\\
+&=&\lim_{h \to 0}\frac{2x^2+4xh+2h^2-5x-5h - 2x^2+5x}{h}\\
+&=&\lim_{h \to 0}\frac{4xh+2h^2-5h}{h}\\
+&=&\lim_{h \to 0}\frac{h(4x+2h-5)}{h}\\
+&=&\lim_{h \to 0}4x+2h-5\\
+&=&4x-5
+\end{eqnarray*}
+\westep{Calculate gradient at $x=2$}
+\nequ{4x-5=4(2)-5=3}
+\westep{Write the final answer}
+The gradient of the tangent to the curve $f(x)=2x^2-5x$ at $x=2$ is $3$. This is also the gradient of the curve at $x=2$.
+}\end{wex}
+
+\begin{wex}
+{Limits}{For the function $f(x)=5x^2-4x+1$, determine the gradient of the tangent to curve at the point $x=a$.}{
+\westep{Calculating the gradient at a point}
+We know that the gradient at a point $x$ is given by:
+\nequ{\lim_{h \to 0}\frac{f(x+h)-f(x)}{h}}
+In our case $x=a$. It is simpler to substitute $x=a$ at the end of the calculation.
+\westep{Write $f(x+h)$ and simplify}
+\begin{eqnarray*}
+f(x+h)&=&5(x+h)^2-4(x+h)+1\\
+&=&5(x^2+2xh+h^2)-4x-4h+1\\
+&=&5x^2+10xh+5h^2-4x-4h+1
+\end{eqnarray*}
+\westep{Calculate limit}
+\begin{eqnarray*}
+\lim_{h \to 0}\frac{f(x+h)-f(x)}{h}&=&\frac{5x^2+10xh+5h^2-4x-4h+1 - (5x^2-4x+1)}{h}\\
+&=&\lim_{h \to 0}\frac{5x^2+10xh+5h^2-4x-4h+1 - 5x^2+4x-1}{h}\\
+&=&\lim_{h \to 0}\frac{10xh+5h^2-4h}{h}\\
+&=&\lim_{h \to 0}\frac{h(10x+5h-4)}{h}\\
+&=&\lim_{h \to 0}10x+5h-4\\
+&=&10x-4
+\end{eqnarray*}
+\westep{Calculate gradient at $x=a$}
+\nequ{10x-4=10a-4}
+\westep{Write the final answer}
+The gradient of the tangent to the curve $f(x)=5x^2-4x+1$ at $x=1$ is $10a-4$.
+}
+\end{wex}
+
+\Exercise{Limits}{
+Determine the following
+\begin{enumerate}
+\item{\nequ{\lim_{x \to 3}\dfrac{x^2-9}{x+3}}}
+\item{\nequ{\lim_{x \to 3}\dfrac{x+3}{x^2+3x}}}
+\item{\nequ{\lim_{x \to 2}\dfrac{3x^2-4x}{3-x}}}
+\item{\nequ{\lim_{x \to 4}\dfrac{x^2-x-12}{x-4}}}
+\item{\nequ{\lim_{x \to 2}3x + \frac{1}{3x}}}
+\end{enumerate}}
+
+
+\section{Differentiation from First Principles}
+\label{md:derivatives}
+%\begin{syllabus}
+%\item The learner must be able to investigate and use instantaneous rate of change of a variable when interpreting models of situations to establish the derivatives of the following functions from first principles:
+%\begin{eqnarray*}
+%f (x) = b\\
+%f (x) = x\\
+%f (x) = x^2\\
+%f (x) = x^3\\
+%f (x) = 1/x\\
+%\end{eqnarray*}
+%and then generalise to the derivative of $f(x) = x^n$ (proof not required);
+%\end{syllabus}
+
+The tangent problem has given rise to the branch of calculus called \textbf{differential calculus} and the equation:
+\nequ{\lim_{h \to 0}\frac{f(x+h)-f(x)}{h}}
+defines the \textbf{derivative of the function $f(x)$.} Using (\ref{md:derivative:definition}) to calculate the derivative is called \textbf{finding the derivative from first principles}. 
+
+\Definition{Derivative}{The derivative of a function $f(x)$ is written as $f'(x)$ and is defined by:
+\begin{equation}
+f'(x) = \lim_{h \to 0}\frac{f(x+h)-f(x)}{h}
+\label{md:derivative:definition}
+\end{equation}
+}
+
+There are a few different notations used to refer to derivatives. If we use the traditional notation $y=f(x)$ to indicate that the dependent variable is $y$ and the independent variable is $x$, then some common alternative notations for the derivative are as follows:
+\begin{eqnarray*}
+f'(x)\ =\ y'\ =\ \frac{dy}{dx}\ =\ \frac{df}{dx}\ =\ \frac{d}{dx}f(x)\ =\ Df(x)\ =\ D_{x}f(x)
+\label{md:lim:not:eq}
+\end{eqnarray*}
+
+The symbols $D$ and $\frac{d}{dx}$ are called {\bf differential operators} because they indicate the operation of \textbf{differentiation}, which is the process of calculating a derivative. It is very important that you learn to identify these different ways of denoting the derivative, and that you are consistent in your usage of them when answering questions.
+
+\Tip{Though we choose to use a fractional form of representation, $\frac{dy}{dx}$ is a limit and \textbf{is not} a fraction, i.e. $\frac{dy}{dx}$ does not mean $dy \div dx$. $\frac{dy}{dx}$ means $y$ differentiated with respect to $x$. Thus, $\frac{dp}{dx}$ means $p$ differentiated with respect to $x$. The `$\frac{d}{dx}$' is the ``operator", applied to some
+function of $x$.}
+
+Video on functions vs. derivatives:SIYAVULA-VIDEO:http://cnx.org/content/m39313/latest/#calculus-2
+\begin{wex}
+{Derivatives - First Principles}{Calculate the derivative of $g(x)=x-1$ from first principles.}{
+\westep{Calculate the gradient at a point}
+We know that the gradient at a point $x$ is given by:
+\nequ{g'(x) = \lim_{h \to 0}\frac{g(x+h)-g(x)}{h}}
+
+\westep{Write $g(x+h)$ and simplify}
+\nequ{g(x+h)=x+h-1}
+
+\westep{Calculate limit}
+\begin{eqnarray*}
+g'(x)&=&\lim_{h \to 0}\frac{g(x+h)-g(x)}{h}\\
+&=&\lim_{h \to 0}\frac{x+h-1 - (x-1)}{h}\\
+&=&\lim_{h \to 0}\frac{x+h-1-x+1}{h}\\
+&=&\lim_{h \to 0}\frac{h}{h}\\
+&=&\lim_{h \to 0}1\\
+&=&1
+\end{eqnarray*}
+\westep{Write the final answer}
+The derivative $g'(x)$ of $g(x)=x-1$ is $1$.}
+\end{wex}
+
+% \begin{wex}
+% {Derivatives - First Principles}{Calculate the derivative of $h(x)=x^2-1$ from first principles.}{
+% \westep{Calculating the gradient at a point}
+% We know that the gradient at a point $x$ is given by:
+% \nequ{g'(x) = \lim_{h \to 0}\frac{g(x+h)-g(x)}{h}}
+% 
+% \westep{Write $g(x+h)$ and simplify}
+% \nequ{g(x+h)=x+h-1}
+% 
+% \westep{Calculate limit}
+% \begin{eqnarray*}
+% g'(x)&=&\lim_{h \to 0}\frac{g(x+h)-g(x)}{h}\\
+% &=&\lim_{h \to 0}\frac{x+h-1 - (x-1)}{h}\\
+% &=&\lim_{h \to 0}\frac{x+h-1-x+1}{h}\\
+% &=&\lim_{h \to 0}\frac{h}{h}\\
+% &=&\lim_{h \to 0}1\\
+% &=&1
+% \end{eqnarray*}
+% \westep{Write the final answer}
+% The derivative $g'(x)$ of $g(x)=x-1$ is 1.}
+% \end{wex}
+
+\Exercise{Derivatives}{
+\begin{enumerate}
+\item Given $g(x) = -x^2$
+\begin{enumerate}
+\item determine $\dfrac{g(x+h)-g(x)}{h}$
+\item hence, determine \nequ{\lim_{h \to 0}\frac{g(x+h)-g(x)}{h}}
+\item explain the meaning of your answer in (b).
+\end{enumerate}
+\item Find the derivative of $f(x)=-2x^2+3x$ using first principles.
+\item Determine the derivative of $f(x) = \dfrac{1}{x-2}$ using first principles.
+\item Determine $f'(3)$ from first principles if $f(x) = -5x^2$.
+\item If $h(x) = 4x^2 - 4x$, determine $h'(x)$ using first principles.
+\end{enumerate}}
+
+\section{Rules of Differentiation}
+\label{md:rules}
+
+%\begin{syllabus}
+%\item The learner must be able to use the following rules of differentiation:
+%$\frac{d}{dx}[f (x)±g(x)] = \frac{d}{dx} [f (x)]± \frac{d}{dx} [g(x)]$ and $\frac{d}{dx} [k.f (x)]= k \frac{d}{dx} [f (x)]$
+%\end{syllabus}
+
+Calculating the derivative of a function from first principles is very long, and it is easy to make mistakes. Fortunately, there are rules which make calculating the derivative simple.
+
+\Activity{Investigation}{Rules of Differentiation}{From first principles, determine the derivatives of the following:
+\begin{enumerate}
+\item{$f (x) = b$}
+\item{$f (x) = x$}
+\item{$f (x) = x^2$}
+\item{$f (x) = x^3$}
+\item{$f (x) = 1/x$}
+\end{enumerate}
+}
+
+You should have found the following:
+
+\begin{center}
+\begin{tabular}{|c|c|}\hline
+$f(x)$&$f'(x)$\\\hline\hline
+$b$&$0$\\\hline
+$x$&$1$\\\hline
+$x^2$&$2x$\\\hline
+$x^3$&$3x^2$\\\hline
+$1/x=x^{-1}$&$-x^{-2}$\\\hline
+\end{tabular}
+\end{center}
+
+If we examine these results we see that there is a pattern, which can be summarised by:
+\equ{\frac{d}{dx}\ (x^n) = nx^{n-1}}{md:lim:diff:firstp:pow}
+
+There are two other rules which make differentiation simpler. For any two functions $f(x)$ and $g(x)$:
+\equ{\frac{d}{dx}[f (x)\pm g(x)] = f'(x)\pm g'(x)}{eq:diff2}
+This means that we differentiate each term separately. 
+
+The final rule applies to a function $f(x)$ that is multiplied by a constant $k$.
+\equ{\frac{d}{dx} [k\cdot f (x)]= k f'(x)}{diff3}
+Video on the power rule for derivatives:SIYAVULA-VIDEO:http://cnx.org/content/m39313/latest/#calculus-3
+
+\begin{wex}{Rules of Differentiation}{Determine the derivative of $x-1$ using the rules of differentiation.}{
+\westep{Identify the rules that will be needed}
+We will apply two rules of differentiation:
+\nequ{\frac{d}{dx}\ (x^n) = nx^{n-1}}
+and
+\nequ{\frac{d}{dx}[f (x)-g(x)] = \frac{d}{dx} [f (x)]- \frac{d}{dx} [g(x)]}
+
+\westep{Determine the derivative}
+In our case $f(x)=x$ and $g(x)=1$.
+\nequ{f'(x)=1}
+and
+\nequ{g'(x)=0}
+\westep{Write the final answer}
+The derivative of $x-1$ is $1$ which is the same result as was obtained earlier, from first principles.
+}
+\end{wex}
+
+\subsection{Summary of Differentiation Rules}
+\label{md:summ}
+
+Given two functions, $f(x)$ and $g(x)$ and constant $b$, $n$ and $k$, we know that:
+\begin{center}
+\begin{tabular}{l}
+$\frac{d}{dx} b = 0$\\
+\\
+$\frac{d}{dx} (x^n) = nx^{n-1}$\\
+\\
+$\frac{d}{dx} (kf) = k\frac{df}{dx}$\\
+\\
+$\frac{d}{dx} (f+g)= \frac{df}{dx}+\frac{dg}{dx}$\\
+\\
+\end{tabular}
+\end{center}
+
+\Exercise{Rules of Differentiation}{
+\begin{enumerate}
+\item{Find $f'(x)$ if $f(x)=\dfrac{x^2-5x+6}{x-2}$.}
+\item{Find $f'(y)$ if $f(y)=\sqrt{y}$.}
+\item{Find $f'(z)$ if $f(z)=(z-1)(z+1)$.}
+\item{Determine $\frac{dy}{dx}$ if $y= \dfrac {x^3+2 \sqrt{x} -3}{x}$.}
+\item{Determine the derivative of $y = \sqrt{x^3} + \dfrac{1}{3x^3}$.}
+\end{enumerate}}
+
+\section{Applying Differentiation to Draw Graphs}
+\label{md:graphs}
+%\begin{syllabus}
+%\item The learner must be able to determine the equations of tangents to graphs;
+%\item The learner must be able to sketch graphs of cubic and other suitable polynomial functions using differentiation to determine the stationary points (maxima, minima and points of inflection) and the factor theorem and other techniques to determine the intercepts with the x-axis;
+%\end{syllabus}
+
+Thus far we have learnt about how to differentiate various functions, but I am sure that you are beginning to ask, \textit{What is the point of learning about derivatives?} Well, we know one important fact about a derivative: it is a gradient. So, any problems involving the calculations of gradients or rates of change can use derivatives. One simple application is to draw graphs of functions by firstly determine the gradients of straight lines and secondly to determine the turning points of the graph.
+
+\subsection{Finding Equations of Tangents to Curves}
+\label{md:graphs:tan}
+In Section \ref{md:lim:grad} we saw that finding the gradient of a tangent to a curve is the same as finding the gradient (or slope) of the same curve at the point of the tangent. We also saw that the gradient of a function at a point is just its derivative.
+
+Since we have the gradient of the tangent and the point on the curve through which the tangent passes, we can find the equation of the tangent. 
+
+\begin{wex}{Finding the Equation of a Tangent to a Curve}
+{Find the equation of the tangent to the curve $y=x^2$ at the point $(1;1)$ and draw both functions.}
+{\westep{Determine what is required}
+We are required to determine the equation of the tangent to the curve defined by $y=x^2$ at the point $(1;1)$. The tangent is a straight line and we can find the equation by using derivatives to find the gradient of the straight line. Then we will have the gradient and one point on the line, so we can find the equation using:
+\nequ{y-y_1=m(x-x_1)}
+from Grade 11 Coordinate Geometry.
+\westep{Differentiate the function}
+Using our rules of differentiation we get:
+\nequ{y'=2x}
+\westep{Find the gradient at the point $(1;1)$}
+In order to determine the gradient at the point $(1;1)$, we substitute the $x$-value into the equation for the derivative. So, $y'$ at $x=1$ is:
+\nequ{m=2(1)=2}
+\westep{Find the equation of the tangent}
+\begin{eqnarray*}
+y-y_1&=&m(x-x_1)\\
+y-1&=&(2)(x-1)\\
+y&=&2x-2+1\\
+y&=&2x-1
+\end{eqnarray*}
+\westep{Write the final answer}
+The equation of the tangent to the curve defined by $y=x^2$ at the point $(1;1)$ is $y=2x-1$.
+
+\westep{Sketch both functions}
+\begin{center}
+\begin{pspicture}(-5,-5)(5,5)
+%\psgrid[gridcolor=gray]
+%\psset{unit=0.5}
+\psaxes{<->}(0,0)(-5,-5)(5,5)
+\rput(5,-.5){$x$}
+\rput(.5,5){$y$}
+\psplot{-1.5}{2.12}{x 2 mul 1 sub}
+\psplot{-2.12}{2.12}{x x mul}
+\psdot(1,1)
+\uput[r](1,1){$(1;1)$}
+\uput[u](2.12,4.5){$y=x^2$}
+\uput[l](-1,-3){$y=2x-1$}
+\end{pspicture}
+\end{center}
+}
+\end{wex}
+
+\subsection{Curve Sketching}
+\label{md:graphs:curve}
+Differentiation can be used to sketch the graphs of functions, by helping determine the turning points. We know that if a graph is increasing on an interval and reaches a turning point, then the graph will start decreasing after the turning point. The turning point is also known as a stationary point because the gradient at a turning point is $0$. We can then use this information to calculate turning points, by calculating the points at which the derivative of a function is $0$.
+
+\Tip{If $x=a$ is a turning point of $f(x)$, then:
+\nequ{f'(a)=0}
+This means that the derivative is $0$ at a turning point.}
+
+Take the graph of $y=x^2$ as an example. We know that the graph of this function has a turning point at $(0,0)$, but we can use the derivative of the function:
+\nequ{y'=2x}
+and set it equal to $0$ to find the $x$-value for which the graph has a turning point.
+\begin{eqnarray*}
+2x&=&0\\
+x&=&0
+\end{eqnarray*}
+We then substitute this into the equation of the graph (i.e. $y=x^2$) to determine the $y$-coordinate of the turning point:
+\nequ{f(0)=(0)^2=0}
+This corresponds to the point that we have previously calculated.
+
+\begin{wex}{Calculation of Turning Points}
+{Calculate the turning points of the graph of the function \nequ{f(x)=2x^3 - 9x^2 + 12x - 15}.}
+{\westep{Determine the derivative of $f(x)$}
+Using the rules of differentiation we get:
+\nequ{f'(x)=6x^2-18x+12}
+\westep{Set $f'(x)=0$ and calculate $x$-coordinate of turning point}
+\begin{eqnarray*}
+6x^2-18x+12&=&0\\
+x^2-3x+2&=&0\\
+(x-2)(x-1)&=&0
+\end{eqnarray*}
+Therefore, the turning points are at $x=2$ and $x=1$.
+
+\westep{Substitute $x$-coordinate of turning point into $f(x)$ to determine $y$-coordinates}
+\begin{eqnarray*}
+f(2)&=&2(2)^3-9(2)^2+12(2)-15\\
+&=&16-36+24-15\\
+&=&-11.
+\end{eqnarray*}
+
+\begin{eqnarray*}
+f(1)&=&2(1)^3-9(1)^2+12(1)-15\\
+&=&2-9+12-15\\
+&=&-10
+\end{eqnarray*}
+
+\westep{Write final answer}
+The turning points of the graph of $f(x)=2x^3 - 9x^2 + 12x - 15$ are $(2;-11)$ and $(1;-10)$.}
+\end{wex}
+
+We are now ready to sketch graphs of functions.
+
+\Method{Sketching Graphs: }{Suppose we are given that $f(x) = ax^3+bx^2+cx+d$, then there are \textbf{five} steps to be followed to sketch the graph of the function:
+\vspace{0.5cm}
+\begin{enumerate}
+% \item Determine the shape of the graph based on the sign of the leading coefficient $a$ <------possible suggestion
+% ----->INCORRECT STATEMENT! \item If $a > 0$, then the graph is increasing from left to right, and may have a maximum and a minimum. As $x$ increases, so does $f(x)$. If $a<0$, then the graph decreasing is from left to right, and has first a minimum and then a maximum. $f(x)$ decreases as $x$ increases.
+\item Determine the value of the $y$-intercept by substituting $x=0$ into $f(x)$
+\item Determine the $x$-intercepts by factorising $ax^3+bx^2+cx+d=0$ and solving for $x$. First try to eliminate constant common factors, and to group like terms together so that the expression is expressed as economically as possible. Use the factor theorem if necessary.
+\item Find the turning points of the function by working out the derivative $\frac{df}{dx}$ and setting it to zero, and solving for $x$.
+\item Determine the $y$-coordinates of the turning points by substituting the $x$ values obtained in the previous step, into the expression for $f(x)$.
+\item Use the information you're given to plot the points and get a rough idea of the gradients between points. Then fill in the missing parts of the function in a smooth, continuous curve.
+
+\end{enumerate}}
+
+\begin{wex}
+{Sketching Graphs}{Draw the graph of $g(x)=x^2-x+2$}{
+\westep{Determine the shape of the graph}
+The leading coefficient of $x$ is $>0$ therefore the graph is a parabola with a minimum.
+\westep{Determine the $y$-intercept}
+The $y$-intercept is obtained by setting $x=0$.
+\nequ{g(0)=(0)^2-0+2=2}
+The turning point is at $(0;2)$.
+\westep{Determine the $x$-intercepts}
+The $x$-intercepts are found by setting $g(x)=0$.
+\begin{eqnarray*}
+g(x)&=&x^2-x+2\\
+0&=&x^2-x+2
+\end{eqnarray*}
+Using the quadratic formula and looking at $b^2-4ac$ we can see that this would be negative and so this function does not have real roots. Therefore, the graph of $g(x)$ does not have any $x$-intercepts.
+
+\westep{Find the turning points of the function}
+Work out the derivative $\frac{dg}{dx}$ and set it to zero to for the $x$ coordinate of the turning point.
+\nequ{\frac{dg}{dx}=2x-1}
+
+\begin{eqnarray*}
+\frac{dg}{dx}&=&0\\
+2x-1&=&0\\
+2x&=&1\\
+x&=&\frac{1}{2}
+\end{eqnarray*}
+
+\westep{Determine the $y$-coordinates of the turning points by substituting the $x$ values obtained in the previous step, into the expression for $f(x)$.}
+$y$ coordinate of turning point is given by calculating $g(\frac{1}{2})$.
+
+\begin{eqnarray*}
+g\left(\frac{1}{2}\right)&=&\left(\frac{1}{2}\right)^2-\left(\frac{1}{2}\right)+2\\
+&=&\frac{1}{4}-\frac{1}{2}+2\\
+&=&\frac{7}{4}
+\end{eqnarray*}
+The turning point is at $(\frac{1}{2};~\frac{7}{4})$
+\newline
+
+\westep{Draw a neat sketch}
+\begin{center}
+\psset{unit=0.75}
+\begin{pspicture}(-3.5,-1)(5,10)
+%\psgrid[gridcolor=gray]
+\psaxes{<->}(0,0)(-3.5,-1)(4.5,9.5)
+\psplot{-2.2}{3.2}{x 2 exp x sub 2 add}
+\uput[u](0,9.5){$y$}
+\uput[r](4.5,0){$x$}
+\psdots(0,2)(0.5,1.75)
+\uput[dr](0.5,1.75){($0,5$;$1,75$)}
+\end{pspicture}
+\end{center}
+}
+\end{wex}
+
+\begin{wex}
+{Sketching Graphs}
+{Sketch the graph of $g(x)=-x^3 +6x^2 -9x +4$.}
+{
+\westep{Determine the shape of the graph}
+The leading coefficient of $x$ is $<0$ therefore the graph is a parabola with a maximum.
+
+\westep{Determine the $y$-intercept}
+We find the $y$-intercepts by finding the value for $g(0)$.
+
+\begin{eqnarray*}
+g(x)&=&-x^3 +6x^2 -9x +4\\
+y_{int}=g(0)&=&-(0)^3 +6(0)^2 -9(0) +4\\
+&=&4
+\end{eqnarray*}
+
+\westep{Determine the $x$-intercepts}
+We find the $x$-intercepts by finding the points for which the function $g(x)=0$.
+
+\nequ{g(x)=-x^3 +6x^2 -9x +4}
+
+Use the factor theorem to confirm that $(x-1)$ is a factor. If $g(1)=0$, then $(x-1)$ is a factor.
+\begin{eqnarray*}
+g(x)&=&-x^3 +6x^2 -9x +4\\
+g(1)&=&-(1)^3 +6(1)^2 -9(1) +4\\
+&=&-1+6-9+4\\
+&=&0
+\end{eqnarray*}
+Therefore, $(x-1)$ is a factor.
+
+If we divide $g(x)$ by $(x-1)$ we are left with:
+\nequ{-x^2+5x-4}
+This has factors
+\nequ{-(x-4)(x-1)}
+
+Therefore:
+\nequ{g(x)=-(x-1)(x-1)(x-4)}
+
+The $x$-intercepts are: $x_{int}=1; 4$
+
+\westep{Calculate the turning points}
+Find the turning points by setting $g'(x)=0$.
+
+If we use the rules of differentiation we get
+\nequ{g'(x)=-3x^2+12x-9}
+
+\begin{eqnarray*}
+g'(x)&=&0\\
+-3x^2+12x-9&=&0\\
+x^2-4x+3&=&0\\
+(x-3)(x-1)&=&0
+\end{eqnarray*}
+
+The $x$-coordinates of the turning points are: $x=1$ and $x=3$.
+
+The $y$-coordinates of the turning points are calculated as:
+\begin{eqnarray*}
+g(x)&=&-x^3 +6x^2 -9x +4\\
+g(1)&=&-(1)^3 +6(1)^2 -9(1) +4\\
+&=&-1+6-9+4\\
+&=&0
+\end{eqnarray*}
+
+\begin{eqnarray*}
+g(x)&=&-x^3 +6x^2 -9x +4\\
+g(3)&=&-(3)^3 +6(3)^2 -9(3) +4\\
+&=&-27+54-27+4\\
+&=&4
+\end{eqnarray*}
+
+Therefore the turning points are: $(1;0)$ and $(3;4)$.
+\newline
+\westep{Draw a neat sketch}
+\begin{center}
+\psset{unit=0.75}
+\begin{pspicture}(-1.5,-2.5)(5,10)
+%\psgrid[gridcolor=gray]
+\psaxes{<->}(0,0)(-1.5,-2)(4.5,9.5)
+\psplot{-0.4}{4.15}{x 3 exp neg x 2 exp 6 mul add x 9 mul sub 4 add}
+\uput[u](0,9.5){$y$}
+\uput[r](4.5,0){$x$}
+\psdots(1,0)(4,0)(3,4)(0,4)
+\uput{8pt}[u](1,0.4){($1;0$)}
+\uput[u](3,4){($3;4$)}
+\uput[ur](4,0){($4;0$)}
+\end{pspicture}
+\end{center}
+}
+\end{wex}
+
+\Exercise{Sketching Graphs}{
+\begin{enumerate}
+\item{Given $f(x) = x^3 + x^2 - 5x + 3$:
+\begin {enumerate}
+\item{Show that $(x-1)$ is a factor of $f(x)$ and hence fatorise $f(x)$ fully.}
+\item{Find the coordinates of the intercepts with the axes and the turning points and sketch the graph}
+\end{enumerate}}
+\item{Sketch the graph of $f(x) = x^3 - 4x^2 -11x + 30$ showing all the relative turning points and intercepts with the axes.}
+\item{\begin{enumerate}
+\item{Sketch the graph of $f(x) = x^3 - 9x^2 + 24x - 20$, showing all intercepts with the axes and turning points.}
+\item{Find the equation of the tangent to $f(x)$ at $x=4$.}
+\end{enumerate}}
+\end{enumerate}}
+
+\subsection{Local Minimum, Local Maximum and Point of Inflextion}
+
+If the derivative ($\frac{dy}{dx}$) is zero at a point, the gradient of the tangent at that point is zero.  It means that a turning point occurs as seen in the previous example. 
+
+\begin{center}
+\psset{unit=0.75}
+\begin{pspicture}(-1.5,-2.5)(5,10)
+%\psgrid[gridcolor=gray]
+\psaxes{<->}(0,0)(-1.5,-2)(4.5,9.5)
+\psplot{-0.4}{4.15}{x 3 exp neg x 2 exp 6 mul add x 9 mul sub 4 add}
+\uput[u](0,9.5){$y$}
+\uput[r](4.5,0){$x$}
+\psdots(1,0)(4,0)(3,4)(0,4)
+\uput{8pt}[u](1,0.4){($1,0$)}
+\uput[u](3,4){($3,4$)}
+\uput[ur](4,0){($4,0$)}
+\end{pspicture}
+\end{center}
+
+From the drawing the point $(1;0)$ represents a \textbf{local minimum} and the point $(3;4)$ the \textbf{local maximum}.
+
+A graph has a horizontal \textbf{point of inflexion} where the derivative is zero but the sign of the gradient does not change. That means the graph will continue to increase or decrease after the stationary point.
+\begin{center}
+\begin{pspicture}(-1,-1)(5,5)
+%\psgrid[gridcolor=gray]
+\psaxes[dx=100,Dx=100,dy=100,Dy=100]{<->}(0,0)(-1,-1)(4.4,4.4)
+\psline[linestyle=dashed](-0.5,1)(4,1)
+\pnode(3,1){P}
+\uput[dr](P){$(3;1)$}
+\psdot(P)
+\psplot{1.2}{5}{x 3 exp 0.33 mul x 2 exp 3 mul sub x 9 mul add 7.9 sub}
+\uput[r](4.4,0){$x$}
+\uput[u](0,4.4){$y$}
+\end{pspicture}
+\end{center}
+From this drawing, the point $(3;1)$ is a horizontal point of inflexion, because the sign of the derivative does not change from positive to negative.
+
+\section{Using Differential Calculus to Solve Problems}
+%\begin{syllabus}
+%\item The learner must be able to solve practical problems involving optimisation and rates of change.
+%\end{syllabus}
+
+We have seen that differential calculus can be used to determine the stationary points of functions, in order to sketch their graphs. However, determining stationary points also lends itself to the solution of
+problems that require some variable to be \textit{optimised}.
+
+For example, if fuel used by a car is defined by:
+\equ{f(v)=\frac{3}{80}v^2-6v+245}{eq:diff12:ex}
+where $v$ is the travelling speed, what is the most economical speed (that means the speed that uses the least fuel)?
+
+If we draw the graph of this function we find that the graph has a minimum. The speed at the minimum would then give the most economical speed.
+\begin{center}
+\psset{unit=0.75}
+\begin{pspicture}(-1.5,-2.5)(15,7)
+%\psgrid[gridcolor=gray]
+\psset{unit=0.1}
+\psaxes[dx=10,Dx=10,dy=10,Dy=10]{<->}(0,0)(0,0)(150,70)
+\psplot{40}{120}{x 2 exp 0.0375 mul x 6 mul sub 245 add}
+\pcline[linestyle=none,offset=18pt](0,0)(0,70)
+\aput{:U}{fuel consumption (l/h)}
+\pcline[linestyle=none,offset=-16pt](0,0)(150,0)
+\bput{:U}{speed (km/h)}
+%\psdot(80,5)
+%\uput[u](80,5){(80,5)}
+\end{pspicture}
+\end{center}
+
+We have seen that the coordinates of the turning point can be calculated by differentiating the function and finding the $x$-coordinate (speed in the case of the example) for which the derivative is $0$.
+
+Differentiating (\ref{eq:diff12:ex}), we get:
+\nequ{f'(v)=\frac{3}{40}v-6}
+If we set $f'(v)=0$ we can calculate the speed that corresponds to the turning point.
+
+\begin{eqnarray*}
+f'(v)&=&\frac{3}{40}v-6\\
+0&=&\frac{3}{40}v-6\\
+v&=&\frac{6 \times 40}{3}\\
+&=&80
+\end{eqnarray*}
+
+This means that the most economical speed is $80~$km/h.
+Video on optimisation:SIYAVULA-VIDEO:http://cnx.org/content/m39273/latest/#calculus-4
+
+\begin{wex}
+{Optimisation Problems}{The sum of two positive numbers is $10$. One of the numbers is multiplied by the square of the other. If each number is greater than $0$, find the numbers that make this product a maximum.}
+{\westep{Examine the problem and formulate the equations that are required}
+Let the two numbers be $a$ and $b$. Then we have:
+
+\equ{a+b=10}{diff12:ex1:1}
+
+We are required to minimise the product of $a$ and $b$. Call the product $P$. Then:
+
+\equ{P=a \cdot b}{diff12:ex1:2}
+
+We can solve for $b$ from (\ref{diff12:ex1:1}) to get:
+
+\equ{b=10-a}{diff12:ex1:3}
+
+Substitute this into (\ref{diff12:ex1:2}) to write $P$ in terms of $a$ only.
+
+\equ{P=a(10-a)=10a-a^2}{diff12:ex1:4}
+
+\westep{Differentiate}
+The derivative of (\ref{diff12:ex1:4}) is:
+\nequ{P'(a)=10-2a}
+
+\westep{Find the stationary point}
+Set $P'(a)=0$ to find the value of $a$ which makes $P$ a maximum.
+
+\begin{eqnarray*}
+P'(a)&=&10-2a\\
+0&=&10-2a\\
+2a&=&10\\
+a&=&\frac{10}{2}\\
+a&=&5
+\end{eqnarray*}
+
+Substitute into (\ref{diff12:ex2:3}) to solve for the width.
+\begin{eqnarray*}
+b&=&10-a\\
+&=&10-5\\
+&=&5
+\end{eqnarray*}
+
+\westep{Write the final answer}
+The product is maximised when $a$ and $b$ are both equal to $5$.}
+\end{wex}
+
+\begin{wex}
+{Optimisation Problems}{Michael wants to start a vegetable garden, which he decides to fence off in the shape of a rectangle from the rest of the garden. Michael has only $160~\emm$ of fencing, so he decides to use a wall as one border of the vegetable garden. Calculate the width and length of the garden that corresponds to largest possible area that Michael can fence off.
+\newline
+\begin{center}
+\psset{unit=0.75}
+\begin{pspicture}(0,0)(5,5)
+%\psgrid[gridcolor=gray]
+\psframe[fillcolor=gray,fillstyle=solid](0,4.25)(5,5)
+\rput*(2.5,4.625){wall}
+\psframe[fillcolor=lightgray,fillstyle=solid](1,1)(4,4.25)
+\pszigzag[coilarm=.1cm,linewidth=.5pt,coilwidth=.25cm,linewidth=2pt](1,4.25)(1,1)
+\pszigzag[coilarm=.1cm,linewidth=.5pt,coilwidth=.25cm,linewidth=2pt](1,1)(4,1)
+\pszigzag[coilarm=.1cm,linewidth=.5pt,coilwidth=.25cm,linewidth=2pt](4,1)(4,4.25)
+\rput*(2.5,2.625){garden}
+\pcline[linestyle=none, offset=-8pt](4,1)(4,4.25)
+\bput{:U}{length, $l$}
+\pcline[linestyle=none,offset=-8pt](1,1)(4,1)
+\bput{:U}{width, $w$}
+\end{pspicture}
+\end{center}
+}
+{
+\westep{Examine the problem and formulate the equations that are required}
+The important pieces of information given are related to the area and modified perimeter of the garden. We know that the area of the garden is:
+\equ{A=w\cdot l}{diff12:ex2:1}
+We are also told that the fence covers only $3$ sides and the three sides should add up to $160~\emm$. This can be written as:
+\equ{160\emm=w+l+l}{diff12:ex2:2}
+
+However, we can use (\ref{diff12:ex2:2}) to write $w$ in terms of $l$:
+\equ{w=160\emm-2l}{diff12:ex2:3}
+Substitute (\ref{diff12:ex2:3}) into (\ref{diff12:ex2:1}) to get:
+\equ{A=(160\emm-2l)l=160\emm-2l^2}{diff12:ex2:4}
+
+\westep{Differentiate}
+Since we are interested in maximising the area, we differentiate (\ref{diff12:ex2:4}) to get:
+\nequ{A'(l)=160\emm-4l}
+
+\westep{Find the stationary point}
+To find the stationary point, we set $A'(l)=0$ and solve for the value of $l$ that maximises the area.
+
+\begin{eqnarray*}
+A'(l)&=&160\emm-4l\\
+0&=&160\emm-4l\\
+\therefore 4l&=&160\emm\\
+l&=&\frac{160\emm}{4}\\
+l&=&40\emm
+\end{eqnarray*}
+
+Substitute into (\ref{diff12:ex2:3}) to solve for the width.
+\begin{eqnarray*}
+w&=&160\emm-2l\\
+&=&160\emm-2(40\emm)\\
+&=&160\emm-80\emm\\
+&=&80\emm
+\end{eqnarray*}
+
+\westep{Write the final answer}
+A width of $80~\emm$ and a length of $40~\emm$ will yield the maximal area fenced off.
+}
+\end{wex}
+
+\Exercise{Solving Optimisation Problems using Differential Calculus}{
+\begin{enumerate}
+
+\item{The sum of two positive numbers is $20$. One of the numbers is multiplied by the square of the other. Find the numbers that make this product a maximum.}
+
+\item{A wooden block is made as shown in the diagram. The ends are right-angled triangles having sides $3x$, $4x$ and $5x$. The length of the block is $y$. The total surface area of the block is $3 \: 600\: \mathrm{cm}^2$.
+
+\begin{center}
+\begin{pspicture}(0, -1)(6, 6)
+\psset{xunit=7.5mm, yunit=7.5mm}
+%\psgrid[gridlabels=10pt,gridlabelcolor=black]
+\psline(0, 0)(0, 5)(5, 4.5)(5, -0.5)(0, 0)
+\psline(0, 5)(1.2, 6)(5, 4.5)
+\uput[r](5, 2){$y$}
+\uput[l](0.8, 5.7){$3x$}
+\uput[r](2.5, 5.7){$4x$}
+\uput[r](2.5, 4.2){$5x$}
+
+\psline(0, 0.2)(0.2, 0.2)(0.2, 0)
+\psline[linestyle=dashed](1.2, 6)(1.2, 1)(0, 0)
+\psline[linestyle=dashed](1.2, 1)(5, -0.5)
+\psline(1.0, 5.8)(1.2, 5.7)(1.5, 5.9)
+\end{pspicture}
+\end{center}
+
+\begin{enumerate}
+\item{Show that $y=\dfrac{1200cm^2-4x^2}{5x}$.}
+\item{Find the value of $x$ for which the block will have a maximum volume. (Volume = area of base $\times$ height.)}
+\end{enumerate}}
+
+\item{The diagram shows the plan for a verandah which is to be built on the corner of a cottage. A railing $ABC\!D\!E$ is to be constructed around the four edges of the verandah.
+
+\begin{center}
+\begin{pspicture}(-1,-1)(5,3.6)
+%\psgrid[gridcolor=gray]
+\psset{RightAngleSize=0.2}
+\pnode(0,0){B}
+\pnode(0,3){C}
+\pnode(3,3){D}
+\pnode(3,0.5){E}
+\pnode(2,0.5){F}
+\pnode(2,0){A}
+\pnode(2,-1){O1}
+\pnode(5,0.5){O2}
+\pspolygon(B)(C)(D)(E)(F)(A)
+\psline(O1)(A)
+\psline(O2)(E)
+\uput[l](C){$C$}
+\uput[l](B){$B$}
+\uput[r](A){$A$}
+\uput[r](D){$D$}
+\uput[u](F){$F$}
+\uput[d](E){$E$}
+\uput[u](3.5,-1){cottage}
+\rput(1.5,1.5){verandah}
+\pcline[linestyle=none](C)(D)
+\aput{:U}{$y$}
+\pcline[linestyle=none](D)(E)
+\rput(3.35,1.8){$x$}
+\pstRightAngle{A}{B}{C}
+\pstRightAngle{B}{C}{D}
+\pstRightAngle{C}{D}{E}
+\pstRightAngle{D}{E}{F}
+\pstRightAngle{E}{F}{A}
+\pstRightAngle{F}{A}{B}
+
+\end{pspicture}
+\end{center}
+If $AB = D\!E = x$ and $BC = C\!D = y$, and the length of the railing must be $30~\emm$, find the values of $x$ and $y$ for which the verandah will have a maximum area.}
+
+\end{enumerate}
+}
+
+\subsection{Rate of Change Problems}
+
+Two concepts were discussed in this chapter:  \textbf{Average} rate of change = $\frac{f(b)-f(a)}{b-a}$  and \textbf{Instantaneous} rate of change = $\lim_{h \to 0}\frac{f(x+h)-f(x)}{h}$.  When we mention \textit{rate of change}, the latter is implied.  Instantaneous rate of change is the \textbf{derivative}.   When \textit{average rate of change} is required, it will be specifically referred to as \textbf{average} rate of change. 
+
+Velocity is one of the most common forms of rate of change.  Again, \textbf{average} velocity = \textbf{average} rate of change  and  \textbf{instantaneous} velocity = \textbf{instantaneous} rate of change = \textbf{derivative}.  Velocity refers to the increase of distance(s) for a corresponding increase in time (t).  
+The notation commonly used for this is: \nequ{v(t)= \dfrac{ds}{dt} = s'(t)}  
+
+where $s'(t)$ is the position function. Acceleration is the change in velocity for a corresponding increase in time.  Therefore, acceleration is the derivative of velocity \nequ{a(t) = v'(t)}  This implies that acceleration is the second derivative of the distance(s).
+
+\begin{wex}{Rate of Change}{The height (in metres) of a golf ball that is hit into the air after $t$ seconds, is given by $h(t)= 20t-5t^2$.  Determine
+\begin{enumerate}
+\item{the average velocity of the ball during the first two seconds}
+\item{the velocity of the ball after $1,5\es$}
+\item{the time at which the velocity is zero}
+\item{the velocity at which the ball hits the ground}
+\item{the acceleration of the ball}
+\end{enumerate}
+}{
+\westep{Average velocity}
+\begin{eqnarray*}
+v_{ave}&=& \frac{h(2)-h(0)}{2-0}\\
+&=& \frac{[20(2)-5(2)^2]-[20(0)- 5(0)^2]}{2}\\
+&=& \frac{40-20}{2}\\
+&=& 10 \ems\\
+\end{eqnarray*}
+\westep{Instantaneous Velocity}
+\begin{eqnarray*}
+v(t)&=&\frac{dh}{dt}\\
+&=& 20 - 10t\\
+\end{eqnarray*}
+Velocity after $1,5\es$:
+\begin{eqnarray*}
+v(1,5)&=& 20 - 10(1,5)\\
+&=& 5 \ems\\
+\end{eqnarray*}
+\westep{Zero velocity}
+\begin{eqnarray*}
+v(t) &=& 0\\
+20 - 10t &=& 0\\
+10t &=& 20\\
+t &=& 2\\
+\end{eqnarray*}
+Therefore the velocity is zero after $2~\es$
+\westep{Ground velocity}
+The ball hits the ground when $h(t) = 0$
+\begin{eqnarray*}
+20t - 5t^2 &=& 0\\
+5t(4-t) &=& 0\\
+t = 0 ~ &or& ~ t = 4\\
+\end{eqnarray*}
+The ball hits the ground after $4\es$.  The velocity after $4\es$ will be:
+\begin{eqnarray*}
+v(4) &=& h'(4)\\
+&=& 20 - 10(4)\\
+&=& -20~\ems\\
+\end{eqnarray*}
+The ball hits the gound at a speed of $20~\ems$. Notice that the sign of the velocity is negative which means that the ball is moving downward (the reverse of upward, which is when the velocity is positive).
+\westep{Acceleration}
+\begin{eqnarray*}
+a &=& v'(t)\\
+&=& -10 ~\ems
+\end{eqnarray*}
+Just because gravity is constant does not mean we should necessarily think of acceleration as a constant. We should still consider it a function.
+}
+\end{wex}
+
+
+\begin{eocexercises}{}
+\begin{enumerate}
+
+\item{Determine $f'(x)$ from \textbf{first principles} if:
+\begin{enumerate}
+\nequ{f(x) = x^2 - 6x}
+\nequ{f(x) = 2x - x^2}
+\end{enumerate}}
+
+\item{Given: \quad $f(x) = -x^2 + 3x$, find $f^{\prime}(x)$ using \textit{first principles}.}
+
+\item{Determine $\frac{dx}{dy}$ if:
+\begin{enumerate}
+\item{\nequ{y=(2x)^2-\frac{1}{3x}}}
+\item{\nequ{y=\frac{2\sqrt{x}-5}{\sqrt{x}}}}
+\end{enumerate}}
+
+\item{Given: $f(x) =x^3 - 3x^2 + 4$
+\begin{enumerate}
+\item{Calculate $f(-1)$, and hence solve the equation $f(x)=0$}
+\item{Determine $f'(x)$}
+\item{Sketch the graph of $f$ neatly and clearly, showing the co-ordinates of the turning points as well as the intercepts on both axes.}
+\item{Determine the co-ordinates of the points on the graph of $f$  where the gradient is $9$.}
+\end{enumerate}}
+
+\item{Given: $f(x) = 2x^3 - 5x^2 - 4x + 3$.
+The $x$-intercepts of $f$ are: $(-1;0)$ $(\frac{1}{2};0)$ and $(3;0)$.
+\begin{enumerate}
+\item{Determine the co-ordinates of the turning points of $f$.}
+\item{Draw a neat sketch graph of $f$. Clearly indicate the co-ordinates of the intercepts with the axes, as well as the co-ordinates of the turning points.}
+\item{For which values of $k$ will the equation $f(x) = k$ , have exactly two real roots?}
+\item{Determine the equation of the tangent to the graph of
+$f(x) = 2x^3 - 5x^2 - 4x + 3$ at the point where $x = 1$.}
+\end{enumerate}}
+
+\item{\begin{enumerate}
+\item{Sketch the graph of $f(x) = x^3 - 9x^2 + 24x - 20$, showing all intercepts with the axes and turning points.}
+\item{Find the equation of the tangent to $f(x)$ at $x=4$.}
+\end{enumerate}}
+
+\item{Calculate:
+\nequ{\lim_{x\to 1}\frac{1-x^3}{1-x}}
+}
+\item{Given:
+\nequ{f(x)=2x^2-x}
+\begin{enumerate}
+\item{Use the definition of the derivative to calculate $f'(x)$.}
+\item{Hence, calculate the co-ordinates of the point at which the gradient of the tangent to the graph of $f$ is $7$.}
+\end{enumerate}
+}
+
+\item{If $xy-5=\sqrt{x^3}$, determine $\frac{dx}{dy}$}
+
+\item{Given: $g(x)=(x^{-2}+x^2)^2$.
+Calculate $g'(2)$.}
+
+
+\item{Given: $f(x) = 2x - 3$
+\begin{enumerate}
+\item{Find: $f^{-1}(x)$}
+\item{Solve: $f^{-1}(x) = 3f^{\prime}(x)$}
+\end{enumerate}}
+
+\item{Find $f^{\prime}(x)$ for each of the following:
+\begin{enumerate}
+\item{$f(x) = \dfrac{\sqrt[5]{x^3}}{3} + 10$}
+\item{$f(x) = \dfrac{(2x^2 - 5)(3x + 2)}{x^2}$}
+\end{enumerate}}
+
+\item{Determine the minimum value of the sum of a \textit{positive} number and its reciprocal.}
+
+
+\item{If the displacement $s$ (in metres) of a particle at time $t$ (in seconds) is governed by the equation $s=\tfrac{1}{2}t^3 - 2t$, find its acceleration after $2$ seconds. (Acceleration is the rate of change of velocity, and velocity is the rate of change of displacement.)}
+
+\item{
+\begin{enumerate}{
+\item{After doing some research, a transport company has determined that the rate at which petrol is consumed by one of its large carriers, travelling at an average speed of $x$ km per hour, is given by:
+\nequ{P(x)=\frac{55~\ell\textrm{h}^{-1}}{2x}+\frac{x}{200~\textrm{km}^{2}\ell^{-1}\textrm{h}^{-1}}}}
+\begin{enumerate}{
+\item{Assume that the petrol costs R$4,00$ per litre and the driver earns R$18,00$ per hour (travelling time). Now deduce that the total cost, $C$, in Rands, for a $2~000$ km trip is given by:
+\nequ{C(x)=\frac{256000~\textrm{km}\textrm{h}^{-1}\textrm{R}}{x}+40x}}
+\item{Hence determine the average speed to be maintained to effect a minimum
+cost for a $2~000$ km trip.}}
+\end{enumerate}
+\item{During an experiment the temperature $T$ (in degrees Celsius), varies with time $t$ (in hours), according to the formula:
+\nequ{T(t)=30+4t-\frac{1}{2}t^2 \quad t\in[1;10]}}
+\begin{enumerate}{
+\item{Determine an expression for the rate of change of temperature with time.}
+\item{During which time interval was the temperature dropping?}}
+\end{enumerate}
+\end{enumerate}}
+
+\item{The depth, $d$, of water in a kettle $t$ minutes after it starts to boil, is given by $d = 86 - \tfrac{1}{8}t - \tfrac{1}{4}t^3$, where $d$ is measured in millimetres.
+\begin{enumerate}
+\item{How many millimetres of water are there in the kettle just before it starts to boil?}
+\item{As the water boils, the level in the kettle drops.
+Find the \textit{rate} at which the water level is decreasing when $t$ = $2$ minutes.}
+\item{How many minutes after the kettle starts boiling will the water level be dropping at a rate of $12 \tfrac{1}{8}$
+mm/minute?}
+\end{enumerate}}
+
+
+\end{enumerate}
+
+
+
+
+
+
+
+
+
+% CHILD SECTION END 
+
+
+
+% CHILD SECTION START 
+\practiceinfo
+\end{eocexercises}

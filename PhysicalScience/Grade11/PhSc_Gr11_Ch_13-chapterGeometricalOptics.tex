@@ -1,0 +1,2004 @@
+\chapter{Geometrical Optics}
+\label{p:wsl:go11}
+
+\section{Introduction}
+In Grade 10, we studied how light is reflected and refracted. This chapter builds on what you have learnt in Grade 10. You will learn about lenses, how the human eye works as well as how telescopes and microscopes work.
+
+\section{Lenses}
+%\begin{syllabus}
+%\item The learner must be able to describe the two general types of lenses, those that converge parallel beams of light (converging lenses), and those that diverge parallel beams of light (diverging lenses).
+%\item The learner must be able to describe all converging lenses as thicker in the middle than at the edge (convex), and all diverging lenses as thicker at the edge than in the middle (concave).
+%\item The learner must be able to define optic axis, focal point and focal length (f).
+%\item The learner must be able to draw ray diagrams for converging and diverging lenses to locate the position of the image when the object is placed at distances from the lens greater than 2f, equal to 2f, between 2f and f, and less than f.
+%\item The learner must be able to describe the image in each of the cases mentioned above.
+%\item Notes: Learners should not try to memorise the ray diagrams for different lenses and object positions. The image of a point on an object can be located as follows:1. For a converging lens, draw one ray from the point on the object straight through the centre of the lens. Draw a second ray from the object, parallel to the optic axis, and passing through the focal point on the other side of the lens. The image position is where these two lines cross.2. For a diverging lens, draw one ray from the point on the object straight through the centre of the lens. Draw a second ray from the object, parallel to the optic axis that emerges on the other side of the lens at an angle that makes it look as if it came from the focal point on the same side of the lens as the object. Extend this ray back to this focal point using a dotted line. The image position is where the two lines cross.
+%\end{syllabus}
+
+In this section we will discuss properties of \textbf{thin lenses}. In Grade 10, you learnt about two kinds of mirrors: concave mirrors which were also known as converging mirrors and convex mirrors which were also known as diverging mirrors. Similarly, there are two types of lenses: converging and diverging lenses.
+
+We have learnt how light travels in different materials, and we are now ready to learn how we can control the direction of light rays. We use \textit{lenses} to control the direction of light. When light enters a lens, the light rays bend or change direction as shown in Figure~\ref{p:wsl:go11:l:rays}.
+
+
+\begin{figure}[ht]
+\begin{center}
+\subfigure[A converging lens will focus the rays that enter the lens]{
+\begin{pspicture}(-5,-2.5)(3,1.6)
+%\psgrid[gridcolor=lightgray]
+\rput(0,0){\lens[lensGlass=true,focus=2.0,AB=1.2,OA=-3,drawing=false]}
+\arrowLine(B)(I){1}
+\arrowLine(-3,0.6)(0,0.6){1}
+\arrowLine(-3,-0.6)(0,-0.6){1}
+\arrowLine(0,0.6)(F'){1}
+\arrowLine(0,-0.6)(F'){1}
+\arrowLine(F')(3,0.3){1}
+\arrowLine(F')(3,-0.3){1}
+\arrowLine(I)(F'){1}
+\arrowLine(F')(3,-0.6){1}
+\arrowLine(A)(O){1}
+\arrowLine(O)(F'){1}
+\arrowLine(F')(3,0){1}
+\arrowLine(-3,-1.2)(0,-1.2){1}
+\arrowLine(0,-1.2)(F'){1}
+\arrowLine(F')(3.0,0.6){1}
+\uput[l](-3,0.15){parallel rays of}
+\uput[l](-3,-0.15){light enter the lens}
+\uput[r](3,0.15){rays are focused}
+\uput[r](3,-0.15){at the same point}
+\end{pspicture}
+}
+\subfigure[A diverging lens will spread out the rays that enter the lens]{
+\begin{pspicture}(-5,-3)(3,3)
+%\psgrid
+% Draw lens without arrows so I can make my own lines later.
+\rput(0,0){
+\lens[lensType=DVG,lensGlass=true,focus=2,lensHeight=4,AB=1.2,OA=-3,XO=0,drawing=false]}
+\arrowLine(B)(I){1}
+\arrowLine(I)(3,3){1}
+\psOutLine[length=0.5](I)(2,2.4){extension}
+\arrowLine(-3,0.6)(0,0.6){1}
+\arrowLine(-3,-0.6)(0,-0.6){1}
+\arrowLine(-3,-1.2)(0,-1.2){1}
+\arrowLine(0,-1.2)(3,-3){1}
+%\arrowLine(0,-0.6)(2,-1.2){1}
+\arrowLine(0,-0.6)(3,-1.5){1}
+\arrowLine(0,0.6)(3,1.5){1}
+\psline[linestyle=dashed](-2,0)(0,-0.6)
+\psline[linestyle=dashed](-2,0)(0,0.6)
+\psline[linestyle=dashed](-2,0)(0,-1.2)
+\psline[linestyle=dashed](-2,0)(0,1.2)
+\psOutLine[length=0.5](0,-1.2)(2,-2.4){extension}
+\arrowLine(A)(O){1}
+\arrowLine(O)(3.0,0.0){1}
+\uput[l](-3,0.15){parallel rays of}
+\uput[l](-3,-0.15){light enter the lens}
+\uput[r](3,0.3){rays are spread out}
+\uput[r](3,0){as if they are coming}
+\uput[r](3,-0.3){from the same point}
+\end{pspicture}
+}
+\caption{The behaviour of parallel light rays entering either a converging or diverging lens.}
+\label{p:wsl:go11:l:rays}
+\end{center}
+\end{figure}
+
+\Definition{Lens}{A lens is any transparent material (e.g. glass) of an appropriate shape that can take parallel rays of incident light and either converge the rays to a point or diverge the rays from a point.}
+
+Some lenses will focus light rays to a single point. These lenses are called converging or convex lenses. Other lenses spread out the light rays so that it looks like they all come from the same point. These lenses are called diverging or concave lenses. Lenses change the direction of light rays by \textit{refraction}. They are designed so that the image appears in a certain place or as a certain size. Lenses are used in eyeglasses, cameras, microscopes, and telescopes. You also have lenses in your eyes!
+
+\Definition{Converging Lenses}{Converging lenses converge parallel rays of light and are thicker in the middle than at the edges.}
+\Definition{Diverging Lenses}{Diverging lenses diverge parallel rays of light and are thicker at the edges than in the middle.}
+
+Examples of converging and diverging lenses are shown in Figure~\ref{fig:lenses}.
+
+\begin{figure}[H]
+\centering
+\scalebox{0.8}{
+\begin{pspicture}(-2,-2)(6,2)
+%\psgrid[gridcolor=lightgray]
+\psset{fillcolor=lightgray,fillstyle=solid}
+
+\rput(0,0){
+\rput(1.5,0){\lens[lensGlass=true,drawing=false]}
+\uput[u](0.5,-2.2){converging lenses}
+\pscustom{
+\psarc[linewidth=2pt](0,0){1.5}{70}{290}
+\psarcn[linecolor=red](1,0){1.5}{240}{120}
+\closepath}}
+
+\rput(5,0){
+\rput(0,0){\lens[lensType=DVG,lensGlass=true, drawing=false]}
+\uput[u](-0.5,-2.2){diverging lenses}
+\pscustom[unit=0.25,linetype=1]{
+\psarc[linewidth=2pt](0,0){8.65}{132}{228}
+\psarcn[linecolor=red](-1.7,0){6.5}{260}{100}
+\closepath}}
+\end{pspicture}}
+\caption{Types of lenses}
+\label{fig:lenses}
+\end{figure}
+
+Before we study lenses in detail, there are a few important terms that must be defined. Figure~\ref{p:wsl:go11:l:properties} shows important lens properties:
+\begin{itemize}
+\item{The \textbf{principal axis} is the line which runs horizontally straight through the \textit{optical centre} of the lens. It is also sometimes called the \textit{optic axis}.}
+\item{The \textbf{optical centre} (O) of a convex lens is usually the centre point of the lens. The direction of all light rays which pass through the optical centre, remains unchanged.}
+\item{The \textbf{focus} or \textbf{focal point} of the lens is
+the position on the \textit{principal axis}
+where all light rays which run \textit{parallel} to the principal axis through the lens converge (come together) at a point. Since light can pass through the lens either from right to left or left to right, there is a focal point on each side of the lens ($F_{1}$ and $F_{2}$), at the same distance from the optical centre in each direction. (\textbf{Note:} the plural form of the word focus is \textit{foci}.)}
+\item{The \textbf{focal length} ($f$) is the distance between the \textit{optical centre} and the \textit{focal point}.}
+\end{itemize}
+
+\begin{figure}[H]
+\begin{center}
+\subfigure[converging lens]{\begin{pspicture}(-5,-2.5)(3,1.6)
+%\psgrid[gridcolor=lightgray]
+\psset{fillcolor=lightgray,fillstyle=solid}
+\rput(0,0){\lens[lensGlass=true,focus=2.0,AB=1.2,OA=-3,XO=0,xLeft=-3,xRight=3,drawing=false]}
+\psline[linewidth=0.5pt](xLeft)(xRight) %principal axis
+\rput[l](-5,0.5){Principal axis}
+\qdisk(F){1.5pt}
+\qdisk(F'){1.5pt}
+\qdisk(O){1.5pt}
+\uput[d](F){$F_{1}$}
+\uput[d](F'){$F_{2}$}
+\uput[d](O){O}
+\rput[l](-3,-1.0){Optical centre}
+\psline[linewidth=0.5pt](0,0)(-1.5,-0.8)
+\psline[linewidth=0.5pt](-2.8,0)(-3.3,0.3)
+\psline[arrowscale=1]{<->}(0,-1.7)(2,-1.7)
+\psline(0,-1.8)(0,-1.6)
+\rput[l](1,-2.0){$f$}
+\psline[arrowscale=1]{<->}(0,-1.7)(-2,-1.7)
+\psline(-2,-1.8)(-2,-1.6)
+\psline(2,-1.8)(2,-1.6)
+\rput[l](-1,-2.0){$f$}
+\end{pspicture}}
+\subfigure[diverging lens]{
+\begin{pspicture}(-5,-2.5)(3,1.6)
+\psset{fillcolor=lightgray,fillstyle=solid}
+%\psgrid
+\rput(0,0){\lens[lensType=DVG,lensGlass=true,focus=2.0,AB=1.2,OA=-3,XO=0,xLeft=-3,xRight=3,drawing=false]}
+\psline[linewidth=0.5pt](xLeft)(xRight)
+\qdisk(F){1.5pt}
+\qdisk(F'){1.5pt}
+\qdisk(O){1.5pt}
+\uput[d](F){$F_{1}$}
+\uput[d](F'){$F_{2}$}
+\uput[d](O){O}
+\rput[l](-3,-1.0){Optical centre}
+\psline[linewidth=0.5pt](0,0)(-1.5,-0.8)
+\rput[l](-5,0.5){Principal axis}
+\psline[linewidth=0.5pt](-2.8,0)(-3.3,0.3)
+\psline[linewidth=0.5pt](0,0)(-1.5,-0.8)
+\psline[linewidth=0.5pt](-2.8,0)(-3.3,0.3)
+\psline[arrowscale=1]{<->}(0,-1.7)(2,-1.7)
+\psline(0,-1.8)(0,-1.6)
+\rput[l](1,-2.0){$f$}
+\psline[arrowscale=1]{<->}(0,-1.7)(-2,-1.7)
+\psline(-2,-1.8)(-2,-1.6)
+\psline(2,-1.8)(2,-1.6)
+\rput[l](-1,-2.0){$f$}
+\end{pspicture}}
+\caption{Properties of lenses.}
+\label{p:wsl:go11:l:properties}
+\end{center}
+\end{figure}
+
+\subsection{Converging Lenses}
+We will only discuss double convex converging lenses as shown in Figure~\ref{p:wsl:go11:cl:convex}. Converging lenses are thinner on the outside and thicker on the inside.
+
+\begin{figure}[H]
+\begin{center}
+\scalebox{0.75}{
+\begin{pspicture}(0,-1.6)(4,1.6)
+%\psgrid
+\psset{unit=1.5}
+\pscustom[linestyle=none]{%
+\psarc(1,0){1}{60}{-60}
+\psarcn(2,0){1}{240}{120}
+\fill[fillstyle=none,fillcolor=white]
+\stroke[linestyle=dashed]
+\newpath
+\psarc(1,0){1}{-60}{60}
+\psarc(2,0){1}{120}{240}
+\fill[fillstyle=solid,fillcolor=lightgray]
+\stroke[linestyle=solid]
+\newpath
+\psarc(2,0){1}{240}{120}
+\stroke[linestyle=dashed]
+\psarcn(1,0){1}{60}{-60}
+\fill[fillstyle=none,fillcolor=white]
+}
+\end{pspicture}}
+\caption{A double convex lens is a converging lens.}
+\label{p:wsl:go11:cl:convex}
+\end{center}
+\end{figure}
+
+Figure~\ref{p:wsl:go11:cl:cl} shows a convex lens. Light rays traveling through a \textbf{convex} lens are bent \textbf{towards} the principal axis. For this reason, convex lenses are called \textbf{converging} lenses.
+
+\begin{figure}[H]
+\begin{center}
+\begin{pspicture}(-5,-2.5)(3,1.6)
+%\psgrid[gridcolor=lightgray]
+\psset{fillcolor=lightgray,fillstyle=solid}
+\rput(0,0){\lens[lensGlass=true,focus=2.0,AB=1.2,OA=-3,drawing=false]}
+%\PrincipalAxis(xLeft)(xRight) %principal axis
+\psline[linewidth=0.5pt](-4,0)(4,0)
+\qdisk(F){1.5pt}
+\qdisk(F'){1.5pt}
+\qdisk(O){1.5pt}
+\uput[d](F){$F_{1}$}
+\uput[d](F'){$F_{2}$}
+\uput[d](O){O}
+\rput[l](-5,0.5){Principal axis}
+\psline[linewidth=0.5pt](-2.8,0)(-3.3,0.3)
+\arrowLine(B)(I){1}
+\arrowLine(I)(F'){1}
+\arrowLine(F')(3,-0.6){1}
+\arrowLine(A)(O){1}
+\arrowLine(O)(F'){1}
+\arrowLine(F')(3.0,0.0){1}
+\arrowLine(-3,-1.2)(0,-1.2){1}
+\arrowLine(0,-1.2)(F'){1}
+\arrowLine(F')(3.0,0.6){1}
+\end{pspicture}
+\caption{Light rays bend towards each other or \textit{converge} when they travel through a convex lens. $F_{1}$ and $F_{2}$ are the foci of the lens.}
+\label{p:wsl:go11:cl:cl}
+\end{center}
+\end{figure}
+
+When an object is placed in front of a lens, the light rays coming from the object are refracted by the lens. An image of the object is produced at the point where the light rays intersect.
+The type of images created by a convex lens is dependent on the position of the object. We will examine the following cases:
+\begin{enumerate}
+\item the object is placed at a distance greater than $2f$ from the lens
+\item the object is placed at a distance equal to $2f$ from the lens
+\item the object is placed at a distance between $2f$ and $f$ from the lens
+\item the object is placed at a distance less than $f$ from the lens
+\end{enumerate}
+
+We examine the properties of the image in each of these cases by drawing ray diagrams. We can find the image by tracing the path of three light rays through the lens. Any two of these rays will show us the location of the image. The third ray is used to check that the location is correct.
+
+
+\Activity{Experiment}{Lenses A}
+{
+\Aim{To determine the focal length of a convex lens.}
+
+\Method{
+\begin{enumerate}
+\item Using a distant object from outside, adjust the position of the convex lens so that it gives the smallest possible focus on a sheet of paper that is held parallel to the lens.
+\item Measure the distance between the lens and the sheet of paper as accurately as possible.
+\end{enumerate}
+}
+
+\Results{
+The focal length of the lens is \underline{\hspace{3cm}} cm
+}
+}
+
+\Activity{Experiment}{Lenses B}{
+\Aim{To investigate the position, size and nature of the image formed by a convex lens.}
+
+\Method{
+\begin{enumerate}
+\item Set up a candle, and the lens from Experiment Lenses A in its holder and the screen in a straight line on the metre rule. Make sure the lens holder is on the 50 cm mark.
+
+From your knowledge of the focal length of your lens, note where $f$ and $2f$ are on both sides of the lens.
+
+\item Using the position indicated on the table below, start with the candle at a position that is greater than $2f$ and adjust the position of the screen until a sharp focused image is obtained. Note that there are two positions for which a sharp focused image will not be obtained on the screen. When this is so, remove the screen and look at the candle through the lens.
+
+\item Fill in the relevant information on the table below
+\end{enumerate}
+
+\begin{figure}
+\begin{center}
+\scalebox{1} % Change this value to rescale the drawing.
+
+\begin{pspicture}(0,-1.6)(7.96375,1.58)
+\psframe[linewidth=0.04,dimen=outer](6.345625,-1.0)(0.045625,-1.14)
+\psframe[linewidth=0.04,dimen=outer](5.045625,1.58)(4.905625,-1.04)
+\psframe[linewidth=0.03,dimen=outer](3.285625,-0.8)(3.045625,-1.04)
+\rput{-270.0}(3.745625,-4.371373){\psarc[linewidth=0.04](4.0584993,-0.31287417){1.02}{61.189205}{118.44293}}
+\rput{-270.0}(1.965625,-2.5913732){\psarc[linewidth=0.04](2.2784991,-0.31287417){1.02}{241.55707}{298.8108}}
+\psframe[linewidth=0.04,dimen=outer](1.165625,-0.6)(0.985625,-1.04)
+\psline[linewidth=0.04cm](1.065625,-0.62)(1.045625,-0.36)
+\psline[linewidth=0.04cm](3.305625,-1.58)(3.305625,-1.58)
+\psbezier[linewidth=0.04](1.064882,-0.16)(1.085625,-0.18)(0.93326825,-0.23217094)(0.9297119,-0.41608548)(0.92615557,-0.6)(1.0320028,-0.5351111)(1.0758418,-0.5351111)(1.1196808,-0.5351111)(1.1817861,-0.5928205)(1.2037055,-0.44494018)(1.225625,-0.29705983)(1.1122098,-0.33779016)(1.064882,-0.16360684)
+\rput(1.0784374,0.305){\scriptsize Candle on same }
+\rput(1.0628124,0.045){\scriptsize level as lens}
+\rput(3.176875,0.725){\scriptsize lens and}
+\rput(3.2367187,0.465){\scriptsize lens holder}
+\rput(3.1776562,-1.375){\scriptsize 50 cm mark}
+\rput(6.1790624,1.045){\scriptsize screen that can}
+\rput(6.086875,0.805){\scriptsize be moved}
+\rput(7.16125,-1.075){\scriptsize metre stick}
+\end{pspicture}
+\caption{Experimental setup for investigation.}
+\end{center}
+\end{figure}
+}
+
+
+\Results{
+
+\begin{tabular}{*5{|p{2.4cm}}|}
+\hline
+Relative position of object & Relative position of image & Image upright or inverted & Relative size of image & Nature of \linebreak image \\
+\hline
+{\footnotesize Beyond $2f$} \underline{\hspace{1cm}} {\footnotesize cm} &&&&\\
+\hline
+{\footnotesize At $2f$} &&&&\\ \underline{\hspace{1cm}} {\footnotesize cm}&&&&\\
+\hline
+{\footnotesize Between $2f$ and $f$} &&&&\\ \underline{\hspace{1cm}} {\footnotesize cm}&&&&\\
+\hline
+{\footnotesize At $f$}&&&&\\ \underline{\hspace{1cm}} {\footnotesize cm}&&&&\\
+\hline
+{\footnotesize Between $f$ and the lens} &&&&\\ \underline{\hspace{1cm}} {\footnotesize cm}&&&&\\
+\hline
+\end{tabular}\\
+
+\newpage
+\textbf{QUESTIONS:}
+\begin{enumerate}
+\item When a convex lens is being used:
+
+\begin{enumerate}
+\item A real inverted image is formed when an object is placed \underline{\hspace{3cm}}
+\item No image is formed when an object is placed \underline{\hspace{3cm}}
+\item An upright, enlarged, virtual image is formed when an object is placed \underline{\hspace{3cm}}
+\end{enumerate}
+
+\item Write a conclusion for this investigation.
+\end{enumerate}
+}
+}
+
+\Activity{Experiment}{Lenses C}{
+\Aim{To determine the mathematical relationship between $d_0, d_i$ and $f$ for a lens.}
+
+\Method{
+\begin{enumerate}
+\raggedright
+\item Using the same arrangement as in Experiment Lenses B, place the object (candle) at the distance indicated from the lens.
+\item Move the screen until a clear sharp image is obtained. Record the results on the table below.
+\end{enumerate}
+}
+
+\Results{
+{\footnotesize $f$ = focal length of lens}\\
+{\footnotesize $d_0$ = object distance}\\
+{\footnotesize $d_i$ = image distance}\\
+
+\begin{tabular}{*5{|p{2.4cm}}|}
+\hline
+{Object distance} &
+{Image distance} &
+{$\frac{1}{d_0}$} &
+{$\frac{1}{d_i}$} &
+{$\frac{1}{d_0}+\frac{1}{d_i}$} \\
+{$d_0$ (cm)} &
+{$d_i$ (cm)} &
+{(cm$^{-1}$)} &
+{(cm$^{-1}$)} &
+{(cm$^{-1}$)} \\
+
+\hline
+25,0 &&&&\\
+\hline
+20,0 &&&&\\
+\hline
+18,0 &&&&\\
+\hline
+15,0 &&&&\\
+\hline
+&&&& Average =  \underline{\hspace{1cm}}\\
+\hline
+\end{tabular}
+
+\begin{eqnarray*}
+\mbox{Reciprocal of average} = \left(\frac{1}{\frac{1}{d_0} + \frac{1}{d_i} }\right) &=& \mbox{\underline{\hspace{3cm}} (a)}\\
+\mbox{Focal length of lens} &=& \mbox{\underline{\hspace{3cm}} (b)}
+\end{eqnarray*}
+
+\textbf{QUESTIONS:}
+
+\begin{enumerate}
+\raggedright
+\item Compare the values for (a) and (b) above and explain any similarities or differences
+\item What is the name of the mathematical relationship between $d_0$, $d_i$ and $f$?
+\item Write a conclusion for this part of the investigation.
+\end{enumerate}
+}
+}
+
+\textbf{Drawing Ray Diagrams for Converging Lenses}
+
+Ray diagrams are normally drawn using three rays. The three rays are labelled $R_{1}$, $R_{2}$ and $R_{3}$. The ray diagrams that follow will use this naming convention.
+\begin{enumerate}
+\item{The first ray ($R_{1}$) travels from the object to the lens \textit{parallel} to the principal axis. This ray is bent by the lens and travels through the \textbf{focal point}.}
+\item{\textit{Any} ray travelling parallel to the principal axis is bent through the focal point.}
+\item{If a light ray passes through a focal point \textit{before} it enters the lens, then it will leave the lens \textit{parallel} to the principal axis. The second ray ($R_2$) is therefore drawn to pass through the focal point before it enters the lens.}
+\item{A ray that travels through the centre of the lens does not change direction. The third ray ($R_3$) is drawn through the centre of the lens.}
+\item{The point where all three of the rays ($R_{1}$, $R_{2}$ and $R_{3}$) intersect is the \textbf{image} of the point where they all started. The image will form at this point.}
+\end{enumerate}
+
+\Tip{In ray diagrams, lenses are drawn like this:\\
+\begin{minipage}{0.2\textwidth}
+Convex lens:
+\end{minipage}
+\begin{minipage}{0.2\textwidth}
+\scalebox{1}
+{
+\begin{pspicture}(0,-1.02)(0.02,1.02)
+\psline[linewidth=0.04cm,arrowsize=0.1cm 2.0,arrowlength=1.0,arrowinset=0.4]{<->}(0.0,1.0)(0.0,-1.0)
+\end{pspicture}
+}
+\end{minipage}
+\begin{minipage}{0.2\textwidth}
+Concave lens:
+\end{minipage}
+\begin{minipage}{0.2\textwidth}
+\scalebox{1}
+{
+\begin{pspicture}(0,-1.02)(0.02,1.02)
+\psline[linewidth=0.04cm,arrowsize=0.1cm 2.0,arrowlength=1.0,arrowinset=0.4]{>-<}(0.0,1.0)(0.0,-1.0)
+\end{pspicture}
+}\\
+\end{minipage}}
+
+\subsubsection{\underline{CASE 1:}\\Object placed at a distance greater than $2f$ from the lens}
+
+\begin{figure}[h]
+\begin{center}
+\begin{pspicture}(-6,-3)(5,2)
+%\psgrid[gridcolor=gray]
+\rput(0,0){
+\lens[lensGlass=true,lensHeight=4,focus=2,AB=1,OA=-5,drawing=false]}
+\PrincipalAxis(-6,0)(5,0)
+\oi{->}(A)(B)
+\oi{->}(A')(B')
+\qdisk(F){1.5pt}
+\qdisk(F'){1.5pt}
+\qdisk(O){1.5pt}
+\uput[d](A){Object}
+\uput[u](A'){Image}
+\uput[d](F){$F_{1}$}
+\uput[u](F'){$F_{2}$}
+\uput[d](O){O}
+
+% Draw rays with differing styles.
+% Ray parallel to principal axis
+\arrowLine(B)(I){1}
+\arrowLine(I)(B'){1}
+\psOutLine[length=1.5](I)(B'){extension}
+\uput[ul](I){$R_{1}$}
+
+% Ray through optical center
+\arrowLine[linestyle=dotted](B)(O){1}
+\arrowLine[linestyle=dotted](O)(B'){1}
+\psOutLine[length=1.5,linestyle=dotted](O)(B'){extension}
+\uput{10pt}[ul](O){$R_{3}$}
+
+% Ray through focus
+\arrowLine[linestyle=dashed](B)(I'){1}
+\arrowLine[linestyle=dashed](I')(B'){1}
+\psOutLine[length=1.5,linestyle=dashed](I')(B'){extension}
+\uput[l](I'){$R_{2}$}
+
+\pcline{<->}(-2,-2.2)(0,-2.2)
+\bput{:U}{$f$}
+\pcline{<->}(-4,-2.2)(-2,-2.2)
+\bput{:U}{$f$}
+\pcline{<->}(0,-2.2)(2,-2.2)
+\bput{:U}{$f$}
+\pcline{<->}(2,-2.2)(4,-2.2)
+\bput{:U}{$f$}
+\end{pspicture}
+\caption{An object is placed at a distance greater than $2f$ away from the converging lens. Three rays are drawn to locate the image, which is real, and smaller than the object and inverted.}
+\label{p:wsl:go11:cl:f1}
+\end{center}
+\end{figure}
+
+We can locate the position of the image by drawing our three rays. $R_{1}$ travels from the object to the lens parallel to the principal axis, is bent by the lens and then travels through the focal point. $R_{2}$ passes through the focal point before it enters the lens and therefore must leave the lens parallel to the principal axis. $R_{3}$ travels through the center of the lens and does not change direction. The point where $R_{1}$, $R_{2}$ and $R_{3}$ intersect is the image of the point where they all started.
+
+The image of an object placed at a distance greater than $2f$ from the lens is upside down or \textit{inverted}. This is because the rays which began at the top of the object, \textit{above} the principal axis, after passing through the lens end up \textit{below} the principal axis. The image is called a \textbf{real image} because it is on the opposite side of the lens to the object and you can trace all the light rays directly from the image back to the object.
+
+The image is also smaller than the object and is located closer to the lens than the object.
+
+\Tip{In reality, light rays come from \textit{all} points along the length of the object. In ray diagrams we only draw three rays (all starting at the top of the object) to keep the diagram clear and simple.}
+
+\subsubsection{\underline{CASE 2:}\\Object placed at a distance equal to $2f$ from the lens}
+
+
+\begin{figure}[h]
+\begin{center}
+\begin{pspicture}(-5,-3)(6,2)
+%\psgrid[gridcolor=gray]
+\rput(0,0){
+\lens[lensGlass=true,lensHeight=4,focus=2,AB=1,OA=-4,drawing=false]}
+\PrincipalAxis(-5,0)(6,0)
+\oi{->}(A)(B)
+\oi{->}(A')(B')
+\qdisk(F){1.5pt}
+\qdisk(F'){1.5pt}
+\qdisk(O){1.5pt}
+\uput[d](A){Object}
+\uput[u](A'){Image}
+\uput[d](F){$F_{1}$}
+\uput[u](F'){$F_{2}$}
+\uput[d](O){O}
+
+% Draw rays with differing styles.
+% Ray parallel to principal axis
+\arrowLine(B)(I){1}
+\arrowLine(I)(F'){1}
+\psline(F')(B')
+\psOutLine[length=1.5](I)(B'){extension}
+\uput[ul](I){$R_{1}$}
+
+% Ray through optical center
+\arrowLine[linestyle=dotted](B)(B'){2}
+\psOutLine[length=1.5,linestyle=dotted](O)(B'){extension}
+\uput{10pt}[ul](O){$R_{3}$}
+
+% Ray through focus
+\psline[linestyle=dashed](B)(F)
+\arrowLine[linestyle=dashed](F)(I'){1}
+\arrowLine[linestyle=dashed](I')(B'){1}
+\psOutLine[length=1.5,linestyle=dashed](I')(B'){extension}
+\uput[l](I'){$R_{2}$}
+
+\pcline{<->}(-2,-2.2)(0,-2.2)
+\bput{:U}{$f$}
+\pcline{<->}(-4,-2.2)(-2,-2.2)
+\bput{:U}{$f$}
+\pcline{<->}(0,-2.2)(2,-2.2)
+\bput{:U}{$f$}
+\pcline{<->}(2,-2.2)(4,-2.2)
+\bput{:U}{$f$}
+\end{pspicture}
+\caption{An object is placed at a distance equal to $2f$ away from the converging lens. Three rays are drawn to locate the image, which is real, the same size as the object and inverted.}
+\label{p:wsl:go11:cl:f2}
+\end{center}
+\end{figure}
+
+We can locate the position of the image by drawing our three rays. $R_{1}$ travels from the object to the lens parallel to the principal axis and is bent by the lens and then travels through the focal point. $R_{2}$ passes through the focal point before it enters the lens and therefore must leave the lens parallel to the principal axis. $R_{3}$ travels through the center of the lens and does not change direction. The point where $R_{1}$, $R_{2}$ and $R_{3}$ intersect is the image of the point where they all started.
+
+The image of an object placed at a distance equal to $2f$ from the lens is upside down or \textit{inverted}. This is because the rays which began at the top of the object, \textit{above} the principal axis, after passing through the lens end up \textit{below} the principal axis. The image is called a \textbf{real image} because it is on the opposite side of the lens to the object and you can trace all the light rays directly from the image back to the object.
+
+The image is the same size as the object and is located at a distance $2f$ away from the lens.
+
+
+\subsubsection{\underline{CASE 3:}\\Object placed at a distance between $2f$ and $f$ from the lens}
+
+\begin{figure}[h]
+\begin{center}
+\begin{pspicture}(-4,-3)(7,2)
+%\psgrid[gridcolor=gray]
+\rput(0,0){
+\lens[lensGlass=true,lensHeight=4,focus=2,AB=1,OA=-3,drawing=false]}
+\PrincipalAxis(-4,0)(7,0)
+\oi{->}(A)(B)
+\oi{->}(A')(B')
+\qdisk(F){1.5pt}
+\qdisk(F'){1.5pt}
+\qdisk(O){1.5pt}
+\uput[d](A){Object}
+\uput[u](A'){Image}
+\uput[d](F){$F_{1}$}
+\uput[u](F'){$F_{2}$}
+\uput[d](O){O}
+
+% Draw rays with differing styles.
+% Ray parallel to principal axis
+\arrowLine(B)(I){1}
+\arrowLine(I)(B'){1}
+\psOutLine[length=1.5](I)(B'){extension}
+\uput[ul](I){$R_{1}$}
+
+% Ray through optical center
+\arrowLine[linestyle=dotted](B)(O){1}
+\arrowLine[linestyle=dotted](O)(B'){1}
+\psOutLine[length=1.5,linestyle=dotted](O)(B'){extension}
+\uput{10pt}[ul](O){$R_{3}$}
+
+% Ray through focus
+\psline[linestyle=dashed](B)(F)
+\arrowLine[linestyle=dashed](F)(I'){1}
+\arrowLine[linestyle=dashed](I')(B'){1}
+\psOutLine[length=1.5,linestyle=dashed](I')(B'){extension}
+\uput[l](I'){$R_{2}$}
+
+\pcline{<->}(-2,-2.2)(0,-2.2)
+\bput{:U}{$f$}
+\pcline{<->}(-4,-2.2)(-2,-2.2)
+\bput{:U}{$f$}
+\pcline{<->}(0,-2.2)(2,-2.2)
+\bput{:U}{$f$}
+\pcline{<->}(2,-2.2)(4,-2.2)
+\bput{:U}{$f$}
+\end{pspicture}
+\caption{An object is placed at a distance between $2f$ and $f$ away from the converging lens. Three rays are drawn to locate the image, which is real, larger than the object and inverted.}
+\label{p:wsl:go11:cl:f3}
+\end{center}
+\end{figure}
+
+We can locate the position of the image by drawing our three rays. $R_{1}$ travels from the object to the lens parallel to the principal axis and is bent by the lens and then travels through the focal point. $R_{2}$ passes through the focal point before it enters the lens and therefore must leave the lens parallel to the principal axis. $R_{3}$ travels through the center of the lens and does not change direction. The point where $R_{1}$, $R_{2}$ and $R_{3}$ intersect is the image of the point where they all started.
+
+The image of an object placed at a distance between $2f$ and $f$ from the lens is upside down or \textit{inverted}. This is because the rays which began at the top of the object, \textit{above} the principal axis, after passing through the lens end up \textit{below} the principal axis. The image is called a real image because it is on the opposite side of the lens to the object and you can trace all the light rays directly from the image back to the object.
+
+The image is larger than the object and is located at a distance greater than $2f$ away from the lens.
+
+\subsubsection{\underline{CASE 4:}\\Object placed at a distance less than $f$ from the lens}
+
+\begin{figure}[h]
+\begin{center}
+\begin{pspicture}(-5,-4)(3,4)
+%\psgrid[gridcolor=gray]
+\rput(0,0){
+\lens[lensGlass=true,lensHeight=6,focus=2,AB=1,OA=-1.15,drawing=false]}
+\PrincipalAxis(-5,0)(3,0)
+\oi{->}(A)(B)
+\oi[linestyle=dashed]{->}(A')(B')
+\qdisk(F){1.5pt}
+\qdisk(F'){1.5pt}
+\qdisk(O){1.5pt}
+\uput[d](A){Object}
+\uput[d](A'){Image}
+\uput[d](F){$F_{1}$}
+\uput[u](F'){$F_{2}$}
+\uput[d](O){O}
+
+% Draw rays with differing styles.
+% Ray parallel to principal axis
+\arrowLine(B)(I){1}
+\arrowLine(I)(B'){1}
+\psline[linecolor=lightgray](F')(I)
+\psOutLine[length=1.5](I)(B'){extension}
+\uput[ul](extension){$R_{1}$}
+
+% Ray through optical center
+\arrowLine[linestyle=dotted](B)(B'){1}
+\psOutLine[length=1.5,linestyle=dotted](O)(B'){extension}
+\psline[linestyle=dotted,linecolor=lightgray](O)(B)
+\uput[ul](extension){$R_{3}$}
+
+% Ray through focus
+\arrowLine[linestyle=dashed](B)(I'){1}
+\arrowLine[linestyle=dashed](I')(B'){1}
+\psline[linestyle=dashed,linecolor=lightgray](F)(B)
+\psOutLine[length=1.5,linestyle=dashed](I')(B'){extension}
+\uput[l](extension){$R_{2}$}
+
+\pcline{<->}(-2,-3.2)(0,-3.2)
+\bput{:U}{$f$}
+\pcline{<->}(-4,-3.2)(-2,-3.2)
+\bput{:U}{$f$}
+\pcline{<->}(0,-3.2)(2,-3.2)
+\bput{:U}{$f$}
+\end{pspicture}
+\caption{An object is placed at a distance less than $f$ away from the converging lens. Three rays are drawn to locate the image, which is virtual, larger than the object and upright.}
+\label{p:wsl:go11:cl:f4}
+\end{center}
+\end{figure}
+
+We can locate the position of the image by drawing our three rays. $R_{1}$ travels from the object to the lens parallel to the principal axis and is bent by the lens and then travels through the focal point. $R_{2}$ passes through the focal point before it enters the lens and therefore must leave the lens parallel to the principal axis. $R_{3}$ travels through the center of the lens and does not change direction. The point where $R_{1}$, $R_{2}$ and $R_{3}$ intersect is the image of the point where they all started.
+
+The image of an object placed at a distance less than $f$ from the lens is upright. The image is called a \textbf{virtual image} because it is on the same side of the lens as the object and you \textit{cannot} trace all the light rays directly from the image back to the object.
+
+The image is larger than the object and is located further away from the lens than the object.
+
+\Extension{The thin lens equation and magnification}{
+
+\textbf{The Thin Lens Equation}
+
+We can find the position of the image of a lens mathematically as there is a mathematical relation between the object distance, image distance, and focal length. The equation is:
+\nequ{\frac{1}{f} = \frac{1}{d_o} + \frac{1}{d_i}}
+where $f$ is the focal length, $d_o$ is the object distance and $d_i$ is the image distance.
+
+The object distance $d_o$ is the distance from the object to the lens. $d_o$ is positive if the object is on the same side of the lens as the light rays enter the lens. This should make sense: we expect the light rays to travel from the object to the lens. The image distance $d_i$ is the distance from the lens to the image. Unlike mirrors, which reflect light back, lenses refract light through them. We expect to find the image on the same side of the lens as the light leaves the lens. If this is the case, then $d_i$ is \textit{positive} and the image is \textbf{real} (see Figure~\ref{p:wsl:go11:cl:f3}). Sometimes the image will be on the same side of the lens as the light rays enter the lens. Then $d_i$ is \textit{negative} and the image is \textbf{virtual} (Figure~\ref{p:wsl:go11:cl:f4}). If we know any two of the three quantities above, then we can use the Thin Lens Equation to solve for the third quantity.\\
+
+\textbf{Magnification}
+
+It is possible to calculate the magnification of an image. The magnification is how much \textit{bigger} or \textit{smaller}
+the image is than the object.
+\nequ{m = -\frac{d_i}{d_o}}
+where $m$ is the magnification, $d_o$ is the object distance and $d_i$ is the image distance.
+
+If $d_i$ and $d_o$ are both positive, the magnification is negative. This means the image is inverted, or upside down. If $d_i$ is negative and $d_o$ is positive, then the image is not inverted, or right side up. If the absolute value of the magnification is \textit{greater than one}, the image is \textit{larger} than the object. For example, a magnification of -2 means the image is \textit{inverted} and \textit{twice as big} as the object.}
+
+\begin{wex}{Using the lens equation}
+{
+An object is placed 6 cm from a converging lens with a focal point of 4 cm. \begin{enumerate} \item Calculate the position of the image \item Calculate the magnification of the lens \item Identify three properties of the image \end{enumerate}
+}%q
+{
+\westep{Identify what is given and what is being asked}
+\begin{eqnarray*}
+f &=& 4~\rm{cm} \\
+d_{o} &=& 6~\rm{cm} \\
+d_{i} &=& ? \\
+m &=& ?
+\end{eqnarray*}
+Properties of the image are required.
+
+\westep{Calculate the image distance ($d_{i}$)}
+\begin{eqnarray*}
+\frac{1}{f} &=& \frac{1}{d_{o}} + \frac{1}{d_{i}}\\
+\frac{1}{4} &=& \frac{1}{6} + \frac{1}{d_{i}} \\
+\frac{1}{4}-\frac{1}{6} &=& \frac{1}{d_{i}} \\
+\frac{3-2}{12} &=& \frac{1}{d_{i}} \\
+d_{i} &=& 12~\rm{cm}
+\end{eqnarray*}
+
+\westep{Calculate the magnification}
+\begin{eqnarray*}
+m &=& -\frac{d_{i}}{d_{o}} \\
+&=& -\frac{12}{6} \\
+&=& -2
+\end{eqnarray*}
+
+\westep{Write down the properties of the image}
+The image is real, $d_{i}$ is positive, inverted (because the magnification is negative) and enlarged (magnification is $>$ 1)
+}%a
+\end{wex}
+
+\begin{wex}{Locating the image position of a convex lens: I}
+{An object is placed 5~cm to the left of a converging lens which has a focal length of 2,5~cm.
+\begin{enumerate}
+\item{What is the position of the image?}
+\item{Is the image real or virtual?}
+\end{enumerate}}
+{\westep{Set up the ray diagram}
+Draw the lens, the object and mark the focal points.
+\begin{center}
+\begin{pspicture}(-5.6,-2)(6.6,2)
+%\psgrid[gridcolor=gray]
+\rput(0,0){
+\lens[lensGlass=true,lensHeight=4,focus=2.5,AB=1,OA=-5,drawing=false]}
+\PrincipalAxis(-5,0)(6,0)
+\oi{->}(A)(B)
+\qdisk(F){1.5pt}
+\qdisk(F'){1.5pt}
+\qdisk(O){1.5pt}
+\uput[d](A){Object}
+\uput[d](F){$F_{1}$}
+\uput[u](F'){$F_{2}$}
+\uput[d](O){O}
+\end{pspicture}
+\end{center}
+
+\westep{Draw the three rays}
+\begin{itemize}
+\item $R_{1}$ goes from the top of the object parallel to the principal axis, through the lens and through the focal point $F_{2}$ on the other side of the lens.
+\item $R_{2}$ goes from the top of the object through the focal point $F_{1}$, through the lens and out parallel to the principal axis.
+\item $R_{3}$ goes from the top of the object through the optical centre with its direction unchanged.
+\end{itemize}
+
+\begin{center}
+\begin{pspicture}(-5.6,-2)(6.6,2)
+%\psgrid[gridcolor=gray]
+\rput(0,0){
+\lens[lensGlass=true,lensHeight=4,focus=2.5,AB=1,OA=-5,drawing=false]}
+\PrincipalAxis(-5,0)(6,0)
+\oi{->}(A)(B)
+\qdisk(F){1.5pt}
+\qdisk(F'){1.5pt}
+\qdisk(O){1.5pt}
+\uput[d](A){Object}
+\uput[d](F){$F_{1}$}
+\uput[u](F'){$F_{2}$}
+\uput[d](O){O}
+
+% Draw rays with differing styles.
+% Ray parallel to principal axis
+\arrowLine(B)(I){1}
+\arrowLine(I)(F'){1}
+\psline(F')(B')
+\psOutLine[length=1.5](I)(B'){extension}
+\uput[ul](I){$R_{1}$}
+
+% Ray through optical center
+\arrowLine[linestyle=dotted](B)(B'){2}
+\psOutLine[length=1.5,linestyle=dotted](O)(B'){extension}
+\uput{10pt}[ul](O){$R_{3}$}
+
+% Ray through focus
+\arrowLine[linestyle=dashed](F)(I'){1}
+\psline[linestyle=dashed](B)(F)
+\arrowLine[linestyle=dashed](I')(B'){1}
+\psOutLine[length=1.5,linestyle=dashed](I')(B'){extension}
+\uput[l](I'){$R_{2}$}
+\end{pspicture}
+\end{center}
+
+\westep{Find the image}
+The image is at the place where all the rays intersect. Draw the image.
+
+\begin{center}
+\begin{pspicture}(-5.6,-2)(6.6,2)
+%\psgrid[gridcolor=gray]
+\rput(0,0){
+\lens[lensGlass=true,lensHeight=4,focus=2.5,AB=1,OA=-5,drawing=false]}
+\PrincipalAxis(-5,0)(6,0)
+\oi{->}(A)(B)
+\oi{->}(A')(B')
+\qdisk(F){1.5pt}
+\qdisk(F'){1.5pt}
+\qdisk(O){1.5pt}
+\uput[d](A){Object}
+\uput[u](A'){Image}
+\uput[d](F){$F_{1}$}
+\uput[u](F'){$F_{2}$}
+\uput[d](O){O}
+
+% Draw rays with differing styles.
+% Ray parallel to principal axis
+\arrowLine(B)(I){1}
+\arrowLine(I)(F'){1}
+\psline(F')(B')
+\psOutLine[length=1.5](I)(B'){extension}
+
+% Ray through optical center
+\arrowLine[linestyle=dotted](B)(B'){2}
+\psOutLine[length=1.5,linestyle=dotted](O)(B'){extension}
+
+% Ray through focus
+\arrowLine[linestyle=dashed](F)(I'){1}
+\psline[linestyle=dashed](B)(F)
+\arrowLine[linestyle=dashed](I')(B'){1}
+\psOutLine[length=1.5,linestyle=dashed](I')(B'){extension}
+\end{pspicture}
+\end{center}
+
+\westep{Measure the distance between the lens and the image}
+The image is 5~cm away from the lens, on the opposite side of the lens to the object.
+
+\westep{Is the image virtual or real?}
+Since the image is on the opposite side of the lens to the object, the image is real.}
+\end{wex}
+
+\begin{wex}{Locating the image position of a convex lens: II}
+{An object, 1~cm high, is placed 2~cm to the left of a converging lens which has a focal length of 3,0~cm. The image is found also on the left side of the lens.
+\begin{enumerate}
+\item{Is the image real or virtual?}
+\item{What is the position and height of the image?}
+\end{enumerate}}
+{\westep{Draw the picture to set up the problem}
+Draw the lens, principal axis, focal points and the object.
+\begin{center}
+\begin{pspicture}(-8,-3)(3.2,4.2)
+%\psgrid[gridcolor=gray]
+\rput(0,0){
+\lens[lensGlass=true,lensHeight=6,focus=3,AB=1,OA=-2,drawing=false]}
+\PrincipalAxis(-8,0)(3.2,0)
+\oi{->}(A)(B)
+\qdisk(F){1.5pt}
+\qdisk(F'){1.5pt}
+\qdisk(O){1.5pt}
+\uput[d](A){Object}
+\uput[d](F){$F_{1}$}
+\uput[u](F'){$F_{2}$}
+\uput[d](O){O}
+\end{pspicture}
+\end{center}
+
+\westep{Draw the three rays to locate image}
+\begin{itemize}
+\item $R_{1}$ goes from the top of the object parallel to the principal axis, through the lens and through the focal point $F_{2}$ on the other side of the lens.
+\item $R_{2}$ is the light ray which should go through the focal point $F_{1}$ but the object is placed \textit{after} the focal point! This is not a problem, just trace the line from the focal point $F_{1}$, through the top of the object, to the lens. This ray then leaves the lens parallel to the principal axis.
+\item $R_{3}$ goes from the top of the object through the optical centre with its direction unchanged.
+\item Do not write $R_{1}$, $R_{2}$ and $R_{3}$ on your diagram, otherwise it becomes too cluttered.
+\item Since the rays do not intersect on the right side of the lens, we need to trace them backwards to find the place where they do come together (these are the light gray lines). Again, this is the position of the image.
+\end{itemize}
+
+\begin{center}
+\begin{pspicture}(-8,-3)(3.2,4.2)
+%\psgrid[gridcolor=gray]
+\rput(0,0){
+\lens[lensGlass=true,lensHeight=6,focus=3,AB=1,OA=-2,drawing=false]}
+\PrincipalAxis(-8,0)(3.2,0)
+\oi{->}(A)(B)
+\qdisk(F){1.5pt}
+\qdisk(F'){1.5pt}
+\qdisk(O){1.5pt}
+\uput[d](A){Object}
+\uput[d](F){$F_{1}$}
+\uput[u](F'){$F_{2}$}
+\uput[d](O){O}
+
+% Draw rays with differing styles.
+% Ray parallel to principal axis
+\arrowLine(B)(I){1}
+\arrowLine(I)(B'){1}
+\psline[linecolor=lightgray](F')(I)
+\psOutLine[length=1.5](I)(B'){extension}
+\uput[ul](extension){$R_{1}$}
+
+% Ray through optical center
+\arrowLine[linestyle=dotted](B)(B'){1}
+\psOutLine[length=1.5,linestyle=dotted](O)(B'){extension}
+\psline[linestyle=dotted,linecolor=lightgray](O)(B)
+\uput[u](extension){$R_{3}$}
+
+% Ray through focus
+\arrowLine[linestyle=dashed](B)(I'){1}
+\arrowLine[linestyle=dashed](I')(B'){1}
+\psline[linestyle=dashed,linecolor=lightgray](F)(B)
+\psOutLine[length=1.5,linestyle=dashed](I')(B'){extension}
+\uput[dl](extension){$R_{2}$}
+\end{pspicture}
+\end{center}
+
+\westep{Draw the image}
+
+\begin{center}
+\begin{pspicture}(-8,-3)(3.2,4.2)
+%\psgrid[gridcolor=gray]
+\rput(0,0){
+\lens[lensGlass=true,lensHeight=6,focus=3,AB=1,OA=-2,drawing=false]}
+\PrincipalAxis(-8,0)(3.2,0)
+\oi{->}(A)(B)
+\oi{->}(A')(B')
+\qdisk(F){1.5pt}
+\qdisk(F'){1.5pt}
+\qdisk(O){1.5pt}
+\uput[d](A){Object}
+\uput[d](A'){Image}
+\uput[d](F){$F_{1}$}
+\uput[u](F'){$F_{2}$}
+\uput[d](O){O}
+
+% Draw rays with differing styles.
+% Ray parallel to principal axis
+\arrowLine(B)(I){1}
+\arrowLine(I)(B'){1}
+\psline[linecolor=lightgray](F')(I)
+\psOutLine[length=1.5](I)(B'){extension}
+
+% Ray through optical center
+\arrowLine[linestyle=dotted](B)(B'){1}
+\psOutLine[length=1.5,linestyle=dotted](O)(B'){extension}
+\psline[linestyle=dotted,linecolor=lightgray](O)(B)
+
+% Ray through focus
+\arrowLine[linestyle=dashed](B)(I'){1}
+\arrowLine[linestyle=dashed](I')(B'){1}
+\psline[linestyle=dashed,linecolor=lightgray](F)(B)
+\psOutLine[length=1.5,linestyle=dashed](I')(B'){extension}
+\end{pspicture}
+\end{center}
+
+\westep{Measure distance to image}
+The image is 6~cm away from the lens, on the same side as the object.
+
+\westep{Measure the height of the image}
+The image is 3~cm high.
+
+\westep{Is image real or virtual?}
+Since the image is on the same side of the lens as the object, the image is virtual.}
+\end{wex}
+
+\Exercise{Converging Lenses}{
+\begin{enumerate}
+\item Which type of lens can be used as a magnifying glass? Draw a diagram to show how it works. An image of the sun is formed at the principal focus of a magnifying glass.
+\item In each case state whether a real or virtual image is formed:
+\begin{enumerate}
+\item Much further than $2f$
+\item Just further than $2f$
+\item At $2f$
+\item Between $2f$ and $f$
+\item At $f$
+\item Between $f$ and 0
+\end{enumerate}
+Is a virtual image always inverted?
+\item An object stands 50~mm from a lens (focal length 40~mm). Draw an accurate sketch to determine the position of the image. Is it enlarged or shrunk; upright or inverted?
+\item Draw a scale diagram (scale: 1~cm~=~50~mm) to find the position of the image formed by a convex lens with a focal length of 200~mm. The distance of the object is 100~mm and the size of the object is 50~mm. Determine whether the image is enlarged or shrunk. What is the height of the image? What is the magnification?
+\item An object, 20~mm high, is 80~mm from a convex lens with focal length 50~mm. Draw an accurate scale diagram and find the position and size of the image, and hence the ratio between the image size and object size.
+\item An object, 50~mm high, is placed 100~mm from a convex lens with a focal length of 150~mm. Construct an accurate ray diagram to determine the nature of the image, the size of the image and the magnification. Check your answer for the magnification by using a calculation.
+\item What would happen if you placed the object right at the focus of a converging lens? Hint: Draw the picture.
+\end{enumerate}
+\practiceinfo
+
+\begin{tabular}[h]{cccccc}
+(1.) aaa & (2.) aaa & (3.) aaa & (4.) aaa & (5.) aaa & (6.) aaa & (7.) aaa & 
+ \end{tabular}
+}
+
+\subsection{Diverging Lenses}
+We will only discuss double concave diverging lenses as shown in Figure~\ref{p:wsl:go11:dl:concave}. Concave lenses are thicker on the outside and thinner on the inside.
+
+\begin{figure}[H]
+\begin{center}
+\scalebox{0.8}{
+\begin{pspicture}(0,-1.6)(4,1.6)
+%\psgrid
+\psset{unit=1.5}
+\pscustom[linestyle=none]{%
+\psarc(-0.2,0){1}{60}{-60}
+%\psarcn(2,0){1}{240}{120}
+\fill[fillstyle=none,fillcolor=white]
+\stroke[linestyle=dashed,linecolor=black]
+
+\newpath
+\psarc(-0.2,0){1}{-60}{60}
+\psarc(2,0){1}{120}{240}
+
+\closepath
+\fill[fillstyle=solid,fillcolor=lightgray]
+\stroke[linestyle=solid,linecolor=black]
+
+\newpath
+\psarc(2,0){1}{240}{120}
+\stroke[linestyle=dashed,linecolor=black]
+\fill[fillstyle=none,fillcolor=white]
+}
+\end{pspicture}}
+\caption{A double concave lens is a diverging lens.}
+\label{p:wsl:go11:dl:concave}
+\end{center}
+\end{figure}
+
+Figure~\ref{p:wsl:go11:dl:dl} shows a concave lens with light rays travelling through it. You can see that concave lenses have the opposite curvature to convex lenses. This causes light rays passing through a concave lens to \textbf{diverge} or be spread out \textit{away} from the principal axis. For this reason, concave lenses are called \textbf{diverging lenses.} Images formed by concave lenses are \textit{always} virtual.\\
+
+\begin{figure}[h!t]
+\begin{center}
+\begin{pspicture}(-3,-2)(3,2)
+%\psgrid
+% Draw lens without arrows so I can make my own lines later.
+\rput(0,0){
+\lens[lensType=DVG,lensGlass=true,focus=3,lensHeight=3,AB=1,OA=-4,XO=0,drawing=false]}
+\PrincipalAxis(-5,0)(5,0)
+\qdisk(F){1.5pt}
+\qdisk(F'){1.5pt}
+\qdisk(O){1.5pt}
+\uput[d](F){$F_{1}$}
+\uput[d](F'){$F_{2}$}
+\uput[d](O){O}
+\arrowLine(B)(I){1}
+\arrowLine(I)(3,2){1}
+\arrowLine(0,-1)(3,-2){1}
+\arrowLine(-4,-1)(0,-1){1}
+\arrowLine(A)(O){1}
+\arrowLine(O)(3.0,0.0){1}
+\end{pspicture}
+\caption{Light rays bend \textit{away from} each other or \textit{diverge} when they travel through a concave lens. $F_{1}$ and $F_{2}$ are the foci of the lens.}
+\label{p:wsl:go11:dl:dl}
+\end{center}
+\end{figure}
+
+
+Unlike converging lenses, the type of images created by a concave lens is not dependent on the position of the object. The image is \textit{always} upright, smaller than the object, and located closer to the lens than the object.\\
+
+We examine the properties of the image by drawing ray diagrams. We can find the image by tracing the path of three light rays through the lens. Any two of these rays will show us the location of the image. You can use the third ray to check the location, but it is not necessary to show it on your diagram.\\
+
+\newpage
+\textbf{Drawing Ray Diagrams for Diverging Lenses}\\
+Draw the three rays starting at the top of the object.
+\begin{enumerate}
+\item Ray $R_{1}$ travels parallel to the principal axis. The ray bends and lines up with a focal point. However, the concave lens is a \textit{diverging} lens, so the ray must line up with the focal point on the same side of the lens where light rays enter it. This means that we must project an imaginary line backwards through that focal point ($F_{1}$) (shown by the dashed line extending from $R_{1}$).
+\item Ray $R_{2}$ points towards the focal point $F_{2}$ on the opposite side of the lens. When it hits the lens, it is bent parallel to the principal axis.
+\item Ray $R_{3}$ passes through the optical center of the lens. Like for the convex lens, this ray passes through with its direction unchanged.
+\item We find the image by locating the point where the rays meet. Since the rays diverge, they will only meet if projected backward to a point on the same side of the lens as the object. This is why concave lenses \textit{always} have virtual images. (Since the light rays do not actually meet at the image, the image cannot be real.)
+\end{enumerate}
+
+Figure~\ref{p:wsl:go11:dl:f1} shows an object placed at an arbitrary distance from the diverging lens.
+
+We can locate the position of the image by drawing our three rays for a diverging lens.
+
+Figure~\ref{p:wsl:go11:dl:f1} shows that the image of an object is upright. The image is called a \textbf{virtual image} because it is on the same side of the lens as the object.
+
+The image is smaller than the object and is closer to the lens than the object.
+
+\begin{figure}[H]
+\centering
+\begin{pspicture}(-6,-3)(5,2)
+%\psgrid[gridcolor=gray]
+\rput(0,0){
+\lens[lensType=DVG,lensGlass=true,focus=-2,AB=1.5,OA=-5,drawing=false]}
+\PrincipalAxis(-6,0)(5,0)
+\oi{->}(A)(B)
+\oi[linestyle=dashed]{->}(A')(B')
+\qdisk(F){1.5pt}
+\qdisk(F'){1.5pt}
+\qdisk(O){1.5pt}
+\uput[d](A){Object}
+\uput[d](A'){Image}
+\uput[d](F){$F_{2}$}
+\uput{3pt}[ul](F'){$F_{1}$}
+\uput[d](O){O}
+
+% Draw rays with differing styles.
+% Ray parallel to principal axis
+\arrowLine(B)(I){1}
+\arrowLine(I)(B'){1}
+\psOutLine[length=1.5](I)(B'){extension}
+
+% Ray through focus
+\arrowLine[linestyle=dashed](B)(I'){1}
+\arrowLine[linestyle=dashed](I')(B'){1}
+\psOutLine[length=1.5,linestyle=dashed](I')(B'){extension}
+\arrowLine[linestyle=dashed,linecolor=lightgray](I')(F){1}
+
+% Ray through optical center
+\arrowLine[linestyle=dotted](B)(B'){2}
+\psOutLine[length=1.5,linestyle=dotted](O)(B'){extension}
+\arrowLine[linestyle=dotted,linecolor=lightgray](B')(O){1}
+
+\arrowLine[linestyle=solid](3,1.4)(4,1.4){1}\uput[r](4,1.4){$R_{1}$}
+\arrowLine[linestyle=dashed](3,1)(4,1){1}\uput[r](4,1){$R_{2}$}
+\arrowLine[linestyle=dotted](3,0.6)(4,0.6){1}\uput[r](4,0.6){$R_{3}$}
+
+\pcline{<->}(-2,-2.2)(0,-2.2)
+\bput{:U}{$f$}
+\pcline{<->}(-4,-2.2)(-2,-2.2)
+\bput{:U}{$f$}
+\pcline{<->}(0,-2.2)(2,-2.2)
+\bput{:U}{$f$}
+\pcline{<->}(2,-2.2)(4,-2.2)
+\bput{:U}{$f$}
+\end{pspicture}
+\caption{Three rays are drawn to locate the image, which is virtual, smaller than the object and upright.}
+\label{p:wsl:go11:dl:f1}
+\end{figure}
+
+\begin{wex}{Locating the image position for a diverging lens: I}
+{An object is placed 4~cm to the left of a diverging lens which has
+a focal length of 6~cm.
+\begin{enumerate}
+\item What is the position of the image?
+\item Is the image real or virtual?
+\end{enumerate}}
+{\westep{Set up the problem}
+Draw the lens, object, principal axis and focal points.
+\begin{center}
+\begin{pspicture}(-6.2,-1.6)(6.2,1.6)
+%\psgrid[gridcolor=gray]
+\rput(0,0){
+\lens[lensType=DVG,lensGlass=true,focus=-6,AB=1.5,OA=-4,drawing=false]}
+\PrincipalAxis(-6.2,0)(6.2,0)
+\oi{->}(A)(B)
+\qdisk(F){1.5pt}
+\qdisk(F'){1.5pt}
+\qdisk(O){1.5pt}
+\uput[d](A){Object}
+\uput[d](F){$F_{2}$}
+\uput[d](F'){$F_{1}$}
+\uput[d](O){O}
+\end{pspicture}
+\end{center}
+
+\westep{Draw the three light rays to locate the image}
+\begin{itemize}
+\item $R_{1}$ goes from the top of the object parallel to the principal axis.
+To determine the angle it has when it leaves the lens on the other side, we
+draw the dashed line from the focus $F_{1}$ through the point where $R_{1}$
+hits the lens. (Remember: for a diverging lens, the light ray on the opposite
+side of the lens to the object has to bend \textit{away} from the principal axis.)
+\item $R_{2}$ goes from the top of the object in the direction of the other focal
+point $F_{2}$. After it passes through the lens, it travels parallel to the
+principal axis.
+\item $R_{3}$ goes from the top of the lens, straight through the optical centre
+with its direction unchanged.
+\item Just like for converging lenses, the image is found at the position where
+all the light rays intersect.
+\end{itemize}
+
+\begin{center}
+\begin{pspicture}(-6.2,-1.6)(6.2,1.6)
+%\psgrid[gridcolor=gray]
+\rput(0,0){
+\lens[lensType=DVG,lensGlass=true,focus=-6,AB=1.5,OA=-4,drawing=false]}
+\PrincipalAxis(-6.2,0)(6.2,0)
+\oi{->}(A)(B)
+\qdisk(F){1.5pt}
+\qdisk(F'){1.5pt}
+\qdisk(O){1.5pt}
+\uput[d](A){Object}
+\uput[d](F){$F_{2}$}
+\uput[d](F'){$F_{1}$}
+\uput[d](O){O}
+
+% Draw rays with differing styles.
+% Ray parallel to principal axis
+\arrowLine(B)(I){1}
+\arrowLine(I)(B'){1}
+\arrowLine[linecolor=lightgray](B')(F'){1}
+
+% Ray through focus
+\arrowLine[linestyle=dashed](B)(I'){1}
+\arrowLine[linestyle=dashed](I')(B'){1}
+\psOutLine[length=1.5,linestyle=dashed](I')(B'){extension}
+\arrowLine[linestyle=dashed,linecolor=lightgray](I')(F){1}
+
+% Ray through optical center
+\arrowLine[linestyle=dotted](B)(B'){1}
+\psOutLine[length=1.5,linestyle=dotted](O)(B'){extension}
+\arrowLine[linestyle=dotted,linecolor=lightgray](B')(O){1}
+
+\arrowLine[linestyle=solid](3,1.4)(4,1.4){1}\uput[r](4,1.4){$R_{1}$}
+\arrowLine[linestyle=dashed](3,1)(4,1){1}\uput[r](4,1){$R_{2}$}
+\arrowLine[linestyle=dotted](3,0.6)(4,0.6){1}\uput[r](4,0.6){$R_{3}$}
+\end{pspicture}
+\end{center}
+
+\westep{Draw the image}
+Draw the image at the point where all three rays intersect.
+
+\begin{center}
+\begin{pspicture}(-6.2,-1.6)(6.2,1.6)
+%\psgrid[gridcolor=gray]
+\rput(0,0){
+\lens[lensType=DVG,lensGlass=true,focus=-6,AB=1.5,OA=-4,drawing=false]}
+\PrincipalAxis(-6.2,0)(6.2,0)
+\oi{->}(A)(B)
+\oi[linestyle=dashed]{->}(A')(B')
+\qdisk(F){1.5pt}
+\qdisk(F'){1.5pt}
+\qdisk(O){1.5pt}
+\uput[d](A){Object}
+\uput[d](A'){Image}
+\uput[d](F){$F_{2}$}
+\uput[d](F'){$F_{1}$}
+\uput[d](O){O}
+
+% Draw rays with differing styles.
+% Ray parallel to principal axis
+\arrowLine(B)(I){1}
+\arrowLine(I)(B'){1}
+\arrowLine[linecolor=lightgray](B')(F'){1}
+
+% Ray through focus
+\arrowLine[linestyle=dashed](B)(I'){1}
+\arrowLine[linestyle=dashed](I')(B'){1}
+\psOutLine[length=1.5,linestyle=dashed](I')(B'){extension}
+\arrowLine[linestyle=dashed,linecolor=lightgray](I')(F){1}
+
+% Ray through optical center
+\arrowLine[linestyle=dotted](B)(B'){1}
+\psOutLine[length=1.5,linestyle=dotted](O)(B'){extension}
+\arrowLine[linestyle=dotted,linecolor=lightgray](B')(O){1}
+
+\arrowLine[linestyle=solid](3,1.4)(4,1.4){1}\uput[r](4,1.4){$R_{1}$}
+\arrowLine[linestyle=dashed](3,1)(4,1){1}\uput[r](4,1){$R_{2}$}
+\arrowLine[linestyle=dotted](3,0.6)(4,0.6){1}\uput[r](4,0.6){$R_{3}$}
+\end{pspicture}
+\end{center}
+
+\westep{Measure the distance to the object}
+The distance to the object is 2,4~cm.
+
+\westep{Determine type of object}
+The image is on the same side of the lens as the object, and is upright. Therefore it is virtual. (\textit{Remember:} The image from a diverging lens is \textit{always} virtual.)}
+\end{wex}
+
+\subsection{Summary of Image Properties}
+The properties of the images formed by converging and diverging lenses depend on the position of the object. The properties are summarised in the Table~\ref{tab:p:wsl:go11:l:summary}.
+
+\begin{table}[htbp]
+\begin{center}
+\caption{Summary of image properties for converging and diverging lenses}
+\label{tab:p:wsl:go11:l:summary}
+\begin{tabular}{|c|c|c|c|c|c|}\hline
+\multicolumn{2}{|c|}{}&\multicolumn{4}{c|}{\textbf{Image Properties}}\\\hline
+\textbf{Lens type} & \textbf{Object Position} & \textbf{Position} & \textbf{Orientation} & \textbf{Size} & \textbf{Type}\\ \hline
+Converging & $>2f$ & $<2f$ & inverted & smaller & real\\ \hline
+Converging & $2f$ & $2f$ & inverted & same size & real\\ \hline
+Converging & $>f,<2f$ & $>2f$ & inverted & larger & real\\ \hline
+Converging & $f$ & \multicolumn{4}{c|}{no image formed}\\ \hline
+Converging & $<f$ & $>f$ & upright & larger & virtual\\ \hline
+Diverging & any position & $<f$ & upright & smaller& virtual\\
+
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\Exercise{Diverging Lenses}{
+\begin{enumerate}
+\item An object 3~cm high is at right angles to the principal axis of a concave lens of focal length 15~cm. If the distance from the object to the lens is 30~cm, find the distance of the image from the lens, and its height. Is it real or virtual?
+
+\item The image formed by a concave lens of focal length 10~cm is 7,5~cm from the lens and is 1,5~cm high. Find the distance of the object from the lens, and its height.
+
+\item An object 6~cm high is 10~cm from a concave lens. The image formed is 3~cm high. Find the focal length of the lens and the distance of the image from the lens.
+
+\end{enumerate}
+\practiceinfo
+
+\begin{tabular}[h]{cccccc}
+(1.) aaa & (2.) aaa & (3.) aaa & 
+ \end{tabular}
+}
+
+\section{The Human Eye}
+%\begin{syllabus}
+%\item The learner must be able to describe how the human eye has a converging lens to create real, inverted, reduced images on the retina at the back of the eye. Focusing is achieved by muscles, which change the focal length of the lens.
+%\item The learner must be able to understand the meanings of long-sightedness, short-sightedness and astigmatism what causes these defects of vision.
+%\item The learner must be able to use simple diagrams to show how converging lenses can correct long-sightedness and diverging lenses can correct short-sightedness.
+%\item The learner must be able to describe how astigmatism is corrected by a special lens, which has different focal lengths in the vertical and horizontal planes.
+%\end{syllabus}
+
+\Activity{Investigation}{Model of the Human Eye}{
+This demonstration shows that:
+\begin{enumerate}
+\item The eyeball has a spherical shape.
+\item The pupil is a small hole in the front and middle of the eye that lets light into the eye.
+\item The retina is at the back of the eyeball.
+\item The images that we see are formed on the retina.
+\item The images on the retina are upside down. The brain inverts the images so that what we see is the right way up.
+\end{enumerate}
+
+You will need:
+\begin{enumerate}
+\item a round, clear glass bowl
+\item water
+\item a sheet of cardboard covered with black paper
+\item a sheet of cardboard covered with white paper
+\item a small desk lamp with an incandescent light-bulb or a candle and a match
+\end{enumerate}
+
+You will have to:
+\begin{enumerate}
+\item Fill the glass bowl with water.
+\item Make a small hole in the middle of the black cardboard.
+\item Place the black cardboard against one side of the bowl and the white cardboard on the other side of the bowl so that it is opposite the black cardboard.
+\item Turn on the lamp (or light the candle).
+\item Place the lamp so it is shining through the hole in the black cardboard.
+\item Make the room as dark as possible.
+\item Move the white cardboard until an image of the light bulb or candle appears on it.
+\end{enumerate}
+
+You now have a working model of the human eye.
+
+\begin{enumerate}
+\item The hole in the black cardboard represents the pupil. The pupil is a small hole in the front of the eyeball that lets light into the eye.
+\item The round bowl of water represents the eyeball.
+\item The white cardboard represents the retina. Images are projected onto the retina and are then sent to the brain via the optic nerve.
+\end{enumerate}
+
+\textbf{Tasks}\\
+\begin{enumerate}
+\item Is the image on the retina right-side up or upside down? Explain why.
+\item Draw a simple labelled diagram of the model of the eye showing which part of the eye each part of the model represents.
+\end{enumerate}}
+
+\subsection{Structure of the Eye}
+Eyesight begins with lenses. As light rays enter your eye, they pass first through the \textbf{cornea} and then through the \textbf{crystalline lens}. These form a double lens system and focus light rays onto the back wall of the eye, called the \textbf{retina}. \textbf{Rods} and \textbf{cones} are nerve cells on the retina that transform light into electrical signals. These signals are sent to the brain via the \textbf{optic nerve}. A cross-section of the eye is shown in Figure \ref{fig:p:wsl:go11:eye:eye}.
+
+\begin{figure}[htbp] % Diagram of Eye
+\centering
+\begin{pspicture}(-4,-3)(4,3)
+%\psgrid
+\pscircle(0,0){3} % Eye outline
+\psarc[linewidth=0.05](0,0){2.97}{270}{90} % Retina
+\rput(-2.55,0){\lensSPH[drawing=false,lensHeight=2.75,lensWidth=1]} % Lens
+\psarc(-1.4,0){2}{122}{238} % Cornea
+\psline[ linearc=0.5 ](2.5,-1.6)(2.8,-1.5)(4,-2) % optic nerve
+\psline[ linearc=0.5 ](2.8,-1)(2.9,-1.4)(4,-1.8)
+% label stuff
+\rput(-2.2,0.5){\psline{<-}(0,0)(1,1)\uput[r](1,1){Crystalline Lens}}
+\rput(-3,0.8){\psline{<-}(0,0)(-0.5,1)\uput[u](-0.5,1){Cornea}}
+\rput(2.8,1){\psline{<-}(0,0)(-1,-1)\uput[d](-1,-1){Retina}}
+\rput(3.5,-2){\psline{<-}(0,0)(-0.4,-0.4)\uput[d](-0.4,-0.4){Optic Nerve}}
+\end{pspicture}
+\caption{A cross-section of the human eye.}
+\label{fig:p:wsl:go11:eye:eye}
+\end{figure}
+
+For clear vision, the image must be formed right on the retina, not in front of or behind it. To accomplish this, you may need a long or short focal length, depending on the object distance. How do we get the exact right focal length we need? Remember that the lens system has two parts. The cornea is fixed in place but the crystalline lens is flexible -- it can change shape. When the shape of the lens changes, its focal length also changes. You have muscles in your eye called \textbf{ciliary muscles} that control the shape of the crystalline lens. When you focus your gaze on something, you are squeezing (or relaxing) these muscles. This process of \textbf{accommodation} changes the focal length of the lens and allows you to see an image clearly.
+
+The lens in the eye creates a real image that is smaller than the object and is inverted \\(Figure~\ref{fig:p:wsl:go11:eye:normal}).
+
+\begin{figure}[htbp]
+\begin{center}
+\scalebox{1.2}{
+\begin{pspicture}(-5,-1.6)(4,1.6)
+%\psgrid
+\rput(1.25,0){\pscircle[linewidth=0.05](0,0){1.42}
+\rput(-1.25,0){\psset{fillcolor=lightgray,fillstyle=solid,linecolor=lightgray}\lens[drawing=false,lensType=CVG,AB=0.625,OA=-4.16,focus=1.6,lensHeight=1.25,lensWidth=0.5,lensGlass=true]}
+\psarc[linewidth=0.05](-0.7,0){1}{115}{245}}
+\PrincipalAxis(-5,0)(4,0)
+\oi{->}(A)(B)
+\oi{->}(A')(B')
+\qdisk(F){0.1}
+\qdisk(F'){0.1}
+\uput[d](F){F}
+\uput[d](F'){F'}
+
+% Light rays
+% Ray parallel to principal axis
+\arrowLine(B)(I){1}
+\arrowLine(I)(B'){1}
+\psOutLine[length=1.5](I)(B'){extension}
+
+% Ray through optical center
+\arrowLine[linestyle=dotted](B)(B'){2}
+\psOutLine[length=1.5,linestyle=dotted](O)(B'){extension}
+
+% Ray through focus
+\arrowLine[linestyle=dashed](B)(I'){3}
+\arrowLine[linestyle=dashed](I')(B'){3}
+\psOutLine[length=1.5,linestyle=dashed](I')(B'){extension}
+\end{pspicture}
+}
+\caption{Normal eye}
+\label{fig:p:wsl:go11:eye:normal}
+\end{center}
+\end{figure}
+
+
+\subsection{Defects of Vision}
+In a normal eye the image is focused on the retina.
+
+\begin{figure}[htbp]
+\begin{center}
+\begin{pspicture}(-3,-1.6)(2,1.6)
+%\psgrid
+\rput(0,0){\pscircle[linewidth=0.05](0,0){1.5}
+\rput(-1.35,0){\lensSPH[drawing=false,lensHeight=1,lensWidth=0.3]}
+\psarc[linewidth=0.05](-0.7,0){1}{122}{238}}
+% Light rays
+\pnode(1.5,0){F} % Change this for focus
+\qdisk(F){0.1}
+\arrowLine(-3,0.3)(-1.4,0.3){1}\arrowLine(-1.4,0.3)(F){1}
+\arrowLine(-3,0)(-1.4,0){1}\arrowLine(-1.4,0)(F){1}
+\arrowLine(-3,-0.3)(-1.4,-0.3){1}\arrowLine(-1.4,-0.3)(F){1}
+\end{pspicture}
+\caption{Normal eye}
+\end{center}
+\end{figure}
+
+If the muscles in the eye are unable to accommodate adequately, the image will not be in focus. This leads to problems with vision. There are three basic conditions that arise:
+\begin{enumerate}
+\item{short-sightedness}
+\item{long-sightedness}
+\item{astigmatism}
+\end{enumerate}
+
+\subsubsection{Short-sightedness}
+Short-sightedness or \textbf{myopia} is a defect of vision which means that the image is focused in front of the retina. Close objects are seen clearly but distant objects appear blurry. This condition can be corrected by placing a diverging lens in front of the eye. The diverging lens spreads out light rays before they enter the eye. The situation for short-sightedness and how to correct it is shown in Figure~\ref{fig:p:wsl:go11:eye:dv:s}.
+
+\begin{figure}[htbp]
+\centering
+\subfigure[\mbox{Short-sightedness : Light rays are} \mbox{\hspace{0.4in}focused in front of the retina.}]
+{\begin{pspicture}(-3,-1.6)(2,1.6)
+%\psgrid
+\rput(0,0){\pscircle[linewidth=0.05](0,0){1.5}
+\rput(-1.35,0){\lensSPH[drawing=false,lensHeight=1,lensWidth=0.3]}
+\psarc[linewidth=0.05](-0.7,0){1}{122}{238}}
+% Light rays
+\pnode(1,0){F} % Change this for focus
+\qdisk(F){0.1}
+\arrowLine(-3,0.3)(-1.4,0.3){1}\arrowLine(-1.4,0.3)(F){1}
+\arrowLine(-3,0)(-1.4,0){1}\arrowLine(-1.4,0)(F){1}
+\arrowLine(-3,-0.3)(-1.4,-0.3){1}\arrowLine(-1.4,-0.3)(F){1}
+\end{pspicture}}
+\subfigure[\mbox{Short-sightedness corrected by a} \mbox{\hspace{0.5in}diverging lens.}]{
+\begin{pspicture}(-3,-1.6)(2,1.6)
+%\psgrid
+\rput(0,0){\pscircle[linewidth=0.05](0,0){1.5}
+\rput(-1.35,0){\lensSPH[drawing=false,lensHeight=1,lensWidth=0.3]}
+\psarc[linewidth=0.05](-0.7,0){1}{122}{238}}
+
+% Light rays
+\pnode(1.5,0){F} % Change this for focus
+\qdisk(F){0.1}
+\arrowLine(-3,0.3)(-2.5,0.3){1}
+\arrowLine(-2.5,0.3)(-1.4,0.4){1}
+\arrowLine(-1.4,0.4)(F){1}
+\arrowLine(-3,0)(-2.5,0){1}
+\arrowLine(-2.5,0)(-1.4,0){1}
+\arrowLine(-1.6,0)(F){1}
+\arrowLine(-3,-0.3)(-2.5,-0.3){1}
+\arrowLine(-2.5,-0.3)(-1.4,-0.4){1}
+\arrowLine(-1.4,-0.4)(F){1}
+\rput(-2.5,0){ \lens[lensType=DVG, drawing=false, lensGlass=true,lensHeight=2.5,lensWidth=0.4]}
+\end{pspicture}}
+\caption{Short-sightedness}
+\label{fig:p:wsl:go11:eye:dv:s}
+\end{figure}
+
+\subsubsection{Long-sightedness}
+Long-sightedness or \textbf{hyperopia} is a defect of vision which means that the image is focused in behind the retina. People with this condition can see distant objects clearly, but not close ones. A converging lens in front of the eye corrects long-sightedness by converging the light rays slightly before they enter the eye. Reading glasses are an example of a converging lens used to correct long-sightedness.
+
+\begin{figure}[htbp]
+\centering
+\subfigure[\mbox{Long-sightedness : Light rays are} \mbox{\hspace{0.45in}focused in behind the retina.}]
+{\begin{pspicture}(-3,-1.6)(2,1.6)
+%\psgrid
+\rput(0,0){\pscircle[linewidth=0.05](0,0){1.5}
+\rput(-1.35,0){\lensSPH[drawing=false,lensHeight=1,lensWidth=0.3]}
+\psarc[linewidth=0.05](-0.7,0){1}{122}{238}}
+% Light rays
+\pnode(1.8,0){F} % Change this for focus
+\qdisk(F){0.1}
+\arrowLine(-3,0.3)(-1.4,0.3){1}\arrowLine(-1.4,0.3)(F){1}
+\arrowLine(-3,0)(-1.4,0){1}\arrowLine(-1.4,0)(F){1}
+\arrowLine(-3,-0.3)(-1.4,-0.3){1}\arrowLine(-1.4,-0.3)(F){1}
+\end{pspicture}}
+\subfigure[\mbox{Long-sightedness corrected by a} \mbox{\hspace{0.5in}converging lens.}]{
+\begin{pspicture}(-3,-1.6)(2,1.6)
+%\psgrid
+\rput(0,0){\pscircle[linewidth=0.05](0,0){1.5}
+\rput(-1.35,0){\lensSPH[drawing=false,lensHeight=1,lensWidth=0.3]}
+\psarc[linewidth=0.05](-0.7,0){1}{122}{238}}
+
+% Light rays
+\pnode(1.5,0){F} % Change this for focus
+\qdisk(F){0.1}
+\arrowLine(-3,0.4)(-2.5,0.4){1}
+\arrowLine(-2.5,0.4)(-1.4,0.3){1}
+\arrowLine(-1.4,0.3)(F){1}
+\arrowLine(-3,0)(-2.5,0){1}
+\arrowLine(-2.5,0)(-1.4,0){1}
+\arrowLine(-1.6,0)(F){1}
+\arrowLine(-3,-0.4)(-2.5,-0.4){1}
+\arrowLine(-2.5,-0.4)(-1.4,-0.3){1}
+\arrowLine(-1.4,-0.3)(F){1}
+\rput(-2.5,0){ \lens[lensType=CVG, drawing=false, lensGlass=true,lensHeight=2.5,lensWidth=0.4]}
+\end{pspicture}}
+\caption{Long-sightedness}
+\label{fig:p:wsl:go11:eye:dv:f}
+\end{figure}
+
+\subsubsection{Astigmatism}
+Astigmatism is characterised by a cornea or lens that is not spherical, but is more curved in one plane compared to another. This means that horizontal lines may be focused at a different point to vertical lines. Astigmatism causes blurred vision and is corrected by a special lens, which has different focal lengths in the vertical and horizontal planes.
+\comment{
+\begin{figure}[htbp]
+\centering
+\subfigure[Astigmatism: Light rays in the horizontal and vertical directions are focused at different points.]
+{\begin{pspicture}(-4,-1.6)(1.6,1.6)
+%\psgrid
+\rput(0,0){\pscircle[linewidth=0.05](0,0){1.5}
+\rput(-1.35,0){\lensSPH[drawing=false,lensHeight=1,lensWidth=0.3]}
+\psarc[linewidth=0.05](-0.7,0){1}{122}{238}}
+\end{pspicture}}
+\subfigure[Astigmatism is corrected by a special lens, which has different focal lengths in the vertical and horizontal planes.]{
+\begin{pspicture}(-4,-1.6)(1.6,1.6)
+%\psgrid
+\rput(0,0){\pscircle[linewidth=0.05](0,0){1.5}
+\rput(-1.35,0){\lensSPH[drawing=false,lensHeight=1,lensWidth=0.3]}
+\psarc[linewidth=0.05](-0.7,0){1}{122}{238}}
+\rput(-2.5,0){ \lens[drawing=false,lensHeight=2.5,lensWidth=0.4]}
+\end{pspicture}}
+\caption{Astigmatism: \nts{JP: Not sure how to show image in vertical and horizontal plane.}}
+\label{fig:p:wsl:go11:eye:dv:a}
+\end{figure}}
+
+%\section{Gravitational Lenses}
+%%\begin{syllabus}
+%%\item The learner must be able to state that the gravitational field of massive objects like galaxies, black holes and massive stars bend rays of light that pass close-by in accordance with predictions made by Einstein's Theory of General Relativity, and therefore act as a kind of gravitational lens, distorting, and altering the apparent position of, the image of a star.
+%%\end{syllabus}
+
+%Einstein's Theory of General Relativity predicts that light which passes close to very heavy objects like galaxies, black holes and massive stars will be bent. These massive objects therefore act as a kind of lens that is known as a \textit{gravitational lens}. Gravitational lenses distort and change the apparent position of the image of stars.
+
+%If a massive object, such as a galaxy, is acting as a gravitational lens, then an observer from Earth will see multiple images of a star which is located behind the object (Figure~\ref{fig:p:wsl:go11:gl}).
+
+%\begin{figure}[htbp]
+%\centering
+%\begin{pspicture}(-5,-5)(5,5)
+%%\psgrid[gridcolor=gray]
+%\pscircle[fillcolor=lightgray,fillstyle=solid](0,0){1.5}
+%\pscircle(4,0){0.2}
+%\psellipse[fillcolor=darkgray,fillstyle=solid](-4,0)(0.2,0.4)
+%\rput(0,0){\parbox[c]{2.0cm}{Massive object acting as a gravitational lens}}
+%\uput[u](4,0.2){Earth}
+%\uput[u](-4,0.4){distant star}
+%\arrowLine(-3.8,0)(0,2){1}\arrowLine(0,2)(3.8,0){1}
+%\arrowLine(-3.8,0)(0,-2){1}\arrowLine(0,-2)(3.8,0){1}
+%\arrowLine(-3.8,0)(0,2){1}\arrowLine(0,2)(3.8,0){1}
+%\psOutLine[length=4.5,linestyle=dotted](3.8,0)(0,2){ext}
+%\psOutLine[length=4.5,linestyle=dotted](3.8,0)(0,-2){ext}
+%\rput(0,-4.05){\psellipse[fillcolor=darkgray,fillstyle=vlines](-4,0)(0.2,0.4)\uput[d](-4,-0.4){apparent image 2}}
+%\rput(0,4.05){\psellipse[fillcolor=darkgray,fillstyle=vlines](-4,0)(0.2,0.4)\uput[u](-4,0.4){apparent image 1}}
+%\end{pspicture}
+%\caption{Effect of a gravitational lens.}
+%\label{fig:p:wsl:go11:gl}
+%\end{figure}
+
+\section{Telescopes}
+%\begin{syllabus}
+%\item The learner must be able to draw ray-diagrams illustrating image formation by the refracting astronomical telescope and the reflecting telescope.
+%\item The learner must be able to know about the kinds of telescopes used at the Sutherland Observatory in the Western Cape and about the new SALT (South African Large Telescope).
+%\item Notes: Here is an excellent opportunity to contextualise the curriculum for South Africa. With the building of SALT, South Africa has become a world leader in optical telescopes.
+%\end{syllabus}
+
+We have seen how a simple lens can be used to correct eyesight. Lenses and mirrors are also combined to magnify (or make bigger) objects that are far away.
+
+Telescopes use combinations of lenses to gather and focus light. Telescopes collect light from objects that are large but far away, like planets and galaxies. For this reason, telescopes are the tools of astronomers. \textbf{Astronomy} is the study of objects outside the Earth, like stars, planets, galaxies, comets, and asteroids.
+
+Usually the object viewed with a telescope is very far away. Objects closer to Earth, such as the moon, appear larger, and with a powerful enough telescope, we are able to see craters on the Moon's surface. Objects which are much further, such as stars, appear as points of light. Even with the most powerful telescopes currently built, we are unable to see details on the surfaces of stars.
+
+There are many kinds of telescopes, but we will look at two basic types: reflecting and refracting.
+
+\subsection{Refracting Telescopes}
+A \textbf{refracting telescope} like the one pictured in Figure \ref{fig:p:wsl:go11:t:refr} uses two convex lenses to enlarge an image. The refracting telescope has a large primary lens with a long focal length to gather a lot of light. The lenses of a refracting telescope share a focal point. This ensures that parallel rays entering the telescope are again parallel when they reach your eye.
+
+\begin{figure}[htbp]
+\centering
+\begin{pspicture}(-6,-2)(6,1.2)
+%\psgrid[gridcolor=gray]
+
+\rput(2,0){\lens[lensGlass =true,lensHeight=1.2,drawing=false]}
+\rput(-4,0){\lens[lensGlass=true,lensHeight=2.4,drawing=false]}
+
+\arrowLine(-6,1)(-4,1){1}
+\arrowLine(-6,0)(-4,0){1}
+\arrowLine(-6,-1)(-4,-1){1}
+
+\arrowLine(-4,1)(0,0){1}
+\arrowLine(-4,0)(0,0){1}
+\arrowLine(-4,-1)(0,0){1}
+
+\arrowLine(0,0)(2,0.4){1}
+\arrowLine(0,0)(2,0){1}
+\arrowLine(0,0)(2,-0.4){1}
+
+\arrowLine(2,0.4)(6,0.4){1}
+\arrowLine(2,0)(6,0){1}
+\arrowLine(2,-0.4)(6,-0.4){1}
+
+% Label stuff and add the eye.
+\uput[u](-4,-2){Primary Lens}
+\uput[u](2,-2){Eyepiece}
+\rput(6,0){\psset{unit=0.75}\eye}
+\end{pspicture}
+\caption{Layout of lenses in a refracting telescope}
+\label{fig:p:wsl:go11:t:refr}
+\end{figure}
+
+\subsection{Reflecting Telescopes}
+Some telescopes use mirrors as well as lenses and are called reflecting telescopes. Specifically, a \textbf{reflecting telescope} uses a convex lens and two mirrors to make an object appear larger. (Figure~\ref{fig:p:wsl:go11:t:refl}.)
+
+Light is collected by the primary mirror, which is large and concave. Parallel rays traveling toward this mirror are reflected and focused to a point. The secondary plane mirror is placed within the focal length of the primary mirror. This changes the direction of the light. A final eyepiece lens diverges the rays so that they are parallel when they reach your eye.
+
+\begin{figure}[htbp]
+\centering
+\begin{pspicture}(-6,-3)(6,4.2)
+%\psgrid
+\rput(0,0){\telescope[mirrorFocus=6,posMirrorTwo=5,yBottom=-6,rayColor=black]}
+\uput[u](-5,-1){Primary Mirror}
+\uput[u](1.5,2.5){Secondary Mirror}
+\uput[r](1,-1){Eyepiece}
+\end{pspicture}
+\caption{Lenses and mirrors in a reflecting telescope.}
+\label{fig:p:wsl:go11:t:refl}
+\end{figure}
+
+\subsection{Southern African Large Telescope}
+\begin{flushleft}The Southern African Large Telescope (SALT) is the largest single optical telescope in the southern hemisphere, with a hexagonal mirror array 11 metres across. SALT is located in Sutherland in the Northern Cape. SALT is able to record images of distant stars, galaxies and quasars a billion times too faint to be seen with the unaided eye. This is equivalent to a person being able to see a candle flame on the moon.\end{flushleft}
+
+SALT was completed in 2005 and is a truly international initiative, because the money to build it came from South Africa, the United States, Germany, Poland, the United Kingdom and New Zealand.
+
+\raggedright
+\Activity{SALT}{Investigate what the South African Astronomical Observatory (SAAO) does. SALT is part of SAAO. Write your investigation as a short 5-page report. Include images of the instrumentation used.}
+
+%\nts{Get a SALT Astronomer to write an essay describing the telescopes at Sutherland and SALT.}
+
+\section{Microscopes}
+%\begin{syllabus}
+%\item The learner must be able to draw a ray diagram showing how a compound microscope uses two converging lenses to produce a magnified image of a tiny object.
+%\end{syllabus}
+
+We have seen how lenses and mirrors are combined to magnify objects that are far away using a telescope. Lenses can also be used to make very small objects appear bigger.
+
+Figure~\ref{p:wsl:go11:cl:f4} shows that when an object is placed at a distance less than $f$ from the lens, the image formed is virtual, upright and is larger than the object. This set-up is a simple magnifier.
+
+If you want to look at something very small, two lenses may work better than one. Microscopes and telescopes often use two lenses to make an image large enough to see.
+
+A \textbf{compound microscope} uses two lenses to achieve high magnification (Figure \ref{fig:micro}). Both lenses are convex, or converging. Light from the object first passes through the \textbf{objective lens}. The lens that you look through is called the \textbf{eyepiece}. The focus of the system can be adjusted by changing the length of the tube between the lenses.
+
+\begin{figure}[H]
+\centering
+\begin{pspicture}(-7,-3)(6,2)
+%\psgrid[gridcolor=gray]
+% Specifications for primary and eyepiece lenses.
+\newpsstyle{lens1}{focus=1,OA=-1.5,AB=0.5,XO=-4,lensGlass=true,lensWidth=0.4,drawing=false}
+\newpsstyle{lens2}{XO=2.5,focus=6,lensGlass=true,lensWidth =0.4,drawing=false,lensTwo=true}
+
+\PrincipalAxis(-7,0)(6,0)
+% Draw stuff.
+\rput(0,0){\lens[style=lens1]}
+
+\pspolygon[fillstyle=solid,fillcolor=lightgray,linestyle=none](B)(I)(B')(I')(B)
+
+\Transform
+\rput(0,0){\lens[style=lens2]}
+
+% Find points where rays end. "PEnd", etc don't seem to work.
+\Parallel[length=5, linestyle=none](0,0)(0,1)(6,0){xTR}
+\ABinterCD(B)(O)(6,0)(xTR){eye}
+\ABinterCD(B')(I)(6,0)(xTR){eye2}
+
+% Illuminate it!! and add the eye
+\pspolygon[fillstyle=solid, fillcolor=lightgray, linestyle=none](B)(I)(eye2)(eye)
+\nodeBetween(eye)(eye2){eye3}
+\rput{15}(eye3){\psset{unit=0.5}\eye}
+\psline[linestyle=dashed](B')(eye)
+\psline[linestyle=dashed](B')(eye2)
+\oi{->}(A)(B)
+\oi[linestyle=dashed]{->}(A')(B')
+\oi{->}(A1)(B1)
+
+% Redraw lenses
+\rput(0,0){ \lens [ style=lens1 ] }
+\rput(0,0){ \lens [ style=lens2 ] }
+
+% Label stuff
+\uput[u](B1){Object}
+\uput[u](A){First image}
+\uput[d](B'){Final image}
+\uput[d](-4,2){Objective Lens}
+\uput[d](2.5,2){Eyepiece}
+\end{pspicture}
+\caption{Compound microscope} \label{fig:micro}
+\end{figure}
+
+\textbf{Drawing a Ray Diagram for a Two-Lens System}\\
+You already have all the tools to analyze a two-lens system. Just consider one lens at a time.
+\begin{enumerate}
+\item{Use ray tracing or the lens equation to find the image for the first lens.}
+\item{Use the image of the first lens as the object of the second lens.}
+\item{To find the magnification, multiply: $m_{total} = m_1 \times m_2 \times m_3 \times ...$}
+\end{enumerate}
+
+\begin{wex}{The Compound Microscope}{A compound microscope consists of two convex lenses. The eyepiece has a focal length of 10 cm. The objective lens has a focal length of 6 cm. The two lenses are 30 cm apart. A 2 cm-tall object is placed 8 cm from the objective lens.
+\begin{enumerate}
+\item Where is the final image?
+\item Is the final image real or virtual?
+\end{enumerate}}
+{We can use ray tracing to follow light rays through the microscope, one lens at a time.
+
+\westep{Set up the system}
+To prepare to trace the light rays, make a diagram. In the diagram here, we place the image on the left side of the microscope. Since the light will pass through the objective lens first, we'll call this Lens 1. The eyepiece will be called Lens 2. Be sure to include the focal points of both lenses in your diagram.
+
+% two lens system...setup
+
+\begin{figure}[H]
+\centering
+\begin{pspicture}(-3,-3)(8,3)
+%\psgrid
+% Arrow style for objects and images.
+%\newpsobject{oi}{psline}{arrowsize=4pt, arrowlength=1, arrowinset=0, linewidth=2pt}
+
+% First lens specifications
+\newpsstyle{lens1}{ focus =1.2,OA=-1.6,AB =.4, XO=0,lensGlass =true, lensWidth =0.4,
+drawing=false,
+lensHeight=3}
+
+% Second lens specifications
+\newpsstyle{lens2}{XO=6.0, focus =2.0,
+lensGlass =true , lensWidth =0.4,
+drawing=false, lensTwo=true,
+lensHeight=3}
+
+% Draw stuff
+
+\rput(0,0){ \lens[style=lens1] }
+
+\psline[linewidth=1pt,linecolor=lightgray ](-3,0)(8,0)% Principal axis
+
+\Transform
+\rput(0,0){ \lens[ style=lens2] }
+
+\oi{->}(A1)(B1)
+
+% Label stuff
+\uput{0.2}[l](B1){Object}
+\uput{2}[d](O1){Lens 1 (Objective)}
+\uput{2}[d](O){Lens 2 (Eyepiece)}
+\uput{0.2}[d](F1){$f_1$}
+\uput{0.2}[d](F'1){$f_1$}
+\uput{0.2}[d](F){$f_2$}
+\uput{0.2}[d](F'){$f_2$}
+\psdots[ dotscale=1 ](F)(F')(F1)(F'1)(O)(O1)
+
+\ncline[ offset=2.6 ]{|-|}{O1}{O} % Lens separation
+\lput*{:U}{30 cm}
+\ncline[ offset=2.0 ]{|-|}{A1}{O1} % first object distance
+\bput*{:U}{$8 cm$}
+\ncline[ offset=0.4 ]{|-|}{F1}{O1} % foci for first lens
+\aput*{:U}{\scalebox{0.8}{6cm}}
+\ncline[ offset=0.4 ]{|-|}{O1}{F'1}
+\aput*{:U}{\scalebox{0.8}{6cm}}
+\ncline[ offset=0.4 ]{|-|}{F}{O} % foci for second lens
+\aput*{:U}{\scalebox{0.8}{10 cm}}
+\ncline[ offset=0.4 ]{|-|}{O}{F'}
+\aput*{:U}{\scalebox{0.8}{10 cm}}
+
+\end{pspicture}
+\end{figure}
+
+\westep{Find the image for the objective lens.}
+
+% two lens system...first
+
+\begin{figure}[H]
+\centering
+\begin{pspicture}(-2,-3)(8,2)
+%\psgrid
+
+% First lens specifications
+\newpsstyle{lens1}{ focus =1.2,
+OA=-1.6,AB =.4, XO=0,
+lensGlass =true, lensWidth =0.4,
+drawing=false,
+lensHeight=3}
+
+% Second lens specifications
+\newpsstyle{lens2}{XO=6.0, focus =2.0,
+lensGlass =true , lensWidth =0.4,
+drawing=false, lensTwo=true,
+lensHeight=3}
+
+% Start drawing
+
+\rput(0,0){ \lens[style=lens1] }
+
+\psline[linewidth =1pt,linecolor=lightgray ](-2,0)(8,0) % Principal axis
+
+\oi{->}(A)(B) % Object
+\oi{->}(A')(B') % Image
+\psOutLine(I)(B'){end1} % Rays
+\psOutLine(O)(B'){end2}
+\psOutLine(I')(B'){end3}
+\psline{->}(B)(I)(B')(end1)
+\psline{->}(B)(O)(B')(end2)
+\psline{->}(B)(I')(B')(end3)
+
+\Transform
+\rput(0,0){ \lens[ style=lens2] }
+
+\oi{->}(A)(B)
+%\oi[linestyle=dashed]{->}(A')(B')
+\oi{->}(A1)(B1)
+
+% Redraw lenses
+%\rput(0,0){ \lens [ style=lens1] }
+%\rput(0,0){ \lens [ style=lens2] }
+
+% Label stuff
+\uput{0.6}[d](B1){Object}
+\uput{0.2}[u](A){Image}
+\uput{0.2}[d](F){$f_2$}
+\uput{0.2}[d](F'){$f_2$}
+%\uput{0.2}[d](F1){$f_1$}
+\uput{0.2}[u](F'1){$f_1$}
+\psdots[ dotscale=0.5 ](F)(F')(F1)(F'1)(O)(O1)
+\uput{1.7}[d](A1){\pnode(0,0){L1}} % below object
+\uput{1.7}[u](O1){\pnode(0,0){L2}} % above first mirror
+\uput{1.7}[d](O1){\pnode(0,0){L3}} % below first mirror
+\uput{1.7}[d](A){\pnode(0,0){L4}} % below first image
+\uput{1.7}[u](O){\pnode(0,0){L5}} % above second mirror
+\ncline{|-|}{L2}{L5}
+\mput*{30 cm}
+\end{pspicture}
+\label{fig:twolens1}
+\end{figure}
+
+\westep{Find the image for the eyepiece.}
+The image we just found becomes the object for the second lens.
+
+% two lens system...second
+
+\begin{center}
+\begin{pspicture}(-2,-3)(8,2)
+%\psgrid
+\newpsstyle{lens1}{focus=1.2,XO=0,lensGlass=true,lensWidth=0.4,drawing=false,lensHeight=3,OA=-1.6,AB=0.4}
+\newpsstyle{lens2}{focus=2.0,XO=6,lensGlass=true,lensWidth=0.4,drawing=false,lensTwo=true,lensHeight=3}
+
+% Start drawing
+\rput(0,0){\lens[style=lens1]}
+\psline[linewidth=0.5pt,linecolor=lightgray](-2,0)(8,0) % Principal axis
+
+\Transform
+\rput(0,0){\lens[style=lens2]}
+
+\psOutLine(B)(O){end1} % Rays
+\psOutLine(B')(I){end2}
+\psline{->}(B)(O)(end1)
+\psline{->}(B)(I)(end2)
+\psline[linestyle=dashed](O)(B')
+\psline[linestyle=dashed](I)(B')
+
+\oi{->}(A)(B)
+\oi[linestyle=dashed]{->}(A')(B')
+\oi{->}(A1)(B1)
+
+% Label stuff
+\uput{0.2}[u](B1){Object}
+\uput{0.2}[u](A){Object}
+\uput{0.2}[u](A'){Image}
+\uput{0.2}[d](F){$f_2$}
+\uput{0.2}[d](F'){$f_2$}
+\uput{0.2}[d](F1){$f_1$}
+\uput{0.2}[d](F'1){$f_1$}
+\psdots[ dotscale=1 ](F)(F')(F1)(F'1)(O)(O1)
+
+\uput{1.5}[d](A1){\pnode(0,0){L1}} % below object
+\uput{2.2}[u](O1){\pnode(0,0){L2}} % above first mirror
+\uput{1.5}[d](O1){\pnode(0,0){L3}} % below first mirror
+\uput{2}[u](A){\pnode(0,0){L4}} % above first image
+\uput{2.5}[u](O){\pnode(0,0){L5}} % above second mirror, high
+\uput{2}[u](O){\pnode(0,0){L6}} % above second mirror, mid
+\uput{1.8}[u](O){\pnode(0,0){L7}} % above second mirror, low
+\uput{1.5}[d](O){\pnode(0,0){L8}} % below second mirror
+\uput{2.5}[u](A'){\pnode(0,0){L9}} % above final image
+
+\end{pspicture}
+\end{center}
+}
+\end{wex}
+
+\summary{aaa}
+\begin{enumerate}
+\item A lens is any transparent material that is shaped in such a way that it will converge parallel incident rays to a point or diverge incident rays from a point.
+\item Converging lenses are thicker in the middle than on the edge and will bend incoming light rays towards the principal axis.
+\item Diverging lenses are thinner in the middle than on the edge and will bend incoming light rays away from the principal axis.
+\item The principal axis of a lens is the horizontal line through the centre of the lens.
+\item The centre of the lens is called the optical centre.
+\item The focus or focal point is a point on the principal axis where parallel rays converge through or diverge from.
+\item The focal length is the distance between the focus and the optical centre.
+\item Ray diagrams are used to determine the position and height of an image formed by a lens. The properties of images formed by converging and diverging lenses are summarised in Table~\ref{tab:p:wsl:go11:l:summary}.
+\item The human eye consists of a lens system that focuses images on the retina where the optic nerve transfers the messages to the brain.
+\item Defects of vision include short-sightedness, long-sightedness and astigmatism.
+\item Massive astronomical bodies, such as galaxies, act as gravitational lenses that can change the apparent positions of the images of stars.
+\item Microscopes and telescopes use systems of lenses to create magnified images of very small or very distant objects.
+\end{enumerate}
+
+
+\begin{eocexercises}{}
+\begin{enumerate}
+%\item Explain the difference between the reflection and refraction of light, and give examples of each of these phenomena in everyday life.
+\item{Select the correct answer from the options given:
+\begin{enumerate}
+\item A $\ldots\ldots\ldots\ldots$ (\textit{convex/concave}) lens is thicker in the center than on the edges.
+\item When used individually, a (\textit{diverging/converging}) lens usually forms real images.
+\item When formed by a single lens, a $\ldots\ldots\ldots\ldots$ (\textit{real/virtual}) image is always inverted.
+\item When formed by a single lens, a $\ldots\ldots\ldots\ldots$ (\textit{real/virtual}) image is always upright.
+\item Virtual images formed by converging lenses are $\ldots\ldots\ldots\ldots$ (\textit{bigger/the same size/smaller}) compared to the object.
+\item A $\ldots\ldots\ldots\ldots$ (\textit{real/virtual}) image can be projected onto a screen.
+\item A $\ldots\ldots\ldots\ldots$ (\textit{real/virtual}) image is said to be "trapped" in the lens.
+\item A ray that starts from the top of an object and runs parallel to the axis of the lens, would then pass through the $\ldots\ldots\ldots\ldots$ (\textit{principal focus of the lens/center of the lens/secondary focus of the lens}).
+\item A ray that starts from the top of an object and passes through the $\ldots\ldots\ldots\ldots$ (\textit{principal focus of the lens/center of the lens/secondary focus of the lens}) would leave the lens running parallel to its axis.
+%\item A ray that starts from the top of an object and passes through the $\ldots\ldots\ldots\ldots$ (\textit{principal focus of the lens/center of the lens/secondary focus of the lens}) would leave the lens totally straight.
+%\item When used in air, which set of terms are synonymous - \textit{convex and diverging} or \textit{convex and converging}?
+\item For a converging lens, its $\ldots\ldots\ldots\ldots$ (\textit{principal focus/center/secondary focus}) is located on the same side of the lens as the object.
+\item After passing through a lens, rays of light traveling parallel to a lens' axis are refracted to the lens' $\ldots\ldots\ldots\ldots$ (\textit{principal focus/center/secondary focus}).
+\item Real images are formed by $\ldots\ldots\ldots\ldots$ (\textit{converging/parallel/diverging}) rays of light that have passed through a lens.
+\item Virtual images are formed by $\ldots\ldots\ldots\ldots$ (\textit{converging/parallel/diverging}) rays of light that have passed through a lens.
+\item Images which are closer to the lens than the object are $\ldots\ldots\ldots\ldots$ (\textit{bigger/the same size/smaller}) than the object.
+\item $\ldots\ldots\ldots\ldots$ (\textit{Real/Virtual}) images are located on the same side of the lens as the object - that is, by looking in one direction, the observer can see both the image and the object.
+\item $\ldots\ldots\ldots\ldots$ (\textit{Real/Virtual}) images are located on the opposite side of the lens as the object.
+\item When an object is located greater than two focal lengths in front of a converging lens, the image it produces will be $\ldots\ldots\ldots\ldots$ (\textit{real and enlarged/virtual and enlarged/real and reduced/virtual and reduced}).
+\end{enumerate}}
+\item An object 1~cm high is placed 1,8~cm in front of a converging lens with a focal length of 0,5~cm. Draw a ray diagram to show where the image is formed. Is the final image real or virtual?
+\item An object 1~cm high is placed 2,10~cm in front of a diverging lens with a focal length of 1,5~cm. Draw a ray diagram to show where the image is formed. Is the final image real or virtual?
+\item An object 1~cm high is placed 0,5~cm in front of a converging lens with a focal length of 0,5~cm. Draw a ray diagram to show where the image is formed. Is the final image real or virtual?
+\item An object is at right angles to the principal axis of a convex lens. The object is 2~cm high and is 5~cm from the centre of the lens, which has a focal length of 10~cm. Find the distance of the image from the centre of the lens, and its height. Is it real or virtual?
+\item A convex lens of focal length 15~cm produces a real image of height 4~cm at 45~cm from the centre of the lens. Find the distance of the object from the lens and its height.
+\item An object is 20~cm from a concave lens. The virtual image formed is three times smaller than the object. Find the focal length of the lens.
+\item A convex lens produces a virtual image which is four times larger than the object. The image is 15~cm from the lens. What is the focal length of the lens?
+\item A convex lens is used to project an image of a light source onto a screen. The screen is 30~cm from the light source, and the image is twice the size of the object. What focal length is required, and how far from the source must it be placed?
+\item An object 6~cm high is place 20~cm from a converging lens of focal length 8~cm. Find by scale drawing the position, size and nature of the image produced. (Advanced: check your answer by calculation).
+\item An object is placed in front of a converging lens of focal length 12~cm. By scale diagram, find the nature, position and magnification of the image when the object distance is
+\begin{enumerate}
+\item 16~cm
+\item 8~cm
+\end{enumerate}
+\item A concave lens produces an image three times smaller than the object. If the object is 18~cm away from the lens, determine the focal length of the lens by means of a scale diagram. (Advanced: check your answer by calculation).
+\item You have seen how the human eye works, how telescopes work and how microscopes work. Using what you have learnt, describe how you think a camera works.
+\item Describe 3 common defects of vision and discuss the various methods that are used to correct them.
+
+\end{enumerate}
+\practiceinfo
+
+\begin{tabular}[h]{cccccc}
+(1.) aaa & (2.) aaa & (3.) aaa & (4.) aaa & (5.) aaa & (6.) aaa & (7.) aaa & (8.) aaa & (9.) aaa & (10.) aaa & (11.) aaa & (12.) aaa & (13.) aaa & (14.) aaa & (15.) aaa & 
+ \end{tabular}
+\end{eocexercises}
+
+% CHILD SECTION END
+
+
+
+% CHILD SECTION START
+

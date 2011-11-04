@@ -1,0 +1,812 @@
+\chapter{Trigonometry}
+\label{m:t12}
+
+\section{Compound Angle Identities}
+%\begin{syllabus}
+%\item Derive and use the following compound angle identities:
+%\begin{eqnarray*}
+%\sin(\alpha \pm \beta) &=& \sin \alpha \cos \beta \pm \cos \theta \sin \theta\\
+%\cos(\alpha \pm \beta) &=& \cos \alpha \cos \beta \mp \sin \alpha sin \beta\\
+%\sin 2 \alpha &=& 2 \sin \alpha \cos \alpha\\
+%\cos 2 \alpha &=& \left\{
+%\begin{array}{l}
+%\cos^2 \alpha - \sin^2 \alpha \\
+%2 \cos^2 \alpha - 1\\
+%1 - 2 \sin^2 \alpha \\
+%\end{array}\right.
+%\end{eqnarray*}
+%\end{syllabus}
+
+\subsection{Derivation of $\sin(\alpha + \beta)$}
+We have, for any angles $\alpha$ and $\beta$, that
+$$\sin(\alpha+\beta)=\sin\alpha\cos\beta+\sin\beta\cos\alpha$$
+How do we derive this identity? It is tricky, so follow closely.\\
+
+Suppose we have the unit circle shown below. The two points $L(a;b)$ and $K(x;y)$ are on the circle.
+
+\scalebox{0.8} % Change this value to rescale the drawing.
+{
+\begin{pspicture}(0,-6.2992187)(13.741875,6.3192186)
+\pscircle[linewidth=0.04,dimen=outer](6.5,-0.07921875){4.35}
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{<->}(6.5,6.020781)(6.5,-6.2792187)
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{<->}(0.0,-0.07921875)(13.2,-0.07921875)
+\psline[linewidth=0.03cm](4.1,3.5207813)(6.5,-0.07921875)
+\psline[linewidth=0.027999999cm](4.1,3.5207813)(10.0,2.4207811)
+\psline[linewidth=0.03cm](10.0,2.4207811)(6.5,-0.07921875)
+\psline[linewidth=0.04cm,linestyle=dashed,dash=0.16cm 0.16cm](10.0,2.4207811)(10.0,-0.07921875)
+\usefont{T1}{ptm}{m}{n}
+\rput(4.846875,1.7307812){1}
+\usefont{T1}{ptm}{m}{n}
+\rput(8.746875,1.0307813){1}
+\usefont{T1}{ptm}{m}{n}
+\rput(13.441406,-0.26921874){$x$}
+\usefont{T1}{ptm}{m}{n}
+\rput(6.0514064,6.130781){$y$}
+\usefont{T1}{ptm}{m}{n}
+\rput(8.5275,-0.27921876){\small $a$}
+\usefont{T1}{ptm}{m}{n}
+\rput(10.3375,0.82078123){\small $b$}
+\psdots[dotsize=0.12](10.0,2.4207811)
+\psdots[dotsize=0.12](4.1,3.5207813)
+\psdots[dotsize=0.12](10.0,-0.07921875)
+\psframe[linewidth=0.04,dimen=outer](10.02,0.20078126)(9.72,-0.09921875)
+\usefont{T1}{ptm}{m}{n}
+\rput(6.601406,0.93078125){$(\alpha-\beta)$}
+\psarc[linewidth=0.03](6.81,-0.44921875){1.75}{51.254032}{124.87533}
+\psarc[linewidth=0.03](6.65,0.13078125){1.19}{350.3948}{31.551386}
+\psarc[linewidth=0.03](6.76,0.02078125){0.58}{351.25385}{150.25511}
+\usefont{T1}{ptm}{m}{n}
+\rput(7.6514063,0.23078126){$\beta$}
+\usefont{T1}{ptm}{m}{n}
+\rput(6.6914062,0.33078125){$\alpha$}
+\usefont{T1}{ptm}{m}{n}
+\rput(10.551406,2.7907813){$L(a;b)$}
+\usefont{T1}{ptm}{m}{n}
+\rput(3.7514062,3.9707813){$K(x;y)$}
+\usefont{T1}{ptm}{m}{n}
+\rput(9.921406,-0.50921875){$M(x;y)$}
+\usefont{T1}{ptm}{m}{n}
+\rput(6.7767186,-0.38921875){$O$}
+\end{pspicture} 
+}
+
+
+We can get the coordinates of $L$ and $K$ in terms of the angles $\alpha$ and $\beta$.
+For the triangle $LOM$, we have that
+\begin{eqnarray*}
+\sin\beta =\frac{b}{1} \ \ \ \ &\implies& b=\sin\beta\\
+\cos\beta=\frac{a}{1} \ \ \ \ &\implies&a=\cos\beta
+\end{eqnarray*}
+Thus the coordinates of $L$ are $(\cos\beta;\sin\beta)$. In the same way as above, we can see that the coordinates of $K$ are $(\cos\alpha;\sin\alpha)$.
+The identity for $\cos(\alpha-\beta)$ is now determined by calculating $KL^2$ in two ways. Using the distance formula (i.e. $d=\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}$ or $d^2=(x_2-x_1)^2+(y_2-y_1)^2$), we can find $KL^2$:
+\begin{eqnarray*}
+KL^2&=&(\cos\alpha-\cos\beta)^2+(\sin\alpha-\sin\beta)^2\\
+&=&\cos^2\alpha-2\cos\alpha\cos\beta+\cos^2\beta+\sin^2\alpha-2\sin\alpha\sin\beta+\sin^2\beta\\
+&=&(\cos^2\alpha+\sin^2\alpha)+(\cos^2\beta+\sin^2\beta)-2\cos\alpha\cos\beta-2\sin\alpha\sin\beta\\
+&=&1+1-2(\cos\alpha\cos\beta+\sin\alpha\sin\beta)\\
+&=&2-2(\cos\alpha\cos\beta+\sin\alpha\sin\beta)
+\end{eqnarray*} 
+The second way we can determine $KL^2$ is by using the cosine rule for $\triangle KOL$:
+\begin{eqnarray*}
+KL^2&=&KO^2+LO^2-2\cdot KO\cdot LO\cdot\cos(\alpha-\beta)\\
+&=&1^2+1^2-2(1)(1)\cos(\alpha-\beta)\\
+&=&2-2\cdot\cos(\alpha-\beta)
+\end{eqnarray*}
+Equating our two values for $KL^2$, we have
+\begin{eqnarray*}
+2-2\cdot\cos(\alpha-\beta)&=&2-2(\cos\alpha\cos\beta+\sin\alpha\cdot\sin\beta)\\
+\implies \ \ \ \ \cos(\alpha-\beta)&=&\cos\alpha\cdot\cos\beta+\sin\alpha\cdot\sin\beta
+\end{eqnarray*}
+Now let $\alpha\to 90^\circ -\alpha$. Then 
+\begin{eqnarray*}
+\cos(90^\circ-\alpha-\beta)&=&\cos(90^\circ-\alpha)\cos\beta+\sin(90^\circ-\alpha)\sin\beta\\
+&=&\sin\alpha\cdot\cos\beta+\cos\alpha\cdot\sin\beta
+\end{eqnarray*}
+But $\cos(90^\circ-(\alpha+\beta))=\sin(\alpha+\beta)$. Thus 
+$$\sin(\alpha+\beta)=\sin\alpha\cdot\cos\beta+\cos\alpha\cdot\sin\beta$$
+
+\subsection{Derivation of $\sin(\alpha - \beta)$}
+We can use
+\nequ{\sin(\alpha + \beta) = \sin\alpha\cos\beta+\cos\alpha\sin\beta}
+to show that
+\nequ{\sin(\alpha - \beta) = \sin\alpha\cos\beta-\cos\alpha\sin\beta}
+We know that
+\nequ{\sin(-\theta) = -\sin(\theta)}
+and
+\nequ{\cos(-\theta) = \cos\theta}
+Therefore,
+\begin{eqnarray*}
+\sin(\alpha-\beta)&=&\sin(\alpha + (-\beta))\\
+&=&\sin\alpha\cos(-\beta)+\cos\alpha\sin(-\beta)\\
+&=&\sin\alpha\cos\beta-\cos\alpha\sin\beta
+\end{eqnarray*}
+
+\subsection{Derivation of $\cos(\alpha + \beta)$}
+We can use
+\nequ{\sin(\alpha - \beta) = \sin\alpha\cos\beta-\sin\beta\cos\alpha}
+to show that
+\nequ{\cos(\alpha + \beta) = \cos\alpha\cos\beta-\sin\alpha\sin\beta}
+We know that
+\nequ{\sin(\theta) = \cos(90-\theta).}
+Therefore,
+\begin{eqnarray*}
+\cos(\alpha+\beta)&=&\sin(90-(\alpha+\beta))\\
+&=&\sin((90-\alpha)-\beta))\\
+&=&\sin(90-\alpha)\cos\beta-\sin\beta\cos(90-\alpha)\\
+&=&\cos\alpha\cos\beta-\sin\beta\sin\alpha
+\end{eqnarray*}
+
+\subsection{Derivation of $\cos(\alpha - \beta)$}
+We found this identity in our derivation of the $\sin(\alpha+\beta)$ identity. We can also use the fact that
+$$\sin(\alpha + \beta) = \sin\alpha\cos\beta+\cos\alpha\sin\beta$$
+to derive that 
+\nequ{\cos(\alpha - \beta) = \cos\alpha\cos\beta+\sin\alpha\sin\beta}
+As
+$$\cos(\theta) = \sin(90-\theta),$$
+we have that
+\begin{eqnarray*}
+\cos(\alpha-\beta)&=&\sin(90-(\alpha-\beta))\\
+&=&\sin((90-\alpha)+\beta))\\
+&=&\sin(90-\alpha)\cos\beta+\cos(90-\alpha)\sin\beta\\
+&=&\cos\alpha\cos\beta+\sin\alpha\sin\beta
+\end{eqnarray*}
+
+\subsection{Derivation of $\sin 2 \alpha$}
+We know that
+\nequ{\sin(\alpha + \beta) = \sin\alpha\cos\beta+\cos\alpha\sin\beta}
+When $\alpha=\beta$, we have that
+\begin{eqnarray*}
+\sin(2\alpha)=\sin(\alpha + \alpha) &=& \sin\alpha\cos\alpha+\cos\alpha\sin\alpha\\
+&=& 2\sin\alpha\cos\alpha\\
+\end{eqnarray*}
+
+\subsection{Derivation of $\cos 2 \alpha$}
+We know that
+\nequ{\cos(\alpha + \beta) = \cos\alpha\cos\beta-\sin\alpha\sin\beta}
+When $\alpha=\beta$, we have that
+\begin{eqnarray*}
+\cos(2\alpha)=\cos(\alpha + \alpha) &=& \cos\alpha\cos\alpha-\sin\alpha\sin\alpha\\
+&=& \cos^2\alpha-\sin^2\alpha\\
+\end{eqnarray*}
+
+However, we can also write
+\nequ{\cos 2\alpha=2 \cos^2 \alpha - 1}
+and
+\nequ{\cos 2\alpha=1 - 2 \sin^2 \alpha}
+
+by using
+\nequ{\sin^2\alpha+\cos^2\alpha=1.}
+
+\Activity{The $\cos 2\alpha$ Identity}{Use \nequ{\sin^2\alpha+\cos^2\alpha=1} to show that:
+\begin{eqnarray*}
+\cos 2 \alpha = 2 \cos^2 \alpha - 1 =1 - 2 \sin^2 \alpha \\
+\end{eqnarray*}
+}
+
+\subsection{Problem-solving Strategy for Identities}
+The most important thing to remember when asked to prove identities is:
+\Tip{Trigonometric Identities}{When proving trigonometric identities, never assume that the left hand side is equal to the right hand side. You need to \textbf{show} that both sides are equal.}
+
+A suggestion for proving identities: It is usually much easier simplifying the more complex side of an identity to get the simpler side than the other way round. 
+
+
+\begin{wex}{Trigonometric Identities 1}{Prove that $\sin 75^\circ=\frac{\sqrt{2}(\sqrt{3}+1)}{4}$ without using a calculator.}
+{
+\westep{Identify a strategy}
+We only know the exact values of the trig functions for a few special angles ($30^\circ$; $45^\circ$; $60^\circ$; etc.). We can see that $75^\circ=30^\circ+45^\circ$. Thus we can use our double-angle identity for $\sin(\alpha+\beta)$ to express $\sin 75^\circ$ in terms of known trig function values.
+\westep{Execute strategy}
+\begin{eqnarray*}
+\sin 75^\circ&=&\sin(45^\circ+30^\circ)\\
+&=&\sin(45^\circ)\cos(30^\circ)+\cos(45^\circ)\sin(30^\circ)\\
+&=&\frac{1}{\sqrt{2}}\cdot\frac{\sqrt{3}}{2}+\frac{1}{\sqrt{2}}\cdot\frac{1}{2}\\\
+&=&\frac{\sqrt{3}+1}{2\sqrt{2}}\\
+&=&\frac{\sqrt{3}+1}{2\sqrt{2}}\times\frac{\sqrt{2}}{\sqrt{2}}\\
+&=&\frac{\sqrt{2}(\sqrt{3}+1)}{4}
+\end{eqnarray*}
+}
+\end{wex}
+
+\begin{wex}{Trigonometric Identities 2}
+{Deduce a formula for $\tan(\alpha+\beta)$ in terms of $\tan\alpha$ and $\tan\beta$.\\
+\emph{Hint: Use the formulae for $\sin(\alpha+\beta)$ and $\cos(\alpha+\beta)$} }
+{
+\westep{Identify a strategy}
+We can express $\tan(\alpha+\beta)$ in terms of cosines and sines, and then use the double-angle formulas for these. We then manipulate the resulting expression in order to get it in terms of $\tan\alpha$ and $\tan\beta$.
+\westep{Execute strategy}
+\begin{eqnarray*}
+\tan(\alpha+\beta)&=&\frac{\sin(\alpha+\beta)}{\cos(\alpha+\beta)}\\
+&=&\frac{\sin\alpha\cdot\cos\beta+\cos\alpha\cdot\sin\beta}{\cos\alpha\cdot\cos\beta-\sin\alpha\cdot\sin\beta}\\
+&=&\frac{\frac{\sin\alpha\cdot\cos\beta}{\cos\alpha\cdot\cos\beta}+\frac{\cos\alpha\cdot\sin\beta}{\cos\alpha\cdot\cos\beta}}{\frac{\cos\alpha\cdot\cos\beta}{\cos\alpha\cdot\cos\beta}-\frac{\sin\alpha\cdot\sin\beta}{\cos\alpha\cdot\cos\beta}}\\
+&=& \frac{\tan\alpha+\tan\beta}{1-\tan\alpha\cdot\tan\beta}
+\end{eqnarray*}
+}
+\end{wex}
+
+\begin{wex}{Trigonometric Identities 3}
+{Prove that $$\frac{\sin \theta+\sin  2\theta}{1+\cos\theta+\cos 2\theta}=\tan \theta$$
+In fact, this identity is not valid for all values of $\theta$. Which values are those?}
+{
+\westep{Identify a strategy}
+The right-hand side (RHS) of the identity cannot be simplified. Thus we should try simplify the left-hand side (LHS). We can also notice that the trig function on the RHS does not have a $2\theta$ dependance. Thus we will need to use the double-angle formulas to simplify the $\sin 2\theta$ and $\cos 2\theta$ on the LHS. 
+We know that $\tan\theta$ is undefined for some angles $\theta$. Thus the identity is also undefined for these $\theta$, and hence is not valid for these angles. Also, for some $\theta$, we might have division by zero in the LHS, which is not allowed. Thus the identity won't hold for these angles also.
+\westep{Execute the strategy}
+\begin{eqnarray*}
+\mbox{LHS}&=&\frac{\sin\theta+2\,\sin \theta\,\cos \theta}{1+\cos\theta +(2 \cos^2\theta-1)}\\
+&=&\frac{\sin\theta(1+2 \cos\theta)}{\cos\theta(1+2\cos\theta)}\\
+&=&\frac{\sin\theta}{\cos\theta}\\
+&=&\tan\theta\\
+&=&\mbox{RHS}
+\end{eqnarray*}
+We know that $\tan\theta$ is undefined when $\theta=90\degree+180\degree n$, where $n$ is an integer. 
+The LHS is undefined when $1+\cos\theta+\cos 2\theta=0$. Thus we need to solve this equation.
+\begin{eqnarray*}
+1+\cos \theta+\cos 2\theta&=&0\\
+\implies \ \ \ \ \cos \theta (1+2\cos\theta)&=&0\\
+\end{eqnarray*}
+The above has solutions when $\cos\theta=0$, which occurs when $\theta=90\degree+180\degree n$, where $n$ is an integer. These are the same values when $\tan\theta$ is undefined. It also has solutions when $1+2\cos\theta=0$. This is true when $\cos\theta=-\frac{1}{2}$, and thus $\theta=\ldots -240\degree, -120\degree, 120\degree, 240\degree, \ldots$. 
+To summarise, the identity is not valid when $\theta=\ldots -270\degree; -240\degree; -120\degree; -90\degree;90\degree; 120\degree; 240\degree; 270\degree; \ldots$
+}
+\end{wex}
+
+\begin{wex}{Trigonometric Equations}
+{
+Solve the following equation for $y$ without using a calculator:
+$$\frac{1-\sin y -\cos 2y}{\sin 2y-\cos y}=-1$$}
+{\westep{Identify a strategy}
+Before we are able to solve the equation, we first need to simplify the left-hand side. We do this by using the double-angle formulas. 
+\westep{Execute the strategy}
+\begin{eqnarray*}
+\frac{1-\sin y-(1-2 \sin^2y)}{2\sin y \cos y - \cos y}&=&-1\\
+\implies \ \ \qquad \qquad \ \ \frac{2\sin^2y-\sin y}{\cos y (2 \sin y -1)}&=&-1\\
+\implies \ \qquad \qquad \  \ \ \frac{\sin y(2\sin y -1)}{\cos y (2\sin y-1)}&=&-1\\
+\implies \ \qquad \ \qquad \qquad \ \ \, \qquad \ \ \ \tan y &=&-1 \\
+\implies \ \ \,\ \ y=135\degree+180\degree n; \ n\in \ \mathbb{Z}
+\end{eqnarray*}
+}
+\end{wex}
+
+\section{Applications of Trigonometric Functions}
+%\begin{syllabus}
+%\item Solve problems in two and three dimensions by constructing and interpreting geometric and trigonometric models.
+%\end{syllabus}
+
+\subsection{Problems in Two Dimensions}
+\begin{wex}{Problem in Two Dimensions}
+{For the figure below, we are given that $CD=BD=x$. \\ \\
+Show that $BC^2=2x^2(1+\sin\theta)$.\\
+% \scalebox{0.9} % Change this value to rescale the drawing.
+% {
+% \begin{pspicture}(0,-3.2)(6.546875,3.2)
+% \pscircle[linewidth=0.024,dimen=outer](4.046875,0.23265626){2.5}
+% \psdots[dotsize=0.12](4.046875,0.23265626)
+% \psline[linewidth=0.024cm](5.946875,1.8326563)(0.546875,-2.6673439)
+% \psline[linewidth=0.024cm](5.946875,1.8326563)(4.526875,-2.1873438)
+% \psline[linewidth=0.04cm](4.546875,-2.2073438)(4.546875,-2.2073438)
+% \psline[linewidth=0.024cm](4.526875,-2.1873438)(2.146875,-1.3673438)
+% \psline[linewidth=0.024cm](0.526875,-2.6673439)(4.506875,-2.2073438)
+% \psdots[dotsize=0.12](5.946875,1.8326563)
+% \psdots[dotsize=0.12](0.546875,-2.6673439)
+% \psdots[dotsize=0.12](2.146875,-1.3673438)
+% \psdots[dotsize=0.12](4.546875,-2.1873438)
+% \rput(6.2134376,2.2226562){$A$}
+% \rput(4.6340623,-2.5373437){$B$}
+% \rput(0.0940625,-2.6173437){$C$}
+% \rput(1.646875,-1.2773438){$D$}
+% \rput(3.8382812,0.60265625){O}
+% \rput(5.2682815,0.92265624){$\theta$}
+% \rput(1.0882813,-1.7573438){$x$}
+% \rput(3.5682812,-1.4773438){$x$}
+% \end{pspicture} 
+
+% Generated with LaTeXDraw 2.0.5
+% Thu Sep 02 02:01:11 SAST 2010
+% \usepackage[usenames,dvipsnames]{pstricks}
+% \usepackage{epsfig}
+% \usepackage{pst-grad} % For gradients
+% \usepackage{pst-plot} % For axes
+\scalebox{.9} % Change this value to rescale the drawing.
+{
+\begin{pspicture}(0,-2.7939062)(6.7984376,2.7539062)
+\pscircle[linewidth=0.024,dimen=outer](4.2728124,0.25390622){2.5}
+\psdots[dotsize=0.12](4.2728124,0.25390622)
+\psline[linewidth=0.024cm](6.1728125,1.8539063)(0.7728125,-2.6460938)
+\psline[linewidth=0.024cm](6.1728125,1.8539063)(4.7528124,-2.1660938)
+% \psline[linewidth=0.04cm](0.2259375,0.02124997)(4.7728124,-2.1860938)
+\psline[linewidth=0.024cm](4.7528124,-2.1660938)(2.3728125,-1.3460938)
+\psline[linewidth=0.024cm](0.7528125,-2.6460938)(4.7328124,-2.1860938)
+\psdots[dotsize=0.12](6.1728125,1.8539063)
+\psdots[dotsize=0.12](0.7728125,-2.6460938)
+\psdots[dotsize=0.12](2.3728125,-1.3460938)
+\psdots[dotsize=0.12](4.7728124,-2.1660938)
+\usefont{T1}{ptm}{m}{n}
+\rput(6.4139066,2.2439063){$A$}
+\usefont{T1}{ptm}{m}{n}
+\rput(4.834531,-2.5160937){$B$}
+\usefont{T1}{ptm}{m}{n}
+\rput(0.29453126,-2.5960937){$C$}
+\usefont{T1}{ptm}{m}{n}
+\rput(1.8473438,-1.2560939){$D$}
+\usefont{T1}{ptm}{m}{n}
+\rput(4.0456247,0.6239062){$O$}
+\usefont{T1}{ptm}{m}{n}
+\rput(5.4687505,0.9439062){$\theta$}
+\usefont{T1}{ptm}{m}{n}
+\rput(1.28875,-1.7360939){$x$}
+\usefont{T1}{ptm}{m}{n}
+\rput(3.76875,-1.4560938){$x$}
+\psarc[linewidth=0.04](5.5,0.89390624){0.76}{194.03624}{275.44034}
+\end{pspicture} 
+}}{
+\westep{Identify a strategy}
+We want $CB$, and we have $CD$ and $BD$. If we could get the angle $B\hat{D}C$, then we could use the cosine rule to determine $BC$. This is possible, as $\triangle ABD$ is a right-angled triangle. We know this from circle geometry, that any triangle circumscribed by a circle with one side going through the origin, is right-angled. As we have two angles of $\triangle ABD$, we know $A\hat{D}B$ and hence $B\hat{D}C$. Using the cosine rule, we can get $BC^2$.  
+\westep{Execute the strategy}
+$$A\hat{D}B=180\degree-\theta-90\degree=90\degree-\theta$$
+Thus 
+\begin{eqnarray*}
+B\hat{D}C&=&180\degree-A\hat{D}B\\
+&=&180\degree-(90\degree-\theta)\\
+&=&90\degree+\theta
+\end{eqnarray*} 
+Now the cosine rule gives
+\begin{eqnarray*}
+BC^2&=&CD^2+BD^2-2\cdot CD\cdot BD\cdot\cos (B\hat{D}C)\\
+&=&x^2+x^2-2\cdot x^2\cdot\cos (90\degree+\theta)\\
+&=&2x^2+2x^2\left[\, \sin(90\degree)\cos(\theta)+\sin(\theta)\cos(90\degree)\right]\\
+&=&2x^2+2x^2\left[\, 1\cdot\cos(\theta)+\sin(\theta)\cdot 0 \right]\\
+&=&2x^2(1-\sin\theta)
+\end{eqnarray*}
+}\end{wex}
+
+\Exercise{}{
+\begin{enumerate}
+\item For the diagram on the right,\\
+\begin{minipage}{0.5\textwidth}
+\begin{enumerate}
+\item Find $A\hat{O}C$ in terms of $\theta$.
+\item Find an expression for:
+\begin{enumerate}
+\item $\cos \theta$
+\item $\sin \theta$
+\item  $\sin 2\theta$
+\end{enumerate}
+\item Using the above, show that $\sin 2\theta=2\sin\theta\cos\theta$.
+\item Now do the same for $\cos 2\theta$ and $\tan\theta$.
+\end{enumerate}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+\scalebox{0.8} % Change this value to rescale the drawing.
+{
+\begin{pspicture}(0,-3.5768108)(7.7504687,0.74693906)
+\rput{180.22299}(7.5102797,0.061045945){\psarc[linewidth=0.024](3.7551992,0.02321563){3.5}{0.0}{180.0}}
+\psline[linewidth=0.024cm](7.2551723,0.036837276)(0.2552252,0.0095938565)
+\psline[linewidth=0.024cm](7.2551723,0.036837276)(1.9668881,-2.983767)
+\psline[linewidth=0.024cm](1.9668881,-2.983767)(0.2552252,0.0095938565)
+\psline[linewidth=0.024cm](1.9668881,-2.983767)(1.9552124,0.016210115)
+\psline[linewidth=0.024cm](3.7551985,0.023215566)(1.9668881,-2.983767)
+\psdots[dotsize=0.12,dotangle=180.22299](3.7551985,0.023215566)
+\psdots[dotsize=0.12,dotangle=180.22299](7.2551723,0.036837276)
+\psdots[dotsize=0.12,dotangle=180.22299](0.2552252,0.0095938565)
+\psdots[dotsize=0.12,dotangle=180.22299](1.9668881,-2.983767)
+\psdots[dotsize=0.12,dotangle=180.22299](1.9552124,0.016210115)
+\usefont{T1}{ptm}{m}{n}
+\rput(7.6009374,0.3731891){$E$}
+\usefont{T1}{ptm}{m}{n}
+\rput(1.84,-3.4268107){$A$}
+\usefont{T1}{ptm}{m}{n}
+\rput(3.7796876,0.3731891){$O$}
+\usefont{T1}{ptm}{m}{n}
+\rput(1.90125,0.5731891){$C$}
+\usefont{T1}{ptm}{m}{n}
+\rput(0.10125,0.4731891){$B$}
+\usefont{T1}{ptm}{m}{n}
+\rput(5.9496875,-0.32681093){$\theta$}
+\psframe[linewidth=0.024,dimen=outer](2.22,0.026939068)(1.96,-0.25306094)
+\end{pspicture} 
+}
+\end{minipage}
+\item $DC$ is a diameter of circle $O$ with radius $r$. $CA=r$, $AB=DE$ and $D\hat{O}E=\theta$.\\
+Show that $\cos\theta=\frac{1}{4}$.\\
+\scalebox{0.8} % Change this value to rescale the drawing.
+{
+\begin{pspicture}(0,-3.2865667)(8.843437,3.4827344)
+\rput{173.3526}(10.904206,-0.8645093){\pscircle[linewidth=0.024,dimen=outer](5.4772058,-0.11562546){3.0}}
+\psline[linewidth=0.024cm](8.145614,1.1842209)(0.3971875,-2.5757031)
+\psline[linewidth=0.024cm](0.3971875,-2.5757031)(5.824483,2.8842065)
+\psline[linewidth=0.024cm](8.145614,1.1842209)(5.824483,2.8642066)
+\psline[linewidth=0.024cm](5.4772058,-0.11562546)(5.824483,2.8642066)
+\psline[linewidth=0.024cm](5.4772058,-0.11562546)(2.5171876,-0.45570317)
+\psdots[dotsize=0.12,dotangle=173.3526](5.4772058,-0.11562546)
+\psdots[dotsize=0.12,dotangle=173.3526](8.145614,1.1842209)
+\psdots[dotsize=0.12,dotangle=173.3526](5.824483,2.8642066)
+\psdots[dotsize=0.12,dotangle=173.3526](2.5342221,-0.44700405)
+\psdots[dotsize=0.12,dotangle=173.3526](2.8087983,-1.4154718)
+\usefont{T1}{ptm}{m}{n}
+\rput(0.12375,-2.865703){$A$}
+\usefont{T1}{ptm}{m}{n}
+\rput(2.664375,-1.9457031){$C$}
+\usefont{T1}{ptm}{m}{n}
+\rput(8.677188,1.2342968){$D$}
+\usefont{T1}{ptm}{m}{n}
+\rput(5.8792186,3.3142967){$E$}
+\usefont{T1}{ptm}{m}{n}
+\rput(2.104375,-0.28570315){$B$}
+\usefont{T1}{ptm}{m}{n}
+\rput(5.6139064,-0.56570315){$O$}
+\psdots[dotsize=0.12](0.4171875,-2.5557032)
+\usefont{T1}{ptm}{m}{n}
+\rput(5.878594,0.49429685){$\theta$}
+\end{pspicture} 
+}
+
+
+
+\item The figure below shows a cyclic quadrilateral with $\frac{BC}{CD}=\frac{AD}{AB}$.
+
+\begin{enumerate}
+\item Show that the area of the cyclic quadrilateral is $DC\cdot DA\cdot\sin\hat{D}$.
+\item Find expressions for $\cos \hat{D}$ and $\cos \hat{B}$ in terms of the quadrilateral sides.
+\item Show that $2CA^2=CD^2+DA^2+AB^2+BC^2$.
+\item Suppose that $BC=10$, $CD=15$, $AD=4$ and $AB=6$. Find $CA^2$.
+\item Find the angle $\hat{D}$ using your expression for $\cos\hat{D}$. Hence find the area of $ABCD$.
+\end{enumerate}
+
+
+\scalebox{0.9} % Change this value to rescale the drawing.
+{
+\begin{pspicture}(0,-2.3592188)(5.0828123,2.3592188)
+\pscircle[linewidth=0.024,dimen=outer](2.486875,0.18078125){2.0}
+\psline[linewidth=0.024cm](3.486875,1.8807813)(0.486875,0.18078125)
+\psline[linewidth=0.024cm](0.486875,0.18078125)(2.486875,-1.8192188)
+\psline[linewidth=0.024cm](2.486875,-1.8192188)(4.486875,0.18078125)
+\psline[linewidth=0.024cm](4.486875,0.18078125)(3.486875,1.8807813)
+\psdots[dotsize=0.12](3.486875,1.8807813)
+\psdots[dotsize=0.12](4.486875,0.18078125)
+\psdots[dotsize=0.12](2.486875,-1.8192188)
+\psdots[dotsize=0.12](0.486875,0.18078125)
+\usefont{T1}{ptm}{m}{n}
+\rput(4.9134374,0.19078125){$A$}
+\usefont{T1}{ptm}{m}{n}
+\rput(2.4940624,-2.2092187){$B$}
+\usefont{T1}{ptm}{m}{n}
+\rput(0.0940625,0.19078125){$C$}
+\usefont{T1}{ptm}{m}{n}
+\rput(3.706875,2.1907814){$D$}
+\end{pspicture} 
+}
+\end{enumerate}
+}
+
+
+\subsection{Problems in 3 Dimensions}
+\begin{wex}{Height of tower}
+{
+\item $D$ is the top of a tower of height $h$. Its base is at $A$. The triangle $ABC$ lies on the ground (a horizontal plane). If we have that $BC=b$, $D\hat{B}A=\alpha$, $D\hat{B}C=\beta$ and $D\hat{C}B=\theta$, show that
+$$h=\frac{b\sin\alpha\sin\theta}{\sin(\beta+\theta)}$$
+%Nasty Graphic:
+% \scalebox{0.9} % Change this value to rescale the drawing.
+% {
+% \begin{pspicture}(0,-3.6492188)(7.581875,4.369219)
+% \psline(1.82,-0.10921875)(6.82,-0.10921875)
+% \psline(6.82,-0.10921875)(2.82,-3.1092188)
+% \psline(2.82,-3.1092188)(1.82,-0.10921875)
+% \psline(1.82,-0.10921875)(6.82,3.8907812)
+% \psline(6.82,3.8907812)(6.82,-0.10921875)
+% \psline(6.82,3.8907812)(2.82,-3.1092188)
+% \usefont{T1}{ptm}{m}{n}
+% \rput(7.271406,1.9007813){$h$}
+% \usefont{T1}{ptm}{m}{n}
+% \rput(7.3465624,-0.09921875){$A$}
+% \usefont{T1}{ptm}{m}{n}
+% \rput(2.7271874,-3.4992187){$B$}
+% \usefont{T1}{ptm}{m}{n}
+% \rput(1.3271875,0){$C$}
+% \psdots(1.82,-0.10921875)
+% \psdots(2.84,-3.0892189)
+% \psdots(6.82,-0.10921875)
+% \psdots(6.8,3.8507812)
+% \usefont{T1}{ptm}{m}{n}
+% \rput(1.8914063,-1.6592188){log \left(\frac{10}{100}\right)}{$b$}
+% \usefont{T1}{ptm}{m}{n}
+% \rput(2.2414062,-0.35921875){$\theta$}
+% \usefont{T1}{ptm}{m}{n}
+% \rput(3.7514062,-2.0192187){$\alpha$}
+% \usefont{T1}{ptm}{m}{n}
+% \rput(2.8414063,-2.3992188){$\beta$}
+% \psarc(3.3,-3.1092188){1.22}{80.53768}{130.42607}
+% \usefont{T1}{ptm}{m}{n}
+% \rput(6.82,4.2007813){$D$}
+% \psframe(6.82,0.13078125)(6.56,-0.12921876)
+% \psarc(1.36,0.21078125){1.36}{302.4712}{14.82648}
+% \end{pspicture} 
+% }\rput(6.8079686,-2.16125){$b$}
+
+%Re-done graphic:
+\begin{center}
+\scalebox{1} % Change this value to rescale the drawing.
+{
+\begin{pspicture}(5,-2.97125)(11.683437,2.97125)
+\definecolor{color12542b}{rgb}{0.6549019607843137,0.6352941176470588,0.6352941176470588}
+\pspolygon[linewidth=0.04,fillstyle=solid,fillcolor=color12542b](6.24,-1.43125)(11.2,-1.43125)(7.94,-2.45125)
+\psline[linewidth=0.028222222cm](6.2,-1.43125)(11.28,2.60875)
+\psline[linewidth=0.028222222cm](11.26,2.5953124)(11.26,-1.41125)
+\psline[linewidth=0.028222222cm](11.26,2.56875)(7.94,-2.51125)
+\psdots[dotsize=0.127](6.22,-1.4446876)
+\psdots[dotsize=0.127](11.26,-1.4246875)
+\psdots[dotsize=0.127](11.26,2.5753124)
+\psframe[linewidth=0.028222222,dimen=outer](11.26,-1.09125)(10.9,-1.4446876)
+
+\psdots[dotsize=0.127](7.98,-2.4446876)
+% \usefont{T1}{ptm}{m}{n}
+\rput(11.430312,2.77875){$D$}
+% \usefont{T1}{ptm}{m}{n}
+\rput(11.482344,0.55875){$h$}
+% \usefont{T1}{ptm}{m}{n}
+\rput(11.520312,-1.48125){$A$}
+% \usefont{T1}{ptm}{m}{n}
+\rput(7.933125,-2.82125){$B$}
+% \usefont{T1}{ptm}{m}{n}
+\rput(5.8857813,-1.40125){$C$}
+% \usefont{T1}{ptm}{m}{n}
+\rput(6.8079686,-2.16125){$b$}
+\rput(6.8079686,-1.2){$\theta$}
+\rput(7.9,-2){$\beta$}
+\rput(8.8,-1.8){$\alpha$}
+\psarc[linewidth=0.04](6.8,-1.31125){0.42}{255.96376}{74.74488}
+\psarc[linewidth=0.04](8.78,-1.67125){0.52}{301.7595}{86.42367}
+\psarc[linewidth=0.04](8.06,-2.15125){0.5}{42.878902}{185.19443}
+\end{pspicture}
+}
+\end{center}
+
+}
+{
+\westep{Identify a strategy}
+We have that the triangle $ABD$ is right-angled. Thus we can relate the height $h$ with the angle $\alpha$ and either the length $BA$ or $BD$ (using sines or cosines). But we have two angles and a length for $\triangle BCD$, and thus can work out all the remaining lengths and angles of this triangle. We can thus work out $BD$. 
+\westep{Execute the strategy}
+We have that 
+\begin{eqnarray*}
+\frac{h}{BD}&=&\sin\alpha\\
+\implies \ \ \ \ h&=& BD\sin\alpha
+\end{eqnarray*}
+Now we need $BD$ in terms of the given angles and length $b$. Considering the triangle $BCD$, we see that we can use the sine rule.
+\begin{eqnarray*}
+ \frac{\sin \theta}{BD}&=&\frac{\sin (B\hat{D}C)}{b}\\
+\implies \ \ \ \ BD&=&\frac{b \sin\theta}{\sin (B\hat{D}C)}
+\end{eqnarray*}
+But $B\hat{D}C=180\degree -\beta-\theta$, and  
+\begin{eqnarray*}
+\sin (180\degree -\beta-\theta)&=&-\sin (-\beta-\theta)\\
+&=& \sin(\beta+\theta)
+\end{eqnarray*}
+So 
+\begin{eqnarray*}
+BD&=&\frac{b \sin\theta}{\sin (B\hat{D}C)}\\
+&=&\frac{b \sin\theta}{\sin(\beta+\theta)}\\
+\therefore h &=&BD\sin\alpha\\
+&=& \frac{b \sin\alpha \sin\theta}{\sin(\beta + \theta)}\\
+\end{eqnarray*}
+}\end{wex}
+
+\Exercise{}{
+\begin{enumerate}
+\item The line $BC$ represents a tall tower, with $B$ at its foot. Its angle of elevation from $D$ is $\theta$. We are also given that $BA=AD=x$.\\
+\scalebox{1} % Change this value to rescale the drawing.
+{
+\begin{pspicture}(0,-3.561875)(5.0803127,3.561875)
+\psline[linewidth=0.024cm](0.4940625,2.878125)(0.4940625,-1.121875)
+\psline[linewidth=0.024cm](0.4940625,-1.121875)(4.4940624,-1.121875)
+\psline[linewidth=0.024cm](4.4940624,-1.121875)(0.4940625,2.878125)
+\psline[linewidth=0.024cm](0.4940625,-1.121875)(2.4940624,-3.121875)
+\psline[linewidth=0.024cm](2.4940624,-3.121875)(4.4940624,-1.121875)
+\usefont{T1}{ptm}{m}{n}
+\rput(0.50125,3.388125){$C$}
+\usefont{T1}{ptm}{m}{n}
+\rput(0.10125,-1.111875){$B$}
+\usefont{T1}{ptm}{m}{n}
+\rput(2.520625,-3.411875){$A$}
+\usefont{T1}{ptm}{m}{n}
+\rput(4.9140625,-1.111875){$D$}
+\psdots[dotsize=0.12](0.4940625,2.878125)
+\psdots[dotsize=0.12](4.4940624,-1.121875)
+\psdots[dotsize=0.12](2.4940624,-3.121875)
+\psdots[dotsize=0.12](0.4940625,-1.121875)
+\psframe[linewidth=0.024,dimen=outer](0.7940625,-0.821875)(0.4940625,-1.121875)
+\usefont{T1}{ptm}{m}{n}
+\rput(3.6554687,-0.811875){$\theta$}
+\usefont{T1}{ptm}{m}{n}
+\rput(3.6854687,-1.411875){$\alpha$}
+\usefont{T1}{ptm}{m}{n}
+\rput(1.1354687,-2.411875){$x$}
+\usefont{T1}{ptm}{m}{n}
+\rput(3.7354689,-2.411875){$x$}
+\end{pspicture} 
+}
+\item Find the height of the tower $BC$ in terms of $x$, $\tan \theta$ and $\cos 2\alpha$.
+\item Find $BC$ if we are given that $x=140~\emm$, $\alpha=21\degree$ and $\theta=9\degree$.
+\end{enumerate}
+
+
+}
+
+\section{Other Geometries}
+%\begin{syllabus}
+%\item Demonstrate some familiarity with other geometries (e.g. spherical geometry, taxi-cab geometry, and fractals).
+%\end{syllabus}
+
+\subsection{Taxicab Geometry}
+Taxicab geometry, considered by Hermann Minkowski in the 19th century, is a form of geometry in which the usual metric of Euclidean geometry is replaced by a new metric in which the distance between two points is the sum of the (absolute) differences of their coordinates.
+
+\subsection{Manhattan Distance}
+The metric in taxi-cab geometry, is known as the \textit{Manhattan distance}, between two points in an Euclidean space with fixed Cartesian coordinate system as the sum of the lengths of the projections of the line segment between the points onto the coordinate axes.
+
+For example, the Manhattan distance between the point $P_1$ with coordinates $(x_1;y_1)$ and the point $P_2$ at $(x_2; y_2)$ is
+\equ{\left|x_1 - x_2\right| + \left|y_1 - y_2\right|}{mt:o:manhattan}
+
+\begin{figure}[htbp]
+\begin{center}
+\begin{pspicture}(0,0)(5,5)
+%\psgrid
+\psline(0.0,0)(0.0,5)
+\psline(1.0,0)(1.0,5)
+\psline(2.0,0)(2.0,5)
+\psline(3.0,0)(3.0,5)
+\psline(4.0,0)(4.0,5)
+\psline(0.5,0)(0.5,5)
+\psline(1.5,0)(1.5,5)
+\psline(2.5,0)(2.5,5)
+\psline(3.5,0)(3.5,5)
+\psline(4.5,0)(4.5,5)
+\psline(5,0)(5,5)
+\psline(0,0.5)(5,0.5)
+\psline(0,1.5)(5,1.5)
+\psline(0,2.5)(5,2.5)
+\psline(0,3.5)(5,3.5)
+\psline(0,4.5)(5,4.5)
+\psline(0,0.0)(5,0.0)
+\psline(0,1.0)(5,1.0)
+\psline(0,2.0)(5,2.0)
+\psline(0,3.0)(5,3.0)
+\psline(0,4.0)(5,4.0)
+\psline(0,5)(5,5)
+
+\psline[linestyle=dashed,linewidth=2pt](1,1)(4,4)
+\psline[linestyle=dotted,linewidth=3pt](1,1)(1,4)(4,4)
+\psline[linestyle=solid,linewidth=2pt](1,1)(2,1)(2,2)(3,2)(3,3)(4,3)(4,4)
+
+\end{pspicture}
+\end{center}
+\caption{Manhattan distance (dotted and solid) compared to Euclidean distance (dashed). In each case the Manhattan distance is $12$ units, while the Euclidean distance is $\sqrt{36}$}
+\label{fig:mt:o:taxicab}
+\end{figure}
+
+The Manhattan distance changes if the coordinate system is rotated, but does not depend on the translation of the coordinate system or its reflection with respect to a coordinate axis.
+
+Manhattan distance is also known as city block distance or taxi-cab distance. It is given these names because it is the shortest distance a car would drive in a city laid out in square blocks. 
+
+Taxicab geometry satisfies all of Euclid's axioms except for the side-angle-side axiom, as one can generate two triangles with two sides and the angle between them the same and have them not be congruent. In particular, the parallel postulate holds.
+
+A circle in taxicab geometry consists of those points that are a fixed Manhattan distance from the center. These circles are squares whose sides make a $45^\circ$ angle with the coordinate axes.
+
+% \subsection{Spherical Geometry}
+% Spherical geometry is the geometry of the two-dimensional surface of a sphere. It is an example of a non-Euclidean geometry.
+% 
+% In plane geometry the basic concepts are points and line. On the sphere, points are defined in the usual sense. The equivalents of lines are not defined in the usual sense of "straight line" but in the sense of "the shortest paths between points" which is called a geodesic. On the sphere the geodesics are the great circles, so the other geometric concepts are defined like in plane geometry but with lines replaced by great circles. Thus, in spherical geometry angles are defined between great circles, resulting in a spherical trigonometry that differs from ordinary trigonometry in many respects (for example, the sum of the interior angles of a triangle exceeds 180$^{\circ}$).
+% 
+% Spherical geometry is the simplest model of elliptic geometry, in which a line has no parallels through a given point. Contrast this with hyperbolic geometry, in which a line has two parallels, and an infinite number of ultra-parallels, through a given point.
+% 
+% Spherical geometry has important practical uses in celestial navigation and astronomy.
+% 
+% \Extension{Distance on a Sphere}{The great-circle distance is the shortest distance between any two points on the surface of a sphere measured along a path on the surface of the sphere (as opposed to going through the sphere's interior). Because spherical geometry is rather different from ordinary Euclidean geometry, the equations for distance take on a different form. The distance between two points in Euclidean space is the length of a straight line from one point to the other. On the sphere, however, there are no straight lines. In non-Euclidean geometry, straight lines are replaced with geodesics. Geodesics on the sphere are the great circles (circles on the sphere whose centers are coincident with the center of the sphere).
+% 
+% Between any two points on a sphere which are not directly opposite each other, there is a unique great circle. The two points separate the great circle into two arcs. The length of the shorter arc is the great-circle distance between the points. Between two points which are directly opposite each other (called antipodal points) there infinitely many great circles, but all have the same length, equal to half the circumference of the circle, or $\pi r$, where $r$ is the radius of the sphere.
+% 
+% Because the Earth is approximately spherical (see spherical Earth), the equations for great-circle distance are important for finding the shortest distance between points on the surface of the Earth, and so have important applications in navigation.
+% 
+% Let $\phi_1$,$\lambda_1$; $\phi_2,\lambda_2$, be the latitude and longitude of two points, respectively. Let $\Delta\lambda$ be the longitude difference. Then, if $r$ is the great-circle radius of the sphere, the great-circle distance is $r \Delta\sigma$, where $\Delta\sigma$ is the angular difference/distance and can be determined from the spherical law of cosines as:
+% 
+% \nequ{\Delta\sigma=\arccos\left\{\sin\phi_1\sin\phi_2+\cos\phi_1\cos\phi_2\cos\Delta\lambda\right\}}}
+% 
+% \Extension{Spherical Distance on the Earth}{The shape of the Earth more closely resembles a flattened spheroid with extreme values for the radius of curvature, or arcradius, of 6335.437 km at the equator (vertically) and 6399.592 km at the poles, and having an average great-circle radius of 6372.795 km.
+% 
+% Using a sphere with a radius of 6372.795 km thus results in an error of up to about 0.5\%.}
+% 
+% \subsection{Fractal Geometry}
+% The word "fractal" has two related meanings. In colloquial usage, it denotes a shape that is recursively constructed or self-similar, that is, a shape that appears similar at all scales of magnification and is therefore often referred to as "infinitely complex." In mathematics a fractal is a geometric object that satisfies a specific technical condition, namely having a Hausdorff dimension greater than its topological dimension. The term fractal was coined in 1975 by Beno�t Mandelbrot, from the Latin fractus, meaning "broken" or "fractured."
+% 
+% Three common techniques for generating fractals are:
+% \begin{itemize}
+% \item{Iterated function systems - These have a fixed geometric replacement rule. Cantor set, Sierpinski carpet, Sierpinski gasket, Peano curve, Koch snowflake, Harter-Heighway dragon curve, T-Square, Menger sponge, are some examples of such fractals.}
+% \item{Escape-time fractals - Fractals defined by a recurrence relation at each point in a space (such as the complex plane). Examples of this type are the Mandelbrot set, the Burning Ship fractal and the Lyapunov fractal.}
+% \item{Random fractals, generated by stochastic rather than deterministic processes, for example, fractal landscapes, L�vy flight and the Brownian tree. The latter yields so-called mass- or dendritic fractals, for example, Diffusion Limited Aggregation or Reaction Limited Aggregation clusters.}
+% \end{itemize}
+% 
+% \subsubsection{Fractals in nature}
+% Approximate fractals are easily found in nature. These objects display self-similar structure over an extended, but finite, scale range. Examples include clouds, snow flakes, mountains, river networks, and systems of blood vessels.
+% 
+% Trees and ferns are fractal in nature and can be modeled on a computer using a recursive algorithm. This recursive nature is clear in these examples - a branch from a tree or a frond from a fern is a miniature replica of the whole: not identical, but similar in nature.
+% 
+% The surface of a mountain can be modeled on a computer using a fractal: Start with a triangle in 3D space and connect the central points of each side by line segments, resulting in 4 triangles. The central points are then randomly moved up or down, within a defined range. The procedure is repeated, decreasing at each iteration the range by half. The recursive nature of the algorithm guarantees that the whole is statistically similar to each detail.
+% 
+
+\section*{Summary of the Trigonomertic Rules and Identities}
+\begin{center}
+\begin{tabular}{lll}
+Pythagorean Identity & Cofunction Identities  & Ratio Identities \\
+\\
+$\cos^2{\theta}+\sin^2{\theta}=1 $ & $ \sin(90^\circ - \theta)=\cos\theta$ & $ \tan\theta=\frac{\sin\theta}{\cos\theta} $ \\
+&  $ \cos(90^\circ - \theta)=\sin\theta$&\\
+\\
+\\
+Odd/Even Identities & Periodicity Identities & Double Angle Identities  \\
+\\
+$\sin(-\theta)=-\sin\theta$ & $\sin(\theta\pm 360^\circ)=\sin\theta$ &$\sin(2\theta)=2\sin\theta\cos\theta$  \\
+$\cos(-\theta)=\cos\theta$ & $\cos(\theta\pm 360^\circ)=\cos\theta$ & $\cos{(2\theta)}=\cos^2\theta-\sin^2\theta$ \\
+$\tan(-\theta)=-\tan\theta$ & $\tan(\theta\pm 180^\circ)=\tan\theta$ &$\cos{(2\theta)}= 1-2\sin^2\theta$   \\
+& & $\tan{(2\theta)}=\frac{2\tan\theta}{1-\tan^2\theta}$\\
+\\
+\\
+Addition/Subtraction Identities & Area Rule & Cosine rule  \\
+\\
+  $\sin{(\theta+\phi)}=\sin\theta\cos\phi+\cos\theta\sin\phi$&$\mathrm{Area}=\frac{1}{2}bc\sin{A}$ &$a^2=b^2+c^2-2bc\cos{A}$\\
+ $\sin{(\theta-\phi)}=\sin\theta\cos\phi-\cos\theta\sin\phi$& $\mathrm{Area}=\frac{1}{2}ab\sin{C}$&  $b^2=a^2+c^2-2ac\cos{B}$ \\
+
+  $\cos{(\theta+\phi)}=\cos\theta\cos\phi-\sin\theta\sin\phi$& $Area=\frac{1}{2}ac\sin B$& $c^2=a^2+b^2-2ab\cos{C}$  \\
+  $\cos{(\theta-\phi)}=\cos\theta\cos\phi+\sin\theta\sin\phi$& & \\
+  $\tan{(\theta+\phi)}=\frac{\tan\phi + \tan\theta}{1-\tan\theta\tan\phi}$& &\\
+ $\tan{(\theta-\phi)}=\frac{\tan\phi - \tan\theta}{1+\tan\theta\tan\phi}$& & \\
+\\
+\\
+Sine Rule &  &  \\
+\\
+&  & \\
+$\frac{\sin{A}}{a}=\frac{\sin{B}}{b}=\frac{\sin{C}}{c}$&  &  \\
+&  & \\
+\end{tabular}
+\end{center}
+
+
+\begin{eocexercises}{}
+Do the following without using a calculator.
+\begin{enumerate}
+\item Suppose $\cos\theta=0,7$. Find $\cos 2\theta$ and $\cos 4\theta$.
+\item If $\sin\theta=\frac{4}{7}$, again find $\cos 2\theta$ and $\cos 4\theta$.
+\item Work out the following:
+\begin{enumerate}
+\item $\cos 15\degree$
+\item $\cos 75\degree$
+\item $\tan 105\degree$
+\item $\cos 15\degree$
+\item $\cos 3\degree \cos 42\degree -\sin 3\degree \sin 42\degree$
+\item $1-2 \sin^2 (22,5\degree)$
+\end{enumerate}
+\item Solve the following equations:
+\begin{enumerate}
+\item $\cos 3\theta\cdot\cos\theta-\sin 3\theta\cdot\sin\theta=-\frac{1}{2}$
+\item $3\sin \theta=2\cos^2\theta$
+
+\end{enumerate}
+\item Prove the following identities
+\begin{enumerate}
+\item $\sin^3\theta=\frac{3\sin\theta-\sin 3\theta}{4}$
+\item $\cos^2\alpha (1-\tan^2\alpha)=\cos 2\alpha$
+\item $4\sin\theta\cdot\cos\theta\cdot\cos 2\theta= \sin 4\theta$
+\item $4\cos^3 x -3\cos x=\cos 3x$
+\item $\tan y=\frac{\sin 2y}{\cos 2y+1}$
+\end{enumerate}
+\item (Challenge question!) If $a+b+c=180\degree$, prove that 
+$$\sin^3 a+\sin^3 b+ \sin^3 c = 3\cos(a/2)\cos(b/2)\cos(c/2)+ \cos(3a/2)\cos(3b/2)\cos(3c/2)$$
+
+\end{enumerate}
+
+
+
+
+
+
+% CHILD SECTION END 
+
+
+
+% CHILD SECTION START 
+\practiceinfo
+\end{eocexercises}

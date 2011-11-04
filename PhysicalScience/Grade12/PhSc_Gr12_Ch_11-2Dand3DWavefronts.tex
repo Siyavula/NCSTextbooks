@@ -1,0 +1,1017 @@
+\chapter{2D and 3D Wavefronts}
+\label{p:wsl:2d3d12}
+
+\section{Introduction}
+You have learnt about the basic principles of reflection and refraction. In this chapter, you will learn about phenomena that arise with waves in two and three dimensions: interference and diffraction. 
+
+\section{Wavefronts}
+%\begin{syllabus}
+%\item The learner must be able to define a wavefront as an imaginary line that connects waves that are in phase (e.g. all at the crest of their cycle).
+%\end{syllabus}
+
+\Activity{Investigation}{Wavefronts}{
+The diagram shows three identical waves being emitted by three point sources. All points marked with the same letter are in phase. Join all points with the same letter. 
+
+\begin{center}
+\begin{pspicture}(-5,-2.6)(5,2.6)
+%\psgrid
+\psset{unit=2}
+\psdots[dotsize=3pt](-1,0)(0,0)(1,0)
+\rput(-1,0){\pscircle(0,0){1}\pscircle(0,0){0.75}\pscircle(0,0){0.5}\pscircle(0,0){0.25}}
+\rput(0,0){\pscircle(0,0){1}\pscircle(0,0){0.75}\pscircle(0,0){0.5}\pscircle(0,0){0.25}}
+\rput(1,0){\pscircle(0,0){1}\pscircle(0,0){0.75}\pscircle(0,0){0.5}\pscircle(0,0){0.25}}
+
+\multirput(0,-1)(0,0.25){9}{\psdots(0,0)(-1,0)(1,0)}
+\uput{2pt}[ul](0,1){\small{A}}
+\uput{2pt}[ul](-1,1){\small{A}}
+\uput{2pt}[ul](1,1){\small{A}}
+
+\uput{2pt}[ul](0,0.75){\small{B}}
+\uput{2pt}[ul](-1,0.75){\small{B}}
+\uput{2pt}[ul](1,0.75){\small{B}}
+
+\uput{2pt}[ul](0,0.5){\small{C}}
+\uput{2pt}[ul](-1,0.5){\small{C}}
+\uput{2pt}[ul](1,0.5){\small{C}}
+
+\uput{2pt}[ul](0,0.25){\small{D}}
+\uput{2pt}[ul](-1,0.25){\small{D}}
+\uput{2pt}[ul](1,0.25){\small{D}}
+
+\uput{2pt}[ul](0,-0.25){\small{E}}
+\uput{2pt}[ul](-1,-0.25){\small{E}}
+\uput{2pt}[ul](1,-0.25){\small{E}}
+
+\uput{2pt}[ul](0,-0.5){\small{F}}
+\uput{2pt}[ul](-1,-0.5){\small{F}}
+\uput{2pt}[ul](1,-0.5){\small{F}}
+
+\uput{2pt}[ul](0,-0.75){\small{G}}
+\uput{2pt}[ul](-1,-0.75){\small{G}}
+\uput{2pt}[ul](1,-0.75){\small{G}}
+
+\uput{2pt}[ul](0,-1){\small{H}}
+\uput{2pt}[ul](-1,-1){\small{H}}
+\uput{2pt}[ul](1,-1){\small{H}}
+\end{pspicture}
+\end{center}
+
+What type of lines (straight, curved, etc) do you get? How does this compare to the line that joins the sources?}
+
+Consider three point sources of waves. If each source emits waves isotropically (i.e. the same in all directions) we will get the situation shown in  as shown in Figure~\ref{fig:p:wsl:2d3d12:wavefront}.
+
+\begin{figure}
+\begin{center}
+\begin{pspicture}(-1,-2.2)(1,2.2)
+%\psgrid
+\psline[linecolor=gray](-1,-2)(-1,2)
+\psline[linecolor=gray](-0.75,-2)(-0.75,2)
+\psline[linecolor=gray](-0.5,-2)(-0.5,2)
+\psline[linecolor=gray](-0.25,-2)(-0.25,2)
+
+\psline[linecolor=gray](1,-2)(1,2)
+\psline[linecolor=gray](0.75,-2)(0.75,2)
+\psline[linecolor=gray](0.5,-2)(0.5,2)
+\psline[linecolor=gray](0.25,-2)(0.25,2)
+
+\psdots(0,-1)(0,0)(0,1)
+\rput(0,-1){\pscircle(0,0){1}\pscircle(0,0){0.75}\pscircle(0,0){0.5}\pscircle(0,0){0.25}}
+\rput(0,0){\pscircle(0,0){1}\pscircle(0,0){0.75}\pscircle(0,0){0.5}\pscircle(0,0){0.25}}
+\rput(0,1){\pscircle(0,0){1}\pscircle(0,0){0.75}\pscircle(0,0){0.5}\pscircle(0,0){0.25}}
+\end{pspicture}
+\caption{Wavefronts are imaginary lines joining waves that are in phase. In the example, the wavefronts (shown by the grey, vertical lines) join all waves at the crest of their cycle.}
+\label{fig:p:wsl:2d3d12:wavefront}
+\end{center}
+\end{figure}
+
+We define a \textbf{wavefront} as the imaginary line that joins waves that are in phase. These are indicated by the grey, vertical lines in Figure~\ref{fig:p:wsl:2d3d12:wavefront}. The points that are in phase can be peaks, troughs or anything in between, it doesn't matter which points you choose as long as they are in phase.
+
+
+\section{The Huygens Principle}
+%\begin{syllabus}
+%\item The learner must be able to state Huygens' principle.
+%\end{syllabus}
+
+Christiaan Huygens described how to determine the path of waves through a medium. 
+ 
+\Definition{The Huygens Principle}{Each point on a wavefront acts like a point source of circular waves. The waves emitted from these point sources interfere to form another wavefront.}
+
+A simple example of the Huygens Principle is to consider the single wavefront in Figure~\ref{fig:p:wsl:2d3d12:huygens}.
+
+\begin{figure}[H]
+\begin{center}
+\begin{pspicture}(0,0)(3,10)
+%\psgrid[gridcolor=gray]
+\rput(0,7){
+\psline[linewidth=2pt]{->}(1,1.5)(2,1.5)
+\psline(0,0)(0,3)
+\uput[l](-0.5,1.5){wavefront at time $t$}
+}
+\rput(0,3.5){
+\psline[linewidth=2pt]{->}(1,1.5)(2,1.5)
+\psline(0,0)(0,3)
+\psdots(0,0.5)(0,1)(0,1.5)(0,2)(0,2.5)
+\pscircle(0,0.5){0.5}
+\pscircle(0,1){0.5}
+\pscircle(0,1.5){0.5}
+\pscircle(0,2){0.5}
+\pscircle(0,2.5){0.5}
+\psline[linestyle=dashed](0.5,0)(0.5,3)
+\uput[l](-0.5,1.5){wavefront at time $t$}
+\uput{10pt}[dl](-0.5,1.5){acts a source of circular waves}
+
+}
+\rput(0.5,0){
+\psline[linewidth=2pt]{->}(1,1.5)(2,1.5)
+\psline(0,0)(0,3)
+\psdots(0,0.5)(0,1)(0,1.5)(0,2)(0,2.5)
+\pscircle(0,0.5){0.5}
+\pscircle(0,1){0.5}
+\pscircle(0,1.5){0.5}
+\pscircle(0,2){0.5}
+\pscircle(0,2.5){0.5}
+\psline[linestyle=dashed](0.5,0)(0.5,3)
+\uput[l](-0.5,1.5){wavefront at time $t+\Delta t$}
+}
+\end{pspicture}
+\caption{A single wavefront at time $t$ acts as a series of point sources of circular waves that interfere to give a new wavefront at a time $t + \Delta t$. The process continues and applies to any shape of waveform.}
+\label{fig:p:wsl:2d3d12:huygens}
+\end{center}
+\end{figure}
+
+
+
+\begin{wex}
+{Application of the Huygens Principle}{Given the wavefront, 
+
+\begin{center}
+\begin{pspicture}(0,0)(5,5)
+%\psgrid[gridcolor=gray]
+\psarc(0,0){4}{0}{90}
+\end{pspicture}
+\end{center}
+use the Huygens Principle to determine the wavefront at a later time.}
+{
+\westep{Draw circles at various points along the given wavefront}
+\begin{center}
+\begin{pspicture}(0,0)(5,5)
+%\psgrid[gridcolor=gray]
+\psarc[linecolor=gray](0,0){4}{0}{90}
+\pscircle(4;10){0.5}
+\pscircle(4;20){0.5}
+\pscircle(4;30){0.5}
+\pscircle(4;40){0.5}
+\pscircle(4;50){0.5}
+\pscircle(4;60){0.5}
+\pscircle(4;70){0.5}
+\pscircle(4;80){0.5}
+\end{pspicture}
+\end{center}
+
+\westep{Join the crests of each circle to get the wavefront at a later time}
+
+\begin{center}
+\begin{pspicture}(0,0)(5,5)
+%\psgrid[gridcolor=gray]
+\psarc[linecolor=gray](0,0){4}{0}{90}
+\pscircle[linecolor=gray](4;10){0.5}
+\pscircle[linecolor=gray](4;20){0.5}
+\pscircle[linecolor=gray](4;30){0.5}
+\pscircle[linecolor=gray](4;40){0.5}
+\pscircle[linecolor=gray](4;50){0.5}
+\pscircle[linecolor=gray](4;60){0.5}
+\pscircle[linecolor=gray](4;70){0.5}
+\pscircle[linecolor=gray](4;80){0.5}
+\psarc[linewidth=2pt](0,0){4.5}{0}{90}
+\end{pspicture}
+\end{center}
+}
+\end{wex}
+
+\begin{IFact}
+{Christiaan Huygens (14 April 1629 - 8 July 1695), was a Dutch mathematician, astronomer and physicist; born in The Hague as the son of Constantijn Huygens. He studied law at the University of Leiden and the College of Orange in Breda before turning to science. Historians commonly associate Huygens with the scientific revolution.
+
+Huygens generally receives minor credit for his role in the development of modern calculus. He also achieved note for his arguments that light consisted of waves; see: wave-particle duality in Chapter~\ref{}. In 1655, he discovered Saturn's moon Titan. He also examined Saturn's planetary rings, and in 1656 he discovered that those rings consisted of rocks. In the same year he observed and sketched the Orion Nebula. He also discovered several interstellar nebulae and some double stars.}
+\end{IFact}
+
+
+\section{Interference}
+%\begin{syllabus}
+%\item The learner must be able to define interference as when two waves pass through the same region of space at the same time, resulting in superposition of waves.
+%\item The learner must be able to explain the concepts of constructive and destructive interference.
+%\item The learner must be able to predict areas of constructive and destructive interference from a diagram / source material.
+%\item The learner must be able to investigate the interference of waves on the surface of water from two coherent sources, vibrating in phase. 
+%\item The learner must be able to draw an interference pattern marking nodal lines and noting positions of maximum interference.
+%\end{syllabus}
+
+Interference occurs when two identical waves pass through the same region of space at the same time resulting in a superposition of waves. There are two types of interference which is of interest: \textbf{constructive} interference and \textbf{destructive} interference. 
+
+Constructive interference occurs when both waves have a displacement in the same direction, while destructive interference occurs when one wave has a displacement in the opposite direction to the other, thereby resulting in a cancellation. When two waves interfere destructively, the resultant absolute displacement of the medium is less than in either of the individual displacements. When \textit{total} destructive interference occurs, there is no displacement of the medium. For constructive interference the displacement of the medium is greater than the individual displacements. 
+
+Constructive interference is the result of two waves with similar phase overlapping. This means that positive parts of one wave tend to overlap with positive parts of the other, and alike for the negative parts. When positive is added to positive and negative is added to negative, the net absolute displacement of the medium is greater than the displacements of the individual waves.
+
+Destructive interference, on the other hand, is the result of two waves with non-similar phase (i.e. anti-phase) overlapping. This means that the positive parts of one wave tend to align with the negative parts of the second wave. When the waves are added together, the positive and negative contributions lead to a net absolute displacement of the medium which is less than the absolute displacements of either of the individual waves. A place where destructive interference takes place is called a node.
+
+Waves can interfere at places where there is never a trough and trough or peak and peak or trough and peak at the same time. At these places the waves will add together and the resultant displacement will be the sum of the two waves but they won't be points of maximum interference.
+
+Consider the two identical waves shown in the picture below. The wavefronts of the peaks are shown as black lines while the wavefronts of the troughs are shown as grey lines. You can see that the black lines cross other black lines in many places. This means two peaks are in the same place at the same time so we will have constructive interference where the two peaks add together to form a bigger peak.
+
+\begin{center}
+\begin{pspicture}(-4,-3)(4,3)
+%\psgrid[gridcolor=gray]
+\uput[l](-1,0){A}
+\uput[r](1,0){B}
+
+\psdots(-1,0)(1,0)
+\pscircle[linecolor=gray](-1,0){0.5}
+\pscircle(-1,0){1}
+\pscircle[linecolor=gray](-1,0){1.5}
+\pscircle(-1,0){2.}
+\pscircle[linecolor=gray](-1,0){2.5}
+\pscircle(-1,0){3}
+
+\pscircle[linecolor=gray](1,0){0.5}
+\pscircle(1,0){1}
+\pscircle[linecolor=gray](1,0){1.5}
+\pscircle(1,0){2.0}
+\pscircle[linecolor=gray](1,0){2.5}
+\pscircle(1,0){3}
+
+\end{pspicture}
+\end{center}
+
+Two points sources (A and B) radiate identical waves. The wavefronts of the peaks (black lines) and troughs (grey lines) are shown. Constructive interference occurs where two black lines intersect or where two gray lines intersect. Destructive interference occurs where a black line intersects with a grey line.
+
+When the grey lines cross other grey lines there are two troughs in the same place at the same time so we will have constructive interference where the two troughs add together to form a bigger trough.
+
+In the case where a grey line crosses a black line we are seeing a trough and peak at the same time. These will cancel each other out and the medium will have no displacement at that point.
+
+\begin{itemize}
+\item black line + black line = peak + peak = constructive interference 
+\item grey line + grey line = trough + trough = constructive interference
+\item black line + grey line = grey line + black line = peak + trough = trough + peak = destructive interference
+\end{itemize}
+
+On half the picture below, we have marked the constructive interference with a solid black diamond and the destructive interference with a hollow diamond.
+
+\begin{center}
+\begin{pspicture}(1,-3)(9,3)
+\uput[l](3,0.0){A}
+\uput[r](5,0.0){B}
+\psdots[dotsize=0.127](3.0,0.0)
+\psdots[dotsize=0.127](5.0,0.0)
+\pscircle[linecolor=gray,dimen=outer](3.0,0.0){0.5}
+\pscircle[dimen=outer](3.0,0.0){1.0}
+\pscircle[linecolor=gray,dimen=outer](3.0,0.0){1.5}
+\pscircle[dimen=outer](3.0,0.0){2.0}
+\pscircle[linecolor=gray,dimen=outer](3.0,0.0){2.5}
+\pscircle[dimen=outer](3.0,0.0){3.0}
+\pscircle[linecolor=gray,dimen=outer](5.0,0.0){0.5}
+\pscircle[dimen=outer](5.0,0.0){1.0}
+\pscircle[linecolor=gray,dimen=outer](5.0,0.0){1.5}
+\pscircle[dimen=outer](5.0,0.0){2.0}
+\pscircle[linecolor=gray,dimen=outer](5.0,0.0){2.5}
+\pscircle[dimen=outer](5.0,0.0){3.0}
+\psdots[dotstyle=diamond*](5.98,0.0)
+\psdots[dotstyle=diamond*](4.04,1.7)
+\psdots[dotstyle=diamond*](4.0,2.28)
+\psdots[dotstyle=diamond*](4.0,2.82)
+\psdots[dotstyle=diamond*](4.0,1.08)
+\psdots[dotstyle=diamond*](4.0,-1.08)
+\psdots[dotstyle=diamond*](4.02,-1.72)
+\psdots[dotstyle=diamond*](4.0,-2.28)
+\psdots[dotstyle=diamond*](4.0,-2.8)
+\psdots[dotstyle=diamond*](5.26,-1.96)
+\psdots[dotstyle=diamond*](5.0,-1.48)
+\psdots[dotstyle=diamond*](4.76,-0.94)
+\psdots[dotstyle=diamond*](4.76,0.94)
+\psdots[dotstyle=diamond*](5.0,1.48)
+\psdots[dotstyle=diamond*](5.24,1.98)
+\psdots[dotstyle=diamond*](5.48,0.0)
+\psdots[fillstyle=solid,dotstyle=diamond](4.92,0.48)
+\psdots[fillstyle=solid,dotstyle=diamond](4.92,-0.48)
+\psdots[fillstyle=solid,dotstyle=diamond](5.32,0.92)
+\psdots[fillstyle=solid,dotstyle=diamond](5.68,1.3)
+\psdots[fillstyle=solid,dotstyle=diamond](5.34,-0.96)
+\psdots[fillstyle=solid,dotstyle=diamond](5.68,-1.36)
+\psdots[fillstyle=solid,dotstyle=diamond](4.34,0.72)
+\psdots[fillstyle=solid,dotstyle=diamond](4.44,-1.38)
+\psdots[fillstyle=solid,dotstyle=diamond](4.72,-2.48)
+\psdots[fillstyle=solid,dotstyle=diamond](4.58,1.92)
+\psdots[fillstyle=solid,dotstyle=diamond](4.68,2.46)
+\psdots[fillstyle=solid,dotstyle=diamond](4.44,1.36)
+\psdots[fillstyle=solid,dotstyle=diamond](4.6,-1.92)
+\psdots[fillstyle=solid,dotstyle=diamond](4.32,-0.7)
+\end{pspicture}
+\end{center}
+
+To see if you understand it, cover up the half we have marked with diamonds and try to work out which points are constructive and destructive on the other half of the picture. The two halves are mirror images of each other so you can check yourself.
+
+\section{Diffraction}
+%\begin{syllabus}
+%\item The learner must be able to define diffraction as the ability of a wave to spread out in wavefronts as they pass through a small aperture or around a sharp edge.
+%\item The learner must be able to apply Huygens' principle to explain diffraction qualitatively. Light and dark areas can be described in terms of constructive and destructive interference of secondary wavelets.
+%\item The learner must be able to sketch the diffraction pattern for a single slit.
+%\item The learner must be able to use the approximation theta = (m lambda)/a for a slit of width a to calculate the position (angle from the horizontal) of the dark bands in a single slit diffraction pattern, where m=+1, +2, +3, ...
+%\item Notes: It is very helpful to use water waves in a ripple tank to demonstrate diffraction and interference. 
+%\end{syllabus}
+
+
+One of the most interesting, and also very useful, properties of waves is \textbf{diffraction}.
+
+\Definition{Diffraction}{Diffraction is the ability of a wave to spread out in wavefronts as the wave passes through a small aperture or around a sharp edge.}
+
+\Extension{Diffraction}{Diffraction refers to various phenomena associated with wave propagation, such as the bending, spreading and interference of waves emerging from an aperture. It occurs with any type of wave, including sound waves, water waves, electromagnetic waves such as light and radio waves. While diffraction always occurs, its effects are generally only noticeable for waves where the wavelength is on the order of the feature size of the diffracting objects or apertures.}
+
+For example, if two rooms are connected by an open doorway and a sound is produced in a remote corner of one of them, a person in the other room will hear the sound as if it originated at the doorway. 
+\begin{center}
+\begin{pspicture}(-3,-3)(3,3)
+\psline(-2,-2)(-2,2)(2,2)(2,-2)(-2,-2)
+\psline(0,2)(0,0.5)
+\psline(0,-2)(0,-0.5)
+\psdot(-1.8,1.8)
+\psarc(-1.8,1.8){0.2}{280}{350}
+\psarc(-1.8,1.8){0.4}{280}{350}
+\psarc(-1.8,1.8){0.6}{280}{350}
+\psarc(0.1,0){0.2}{280}{80}
+\psarc(0.1,0){0.4}{280}{80}
+\psarc(0.1,0){0.6}{280}{80}
+\end{pspicture}
+\end{center}
+
+As far as the second room is concerned, the vibrating air in the doorway is the source of the sound. The same is true of light passing the edge of an obstacle, but this is not as easily observed because of the short wavelength of visible light.
+
+This means that when waves move through small holes they appear to bend around the sides because there are not enough points on the wavefront to form another straight wavefront. This is bending round the sides we call \emph{diffraction}.
+
+
+\Extension{Diffraction}{Diffraction effects are more clear for water waves with longer wavelengths. Diffraction can be demonstrated by placing small barriers and obstacles in a ripple tank and observing the path of the water waves as they encounter the obstacles. The waves are seen to pass around the barrier into the regions behind it; subsequently the water behind the barrier is disturbed. The amount of diffraction (the sharpness of the bending) increases with increasing wavelength and decreases with decreasing wavelength. In fact, when the wavelength of the waves are smaller than the obstacle, no noticeable diffraction occurs.}
+
+\Activity{Experiment}{Diffraction}{Water waves in a ripple tank can be used to demonstrate diffraction and interference. 
+
+\begin{itemize}
+\item Turn on the wave generator so that it produces waves with a high frequency (short wavelength). 
+  \begin{itemize} 
+  	\item Place a few obstacles, one at a time, (e.g. a brick or a ruler) in the ripple tank. What happens to the wavefronts as they propagate near/past the obstacles? Draw your observations.
+	\item How does the diffraction change when you change the size of the object?
+  \end{itemize}
+\item Now turn down the frequency of the wave generator so that it produces waves with longer wavelengths. 
+  \begin{itemize}
+  	\item Place the same obstacles in the ripple tank (one at a time). What happens to the wavefronts as they propagate near/past the obstacles? Draw your observations.
+	\item How does the diffraction change from the higher frequency case? 
+ \end{itemize}
+ \item Remove all obstacles from the ripple tank and insert a second wave generator. Turn on both generators so that they start at the same time and have the same frequency.
+ 	\begin{itemize}
+		\item What do you notice when the two sets of wavefronts meet each other? 
+		\item Can you identify regions of constructive and destructive interference?
+	\end{itemize}
+\item Now turn on the generators so that they are out of phase (i.e. start them so that they do not make waves at exactly the same time). 
+ 	\begin{itemize}
+		\item What do you notice when the two sets of wavefronts meet each other? 
+		\item Can you identify regions of constructive and destructive interference?
+	\end{itemize}
+\end{itemize}
+}
+
+\subsection{Diffraction through a Slit}
+When a wave strikes a barrier with a hole only part of the wave can move through the hole. If the hole is similar in size to the wavelength of the wave then diffraction occurs. The waves that come through the hole no longer looks like a straight wave front. It bends around the edges of the hole. If the hole is small enough it acts like a point source of circular waves.
+
+Now if we allow the wavefront to impinge on a barrier with a hole in it, then only the points on the wavefront that move into the hole can continue emitting forward moving waves - but because a lot of the wavefront has been removed, the points on the edges of the hole emit waves that bend round the edges.
+
+\begin{center}
+\begin{pspicture}(-5,-2.2)(5,2.2)
+%\psgrid
+\psline(-3,-2)(-3,2)
+\rput(-3,0){\psrings}
+\rput(-3,-.4){\psrings}
+\rput(-3,-.8){\psrings}
+\rput(-3,.4){\psrings}
+\rput(-3,.8){\psrings}
+%wall
+\psline[linewidth=2pt]{->}(-1,0)(0,0)
+\psline[linewidth=2pt]{-}(0,2)(0,0.3)
+\psline[linewidth=2pt]{-}(0,-2)(0,-0.3)
+\end{pspicture}
+\end{center}
+
+If you employ Huygens' principle you can see the effect is that the wavefronts are no longer straight lines.
+
+\begin{center}
+\begin{pspicture}(-5,-2.2)(5,2.2)
+%\psgrid
+\psline(-0,-2)(-0,2)
+\rput(-0,0){\psarc[linecolor=gray](0,0){0.3}{271}{89}
+\psarc[linecolor=gray](0,0){0.5}{271}{89}
+\psarc[linecolor=gray](0,0){0.7}{271}{89}
+}
+\rput(-0,.2){\psarc[linecolor=gray](0,0){0.3}{271}{89}
+\psarc[linecolor=gray](0,0){0.5}{271}{89}
+\psarc[linecolor=gray](0,0){0.7}{271}{89}
+}
+\rput(-0,-.2){\psarc[linecolor=gray](0,0){0.3}{271}{89}
+\psarc[linecolor=gray](0,0){0.5}{271}{89}
+\psarc[linecolor=gray](0,0){0.7}{271}{89}
+}
+%wall
+\psline[linewidth=2pt]{->}(1,0)(2,0)
+\psline[linewidth=2pt]{-}(0,2)(0,0.3)
+\psline[linewidth=2pt]{-}(0,-2)(0,-0.3)
+\end{pspicture}
+\end{center}
+
+Each point of the slit acts like a point source. If we think about the two point sources on the edges of the slit and call them A and B then we can go back to the diagram we had earlier but with some parts blocked by the wall. 
+
+\begin{center}
+\begin{pspicture}(1,-.5)(9,3)
+\uput[r](3,0.0){A}
+\uput[l](5,0.0){B}
+\psdots[dotsize=0.2](3.0,0.0)
+\psdots[dotsize=0.2](5.0,0.0)
+\psarc[linecolor=gray,dimen=outer](3.0,0.0){0.5}{0}{180}
+\psarc[dimen=outer](3.0,0.0){1.0}{0}{180}
+\psarc[linecolor=gray,dimen=outer](3.0,0.0){1.5}{0}{180}
+\psarc[dimen=outer](3.0,0.0){2.0}{0}{180}
+\psarc[linecolor=gray,dimen=outer](3.0,0.0){2.5}{0}{180}
+\psarc[dimen=outer](3.0,0.0){3.0}{0}{180}
+\psarc[linecolor=gray,dimen=outer](5.0,0.0){0.5}{0}{180}
+\psarc[dimen=outer](5.0,0.0){1.0}{0}{180}
+\psarc[linecolor=gray,dimen=outer](5.0,0.0){1.5}{0}{180}
+\psarc[dimen=outer](5.0,0.0){2.0}{0}{180}
+
+
+
+
+
+
+
+\psarc[linecolor=gray,dimen=outer](5.0,0.0){2.5}{0}{180}
+\psarc[dimen=outer](5.0,0.0){3.0}{0}{180}
+\psdots[dotstyle=diamond*](5.98,0.0)
+\psdots[dotstyle=diamond*](4.04,1.7)
+\psdots[dotstyle=diamond*](4.0,2.28)
+\psdots[dotstyle=diamond*](4.0,2.82)
+\psdots[dotstyle=diamond*](4.0,1.08)
+\psdots[dotstyle=diamond*](4.76,0.94)
+\psdots[dotstyle=diamond*](5.0,1.48)
+\psdots[dotstyle=diamond*](5.24,1.98)
+\psdots[dotstyle=diamond*](5.48,0.0)
+\psdots[fillstyle=solid,dotstyle=diamond](4.92,0.48)
+\psdots[fillstyle=solid,dotstyle=diamond](5.32,0.92)
+\psdots[fillstyle=solid,dotstyle=diamond](5.68,1.3)
+\psdots[fillstyle=solid,dotstyle=diamond](4.34,0.72)
+\psdots[fillstyle=solid,dotstyle=diamond](4.58,1.92)
+\psdots[fillstyle=solid,dotstyle=diamond](4.68,2.46)
+\psdots[fillstyle=solid,dotstyle=diamond](4.44,1.36)
+\psline[linewidth=.5](1,0)(2.8,0)
+\psline[linewidth=.5](5.2,0)(7,0)
+\psline[linewidth=0.15](1,2.95)(7,2.95)
+\end{pspicture}
+\end{center}
+
+If this diagram were showing sound waves then the sound would be louder (constructive interference) in some places and quieter (destructive interference) in others. You can start to see that there will be a pattern (interference pattern) to the louder and quieter places. If we were studying light waves then the light would be brighter in some places than others depending on the interference.
+
+The intensity (how bright or loud) of the interference pattern for a single narrow slit looks like this:
+
+
+\begin{center}
+\begin{pspicture}(1,-3.5)(9,6)
+\rput(0,-3){
+\uput[r](3,0.0){A}
+\uput[l](5,0.0){B}
+\psdots[dotsize=0.2](3.0,0.0)
+\psdots[dotsize=0.2](5.0,0.0)
+\psarc[linecolor=gray,dimen=outer](3.0,0.0){0.5}{0}{180}
+\psarc[dimen=outer](3.0,0.0){1.0}{0}{180}
+\psarc[linecolor=gray,dimen=outer](3.0,0.0){1.5}{0}{180}
+\psarc[dimen=outer](3.0,0.0){2.0}{0}{180}
+\psarc[linecolor=gray,dimen=outer](3.0,0.0){2.5}{0}{180}
+\psarc[dimen=outer](3.0,0.0){3.0}{0}{180}
+\psarc[linecolor=gray,dimen=outer](5.0,0.0){0.5}{0}{180}
+\psarc[dimen=outer](5.0,0.0){1.0}{0}{180}
+\psarc[linecolor=gray,dimen=outer](5.0,0.0){1.5}{0}{180}
+\psarc[dimen=outer](5.0,0.0){2.0}{0}{180}
+\psarc[linecolor=gray,dimen=outer](5.0,0.0){2.5}{0}{180}
+\psarc[dimen=outer](5.0,0.0){3.0}{0}{180}
+\psdots[dotstyle=diamond*](5.98,0.0)
+\psdots[dotstyle=diamond*](4.04,1.7)
+\psdots[dotstyle=diamond*](4.0,2.28)
+\psdots[dotstyle=diamond*](4.0,2.82)
+\psdots[dotstyle=diamond*](4.0,1.08)
+\psdots[dotstyle=diamond*](4.76,0.94)
+\psdots[dotstyle=diamond*](5.0,1.48)
+\psdots[dotstyle=diamond*](5.24,1.98)
+\psdots[dotstyle=diamond*](5.48,0.0)
+\psdots[fillstyle=solid,dotstyle=diamond](4.92,0.48)
+\psdots[fillstyle=solid,dotstyle=diamond](5.32,0.92)
+\psdots[fillstyle=solid,dotstyle=diamond](5.68,1.3)
+\psdots[fillstyle=solid,dotstyle=diamond](4.34,0.72)
+\psdots[fillstyle=solid,dotstyle=diamond](4.58,1.92)
+\psdots[fillstyle=solid,dotstyle=diamond](4.68,2.46)
+\psdots[fillstyle=solid,dotstyle=diamond](4.44,1.36)
+\psline[linewidth=.5](1,0)(2.8,0)
+\psline[linewidth=.5](5.2,0)(7,0)
+\psline[linewidth=0.15](1,2.95)(7,2.95)
+}
+\rput(4,.3){
+\psplot[linecolor=gray, linewidth=1.5pt,xunit=6,plotpoints=300]{0.00000001}{1}{   3.14159 x SIN 5 mul mul SIN  3.14159 x SIN 5 mul mul div 2 exp 5 mul  }
+\psplot[linecolor=gray, linewidth=1.5pt,xunit=6,plotpoints=300]{-1}{-0.00000001}{   3.14159 x SIN 5 mul mul SIN  3.14159 x SIN 5 mul mul div 2 exp 5 mul  } }
+\end{pspicture}
+\end{center}
+
+The picture above shows how the waves add together to form the interference pattern. The peaks correspond to places where the waves are adding most intensely and the minima are places where destructive interference is taking place. When looking at interference patterns from light the spectrum looks like:
+
+\begin{pspicture}(-3.5,-1)(3.5,1)
+\psdiffractionRectangle[a=0.5e-3,k=20,f=10,pixel=0.5,lambda=450]
+\end{pspicture}
+
+%The 3-dimensional plot of what this looks like is:
+%
+%\begin{pspicture}(-3.5,-1)(3.5,4)
+%\psdiffractionRectangle[IIID,Alpha=10,a=0.5e-3,k=20,f=10,pixel=0.5,lambda=450]
+%\end{pspicture}
+
+There is a formula we can use to determine where the peaks and minima are in the interference spectrum. There will be more than one minimum. There are the same number of minima on either side of the central peak and the distances from the first one on each side are the same to the peak. The distances to the peak from the second minimum on each side is also the same, in fact the two sides are mirror images of each other. We label the first minimum that corresponds to a positive angle from the centre as $m=1$ and the first on the other side (a negative angle from the centre) as $m=-1$, the second set of minima are labelled $m=2$ and $m=-2$ etc.
+
+\begin{center}
+\begin{pspicture}(0,0)(5,4)
+%\psgrid[gridcolor=gray]
+\psline{->}(0,1)(1,1)
+\psline{->}(0,2)(1,2)
+\psline{->}(0,3)(1,3)
+\uput[u](1,2){$\lambda$}
+\psline[linewidth=2pt](2,0)(2,1.5)
+\psline[linewidth=2pt](2,2.5)(2,4)
+\psline[linecolor=lightgray](2,2)(5,2)
+\psline(5,0)(5,4)
+\pcline[offset=-8pt]{<->}(5,2)(5,3)
+\bput{:U}{$y_n$}
+\psline[linecolor=lightgray](2,2)(5,3)
+\rput(3.2,2.2){$\theta$}
+\pcline[offset=8pt]{<->}(2,1.5)(2,2.5)
+\aput{:U}{$a$}
+\end{pspicture}
+\end{center}
+
+
+The equation for the angle at which the minima occur is given in the definition below:
+
+
+\Definition{Interference Minima}{
+The angle at which the minima in the interference spectrum occur is:
+\begin{equation*}
+\sin\theta = \frac{m\lambda}{a}
+\end{equation*}
+where \\
+$\theta$ is the angle to the minimum\\
+$a$ is the width of the slit \\
+$\lambda$ is the wavelength of the impinging wavefronts\\
+$m$ is the order of the mimimum, $m = \pm 1, \pm 2, \pm 3, ...$
+}
+
+
+
+\begin{wex}{Diffraction Minimum I}
+{A slit with a width of 2511 nm has red light of wavelength 650 nm impinge on it. The diffracted light interferes on a surface. At which angle will the first minimum be? }
+{
+\westep{Check what you are given}
+We know that we are dealing with interference patterns from the diffraction of light passing through a slit. The slit has a width of 2511 nm which is $2511 \times 10^{-9}\ \rm{m}$ and we know that the wavelength of the light is 650 nm which is $650 \times 10^{-9}\ \rm{m}$. We are looking to determine the angle to first minimum so we know that $m=1$.
+\westep{Applicable principles}
+We know that there is a relationship between the slit width, wavelength and interference minimum angles:
+\begin{equation*}
+\sin\theta = \frac{m\lambda}{a}
+\end{equation*}
+We can use this relationship to find the angle to the minimum by substituting what we know and solving for the angle.
+\westep{Substitution}
+\begin{eqnarray*}
+\sin\theta &=& \frac{650\times 10^{-9} \rm{m}}{2511 \times 10^{-9} \rm{m}} \\
+\sin\theta &=& \frac{650}{2511} \\
+\sin\theta &=& 0.258861012 \\
+\theta &= & \sin^{-1} 0.258861012 \\
+\theta &= & 15^o
+\end{eqnarray*}
+The first minimum is at 15 degrees from the centre peak.
+}
+\end{wex}
+
+\begin{wex}{Diffraction Minimum II}
+{A slit with a width of 2511 nm has green light of wavelength 532 nm impinge on it. The diffracted light interferers on a surface, at what angle will the first minimum be? }
+{
+\westep{Check what you are given}
+We know that we are dealing with interference patterns from the diffraction of light passing through a slit. The slit has a width of 2511 nm which is $2511 \times 10^{-9}\ \rm{m}$ and we know that the wavelength of the light is 532 nm which is $532 \times 10^{-9}\ \rm{m}$. We are looking to determine the angle to first minimum so we know that $m=1$.
+\westep{Applicable principles}
+We know that there is a relationship between the slit width, wavelength and interference minimum angles:
+\begin{equation*}
+\sin\theta = \frac{m\lambda}{a}
+\end{equation*}
+We can use this relationship to find the angle to the minimum by substituting what we know and solving for the angle.
+\westep{Substitution}
+\begin{eqnarray*}
+\sin\theta &=& \frac{532\times 10^{-9}\rm{m}}{2511 \times 10^{-9}\rm{m}} \\
+\sin\theta &=& \frac{532}{2511} \\
+\sin\theta &=& 0.211867782  \\
+\theta &=& \sin^{-1}0.211867782 \\
+\theta &=& 12.2^o \\
+\end{eqnarray*}
+The first minimum is at 12.2 degrees from the centre peak.
+}
+\end{wex}
+
+From the formula $\sin\theta = \frac{m\lambda}{a}$ you can see that a smaller wavelength for the same slit results in a smaller angle to the interference minimum. This is something you just saw in the two worked examples. Do a sanity check, go back and see if the answer makes sense. Ask yourself which light had the longer wavelength, which light had the larger angle and what do you expect for longer wavelengths from the formula.
+
+\begin{wex}{Diffraction Minimum III}
+{A slit has a width which is unknown and has green light of wavelength 532 nm impinge on it. The diffracted light interferers on a surface, and the first minimum is measure at an angle of 20.77 degrees? }
+{
+\westep{Check what you are given}
+We know that we are dealing with interference patterns from the diffraction of light passing through a slit. We know that the wavelength of the light is 532 nm which is $532 \times 10^{-9}\ \rm{m}$. We know the angle to first minimum so we know that $m=1$ and $\theta = 20.77^{\rm{o}}$.
+\westep{Applicable principles}
+We know that there is a relationship between the slit width, wavelength and interference minimum angles:
+\begin{equation*}
+\sin\theta = \frac{m\lambda}{a}
+\end{equation*}
+We can use this relationship to find the width by substituting what we know and solving for the width.
+\westep{Substitution}
+\begin{eqnarray*}
+\sin\theta &=& \frac{532\times 10^{-9} \ \rm{m}}{a} \\
+\sin 20.77^{o} &=& \frac{532\times 10^{-9}}{a} \\
+a &=& \frac{532\times 10^{-9}}{0.354666667}  \\
+a & = & 1500 \times 10^{-9} \\
+a & = & 1500\  \rm{nm} \\
+\end{eqnarray*}
+The slit width is 1500 nm.
+}
+\end{wex}
+Phet simulation on wave interference: SIYAVULA-SIMULATION:http://cnx.org/content/m39491/latest/#id63458
+
+
+
+%\section{Extension: Diffraction patterns from a other apertures}
+
+%\subsection{Diffraction from a rectangular opening}
+
+%\begin{pspicture}(-3.5,-3.5)(3.5,3.5)
+%\psdiffractionRectangle[f=2.5]
+%\end{pspicture}
+%\hfill
+%\begin{pspicture}(-1.5,-2.5)(3.5,3.5)
+%\psdiffractionRectangle[IIID,Alpha=30,f=2.5]
+%\end{pspicture}
+
+
+%\subsection{Diffraction from a circular opening}
+
+%\begin{pspicture}(-3,-3.5)(3.5,3.5)
+%\psdiffractionCircular[r=0.5e-3,f=10,d=3e-3,lambda=515,twoHole]
+%\end{pspicture}
+%
+%\begin{pspicture}(-3.5,-1.5)(3.5,3.5)
+%\psdiffractionCircular[IIID,r=0.5e-3,f=10,d=3e-3,lambda=515,twoHole]
+%\end{pspicture}
+
+\section{Shock Waves and Sonic Booms}
+%\begin{syllabus}
+%\item The learner must be able to describe, with the aid of a diagram, the formation of a shock wave as an example of interference of wavefronts formed when the object emitting waves is traveling faster than the speed of the waves in the medium
+%\item The learner must be able to define the terms:(1) subsonic (2) supersonic (3) "Mach" number
+%\item The learner must be able to explain the phenomenon of shockwaves in terms of the Doppler Effect and constructive interference of sound waves.
+%\item The learner must be able to state that a "sonic boom" is the sound heard by an observer as a shockwave passes.
+%\item The learner must be able to show that the half-angle of the cone of the sonic boom may be calculated from vw = vs sin theta. (Advanced)
+%\end{syllabus}
+
+Now we know that the waves move away from the source at the speed of sound. What happens if the source moves at the same time as emitting sounds? Once a sound wave has been emitted it is no longer connected to the source so if the source moves it doesn't change the way the sound wave is propagating through the medium. This means a source can actually catch up to the sound waves it has emitted. 
+
+The speed of sound is very fast in air, about $340\ \rm{m\cdot s}^{-1}$, so if we want to talk about a source catching up to sound waves then the source has to be able to move very fast. A good source of sound waves to discuss is a jet aircraft. Fighter jets can move very fast and they are very noisy so they are a good source of sound for our discussion. Here are the speeds for a selection of aircraft that can fly faster than the speed of sound.
+
+\begin{table}[H]
+\begin{tabular}{|c|c|c|}\hline
+Aircraft & speed at altitude ($\rm{km\cdot h}^{-1}$) & speed at altitude ($\rm{m\cdot s}^{-1}$) \\ \hline \hline
+Concorde & 2 330 & 647 \\ \hline
+Gripen & 2 410 & 669 \\ \hline
+Mirage F1 & 2 573 &  715 \\ \hline
+Mig 27 & 1 885 & 524 \\ \hline
+F 15 & 2 660 & 739 \\ \hline
+F 16 & 2 414 & 671 \\ \hline
+\end{tabular}
+\end{table}
+
+\subsection{Subsonic Flight}
+\Definition{Subsonic}{Subsonic refers to speeds slower than the speed of sound.}
+
+When a source emits sound waves and is moving slower than the speed of sound you get the situation in this picture. Notice that the source moving means that the wavefronts, and therefore peaks in the wave, are actually closer together in the one direction and further apart in the other.
+
+\begin{center}
+\begin{pspicture}(0,-2)(4,1.4)
+%\psgrid[gridcolor=gray]
+\rput(0.75,0){
+\pscircle*(0,0){.08}
+\psline[linewidth=1.25pt]{<-}(-0.5,0)(0,0)
+\pscircle(0,0){0.25}%
+\pscircle(0.15,0){0.5}%
+\pscircle(0.3,0){0.75}%
+\pscircle(0.45,0){1.0}%
+\pscircle(0.6,0){1.25}%
+\uput[d](0.625,-1.5){subsonic flight}
+}
+\end{pspicture}
+\end{center}
+
+If you measure the waves on the side where the peaks are closer together you'll measure a different wavelength than on the other side of the source. This means that the noise from the source will sound different on the different sides. This is called the \emph{Doppler Effect}.%, see Chapter~\ref{p:wsl:de12s}.
+
+\Definition{Doppler Effect}{when the wavelength and frequency measured by an observer are different to those emitted by the source due to movement of the source or observer.}
+
+\subsection{Supersonic Flight}
+
+\Definition{Supersonic}{Supersonic refers to speeds faster than the speed of sound.}
+
+If a plane flies at exactly the speed of sound then the waves that it emits in the direction it is flying won't be able to get away from the plane. It also means that the next sound wave emitted will be exactly on top of the previous one, look at this picture to see what the wavefronts would look like: 
+
+\begin{center}
+\begin{pspicture}(-2,-2)(4,1.4)
+\pscircle*[linewidth=0.5pt](0,0){.08}
+\psline[linewidth=1.25pt]{<-}(-0.5,0)(0,0)
+\multido{\n=0+0.25}{6}{\pscircle(\n,0){\n}}
+\psline(0,-1)(0,1)
+\uput[d](1.3,-1.5){shock wave at Mach 1}
+\end{pspicture}
+\end{center}
+
+Sometimes we use the speed of sound as a reference to describe the speed of the object (aircraft in our discussion).
+\Definition{Mach Number}{The Mach Number is the ratio of the speed of an object to the speed of sound in the surrounding medium.}
+Mach number is tells you how many times faster than sound the aircraft is moving.
+
+\begin{itemize}
+\item Mach Number $<$ 1 : aircraft moving slower than the speed of sound
+\item Mach Number $=$ 1 : aircraft moving at the speed of sound
+\item Mach Number $>$ 1 : aircraft moving faster than the speed of sound
+\end{itemize}
+
+To work out the Mach Number divide the speed of the aircraft by the speed of sound. 
+
+\begin{equation*}
+\rm{Mach\ Number} = \frac{v_{aircraft}}{v_{sound}}
+\end{equation*}
+\textbf{Remember:} the units must be the same before you divide.
+
+If the aircraft is moving faster than the speed of sound then the wavefronts look like this:
+
+\begin{center}
+\begin{pspicture}(-2,-2)(4,1.4)
+\pscircle*(-.25,0){.08}
+\psline[linewidth=1.25pt]{<-}(-0.75,0)(-0.25,0)
+\pscircle(0.0,0){0.25}%
+\pscircle(0.5,0){0.5}%
+\pscircle(1,0){0.75}%
+\pscircle(1.5,0){1.0}%
+\pscircle(2,0){1.25}%
+\uput[d](1.8,-1.5){supersonic shock wave}
+\end{pspicture}
+\end{center}
+
+If the source moves faster than the speed of sound, a cone of wave fronts is created. This is called a Mach cone. From constructive interference, we know that two peaks that add together form a larger peak. In a Mach cone many, many peaks add together to form a very large peak. This is a sound wave so the large peak is a very, very loud sound wave. This sounds like a huge "boom" and we call the noise a \emph{sonic boom}.  
+
+\Definition{Sonic Boom}{A sonic boom is the sound heard by an observer as a shockwave passes.}
+
+\begin{wex}{Mach Speed I}
+{An aircraft flies at 1300 $\rm{km\cdot h}^{-1}$ and the speed of sound in air is $340\ \rm{m\cdot s}^{-1}$. What is the Mach Number of the aircraft?}
+{
+\westep{Check what you are given}
+We know we are dealing with Mach Number. We are given the speed of sound in air, $340\ \rm{m\cdot s}^{-1}$, and the speed of the aircraft, 1300 $\rm{km\cdot h}^{-1}$. The speed of the aircraft is in different units to the speed of sound so we need to convert the units:
+\begin{eqnarray*}
+1300 \rm{km\cdot h}^{-1} & = & 1300 \rm{km\cdot h}^{-1} \\
+1300 \rm{km\cdot h}^{-1} & = & 1300 \times \frac{1000\rm{m}}{3600\rm{s}} \\
+1300 \rm{km\cdot h}^{-1} & = & 361.1\ \rm{m\cdot s}^{-1}
+\end{eqnarray*}
+\westep{Applicable principles}
+We know that there is a relationship between the Mach Number, the speed of sound and the speed of the aircraft:
+\begin{equation*}
+\rm{Mach\ Number} = \frac{v_{aircraft}}{v_{sound}}
+\end{equation*}
+We can use this relationship to find the Mach Number.
+\westep{Substitution}
+\begin{eqnarray*}
+\rm{Mach\ Number} &=& \frac{v_{aircraft}}{v_{sound}} \\
+\rm{Mach\ Number} &=& \frac{361.1}{340} \\
+\rm{Mach\ Number} &=& 1.06 \\
+\end{eqnarray*}
+The Mach Number is 1.06.
+}
+\end{wex}
+
+
+\Exercise{Mach Number}{
+In this exercise we will determine the Mach Number for the different aircraft in the previous table. To help you get started we have calculated the Mach Number for the Concord with a speed of sound $v_{sound}=340\ \rm{ms}^{-1}$.
+
+For the Condorde we know the speed and we know that:
+\begin{equation*}
+\rm{Mach\ Number} = \frac{v_{aircraft}}{v_{sound}}
+\end{equation*}
+For the Concorde this means that
+\begin{eqnarray*}
+\rm{Mach\ Number} &=& \frac{647}{340}\\
+& = & 1.9 \\
+\end{eqnarray*}
+
+
+\begin{table}[H]
+\begin{tabular}{|c|c|c|c|}\hline
+Aircraft & speed at altitude ($\rm{km\cdot h}^{-1}$) & speed at altitude ($\rm{m\cdot s}^{-1}$) & Mach Number \\ \hline \hline
+Concorde & 2 330 & 647 & 1.9 \\ \hline
+Gripen & 2 410 & 669 & \\ \hline
+Mirage F1 & 2 573 &  715 & \\ \hline
+Mig 27 & 1 885 & 524 &  \\ \hline
+F 15 & 2 660 & 739 &  \\ \hline
+F 16 & 2 414 & 671 &  \\ \hline
+\end{tabular}
+\end{table}
+
+Now calculate the Mach Numbers for the other aircraft in the table.
+}
+
+\subsection{Mach Cone}
+
+The shape of the Mach Cone depends on the speed of the aircraft. When the Mach Number is 1 there is no cone but as the aircraft goes faster and faster the angle of the cone gets smaller and smaller.
+
+If we go back to the supersonic picture we can work out what the angle of the cone must be.
+\begin{center}
+\begin{pspicture}(0,-2)(5,1.4)
+\pscircle*(-.25,0){.08}
+\psline[linewidth=1.25pt]{<-}(-0.75,0)(-0.25,0)
+\pscircle(0.0,0){0.25}%
+\pscircle(0.5,0){0.5}%
+\pscircle(1,0){0.75}%
+\pscircle(1.5,0){1.0}%
+\pscircle(2,0){1.25}%
+\uput[d](1.8,-1.5){supersonic shock wave}
+\end{pspicture}
+\end{center}
+
+We build a triangle between how far the plane has moved and how far a wavefront at right angles to the direction the plane is flying has moved:
+
+An aircraft emits a sound wavefront. The wavefront moves at the speed of sound 340 $\rm{m\cdot s}^{-1}$ and the aircraft moves at Mach 1.5, which is $1.5\ \times\ 340 = 510\ \rm{m\cdot s}^{-1}$. The aircraft travels faster than the wavefront. If we let the wavefront travel for a time $t$ then the following diagram will apply:
+
+\begin{center}
+\begin{pspicture}(-1,-2.5)(4,2.5)
+\pscircle[linecolor=gray](3.0,0){2.0}%
+\psline[linecolor=gray]{->}(3.0,0)(3.0,2.)
+\pscircle*(0.,0){.08}
+\psline[linewidth=1.25pt]{<-}(-.75,0)(0,0)
+\psline[linestyle=dashed](0,0)(3,0)
+\end{pspicture}
+\end{center}
+
+We know how fast the wavefront and the aircraft are moving so we know the distances that they have traveled:
+
+\begin{center}
+\begin{pspicture}(-1,-2.5)(4,2.5)
+\pscircle[linecolor=gray](3.0,0){2.0}%
+\psline[linecolor=gray]{->}(3.0,0)(3.0,2.)
+\rput[l](3.1,.3){$v_{sound}\times t$}
+\rput(1.4,.2){$v_{aircraft}\times t$}
+\rput(.6,-.2){$\theta$}
+\pscircle*(0.,0){.08}
+\psline[linewidth=1.25pt]{<-}(-.75,0)(0,0)
+\psline(0,0)(3,0)
+\psline(0,0)(1.66666,-1.490711)
+\psline(1.66666,-1.490711)(3,0)
+\end{pspicture}
+\end{center}
+
+The angle between the cone that forms and the direction of the plane can be found from the right-angle triangle we have drawn into the figure. We know that $\sin\theta=\frac{\rm{opposite}}{\rm{hypotenuse}}$ which in this figure means:
+
+\begin{eqnarray*}
+\sin\theta&=&\frac{\rm{opposite}}{\rm{hypotenuse}} \\
+\sin\theta&=&\frac{v_{sound}\times t}{v_{aircraft}\times t} \\
+\sin\theta&=&\frac{v_{sound}}{v_{aircraft}} \\
+\end{eqnarray*}
+
+In this case we have used sound and aircraft but a more general way of saying this is:
+\begin{itemize}
+\item aircraft = source
+\item sound = wavefront
+\end{itemize}
+
+We often just write the equation as:
+\begin{eqnarray*}
+\sin\theta&=&\frac{v_{sound}}{v_{aircraft}} \\
+v_{aircraft}\sin\theta&=&v_{sound} \\
+v_{source}\sin\theta&=&v_{wavefront} \\
+v_{s}\sin\theta&=&v_{w} \\
+\end{eqnarray*}
+
+From this equation, we can see that the faster the source (aircraft) moves, the smaller the angle of the Mach cone.
+
+
+\Exercise{Mach Cone}{
+In this exercise we will determine the Mach Cone Angle for the different aircraft in the table mentioned above. To help you get started we have calculated the Mach Cone Angle for the Concorde with a speed of sound $v_{sound}=340\ \rm{m\cdot s}^{-1}$.
+
+For the Condorde we know the speed and we know that:
+\begin{equation*}
+\sin\theta = \frac{v_{sound}}{v_{aircraft}}
+\end{equation*}
+For the Concorde this means that
+\begin{eqnarray*}
+\sin\theta &=& \frac{340}{647}\\
+\theta & = & \sin^{-1} \frac{340}{647} \\
+\theta & = & 31.7^{\rm{o}} \\
+\end{eqnarray*}
+
+\begin{table}[H]
+\begin{tabular}{|c|c|c|c|}\hline
+Aircraft & speed at altitude ($\rm{km\cdot h}^{-1}$) & speed at altitude ($\rm{m\cdot s}^{-1}$) & Mach Cone Angle (degrees) \\ \hline \hline
+Concorde & 2 330 & 647 & 31.7 \\ \hline
+Gripen & 2 410 & 669 & \\ \hline
+Mirage F1 & 2 573 &  715 & \\ \hline
+Mig 27 & 1 885 & 524 &  \\ \hline
+F 15 & 2 660 & 739 &  \\ \hline
+F 16 & 2 414 & 671 &  \\ \hline
+\end{tabular}
+\end{table}
+
+Now calculate the Mach Cone Angles for the other aircraft in the table.
+}
+
+\section{End of Chapter Exercises}
+\begin{enumerate}
+\item In the diagram below the peaks of wavefronts are shown by black lines and the troughs by grey lines. Mark all the points where constructive interference between two waves is taking place and where destructive interference is taking place. Also note whether the interference results in a peak or a trough.
+
+\begin{center}
+\begin{pspicture}(-4,-3)(4,5)
+%\psgrid[gridcolor=gray]
+\uput[l](-1,0){A}
+\uput[r](1,0){B}
+\uput[u](0,1){C}
+
+\psdots(-1,0)(1,0)
+\pscircle[linecolor=gray](-1,0){0.5}
+\pscircle(-1,0){1}
+\pscircle[linecolor=gray](-1,0){1.5}
+\pscircle(-1,0){2.}
+
+\psdots(0,1)
+\pscircle[linecolor=gray](0,1){0.5}
+\pscircle(0,1){1}
+\pscircle[linecolor=gray](0,1){1.5}
+\pscircle(0,1){2.}
+
+\pscircle[linecolor=gray](1,0){0.5}
+\pscircle(1,0){1}
+\pscircle[linecolor=gray](1,0){1.5}
+\pscircle(1,0){2.0}
+
+\end{pspicture}
+\end{center}
+\item For a slit of width 1300 nm, calculate the first 3 minima for light of the following wavelengths:
+\begin{enumerate}
+\item blue at 475 nm
+\item green at 510 nm
+\item yellow at 570 nm
+\item red at 650 nm
+\end{enumerate}
+\item For light of wavelength 540 nm, determine what the width of the slit needs to be to have the first minimum at:
+\begin{enumerate}
+\item 7.76 degrees
+\item 12.47 degrees
+\item 21.1 degrees
+\end{enumerate}
+\item For light of wavelength 635 nm, determine what the width of the slit needs to be to have the second minimum at:
+\begin{enumerate}
+\item 12.22 degrees
+\item 18.51 degrees
+\item 30.53 degrees
+\end{enumerate}
+\item If the first minimum is at 8.21 degrees and the second minimum is at 16.6 degrees, what is the wavelength of light and the width of the slit? (\textbf{Hint:} solve simultaneously.)
+\item Determine the Mach Number, with a speed of sound of 340 $\rm{m\cdot s}^{-1}$, for the following aircraft speeds:
+\begin{enumerate}
+\item 640 $\rm{m\cdot s}^{-1}$
+\item 980 $\rm{m\cdot s}^{-1}$
+\item 500 $\rm{m\cdot s}^{-1}$
+\item 450 $\rm{m\cdot s}^{-1}$
+\item 1300 $\rm{km\cdot h}^{-1}$
+\item 1450 $\rm{km\cdot h}^{-1}$
+\item 1760 $\rm{km\cdot h}^{-1}$
+\end{enumerate}
+\item If an aircraft has a Mach Number of 3.3 and the speed of sound is 340 $\rm{m\cdot s}^{-1}$, what is its speed?
+\item Determine the Mach Cone angle, with a speed of sound of 340 $\rm{m\cdot s}^{-1}$, for the following aircraft speeds:
+\begin{enumerate}
+\item 640 $\rm{m\cdot s}^{-1}$
+\item 980 $\rm{m\cdot s}^{-1}$
+\item 500 $\rm{m\cdot s}^{-1}$
+\item 450 $\rm{m\cdot s}^{-1}$
+\item 1300 $\rm{km\cdot h}^{-1}$
+\item 1450 $\rm{km\cdot h}^{-1}$
+\item 1760 $\rm{km\cdot h}^{-1}$
+\end{enumerate}
+\item Determine the aircraft speed, with a speed of sound of 340 $\rm{m\cdot s}^{-1}$, for the following Mach Cone Angles:
+\begin{enumerate}
+\item 58.21 degrees
+\item 49.07 degrees
+\item 45.1 degrees
+\item 39.46 degrees
+\item 31.54 degrees
+\end{enumerate}
+\end{enumerate}
+
+
+% CHILD SECTION END 
+
+
+
+% CHILD SECTION START 
+

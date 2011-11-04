@@ -1,0 +1,382 @@
+\chapter{Quadratic Functions and Graphs}
+\label{m:fg:q11}
+
+\section{Introduction}
+In Grade 10, you studied graphs of many different forms. In this chapter, you will learn a little more about the graphs of functions.
+
+%\begin{syllabus}
+%\item Demonstrate the ability to work with various types of functions.
+%\item Recognise relationships between variables in terms of numerical, graphical, verbal and symbolic representations and convert flexibly between these representations (tables, graphs, words and formulae).
+%\item Generate as many graphs as necessary, initially by means of point-by-point plotting, supported by available technology, to make and test conjectures and hence to generalise the effects of the parameters $a$ and $q$ on the graphs of functions including:
+%\begin{eqnarray*}
+%y=a(x+p)^2+q\\
+%\end{eqnarray*}
+%\item Identify characteristics as listed below and hence use applicable characteristics to sketch graphs of functions including those listed above:
+%\begin{itemize}
+%\item domain and range;
+%\item intercepts with the axes;
+%\item turning points, minima and maxima;
+%\item asymptotes;
+%\item shape and symmetry;
+%\item average gradient (average rate of change);
+%\item intervals on which the function increases/decreases;
+%\item the discrete or continuous nature of the graph.
+%\end{itemize}
+%\end{syllabus}
+
+\section{Functions of the Form $y=a(x+p)^2+q$}
+This form of the quadratic function is slightly more complex than the form studied in Grade 10, $y=ax^2+q$. The general shape and position of the graph of the function of the form $f(x)=a(x+p)^2+q$ is shown in Table~\ref{fig:mf:g:parabola}.\\
+
+\begin{figure}[!ht]
+\begin{center}
+\begin{pspicture}(-5,-3)(5,3)
+%\psgrid
+\psaxes(0,0)(-5,-3)(5,3)
+\psset{yunit=0.5}
+\psplot[plotstyle=curve,arrows=<->]{-5}{1}{x 2 add 2 exp 2 sub}
+\end{pspicture}
+\caption{Graph of $f(x)=\frac{1}{2}(x+2)^2 - 1$}
+ \label{fig:mf:g:parabola}
+\end{center}
+\end{figure}
+
+\Activity{Investigation}{Functions of the Form $y=a(x+p)^2+q$}{
+\begin{enumerate}
+\item{On the same set of axes, plot the following graphs:
+\begin{enumerate}
+\item{$a(x)=(x-2)^2$}
+\item{$b(x)=(x-1)^2$}
+\item{$c(x)=x^2$}
+\item{$d(x)=(x+1)^2$}
+\item{$e(x)=(x+2)^2$}
+\end{enumerate}
+Use your results to deduce the effect of $p$.}
+\item{On the same set of axes, plot the following graphs:
+\begin{enumerate}
+\item{$f(x)=(x-2)^2+1$}
+\item{$g(x)=(x-1)^2+1$}
+\item{$h(x)=x^2+1$}
+\item{$j(x)=(x+1)^2+1$}
+\item{$k(x)=(x+2)^2+1$}
+\end{enumerate}
+Use your results to deduce the effect of $q$.}
+\item{Following the general method of the above activities, choose your own values of $p$ and $q$ to plot 5 different graphs (on the same set of axes) of $y=a(x+p)^2+q$ to deduce the effect of $a$.}
+\end{enumerate}}
+
+From your graphs, you should have found that $a$ affects whether the graph makes a smile or a frown. If $a<0$, the graph makes a frown and if $a>0$ then the graph makes a smile. This was shown in Grade 10.%Figure~\ref{fig:mf:g:parabola10a}.
+
+You should have also found that the value of $q$ affects whether the turning point of the graph is above the $x$-axis ($q<0$) or below the $x$-axis ($q>0$).
+
+You should have also found that the value of $p$ affects whether the turning point is to the left of the $y$-axis ($p>0$) or to the right of the $y$-axis ($p<0$).
+
+These different properties are summarised in Table~\ref{tab:mf:graphs:summarypar}. The axes of symmetry for each graph is shown as a dashed line.
+
+\begin{table}[htb]
+\begin{center}
+\caption{Table summarising general shapes and positions of functions of the form $y=a(x+p)^2+q$. The axes of symmetry are shown as dashed lines.}
+\label{tab:mf:graphs:summarypar}
+\begin{tabular}{|c|c|c||c|c|}\hline
+&\multicolumn{2}{c||}{$p<0$}&\multicolumn{2}{c|}{$p>0$}\\\hline
+& $a>0$&$a<0$& $a>0$&$a<0$\\\hline\hline
+$q \ge 0$&
+\begin{pspicture}(-1.2,-1.2)(1.2,1.2)
+\psset{yunit=0.25,xunit=0.25}
+\psaxes[arrows=<->,dx=0,Dx=10,dy=0,Dy=10](0,0)(-4,-4)(4,4)
+\psplot[plotstyle=curve,arrows=<->]{-0.6}{2.6}{x 1 sub 2 exp 1 add}
+\psline[linestyle=dashed](1,-3.5)(1,3.5)
+\end{pspicture}
+&
+\begin{pspicture}(-1.2,-1.2)(1.2,1.2)
+\psset{yunit=0.25,xunit=0.25}
+\psaxes[arrows=<->,dx=0,Dx=10,dy=0,Dy=10](0,0)(-4,-4)(4,4)
+\psplot[plotstyle=curve,arrows=<->]{-0.6}{2.6}{x 1 sub 2 exp neg 1 add}
+\psline[linestyle=dashed](1,-3.5)(1,3.5)
+\end{pspicture}
+&
+\begin{pspicture}(-1.2,-1.2)(1.2,1.2)
+\psset{yunit=0.25,xunit=0.25}
+\psaxes[arrows=<->,dx=0,Dx=10,dy=0,Dy=10](0,0)(-4,-4)(4,4)
+\psplot[plotstyle=curve,arrows=<->]{-2.6}{0.6}{x 1 add 2 exp 1 add}
+\psline[linestyle=dashed](-1,-3.5)(-1,3.5)
+\end{pspicture}
+&
+\begin{pspicture}(-1.2,-1.2)(1.2,1.2)
+\psset{yunit=0.25,xunit=0.25}
+\psaxes[arrows=<->,dx=0,Dx=10,dy=0,Dy=10](0,0)(-4,-4)(4,4)
+\psplot[plotstyle=curve,arrows=<->]{-2.6}{0.6}{x 1 add 2 exp neg 1 add}
+\psline[linestyle=dashed](-1,-3.5)(-1,3.5)
+\end{pspicture}\\\hline
+$q\le 0$&
+\begin{pspicture}(-1.2,-1.2)(1.2,1.2)
+\psset{yunit=0.25,xunit=0.25}
+\psaxes[arrows=<->,dx=0,Dx=10,dy=0,Dy=10](0,0)(-4,-4)(4,4)
+\psplot[plotstyle=curve,arrows=<->]{-0.6}{2.6}{x 1 sub 2 exp 1 sub}
+\psline[linestyle=dashed](1,-3.5)(1,3.5)
+\end{pspicture}
+&
+\begin{pspicture}(-1.2,-1.2)(1.2,1.2)
+\psset{yunit=0.25,xunit=0.25}
+\psaxes[arrows=<->,dx=0,Dx=10,dy=0,Dy=10](0,0)(-4,-4)(4,4)
+\psplot[plotstyle=curve,arrows=<->]{-0.6}{2.6}{x 1 sub 2 exp neg 1 sub}
+\psline[linestyle=dashed](1,-3.5)(1,3.5)
+\end{pspicture}
+&
+\begin{pspicture}(-1.2,-1.2)(1.2,1.2)
+\psset{yunit=0.25,xunit=0.25}
+\psaxes[arrows=<->,dx=0,Dx=10,dy=0,Dy=10](0,0)(-4,-4)(4,4)
+\psplot[plotstyle=curve,arrows=<->]{-2.6}{0.6}{x 1 add 2 exp 1 sub}
+\psline[linestyle=dashed](-1,-3.5)(-1,3.5)
+\end{pspicture}
+&
+\begin{pspicture}(-1.2,-1.2)(1.2,1.2)
+\psset{yunit=0.25,xunit=0.25}
+\psaxes[arrows=<->,dx=0,Dx=10,dy=0,Dy=10](0,0)(-4,-4)(4,4)
+\psplot[plotstyle=curve,arrows=<->]{-2.6}{0.6}{x 1 add 2 exp neg 1 sub}
+\psline[linestyle=dashed](-1,-3.5)(-1,3.5)
+\end{pspicture}\\\hline
+\end{tabular}
+\end{center}
+\end{table}
+%Phet simulation for graphing: SIYAVULA-SIMULATION:http://cnx.org/content/m30843/latest/#graphing
+\subsection{Domain and Range}
+For $f(x)=a(x+p)^2+q$, the domain is $\{x:x\in\mathbb{R}\}$ because there is no value of $x \in \mathbb{R}$ for which $f(x)$ is undefined.
+
+The range of $f(x)=a(x+p)^2+q$ depends on whether the value for $a$ is positive or negative. We will consider these two cases separately.
+
+If $a>0$ then we have:
+\begin{eqnarray*}
+(x+p)^2&\ge& 0 \quad \mbox{(The square of an expression is always positive)} \\
+a(x+p)^2&\ge& 0 \quad \mbox{(Multiplication by a positive number maintains the nature of the inequality)} \\
+a(x+p)^2 + q &\ge& q\\
+f(x) &\ge& q
+\end{eqnarray*}
+This tells us that for all values of $x$, $f(x)$ is always greater than or equal to $q$. Therefore if $a>0$, the range of $f(x)=a(x+p)^2+q$ is $\{f(x):f(x)\in[q,\infty)\}$.
+
+Similarly, it can be shown that if $a<0$ that the range of $f(x)=a(x+p)^2+q$ is $\{f(x):f(x)\in(-\infty,q]\}$. This is left as an exercise.
+
+For example, the domain of $g(x)=(x-1)^2 + 2$ is $\{x:x\in\mathbb{R}\}$ because there is no value of $x \in \mathbb{R}$ for which $g(x)$ is undefined. The range of $g(x)$ can be calculated as follows:
+\begin{eqnarray*}
+(x-p)^2&\ge& 0\\
+(x+p)^2+2&\ge& 2\\
+g(x) &\ge& 2
+\end{eqnarray*}
+Therefore the range is $\{g(x):g(x)\in[2,\infty)\}$.
+
+\Exercise{Domain and Range}{
+\begin{enumerate}
+\item{Given the function $f(x)= (x - 4)^2 - 1$. Give the range of $f(x)$.}
+\item{What is the domain of the equation $y = 2x^2 -5x-18$?}
+\end{enumerate}}
+
+\subsection{Intercepts}
+For functions of the form, $y=a(x+p)^2+q$, the details of calculating the intercepts with the $x$ and $y$ axes is given.
+
+The $y$-intercept is calculated as follows:
+\begin{eqnarray}
+y&=&a(x+p)^2+q\\
+y_{int}&=&a(0+p)^2+q\\
+&=&ap^2+q
+\end{eqnarray}
+
+If $p=0$, then $y_{int}=q$.
+
+For example, the $y$-intercept of $g(x)=(x-1)^2 + 2$ is given by setting $x=0$ to get:
+\begin{eqnarray*}
+g(x)&=&(x-1)^2 + 2\\
+y_{int}&=&(0-1)^2 + 2\\
+&=&(-1)^2 + 2\\
+&=&1 + 2\\
+&=&3\\
+\end{eqnarray*}
+
+The $x$-intercepts are calculated as follows:
+\begin{eqnarray}
+y&=&a(x+p)^2+q\\
+0&=&a(x_{int}+p)^2+q\\
+a(x_{int}+p)^2&=&-q\\
+x_{int}+p&=&\pm \sqrt{-\frac{q}{a}}\\
+\label{eq:xintpar}
+x_{int}&=&\pm \sqrt{-\frac{q}{a}}-p
+\end{eqnarray}
+However, (\ref{eq:xintpar}) is only valid if $-\frac{q}{a}>0$ which means that either $q<0$ or $a<0$ but not both. This is consistent with what we expect, since if $q>0$ and $a>0$ then $-\frac{q}{a}$ is negative and in this case the graph lies above the $x$-axis and therefore does not intersect the $x$-axis. If however, $q>0$ and $a<0$, then $-\frac{q}{a}$ is positive and the graph is hat shaped with turning point above the $x$-axis and should have two $x$-intercepts. Similarly, if $q<0$ and $a>0$ then $-\frac{q}{a}$ is also positive, and the graph should intersect with the $x$-axis twice.
+
+For example, the $x$-intercepts of $g(x)=(x-1)^2 + 2$ are given by setting $y=0$ to get:
+\begin{eqnarray*}
+g(x)&=&(x-1)^2 + 2\\
+0&=&(x_{int}-1)^2 + 2\\
+-2&=&(x_{int}-1)^2
+\end{eqnarray*}
+which has no real solutions. Therefore, the graph of $g(x)=(x-1)^2 + 2$ does not have any $x$-intercepts.
+
+\Exercise{Intercepts}{
+\begin{enumerate}
+\item{Find the x- and y-intercepts of the function 	$f(x) = (x -4)^2 -1$.}
+\item{Find the intercepts with both axes of the graph of $f(x)=x^2 - 6x + 8$.}
+\item{Given: $f (x) = -x^2 + 4x - 3$. Calculate the $x$- and $y$-intercepts of the graph of $f$.}
+\end{enumerate}}
+
+\subsection{Turning Points}
+The turning point of the function of the form $f(x)=a(x+p)^2+q$ is given by examining the range of the function. We know that if $a>0$ then the range of $f(x)=a(x+p)^2+q$ is $\{f(x):f(x)\in[q,\infty)\}$ and if $a<0$ then the range of $f(x)=a(x+p)^2+q$ is $\{f(x):f(x)\in(-\infty,q]\}$.
+
+So, if $a>0$, then the lowest value that $f(x)$ can take on is $q$. Solving for the value of $x$ at which $f(x)=q$ gives:
+\begin{eqnarray*}
+q&=&a(x+p)^2+q\\
+0&=&a(x+p)^2\\
+0&=&(x+p)^2\\
+0&=&x+p\\
+x&=&-p
+\end{eqnarray*}
+$\therefore$ $x=-p$ at $f(x)=q$. The co-ordinates of the (minimal) turning point are therefore $(-p;q)$.
+
+Similarly, if $a<0$, then the highest value that $f(x)$ can take on is $q$ and the co-ordinates of the (maximal) turning point are $(-p;q)$.
+
+\Exercise{Turning Points}{
+\begin{enumerate}
+\item{Determine the turning point of the graph of $f(x)=x^2 - 6x + 8$ .}
+\item{Given: $f (x) = -x^2 + 4x - 3$. Calculate the co-ordinates of the turning point of $f$.}
+\item{Find the turning point of the following function:\\
+$y = \frac{1}{2}(x+2)^2 - 1$.}
+\end{enumerate}}
+
+\subsection{Axes of Symmetry}
+There is only one axis of symmetry for the function of the form $f(x)=a(x+p)^2+q$. This axis passes through the turning point and is parallel to the $y$-axis. Since the $x$-coordinate of the turning point is $x=-p$, this is the axis of symmetry.
+
+\Exercise{Axes of Symmetry}{
+\begin{enumerate}
+\item{Find the equation of the axis of symmetry of the graph $y = 2x^2 - 5x - 18$.}
+\item{Write down the equation of the axis of symmetry of the graph of\\
+$y = 3(x-2)^2+1$.}
+\item{Write down an example of an equation of a parabola where the $y$-axis is the axis of symmetry.}
+\end{enumerate}}
+
+\subsection{Sketching Graphs of the Form $f(x)=a(x+p)^2+q$}
+In order to sketch graphs of the form $f(x)=a(x+p)^2+q$, we need to determine five characteristics:
+\begin{enumerate}
+\item{sign of $a$}
+\item{domain and range}
+\item{turning point}
+\item{$y$-intercept}
+\item{$x$-intercept (if appropriate)}
+\end{enumerate}
+
+For example, sketch the graph of $g(x)=-\frac{1}{2}(x+1)^2-3$. Mark the intercepts, turning point and axis of symmetry.
+
+Firstly, we determine that $a<0$. This means that the graph will have a maximal turning point.
+
+The domain of the graph is $\{x:x\in\mathbb{R}\}$ because $f(x)$ is defined for all $x\in \mathbb{R}$. The range of the graph is determined as follows:
+\begin{eqnarray*}
+(x+1)^2 &\ge& 0\\
+-\frac{1}{2}(x+1)^2 &\le& 0\\
+-\frac{1}{2}(x+1)^2-3 &\le& -3\\
+\therefore f(x) &\le& -3
+\end{eqnarray*}
+
+Therefore the range of the graph is $\{f(x):f(x)\in(-\infty,-3]\}$.
+
+Using the fact that the maximum value that $f(x)$ achieves is $-3$, then the $y$-coordinate of the turning point is $-3$. The $x$-coordinate is determined as follows:
+\begin{eqnarray*}
+-\frac{1}{2}(x+1)^2-3 &=& -3\\
+-\frac{1}{2}(x+1)^2-3+3 &=& 0\\
+-\frac{1}{2}(x+1)^2 &=& 0\\
+\mbox{Divide both sides by $-\frac{1}{2}$:} \quad (x+1)^2 &=& 0\\
+\mbox{Take square root of both sides:} \quad x+1 &=& 0\\
+\therefore \quad x&=&-1
+\end{eqnarray*}
+
+The coordinates of the turning point are: $(-1;-3)$.
+
+The $y$-intercept is obtained by setting $x=0$. This gives:
+\begin{eqnarray*}
+y_{int} &=&-\frac{1}{2}(0+1)^2-3\\
+&=&-\frac{1}{2}(1)-3\\
+&=&-\frac{1}{2}-3\\
+&=&-\frac{1}{2}-3\\
+&=&-\frac{7}{2}
+\end{eqnarray*}
+
+The $x$-intercept is obtained by setting $y=0$. This gives:
+\begin{eqnarray*}
+0 &=&-\frac{1}{2}(x_{int}+1)^2-3\\
+3 &=&-\frac{1}{2}(x_{int}+1)^2\\
+-3 \cdot 2 &=&(x_{int}+1)^2\\
+-6 &=&(x_{int}+1)^2
+\end{eqnarray*}
+which has no real solutions. Therefore, there are no $x$-intercepts.
+
+We also know that the axis of symmetry is parallel to the $y$-axis and passes through the turning point.
+
+\begin{figure}[!ht]
+\begin{center}
+\begin{pspicture}(-5,-6)(5,1)
+%\psgrid
+\psset{yunit=0.75,xunit=0.75}
+\psaxes[arrows=<->](0,0)(-5,-8)(5,1)
+\psplot[plotstyle=curve,arrows=<->]{-4}{2}{x 1 add 2 exp 0.5 mul neg 3 sub}
+\psdots(-1,-3)(0,-3.5)
+\psline[linestyle=dashed](-1,-8)(-1,1)
+\uput[r](0,-3.5){($0;-3.5$)}
+\uput[ul](-1,-3){($-1;-3$)}
+\end{pspicture}
+\caption{Graph of the function $f(x)=-\frac{1}{2}(x+1)^2-3$}
+\label{fig:mf:g:sketchexample}
+\end{center}
+\end{figure}
+
+%Khan Academy video on graphing quadratics:SIYAVULA-VIDEO:http://cnx.org/content/m30843/latest/#quadratics-1 
+\Exercise{Sketching the Parabola}{
+\begin{enumerate}
+\item{Draw the graph of $y=3(x-2)^2+1$ showing all the intercepts with the axes as well as the coordinates of the turning point.}
+\item{Draw a neat sketch graph of the function defined by $y = ax^2 + bx + c$ if $a > 0$; $b < 0$; $b^2 = 4ac$.}
+\end{enumerate}}
+
+\subsection{Writing an Equation of a Shifted Parabola}
+Given a parabola with equation $y = x^2 - 2x - 3$.  The graph of the parabola is shifted one unit to the right.  Or else the y-axis shifts one unit to the left i.e. $x$ becomes $x-1$. Therefore the new equation will become:\\
+\begin{eqnarray*}
+y &=& (x-1)^2 - 2(x - 1) - 3\\
+&=& x^2 - 2x + 1 - 2x + 2 - 3\\
+&=& x^2 -4x
+\end{eqnarray*}
+If the given parabola is shifted $3$ units down i.e. $y$ becomes $y+3$. The new equation will be:\\
+(Notice the x-axis then moves $3$ units upwards)
+\begin{eqnarray*}
+y + 3 &=& x^2 - 2x - 3\\
+y&=&x^2 - 2x - 6
+\end{eqnarray*}
+
+
+\begin{eocexercises}{}
+\begin{enumerate}
+\item Show that if $a<0$, then the range of $f(x)=a(x+p)^2+q$ is $\{f(x):f(x)\in(-\infty,q]\}$.
+\item If ($2;7$) is the turning point of $f(x)=-2x^2-4ax+k$, find the values of the constants $a$ and $k$.
+\item The graph in the figure is represented by the equation $f(x)=ax^2+bx$. The coordinates of the turning point are ($3;9$). Show that $a=-1$ and $b=6$.
+
+\begin{center}
+\begin{pspicture}(-1,-1)(4,5)
+%\psgrid
+\psset{xunit=0.5,yunit=0.5}
+\psaxes[arrows=<->,Dy=20,Dx=20](0,0)(-2,-2)(8,10)
+\psplot[plotstyle=curve,arrows=<->]{-0.25}{6.25}{x 2 exp neg 6 x mul add}
+\psdots(3,9)
+\uput[r](3,9){($3;9)$}
+\end{pspicture}
+\end{center}
+
+\item Given: $y = x^2 - 2x + 3$. Give the equation of the new graph originating if:
+\begin{enumerate}
+\item The graph of $f$ is moved three units to the left.
+\item The $x$-axis is moved down three units.
+\end{enumerate}
+\item A parabola with turning point ($-1;-4$) is shifted vertically by $4$ units upwards.  What are the coordinates of the turning point of the shifted parabola?
+
+\end{enumerate}
+
+
+
+
+\practiceinfo
+\end{eocexercises}
+
+
+
+% CHILD SECTION START
+

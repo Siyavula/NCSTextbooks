@@ -1,0 +1,473 @@
+\chapter{Linear Programming}
+
+%\begin{syllabus}
+%\item Solve linear programming problems by optimising a function in two variables, subject to one or more linear constraints, by numerical search along the boundary of the feasible region.
+%\item Solve a system of linear equations to find the co-ordinates of the vertices of the feasible region.
+%\end{syllabus}
+
+\section{Introduction}
+In everyday life people are interested in knowing the most efficient way of
+carrying out a task or achieving a goal. For example, a farmer might want to
+know how many crops to plant during a season in order to maximise yield
+(produce) or a stock broker might want to know how much to invest in stocks in order to maximise profit. These are examples of \textbf{optimisation} problems, where by optimising we mean finding the maxima or minima of a function. 
+
+You will see optimisation problems of one variable in Grade 12, %
+%Chapter~\ref{m:fg:diff12}, 
+where there were no restrictions to the answer. You will be required to find the highest (maximum) or lowest (minimum) possible value of some function. In this chapter we look at optimisation problems with two variables and where the possible solutions are restricted. 
+
+\section{Terminology}
+There are some basic terms which you need to become familiar with for the linear programming chapters.
+
+\subsection{Decision Variables}
+The aim of an optimisation problem is to find the values of the decision variables. These values are unknown at the beginning of the problem. Decision variables usually represent things that can be changed, for example the rate at which water is consumed or the number of birds living in a certain park.
+
+\subsection{Objective Function}
+The objective function is a mathematical combination of the decision variables and represents the function that we want to optimise (i.e. maximise or minimise). We will only be looking at objective functions which are functions of two variables. For example, in the case of the farmer, the objective function is the yield and it is dependent on the amount of crops planted. If the farmer has two crops then the objective function $f(x,y)$ is the yield, where $x$ represents the amount of the first crop planted and $y$ represents the amount of the second crop planted. For the stock broker, assuming that there are two stocks to invest in, the objective function $f(x,y)$ is the amount of profit earned by investing $x$ rand in the first stock and $y$ rand in the second.
+
+\subsection{Constraints}
+\textbf{Constraints}, or \textbf{restrictions}, are often placed on the variables being optimised. For the example of the farmer, he cannot plant a negative number of crops, therefore the constraints would be:
+\begin{eqnarray*}
+x\geq 0\\
+y\geq 0.
+\end{eqnarray*}
+Other constraints might be that the farmer cannot plant more of the second crop than the first crop and that no more than 20 units of the first crop can be planted. These constraints can be written as:
+\begin{eqnarray*}
+x\geq y\\
+x\leq 20
+\end{eqnarray*}
+
+Constraints that have the form
+\nequ{ax+by\leq c}
+or
+\nequ{ax+by=c}
+are called \textbf{linear} constraints. Examples of linear constraints are:
+\begin{eqnarray*}
+x+y\leq 0\\
+-2x=7\\
+y\leq \sqrt{2}
+\end{eqnarray*}
+
+\subsection{Feasible Region and Points}
+Constraints mean that we cannot just take any $x$ and $y$ when looking for the $x$ and $y$ that optimise our objective function. If we think of the variables $x$ and $y$ as a point $(x,y)$ in the $xy$-plane then we call the set of all points in the $xy$-plane that satisfy our constraints the \textbf{feasible region}. Any point in the feasible region is called a \textbf{feasible point}.
+
+For example, the constraints
+\begin{eqnarray*}
+x\geq 0\\
+y\geq 0.
+\end{eqnarray*}
+mean that only values of $x$ and $y$ that are positive are allowed. Similarly, the constraint
+\nequ{x\geq y}
+means that only values of $x$ that are greater than or equal to the $y$ values are allowed.
+\nequ{x\leq 20}
+means that only $x$ values which are less than or equal to $20$ are allowed.
+
+\Tip{The constraints are used to create bounds of the solution.}
+
+\subsection{The Solution}
+
+\Tip{Points that satisfy the constraints are called feasible solutions.}
+
+Once we have determined the feasible region the \textbf{solution} of our problem will be the feasible point where the objective function is a maximum / minimum. Sometimes there will be more than one feasible point where the objective function is a maximum/minimum --- in this case we have more than one solution. 
+
+\section{Example of a Problem}
+A simple problem that can be solved with linear programming involves Mrs Nkosi and her farm. 
+
+\begin{quote}
+Mrs Nkosi grows mielies and potatoes on a farm of $100~\emm^2$. She has accepted orders that will need her to grow at least $40~\emm^2$ of mielies and at least $30~\emm^2$ of potatoes. Market research shows that the demand this year will be at least twice as much for mielies as for potatoes and so she wants to use at least twice as much area for mielies as for potatoes. She expects to make a profit of R$650$ per $\emm^2$ for her mielies and R$1~500$ per $\emm^2$ on her potatoes. How should she divide her land so that she can earn the most profit?
+\end{quote}
+
+Let $q$ represent the area of mielies grown and let $p$ be the area of potatoes grown. 
+
+We shall see below how we can solve this problem.
+
+\section{Method of Linear Programming}
+
+\subsubsection{Method: Linear Programming}{
+\begin{enumerate}
+\item{Identify the decision variables in the problem.}
+\item{Write constraint equations}
+\item{Write objective function as an equation}
+\item{Solve the problem}
+\end{enumerate}}
+
+\section{Skills You Will Need}
+\subsection{Writing Constraint Equations}
+You will need to be comfortable with converting a word description to a mathematical description for linear programming. Some of the words that are used is summarised in Table~\ref{m:lp11:language}.
+
+\begin{table}[htbp]
+\begin{center}
+\caption{Phrases and mathematical equivalents.}
+\label{m:lp11:language}
+\begin{tabular}{|l|c|}\hline
+Words & Mathematical description\\\hline\hline
+$x$ equals $a$ & $x = a$ \\
+$x$ is greater than $a$ & $x > a$\\
+$x$ is greater than or equal to $a$ & $x \geq a$\\
+$x$ is less than $a$ & $x < a$ \\
+$x$ is less than or equal to $a$ & $x \leq a$ \\
+$x$ must be at least $a$ & $x \geq a$ \\
+$x$ must be at most $a$ & $x \leq a$\\\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{wex}{Writing constraints as equations}{Mrs Nkosi grows mielies and potatoes on a farm of $100~\emm^2$. She has accepted orders that will need her to grow at least $40~\emm^2$ of mielies and at least $30~\emm^2$ of potatoes. Market research shows that the demand this year will be at least twice as much for mielies as for potatoes and so she wants to use at least twice as much area for mielies as for potatoes.\\}
+{\westep{Identify the decision variables}
+There are two decision variables: the area used to plant mielies ($q$) and the area used to plant potatoes ($p$).\\
+
+\westep{Identify the phrases that constrain the decision variables}
+\begin{itemize}
+\item{grow at least $40~\emm^2$ of mielies}
+\item{grow at least $30~\emm^2$ of potatoes}
+\item{area of farm is $100~\emm^2$}
+\item{demand is at least twice as much for mielies as for potatoes}
+\end{itemize}
+
+\westep{For each phrase, write a constraint}
+\begin{itemize}
+\item{$q \geq 40$}
+\item{$p \geq 30$}
+\item{$q+p \leq 100$}
+\item{$q\geq 2p$}
+\end{itemize}
+}
+\end{wex}
+
+\Exercise{constraints as equation}{
+Write the following constraints as equations:
+\begin{enumerate}
+\item{Michael is registering for courses at university. Michael needs to register for at least $4$ courses.}
+\item{Joyce is also registering for courses at university. She cannot register for more than $7$ courses.}
+\item{In a geography test, Simon is allowed to choose $4$ questions from each section.}
+\item{A baker can bake at most $50$ chocolate cakes in one day.}
+\item{Megan and Katja can carry at most $400$ koeksisters.}
+\end{enumerate}
+}
+
+\subsection{Writing the Objective Function}
+If the objective function is not given to you as an equation, you will need to be able to convert a word description to an equation to get the objective function. 
+
+You will need to look for words like:
+\begin{itemize}
+\item{most profit}
+\item{least cost}
+\item{largest area}
+\end{itemize}
+
+\begin{wex}
+{Writing the objective function}{The cost of hiring a small trailer is R$500$ per day and the cost of hiring a big trailer is R$800$ per day. Write down the objective function that can be used to find the cheapest cost for hiring trailers for one day.\\}
+{
+\westep{Identify the decision variables}
+There are two decision variables:the number of small trailers ($m$) and the number of big trailers ($n$).\\
+
+\westep{Write the purpose of the objective function}
+The purpose of the objective function is to minimise cost.\\
+
+\westep{Write the objective function}
+The cost of hiring $m$ small trailers for one day is:
+\nequ{500 \times m}
+The cost of hiring $n$ big trailers for one day is:
+\nequ{800 \times n}
+Therefore the objective function, which is the total cost of hiring $m$ small trailers and $n$ big trailers for one day is:
+\nequ{(500 \times m) + (800 \times n)}
+}
+\end{wex}
+
+\begin{wex}
+{Writing the objective function}{
+Mrs Nkosi expects to make a profit of R$650$ per $\emm^2$ for her mielies and R$1~500$ per $\emm^2$ on her potatoes. How should she divide her land so that she can earn the most profit?\\}
+{\westep{Identify the decision variables}
+There are two decision variables: the area used to plant mielies ($q$) and the area used to plant potatoes ($p$).\\
+
+\westep{Write the purpose of the objective function}
+The purpose of the objective function is to maximise profit.\\
+
+\westep{Write the objective function}
+The profit of planting $q ~\emm^2$ of mielies is:
+\nequ{650 \times q}
+The profit of planting $p~\emm^2$ of potatoes is:
+\nequ{1~500 \times p}
+Therefore the objective function, which is the total profit of planting mielies and potatoes is:
+\nequ{(650 \times q) + (1~500 \times p)}}
+\end{wex}
+
+\Exercise{Writing the objective function}{
+\begin{enumerate}
+\item{The \textit{EduFurn} furniture factory manufactures school chairs and school desks. They make a profit of R$50$ on each chair sold and of R$60$ on each desk sold. Write an equation that will show how much profit they will make by selling the chairs and desks.}
+\item{A manufacturer makes small screen GPS units and wide screen GPS units. If the profit on a small screen GPS unit is R$500$ and the profit on a wide screen GPS unit is 
+R$250$, write an equation that will show the possible maximum profit.}
+\end{enumerate}
+}
+
+\subsection{Solving the Problem}
+The numerical method involves using the points along the boundary of the feasible region, and determining which point optimises the objective function.
+
+\Activity{Investigation}{Numerical Method}{
+Use the objective function
+
+\nequ{(650 \times q) + (1~500 \times p)}
+
+to calculate Mrs Nkosi's profit for the following feasible solutions:
+
+\begin{center}
+\begin{tabular}{|c|c|c|}\hline
+$q$&$p$&Profit\\\hline\hline
+$60$&$30$&\\\hline
+$65$&$30$&\\\hline
+$70$&$30$&\\\hline
+$66\frac{2}{3}$&$33\frac{1}{3}$&\\\hline
+\hline
+\end{tabular}
+\end{center}
+}
+
+The question is \textit{how do you find the feasible region?} We will use the graphical method of solving a system of linear equations to determine the feasible region. We draw all constraints as graphs and mark the area that satisfies all constraints. This is shown in Figure~\ref{m:lp11:feasibleregion} for Mrs Nkosi's farm.
+
+\begin{figure}[H]
+\begin{center}
+\psset{unit=0.75}
+\begin{pspicture}(-1,-1)(11,11)
+%\psgrid[gridcolor=gray]
+\psaxes[dx=1,Dx=10,dy=1,Dy=10]{<->}(0,0)(-1,-1)(10.4,10.4)
+\psline(0,4)(10,4)
+\psline(3,0)(3,10)
+\psplot{0}{10}{10 x sub}
+\psplot{0}{5}{2 x mul}
+\pspolygon[fillcolor=lightgray,fillstyle=solid](3,6)(3.333,6.667)(3,7)
+\uput[r](10.4,0){$p$}
+\uput[u](0,10.4){$q$}
+\uput[l](3,6){$A$}
+\uput[l](3,7){$B$}
+\uput[r](3.33,6.67){$C$}
+\end{pspicture}
+\caption{Graph of the feasible region}
+\label{m:lp11:feasibleregion}
+\end{center}
+\end{figure}
+
+Vertices (singular: vertex) are the points on the graph where two or more of the constraints overlap or cross. If the linear objective function has a minimum or maximum value, it will occur at one or more of the vertices of the feasible region.
+
+Now we can use the methods we learnt previously to find the points at the vertices of the feasible region. In Figure~\ref{m:lp11:feasibleregion}, vertex $A$ is at the intersection of $p=30$ and $q=2p$. Therefore, the coordinates of $A$ are ($30;60$). Similarly vertex $B$ is at the intersection of $p=30$ and $q=100-p$. Therefore the coordinates of $B$ are ($30;70$). Vertex $C$ is at the intersection of $q=100-p$ and $q=2p$, which gives ($33\frac{1}{3};66\frac{2}{3}$) for the coordinates of $C$.
+
+If we now substitute these points into the objective function, we get the following:
+\begin{center}
+\begin{tabular}{|c|c|c|}\hline
+$q$&$p$&Profit\\\hline\hline
+$60$&$30$&$81~000$\\\hline
+$70$&$30$&$87~000$\\\hline
+$66\frac{2}{3}$&$33\frac{1}{3}$&$89~997$\\\hline
+\hline
+\end{tabular}
+\end{center}
+
+Therefore Mrs Nkosi makes the most profit if she plants $66\frac{2}{3}~\emm^2$ of mielies and $33\frac{1}{3}~\emm^2$ of potatoes. Her profit is R$89~997$.
+
+\begin{wex}
+{Prizes!}{As part of their opening specials, a furniture store has promised to give away at least $40$ prizes with a total value of at least R$2~000$. The prizes are kettles and toasters.
+\begin{enumerate}
+\item{If the company decides that there will be at least $10$ of each prize, write down two more inequalities from these constraints.}
+\item{If the cost of manufacturing a kettle is R$60$ and a toaster is R$50$, write down an objective function $C$ which can be used to determine the cost to the company of both kettles and toasters.}
+\item{Sketch the graph of the feasibility region that can be used to determine all the possible combinations of kettles and toasters that honour the promises of the company.}
+\item{How many of each prize will represent the cheapest option for the company?}
+\item{How much will this combination of kettles and toasters cost?}
+\end{enumerate}
+}
+{
+\westep{Identify the decision variables}
+Let the number of kettles be $x$ and the number of toasters be $y$ and write down two constraints apart from $x\geq 0$ and $y \geq 0$ that must be adhered to.\\
+\westep{Write constraint equations}
+Since there will be at least $10$ of each prize we can write:
+\nequ{x\geq 10}
+and
+\nequ{y\geq 10}
+Also the store has promised to give away at least $40$ prizes in total. Therefore:
+\nequ{x+y\geq 40}
+\westep{Write the objective function}
+The cost of manufacturing a kettle is R$60$ and a toaster is R$50$. Therefore the cost the total cost $C$ is:
+\nequ{C=60x+50y}
+\westep{Sketch the graph of the feasible region}
+\begin{center}
+\psset{unit=0.75}
+\begin{pspicture}(-1,-1)(11,11)
+%\psgrid[gridcolor=gray]
+\psaxes[dx=1,Dx=10,dy=1,Dy=10]{<->}(0,0)(-1,-1)(10.4,10.4)
+\pspolygon[fillcolor=lightgray,fillstyle=solid, linecolor=lightgray](10,10)(1,10)(1,3)(3,1)(10,1)
+\psline{->}(0,1)(10.3,1)
+\psline{->}(1,0)(1,10.3)
+\psplot{0}{4}{4 x sub}
+%\psplot{0}{10}{x 1.2 mul neg 20 add}
+
+\uput[r](10.4,0){$x$}
+\uput[u](0,10.4){$y$}
+\uput[ul](3.5,1){$A$}
+\uput[l](1.7,3.2){$B$}
+\end{pspicture}
+\end{center}
+
+\westep{Determine vertices of feasible region}
+From the graph, the coordinates of vertex $A$ are ($30;10$) and the coordinates of vertex $B$ are ($10;30$).\\
+
+\westep{Calculate cost at each vertex}
+At vertex $A$, the cost is:
+\begin{eqnarray*}
+C&=&60x+50y\\
+&=&60(30)+50(10)\\
+&=&1~800+500\\
+&=&2~300
+\end{eqnarray*}
+
+At vertex $B$, the cost is:
+\begin{eqnarray*}
+C&=&60x+50y\\
+&=&60(10)+50(30)\\
+&=&600+1~500\\
+&=&2~100
+\end{eqnarray*}
+
+\westep{Write the final answer}
+The cheapest combination of prizes is $10$ kettles and $30$ toasters, costing the company R$2~100$.
+}
+\end{wex}
+
+\begin{eocexercises}{}
+\begin{enumerate}
+
+\item{You are given a test consisting of two sections. The first section is on algebra and the second section is on geometry. You are not allowed to answer more than $10$ questions from any section, but you have to answer at least $4$ algebra questions. The time allowed is not more than $30$ minutes. An algebra problem will take $2$ minutes and a geometry problem will take $3$ minutes to solve.
+
+If you answer $x$ algebra questions and $y$ geometry questions,
+\begin{enumerate}
+\item{Formulate the constraints which satisfy the above constraints.}
+\item{The algebra questions carry $5$ marks each and the geometry questions carry $10$ marks each. If $T$ is the total marks, write down an expression for $T$.}
+\end{enumerate}}
+
+\item{A local clinic wants to produce a guide to healthy living. The clinic intends to produce the guide in two formats: a short video and a printed book. The clinic needs to decide how many of each format to produce for sale. Estimates show that no more than $10~000$ copies of both items together will be sold. At least $4~000$ copies of the video and at least $2~000$ copies of the book could be sold, although sales of the book are not expected to exceed $4~000$ copies. Let $x$ be the number of videos sold, and $y$ the number of printed books sold.
+\begin{enumerate}
+\item{Write down the constraint inequalities that can be deduced from the given information.}
+\item{Represent these inequalities graphically and indicate the feasible region clearly.}
+\item{The clinic is seeking to maximise the income, $I$, earned from the sales of the two products. Each video will sell for R$50$ and each book for R$30$. Write down the objective function for the income.}
+%\item{Determine graphically, by using a search line, the number of videos and books that ought to be sold to maximise the income.}
+\item{What maximum income will be generated by the two guides?}
+\end{enumerate}}
+
+\item{A patient in a hospital needs at least $18$ grams of protein, $0,006$ grams of vitamin C and $0,005$ grams of iron per meal, which consists of two types of food, $A$ and $B$. Type $A$ contains $9$ grams of protein, $0,002$ grams of vitamin C and no iron per serving. Type $B$ contains $3$ grams of protein, $0,002$ grams of vitamin C and $0,005$ grams of iron per serving. The energy value of $A$ is $800$ kilojoules and of $B$ $400$ kilojoules per serving. A patient is not allowed to have more than $4$ servings of $A$ and $5$ servings of $B$. There are $x$ servings of $A$ and $y$ servings of $B$ on the patient's plate.
+\begin{enumerate}
+\item{Write down in terms of $x$ and $y$}
+\begin{enumerate}
+\item{The mathematical constraints which must be satisfied.}
+\item{The kilojoule intake per meal.}
+\end{enumerate}
+\item{Represent the constraints graphically on graph paper. Use the scale $1$ unit $=$ $20$mm on both axes. Shade the feasible region.}
+\item{Deduce from the graphs, the values of $x$ and $y$ which will give the minimum kilojoule intake per meal for the patient.}
+\end{enumerate}}
+\item{A certain motorcycle manufacturer produces two basic models, the \textit{Super X} and the \textit{Super Y}. These motorcycles are sold to dealers at a profit of R$20~000$ per \textit{Super X} and R$10~000$ per \textit{Super Y}. A \textit{Super X} requires $150$ hours for assembly, $50$ hours for painting and finishing and $10$ hours for checking and testing. The \textit{Super Y} requires $60$ hours for assembly, $40$ hours for painting and finishing and $20$ hours for checking and testing. The total number of hours available per month is: $30~000$ in the assembly department, $13~000$ in the painting and finishing department and $5~000$ in the checking and testing department.
+
+The above information can be summarised by the following table:
+
+\begin{center}
+\begin{tabular}{|l|c|c|p{3cm}|}\hline
+Department& Hours for \textit{Super X}&Hours for \textit{Super Y}& Maximum hours available per month\\\hline\hline
+Assembley&$150$&$60$&$30~ 000$\\\hline
+Painting and Finishing & $50$& $40$ &$13~ 000$\\\hline
+Checking and Testing &$10$&$20$&$5~ 000$\\\hline
+\end{tabular}
+\end{center}
+
+Let $x$ be the number of \textit{Super X} and $y$ be the number of \textit{Super Y} models
+manufactured per month.
+
+\begin{enumerate}
+\item{Write down the set of constraint inequalities.}
+\item{Use the graph paper provided to represent the constraint inequalities.}
+\item{Shade the feasible region on the graph paper.}
+\item{Write down the profit generated in terms of $x$ and $y$.}
+\item{How many motorcycles of each model must be produced in order to maximise the monthly profit?}
+\item{What is the maximum monthly profit?}
+\end{enumerate}
+}
+\item{A group of students plan to sell $x$ hamburgers and $y$ chicken burgers at a rugby match. They have meat for at most $300$ hamburgers and at most $400$ chicken burgers. Each burger of
+both types is sold in a packet. There are $500$ packets available. The demand is likely to be such that the number of chicken burgers sold is at least half the number of hamburgers sold.
+\begin{enumerate}
+\item{Write the constraint inequalities.}
+\item{Two constraint inequalities are shown on the graph paper provided. Represent the remaining constraint inequalities on the graph paper.}
+\item{Shade the feasible region on the graph paper.}
+\item{A profit of R$3$ is made on each hamburger sold and R$2$ on each chicken burger sold. Write the equation which represents the total profit $P$ in terms of $x$ and $y$.}
+\item{The objective is to maximise profit. How many, of each type of burger, should be sold to maximise profit?}
+\end{enumerate}}
+
+\item{\textit{Fashion-cards} is a small company that makes two types of cards, type $X$ and type $Y$. With the available labour and material, the company can make not more than $150$ cards of type $X$ and not more than $120$ cards of type $Y$ per week. Altogether they cannot make more than $200$ cards per week.
+
+There is an order for at least $40$ type $X$ cards and $10$ type $Y$ cards per week.
+\textit{Fashion-cards} makes a profit of R$5$ for each type $X$ card sold and R$10$ for each type $Y$ card.
+
+Let the number of type $X$ cards be $x$ and the nu\begin{center}
+\psset{unit=0.75}
+\begin{pspicture}(-1,-1)(11,11)
+%\psgrid[gridcolor=gray]
+\psaxes[dx=1,Dx=10,dy=1,Dy=10]{<->}(0,0)(-1,-1)(10.4,10.4)
+\pspolygon[fillcolor=lightgray,fillstyle=solid, linecolor=lightgray](10,10)(1,10)(1,3)(3,1)(10,1)
+\psline{->}(0,1)(10.3,1)
+\psline{->}(1,0)(1,10.3)
+\psplot{0}{4}{4 x sub}
+%\psplot{0}{10}{x 1.2 mul neg 20 add}
+
+\uput[r](10.4,0){$x$}
+\uput[u](0,10.4){$y$}
+\uput[ul](3.5,1){$A$}
+\uput[l](1.7,3.2){$B$}
+\end{pspicture}
+\end{center}mber of type $Y$ cards be $y$, manufactured per week.
+
+\begin{enumerate}
+\item{One of the constraint inequalities which represents the restrictions above is $x\leq 150$. Write the other constraint inequalities.}
+\item{Represent the constraints graphically and shade the feasible region.}
+\item{Write the equation that represents the profit $P$ (the objective function), in terms of $x$ and $y$.}
+\item{Calculate the maximum weekly profit.}
+\end{enumerate}}
+
+\item{To meet the requirements of a specialised diet a meal is prepared by mixing two types of cereal, \textit{Vuka} and \textit{Molo}. The mixture must contain $x$ packets of \textit{Vuka} cereal and $y$ packets of \textit{Molo} cereal. The meal requires at least $15$ g of protein and at least $72$ g of carbohydrates. Each packet of \textit{Vuka} cereal contains $4$ g of protein and $16$ g of carbohydrates. Each packet of \textit{Molo} cereal contains $3$ g of protein and $24$ g of carbohydrates. There are at most $5$ packets of cereal available. The feasible region is shaded on the attached graph paper.
+\begin{enumerate}
+\item{Write down the constraint inequalities.}
+\item{If \textit{Vuka} cereal costs R$6$ per packet and \textit{Molo} cereal also costs R$6$ per packet, use the graph to determine how many packets of each cereal must be used for the mixture to satisfy the above constraints in each of the following cases:
+\begin{enumerate}
+\item{The total cost is a minimum.}
+\item{The total cost is a maximum (give all possibilities).}
+\end{enumerate}}
+\end{enumerate}
+\begin{center}
+%\psset{unit=0.75}
+\begin{pspicture}(-2,-2)(7,7)
+\psgrid[gridcolor=gray,subgriddiv=10,gridlabelcolor=white](0,0)(6,6)
+\psaxes[dx=1,Dx=1,dy=1,Dy=1]{<->}(0,0)(6.4,6.4)
+\psplot{0}{5}{5 x sub}
+\psplot{0}{4.5}{0.67 x mul neg 3 add}
+\psplot{0}{3.75}{4 x mul neg 15 add 3 div}
+\pspolygon[fillcolor=lightgray,fillstyle=solid](0,5)(5,0)(4.5,0)(3,1)
+\pcline[offset=-12pt,linestyle=none](0,0)(6,0)
+\bput{:U}{Number of packets of \textit{Vuka}}
+\pcline[offset=10pt,linestyle=none](0,0)(0,6)
+\aput{:U}{Number of packets of \textit{Molo}}
+\end{pspicture}
+\end{center}}
+\item{A bicycle manufacturer makes two different models of bicycles, namely mountain bikes and speed bikes. The bicycle manufacturer works under the following constraints:\\
+No more than $5$ mountain bicycles can be assembled daily.\\
+No more than $3$ speed bicycles can be assembled daily.\\
+It takes one man to assemble a mountain bicycle, two men to assemble a speed bicycle and there are $8$ men working at the bicycle manufacturer.\\
+Let $x$ represent the number of mountain bicycles and let $y$ represent the number of speed bicycles.
+\begin{enumerate}
+\item{Determine algebraically the constraints that apply to this problem.}
+\item{Represent the constraints graphically on the graph paper.}
+\item{By means of shading, clearly indicate the feasible region on the graph.}
+\item{The profit on a mountain bicycle is R$200$ and the profit on a speed bicycle is R$600$. Write down an expression to represent the profit on the bicycles.}
+\item{Determine the number of each model bicycle that would maximise the profit to the manufacturer.}
+\end{enumerate}}
+\end{enumerate}
+
+
+
+\practiceinfo
+\end{eocexercises} 
+
+
+
+% CHILD SECTION START 
+

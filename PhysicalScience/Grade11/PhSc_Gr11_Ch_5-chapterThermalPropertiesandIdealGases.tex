@@ -1,0 +1,1575 @@
+\chapter{Thermal Properties and Ideal Gases}
+\label{chap:gases}
+
+We are surrounded by gases in our atmosphere which support and protect life on this planet. In this chapter, we are going to try to understand more about gases, and learn how to predict how they will behave under different conditions. The kinetic theory of matter was discussed in Grade 10. This theory is very important in understanding how gases behave.
+
+
+% CHILD SECTION START
+
+\section{A review of the kinetic theory of matter}
+\label{sec:gases:kinetic theory}
+
+The main assumptions of the kinetic theory of matter are as follows:
+\begin{itemize}
+\item{Matter is made up of \textbf{particles} (e.g. atoms or molecules)}
+\item{These particles are constantly moving because they have kinetic energy. The space in which the particles move is the \textbf{volume} of the gas.}
+\item{There are \textbf{spaces} between the particles}
+\item{There are \textbf{attractive forces} between particles and these become stronger as the particles move closer together.}
+\item{All particles have \textbf{energy}. The \textbf{temperature} of a substance is a measure of the \textbf{average kinetic energy} of the particles.}
+\item{A change in \textbf{phase} may occur when the energy of the particles is changed.}
+\end{itemize}
+
+The kinetic theory applies to all matter, including gases. In a gas, the particles are far apart and have a high kinetic energy. They move around freely, colliding with each other or with the sides of the container if the gas is enclosed. The \textbf{pressure} of a gas is a measure of the frequency of collisions of the gas particles with each other and with the sides of the container that they are in. If the gas is heated, the average kinetic energy of the gas particles will increase and if the temperature is decreased, so does their energy. If the energy of the particles decreases significantly, the gas liquifies. An \textbf{ideal gas} is one that obeys all the assumptions of the kinetic theory of matter. A \textbf{real gas} behaves like an ideal gas, except at high pressures and low temperatures. This will be discussed in more detail later in this chapter.
+
+\Definition{Ideal gas}{
+An ideal gas or perfect gas is a hypothetical gas that obeys all the assumptions of the kinetic theory of matter. In other words, an ideal gas would have identical particles of zero volume, with no intermolecular forces between them. The atoms or molecules in an ideal gas would also undergo elastic collisions with the walls of their container.
+}
+
+\Definition{Real gas}{Real gases behave more or less like ideal gases except under certain conditions e.g. high pressures and low temperatures.}
+
+There are a number of laws that describe how gases behave. It will be easy to make sense of these laws if you understand the kinetic theory of gases that was discussed above.
+
+
+
+% CHILD SECTION END
+
+
+
+% CHILD SECTION START
+
+\section{Boyle's Law: Pressure and volume of an enclosed gas}
+
+\Activity{Demonstration}{Boyle's Law\\}{If you have ever tried to force in the plunger of a syringe or a bicycle pump while sealing the opening with a finger, you will have seen Boyle's Law in action! This will now be demonstrated using a 10 ml syringe.\\
+
+\textbf{Aim:\\}
+
+To demonstrate Boyle's law.\\
+
+\textbf{Apparatus:\\}
+
+You will only need a syringe for this demonstration.
+
+\begin{center}
+\begin{pspicture}(-4,-1)(4,1.2)
+%\psgrid
+%outer layer
+\psline{-}(-2,0.5)(-2,0.8)
+\psline{-}(-2,0.8)(-2.1,0.8)
+\psline{-}(-2.1,0.8)(-2.1,-0.8)
+\psline{-}(-2,-0.5)(-2,-0.8)
+\psline{-}(-2,-0.8)(-2.1,-0.8)
+\psline{-}(-2.0,0.5)(2.0,0.5)
+\psline{-}(-2.0,-0.5)(2.0,-0.5)
+\psline{-}(2.1,0.1)(2.5,0.1)
+\psline{-}(2.1,-0.1)(2.5,-0.1)
+\psline{-}(2.5,0.1)(2.5,-0.1)
+\pscurve{-}(2,0.5)(2.1,0.15)(2.1,0.1)
+\pscurve{-}(2,-0.5)(2.1,-0.15)(2.1,-0.1)
+%inside
+\pspolygon*(1.7,0.5)(1.7,-0.5)(1.8,-0.5)(1.8,0.5)
+\pscurve[fillstyle=solid,fillcolor=black]{-}(1.8,0.5)(1.9,0)(1.8,-0.5)
+\psline{-}(-1.6,0.4)(1.7,0.4)
+\psline{-}(-1.6,0.4)(-1.6,0.3)
+\psline{-}(-1.6,0.3)(-2.4,0.3)
+\psline{-}(-2.4,0.3)(-2.4,0.5)
+\psline{-}(-2.4,0.5)(-2.45,0.5)
+\pscurve{-}(-2.4,0.5)(-2.5,0)(-2.4,-0.5)
+\pscurve{-}(-2.45,0.5)(-2.55,0)(-2.45,-0.5)
+\psline{-}(-1.6,-0.4)(1.7,-0.4)
+\psline{-}(-1.6,-0.4)(-1.6,-0.3)
+\psline{-}(-1.6,-0.3)(-2.4,-0.3)
+\psline{-}(-2.4,-0.3)(-2.4,-0.5)
+\psline{-}(-2.4,-0.5) (-2.45,-0.5)
+%markings
+\psline[linewidth=1.5pt]{-}(0.8,0.5)(0.8,0.1)
+\psline{-}(1.0,0.5)(1.0,0.2)
+\psline{-}(1.2,0.5)(1.2,0.2)
+\psline{-}(1.4,0.5)(1.4,0.2)
+\psline{-}(1.6,0.5)(1.6,0.2)
+\psline{-}(0.8,0.5)(0.8,0.2)
+\psline{-}(0.6,0.5)(0.6,0.2)
+\psline{-}(0.4,0.5)(0.4,0.2)
+\psline{-}(0.2,0.5)(0.2,0.2)
+\psline{-}(0,0.5)(0,0.2)
+\psline[linewidth=1.5pt]{-}(-0.2,0.5)(-0.2,0.1)
+
+\rput{270}{
+\rput[c](0.05,0.8){5}
+\rput[c](0.05,-0.2){10}
+\rput[c](0.05,-1){m$\ell$}
+}
+\end{pspicture}
+\end{center}
+
+\textbf{Method:}\\
+\begin{enumerate}
+\item{Hold the syringe in one hand, and with the other pull the plunger out towards you so that the syringe is now full of air.}
+\item{Seal the opening of the syringe with your finger so that no air can escape the syringe.}
+\item{Slowly push the plunger in, and notice whether it becomes \textit{more} or \textit{less} difficult to push the plunger in.}
+\end{enumerate}
+
+
+\textbf{Results:}\\
+
+What did you notice when you pushed the plunger in? What happens to the \textbf{volume} of air inside the syringe? Did it become \textit{more} or \textit{less} difficult to push the plunger in as the volume of the air in the syringe decreased? In other words, did you have to apply more or less \textbf{force} to the plunger as the volume of air in the syringe decreased? \\
+
+As the volume of air in the syringe decreases, you have to apply more force to the plunger to keep pressing it down. The pressure of the gas inside the syringe pushing back on the plunger is greater. Another way of saying this is that as the volume of the gas in the syringe \textit{decreases}, the pressure of that gas \textit{increases}.\\
+
+\textbf{Conclusion:\\}
+
+If the volume of the gas decreases, the pressure of the gas increases. If the volume of the gas increases, the pressure decreases. These results support Boyle's law.
+}
+
+In the previous demonstration, the volume of the gas decreased when the pressure increased, and the volume increased when the pressure decreased. This is called an \textbf{inverse relationship}. The inverse relationship between pressure and volume is shown in figure \ref{fig:boyleone}.\\
+
+
+\begin{figure}[h]
+\begin{center}
+\begin{pspicture}(-1,-0.3)(5,4)
+%\psgrid
+%Pressure vs. Volume
+\psplot[plotpoints=100]{0.5}{4.0}{2 x div}
+%axes
+\psline[linewidth=1pt]{->}(0,0)(0,4.5)
+\psline[linewidth=1pt]{->}(0,0)(4.5,0)
+\rput{-270}{
+\rput[c](2,0.5){Pressure}
+}
+\rput[c](2,-0.4){Volume}
+\end{pspicture}
+\caption{Graph showing the inverse relationship between pressure and volume}
+\label{fig:boyleone}
+\end{center}
+\end{figure}
+
+Can you use the kinetic theory of gases to explain this inverse relationship between the pressure and volume of a gas? Let's think about it. If you decrease the volume of a gas, this means that the same number of gas particles are now going to come into contact with each other and with the sides of the container much more often. You may remember from earlier that we said that \textit{pressure} is a measure of the \textit{frequency of collisions} of gas particles with each other and with the sides of the container they are in. So, if the volume decreases, the pressure will naturally increase. The opposite is true if the volume of the gas is increased. Now, the gas particles collide less frequently and the pressure will decrease.\\
+
+
+It was an Englishman named Robert Boyle who was able to take very accurate measurements of gas pressures and volumes using high-quality vacuum pumps. He discovered the startlingly simple fact that the pressure and volume of a gas are not just vaguely inversely related, but are \textit{exactly} \textbf{inversely proportional}. This can be seen when a graph of pressure against the inverse of volume is plotted. When the values are plotted, the graph is a straight line. This relationship is shown in figure \ref{fig:boyletwo}.\\
+
+\begin{figure}[h]
+\begin{center}
+%Pressure vs. 1/Volume
+\begin{pspicture}(-1,-1)(5,5)
+\psline{-}(0.5,0.5)(4,4)
+
+%axes
+\psline[linewidth=1pt]{->}(0,0)(0,4.5)
+\psline[linewidth=1pt]{->}(0,0)(4.5,0)
+\rput{-270}{
+\rput[c](2,0.5){Pressure}
+}
+\rput[c](2,-0.4){1/Volume}
+\end{pspicture}
+\caption{The graph of pressure plotted against the inverse of volume, produces a straight line. This shows that pressure and volume are exactly inversely proportional.}
+\label{fig:boyletwo}
+\end{center}
+\end{figure}
+
+
+\Definition{Boyle's Law}{The pressure of a fixed quantity of gas is inversely proportional to the volume it occupies so long as the temperature remains constant.}
+
+\Tip{\textbf{Proportionality\\}
+
+During this chapter, the terms \textbf{directly proportional} and \textbf{inversely proportional} will be used a lot, and it is important that you understand their meaning. Two quantities are said to be \textbf{proportional} if they vary in such a way that one of the quantities is a constant multiple of the other, or if they have a constant ratio. We will look at two examples to show the difference between \textit{directly proportional} and \textit{inversely proportional}.\\
+
+\begin{enumerate}
+
+\item{\textit{Directly proportional\\}
+A car travels at a constant speed of 120 km/h. The time and the distance covered are shown in the table below.
+
+\begin{center}
+\begin{tabular}{|c|c|}\hline
+\textbf{Time} (mins) & \textbf{Distance} (km) \\\hline
+10 & 20 \\\hline
+20 & 40 \\\hline
+30 & 60 \\\hline
+40 & 80 \\\hline
+\end{tabular}
+\end{center}
+
+What you will notice is that the two quantities shown are constant multiples of each other. If you divide each distance value by the time the car has been driving, you will always get 2. This shows that the values are proportional to each other. They are \textbf{directly proportional} because both values are increasing. In other words, as the driving time increases, so does the distance covered. The same is true if the values decrease. The shorter the driving time, the smaller the distance covered. This relationship can be described mathematically as:
+\begin{equation*}
+y = kx
+\end{equation*}
+
+where y is distance, x is time and k is the \textit{proportionality constant}, which in this case is 2. Note that this is the equation for a straight line graph! The symbol $\propto$ is also used to show a directly proportional relationship.
+}
+
+\item{\textit{Inversely proportional\\}
+Two variables are inversely proportional if one of the variables is directly proportional to the multiplicative inverse of the other. In other words,
+
+\begin{equation*}
+y \propto \frac{1}{x}
+\end{equation*}
+
+or \begin{equation*}
+y = \frac{k}{x}
+\end{equation*}
+
+This means that as one value gets bigger, the other value will get smaller. For example, the time taken for a journey is inversely proportional to the speed of travel. Look at the table below to check this for yourself. For this example, assume that the distance of the journey is 100 km.
+
+\begin{center}
+\begin{tabular}{|c|c|}\hline
+\textbf{Speed} (km/h) & \textbf{Time} (mins) \\\hline
+100 & 60 \\\hline
+80 & 75 \\\hline
+60 & 100 \\\hline
+40 & 150 \\\hline
+\end{tabular}
+\end{center}
+
+According to our definition, the two variables are inversely proportional if one variable is \textit{directly} proportional to the \textit{inverse} of the other. In other words, if we divide one of the variables by the inverse of the other, we should always get the same number. For example,
+
+\begin{equation*}
+\frac{100}{1/60} = 6000
+\end{equation*}
+
+If you repeat this using the other values, you will find that the answer is always 6000. The variables are inversely proportional to each other.
+}
+
+
+\end{enumerate}
+
+}
+
+We know now that the pressure of a gas is \textit{inversely proportional} to the volume of the gas, provided the temperature stays the same. We can write this relationship symbolically as
+
+\begin{equation*}
+p \propto \frac{1}{V}
+\end{equation*}
+
+This equation can also be written as follows:
+
+\begin{equation*}
+p = \frac{k}{V}
+\end{equation*}
+
+where $k$ is a proportionality constant. If we rearrange this equation, we can say that:
+
+
+\begin{equation*}
+pV = k
+\end{equation*}
+
+This equation means that, assuming the temperature is constant, multiplying any pressure and volume values for a fixed amount of gas will always give the same value. So, for example, p$_{1}$V$_{1}$ = k and p$_{2}$V$_{2}$ = k, where the subscripts 1 and 2 refer to two pairs of pressure and volume readings for the same mass of gas at the same temperature.
+
+From this, we can then say that:
+
+\begin{equation*}
+p_{1}V_{1} = p_{2}V_{2}
+\end{equation*}
+\\
+
+\MarginTip{In the gas equations, $k$ is a "variable constant". This means that k is constant in a particular set of situations, but in two different sets of situations it has different constant values.
+}
+
+\Tip{Remember that Boyle's Law requires two conditions. First, the amount of gas must stay constant. Clearly, if you let a little of the air escape from the container in which it is enclosed, the pressure of the gas will decrease along with the volume, and the inverse proportion relationship is broken. Second, the temperature must stay constant. Cooling or heating matter generally causes it to contract or expand, or the pressure to decrease or increase. In our original syringe demonstration, if you were to heat up the gas in the syringe, it would expand and require you to apply a greater force to keep the plunger at a given position. Again, the proportionality would be broken.}
+
+
+
+\Activity{Investigation}{Boyle's Law\\}{Shown below are some of Boyle's original data. Note that pressure would originally have been measured using a \textit{mercury manometer} and the units for pressure would have been \textit{millimetres mercury} or mm Hg. However, to make things a bit easier for you, the pressure data have been converted to a unit that is more familiar. Note that the volume is given in terms of arbitrary marks (evenly made). \\
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|}\hline
+\textbf{Volume} & \textbf{Pressure} & \textbf{Volume} & \textbf{Pressure}\\
+(graduation  & (kPa) & (graduation & (kPa) \\
+mark) &  & mark) & \\\hline\hline
+12 & 398 & 28 & 170\\\hline
+14 & 340 & 30 & 159\\\hline
+16 & 298 & 32 & 150\\\hline
+18 & 264 & 34 & 141\\\hline
+20 & 239 & 36 & 133\\\hline
+22 & 217 & 38 & 125\\\hline
+24 & 199 & 40 & 120\\\hline
+26 & 184 &  & \\\hline
+\end{tabular}
+\end{center}
+
+\begin{enumerate}
+\item{Plot a graph of pressure (p) against volume (V). Volume will be on the x-axis and pressure on the y-axis. Describe the relationship that you see.}
+\item{Plot a graph of $p$ against $1/V$. Describe the relationship that you see.}
+\item{Do your results support Boyle's Law? Explain your answer.}
+\end{enumerate}
+}
+
+\begin{IFact}{
+Did you know that the mechanisms involved in \textit{breathing} also relate to Boyle's Law? Just below the lungs is a muscle called the \textbf{diaphragm}. When a person breathes in, the diaphragm moves down and becomes more 'flattened' so that the volume of the lungs can increase. When the lung volume \textit{increases}, the pressure in the lungs \textit{decreases} (Boyle's law). Since air always moves from areas of high pressure to areas of lower pressure, air will now be drawn into the lungs because the air pressure \textit{outside} the body is higher than the pressure \textit{in} the lungs. The opposite process happens when a person breathes out. Now, the diaphragm moves upwards and causes the volume of the lungs to \textit{decrease}. The pressure in the lungs will \textit{increase}, and the air that was in the lungs will be forced out towards the lower air pressure outside the body.
+}
+\end{IFact}
+Phet simulation on gas properties: SIYAVULA-SIMULATION:http://cnx.org/content/m39083/latest/#id63458
+\begin{wex}{Boyle's Law 1}{A sample of helium occupies a volume of 160~$\mathrm{cm}^3$ at 100~kPa and 25~$^\circ$C. What volume will it occupy if the pressure is adjusted to 80~kPa and if the temperature remains unchanged?\\}
+{\westep{Write down all the information that you know about the gas.}
+V$_{1}$ = 160 cm$^{3}$ and V$_{2}$ = ?
+
+p$_{1}$ = 100 kPa and p$_{2}$ = 80 kPa\\
+}
+{\westep{Use an appropriate gas law equation to calculate the unknown variable.}
+
+Because the temperature of the gas stays the same, the following equation can be used:
+\begin{equation*}
+p_{1}V_{1} = p_{2}V_{2}
+\end{equation*}
+
+If the equation is rearranged, then
+\begin{equation*}
+V_{2} = \frac{p_{1}V_{1}}{p_{2}}
+\end{equation*}
+}
+
+{\westep{Substitute the known values into the equation, making sure that the units for each variable are the \textit{same}. Calculate the unknown variable.}
+\begin{equation*}
+V_{2} = \frac{100 \times 160}{80}
+= 200 cm^{3}
+\end{equation*}
+
+The volume occupied by the gas at a pressure of 80kPa, is 200 cm$^{3}$
+}
+
+\end{wex}
+
+\begin{wex}{Boyle's Law 2}{The pressure on a 2.5 l volume of gas is increased from 695 Pa to 755 Pa while a constant temperature is maintained. What is the volume of the gas under these pressure conditions?\\}
+
+{\westep{Write down all the information that you know about the gas.}
+V$_{1}$ = 2.5 l and V$_{2}$ = ?
+
+p$_{1}$ = 695 Pa and p$_{2}$ = 755 Pa\\
+}
+{\westep{Choose a relevant gas law equation to calculate the unknown variable.}
+
+At constant temperature,
+\begin{equation*}
+p_{1}V_{1} = p_{2}V_{2}
+\end{equation*}
+
+Therefore,
+\begin{equation*}
+V_{2} = \frac{p_{1}V_{1}}{p_{2}}
+\end{equation*}
+}
+
+{\westep{Substitute the known values into the equation, making sure that the units for each variable are the \textit{same}. Calculate the unknown variable.}
+\begin{equation*}
+V_{2} = \frac{695 \times 2.5}{755}
+= 2.3 l
+\end{equation*}
+}
+
+\end{wex}
+
+\Tip{
+
+It is not necessary to convert to Standard International (SI) units in the examples we have used above. Changing pressure and volume into different units involves \textit{multiplication}. If you were to change the units in the above equation, this would involve multiplication on both sides of the equation, and so the conversions cancel each other out. However, although \textit{SI} units don't have to be used, you must make sure that for each variable you use the \textit{same} units throughout the equation. This is not true for some of the calculations we will do at a later stage, where SI units \textit{must} be used.}
+
+\Exercise{Boyle's Law\\}{
+\begin{enumerate}
+\item{An unknown gas has an initial pressure of 150 kPa and a volume of 1 L. If the volume is increased to 1.5 L, what will the pressure now be?}
+\item{A bicycle pump contains 250 cm$^{3}$ of air at a pressure of 90 kPa. If the air is compressed, the volume is reduced to 200 cm$^{3}$. What is the pressure of the air inside the pump?}
+\item{The air inside a syringe occupies a volume of 10 cm$^{3}$ and exerts a pressure of 100 kPa. If the end of the syringe is sealed and the plunger is pushed down, the pressure increases to 120 kPa. What is the volume of the air in the syringe?}
+\item{During an investigation to find the relationship between the pressure and volume of an enclosed gas at constant temperature, the following results were obtained.
+
+\begin{center}
+\begin{tabular}{|c|c|}\hline
+\textbf{Volume (cm$^{3}$)} & \textbf{Pressure (kPa)}\\\hline
+40 & 125.0 \\\hline
+30 & 166.7 \\\hline
+25 & 200.0 \\\hline
+\end{tabular}
+\end{center}
+
+\begin{enumerate}
+\item{For the results given in the above table, plot a graph of \textbf{pressure} (y-axis) against the \textbf{inverse of volume} (x-axis).}
+\item{From the graph, deduce the relationship between the pressure and volume of an enclosed gas at constant temperature.}
+\item{Use the graph to predict what the volume of the gas would be at a pressure of 40 kPa. Show on your graph how you arrived at your answer.}
+
+\end{enumerate}
+
+(\textit{IEB 2004 Paper 2})
+}
+
+\end{enumerate}
+\practiceinfo
+
+\begin{tabular}[h]{cccccc}
+(1.) aaa & (2.) aaa & (3.) aaa & (4.) aaa & 
+ \end{tabular}
+}
+
+
+% CHILD SECTION END
+
+
+
+% CHILD SECTION START
+
+\section{Charles' Law: Volume and Temperature of an enclosed gas}
+
+Charles' law describes the relationship between the \textbf{volume} and \textbf{temperature} of a gas. The law was first published by Joseph Louis Gay-Lussac in 1802, but he referenced unpublished work by Jacques Charles from around 1787. This law states that at constant pressure, the volume of a given mass of an ideal gas increases or decreases by the same factor as its temperature (in kelvin) increases or decreases. Another way of saying this is that temperature and volume are \textbf{directly proportional}.% (figure \ref{fig:gas:charles}).
+
+
+\Definition{Charles' Law}{The volume of an enclosed sample of gas is directly proportional to its absolute temperature provided the pressure is kept constant.}
+
+\begin{IFact}{Charles's Law is also known as Gay-Lussac's Law. Charles did not publish his work. Gay-Lussac later rediscovered this law and referenced Charles's work, but said that it was only by great luck that he knew of it and that his experiment was different.}
+\end{IFact}
+
+\Activity{Demonstration}{Charles's Law\\}{
+
+\textbf{Aim:\\}
+
+To demonstrate Charles's Law using simple materials.\\
+
+\textbf{Apparatus:}\\
+
+glass bottle (e.g. empty glass coke bottle), balloon, bunsen burner, retort stand\\
+
+\textbf{Method:}\\
+
+\begin{enumerate}
+\item{Place the balloon over the opening of the empty bottle.}
+\item{Place the bottle on the retort stand over the bunsen burner and allow it to heat up. Observe what happens to the balloon. WARNING: Be careful when handling the heated bottle. You may need to wear gloves for protection.\\}
+\end{enumerate}
+
+\textbf{Results:\\}
+
+You should see that the balloon starts to expand. As the air inside the bottle is heated, the pressure also increases, causing the volume to increase. Since the volume of the glass bottle can't increase, the air moves into the balloon, causing it to expand. \\
+
+\textbf{Conclusion:\\}
+
+The temperature and volume of the gas are directly related to each other. As one increases, so does the other.
+}
+
+
+Mathematically, the relationship between temperature and pressure can be represented as follows:
+
+\begin{equation*}
+V \propto T
+\end{equation*}
+
+\begin{center}
+or
+\end{center}
+
+\begin{equation*}
+V = kT
+\end{equation*}
+
+If the equation is rearranged, then...
+
+\begin{equation*}
+\frac{V}{T} = k
+\end{equation*}
+
+and, following the same logic that was used for Boyle's law:
+
+\begin{equation*}
+\frac{V_{1}}{T_{1}} = \frac{V_{2}}{T_{2}}\\
+\end{equation*}
+
+
+The equation relating volume and temperature produces a straight line graph (refer back to the notes on proportionality if this is unclear). This relationship is shown in figure \ref{fig:gas:charles1}.
+
+\begin{figure}[h]
+\begin{center}
+%31 July - Volume vs. Temperature
+\begin{pspicture}(-1,-1)(5,5)
+\psline{-}(0,0)(4,4)
+%axes
+\psline[linewidth=1pt]{->}(0,0)(0,4.5)
+\psline[linewidth=1pt]{->}(0,0)(4.5,0)
+\rput{-270}{
+\rput[c](2,0.5){Volume}
+}
+\rput[c](0,-0.2){0}
+\rput[c](2,-0.4){Temperature (K)}
+\end{pspicture}
+\end{center}
+\caption{The volume of a gas is directly proportional to its temperature, provided the pressure of the gas is constant.}
+\label{fig:gas:charles1}
+\end{figure}
+
+However, if this graph is plotted on a \textbf{celsius} temperature scale, the zero point of temperature doesn't correspond to the zero point of volume. When the volume is zero, the temperature is actually -273.15$^{0}$C (figure \ref{fig:gas:charles2}).
+
+\begin{figure}[h]
+\begin{center}
+%31 July - Volume vs. Temperature (Celsius)
+\begin{pspicture}(-1,-1)(5,5)
+\psline{-}(0,0)(5,4)
+%axes
+%\psgrid
+\psline[linewidth=1pt]{->}(2,0)(2,4.5)
+\psline[linewidth=1pt]{<->}(-1,0)(5.5,0)
+\rput{-270}{
+\rput[c](2.5,-1.5){Volume (kPa)}
+}
+\rput[c](0.2,-0.2){-273$^\circ$ C}
+\rput[c](2.2,-0.2){0$^\circ$ C}
+\rput[c](0.2,-0.6){0 K}
+\rput[c](2.2,-0.6){273 K}
+\rput[c](4,-0.4){Temperature}
+\end{pspicture}
+\end{center}
+\caption{The relationship between volume and temperature, shown on a Celsius temperature scale.}
+\label{fig:gas:charles2}
+\end{figure}
+
+
+A new temperature scale, the \textbf{Kelvin scale} must be used instead. Since zero on the Celsius scale corresponds with a Kelvin temperature of -273.15$^{circ}$C, it can be said that:
+
+\begin{center}
+Kelvin temperature (T) = Celsius temperature (t) + 273.15
+\end{center}
+
+At school level, you can simplify this slightly and convert between the two temperature scales as follows:
+
+\begin{center}
+T = t + 273\\
+
+or\\
+
+t = T - 273
+\end{center}
+
+Can you explain Charles' law in terms of the kinetic theory of gases? When the temperature of a gas increases, so does the average speed of its molecules. The molecules collide with the walls of the container more often and with greater impact. These collisions will push back the walls, so that the gas occupies a greater volume than it did at the start. We saw this in the first demonstration. Because the glass bottle couldn't expand, the gas pushed out the balloon instead.
+
+\Exercise{Charles's law\\}{
+
+The table below gives the temperature (in $^{circ}$C) of a number of gases under different volumes at a constant pressure.
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|}\hline
+\textbf{Volume (l)} & \textbf{He} & \textbf{H$_{2}$} & \textbf{N$_{2}$O}\\\hline
+0 & -272.4 & -271.8 & -275.0 \\\hline
+0.25 & -245.5 & -192.4 & -123.5 \\\hline
+0.5 & -218.6 & -113.1 & 28.1 \\\hline
+0.75 & -191.8 & -33.7 & 179.6 \\\hline
+1.0 & -164.9 & 45.7 & 331.1\\\hline
+1.5 & -111.1 & 204.4 & 634.1 \\\hline
+2 & -57.4 & 363.1 & 937.2 \\\hline
+2.5 & -3.6 & 521.8 & 1240.2 \\\hline
+3.0 & 50.2 & 680.6 & 1543.2 \\\hline
+3.5 & 103.9 & 839.3 & 1846.2 \\\hline
+\end{tabular}
+\end{center}
+
+\begin{enumerate}
+\item{On the same set of axes, draw graphs to show the relationship between temperature and volume for each of the gases.}
+\item{Describe the relationship you observe.}
+\item{If you extrapolate the graphs (in other words, extend the graph line even though you may not have the exact data points), at what temperature do they intersect?}
+\item{What is significant about this temperature?}
+\end{enumerate}
+\practiceinfo
+
+\begin{tabular}[h]{cccccc}
+(1.) aaa & (2.) aaa & (3.) aaa & (4.) aaa & 
+ \end{tabular}
+}
+
+\begin{wex}{Charles's Law 1}{Ammonium chloride and calcium hydroxide are allowed to react. The ammonia that is released in the reaction is collected in a gas syringe and sealed in. This gas is allowed to come to room temperature which is 32$^\circ$C. The volume of the ammonia is found to be 122~ml. It is now placed in a water bath set at 7$^\circ$C. What will be the volume reading after the syringe has been left in the bath for a some time (e.g. 1 hour) (assume the plunger moves completely freely)?\\}
+
+{\westep{Write down all the information that you know about the gas.}
+V$_{1}$ = 122 ml and V$_{2}$ = ?
+
+
+
+T$_{1}$ = 32$^{0}$C and T$_{2}$ = 7$^{0}$C\\
+}
+
+{\westep{Convert the known values to SI units if necessary.}
+Here, temperature must be converted into Kelvin, therefore:
+
+T$_{1}$ = 32 + 273 = 305 K
+
+T$_{2}$ = 7 + 273 = 280 K\\
+}
+
+{\westep{Choose a relevant gas law equation that will allow you to calculate the unknown variable.}
+
+\begin{equation*}
+\frac{V_{1}}{T_{1}} = \frac{V_{2}}{T_{2}}
+\end{equation*}
+
+Therefore,
+
+\begin{equation*}
+V_{2} = \frac{V_{1} \times T_{2}}{T_{1}}
+\end{equation*}
+}
+
+{\westep{Substitute the known values into the equation. Calculate the unknown variable.}
+
+\begin{equation*}
+V_{2} = \frac{122 \times 280}{305} = 112 ml
+\end{equation*}
+}
+
+\end{wex}
+
+\Tip{
+
+Note that here the temperature must be converted to Kelvin (SI) since the change from degrees Celcius involves addition, not multiplication by a fixed conversion ratio (as is the case with pressure and volume.)}
+
+\begin{wex}{Charles's Law 2}{At a temperature of 298 K, a certain amount of CO$_{2}$ gas occupies a volume of 6 l. What volume will the gas occupy if its temperature is reduced to 273 K?\\}
+
+{\westep{Write down all the information that you know about the gas.}
+V$_{1}$ = 6 l and V$_{2}$ = ?
+
+T$_{1}$ = 298 K and T$_{2}$ = 273 K\\
+}
+
+{\westep{Convert the known values to SI units if necessary.}
+Temperature data is already in Kelvin, and so no conversions are necessary. \\
+}
+
+{\westep{Choose a relevant gas law equation that will allow you to calculate the unknown variable.}
+
+\begin{equation*}
+\frac{V_{1}}{T_{1}} = \frac{V_{2}}{T_{2}}
+\end{equation*}
+
+Therefore,
+
+\begin{equation*}
+V_{2} = \frac{V_{1} \times T_{2}}{T_{1}}
+\end{equation*}
+}
+
+{\westep{Substitute the known values into the equation. Calculate the unknown variable.}
+
+\begin{equation*}
+V_{2} = \frac{6 \times 273}{298} = 5.5 l
+\end{equation*}
+}
+\end{wex}
+
+
+
+
+% CHILD SECTION END
+
+
+
+% CHILD SECTION START
+
+\section{The relationship between temperature and pressure}
+\label{sec:gases:pressure law}
+
+The pressure of a gas is directly proportional to its temperature, if the volume is kept constant (figure \ref{fig:temp vs pressure}). When the temperature of a gas increases, so does the energy of the particles. This causes them to move more rapidly and to collide with each other and with the side of the container more often. Since pressure is a measure of these collisions, the pressure of the gas increases with an increase in temperature. The pressure of the gas will decrease if its temperature decreases.\\
+
+\begin{figure}[h]
+\begin{center}
+%Pressure vs. Temperature
+\begin{pspicture}(-1,-1)(5,5)
+\psline{-}(0,0)(4,4)
+%axes
+\psline[linewidth=1pt]{->}(0,0)(0,4.5)
+\psline[linewidth=1pt]{->}(0,0)(4.5,0)
+\rput{-270}{
+\rput[c](2,0.5){Pressure}
+}
+\rput[c](0,-0.2){0}
+\rput[c](2,-0.4){Temperature (K)}
+\end{pspicture}
+\caption{The relationship between the temperature and pressure of a gas}
+\label{fig:temp vs pressure}
+\end{center}
+\end{figure}
+
+In the same way that we have done for the other gas laws, we can describe the relationship between temperature and pressure using symbols, as follows:
+
+\begin{center}
+T $\propto$ p, therefore p = kT
+\end{center}
+
+
+
+We can also say that:
+\begin{equation*}
+\frac{p}{T} = k
+\end{equation*}
+
+and that, provided the \textit{amount} of gas stays the same...
+
+\begin{equation*}
+\frac{p_{1}}{T_{1}} = \frac{p_{2}}{T_{2}}
+\end{equation*}
+
+\Exercise{More gas laws\\}{
+\begin{enumerate}
+\item{A gas of unknown volume has a temperature of 14$\degree$C. When the temperature of the gas is increased to 100$\degree$C, the volume is found to be 5.5 L. What was the initial volume of the gas?}
+\item{A gas has an initial volume of 2600 mL and a temperature of 350 K.
+\begin{enumerate}
+\item{If the volume is reduced to 1500 mL, what will the temperature of the gas be in Kelvin?}
+\item{Has the temperature \textit{increased} or \textit{decreased}?}
+\item{Explain this change, using the kinetic theory of matter.}
+\end{enumerate}
+}
+\item{A cylinder of propane gas at a temperature of 20$\degree$C exerts a pressure of 8 atm. When a cylinder has been placed in sunlight, its temperature increases to 25$\degree$C. What is the pressure of the gas inside the cylinder at this temperature?}
+\end{enumerate}
+\practiceinfo
+
+\begin{tabular}[h]{cccccc}
+(1.) aaa & (2.) aaa & (3.) aaa & 
+ \end{tabular}
+}
+
+
+% CHILD SECTION END
+
+
+
+% CHILD SECTION START
+
+\section{The general gas equation}
+\label{sec:gases:general equation}
+
+All the gas laws we have described so far rely on the fact that at least one variable (T, p or V) remains constant. Since this is unlikely to be the case most times, it is useful to combine the relationships into one equation. These relationships are as follows:\\
+
+Boyle's law: p $\propto$ $\frac{1}{V}$ (constant T)\\
+
+Relationship between p and T: p $\propto$ T (constant V)\\
+
+If we combine these relationships, we get p $\propto$ $\frac{T}{V}$\\
+
+If we introduce the proportionality constant k, we get p = k$\frac{T}{V}$\\
+
+or, rearranging the equation...
+
+\begin{equation*}
+pV = kT
+\end{equation*}
+
+We can also rewrite this relationship as follows:
+
+\begin{equation*}
+\frac{pV}{T} = k
+\end{equation*}
+
+Provided the mass of the gas stays the same, we can also say that:
+
+\begin{equation*}
+\frac{p_{1}V_{1}}{T_{1}} = \frac{p_{2}V_{2}}{T_{2}}
+\end{equation*}
+
+In the above equation, the subscripts 1 and 2 refer to two pressure and volume readings for the same mass of gas under different conditions. This is known as the \textbf{general gas equation}. Temperature is always in kelvin and the units used for pressure and volume must be the same on both sides of the equation.
+
+\Tip{
+
+Remember that the general gas equation only applies if the mass of the gas is fixed.}
+
+\begin{wex}{General Gas Equation 1}{At the beginning of a journey, a truck tyre has a volume of 30 dm$^{3}$ and an internal pressure of 170 kPa. The temperature of the tyre is 16$^{0}$C. By the end of the trip, the volume of the tyre has increased to 32 dm$^{3}$ and the temperature of the air inside the tyre is 35$^{0}$C. What is the tyre pressure at the end of the journey?\\}
+
+{\westep{Write down all the information that you know about the gas.}
+
+p$_{1}$ = 170 kPa and p$_{2}$ = ?
+
+V$_{1}$ = 30 dm$^{3}$ and V$_{2}$ = 32 dm$^{3}$
+
+T$_{1}$ = 16$^{0}$C and T$_{2}$ = 40$^{0}$C\\
+}
+
+{\westep{Convert the known values to SI units if necessary.}
+Here, temperature must be converted into Kelvin, therefore:
+
+T$_{1}$ = 16 + 273 = 289 K
+
+T$_{2}$ = 40 + 273 = 313 K\\
+}
+
+{\westep{Choose a relevant gas law equation that will allow you to calculate the unknown variable.}
+
+Use the general gas equation to solve this problem:
+
+\begin{equation*}
+\frac{p_{1} \times V_{1}}{T_{1}} = \frac{p_{2} \times V_{2}}{T_{2}}
+\end{equation*}
+
+Therefore,
+
+\begin{equation*}
+p_{2} = \frac{p_{1} \times V_{1} \times T_{2}}{T_{1} \times V_{2}}
+\end{equation*}
+}
+
+{\westep{Substitute the known values into the equation. Calculate the unknown variable.}
+
+\begin{equation*}
+p_{2} = \frac{170 \times 30 \times 313}{289 \times 32} = 173 kPa
+\end{equation*}
+
+The pressure of the tyre at the end of the journey is 173 kPa.
+}
+\end{wex}
+
+\begin{wex}{General Gas Equation 2}{A cylinder that contains methane gas is kept at a temperature of 15$^{0}$C and exerts a pressure of 7 atm. If the temperature of the cylinder increases to 25$^{0}$C, what pressure does the gas now exert? (Refer to table \ref{tab:gas:units} to see what an 'atm' is.\\}
+
+
+{\westep{Write down all the information that you know about the gas.}
+
+p$_{1}$ = 7 atm and p$_{2}$ = ?
+
+T$_{1}$ = 15$^{0}$C and T$_{2}$ = 25$^{0}$C\\
+}
+
+{\westep{Convert the known values to SI units if necessary.}
+Here, temperature must be converted into Kelvin, therefore:
+
+T$_{1}$ = 15 + 273 = 288 K
+
+T$_{2}$ = 25 + 273 = 298 K\\
+}
+
+{\westep{Choose a relevant gas law equation that will allow you to calculate the unknown variable.}
+
+Since the volume of the cylinder is constant, we can write:
+
+\begin{equation*}
+\frac{p_{1}}{T_{1}} = \frac{p_{2}}{T_{2}}
+\end{equation*}
+
+Therefore,
+
+\begin{equation*}
+p_{2} = \frac{p_{1} \times T_{2}}{T_{1}}
+\end{equation*}
+}
+
+{\westep{Substitute the known values into the equation. Calculate the unknown variable.}
+
+\begin{equation*}
+p_{2} = \frac{7 \times 298}{288} = 7.24 atm
+\end{equation*}
+
+The pressure of the gas is 7.24 atm.
+}
+\end{wex}
+
+\begin{wex}{General Gas Equation 3}{A gas container can withstand a pressure of 130 kPa before it will start to leak. Assuming that the volume of the gas in the container stays the same, at what temperature will the container start to leak if the gas exerts a pressure of 100 kPa at 15$^{0}$C?\\}
+
+{\westep{Write down all the information that you know about the gas.}
+
+p$_{1}$ = 100 kPa and p$_{2}$ = 130 kPa
+
+T$_{1}$ = 15$^{0}$C and T$_{2}$ = ?\\
+}
+
+{\westep{Convert the known values to SI units if necessary.}
+Here, temperature must be converted into Kelvin, therefore:
+
+T$_{1}$ = 15 + 273 = 288 K\\
+}
+
+{\westep{Choose a relevant gas law equation that will allow you to calculate the unknown variable.}
+
+Since the volume of the container is constant, we can write:
+
+\begin{equation*}
+\frac{p_{1}}{T_{1}} = \frac{p_{2}}{T_{2}}
+\end{equation*}
+
+Therefore,
+
+\begin{equation*}
+\frac{1}{T_{2}} = \frac{p_{1}}{T_{1} \times p_{2}}
+\end{equation*}
+
+Therefore,
+
+\begin{equation*}
+T_{2} = \frac{T_{1} \times p_{2}}{p_{1}}
+\end{equation*}
+}
+
+{\westep{Substitute the known values into the equation. Calculate the unknown variable.}
+
+\begin{equation*}
+T_{2} = \frac{288 \times 130}{100} = 374.4 K = 101.4^{0}C
+\end{equation*}
+}
+\end{wex}
+
+\Exercise{The general gas equation\\}{
+\begin{enumerate}
+\item{A closed gas system initially has a volume of 8 L and a temperature of 100$\degree$C. The pressure of the gas is unknown. If the temperature of the gas decreases to 50$\degree$C, the gas occupies a volume of 5 L. If the pressure of the gas under these conditions is 1.2 atm, what was the initial pressure of the gas?}
+\item{A balloon is filled with helium gas at 27$\degree$C and a pressure of 1.0 atm. As the balloon rises, the volume of the balloon increases by a factor of 1.6 and the temperature decreases to 15$\degree$C. What is the final pressure of the gas (assuming none has escaped)?}
+\item{25 cm$^{3}$ of gas at 1 atm has a temperature of 20$\degree$C. When the gas is compressed to 20 cm$^{3}$, the temperature of the gas increases to 28$\degree$C. Calculate the final pressure of the gas.}
+\end{enumerate}
+\practiceinfo
+
+\begin{tabular}[h]{cccccc}
+(1.) aaa & (2.) aaa & (3.) aaa & 
+ \end{tabular}
+}
+
+
+% CHILD SECTION END
+
+
+
+% CHILD SECTION START
+
+\section{The ideal gas equation}
+\label{sec:gases:ideal gas equation}
+
+In the early 1800's, Amedeo Avogadro hypothesised that if you have samples of different gases, of the same volume, at a fixed temperature and pressure, then the samples must contain the same number of freely moving particles (i.e. atoms or molecules).
+
+\Definition{Avogadro's Law}{Equal volumes of gases, at the same temperature and pressure, contain the same number of molecules.}
+
+You will remember from an earlier section, that we combined different gas law equations to get \textit{one} that included temperature, volume and pressure. In this equation, pV = kT, the value of k is different for different masses of gas. If we were to measure the amount of gas in moles, then k = nR, where n is the number of moles of gas and R is the universal gas constant. The value of R is 8.3143 J.K$^{-1}$.mol$^{-1}$, or for most calculations, 8.3 J.K$^{-1}$.mol$^{-1}$. So, if we replace k in the general gas equation, we get the following \textbf{ideal gas equation}.
+
+\begin{equation*}
+pV = nRT
+\end{equation*}
+
+\Tip{
+\begin{enumerate}
+\item{The value of R is the same for all gases}
+\item{All quantities in the equation pV = nRT must be in the same units as the value of R. In other words, SI units must be used throughout the equation.}
+\end{enumerate}
+}
+
+The following table may help you when you convert to SI units.
+
+\begin{table}[h]
+\caption{Conversion table showing different units of measurement for volume, pressure and temperature.}
+\label{tab:gas:units}
+\begin{center}
+\begin{tabular}{|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|}\hline
+\textbf{Variable} & Pressure (\textbf{p}) & Volume (\textbf{V}) & moles (\textbf{n}) & universal gas constant (\textbf{R}) & temperature (\textbf{K})\\\hline
+\textbf{SI unit} & Pascals (Pa) & m$^{3}$ & mol & J.K$^{-1}$.mol$^{-1}$ & Kelvin (K) \\\hline
+\textbf{Other units and conversions} & 760 mm Hg = 1 atm = 101325 Pa = 101.325 kPa & 1 m$^{3}$ = 1000000 cm$^{3}$ = 1000 dm$^{3}$ = 1000 litres &  &  & K = $^{0}$C + 273 \\\hline
+\end{tabular}
+\end{center}
+\end{table}
+Khan Academy video on the ideal gas law: SIYAVULA-VIDEO:http://cnx.org/content/m39086/latest/#gas-law-1
+Khan Academy video on the ideal gas law: SIYAVULA-VIDEO:http://cnx.org/content/m39086/latest/#gas-law-2
+\begin{wex}{Ideal gas equation 1}{Two moles of oxygen (O$_{2}$) gas occupy a volume of 25 dm$^{3}$ at a temperature of 40$^{0}$C. Calculate the pressure of the gas under these conditions.\\}
+
+{\westep{Write down all the information that you know about the gas.}
+
+p = ?
+
+V = 25 dm$^{3}$
+
+n = 2
+
+T = 40$^{0}$C
+\\
+}
+
+{\westep{Convert the known values to SI units if necessary.}
+
+\begin{equation*}
+V = \frac{25}{1000} = 0.025 m^{3}
+\end{equation*}
+
+\begin{equation*}
+T = 40 + 273 = 313 K
+\end{equation*}
+}
+
+{\westep{Choose a relevant gas law equation that will allow you to calculate the unknown variable.}
+
+\begin{equation*}
+pV = nRT
+\end{equation*}
+
+Therefore,
+
+\begin{equation*}
+p = \frac{nRT}{V}
+\end{equation*}
+}
+
+{\westep{Substitute the known values into the equation. Calculate the unknown variable.}
+
+\begin{equation*}
+p = \frac{2 \times 8.3 \times 313}{0.025} = 207832 Pa = 207.8 kPa
+\end{equation*}
+}
+\end{wex}
+
+\begin{wex}{Ideal gas equation 2}{Carbon dioxide (CO$_{2}$) gas is produced as a result of the reaction between calcium carbonate and hydrochloric acid. The gas that is produced is collected in a 20 dm$^{3}$ container. The pressure of the gas is 105 kPa at a temperature of 20$^{0}$C. What mass of carbon dioxide was produced?\\}
+
+{\westep{Write down all the information that you know about the gas.}
+
+p = 105 kPa
+
+V = 20 dm$^{3}$
+
+T = 20$^{0}$C
+\\
+}
+
+{\westep{Convert the known values to SI units if necessary.}
+
+
+\begin{equation*}
+p = 105 \times 1000 = 105 000 Pa
+\end{equation*}
+
+\begin{equation*}
+T = 20 + 273 = 293 K
+\end{equation*}
+
+\begin{equation*}
+V = \frac{20}{1000} = 0.02 m^{3}
+\end{equation*}
+}
+
+{\westep{Choose a relevant gas law equation that will allow you to calculate the unknown variable.}
+
+\begin{equation*}
+pV = nRT
+\end{equation*}
+
+Therefore,
+
+\begin{equation*}
+n = \frac{pV}{RT}
+\end{equation*}
+}
+
+{\westep{Substitute the known values into the equation. Calculate the unknown variable.}
+
+\begin{equation*}
+n = \frac{105 000 \times 0.02}{8.3 \times 293} = 0.86 moles
+\end{equation*}
+}
+
+{\westep{Calculate mass from moles}
+
+\begin{equation*}
+n = \frac{m}{M}
+\end{equation*}
+
+Therefore,
+
+\begin{equation*}
+m = n \times M
+\end{equation*}
+
+The molar mass of CO$_{2}$ is calculated as follows:
+
+\begin{equation*}
+M = 12 + (2 \times 16) = 44g.mol^{-1}
+\end{equation*}
+
+Therefore,
+
+\begin{equation*}
+m = 0.86 \times 44 = 37.84 g
+\end{equation*}
+}
+
+\end{wex}
+
+\begin{wex}{Ideal gas equation 3}{1 mole of nitrogen (N$_{2}$) reacts with hydrogen (H$_{2}$) according to the following equation:
+
+\begin{equation*}
+N_{2} + 3H_{2} \rightarrow 2NH_{3}
+\end{equation*}
+
+The ammonia (NH$_{3}$) gas is collected in a separate gas cylinder which has a volume of 25 dm$^{3}$. The temperature of the gas is 22$^{0}$C. Calculate the pressure of the gas inside the cylinder.\\
+}
+
+{\westep{Write down all the information that you know about the gas.}
+
+V = 25 dm$^{3}$
+
+n = 2 (Calculate this by looking at the mole ratio of nitrogen to ammonia, which is 1:2)
+
+T = 22$^{0}$C
+\\
+}
+
+{\westep{Convert the known values to SI units if necessary.}
+
+\begin{equation*}
+V = \frac{25}{1000} = 0.025 m^{3}
+\end{equation*}
+
+\begin{equation*}
+T = 22 + 273 = 295 K
+\end{equation*}
+}
+
+{\westep{Choose a relevant gas law equation that will allow you to calculate the unknown variable.}
+
+\begin{equation*}
+pV = nRT
+\end{equation*}
+
+Therefore,
+
+\begin{equation*}
+p = \frac{nRT}{V}
+\end{equation*}
+}
+
+{\westep{Substitute the known values into the equation. Calculate the unknown variable.}
+
+\begin{equation*}
+p = \frac{2 \times 8.3 \times 295}{0.025} = 195880 Pa = 195.89 kPa
+\end{equation*}
+}
+\end{wex}
+
+\begin{wex}{Ideal gas equation 4}{Calculate the number of moles of air particles in a 10 m by 7 m by 2 m classroom on a day when the temperature is 23$^\circ$C and the air pressure is 98~kPa.\\}
+
+{\westep{Write down all the information that you know about the gas.}
+
+V = 10 m $\times$ 7 m $\times$ 2m = 140 m$^{3}$
+
+p = 98 kPa
+
+T = 23$^{0}$C
+\\
+}
+
+{\westep{Convert the known values to SI units if necessary.}
+
+\begin{equation*}
+p = 98 \times 1000 = 98 000 Pa
+\end{equation*}
+
+\begin{equation*}
+T = 23 + 273 = 296 K
+\end{equation*}
+}
+
+{\westep{Choose a relevant gas law equation that will allow you to calculate the unknown variable.}
+
+\begin{equation*}
+pV = nRT
+\end{equation*}
+
+Therefore,
+
+\begin{equation*}
+n = \frac{pV}{RT}
+\end{equation*}
+}
+
+{\westep{Substitute the known values into the equation. Calculate the unknown variable.}
+
+\begin{equation*}
+n = \frac{98 000 \times 140}{8.3 \times 296} = 5584.5 mol
+\end{equation*}
+}
+\end{wex}
+
+\begin{wex}{Applying the gas laws\\}{
+Most modern cars are equipped with airbags for both the driver and the passenger. An airbag will completely inflate in 0,05 s. This is important because a typical car collision lasts about 0,125 s. The following reaction of sodium azide (a compound found in airbags) is activated by an electrical signal:
+
+\begin{center}
+\rm${2NaN_3(s) \rightarrow 2Na (s) + 3N_2(g)}$
+\end{center}
+
+\begin{enumerate}
+\item Calculate the mass of $N_2(g)$ needed to inflate a sample airbag to a volume of 65 dm$^3$ at 25 $^{\circ}$C and $99,3$ kPa. Assume the gas temperature remains constant during the reaction.
+\item In reality the above reaction is exothermic. Describe, in terms of the kinetic molecular theory, how the pressure in the sample airbag will change, if at all, as the gas temperature returns to 25 $^{\circ}$C.
+\end{enumerate}
+}
+
+{\westep{Look at the information you have been given, and the information you still need.}
+
+Here you are given the volume, temperature and pressure. You are required to work out the mass of $N_2$.\\
+}
+
+
+{\westep{Check that all the units are S.I. units}
+
+
+Pressure: $93.3 \times 10^3$ Pa
+
+Volume: $65 \times 10^{-3}$ m$^{3}$
+
+Temperature: $(273+25)$ K
+
+Gas Constant: $8,31 J.K^{-1}.mol^{-1}$\\
+}
+
+{\westep{Write out the Ideal Gas formula}
+
+\begin{equation*}
+pV = nRT
+\end{equation*}
+}
+
+{\westep{Solve for the required quantity using symbols}
+
+\begin{equation*}
+n=\frac{pV}{RT}
+\end{equation*}
+}
+
+{\westep{Solve by substituting numbers into the equation to solve for 'n'.}
+
+\begin{equation*}
+n=\frac{(99,3 \times 10^3) \times (65 \times 10^{-3}) } {8,31 \times (273 + 25 ) }
+\end{equation*}
+}
+
+{\westep{Convert the number of moles to number of grams}
+\begin{eqnarray*}
+m &=& n \times M\\
+m &=& 2,61 \times 28\\
+m &=& 73,0 g
+\end{eqnarray*}
+}
+
+{\westep{Theory Question}
+
+When the temperature decreases the intensity of collisions with the walls of the airbag and between particles decreases. Therefore pressure decreases.
+}
+\end{wex}
+
+
+
+\Exercise{The ideal gas equation\\}{
+\begin{enumerate}
+\item{An unknown gas has pressure, volume and temperature of 0.9 atm, 8 L and 120$\degree$C respectively. How many moles of gas are present?}
+\item{6 g of chlorine (Cl$_{2}$) occupies a volume of 0.002 m$^{3}$ at a temperature of 26$\degree$C. What is the pressure of the gas under these conditions?}
+\item{An average pair of human lungs contains about 3.5 L of air after inhalation and about 3.0 L after exhalation. Assuming that air in your lungs is at 37$\degree$C and 1.0 atm, determine the number of moles of air in a typical breath. }
+\item{
+A learner is asked to calculate the answer to the problem below:
+
+\textit{Calculate the pressure exerted by 1.5 moles of nitrogen gas in a container with a volume of 20 dm$^{3}$ at a temperature of 37$\degree$C.}\\
+
+The learner writes the solution as follows:
+
+V = 20 dm$^{3}$
+
+n = 1.5 mol
+
+R = 8.3 J.K$^{-1}$.mol$^{-1}$
+
+T = 37 + 273 = 310 K\\
+
+pT = nRV, therefore
+
+\begin{eqnarray*}
+p &=& \frac{nRV}{T} \\
+&=& \frac{1.5 \times 8.3 \times 20}{310}  \\
+&=& 0.8 kPa
+\end{eqnarray*}
+
+\begin{enumerate}
+\item{Identify 2 mistakes the learner has made in the calculation.}
+\item{Are the units of the final answer correct?}
+\item{Rewrite the solution, correcting the mistakes to arrive at the right answer.}
+\end{enumerate}
+}
+\end{enumerate}
+\practiceinfo
+
+\begin{tabular}[h]{cccccc}
+(1.) aaa & (2.) aaa & (3.) aaa & (4.) aaa & 
+ \end{tabular}
+}
+
+
+
+% CHILD SECTION END
+
+
+
+% CHILD SECTION START
+
+\section{Molar volume of gases}
+\label{sec:gases:molar volume}
+
+It is possible to calculate the volume of a mole of gas at STP using what we now know about gases.
+
+\begin{enumerate}
+
+\item{\textit{Write down the ideal gas equation}}
+\begin{center}
+pV = nRT, therefore V = $\frac{nRT}{p}$
+\end{center}
+
+\item{\textit{Record the values that you know, making sure that they are in SI units}}
+
+You know that the gas is under STP conditions. These are as follows:
+
+p = 101.3 kPa = 101300 Pa
+
+n = 1 mole
+
+R = 8.3 J.K$^{-1}$.mol$^{-1}$
+
+T = 273 K
+
+\item{\textit{Substitute these values into the original equation.}}
+
+\begin{equation*}
+V = \frac{nRT}{p}
+\end{equation*}
+
+\begin{equation*}
+V = \frac{1 mol \times 8.3 J.K^{-1}.mol^{-1} \times 273 K}{101300 Pa}
+\end{equation*}
+
+\item{\textit{Calculate the volume of 1 mole of gas under these conditions}
+
+The volume of 1 mole of gas at STP is 22.4 $\times$ 10$^{-3}$ m$^{3}$ = 22.4 dm$^{3}$.}
+\end{enumerate}
+
+
+
+% CHILD SECTION END
+
+
+
+% CHILD SECTION START
+
+\section{Ideal gases and non-ideal gas behaviour}
+\label{sec:gases:ideal}
+
+In looking at the behaviour of gases to arrive at the Ideal Gas Law, we have limited our examination to a small range of temperature and pressure. Almost all gases will obey these laws most of the time, and are called \textbf{ideal gases}. However, there are deviations at \textbf{high pressures} and \textbf{low temperatures}. So what is happening at these two extremes? \\
+
+Earlier when we discussed the kinetic theory of gases, we made a number of assumptions about the behaviour of gases. We now need to look at two of these again because they affect how gases behave either when pressures are high or when temperatures are low.
+
+\begin{enumerate}
+\item{\textit{Molecules do occupy volume}}
+
+This means that when pressures are very high and the molecules are compressed, their volume becomes significant. This means that the total volume available for the gas molecules to move is reduced and collisions become more frequent. This causes the pressure of the gas to be \textit{higher} than what would normally have been predicted by Boyle's law (figure \ref{fig:gas:real1}).
+
+\begin{figure}[h]
+\begin{center}
+%Volume vs. Pressure
+\begin{pspicture}(-1,-1)(5,5)
+%\psgrid
+\psplot[plotpoints=100,linestyle=dashed]{0.55}{4.0}{2 x div}
+\psplot[plotpoints=100]{0.5}{4.0}{2 x div 0.05 x mul 0.5 sub add}
+\uput*[0]{-35}(0.5,1.0){ideal gas}
+\uput*[0]{-35}(1.2,1.8){real gas}
+%axes
+\psline[linewidth=1pt]{->}(0,0)(0,4.5)
+\psline[linewidth=1pt]{->}(0,0)(4.5,0)
+\rput{-270}{
+\rput[c](2,0.5){Volume}
+}
+\rput[c](2,-0.4){Pressure}
+\end{pspicture}
+\end{center}
+\caption{Gases deviate from ideal gas behaviour at high pressure.}
+\label{fig:gas:real1}
+\end{figure}
+
+
+\item{\textit{Forces of attraction do exist between molecules}}
+
+At low temperatures, when the speed of the molecules decreases and they move closer together, the intermolecular forces become more apparent. As the attraction between molecules increases, their movement decreases and there are fewer collisions between them. The pressure of the gas at low temperatures is therefore lower than what would have been expected for an ideal gas (figure \ref{fig:gas:real2}). If the temperature is low enough or the pressure high enough, a real gas will \textbf{liquify}.
+\end{enumerate}
+
+\begin{figure}[h]
+\begin{center}
+%Pressure vs Temp (Ideal vs. Real gases)
+\begin{pspicture}(-1,-1)(5,5)
+%\psgrid
+\psline{-}(0,0)(4,4)
+\psplot[linestyle=dashed]{1}{4.0}{x 0.1 sub}
+\pscurve[linestyle=dashed](1,0.9)(0.95,0.85)(0.85,0.5)(0.8,0)
+\uput*[0]{45}(1.0,1.8){ideal gas}
+\uput*[0]{45}(1.5,1.3){real gas}
+%axes
+\psline[linewidth=1pt]{->}(0,0)(0,4.5)
+\psline[linewidth=1pt]{->}(0,0)(4.5,0)
+\rput{-270}{
+\rput[c](2,0.5){Pressure}
+}
+\rput[c](2,-0.4){Temperature}
+\end{pspicture}
+\end{center}
+\caption{Gases deviate from ideal gas behaviour at low temperatures}
+\label{fig:gas:real2}
+\end{figure}
+
+\summary{aaa}
+
+\begin{itemize}
+\item{The \textbf{kinetic theory of matter} helps to explain the behaviour of gases under different conditions.}
+\item{An \textbf{ideal gas} is one that obeys all the assumptions of the kinetic theory.}
+\item{A \textbf{real gas} behaves like an ideal gas, except at high pressures and low temperatures. Under these conditions, the forces between molecules become significant and the gas will liquify.}
+\item{\textbf{Boyle's law} states that the pressure of a fixed quantity of gas is inversely proportional to its volume, as long as the temperature stays the same. In other words, pV = k or
+\begin{center}
+p$_{1}$V$_{1}$ = p$_{2}$V$_{2}$.
+\end{center}}
+\item{\textbf{Charles's law} states that the volume of an enclosed sample of gas is directly proportional to its temperature, as long as the pressure stays the same. In other words, \begin{equation*}\frac{V_{1}}{T_{1}} = \frac{V_{2}}{T_{2}} \end{equation*} }
+\item{The \textbf{temperature} of a fixed mass of gas is directly proportional to its pressure, if the volume is constant. In other words, \begin{equation*}\frac{p_{1}}{T_{1}} = \frac{p_{2}}{T_{2}} \end{equation*} }
+\item{In the above equations, temperature must be written in \textbf{Kelvin}. Temperature in degrees Celsius (temperature = t) can be converted to temperature in Kelvin (temperature = T) using the following equation:
+\begin{equation*}
+T = t + 273
+\end{equation*}}
+\item{Combining Boyle's law and the relationship between the temperature and pressure of a gas, gives the \textbf{general gas equation}, which applies as long as the amount of gas remains constant. The general gas equation is pV = kT, or
+\begin{equation*}
+\frac{p_{1}V_{1}}{T_{1}} = \frac{p_{2}V_{2}}{T_{2}}
+\end{equation*}}
+\item{Because the mass of gas is not always constant, another equation is needed for these situations. The \textbf{ideal gas equation} can be written as
+\begin{equation*}
+pV = nRT
+\end{equation*}
+
+where n is the number of moles of gas and R is the universal gas constant, which is 8.3 J.K$^{-1}$.mol$^{-1}$. In this equation, \textbf{SI units} must be used. Volume (m$^{3}$), pressure (Pa) and temperature (K).}
+\item{The \textbf{volume} of one mole of gas under STP is 22.4 dm$^{3}$. This is called the \textbf{molar gas volume}.}
+
+\end{itemize}
+
+\begin{eocexercises}{}
+\begin{enumerate}
+\item{For each of the following, say whether the statement is \textbf{true} or \textbf{false}. If the statement is false, rewrite the statement correctly.}
+\begin{enumerate}
+\item{Real gases behave like ideal gases, except at low pressures and low temperatures.}
+\item{The volume of a given mass of gas is inversely proportional to the pressure it exerts.}
+\item{The temperature of a fixed mass of gas is directly proportional to its pressure, regardless of the volume of the gas.}
+\end{enumerate}
+
+\item{For each of the following multiple choice questions, choose the \textbf{one correct answer}.}
+
+\begin{enumerate}
+\item{Which one of the following properties of a fixed quantity of a gas must be kept constant during an investigation f Boyle's law?
+
+\begin{enumerate}
+\item{density}
+\item{pressure}
+\item{temperature}
+\item{volume}
+\end{enumerate}
+
+(\textit{IEB 2003 Paper 2})
+}
+
+\item{Three containers of EQUAL VOLUME are filled with EQUAL MASSES of helium, nitrogen and carbon dioxide gas respectively. The gases in the three containers are all at the same TEMPERATURE. Which one of the following statements is correct regarding the pressure of the gases?
+
+\begin{enumerate}
+\item{All three gases will be at the same pressure}
+\item{The helium will be at the greatest pressure}
+\item{The nitrogen will be at the greatest pressure}
+\item{The carbon dioxide will be at the greatest pressure}
+\end{enumerate}
+
+(\textit{IEB 2004 Paper 2})
+}
+
+\item{One mole of an ideal gas is stored at a temperature T (in Kelvin) in a rigid gas tank. If the average speed of the gas particles is doubled, what is the new Kelvin temperature of the gas?
+
+\begin{enumerate}
+\item{4T}
+\item{2T}
+\item{$\surd$2T}
+\item{0.5 T}
+\end{enumerate}
+
+(\textit{IEB 2002 Paper 2})
+}
+
+\item{The ideal gas equation is given by \textbf{pV = nRT}. Which one of the following conditions is true according to Avogadro's hypothesis?\\}
+
+\begin{tabular}{|l|c|c|}\hline
+a & p $\propto$ 1/V & (T = constant) \\\hline
+b & V $\propto$ T & (p = constant) \\\hline
+c & V $\propto$ n & (p, T = constant) \\\hline
+d & p $\propto$ T & (n = constant)\\\hline
+\end{tabular}
+
+(\textit{DoE Exemplar paper 2, 2007})
+
+\end{enumerate}
+
+\item{Use your knowledge of the gas laws to explain the following statements.}
+\begin{enumerate}
+\item{It is dangerous to put an aerosol can near heat.}
+\item{A pressure vessel that is poorly designed and made can be a serious safety hazard (a pressure vessel is a closed, rigid container that is used to hold gases at a pressure that is higher than the normal air pressure).}
+\item{The volume of a car tyre increases after a trip on a hot road.}
+\end{enumerate}
+
+\item{Copy the following set of labelled axes and answer the questions that follow:
+
+\begin{center}
+\begin{pspicture}(0,-1)(3,3)
+\psline[arrows=<-](0,3)(0,0)
+\psline[arrows=->](0,0)(4,0)
+\rput(2,-0.5){Temperature (K)}
+\rput(-1.3,1.5){Volume (m$^{3}$)}
+\rput(-0.2,-0.2){0}
+\end{pspicture}
+\end{center}
+
+\begin{enumerate}
+\item{On the axes, \textbf{using a solid line}, draw the graph that would be obtained for a fixed mass of an ideal gas if the pressure is kept constant.}
+\item{If the gradient of the above graph is measured to be 0.008 m$^{3}$.K$^{-1}$, calculate the pressure that 0.3 mol of this gas would exert.}
+\end{enumerate}
+
+(\textbf{IEB 2002 Paper 2})
+}
+
+\item{Two gas cylinders, A and B, have a volume of 0.15 m$^{3}$ and 0.20 m$^{3}$ respectively. Cylinder A contains 1.25 mol He gas at pressure p and cylinder B contains 2.45 mol He gas at standard pressure. The ratio of the Kelvin temperatures A:B is 1.80:1.00. Calculate the pressure of the gas (in kPa) in cylinder A.}
+
+(\textit{IEB 2002 Paper 2})
+
+\item{A learner investigates the relationship between the Celsius temperature and the pressure of a fixed amount of helium gas in a 500 cm$^{3}$ closed container. From the results of the investigation, she draws the graph below:\\
+
+\begin{center}
+\begin{pspicture}(-2,-0.5)(6,5)
+\psline(0,0)(0,5)
+\psline(0,0)(6,0)
+\psline[linestyle=dotted](0,3)(4,3)
+\psline[linestyle=dotted](4,0)(4,3)
+\psline(0,2.5)(4,3)
+\rput(-0.6,4){\small pressure}
+\rput(-0.6,3.7){\small (kPa)}
+\rput(-0.3,3){\small 300}
+\rput(2,-0.3){\small 10}
+\rput(4,-0.3){\small 20}
+\rput(5.5,-0.3){\small temperature ($^{0}$C)}
+\end{pspicture}
+\end{center}
+
+\begin{enumerate}
+\item{Under the conditions of this investigation, helium gas behaves like an ideal gas. Explain briefly why this is so.}
+\item{From the shape of the graph, the learner concludes that the pressure of the helium gas is directly proportional to the Celcius temperature. Is her conclusion correct? Briefly explain your answer.}
+\item{Calculate the pressure of the helium gas at 0 $\degree$C.}
+\item{Calculate the mass of helium gas in the container.}
+\end{enumerate}
+
+(\textit{IEB 2003 Paper 2})
+}
+
+\item{One of the cylinders of a motor car engine, before compression contains 450 cm$^{3}$ of a mixture of air and petrol in the gaseous phase, at a temperature of 30$\degree$C and a pressure of 100 kPa. If the volume of the cylinder after compression decreases to one tenth of the original volume, and the temperature of the gas mixture rises to 140$\degree$C, calculate the pressure now exerted by the gas mixture.}
+
+\item{In an experiment to determine the relationship between pressure and temperature of a fixed mass of gas, a group of learners obtained the following results:}
+
+\begin{center}
+\begin{tabular}{|l|c|c|c|c|}\hline
+Pressure (kPa) & 101 & 120 & 130.5 & 138 \\\hline
+Temperature ($^{0}$C) & 0 & 50 & 80 & 100 \\\hline
+Total gas volume (cm$^{3}$) & 250 & 250 & 250 & 250 \\\hline
+\end{tabular}
+\end{center}
+
+\begin{enumerate}
+\item{Draw a straight-line graph of pressure (on the dependent, y-axis) versus temperature (on the independent, x-axis) on a piece of graph paper. Plot the points. Give your graph a suitable heading.}
+
+\textit{A straight-line graph passing through the origin is essential to obtain a mathematical relationship between pressure and temperature.}
+
+\item{Extrapolate (extend) your graph and determine the temperature (in $^{0}$C) at which the graph will pass through the temperature axis.}
+\item{Write down, in words, the relationship between pressure and Kelvin temperature.}
+\item{From your graph, determine the pressure (in kPa) at 173 K. Indicate on your graph how you obtained this value.}
+\item{How would the gradient of the graph be affected (if at all) if a larger mass of the gas is used? Write down ONLY \textbf{increases}, \textbf{decreases} or \textbf{stays the same}.}
+\end{enumerate}
+
+(\textit{DoE Exemplar Paper 2, 2007})
+
+
+\end{enumerate}
+
+\practiceinfo
+
+\begin{tabular}[h]{cccccc}
+(1.) aaa & (2.) aaa & (3.) aaa & (4.) aaa & (5.) aaa & (6.) aaa & (7.) aaa & (8.) aaa & 
+ \end{tabular}
+\end{eocexercises}
+
+
+

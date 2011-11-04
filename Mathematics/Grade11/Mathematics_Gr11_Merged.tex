@@ -1,0 +1,113 @@
+\documentclass[9pt,a4paper,titlepage,twoside,openright]{extbook}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{float} % for figures to appear where you want them
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\usepackage{changebar}
+%\usepackage{glossaries}
+\usepackage{pst-eucl}        %Jo
+\usepackage{pst-poly}        %Jo
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{pst-3dplot}        %Jo
+\usepackage{pstricks-add}
+
+
+%% ************* NB ************
+%% The order in which pstricks packages are loaded
+%% matters - so I copied the order from pst-all.sty
+%% and then added the two additional packages at the end.
+%% ************* End NB ************
+
+%% ************* Packages ************
+\usepackage{pst-circ}
+\usepackage{pst-lens}
+\usepackage{pst-optic}         %Jo
+%\usepackage{pst-labo}         %Jo
+\usepackage{subfigure}
+\usepackage{multirow}
+\usepackage{amsmath}
+\usepackage{tabularx}
+\usepackage{lscape}
+\usepackage{fancyhdr}
+\usepackage{wasysym}
+\usepackage{url}
+\usepackage{amsmath, amsthm, amsfonts, amssymb}
+\usepackage{eurosym}
+\usepackage{array}
+\usepackage{enumitem}
+\sffamily
+
+\usepackage{mdframed}
+
+%------------Tree Packages------------
+\usepackage{tikz}
+\usetikzlibrary{matrix}
+\usepackage{pst-node}
+\usepackage{pst-tree}
+%-------------------------------------
+\usepackage{bigstrut}
+
+\usepackage{pst-all}
+\usepackage{auto-pst-pdf}
+
+
+\usepackage{extsizes}
+
+\usepackage[paper=a4paper, 
+  lmargin=0.1\paperwidth, rmargin=0.25\paperwidth, 
+  tmargin=1in, bmargin=1in,
+  twoside, centering,
+  includehead, marginsep=3mm, marginparwidth=0.225\paperwidth]{geometry}
+
+
+
+
+
+
+
+
+
+\input{../../DefinitionsV0-5-1}
+
+\begin{document}
+% Stuff copied from thesis
+% Dutch style of paragraph formatting, i.e. no indents. 
+\setlength{\parskip}{1.3ex plus 0.2ex minus 0.2ex}
+\setlength{\parindent}{0pt}
+
+
+\pagestyle{fancy}
+\renewcommand{\sectionmark}[1]{\markright{\thesection}{}}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\cleardoublepage
+\tableofcontents
+\cleardoublepage
+\pagenumbering{arabic}
+
+ 
+\input{Mathematics_Gr11_Ch_1-chapterIntroductiontoBook}
+\input{Mathematics_Gr11_Ch_2-Exponents}
+\input{Mathematics_Gr11_Ch_3-Surds}
+\input{Mathematics_Gr11_Ch_4-ErrorMargins}
+\input{Mathematics_Gr11_Ch_5-QuadraticSequences}
+\input{Mathematics_Gr11_Ch_6-Finance}
+\input{Mathematics_Gr11_Ch_7-SolvingQuadraticEquations}
+\input{Mathematics_Gr11_Ch_8-SolvingQuadraticInequalities}
+\input{Mathematics_Gr11_Ch_9-SolvingSimultaneousEquations}
+\input{Mathematics_Gr11_Ch_10-MathematicalModels}
+\input{Mathematics_Gr11_Ch_11-QuadraticFunctionsandGraphs}
+\input{Mathematics_Gr11_Ch_12-HyperbolicFunctionsandGraphs}
+\input{Mathematics_Gr11_Ch_13-ExponentialFunctionsandGraphs}
+\input{Mathematics_Gr11_Ch_14-GradientataPoint}
+\input{Mathematics_Gr11_Ch_15-LinearProgramming}
+\input{Mathematics_Gr11_Ch_16-Geometry}
+\input{Mathematics_Gr11_Ch_17-Trigonometry} %Need to make further changes to graphs etc.
+\input{Mathematics_Gr11_Ch_18-Statistics}
+\input{Mathematics_Gr11_Ch_19-IndependentandDependentEvents}
+\input{Mathematics_Gr11_Ch_20-chapterGNUFreeDocumentationLicenselabelfdl}
+\end{document}
+
+

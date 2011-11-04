@@ -1,0 +1,2279 @@
+\chapter{Vectors}
+\label{chap:vectors}
+
+\section{Introduction}
+This chapter focuses on vectors. We will learn what is a vector and how it differs from everyday numbers. We will also learn how to add, subtract and multiply them and where they appear in Physics.
+
+Are vectors Physics? No, vectors themselves are not Physics. Physics is just a description of the world around us. To describe something we need to use a language. The most common language used to describe Physics is Mathematics. Vectors form a very important part of the mathematical description of Physics, so much so that it is
+absolutely essential to master the use of vectors.
+
+\section{Scalars and Vectors}
+In Mathematics, you learned that a number is something that represents a quantity. For example if you have 5 books, 6 apples and 1 bicycle, the 5, 6, and 1 represent how many of each item you have.
+
+These kinds of numbers are known as \textit{scalars}.
+
+\Definition{Scalar}{A scalar is a quantity that has only magnitude (size).}
+
+An extension to a scalar is a vector, which is a scalar with a direction. For example, if you travel 1 km down Main Road to school, the quantity \textbf{1 km down Main Road} is a vector. The ``\textbf{1 km}'' is the quantity (or scalar) and the ``\textbf{down Main Road}'' gives a direction.
+
+In Physics we use the word \textit{magnitude} to refer to the scalar part of the vector.
+
+\Definition{Vectors}{A vector is a quantity that has both magnitude and direction.}
+
+A vector should tell you \emph{how much} and \emph{which way}.
+
+For example, a man is driving his car east along a freeway at 100 \kph. What we have given here is a vector -- the velocity. The car is moving at 100 \kph (this is the magnitude) and we know where it is going -- east (this is the direction). Thus, we know the speed and direction of the car. These two quantities, a magnitude and a direction, form a vector we call velocity.
+
+\section{Notation}
+Vectors are different to scalars and therefore have their own notation.
+
+\subsection{Mathematical Representation}
+There are many ways of writing the symbol for a vector. Vectors are denoted by symbols with an arrow pointing to the right above it. For example, $\vec{a}$, $\vec{v}$ and $\vec{F}$ represent the vectors acceleration, velocity and force, meaning they have both a magnitude and a direction.
+
+Sometimes just the magnitude of a vector is needed. In this case, the arrow is omitted. In other words, $F$ denotes the magnitude of the vector $\vec{F}$. $|\vec{F}|$ is another way of representing the magnitude of a vector.
+
+\subsection{Graphical Representation}
+Vectors are drawn as arrows. An arrow has both a magnitude (how long it is) and a direction (the direction in which it points). The starting point of a vector is known as the \textit{tail} and the end point is known as the \textit{head}.
+%\begin{minipage}{0.5\textwidth}
+\begin{figure}[htbp]
+\begin{center}
+\begin{pspicture}(0,-1)(5,1)
+%\psgrid[gridcolor=lightgray]
+\SpecialCoor
+\psline{->}(0,0)({1.5;0})\psdot(0,0)
+\rput(2.5,0){\psdot(0,0)\psline{->}(0,0)({2;25})}
+\rput(3,0){\psdot(0,0)\psline{->}(0,0)({2;345})}
+\psline{->}(1.8,0.8)(1.8,-0.8)\psdot(1.8,0.8)
+\end{pspicture}
+\end{center}
+\caption{Examples of vectors}
+\end{figure}
+%\end{minipage}
+%\begin{minipage}{0.5\textwidth}
+\begin{figure}[htbp]
+\begin{center}
+\begin{pspicture}(0,-0.6)(5,0.6)
+%\psgrid[gridcolor=lightgray]
+\psline{->}(0,0)(5,0)
+\pcline[offset=8pt]{|-|}(0,0)(5,0)
+\lput*{:U}{magnitude}
+\psdot(0,0)
+\uput[d](0,0){tail}
+\uput[d](5,0){head}
+\end{pspicture}
+\end{center}
+\caption{Parts of a vector}
+\end{figure}
+%\end{minipage}
+
+\section{Directions}
+There are many acceptable methods of writing vectors. As long as the vector has a magnitude and a direction, it is most likely acceptable. These different methods come from the different methods of expressing a direction for a vector.
+
+\subsection{Relative Directions}
+The simplest method of expressing direction is with relative directions: to the left, to the right, forward, backward, up and down.
+
+\subsection{Compass Directions}
+\begin{minipage}{0.5\textwidth}
+Another common method of expressing directions is to use the points of a compass: North, South, East, and West. \\
+\\
+If a vector does not point exactly in one of the compass directions, then we use an angle. For example, we can have a vector pointing 40$^\circ$ North of West. Start with the vector pointing along the West direction:\\
+\\
+Then rotate the vector towards the north until there is a 40$^\circ$ angle between the vector and the West.\\
+
+The direction of this vector can also be described as: W 40$^\circ$ N (West 40$^\circ$ North); or N 50$^\circ$ W (North 50$^\circ$ West)
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+\begin{center}
+\begin{pspicture}(-1.2,-1.4)(1.2,1.4)
+\pscompass
+\end{pspicture}
+\end{center}
+\begin{center}
+\begin{pspicture}(-2,-0.2)(2,0.2)
+%\psgrid[gridcolor=lightgray]
+\psline{->}(1.5,0)(-1.5,0)
+\end{pspicture}
+\end{center}
+\begin{center}
+\begin{pspicture}(-1,-1)(1,1)
+%\psgrid[gridcolor=lightgray]
+\psarc{<-}(1,-1){1}{135}{180}
+\psline{->}(1,-1)(-1,1)
+\psline{->}(1,-1)(-1,-1)
+\rput(0.35,-0.75){40$^\circ$}
+\end{pspicture}
+\end{center}
+\end{minipage}
+
+\subsection{Bearing}
+The final method of expressing direction is to use a \textit{bearing}. A bearing is a direction relative to a fixed point.
+
+Given just an angle, the convention is to define the angle with respect to the North. So, a vector with a direction of 110$^\circ$ has been rotated clockwise 110$^\circ$ relative to the North. A bearing is always written as a three digit number, for example 275$^\circ$ or 080$^\circ$ (for 80$^\circ$).
+
+\begin{center}
+\begin{pspicture}(0,0)(2,2)
+%\psgrid[gridcolor=lightgray]
+\psline{->}(0,0)(0,2)
+\psline{->}(0,0)(1.5,-0.25)
+\psarc{<-}(0,0){1}{-10}{90}
+\rput(0.4,0.4){110$^\circ$}
+\end{pspicture}
+\end{center}
+
+\Exercise{Scalars and Vectors}{
+\begin{enumerate}
+\item{Classify the following quantities as scalars or vectors:
+\begin{enumerate}
+\item{12 km}
+\item{1 m south}
+\item{2 \ms, 45$^\circ$}
+\item{075$^\circ$, 2 cm}
+\item{100 \kph, 0$^\circ$}
+\end{enumerate}}
+\item{Use two different notations to write down the direction of the vector in each of the following diagrams:
+\begin{enumerate}
+\item{
+\begin{pspicture}(0,0)(2,2)
+%\psgrid[gridcolor=lightgray]
+\psline{->}(1,0)(1,2)
+\end{pspicture}}
+\item{
+\begin{pspicture}(0,0)(2,2)
+%\psgrid[gridcolor=lightgray]
+\psarc{<-}(0,0){1}{0}{60}
+\psline{->}(0,0)(1,1.7)
+\psline[linestyle=dotted]{->}(0,0)(2,0)
+\rput(0.55,0.25){60$^\circ$}
+\end{pspicture}}
+\item{
+\begin{pspicture}(0,0)(2,2)
+%\psgrid[gridcolor=lightgray]
+\psarc{<-}(2,2){1}{230}{270}
+\psline[linestyle=dotted]{->}(2,2)(2,0)
+\psline{->}(2,2)(0.5,0.3)
+\rput(1.75,1.3){40$^\circ$}
+\end{pspicture}}
+\end{enumerate}}
+\end{enumerate}
+\practiceinfo
+
+\begin{tabular}[h]{cccccc}
+(1.) aaa & (2.) aaa & 
+ \end{tabular}
+}
+
+\section{Drawing Vectors}
+In order to draw a vector accurately we must specify a scale and
+include a reference direction in the diagram. A scale allows us to
+translate the length of the arrow into the vector's magnitude. For
+instance if one chose a scale of 1 cm = 2 N (1 cm represents 2 N), a
+force of 20 N towards the East would be represented as an arrow 10 cm
+long. A reference direction may be a line representing a horizontal surface or the points of a compass.
+
+\begin{center}
+\begin{pspicture}(0,-0.2)(10,0.6)
+%\psgrid[gridcolor=lightgray]
+\psline[arrowscale=2]{->}(0,0)(10,0)
+\pcline[offset=8pt]{|-|}(0,0)(10,0)
+\lput*{:U}{20 N}
+\end{pspicture}
+\scalebox{0.7}{\pscompass}
+\end{center}
+
+\begin{minipage}{\textwidth}
+\textbf{Method: Drawing Vectors}{
+\begin{enumerate}
+\item{Decide upon a scale and write it down.}
+\item{Determine the length of the arrow representing the vector, by using the scale.}
+\item{Draw the vector as an arrow. Make sure that you fill in the arrow head.}
+\item{Fill in the magnitude of the vector.}
+\end{enumerate}}
+\end{minipage}
+
+\begin{wex}{Drawing vectors}{Represent the following vector quantities:\\
+\begin{enumerate}
+\item{6 \ms north}
+\item{16 m east}
+\end{enumerate}}
+{\westep{Decide upon a scale and write it down.}
+\begin{enumerate}
+\item{1 cm = 2 \ms}
+\item{1 cm = 4 m}
+\end{enumerate}
+
+\westep{Determine the length of the arrow at the specific scale.}
+\begin{enumerate}
+\item{If 1 cm = 2 \ms, then 6 \ms = 3 cm}
+\item{If 1 cm = 4 m, then 16 m = 4 cm}
+\end{enumerate}
+
+\westep{Draw the vectors as arrows.}
+\begin{enumerate}
+\item{
+Scale used: 1 cm = 2 \ms\\
+Direction = North\\
+\begin{center}
+\begin{pspicture}(-0.7,0)(0.2,3)
+%\psgrid[gridcolor=lightgray]
+\psline[arrowscale=2]{->}(0,0)(0,3)
+\rput(-0.7,1.5){6 \ms}
+%\pcline[offset=8pt]{|-|}(0,0)(0,3)
+%\lput*{:U}{3 cm}
+\end{pspicture}
+\end{center}}
+\item{
+Scale used: 1 cm = 4 m\\
+Direction = East\\
+\begin{center}
+\begin{pspicture}(0,0)(4,0.6)
+%\psgrid[gridcolor=lightgray]
+\psline[arrowscale=2]{->}(0,0)(4,0)
+\rput(2,0.4){16 m}
+%\pcline[offset=8pt]{|-|}(0,0)(4,0)
+%\lput*{:U}{4 cm}
+\end{pspicture}
+\end{center}}
+\end{enumerate}}
+\end{wex}
+
+\Exercise{Drawing Vectors}{
+Draw each of the following vectors to scale. Indicate the scale that you have used:
+\begin{enumerate}
+\item{12 km south}
+\item{1,5 m N 45$^\circ$ W}
+\item{1 \ms, 20$^\circ$ East of North}
+\item{50 \kph, 085$^\circ$}
+\item{5 mm, 225$^\circ$}
+\end{enumerate}
+\practiceinfo
+
+\begin{tabular}[h]{cccccc}
+(1.) aaa & (2.) aaa & (3.) aaa & (4.) aaa & (5.) aaa & 
+ \end{tabular}
+}
+
+
+%\section{Some Examples of Vectors}
+%In the following chapters you will come across many examples of vectors. Some examples are listed in Table~\ref{tab:p:v:examples} together with which chapter they appear in.
+%\begin{table}[htbp]
+%\begin{center}
+%\caption{Examples of vector quantities that appear in Physics. \nts{Fill this in with as many examples from the book.}}
+%\label{tab:p:v:examples}
+%\begin{tabular}{|l|l|}\hline\hline
+%\textbf{Example} & \textbf{Chapter}\\\hline\hline
+%displacement&\\\hline
+%velocity&\\\hline
+%acceleration&\\\hline
+%weight&\\\hline
+%force&\\\hline
+%momentum&\\\hline
+%\end{tabular}
+%\end{center}
+%\end{table}
+
+\section{Mathematical Properties of Vectors}
+
+%%%%%%%%%%%%%%%%
+%
+% Strategy:
+%
+%Introduce vectors as arrows. Show all the properties just using arrows.
+%Then introduce displacement, velocity and acceleration as vectors.
+%Then we have established what vectors and acceleration are before we start forces.
+%
+%%%%%%%%%%%%%%%%
+
+%\MarginTip{Using vectors is an important skill you \textbf{must} master!}
+
+Vectors are mathematical objects and we need to understand the mathematical properties of vectors, like adding and subtracting.
+
+For all the examples in this section, we will use displacement as our vector quantity. Displacement was discussed in
+Grade 10.%Chapter~\ref{p:m1d10}.
+Displacement is defined as the distance together with direction of the straight line joining a final point to an initial point.
+
+Remember that displacement is just one example of a vector. We could just as well have decided to use forces or velocities to illustrate the properties of vectors.
+
+\subsection{Adding Vectors}
+When vectors are added, we need to add both a magnitude \textbf{and} a direction. For example, take 2 steps in the forward direction, stop and then take another 3 steps in the forward direction. The first 2 steps is a displacement vector and the second 3 steps is also a displacement vector. If we did not stop after the first 2 steps, we would have taken 5 steps in the forward direction in total. Therefore, if we add the displacement vectors for 2 steps and 3 steps, we should get a total of 5 steps in the forward direction. Graphically, this can be seen by first following the first vector two steps forward and then following the second one three steps forward (ie. in the same direction):
+
+\begin{center}
+\begin{pspicture}(-6,-1)(5,0.5)%%\psgrid
+%\psgrid[gridcolor=lightgray]
+\uput[u](-5,0){2 steps}
+\psline{->}(-6,0)(-4,0)
+\rput(-3.8,0){+}
+\uput[u](-2.1,0){3 steps}
+\psline{->}(-3.6,0)(-0.6,0)
+\rput(-0.4,0.){=}
+\psline{->}(-0.2,0)(1.8,0)
+\psline{->}(1.8,0)(4.8,0)
+\rput(-0.4,-1){=}
+\uput[u](2.3,-1){5 steps}
+\psline{->}(-0.2,-1)(4.8,-1)
+\end{pspicture}
+\end{center}
+We add the second vector at the end of the first vector, since this is where we now are after the first vector has acted. The vector from the tail of the
+first vector (the starting point) to the head of the last (the end
+point) is then the sum of the vectors. This is the \textit{head-to-tail} method of vector addition.
+
+As you can convince yourself, the order in which you add vectors does
+not matter. In the example above, if you decided to first go 3 steps
+forward and then another 2 steps forward, the end result would still be 5
+steps forward.
+
+The final answer when adding vectors is called the \emph{resultant}. The resultant displacement in this case will be 5 steps forward.
+
+\Definition{Resultant of Vectors}{The resultant of a number of vectors is the single vector whose effect is the same as the individual vectors acting together.}
+
+In other words, the individual vectors can be replaced by the
+resultant -- the overall effect is the same. If vectors $\vec{a}$ and $\vec{b}$ have a resultant $\vec{R}$, this can be represented mathematically as,
+
+\begin{eqnarray*}
+\vec{R} &=& \vec{a} + \vec{b}.
+\end{eqnarray*}
+
+Let us consider some more examples of vector addition using displacements. The arrows tell you how far to move and in what
+direction. Arrows to the right correspond to steps forward, while
+arrows to the left correspond to steps backward. Look at all of the
+examples below and check them.
+
+\begin{center}
+\begin{pspicture}(0,0)(8,0.5)%%\psgrid
+%\psgrid[gridcolor=lightgray]
+\uput[u](0.48,0){1 step}
+\psline{->}(1,0)
+\rput(1.3,0){+}
+\rput[u](2.08,0.325){1 step}
+\psline{->}(1.6,0)(2.6,0)
+\rput(2.9,-0.025){=}
+\uput[u](4.18,0){2 steps}
+\psline{->}(3.2,0)(4.2,0)
+\psline{->}(4.2,0)(5.2,0)
+\rput(5.5,-0.025){=}
+\uput[u](6.78,0){2 steps}
+\psline{->}(5.8,0)(7.8,0)
+\end{pspicture}
+\end{center}
+\begin{center}
+This example says 1 step forward and then another step forward is the same as an arrow twice as long -- two steps forward.\\
+
+\begin{pspicture}(0,0)(8,1)%%\psgrid
+%\psgrid[gridcolor=lightgray]
+\rput(0.48,0.25){{1 step}}
+\psline{<-}(1,0)
+\rput(1.3,0){+}
+\rput(2.08,0.25){{1 step}}
+\psline{<-}(1.6,0)(2.6,0)
+\rput(2.9,-0.025){=}
+\rput(4.18,0.25){{2 steps}}
+\psline{<-}(3.2,0)(4.2,0)
+\psline{<-}(4.2,0)(5.2,0)
+\rput(5.5,-0.025){=}
+\rput(6.78,0.25){{2 steps}}
+\psline{<-}(5.8,0)(7.8,0)
+\end{pspicture}
+\end{center}
+
+This examples says 1 step backward and then another step backward is the same as an arrow twice as long -- two steps backward.\\
+
+It is sometimes possible that you end up back where you started. In this case the net result of what you have done is that you have gone nowhere
+(your start and end points are at the same place). In this case, your resultant displacement is a vector with length zero units. We use the symbol $\vec{0}$ to denote such a vector:
+
+\begin{center}
+\begin{pspicture}(-0.5,-0.5)(8,0.5)%%\psgrid
+%\psgrid[gridcolor=lightgray]
+\rput(0.48,0.25){{1 step}}
+\psline{->}(1,0)
+\rput(1.3,0){+}
+\rput(2.08,0.25){{1 step}}
+\psline{<-}(1.6,0)(2.6,0)
+\rput(2.9,-0.025){=}
+\rput(4.18,0.25){{1 step}}
+\psline{->}(3.7,0.05)(4.7,0.05)
+\psline{<-}(3.7,-0.05)(4.7,-0.05)
+\rput(4.18,-0.28){{1 step}}
+\rput(5.5,0){= $\vec{0}$}
+\end{pspicture}
+\end{center}
+
+\begin{center}
+\begin{pspicture}(-0.5,-0.5)(8,0.5)%%\psgrid
+%\psgrid[gridcolor=lightgray]
+\rput(0.48,0.25){{1 step}}
+\psline{<-}(1,0)
+\rput(1.3,0){+}
+\rput(2.08,0.25){{1 step}}
+\psline{->}(1.6,0)(2.6,0)
+\rput(2.9,-0.025){=}
+\rput(4.18,0.25){{1 step}}
+\psline{<-}(3.7,0.05)(4.7,0.05)
+\psline{->}(3.7,-0.05)(4.7,-0.05)
+\rput(4.18,-0.28){{1 step}}
+\rput(5.5,0){= $\vec{0}$}
+\end{pspicture}
+\end{center}
+
+Check the following examples in the same way. Arrows up the page can be
+seen as steps left and arrows down the page as steps right.
+
+Try a couple to convince yourself!
+
+\begin{center}
+\begin{tabular}{cc}
+\begin{pspicture}(-0.5,-1.)(2.3,1)%%\psgrid
+%\psgrid[gridcolor=lightgray]
+\psline{->}(0, -0.35)(0,0.35)
+\rput(0.3,0.0){+}
+\psline{->}(0.6,-0.35)(0.6,0.35)
+\rput(0.9,0){=}
+\psline{->}(1.2,-0.7)(1.2,0)
+\psline{->}(1.2,0)(1.2,0.7)
+\rput(1.5,0){=}
+\psline{->}(1.8,-0.7)(1.8,0.7)
+\end{pspicture}
+&
+\begin{pspicture}(-0.5,-1.)(2.3,1)%%\psgrid
+%\psgrid[gridcolor=lightgray]
+\psline{<-}(0, -0.35)(0,0.35)
+\rput(0.3,0.0){+}
+\psline{<-}(0.6,-0.35)(0.6,0.35)
+\rput(0.9,0){=}
+\psline{<-}(1.2,-0.7)(1.2,0)
+\psline{<-}(1.2,0)(1.2,0.7)
+\rput(1.5,0){=}
+\psline{<-}(1.8,-0.7)(1.8,0.7)
+\end{pspicture}
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{cc}
+\begin{pspicture}(-0.5,-1.)(2.3,1)%%\psgrid
+%\psgrid[gridcolor=lightgray]
+\psline{<-}(0, -0.35)(0,0.35)
+\rput(0.3,0.0){+}
+\psline{->}(0.6,-0.35)(0.6,0.35)
+\rput(0.9,0){=}
+\psline{<-}(1.2,-0.35)(1.2,0.35)
+\psline{->}(1.3,-0.35)(1.3,0.35)
+\rput(1.6,0){=}
+\rput(2.0,0){$\vec{0}$}
+\end{pspicture}
+&
+\begin{pspicture}(-0.5,-1.)(2.3,1)%%\psgrid
+%\psgrid[gridcolor=lightgray]
+\psline{->}(0, -0.35)(0,0.35)
+\rput(0.3,0.0){+}
+\psline{<-}(0.6,-0.35)(0.6,0.35)
+\rput(0.9,0){=}
+\psline{->}(1.2,-0.35)(1.2,0.35)
+\psline{<-}(1.3,-0.35)(1.3,0.35)
+\rput(1.6,0){=}
+\rput(2.0,0){$\vec{0}$}
+\end{pspicture}
+\end{tabular}
+\end{center}
+
+It is important to realise that the directions are not special-- `forward
+and backwards' or `left and right' are treated in the same way. The same is
+true of any set of parallel directions:
+
+\begin{center}
+\begin{tabular}{cc}
+\begin{pspicture}(-0.1,-1.)(5.,1)%%\psgrid
+%\psgrid[gridcolor=lightgray]
+\psline{->}(0, -.35)(.7,0.35)
+\rput(0.8,0.0){+}
+\psline{->}(0.9,-.35)(1.6,0.35)
+\rput(1.7,0){=}
+\psline{->}(1.8,-0.7)(2.5,0)
+\psline{->}(2.5,0)(3.2,0.7)
+\rput(3.3,0){=}
+\psline{->}(3.4,-0.7)(4.8,0.7)
+\end{pspicture}
+&
+\begin{pspicture}(-0.1,-1.)(5.,1)%%\psgrid
+%\psgrid[gridcolor=lightgray]
+\psline{<-}(0, -.35)(.7,0.35)
+\rput(0.8,0.0){+}
+\psline{<-}(0.9,-.35)(1.6,0.35)
+\rput(1.7,0){=}
+\psline{<-}(1.8,-0.7)(2.5,0)
+\psline{<-}(2.5,0)(3.2,0.7)
+\rput(3.3,0){=}
+\psline{<-}(3.4,-0.7)(4.8,0.7)
+\end{pspicture}
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{cc}
+\begin{pspicture}(-0.1,-1.)(3.5,1)%%\psgrid
+%\psgrid[gridcolor=lightgray]
+\psline{->}(0, -.35)(.7,0.35)
+\rput(0.8,0.0){+}
+\psline{<-}(0.9,-.35)(1.6,0.35)
+\rput(1.7,0){=}
+\psline{->}(1.8,-0.35)(2.5,.35)
+\psline{<-}(1.9,-0.35)(2.6,0.35)
+\rput(2.7,0){=}
+\rput(3.1,0){$\vec{0}$}
+\end{pspicture}
+&
+\begin{pspicture}(-0.1,-1.)(3.5,1)%%\psgrid
+%\psgrid[gridcolor=lightgray]
+\psline{<-}(0, -.35)(.7,0.35)
+\rput(0.8,0.0){+}
+\psline{->}(0.9,-.35)(1.6,0.35)
+\rput(1.7,0){=}
+\psline{<-}(1.8,-0.35)(2.5,.35)
+\psline{->}(1.9,-0.35)(2.6,0.35)
+\rput(2.7,0){=}
+\rput(3.1,0){$\vec{0}$}
+\end{pspicture}
+\end{tabular}
+\end{center}
+
+In the above examples the separate displacements were parallel to one
+another. However the same head-to-tail technique of vector addition
+can be applied to vectors in any direction.
+
+\begin{center}
+\begin{tabular}{ccc}
+\begin{pspicture}(-0.5,-0.5)(4.0,0.5)%%\psgrid
+%\psgrid[gridcolor=lightgray]
+\psline{->}(0.7,0)
+\rput(1,0){+}
+\psline{->}(1.3,-0.35)(1.3,0.35)
+\rput(1.5,-0.025){=}
+\psline{->}(1.8,-0.35)(2.5,-0.35)
+\psline{->}(2.5,-0.35)(2.5,0.35)
+\psline[linestyle=dotted]{->}(1.8,-0.35)(2.5,0.35)
+\rput(2.8,0.025){=}
+\psline{->}(3.1,-0.35)(3.8,0.35)
+\end{pspicture}
+&
+\begin{pspicture}(-0.5,-0.5)(4.0,0.5)%%\psgrid
+%\psgrid[gridcolor=lightgray]
+\psline{->}(0.7,0)
+\rput(1,0){+}
+\psline{<-}(1.3,-0.35)(1.3,0.35)
+\rput(1.5,-0.025){=}
+\psline{->}(1.8,0.35)(2.5,0.35)
+\psline{<-}(2.5,-0.35)(2.5,0.35)
+\psline[linestyle=dotted]{->}(1.8,0.35)(2.5,-0.35)
+\rput(2.8,0.025){=}
+\psline{->}(3.1,0.35)(3.8,-0.35)
+\end{pspicture}
+&
+\begin{pspicture}(-0.5,-0.5)(4.0,0.5)%%\psgrid
+%\psgrid[gridcolor=lightgray]
+\psline{->}(0.,-0.1)(0.7,0.1)
+\rput(1,0){+}
+\psline{->}(1.3,-0.35)(1.5,0.35)
+\rput(1.6,-0.025){=}
+\psline{->}(1.7,-0.45)(2.4,-0.25)
+\psline{->}(2.4,-0.25)(2.6,0.45)
+\psline[linestyle=dotted]{->}(1.7,-0.45)(2.6,0.45)
+\rput(2.9,0.025){=}
+\psline{->}(3.2,-0.45 )(4.1,0.45)
+\end{pspicture}
+\end{tabular}
+\end{center}
+
+Now you have discovered one use for vectors; describing resultant
+displacement -- how far and in what direction you
+have travelled after a series of movements.
+
+Although vector addition here has been demonstrated with
+displacements, all vectors behave in exactly the same way. Thus, if
+given a number of forces acting on a body you can use the same method
+to determine the resultant force acting on the body. We will return to
+vector addition in more detail later.
+
+\subsection{Subtracting Vectors}
+
+What does it mean to subtract a vector? Well this is really simple; if
+we have 5 apples and we subtract 3 apples, we have only 2 apples left. Now
+lets work in steps; if we take 5 steps forward and then subtract 3 steps
+forward we are left with only two steps forward:
+
+\begin{center}
+\begin{pspicture}(-6,-0.5)(5,0.5)%%\psgrid
+%\psgrid[gridcolor=lightgray]
+\rput(-3.5,0.25){{5 steps}}
+\psline{->}(-6,0)(-1,0)
+\rput(-0.8,0){-}
+\rput(1.1,0.25){{3 steps}}
+\psline{->}(-0.6,0)(2.6,0)
+\rput(2.8,0.){=}
+\psline{->}(3.0,0)(5.0,0)
+\rput(4.0,0.25){{2 steps}}
+\end{pspicture}
+\end{center}
+
+What have we done? You originally took 5 steps forward but then you took
+3 steps back. That backward displacement would be represented by an arrow
+pointing to the left (backwards) with length 3. The net result of
+adding these two vectors is 2 steps forward:
+
+\begin{center}
+
+\begin{pspicture}(-6,-0.5)(5,0.5)%%\psgrid
+%\psgrid[gridcolor=lightgray]
+\uput[u](-3.5,0){{5 steps}}
+\psline{->}(-6,0)(-1,0)
+\rput(-0.8,0){+}
+\uput[u](1.1,0){{3 steps}}
+\psline{<-}(-0.6,0)(2.6,0)
+\rput(2.8,0.){=}
+\psline{->}(3.0,0)(5.0,0)
+\uput[u](4.0,0){{2 steps}}
+\end{pspicture}
+\end{center}
+
+Thus, subtracting a vector from another is the same as adding a vector in the opposite direction (i.e. subtracting 3 steps forwards is the same
+as adding 3 steps backwards).
+
+\Tip{Subtracting a vector from another is the same as adding a vector in the opposite direction.}
+
+In the problem, motion in the forward direction has been represented by an arrow to the right. Arrows to the right are positive and arrows to the left are negative. More generally, vectors in opposite directions differ in sign (i.e. if we define up as positive, then
+vectors acting down are negative). Thus, changing the sign of a vector
+simply reverses its direction:
+
+\begin{center}
+\begin{tabular}{cc}
+\begin{pspicture}(-0.5,-0.5)(3,0.5)%%\psgrid
+%\psgrid[gridcolor=lightgray]
+\psline{->}(0.3,0.0)(1.0,0.0)
+\rput(0,0){-}
+\rput(1.3,-0.025){=}
+\psline{<-}(1.6,0)(2.3,0)
+\end{pspicture}
+&
+\begin{pspicture}(-0.5,-0.5)(3,0.5)%%\psgrid
+%\psgrid[gridcolor=lightgray]
+\psline{<-}(0.3,0.0)(1.0,0.0)
+\rput(0,0){-}
+\rput(1.3,-0.025){=}
+\psline{->}(1.6,0)(2.3,0)
+\end{pspicture}
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{cc}
+\begin{pspicture}(-1.,-0.6)(2,0.6)%%\psgrid
+%\psgrid[gridcolor=lightgray]
+\rput(-0.2,0.0){-}
+\psline{->}(0, -0.35)(0,0.35)
+\rput(0.3,0.0){=}
+\psline{<-}(0.6,-0.35)(0.6,0.35)
+\end{pspicture}
+&
+\begin{pspicture}(-1.,-0.6)(2,0.6)%%\psgrid
+%\psgrid[gridcolor=lightgray]
+\rput(-0.2,0.0){-}
+\psline{<-}(0, -0.35)(0,0.35)
+\rput(0.3,0.0){=}
+\psline{->}(0.6,-0.35)(0.6,0.35)
+\end{pspicture}
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{cc}
+\begin{pspicture}(-0.1,-0.6)(2,0.6)%%\psgrid
+%\psgrid[gridcolor=lightgray]
+\rput(0.,0.0){-}
+\psline{<-}(0.1,-.35)(.8,0.35)
+\rput(.9,0){=}
+\psline{->}(1.,-0.35)(1.7,.35)
+\end{pspicture}
+&
+\begin{pspicture}(-0.1,-0.6)(2,0.6)%%\psgrid
+%\psgrid[gridcolor=lightgray]
+\rput(0.,0.0){-}
+\psline{->}(0.1,-.35)(.8,0.35)
+\rput(.9,0){=}
+\psline{<-}(1.,-0.35)(1.7,.35)
+\end{pspicture}
+\end{tabular}
+\end{center}
+
+In mathematical form, subtracting $\vec{a}$ from
+$\vec{b}$ gives a new vector $\vec{c}$:
+\begin{eqnarray*}
+\vec{c} &=& \vec{b} - \vec{a}\\
+&=& \vec{b} + (-\vec{a})
+\end{eqnarray*}
+This clearly shows that subtracting vector $\vec{a}$ from
+$\vec{b}$ is the same as adding $(-\vec{a})$ to
+$\vec{b}$. Look at the following examples of vector
+subtraction.
+
+\begin{center}
+\begin{pspicture}(-0.5,-0.5)(5.2,0.5)%%\psgrid
+%\psgrid[gridcolor=lightgray]
+\psline{->}(0.7,0)
+\rput(1,0){-}
+\psline{->}(1.3,0)(2,0)
+\rput(2.3,-0.025){=}
+\psline{->}(2.6,0)(3.3,0)
+\rput(3.6,0){+}
+\psline{<-}(3.9,0)(4.6,0)
+\rput(4.9,0){=}
+\rput(5.3,0){$\vec{0}$}
+\end{pspicture}
+\end{center}
+
+\begin{center}
+\begin{pspicture}(-0.5,-0.5)(6.8,0.5)%%\psgrid
+%\psgrid[gridcolor=lightgray]
+\psline{->}(0.7,0)
+\rput(1,0){-}
+\psline{<-}(1.3,0)(2,0)
+\rput(2.3,-0.025){=}
+\psline{->}(2.6,0)(3.3,0)
+\rput(3.6,0){+}
+\psline{->}(3.9,0)(4.6,0)
+\rput(4.9,-0.025){=}
+\psline{->}(5.2,0)(6.6,0)
+\end{pspicture}
+\end{center}
+
+\subsection{Scalar Multiplication}
+
+What happens when you multiply a vector by a scalar (an ordinary
+number)?
+
+Going back to normal multiplication we know that $2 \times 2$ is just
+$2$ groups of $2$ added together to give $4$. We can adopt a similar  approach to understand how vector multiplication works.
+
+\begin{center}
+\begin{pspicture}(-0.5,-0.5)(6.2,0.5)%%\psgrid
+%\psgrid[gridcolor=lightgray]
+\rput(0.7,0){2}
+\rput(1,0){x}
+\psline{->}(1.3,0)(2,0)
+\rput(2.3,-0.025){=}
+\psline{->}(2.6,0)(3.3,0)
+\rput(3.45,0){+}
+\psline{->}(3.6,0)(4.3,0)
+\rput(4.6,-0.025){=}
+\psline{->}(4.9,0)(6.3,0)
+\end{pspicture}
+\end{center}
+
+\section{Techniques of Vector Addition}
+
+Now that you have learned about the mathematical properties of
+vectors, we return to vector addition in more detail. There are a number of
+techniques of vector addition. These techniques fall into two main categories - graphical and algebraic techniques.
+
+\subsection{Graphical Techniques}
+Graphical techniques involve drawing accurate scale diagrams to denote
+individual vectors and their resultants. We next discuss the two primary
+graphical techniques, the head-to-tail technique and the parallelogram
+method.
+
+\subsubsection{The Head-to-Tail Method}
+In describing the mathematical properties of vectors we used
+displacements and the head-to-tail graphical method of vector addition
+as an illustration. The head-to-tail method of graphically adding vectors is a standard method that must be understood.\\
+
+\begin{minipage}{\textwidth}
+\textbf{Method: Head-to-Tail Method of Vector Addition}
+\begin{enumerate}
+\item{Draw a rough sketch of the situation.}
+\item{Choose a scale and include a reference direction.}
+\item{Choose any of the vectors and draw it as an arrow in the
+correct direction and of the correct length -- remember to put an
+arrowhead on the end to denote its direction.}
+\item{Take the next vector and draw it as an arrow starting from the
+arrowhead of the first vector in the correct direction and of the
+correct length.}
+\item{Continue until you have drawn each vector -- each time starting
+from the head of the previous vector. In this way, the vectors to be
+added are drawn one after the other head-to-tail.}
+\item{The resultant is then the vector drawn from the tail of the
+first vector to the head of the last. Its magnitude can be
+determined from the length of its arrow using the scale. Its
+direction too can be determined from the scale diagram.}
+\end{enumerate}
+\end{minipage}
+
+\begin{wex}{Head-to-Tail Addition I}{A ship leaves harbour H and sails 6 km north to port A. From here the ship travels 12 km east to port B, before sailing 5,5 km south-west to port C. Determine the ship's resultant displacement using the head-to-tail technique of vector addition.}{
+
+\westep{Draw a rough sketch of the situation}
+Its easy to understand the problem if we first draw a quick sketch. The rough sketch should include all of the information given in the problem. All of the magnitudes of the displacements are shown and a compass has been included as a reference direction. In a rough sketch one is interested in the approximate shape of the vector diagram.
+
+\begin{center}
+\begin{pspicture}(-4,-4)(4,0.5)
+%\psgrid[gridcolor=lightgray]
+\psline[arrowscale=2]{->}(-3.8,-3.8)(-3.8,0)
+\psline[arrowscale=2]{->}(-3.8,0)(3.8,0)
+\psline[arrowscale=2]{->}(3.8,0)(1.11,-2.69)
+\rput(-4,-3.8){H}
+\rput(-4.2,-1.9){6 km}
+\rput(-4,0){A}
+\rput(0,0.3){12 km}
+\rput(4,0){B}
+\rput(3.1,-1.4){5,5 km}
+\rput(1.35,-2.69){C}
+\psarc{-}(3.8,0){1.4}{180}{225}
+\rput(3.05,-0.35){45$^\circ$}
+\psline[arrowscale=2]{->}(-3.8,-3.8)(1.11,-2.69)
+\end{pspicture}
+\scalebox{0.7}{\pscompass}
+\end{center}
+
+\westep{Choose a scale and include a reference direction.}
+The choice of scale depends on the actual question -- you should choose a
+scale such that your vector diagram fits the page.
+
+It is clear from the rough sketch that choosing a scale where 1~cm represents 2~km (scale: 1~cm = 2~km) would be a good choice in this
+problem. The diagram will then take up a good fraction of an A4 page. We now start the accurate construction.
+
+\westep{Choose any of the vectors to be summed and draw it as an arrow in the correct direction and of the correct length -- remember to put an
+arrowhead on the end to denote its direction.}
+Starting at the harbour H we draw the first vector 3~cm long in the direction north.
+
+%\MarginTip{Scale: 1~cm = 2~km}
+\begin{center}
+\begin{pspicture}(0,0)(8,3.5)
+%\psgrid[gridcolor=lightgray]
+\psline[arrowscale=2]{->}(0.5,0)(0.5,3)
+\uput[l](0.5,0){H}
+\uput[l](0.5,1.5){6 km}
+\uput[l](0.5,3){A}
+\end{pspicture}
+\end{center}
+
+\westep{Take the next vector and draw it as an arrow starting from the
+head of the first vector in the correct direction and of the
+correct length.}
+Since the ship is now at port A we draw the second vector 6~cm long starting from point A in the direction east.
+
+\begin{center}
+\begin{pspicture}(0,0)(8,3.5)
+%\psgrid[gridcolor=lightgray]
+\psline[arrowscale=2]{->}(0.5,0)(0.5,3)
+\uput[l](0.5,0){H}
+\uput[l](0.5,1.5){6 km}
+\uput[l](0.5,3){A}
+\psline[arrowscale=2]{->}(0.5,3)(6.5,3)
+\uput[u](3.5,3){12 km}
+\uput[u](6.5,3){B}
+\end{pspicture}
+\scalebox{0.7}{\pscompass}
+\end{center}
+
+\westep{Take the next vector and draw it as an arrow starting from the
+head of the second vector in the correct direction and of the
+correct length.}
+Since the ship is now at port B we draw the third vector 2,25~cm long starting from this point in the direction south-west. A protractor is required to measure the angle of 45$^\circ$.
+
+\begin{center}
+\begin{pspicture}(0,0)(8,3.5)
+%\psgrid[gridcolor=lightgray]
+\SpecialCoor
+\psline[arrowscale=2]{->}(0.5,0)(0.5,3)
+\uput[l](0.5,0){H}
+\uput[l](0.5,1.5){6 km}
+\uput[l](0.5,3){A}
+\psline[arrowscale=2]{->}(0.5,3)(6.5,3)
+\uput[u](3.5,3){12 km}
+\uput[u](6.5,3){B}
+\rput(6.5,3){\psline[arrowscale=2]{->}(0,0)({2.25;225})
+\uput[u]({2.25;225}){C}}
+\uput[r](5.8,2){5,5 km}
+\psarc{->}(6.5,3){1.4}{180}{225}
+\rput(5.7,2.65){45$^\circ$}
+\end{pspicture}
+\scalebox{0.7}{\pscompass}
+\end{center}
+
+\westep{The resultant is then the vector drawn from the tail of the
+first vector to the head of the last. Its magnitude can be
+determined from the length of its arrow using the scale. Its
+direction too can be determined from the scale diagram.}
+
+As a final step we draw the resultant displacement from
+the starting point (the harbour H) to the end point (port C). We use a
+ruler to measure the length of this arrow and a protractor to determine its direction.
+
+\begin{center}
+\begin{pspicture}(0,0)(8,3.5)
+%\psgrid[gridcolor=lightgray]
+\SpecialCoor
+\psline[arrowscale=2]{->}(0.5,0)(0.5,3)
+\uput[l](0.5,0){H}
+\uput[l](0.5,1.5){3 cm = 6 km}
+\uput[l](0.5,3){A}
+\psline[arrowscale=2]{->}(0.5,3)(6.5,3)
+\uput[u](3.5,3){6 cm = 12 km}
+\uput[u](6.5,3){B}
+\rput(6.5,3){\psline[arrowscale=2]{->}(0,0)({2.25;225})
+\uput[u]({2.25;225}){C}}
+\uput[r](5.8,2){2,25 cm = 5,5 km}
+\psline[linewidth=2pt]{->}(0.5,0)(4.91,1.41)
+\pcline[offset=8pt,linestyle=none](0.5,0)(4.91,1.41)
+\lput*{:U}{4,6 cm = 9,2 km}
+\psarc{->}(0.5,0){0.9}{17.7}{90}
+\rput(0.85,0.45){?}
+\end{pspicture}
+\scalebox{0.7}{\pscompass}
+\end{center}
+
+\westep{Apply the scale conversion}
+We now use the scale to convert the length of the resultant in the scale diagram to the actual displacement in the problem. Since we have chosen a scale of 1~cm = 2~km in this problem the resultant has a magnitude of 9,2~km. The direction can be specified in terms of the angle measured either as 072,3$^\circ$ east of north or on a bearing of 072,3$^\circ$.
+
+\westep{Quote the final answer}
+The resultant displacement of the ship is 9,2 km on a bearing of 072,3$^\circ$.}
+\end{wex}
+
+\begin{wex}{Head-to-Tail Graphical Addition II}{A man walks 40 m East, then 30 m North.
+\begin{enumerate}
+\item{What was the total distance he walked?}
+\item{What is his resultant displacement?}
+\end{enumerate}}
+{
+\westep{Draw a rough sketch}
+\begin{center}
+\begin{pspicture}(-0.5,-0.5)(6,3)
+%\psgrid[gridcolor=lightgray]
+\psline[arrowscale=2]{->}(0,0)(4,0)
+\psline[arrowscale=2]{->}(4,0)(4,3)
+\psline[linewidth=2pt]{->}(0,0)(4,3)
+\pcline[offset=8pt,linestyle=none]{-}(0,0)(4,3)
+\lput*{:U}{resultant}
+\uput[d](2,0){40 m}
+\uput[r](4,1.5){30 m}
+\end{pspicture}
+\scalebox{0.7}{\pscompass}
+\end{center}
+
+\westep{Determine the distance that the man traveled}
+In the first part of his journey he traveled 40 m and in the second part he traveled 30 m. This gives us a total distance traveled of 40 m + 30 m = 70 m.
+
+\westep{Determine his resultant displacement}
+The man's resultant displacement is the {\bf vector} from where he started to where he ended. It is the vector sum of his two separate displacements. We will use the head-to-tail method of accurate construction to find this vector.
+
+\westep{Choose a suitable scale}
+A scale of 1 cm represents 10 m (1~cm = 10~m) is a good choice here. Now we can begin the process of construction.
+
+\westep{Draw the first vector to scale}
+We draw the first displacement as an arrow 4~cm long in an eastwards direction.
+
+\begin{center}
+\begin{pspicture}(-0.5,-0.5)(6,0.5)
+%\psgrid[gridcolor=lightgray]
+\psline[arrowscale=2]{->}(0,0)(4,0)
+\uput[d](2,0){4 cm = 40 m}
+\end{pspicture}
+\scalebox{0.7}{\pscompass}
+\end{center}
+
+\westep{Draw the second vector to scale}
+Starting from the head of the first vector we draw the second vector as an arrow 3~cm long in a northerly direction.
+
+\begin{center}
+\begin{pspicture}(-0.5,-0.5)(6,3)
+%\psgrid[gridcolor=lightgray]
+\psline[arrowscale=2]{->}(0,0)(4,0)
+\psline[arrowscale=2]{->}(4,0)(4,3)
+\uput[d](2,0){4 cm = 40 m}
+\uput[r](4,1.5){3 cm = 30 m}
+\end{pspicture}
+\scalebox{0.7}{\pscompass}
+\end{center}
+
+\westep{Determine the resultant vector}
+Now we connect the starting point to the end point and
+measure the length and direction of this arrow (the resultant).
+
+\begin{center}
+\begin{pspicture}(-0.5,-0.5)(6,3)
+%\psgrid[gridcolor=lightgray]
+\psline[arrowscale=2]{->}(0,0)(4,0)
+\psline[arrowscale=2]{->}(4,0)(4,3)
+\psline[linewidth=2pt]{->}(0,0)(4,3)
+\pcline[offset=8pt,linestyle=none]{-}(0,0)(4,3)
+\lput*{:U}{5 cm = 50 m}
+\uput[d](2,0){4 cm = 40 m}
+\uput[r](4,1.5){3 cm = 30 m}
+\psarc{->}(0,0){1.25}{0}{36.9}
+\rput(0.85,0.25){?}
+\end{pspicture}
+\scalebox{0.7}{\pscompass}
+\end{center}
+
+\westep{Find the direction}
+To find the direction you measure the angle between the resultant and the 40~m vector. You should get about 37$^\circ$.
+
+\westep{Apply the scale conversion}
+Finally we use the scale to convert the length of the resultant in
+the scale diagram to the actual magnitude of the resultant
+displacement. According to the chosen scale 1 cm = 10 m. Therefore 5 cm  represents 50 m. The resultant displacement is then 50 m 37$^\circ$ north of east.
+}
+\end{wex}
+
+\subsubsection{The Parallelogram Method}
+
+The \textit{parallelogram method} is another graphical technique of finding the resultant of two vectors.\\
+
+\begin{minipage}{\textwidth}
+\textbf{Method: The Parallelogram Method}
+\begin{enumerate}
+\item{Make a rough sketch of the vector diagram.}
+\item{Choose a scale and a reference direction.}
+\item{Choose either of the vectors to be added and draw it as an arrow
+of the correct length in the correct direction.}
+\item{Draw the second vector as an arrow of the correct length in the
+correct direction from the tail of the first vector.}
+\item{Complete the parallelogram formed by these two vectors.}
+\item{The resultant is then the diagonal of the parallelogram. The
+magnitude can be determined from the length of its arrow using the
+scale. The direction too can be determined from the scale diagram.}
+\end{enumerate}
+\end{minipage}
+
+\begin{wex}{Parallelogram Method of Vector Addition I}{A force of $F_1=5\eN$ is applied to a block in a horizontal direction. A second force $F_2=4\eN$ is applied to the object at an angle of 30$^\circ$ above the horizontal.
+\begin{center}
+\begin{pspicture}(-2,-2.1)(2,0)
+\pspolygon[](-2,-2)(-2,-1)(-1,-1)(-1,-2)
+\psline[linestyle=dotted]{-}(-2,-2.1)(2,-2.1)
+\psline{->}(-1.5,-1.5)(2,-1.5)
+\pcline[offset=-8pt,linestyle=none]{-}(-1.5,-1.5)(2,-1.5)
+\lput*{:U}{$F_1=5\eN$}
+\psline{->}(-1.5,-1.5)(0.92487,-0.1)
+\pcline[offset=8pt,linestyle=none]{-}(-1.5,-1.5)(1.12487,0.0)
+\lput*{:U}{$F_2=4\eN$}
+\psarc{-}(-1.5,-1.5){1.25}{0}{30}
+\rput(-0.68,-1.3){30$^\circ$}
+\end{pspicture}
+\end{center}
+Determine the resultant force acting on the block using the
+parallelogram method of accurate construction.}
+{\westep{Firstly make a rough sketch of the vector diagram}
+
+\begin{center}
+\begin{pspicture}(-2,-2.2)(4.5,0)
+%\psgrid[gridcolor=lightgray]
+\psline{->}(-1.5,-1.5)(2,-1.5)
+\pcline[offset=-8pt,linestyle=none]{-}(-1.5,-1.5)(2,-1.5)
+\lput*{:U}{$5\eN$}
+\psline[linestyle=dotted]{-}(2,-1.5)(4.42487,-0.1)
+\psline{->}(-1.5,-1.5)(0.92487,-0.1)
+\pcline[offset=8pt,linestyle=none]{-}(-1.5,-1.5)(0.92487,-0.1)
+\lput*{:U}{$4\eN$}
+\psline[linestyle=dotted]{-}(0.92487,-0.1)(4.42487,-0.1)
+\psarc{-}(-1.5,-1.5){1.25}{0}{30}
+\psline[linestyle=dashed]{->}(-1.5,-1.5)(4.42487,-0.1)
+\rput(-0.68,-1.3){30$^\circ$}
+\end{pspicture}
+\end{center}
+
+\westep{Choose a suitable scale}
+In this problem a scale of 1~cm = 1~N would be appropriate, since then the vector diagram would take up a reasonable fraction of the page. We can now begin the accurate scale diagram.
+
+\westep{Draw the first scaled vector}
+Let us draw $F_1$ first. According to the scale it has length
+5 cm.
+
+%\MarginTip{Scale: 1~cm=1~N}
+
+\begin{center}
+\begin{pspicture}(-0.5,-0.5)(8.5,0.5)
+%\psgrid[gridcolor=lightgray]
+\psline{->}(0,0)(5,0)
+\uput[d](2.5,0){5 cm}
+\end{pspicture}
+\end{center}
+
+\westep{Draw the second scaled vector}
+Next we draw $F_2$. According to the scale it has length 4 cm. We make use of a protractor to draw this vector at 30$^\circ$ to the horizontal.
+
+%\MarginTip{Scale: 1~cm=1~N}
+\begin{center}
+\begin{pspicture}(-0.5,-0.5)(8.5,2)
+%\psgrid[gridcolor=lightgray]
+\SpecialCoor
+\psline{->}(0,0)(5,0)
+\uput[d](2.5,0){5 cm = 5 N}
+\psline{->}(0,0)({4;30})
+%\uput[d](5,0){4 cm}
+\pcline[linestyle=none,offset=8pt](0,0)({4;30})
+\lput{:U}{4 cm = 4 N}
+\psarc{->}(0,0){1.4}{0}{30}
+\rput(0.9,0.25){30$^\circ$}
+\end{pspicture}
+\end{center}
+
+\westep{Determine the resultant vector}
+Next we complete the parallelogram and draw the diagonal.
+
+%\MarginTip{Scale: 1~cm=1~N}
+\begin{center}
+\begin{pspicture}(-0.5,-0.5)(8.5,2)
+%\psgrid[gridcolor=lightgray]
+\SpecialCoor
+\psline{->}(0,0)(5,0)
+\uput[d](2.5,0){5 N}
+\psline{->}(0,0)({4;30})
+%\uput[d](5,0){4 cm}
+\pcline[linestyle=none,offset=8pt](0,0)({4;30})
+\lput{:U}{4 N}
+\rput({4;30}){\psline[linestyle=dotted]{-}(0,0)(5,0)}
+\rput(5,0){\psline[linestyle=dotted]{-}(0,0)({4;30})}
+\psline[linewidth=2pt]{->}(0,0)(8.46,2)
+\pcline[linestyle=none,offset=8pt]{-}(0,0)(8.46,2)
+\lput{:U}{Resultant}
+\psarc{->}(0,0){2.4}{0}{13.3}
+\rput(2.1,0.2){?}
+\end{pspicture}
+\end{center}
+
+The resultant has a measured length of 8,7 cm.
+
+\westep{Find the direction}
+We use a protractor to measure the angle between the horizontal and the resultant. We get 13,3$^\circ$.
+
+\westep{Apply the scale conversion}
+Finally we use the scale to convert the measured length into the
+actual magnitude. Since 1 cm = 1 N, 8,7 cm represents 8,7 N. Therefore the resultant force is 8,7 N at 13,3$^\circ$ above the horizontal.}
+\end{wex}
+
+The parallelogram method is restricted to the addition of just two
+vectors. However, it is arguably the most intuitive way of adding two
+forces acting on a point.
+
+\subsection{Algebraic Addition and Subtraction of Vectors}
+\subsubsection{Vectors in a Straight Line}
+
+Whenever you are faced with adding vectors acting in a straight line (i.e. some directed left and some right, or some acting up and others down) you can use a very simple algebraic technique:\\
+
+\begin{minipage}{\textwidth}
+\textbf{Method: Addition/Subtraction of Vectors in a Straight Line}
+\begin{enumerate}
+\item{Choose a positive direction. As an example, for
+situations involving displacements in the directions west and east, you
+might choose west as your positive direction. In that case,
+displacements east are negative.}
+\item{Next simply add (or subtract) the
+magnitude of the vectors using the appropriate signs.}
+\item{As a final step the direction of the resultant should be included in
+words (positive answers are in the positive direction, while negative
+resultants are in the negative direction).}\\
+\end{enumerate}
+\end{minipage}
+
+Let us consider a few examples.
+
+\begin{wex}{Adding vectors algebraically I}{A tennis ball is rolled towards a wall which is 10~m away from the ball. If after striking the wall the ball rolls a further 2,5~m along the ground away from the wall, calculate algebraically the ball's resultant displacement.}{
+\westep{Draw a rough sketch of the situation}
+\begin{center}
+\begin{pspicture}(-0.5,-0.5)(6,2)
+%\psgrid[gridcolor=lightgray]
+\psline{->}(0,1.5)(5,1.5)
+\rput(2.5,1.7){10 m}
+\psline{->}(5,1)(3.75,1)
+\rput(4.5,1.2){2,5 m}
+\psline{-}(5,0)(5,2)
+\rput(5.5,1){Wall}
+\psline[linestyle=dashed]{-}(0,0)(0,2)
+\rput(0,-0.2){Start}
+\end{pspicture}
+\end{center}
+\westep{Decide which method to use to calculate the resultant}
+We know that the resultant displacement of the ball
+($\vec{x}_{R}$) is equal to the sum of the ball's separate
+displacements ($\vec{x}_1$ and $\vec{x}_2$):
+\begin{eqnarray*}
+\vec{x}_{R} & = & \vec{x}_{1} + \vec{x}_{2}
+\end{eqnarray*}
+Since the motion of the ball is in a straight line (i.e. the ball
+moves towards and away from the wall), we can use the method of algebraic addition
+just explained.
+\westep{Choose a positive direction}
+Let's choose the \textbf{positive} direction to be towards the wall. This means that the \textbf{negative} direction is away from the wall.
+
+\westep{Now define our vectors algebraically}
+With right positive:
+\begin{eqnarray*}
+\vec{x}_{1} & = & +10,0\emm \\
+\vec{x}_{2} & = & -2,5\emm
+\end{eqnarray*}
+
+\westep{Add the vectors}
+Next we simply add the two displacements to give the resultant:
+\begin{eqnarray*}
+\vec{x}_{R} & = & (+10\emm) + (-2,5\emm) \\
+& = & (+7,5)\emm
+\end{eqnarray*}
+\westep{Quote the resultant}
+Finally, in this case \underline{towards the wall is the positive direction}, so:
+$\vec{x}_{R}$  =  7,5 m towards the wall.}
+\end{wex}
+
+\begin{wex}{Subtracting vectors algebraically I}{Suppose that a tennis ball is thrown horizontally towards a wall at an initial velocity of 3 \ms to the right. After striking the wall, the ball returns to the thrower at 2 \ms. Determine the change in velocity of the ball.}{
+\westep{Draw a sketch}
+A quick sketch will help us understand the problem.
+\begin{center}
+\begin{pspicture}(-0.5,-0.5)(4,2)
+%\psgrid[gridcolor=lightgray]
+\psline{->}(0,1.5)(3,1.5)
+\rput(1.5,1.7){3 \ms}
+\psline{->}(3,1)(1,1)
+\rput(2,1.2){2 \ms}
+\psline{-}(3,0)(3,2)
+\rput(3.5,1){Wall}
+\psline[linestyle=dashed]{-}(0,0)(0,2)
+\rput(0,-0.2){Start}
+\end{pspicture}
+\end{center}
+\westep{Decide which method to use to calculate the resultant}
+Remember that velocity is a vector. The change in the velocity of the
+ball is equal to the difference between the ball's initial and final
+velocities:
+\begin{equation*}
+\Delta\vec{v}  =  \vec{v}_{f} - \vec{v}_{i}
+\end{equation*}
+
+Since the ball moves along a straight line (i.e. left and right), we
+can use the algebraic technique of vector subtraction just discussed.
+
+\westep{Choose a positive direction}
+Choose the \textbf{positive} direction to be towards the wall. This means that the \textbf{negative} direction is away from the wall.
+
+\westep{Now define our vectors algebraically}
+\begin{eqnarray*}
+\vec{v}_{i} & = & +3\ems \\
+\vec{v}_{f} & = & -2\ems
+\end{eqnarray*}
+
+\westep{Subtract the vectors}
+Thus, the change in velocity of the ball is:
+
+\begin{eqnarray*}
+\Delta\vec{v} & = & (-2\ems) - (+3\ems) \\
+& = & (-5)\ems
+\end{eqnarray*}
+\westep{Quote the resultant}
+Remember that in this case \underline{towards the wall means a positive velocity}, so \underline{away from the wall means a negative velocity}:
+$\Delta\vec{v} =  5\ems$ away from the wall.}
+\end{wex}
+
+\Exercise{Resultant Vectors}{
+\begin{enumerate}
+\item Harold walks to school by walking 600 m Northeast and then 500 m N 40$^\circ$ W. Determine his resultant displacement by using accurate scale drawings.
+\item A dove flies from her nest, looking for food for her chick. She flies at a velocity of 2 \ms on a bearing of 135$^\circ$ and then at a velocity of 1,2 \ms on a bearing of 230$^\circ$. Calculate her resultant velocity by using accurate scale drawings.
+\item A squash ball is dropped to the floor with an initial velocity of 2,5 \ms. It rebounds (comes back up) with a velocity of 0,5 \ms. \begin{enumerate}
+\item What is the change in velocity of the squash ball?
+\item What is the resultant velocity of the squash ball?
+\end{enumerate}
+\end{enumerate}
+\practiceinfo
+
+\begin{tabular}[h]{cccccc}
+(1.) aaa & (2.) aaa & 
+ \end{tabular}
+}
+
+Remember that the technique of addition and subtraction just discussed can only be applied to vectors acting along a straight line. When vectors are not in a straight line, i.e. at an angle to each other, the following method can be used:
+
+\subsubsection{A More General Algebraic technique}
+Simple geometric and trigonometric techniques can be used to find resultant vectors.
+
+\begin{wex}{An Algebraic Solution I}{A man walks 40 m East, then 30 m North. Calculate the man's resultant displacement.\\}{
+\westep{Draw a rough sketch}
+As before, the rough sketch looks as follows:
+
+\begin{center}
+\begin{pspicture}(-0.5,-0.5)(6,3)
+%\psgrid[gridcolor=lightgray]
+\psline[arrowscale=2]{->}(0,0)(4,0)
+\psline[arrowscale=2]{->}(4,0)(4,3)
+\psline[linewidth=2pt]{->}(0,0)(4,3)
+\pcline[offset=8pt,linestyle=none]{-}(0,0)(4,3)
+\lput*{:U}{resultant}
+\uput[d](2,0){40 m}
+\uput[r](4,1.5){30 m}
+\uput[r](0.5,0.2){$\alpha$}
+\end{pspicture}
+\scalebox{0.7}{\pscompass}
+\end{center}
+
+\westep{Determine the length of the resultant}
+Note that the triangle formed by his separate displacement vectors and his resultant displacement vector is a right-angle triangle. We can thus use the Theorem of Pythagoras to determine the length of the resultant. Let $x_R$ represent the length of the resultant vector. Then:
+\begin{eqnarray*}
+x_R^2&=&(40\emm)^2 + (30\emm)^2\\
+x_R^2&=&2\ 500\emm^2\\
+x_R&=&50\emm
+\end{eqnarray*}
+
+\westep{Determine the direction of the resultant}
+Now we have the length of the resultant displacement vector but not yet its direction. To determine its direction we calculate the angle $\alpha$ between the resultant displacement vector and East, by using simple trigonometry:
+\begin{eqnarray*}
+\tan \alpha &=& \frac{\mathrm{opposite side}}{\mathrm{adjacent side}}\\
+\tan \alpha &=& \frac{30}{40}\\
+\alpha& =& \tan^{-1} (0,75) \\
+\alpha &=& 36,9^\circ
+\end{eqnarray*}
+\westep{Quote the resultant}
+The resultant displacement is then 50~m at 36,9$^\circ$ North of East.
+
+This is exactly the same answer we arrived at after drawing a scale diagram!}
+\end{wex}
+
+In the previous example we were able to use simple trigonometry to
+calculate the resultant displacement. This was possible since the
+directions of motion were perpendicular (north and east).
+Algebraic techniques, however, are not limited to cases where the vectors to be combined are along the same straight line or at right angles to one
+another. The following example illustrates this.
+
+\begin{wex}{An Algebraic Solution II}{A man walks from point A to point B which is 12~km away on a bearing of 45$^\circ$. From point B the man walks a further 8~km east to point C. Calculate the resultant displacement.\\}{
+\westep{Draw a rough sketch of the situation}
+
+\begin{center}
+\begin{pspicture}(-0.5,-0.5)(7,4)
+%\psgrid[gridcolor=lightgray]
+\psline[linestyle=dotted]{-}(0,0)(0,2.5)
+\rput(-0.2,0){A}
+\psline[linestyle=dotted]{-}(3.54,3.54)(3.54,1.04)
+\rput(3.54,3.74){B}
+\rput(-0.2,2.5){F}
+\rput(6.87,3.74){C}
+\rput(3.54,0.84){G}
+\psarc{-}(0,0){1}{45}{90}
+\psarc{-}(0,0){2}{27.26}{45}
+\rput(1.3,1){$\theta$}
+\psarc{-}(3.54,3.54){1}{225}{270}
+\psline[arrowscale=2]{->}(0,0)(3.54,3.54)
+\psline{-}(3.54,3.24)(3.84,3.24)
+\psline{-}(3.84,3.24)(3.84,3.54)
+\pcline[offset=8pt,linestyle=none]{-}(0,0)(3.54,3.54)
+\lput{:U}{12 km}
+\psline[arrowscale=2]{->}(3.54,3.54)(6.87,3.54)
+\pcline[offset=8pt,linestyle=none]{-}(3.54,3.54)(6.87,3.54)
+\lput{:U}{8 km}
+\rput(0.3,0.6){$45^o$}
+\rput(3.3,2.9){$45^o$}
+\psline[arrowscale=2]{->}(0,0)(6.87,3.54)
+\end{pspicture}
+\end{center}
+$B\hat{A}F = 45^\circ$ since the man walks initially on a bearing of 45$^\circ$.
+Then, $A\hat{B}G = B\hat{A}F = 45^\circ$ (parallel lines, alternate angles). Both of these angles are included in the rough sketch.\\
+
+\westep{Calculate the length of the resultant}
+The resultant is the vector AC. Since we know both
+the lengths of AB and BC and the included angle $A\hat{B}C$, we can use
+the cosine rule:
+
+\begin{eqnarray*}
+AC^2 &=& AB^2 +BC^2 - 2\cdot AB\cdot BC\cos(A\hat{B}C)\\
+&=& (12)^2 + (8)^2 - 2\cdot (12)(8)\cos(135^\circ)\\
+&=& 343,8 \\
+AC &=& 18,5\ \mathrm{km}
+\end{eqnarray*}
+
+\westep{Determine the direction of the resultant}
+Next we use the sine rule to determine the angle $\theta$:
+
+\begin{eqnarray*}
+\frac{\sin\theta}{8}&=&\frac{\sin 135^\circ}{18,5}\\
+\sin\theta &=& \frac{8\times\sin 135^\circ}{18,5}\\
+\theta &=& \sin^{-1}(0,3058)\\
+\theta &=& 17,8^\circ
+\end{eqnarray*}
+To find $F\hat{A}C$, we add 45$^\circ$.
+Thus, $F\hat{A}C=62,8^\circ$.\\
+
+\westep{Quote the resultant}
+The resultant displacement is therefore 18,5 km on a bearing of 062,8$^\circ$.}
+\end{wex}
+
+\Exercise{More Resultant Vectors}{
+\begin{enumerate}
+\item A frog is trying to cross a river. It swims at 3 \ms in a northerly direction towards the opposite bank. The water is flowing in a westerly direction at 5 \ms. Find the frog's resultant velocity by using appropriate calculations. Include a rough sketch of the situation in your answer.
+\item Sandra walks to the shop by walking 500 m Northwest and then 400 m N 30$^\circ$ E. Determine her resultant displacement by doing appropriate calculations.
+\end{enumerate}
+\practiceinfo
+
+\begin{tabular}[h]{cccccc}
+(1.) aaa & (2.) aaa & 
+ \end{tabular}
+}
+
+\section{Components of Vectors}
+In the discussion of vector addition we saw that a number of vectors acting
+together can be combined to give a single vector (the resultant). In
+much the same way a single vector can be broken down into a number of vectors which when added give that original vector. These vectors which sum to the original are called {\bf components} of the original vector. The process of breaking a vector into its components is called {\bf resolving into components}.
+
+While summing a given set of vectors gives just one answer (the
+resultant), a single vector can be resolved into infinitely many sets
+of components. In the diagrams below the same black vector is resolved
+into different pairs of components. These components are shown as dashed lines. When added together the dashed vectors give the original black vector
+(i.e. the original vector is the resultant of its components).
+
+\begin{center}
+\begin{pspicture}(-2.5,-2.6)(2.5,2.6)
+%\psgrid[gridcolor=lightgray]
+\psline[arrowscale=2]{->}(-2,0.5)(0,2.5)
+\psline[arrowscale=2,linestyle=dashed]{->}(-2,0.5)(-2,1.25)
+\psline[arrowscale=2,linestyle=dashed]{->}(-2,1.25)(0,2.5)
+
+\psline[arrowscale=2]{->}(0.5,0.5)(2.5,2.5)
+\psline[arrowscale=2,linestyle=dashed]{->}(0.5,0.5)(2.5,-0.5)
+\psline[arrowscale=2,linestyle=dashed]{->}(2.5,-0.5)(2.5,2.5)
+\psline[arrowscale=2]{->}(-2,-2.5)(0,-0.5)
+\psline[arrowscale=2,linestyle=dashed]{->}(-2,-2.5)(0,-2.5)
+\psline[arrowscale=2,linestyle=dashed]{->}(0,-2.5)(0,-0.5)
+\psline{-}(-0.25,-2.25)(0,-2.25)
+\psline{-}(-0.25,-2.25)(-0.25,-2.5)
+\end{pspicture}
+\end{center}
+
+In practice it is most useful to resolve a vector into components
+which are at right angles to one another, usually horizontal and vertical.
+
+Any vector can be resolved into a horizontal and a vertical component. If $\vec{A}$ is a vector, then the horizontal component of $\vec{A}$ is $\vec{A}_x$ and the vertical component is $\vec{A}_y$.
+
+\begin{center}
+\begin{pspicture}(0,-0.5)(3,3)
+%\psgrid[gridcolor=lightgray]
+\psline[arrowscale=2]{->}(0,0)(2.5,2.5)
+\psline[linestyle=dashed](2.5,0)(2.5,2.5)
+\psline[linestyle=dashed](0,0)(2.5,0)
+\uput[ul](1,1){$\vec{A}$}
+\uput[r](2.5,1.25){$\vec{A}_y$}
+\uput[d](1.25,0){$\vec{A}_x$}
+\end{pspicture}
+\end{center}
+
+\begin{wex}{Resolving a vector into components}{A motorist undergoes a displacement of 250~km in a direction 30$^\circ$ north of east. Resolve this displacement into components in the directions north ($\vec{x}_N$) and east ($\vec{x}_E$).\\}{
+\westep{Draw a rough sketch of the original vector}
+\begin{center}
+\begin{pspicture}(-0.5,-0.5)(7,3.5)
+%\psgrid[gridcolor=lightgray]
+\psline[arrowscale=2]{->}(0,0)(6,3.46)
+\pcline[offset=8pt,linestyle=none]{-}(0,0)(6,3.46)
+\psarc{->}(0,0){1.4}{0}{30}
+\lput{:U}{250 km}
+\rput(0.9,0.25){30$^\circ$}
+\psline[linestyle=dashed]{-}(0,0)(2,0)
+\end{pspicture}
+\scalebox{0.7}{\pscompass}
+\end{center}
+\westep{Determine the vector component}
+Next we resolve the displacement into its components north and
+east. Since these directions are perpendicular to one another, the
+components form a right-angled triangle with the original displacement
+as its hypotenuse.
+\begin{center}
+\begin{pspicture}(-0.5,-0.5)(7,3.5)
+%\psgrid[gridcolor=lightgray]
+\psline[arrowscale=2]{->}(0,0)(6,3.46)
+\pcline[offset=8pt,linestyle=none]{-}(0,0)(6,3.46)
+\psarc{->}(0,0){1.4}{0}{30}
+\lput{:U}{250 km}
+\rput(0.9,0.25){30$^\circ$}
+\psline[linestyle=dashed]{-}(0,0)(2,0)
+\psline[linestyle=dashed,linewidth=2pt]{->}(0,0)(6,0)
+\psline[linestyle=dashed,linewidth=2pt]{->}(6,0)(6,3.46)
+\pcline[offset=-8pt,linestyle=none]{-}(0,0)(6,0)
+\lput{:U}{$\vec{x}_E$}
+\pcline[offset=-8pt,linestyle=none]{-}(6.2,0)(6.2,3.46)
+\lput{:U}{\rotateright{$\vec{x}_N$}}
+\end{pspicture}
+\scalebox{0.7}{\pscompass}
+\end{center}
+
+Notice how the two components acting together give the original vector as
+their resultant.
+
+\westep{Determine the lengths of the component vectors}
+Now we can use trigonometry to calculate the magnitudes of the
+components of the original displacement:
+\begin{eqnarray*}
+x_N &=& (250) (\sin{30^\circ})\\
+&=& 125\ \mathrm{km}
+\end{eqnarray*}
+and
+\begin{eqnarray*}
+x_E &=& (250)(\cos{30^\circ})\\
+&=& 216,5\ \mathrm{km}
+\end{eqnarray*}
+
+Remember $x_N$ and $x_E$ are the magnitudes of the components -- they
+are in the directions north and east respectively.}
+\end{wex}
+
+\Extension{Block on an incline}{
+As a further example of components let us consider a block of mass $m$
+placed on a frictionless surface inclined at some angle $\theta$ to
+the horizontal. The block will obviously slide down the incline, but
+what causes this motion?
+
+The forces acting on the block are its weight $mg$ and the normal
+force $N$ exerted by the surface on the object. These two forces are
+shown in the diagram below.
+
+\begin{center}
+\begin{pspicture*}(-4.8,-2.6)(3.2,3.4)
+%\psgrid[gridcolor=lightgray]
+\psline{-}(-4.8,-2.4)(3.2,2.4)
+\psline[linestyle=dashed]{-}(-4.8,-2.4)(0,-2.4)
+\psarc{-}(-4.8,-2.4){1.6}{0}{30.96}
+\rput(-3.9,-2.1){$\theta$}
+\pspolygon[](-0.8,0)(-1.6232,1.371984)(-0.2512,2.1952)(0.57198,0.8232)
+\psline{->}(-0.5256,1.097584)(-0.5256,-2)
+\psline{->}(-0.5256,1.097584)(-1.89216,3.3751)
+\psarc{-}(-0.5256,1.09758){1.2}{-90}{-59.04}
+\rput(-0.35,0.5){$\theta$}
+\rput(-0.85,-0.45121){$mg$}
+\rput(-1.65,2.23634){$N$}
+\psline{-}(0.6865,-0.9228822)(0.429252,-1.077231)
+\psline{-}(0.429252,-1.077231)(0.583584,-1.334489)
+\psline[linestyle=dashed]{->}(-0.5256,1.09758)(-1.8922,0.27763)
+\pcline[offset=8pt,linestyle=none]{-}(-1.8922,0.27763)(-0.5256,1.09758)
+%\lput*{:U}{$F_{g \parallel}$}
+\rput(-2.0, 0.7){$F_{g \parallel}$}
+\psline[linestyle=dotted]{-}(-0.5256,-2)(0.840832,-1.18014)
+\psline[linestyle=dotted]{-}(-0.5256,-2)(-1.8922,0.27763)
+\psline[linestyle=dashed]{->}(-0.5256,1.09758)(0.840832,-1.180141)
+\pcline[offset=-8pt,linestyle=none]{-}(0.840832,-1.180141)(-0.5256,1.09758)
+%\lput*{:U}{\rotatedown{$F_{g \perp}$}}
+\rput(1.1, -0.6){$F_{g \perp}$}
+\end{pspicture*}
+\end{center}
+
+Now the object's weight can be resolved into components parallel and
+perpendicular to the inclined surface. These components are shown as
+dashed arrows in the diagram above and are at right angles to each
+other. The components have been drawn acting from the same
+point. Applying the parallelogram method, the two components of the
+block's weight sum to the weight vector.
+
+To find the components in terms of the weight we can use trigonometry:
+\begin{eqnarray*}
+F_{g \parallel} &=& mg\sin\theta\\
+F_{g \perp} &=& mg\cos\theta
+\end{eqnarray*}
+The component of the weight perpendicular to the slope $F_{g \perp}$
+exactly balances the normal force $N$ exerted by the surface. The
+parallel component, however, $F_{g \parallel}$ is unbalanced and causes
+the block to slide down the slope.
+}
+
+\Extension{Worked example}{
+\begin{wex}{Block on an incline plane}{Determine the force needed to keep a 10~kg block from sliding down a frictionless slope. The slope makes an angle of 30$^\circ$ with the horizontal.\\}{
+\westep{Draw a diagram of the situation}
+
+\begin{center}
+\scalebox{0.7} % Change this value to rescale the drawing.
+{
+\begin{pspicture}(3,-1.5510281)(11.138739,4.019899)
+\psline[linestyle=dashed,dash=0.16cm 0.16cm](2.45,-1.5229138)(6.45,-1.5229138)
+\psline(2.35,-1.5229138)(11.118739,3.2630975)
+\rput{28.576452}(1.5568352,-2.9492867){\psframe[dimen=outer](7.568645,2.2818346)(5.568645,0.8818346)}
+\psdots[dotsize=0.12,dotangle=28.576452](6.568645,1.5818346)
+\psline[arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(6.568645,1.5818346)(8.764094,2.777662)
+\psline[linestyle=dashed,dash=0.16cm 0.16cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(6.568645,1.5818346)(4.3731956,0.3860072)
+\psline[linestyle=dashed,dash=0.16cm 0.16cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(6.568645,1.5818347)(7.4296403,0.0011114201)
+\usefont{T1}{ptm}{m}{n}
+\rput{28.576452}(0.55705374,-1.882153){\rput(3.967752,0.17647317){$F_{g \parallel}$}}
+\psline[arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(6.55,1.5770862)(6.55,-0.5229139)
+\usefont{T1}{ptm}{m}{n}
+\rput(4.0,-1.05){30$^\circ$}
+\psarc[arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(2.4,-1.5729139){2.4}{1.0}{30.0}
+\usefont{T1}{ptm}{m}{n}
+\rput{27.567446}(2.6756842,-4.179512){\rput(9.853437,3.3870862){Required Force}}
+\end{pspicture}
+}
+\end{center}
+
+The force that will keep the block from sliding is equal to the parallel component of the weight, but its direction is up the slope.\\
+
+\westep{Calculate $F_{g \parallel}$}
+\begin{eqnarray*}
+F_{g \parallel} &=& m g \sin{\theta}\\
+&=& (10)(9,8)(\sin{30^\circ})\\
+&=& 49 \textnormal{N}
+\end{eqnarray*}
+
+\westep{Write final answer}
+The force is 49~N up the slope.}
+\end{wex}
+}
+
+\subsection{Vector addition using components}
+Components can also be used to find the resultant of vectors. This technique can be applied to both graphical and algebraic methods of finding the resultant. The method is simple: make a rough sketch of the problem, find the horizontal and vertical components of each vector, find the sum of all horizontal components and the sum of all the vertical components and then use them to find the resultant.
+
+Consider the two vectors, $\vec{A}$ and $\vec{B}$, in Figure~\ref{fig:p:v:components:addition:vectors}, together with their resultant, $\vec{R}$.
+
+\begin{figure}[!htbp]
+\begin{center}
+\scalebox{0.7}
+{
+\begin{pspicture}(0,0)(8,6)%%\psgrid
+%\psgrid[gridcolor=lightgray]
+\psline[arrowscale=2]{->}(0,0)(5,2)
+\pcline[offset=-8pt,linestyle=none](0,0)(5,2)
+\lput{:U}{$\vec{A}$}
+\psline[arrowscale=2]{->}(5,2)(8,6)
+\pcline[offset=-8pt,linestyle=none](5,2)(8,6)
+\lput{:U}{$\vec{B}$}
+\psline[arrowscale=2,linewidth=2pt]{->}(0,0)(8,6)
+\pcline[offset=8pt,linestyle=none](0,0)(8,6)
+\lput{:U}{$\vec{R}$}
+\end{pspicture}
+}
+\end{center}
+\caption{An example of two vectors being added to give a resultant}
+\label{fig:p:v:components:addition:vectors}
+\end{figure}
+
+Each vector in Figure~\ref{fig:p:v:components:addition:vectors} can be broken down into one component in the $x$-direction (horizontal) and one in the $y$-direction (vertical). These components are two vectors which when added give you the original vector as the resultant. This is shown in Figure~\ref{fig:p:v:components:addition:vectors:components} where we can see that:
+
+\begin{minipage}{0.5\textwidth}
+\begin{eqnarray*}
+\vec{A}&=&\vec{A}_x+\vec{A}_y\\
+\vec{B}&=&\vec{B}_x+\vec{B}_y\\
+\vec{R}&=&\vec{R}_x+\vec{R}_y\\
+\end{eqnarray*}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+\begin{eqnarray*}
+\mbox{But,}\quad \vec{R}_x&=&\vec{A}_x+\vec{B}_x\\
+\mbox{and}\quad\vec{R}_y&=&\vec{A}_y+\vec{B}_y\\
+\end{eqnarray*}
+\end{minipage}
+
+In summary, addition of the $x$ components of the two original
+vectors gives the $x$ component of the resultant. The same applies to
+the $y$ components. So if we just added all the components
+together we would get the same answer! This is another important
+property of vectors.
+
+\begin{figure}[!htbp]
+\begin{center}
+\scalebox{1}
+{
+\begin{pspicture}(-1,-0.6)(8.6,7)
+%\psgrid[gridcolor=lightgray]
+%A
+\psline[arrowscale=2]{->}(0,0)(5,2)
+\pcline[offset=-8pt,linestyle=none](0,0)(5,2)
+\lput{:U}{$\vec{A}$}
+\psline[linestyle=dashed,arrowscale=2]{->}(0,0)(5,0)(5,2)	%components of A
+\pcline[offset=-8pt,linestyle=none](0,0)(5,0)
+\lput{:U}{$\vec{A}_x$}
+\psline[linestyle=dashed,arrowscale=2]{->}(0,6.5)(5,6.5)
+\pcline[offset=8pt,linestyle=none](0,6.5)(5,6.5)
+\lput{:U}{$\vec{A}_x$}
+\pcline[offset=-8pt,linestyle=none](5,0)(5,2)
+\lput{:U}{$\vec{A}_y$}
+\psline[linestyle=dashed,arrowscale=2]{->}(-0.5,0)(-0.5,2)
+\pcline[offset=8pt,linestyle=none](-0.5,0)(-0.5,2)
+\lput{:U}{$\vec{A}_y$}
+%Right angle in corner! (5,0)
+\psline[linestyle=dashed,arrowscale=2](4.7,0)(4.7,0.3)
+\psline[linestyle=dashed,arrowscale=2](4.7,0.3)(5.,0.3)
+%B
+\psline[arrowscale=2]{->}(5,2)(8,6)
+\pcline[offset=-8pt,linestyle=none](5,2)(8,6)
+\lput{:U}{$\vec{B}$}
+\psline[linestyle=dashed,arrowscale=2]{->}(5,2)(8,2)(8,6)	%components of B
+\pcline[offset=-8pt,linestyle=none](5,2)(8,2)
+\lput{:U}{$\vec{B}_x$}
+\psline[linestyle=dashed,arrowscale=2]{->}(5,6.5)(8,6.5)
+\pcline[offset=8pt,linestyle=none](5,6.5)(8,6.5)
+\lput{:U}{$\vec{B}_x$}
+\pcline[offset=-8pt,linestyle=none](8,2)(8,6)
+\lput{:U}{$\vec{B}_y$}
+\psline[linestyle=dashed,arrowscale=2]{->}(-0.5,2)(-0.5,6)
+\pcline[offset=8pt,linestyle=none](-0.5,2)(-0.5,6)
+\lput{:U}{$\vec{B}_y$}
+%Right angle in corner (8,2)
+\psline[linestyle=dashed,arrowscale=2](7.7,2)(7.7,2.3)
+\psline[linestyle=dashed,arrowscale=2](7.7,2.3)(8,2.3)
+%R
+\psline[arrowscale=2,linewidth=2pt]{->}(0,0)(8,6)
+\pcline[offset=8pt,linestyle=none](0,0)(8,6)
+\lput{:U}{$\vec{R}$}
+\psline[linestyle=dashed,arrowscale=2]{->}(0,0)(0,6)(8,6)	%components of B
+\pcline[offset=-8pt,linestyle=none](0,6)(8,6)
+\lput{:U}{$\vec{R}_x$}
+\pcline[offset=-8pt,linestyle=none](0,0)(0,6)
+\lput{:U}{$\vec{R}_y$}
+%Right angle in corner (0,6)
+\psline[linestyle=dashed,arrowscale=2](0,5.7)(0.3,5.7)
+\psline[linestyle=dashed,arrowscale=2](0.3,5.7)(0.3,6)
+\end{pspicture}
+}
+\end{center}
+\caption{Adding vectors using components.}
+\label{fig:p:v:components:addition:vectors:components}
+\end{figure}
+
+\begin{wex}{Adding Vectors Using Components}{If in Figure~\ref{fig:p:v:components:addition:vectors:components}, $\vec{A}=5,385\emm$ at an angle of 21.8$^\circ$ to the horizontal and $\vec{B}=5\emm$ at an angle of 53,13$^\circ$ to the horizontal, find $\vec{R}$.\\}{
+\westep{Decide how to tackle the problem}
+The first thing we must realise is that the order that we add the vectors does not matter. Therefore, we can work through the vectors to be added in any order.
+
+\westep{Resolve $\vec{A}$ into components}
+We find the components of $\vec{A}$ by using known trigonometric ratios. First we find the magnitude of the vertical component, $A_y$:
+\begin{eqnarray*}
+\sin \theta &=& \frac{A_y}{A} \\
+\sin{21,8^\circ} &=& \frac{A_y}{5,385}\\
+A_y &=& (5,385)(\sin{21,8^\circ})\\
+&=& 2\emm
+\end{eqnarray*}
+
+Secondly we find the magnitude of the horizontal component, $A_x$:
+\begin{eqnarray*}
+\cos \theta &=& \frac{A_x}{A} \\
+\cos{21.8^\circ} &=& \frac{A_x}{5,385}\\
+A_x &=& (5,385) (\cos{21,8^\circ})\\
+&=& 5\emm
+\end{eqnarray*}
+
+\begin{center}
+\begin{pspicture}(-0.2,-0.6)(5.6,2.4)%%\psgrid
+%\psgrid[gridcolor=lightgray]
+\psline[arrowscale=2]{->}(0,0)(5,2)
+\pcline[offset=8pt]{|-|}(0,0)(5,2)
+\lput*{:U}{5,385 m}
+\psline[linestyle=dashed,arrowscale=2]{->}(0,0)(5,0)
+\pcline[offset=-8pt]{|-|}(0,0)(5,0)
+\lput*{:U}{5 m}
+\psline[linestyle=dashed,arrowscale=2]{->}(5,0)(5,2)
+\pcline[offset=-8pt]{|-|}(5,0)(5,2)
+\lput*{:U}{2 m}
+%Right angle in corner! (5,0)
+\psline[linestyle=dashed,arrowscale=2](4.7,0)(4.7,0.3)
+\psline[linestyle=dashed,arrowscale=2](4.7,0.3)(5.,0.3)
+\end{pspicture}
+\end{center}
+
+The components give the sides of the right angle triangle, for which the original vector, $\vec{A}$, is the hypotenuse.
+
+\westep{Resolve $\vec{B}$ into components}
+We find the components of $\vec{B}$ by using known trigonometric ratios. First we find the magnitude of the vertical component, $B_y$:
+\begin{eqnarray*}
+\sin{\theta} & = & \frac{B_y}{B} \\
+\sin{53,13^\circ} & = &\frac{B_y}{5}\\
+B_y & = & (5)(\sin{53,13^\circ})\\
+& = & 4\emm
+\end{eqnarray*}
+
+Secondly we find the magnitude of the horizontal component, $B_x$:
+\begin{eqnarray*}
+\cos{\theta} &=& \frac{B_x}{B} \\
+\cos{21,8^\circ} &=& \frac{B_x}{5,385}\\
+B_x & = & (5,385) (\cos{53,13^\circ})\\
+& = & 5\emm
+\end{eqnarray*}
+
+\begin{center}
+\begin{pspicture}(4.6,1.4)(8.6,6.4)
+%\psgrid[gridcolor=lightgray]
+\psline[arrowscale=2]{->}(5,2)(8,6)
+\pcline[offset=8pt]{|-|}(5,2)(8,6)
+\lput*{:U}{5 m}
+\psline[linestyle=dashed,arrowscale=2]{->}(5,2)(8,2)
+\pcline[offset=-8pt]{|-|}(5,2)(8,2)
+\lput*{:U}{3 m}
+\psline[linestyle=dashed,arrowscale=2]{->}(8,2)(8,6)
+\pcline[offset=-8pt]{|-|}(8,2)(8,6)
+\lput*{:U}{4 m}
+%Right angle in corner (8,2)
+\psline[linestyle=dashed,arrowscale=2](7.7,2)(7.7,2.3)
+\psline[linestyle=dashed,arrowscale=2](7.7,2.3)(8,2.3)
+\end{pspicture}
+\end{center}
+
+\westep{Determine the components of the resultant vector}
+Now we have all the components. If we add all the horizontal components then
+we will have the $x$-component of the resultant vector, $\vec{R}_x$.  Similarly, we add all the vertical components then we will have the $y$-component of the resultant vector, $\vec{R}_y$.
+\begin{eqnarray*}
+R_x &=& A_x+B_x\\
+&=&5\emm + 3\emm\\
+&=&8\emm
+\end{eqnarray*}
+Therefore, $\vec{R}_x$ is 8 m to the right.
+\begin{eqnarray*}
+R_y &=& A_y+B_y\\
+&=&2\emm + 4\emm\\
+&=&6\emm
+\end{eqnarray*}
+Therefore, $\vec{R}_y$ is 6 m up.
+
+\westep{Determine the magnitude and direction of the resultant vector}
+Now that we have the components of the resultant, we can use the Theorem of Pythagoras to determine the magnitude of the resultant, $R$.
+\begin{eqnarray*}
+R^2&=&(R_x)^2 + (R_y)^2\\
+R^2&=&(6)^2 + (8)^2\\
+R^2&=&100\\
+\therefore R&=&10\emm
+\end{eqnarray*}
+
+\begin{center}
+\begin{pspicture}(-1,-0.4)(8.4,7)
+%\psgrid[gridcolor=lightgray]
+\psline[arrowscale=2]{->}(0,0)(8,6)
+\pcline[offset=-8pt]{|-|}(0,0)(8,6)
+\lput*{:U}{10 m}
+
+\psline[linestyle=dashed,arrowscale=2]{->}(0,0)(0,6)
+\psline[linestyle=dashed,arrowscale=2]{->}(-.5,0)(-0.5,2)
+\psline[linestyle=dashed,arrowscale=2]{->}(-0.5,2)(-0.5,6)
+\pcline[offset=8pt]{|-|}(-.5,0)(-0.5,6)
+\lput*{:U}{6 m}
+
+\psline[linestyle=dashed,arrowscale=2]{->}(0,6)(8,6)
+\psline[linestyle=dashed,arrowscale=2]{->}(0,6.5)(5,6.5)
+\psline[linestyle=dashed,arrowscale=2]{->}(5,6.5)(8,6.5)
+\pcline[offset=8pt]{|-|}(0,6.5)(8,6.5)
+\lput*{:U}{8 m}
+
+%Right angle in corner (0,6)
+\psline[linestyle=dashed,arrowscale=2](0,5.7)(0.3,5.7)
+\psline[linestyle=dashed,arrowscale=2](0.3,5.7)(0.3,6)
+\psline[linestyle=dashed,arrowscale=2](0,0)(4,0)
+\rput(0.7,0.25){$\alpha$}
+\psarc{->}(0,0){1}{0}{36.8}
+\end{pspicture}
+\end{center}
+
+The magnitude of the resultant, $R$ is 10 m.  So all we have to do is calculate its direction. We can specify the direction as the angle the vectors makes with a known direction. To do this you only need to visualise the vector as starting at the origin of a coordinate system. We have drawn this explicitly below and the angle we will calculate is labeled $\alpha$.
+
+Using our known trigonometric ratios we can calculate the value of $\alpha$;
+\begin{eqnarray*}
+\tan \alpha & = & \frac{6 \emm}{8\emm} \\
+\alpha & = & \tan^{-1} \frac{6\emm}{8\emm}\\
+\alpha & = & 36,8^o.
+\end{eqnarray*}
+\westep{Quote the final answer}
+$\vec{R}$ is 10 m at an angle of $36,8^\circ$ to the positive $x$-axis.}
+\end{wex}
+
+\Exercise{Adding and Subtracting Components of Vectors}{
+\begin{enumerate}
+\item Harold walks to school by walking 600 m Northeast and then 500 m N $40^o$ W. Determine his resultant displacement by means of addition of components of vectors.
+\item A dove flies from her nest, looking for food for her chick. She flies at a velocity of 2 \ms on a bearing of 135${^o}$ in a wind with a velocity of 1,2 \ms on a bearing of 230${^o}$. Calculate her resultant velocity by adding the horizontal and vertical components of vectors.
+\end{enumerate}
+\practiceinfo
+
+\begin{tabular}[h]{cccccc}
+(1.) aaa & (2.) aaa & 
+ \end{tabular}
+}
+
+\Extension{Vector Multiplication}{
+Vectors are special, they are more than just numbers. This means that multiplying vectors is not necessarily the same as just multiplying their magnitudes. There are two different types of multiplication defined for vectors. You can find the dot product of two vectors or the cross product.
+
+The \textit{dot} product is most similar to regular multiplication between scalars. To take the dot product of two vectors, you just multiply their magnitudes to get out a scalar answer. The mathematical definition of the dot product is:
+\begin{equation*}
+\vec{a}\bullet \vec{b} = \lvert \vec{a} \rvert \cdot \lvert \vec{b} \rvert\cos \theta
+\end{equation*}
+
+Take two vectors $\vec{a}$ and $\vec{b}$:
+
+\begin{center}
+\begin{pspicture}(-5,-0.5)(1,1)
+%\psgrid[gridcolor=lightgray]
+\rput(-3.5,0.25){a}
+\psline{->}(-5,0)(-1,0)
+\rput(0,0.8){b}
+\psline{->}(-1,0)(1,1)
+\end{pspicture}
+\end{center}
+
+You can draw in the component of $\vec{b}$ that is parallel to $\vec{a}$:
+
+\begin{center}
+\begin{pspicture}(-5,-0.5)(1,1)
+%\psgrid[gridcolor=lightgray]
+\rput(-3.5,0.25){a}
+\psline{->}(-5,0)(-1,0)
+\rput(0,0.8){b}
+\psline{->}(-1,0)(1,1)
+\psline[linestyle=dashed]{->}(-1,0)(1,0)
+\rput(0,0.25){$\theta$}
+\psline[linestyle=dashed]{->}(1,0)(1,1)
+\psarc{-}(0,0.25){0.5}{330}{50}
+\rput(0,-0.25){b}
+\rput(0.5,-0.25){$\cos \theta$}
+\end{pspicture}
+\end{center}
+
+In this way we can arrive at the definition of the dot product. You find how much of $\vec{b}$ is lined up with $\vec{a}$ by finding the component of $\vec{b}$ parallel to $\vec{a}$. Then multiply the magnitude of that component, $\lvert\vec{b}\rvert$ $ \cos \theta$, with the magnitude of $\vec{a}$ to get a scalar.\\
+
+The second type of multiplication, the cross product, is more subtle and uses the directions of the vectors in a more complicated way. The cross product of two vectors, $\vec{a}$ and $\vec{b}$, is written $\vec{a}\times\vec{b}$ and the result of this operation on $\vec{a}$ and $\vec{b}$ is another vector. The magnitude of the cross product of these two vectors is:
+\begin{equation*}
+\lvert \vec{a}\times \vec{b} \rvert = \lvert\vec{a}\rvert \lvert\vec{b}\rvert\sin \theta
+\end{equation*}
+
+We still need to find the direction of $\vec{a}\times\vec{b}$. We do this by applying the \textit{right hand rule}.\\
+
+\begin{minipage}{0.75\textwidth}
+\textbf{Method: Right Hand Rule}
+\begin{enumerate}
+\item Using your right hand:
+\item Point your index finger in the direction of $\vec{a}$.
+\item Point the middle finger in the direction of $\vec{b}$.
+\item Your thumb will show the direction of $\vec{a}\times \vec{b}$.
+\end{enumerate}
+\end{minipage}
+\begin{minipage}{0.24\textwidth}
+\begin{pspicture}(0,-2)(2,0)
+%\psgrid[gridcolor=lightgray]
+\psline{->}(0,-1)(0,0)
+\rput(-0.5,-1.5){b}
+\psline{->}(0,-1)(-1,-1.5)
+\rput(-0.25,-0.9){$\theta$}
+\psline{->}(0,-1)(1,-1)
+\psarc{-}(0,-1){0.5}{90}{205}
+\rput(0.25,-0.5){a}
+\rput(0.5,-1.25){a$\times$b}
+\end{pspicture}
+\end{minipage}
+}
+
+\summary{aaa}
+\begin{enumerate}
+\item A scalar is a physical quantity with magnitude only.
+
+\item A vector is a physical quantity with magnitude and direction.
+
+\item Vectors may be represented as arrows where the length of the arrow indicates the magnitude and the arrowhead indicates the direction of the vector.
+
+\item The direction of a vector can be indicated by referring to another vector or a fixed point (eg. 30$^\circ$ from the river bank); using a compass (eg. N 30$^\circ$ W); or bearing (eg. 053$^\circ$).
+
+\item Vectors can be added using the head-to-tail method, the parallelogram method or the component method.
+
+\item The resultant of a number of vectors is the single vector whose effect is the same as the individual vectors acting together.
+
+\end{enumerate}
+
+
+\begin{eocexercises}{}
+
+\begin{enumerate}
+
+\begin{minipage}{0.65\textwidth}
+\item An object is suspended by means of a light string. The sketch shows a horizontal force $F$ which pulls the object from the vertical position until it reaches an equilibrium position as shown. Which one of the following vector diagrams best represents all the forces acting on the object?
+\end{minipage}
+\begin{minipage}{0.34\textwidth}
+\begin{center}
+\scalebox{0.75} % Change this value to rescale the drawing.
+{
+\begin{pspicture}(0,-1.0)(4.04,1.04)
+\psline[linewidth=0.08cm](0.0,1.0)(4.0,1.0)
+\psframe[linewidth=0.04,dimen=outer](2.0,0.0)(1.0,-1.0)
+\psline[linewidth=0.04cm](0.5,1.0)(1.5,0.0)
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(2.0,-0.5)(3.7,-0.5)
+\usefont{T1}{ptm}{m}{n}
+\rput(2.8896875,-0.09){F}
+\end{pspicture}
+}
+\end{center}
+\end{minipage}
+
+\begin{center}
+\begin{tabular}{p{3cm} p{3cm} p{3cm} p{3cm}}
+A & B & C & D\\
+\mbox{\scalebox{0.75} % Change this value to rescale the drawing.
+{
+\begin{pspicture}(0,-1.52)(1.52,1.52)
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(1.5,0.1)(1.5,-1.5)
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(1.5,0.1)(0.0,0.1)
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(1.5,0.1)(0.1,1.5)
+\end{pspicture}
+}}
+
+&
+
+\mbox{\scalebox{0.75} % Change this value to rescale the drawing.
+{
+\begin{pspicture}(0,-1.52)(3.02,1.52)
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(1.5,0.0)(0.0,1.5)
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(1.5,0.0)(1.5,-1.5)
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(1.5,0.0)(3.0,0.0)
+\end{pspicture}
+}}
+
+&
+
+\mbox{\scalebox{0.75} % Change this value to rescale the drawing.
+{
+\begin{pspicture}(0,-1.52)(3.02,1.52)
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(1.5,-0.75)(0.0,0.75)
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(1.5,-0.75)(3.0,-0.75)
+\end{pspicture}
+}}
+
+&
+
+\mbox{\scalebox{0.75} % Change this value to rescale the drawing.
+{
+\begin{pspicture}(0,-1.52)(3.02,1.52)
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(1.5,0.0)(1.5,1.5)
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(1.5,0.0)(0.0,0.0)
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(1.5,0.0)(3.0,-1.5)
+\end{pspicture}
+}} \\
+\end{tabular}
+\end{center}
+
+\begin{minipage}{0.65\textwidth}
+\item A load of weight $W$ is suspended from two strings. $F_1$ and $F_2$ are the forces exerted by the strings on the load in the directions show in the figure above. Which one of the following equations is valid for this situation?
+\begin{enumerate}
+\item[A] $\;\;$ $W = F_1^2 + F_2^2$
+\item[B] $\;\;$ $F_1 \sin{50^\circ} = F_2 \sin{30^\circ}$
+\item[C] $\;\;$ $F_1 \cos{50^\circ} = F_2 \cos{30^\circ}$
+\item[D] $\;\;$ $W = F_1 + F_2$\\
+\end{enumerate}
+\end{minipage}
+\begin{minipage}{0.33\textwidth}
+\scalebox{0.7} % Change this value to rescale the drawing.
+{
+\begin{pspicture}(-1,-2.57)(3.985,2.57)
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(2.4,-0.05)(2.4,-2.55)
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(2.40654,-0.09489624)(3.89346,2.3948963)
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(2.3981903,-0.06574341)(0.0,1.85)
+\psline[linewidth=0.04cm,linestyle=dashed,dash=0.16cm 0.16cm](2.4,2.55)(2.4,-0.05)
+\usefont{T1}{ptm}{m}{n}
+\rput(2.9660938,-1.04){$W$}
+\usefont{T1}{ptm}{m}{n}
+\rput(1.055,0.46){$F_1$}
+\usefont{T1}{ptm}{m}{n}
+\rput(3.6695313,0.96){$F_2$}
+\usefont{T1}{ptm}{m}{n}
+\rput(2.0323439,0.86){50$^\circ$}
+\usefont{T1}{ptm}{m}{n}
+\rput(2.9335938,1.46){30$^\circ$}
+\end{pspicture}
+}
+\end{minipage}
+
+\begin{minipage}{0.5\textwidth}
+\item Two spring balances $P$ and $Q$ are connected by means of a piece of string to a wall as shown. A horizontal force of 100~N is exerted on spring balance Q. What will be the readings on spring balances $P$ and $Q$?\\
+\end{minipage}
+\begin{minipage}{0.49\textwidth}
+\scalebox{0.6} % Change this value to rescale the drawing.
+{
+\begin{pspicture}(-0.5,-1.94)(10.04,1.04)
+\psline[linewidth=0.08cm](0.02,1.0)(0.02,-1.0)
+\psline[linewidth=0.04cm](3.82,0.0)(4.32,0.0)
+\pscircle[linewidth=0.04,dimen=outer](4.52,0.0){0.2}
+\psframe[linewidth=0.04,dimen=outer](7.22,0.3)(4.72,-0.3)
+\psframe[linewidth=0.04,dimen=outer](6.92,0.1)(5.02,-0.1)
+\psarc[linewidth=0.04](7.42,0.0){0.2}{180.0}{45.0}
+\psline[linewidth=0.04cm](0.02,0.0)(0.5175016,0.0)
+\pscircle[linewidth=0.04,dimen=outer](0.71650225,0){0.19900064}
+\psframe[linewidth=0.04,dimen=outer](3.4030108,0.3)(0.91550285,-0.3)
+\psframe[linewidth=0.04,dimen=outer](3.1045098,0.1)(1.2140038,-0.1)
+\psarc[linewidth=0.04](3.6020114,0){0.19900064}{180.0}{45.0}
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(7.62,0.0)(10.02,0.0)
+\usefont{T1}{ptm}{m}{n}
+\rput(8.846406,-0.49){100 N}
+\end{pspicture}
+}
+\end{minipage}
+\begin{tabular}{|c|c|c|}\hline
+& P & Q \\\hline
+A & 100 N & 0 N \\\hline
+B & 25 N & 75 N \\\hline
+C & 50 N & 50 N \\\hline
+D & 100 N & 100 N \\\hline
+\end{tabular}
+
+
+\item{A point is acted on by two forces in equilibrium. The forces
+\begin{enumerate}
+\item[A] $\;\;$have equal magnitudes and directions.
+\item[B] $\;\;$have equal magnitudes but opposite directions.
+\item[C] $\;\;$act perpendicular to each other.
+\item[D] $\;\;$act in the same direction.\\
+\end{enumerate}
+}
+
+\begin{minipage}{0.65\textwidth}
+\item A point in equilibrium is acted on by three forces. Force $F_1$ has components 15 N due south and 13 N due west. What are the components of force $F_2$?\\
+\begin{enumerate}
+\item[A] $\;\;$13 N due north and 20 due west
+\item[B] $\;\;$13 N due north and 13 N due west
+\item[C] $\;\;$15 N due north and 7 N due west
+\item[D] $\;\;$15 N due north and 13 N due east\\
+\end{enumerate}
+\end{minipage}
+\begin{minipage}{0.34\textwidth}
+\scalebox{1} % Change this value to rescale the drawing.
+{
+\begin{pspicture}(-0.5,-2.0085938)(4.005625,2.0085938) \psline[linewidth=0.04cm,linestyle=dashed,dash=0.16cm 0.16cm](1.9996876,1.7373438)(1.9996876,-1.6626563) \psline[linewidth=0.04cm,linestyle=dashed,dash=0.16cm 0.16cm](0.2996875,0.03734375)(3.6996875,0.03734375) \psline[linewidth=0.04cm,arrowsize=0.0529cm 3.17,arrowlength=1.4,arrowinset=0.0]{->}(1.9996876,0.03734375)(3.2996874,0.03734375) \psline[linewidth=0.04cm,arrowsize=0.05291667cm 3.17,arrowlength=1.4,arrowinset=0.0]{->}(1.9996876,0.03734375)(0.8996875,1.6373438) \psline[linewidth=0.04cm,arrowsize=0.05291667cm 3.17,arrowlength=1.4,arrowinset=0.0]{->}(1.9996876,0.03734375)(0.6996875,-1.2626562) \usefont{T1}{ptm}{m}{n} \rput(1.9879688,1.8373437){\footnotesize N} \usefont{T1}{ptm}{m}{n} \rput(0.13625,0.03734375){\footnotesize W} \usefont{T1}{ptm}{m}{n} \rput(1.9701562,-1.8626562){\footnotesize S} \usefont{T1}{ptm}{m}{n} \rput(3.8676562,0.03734375){\footnotesize E} \usefont{T1}{ptm}{m}{n} \rput(2.5396874,-0.16265625){\footnotesize 20 N} \usefont{T1}{ptm}{m}{n} \rput(1.5371875,1.1373438){\footnotesize F$_2$} \usefont{T1}{ptm}{m}{n} \rput(1.5371875,-0.86265624){\footnotesize F$_1$}
+\end{pspicture}
+}
+\end{minipage}
+
+\begin{minipage}{\textwidth}
+\item Which of the following contains two vectors and a scalar?
+\begin{enumerate}
+\item[A] $\;\;$distance, acceleration, speed
+\item[B] $\;\;$displacement, velocity, acceleration
+\item[C] $\;\;$distance, mass, speed
+\item[D] $\;\;$displacement, speed, velocity\\
+\end{enumerate}
+\end{minipage}
+
+\begin{minipage}{\textwidth}
+\item Two vectors act on the same point. What should the angle between them be so that a maximum resultant is obtained?
+\begin{multicols}{4}
+\item[A] $\;\;$0$^\circ$
+\item[B] $\;\;$90$^\circ$
+\item[C] $\;\;$180$^\circ$
+\item[D] $\;\;$cannot tell\\
+\end{multicols}
+\end{minipage}
+
+\begin{minipage}{\textwidth}
+\item Two forces, 4~N and 11~N, act on a point. Which one of the following \underline{cannot} be the magnitude of a resultant?
+\begin{multicols}{4}
+\item[A] $\;\;$4 N
+\item[B] $\;\;$7 N
+\item[C] $\;\;$11 N
+\item[D] $\;\;$15 N
+\end{multicols}
+\end{minipage}
+
+\end{enumerate}
+
+
+\begin{enumerate}
+
+\item A helicopter flies due east with an air speed of 150 km.h$^{-1}$. It flies through an air current which moves at 200 km.h$^{-1}$ north. Given this information, answer the following questions:
+\begin{enumerate}
+\item In which direction does the helicopter fly?
+\item What is the ground speed of the helicopter?
+\item Calculate the ground distance covered in 40 minutes by the helicopter. \end{enumerate}
+
+\item A plane must fly 70 km due north. A cross wind is blowing to the west at 30 km.h$^{-1}$. In which direction must the pilot steer if the plane flies at a speed of 200 km.h$^{-1}$ in windless conditions?
+
+\item A stream that is 280 m wide flows along its banks with a velocity of 1.80m.s$^{-1}$. A raft can travel at a speed of 2.50 m.s$^{-1}$ across the stream. Answer the following questions:
+\begin{enumerate}
+\item What is the shortest time in which the raft can cross the stream?
+\item How far does the raft drift downstream in that time?
+\item In what direction must the raft be steered against the current so that it crosses the stream perpendicular to its banks?
+\item How long does it take to cross the stream in part c?
+\end{enumerate}
+
+\item{A helicopter is flying from place $X$ to place $Y$. $Y$ is $1000$~km away in a direction $50^{\circ}$ east of north and the pilot wishes to reach it in two hours. There is a wind of speed $150$~km.h$^{-1}$ blowing from the northwest. Find, by accurate construction and measurement (with a scale of $1~\mathrm{cm} = 50~\mathrm{km.h}^{-1}$), the
+\begin{enumerate}
+\item the direction in which the helicopter must fly, and
+\item the magnitude of the velocity required for it to reach its destination on time.
+\end{enumerate}
+}
+
+\item{An aeroplane is flying towards a destination $300$~km due south from its present position. There is a wind blowing from the north east at $120$~km.h$^{-1}$. The aeroplane needs to reach its destination in $30$ minutes. Find, by accurate construction and measurement (with a scale of $1~ \mathrm{cm} = 30~ \mathrm{km.s}^{-1}$), or otherwise, the
+\begin{enumerate}
+\item the direction in which the aeroplane must fly and
+\item the speed which the aeroplane must maintain in order to reach the destination on time.
+\item Confirm your answers in the previous 2 subquestions with calculations.
+\end{enumerate}
+}
+
+\begin{minipage}{0.55\textwidth}
+\item An object of weight $W$ is supported by two cables attached to the ceiling and wall as shown. The tensions in the two cables are $T_1$ and $T_2$ respectively. Tension $T_1 = 1200$~N. Determine the tension $T_2$ and weight $W$ of the object by accurate construction and measurement or by calculation.\\
+\end{minipage}
+\begin{minipage}{0.44\textwidth}
+\scalebox{0.75} % Change this value to rescale the drawing.
+{
+\begin{pspicture}(0,-2.03)(6.4809375,2.03) \psline[linewidth=0.04cm](0.4809375,2.01)(0.4809375,-2.01) \psline[linewidth=0.04cm](0.4809375,2.01)(6.4609375,2.01) \psframe[linewidth=0.04,dimen=outer](3.9409375,-1.3730845)(3.0009375,-1.9700994) \psline[linewidth=0.04cm](3.4809375,-0.77606964)(3.4809375,-1.3929851) \psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(3.4809375,-0.79597014)(5.5809374,2.01) \psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(3.4809375,-0.79)(0.5009375,0.27) \usefont{T1}{ptm}{m}{n} \rput(4.872031,0.5){T$_1$}
+\usefont{T1}{ptm}{m}{n} \rput(1.7120312,-0.44){T$_2$}
+\usefont{T1}{ptm}{m}{n} \rput(3.4745312,-1.68){W}
+\usefont{T1}{ptm}{m}{n} \rput(5.114375,1.78){45$^\circ$}
+\usefont{T1}{ptm}{m}{n} \rput(0.8640625,-0.14){70$^\circ$}
+\end{pspicture}
+}
+\end{minipage}
+
+\item{In a map-work exercise, hikers are required to walk from a tree marked A on the map to another tree marked B which lies 2,0 km due East of A. The hikers then walk in a straight line to a waterfall in position C which has components measured from B of 1,0 km E and 4,0 km N.
+
+\begin{enumerate}
+\item Distinguish between quantities that are described as being \textit{vector} and \textit{scalar}.
+\item Draw a labelled displacement-vector diagram (not necessarily to scale) of the hikers' complete journey.
+\item What is the total distance walked by the hikers from their starting point at A to the waterfall C?
+\item What are the magnitude and bearing, to the nearest degree, of the displacement of the hikers from their starting point to the waterfall?
+\end{enumerate}
+}
+
+\begin{minipage}{0.58\textwidth}
+\item An object $X$ is supported by two strings, $A$ and $B$, attached to the ceiling as shown in the sketch. Each of these strings can withstand a maximum force of 700~N. The weight of $X$ is increased gradually.
+
+\begin{enumerate}
+\item Draw a rough sketch of the triangle of forces, and use it to explain which string will break first.
+\item Determine the maximum weight of $X$ which can be supported.
+\end{enumerate}
+
+\end{minipage}
+\begin{minipage}{0.37\textwidth}
+\scalebox{0.75} % Change this value to rescale the drawing.
+{
+\begin{pspicture}(-0.5,-1.8014708)(6.04,1.8385292)
+\psline[linewidth=0.08cm](0.0,1.7985293)(6.0,1.7985293)
+\psframe[linewidth=0.04,dimen=outer](4.0,-0.80147076)(3.0,-1.8014708)
+\psline[linewidth=0.04cm](0.8,1.7985293)(3.5,0.09852926)
+\psline[linewidth=0.04cm](5.297232,1.8014708)(3.5,0.09852926)
+\psline[linewidth=0.04cm](3.5,-0.80147076)(3.5,0.09852926)
+\psline[linewidth=0.04cm](4.0,-0.101470746)(4.0,-0.101470746)
+\usefont{T1}{ptm}{m}{n}
+\rput(3.5265625,-1.2914708){$X$}
+\usefont{T1}{ptm}{m}{n}
+\rput(1.8265625,0.50852925){$A$}
+\usefont{T1}{ptm}{m}{n}
+\rput(5.0071874,0.70852923){$B$}
+\usefont{T1}{ptm}{m}{n}
+\rput(4.4335938,1.4085293){45$^\circ$}
+\usefont{T1}{ptm}{m}{n}
+\rput(2.038125,1.4085293){30$^\circ$}
+\end{pspicture}
+}
+\end{minipage}
+
+\item A rope is tied at two points which are 70~cm apart from each other, on the same horizontal line. The total length of rope is 1~m, and the maximum tension it can withstand in any part is 1000~N. Find the largest mass ($m$), in kg, that can be carried at the midpoint of the rope, without breaking the rope. Include a vector diagram in your answer.
+\begin{center}
+\scalebox{0.75} % Change this value to rescale the drawing.
+{
+\begin{pspicture}(0,-1.098125)(9.04,1.098125)
+\psline[linewidth=0.08cm](0.0,0.941875)(2.0,0.941875)
+\psline[linewidth=0.08cm](2.0,0.941875)(2.0,-1.058125)
+\psline[linewidth=0.08cm](7.0,0.941875)(7.0,-1.058125)
+\psline[linewidth=0.08cm](7.0,0.941875)(9.0,0.941875)
+\psframe[linewidth=0.04,dimen=outer](5.1,-0.058125)(3.9,-0.758125)
+\psline[linewidth=0.024cm](2.0,0.941875)(4.5,-0.058125)
+\psline[linewidth=0.024cm](4.5,-0.058125)(7.0,0.941875)
+\psline[linewidth=0.03cm,linestyle=dashed,dash=0.16cm 0.16cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{<->}(2.0,0.941875)(7.0,0.941875)
+\usefont{T1}{ptm}{m}{n}
+\rput(4.5376563,-0.448125){$m$}
+\usefont{T1}{ptm}{m}{n}
+\rput(4.5878124,0.936875){\footnotesize \psframebox*[framesep=0, boxsep=false,fillcolor=white] {70 cm}}
+\end{pspicture}
+}
+\end{center}
+
+\end{enumerate}
+\practiceinfo
+
+\begin{tabular}[h]{cccccc}
+(1.) aaa & (2.) aaa & (3.) aaa & (4.) aaa & (5.) aaa & (6.) aaa & (7.) aaa & (8.) aaa & (9.) aaa & (10.) aaa & (11.) aaa & (12.) aaa & (13.) aaa & (14.) aaa & (15.) aaa & (16.) aaa & (17.) aaa & (18.) aaa & (19.) aaa & (20.) aaa & (21.) aaa & (22.) aaa & (23.) aaa & (24.) aaa & (25.) aaa & (26.) aaa & 
+ \end{tabular}
+\end{eocexercises}
+
+% CHILD SECTION END
+
+
+
+% CHILD SECTION START
+

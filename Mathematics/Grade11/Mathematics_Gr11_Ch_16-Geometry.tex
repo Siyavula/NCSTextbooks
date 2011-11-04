@@ -1,0 +1,2227 @@
+\chapter{Geometry}
+\label{m:g11}
+
+\section{Introduction}
+
+%\begin{syllabus}
+%\item Demonstrate an appreciation of the contributions to the history of the development and use geometry by various cultures through a project.
+%\end{syllabus}
+
+\Activity{Extension}{History of Geometry}{
+Work in pairs or groups and investigate the history of the development of geometry in the last 1500 years. Describe the various stages of development and how different cultures used geometry to improve their lives.
+
+The works of the following people or  cultures should be investigated:
+\begin{enumerate}
+\item{Islamic geometry (c. 700 - 1500)}
+\begin{enumerate}
+\item{Thabit ibn Qurra}
+\item{Omar Khayyam}
+\item{Sharafeddin Tusi}
+\end{enumerate}
+\item{Geometry in the 17th - 20th centuries (c. 700 - 1500)}
+\end{enumerate}}
+
+\section{Right Pyramids, Right Cones and Spheres}
+%\begin{syllabus}
+%\item Use the formulae for  surface area and volume of right pyramids, right cones, spheres and combinations %of these geometric objects.
+%\end{syllabus}
+
+A pyramid is a geometric solid that has a polygon base and the base is joined to a point, called the apex. Two examples of pyramids are shown in the left-most and centre figures in Figure~\ref{fig:mg:sav:pyramids}. The right-most figure has an apex which is joined to a circular base and this type of geometric solid is called a cone. Cones are similar to pyramids except that their bases are circles instead of polygons.
+
+\begin{figure}[ht]
+\begin{center}
+% \usepackage[usenames,dvipsnames]{pstricks}
+% \usepackage{epsfig}
+% \usepackage{pst-grad} % For gradients
+% \usepackage{pst-plot} % For axes
+\scalebox{1} % Change this value to rescale the drawing.
+{
+\begin{pspicture}(0,-0.9969444)(6.534111,0.99705553)
+\pspolygon[linewidth=0.028222222,fillstyle=solid](2.621611,-0.26305556)(3.099611,0.46944445)(4.068611,-0.47205555)
+\pspolygon[linewidth=0.028222222,fillstyle=solid](2.6316354,-0.66294444)(3.06,0.41705555)(2.54,-0.26294443)
+\pspolygon[linewidth=0.028222222,fillstyle=solid](0.03411105,-0.32955554)(0.869611,0.48944443)(1.361111,-0.24505556)
+\pspolygon[linewidth=0.028222222,fillstyle=solid](1.705111,-0.6149472)(0.869611,0.48944443)(0.37811106,-0.70294446)
+\pspolygon[linewidth=0.028222222,fillstyle=solid](0.38,-0.70294446)(0.84,0.45705557)(0.0,-0.34294444)
+\pspolygon[linewidth=0.028222222,fillstyle=solid](4.1,-0.49978656)(3.1,0.47705555)(2.62,-0.6829444)
+\psline[linewidth=0.0139999995,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{<->}(0.9,0.037055556)(0.9,-0.42294446)(1.1,-0.5629445)
+\psline[linewidth=0.014111111cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(0.9,-0.42294446)(0.58,-0.48294446)
+\psline[linewidth=0.022cm,linestyle=dashed,dash=0.16cm 0.16cm](0.0,-0.34294444)(1.08,-0.26294443)
+\psline[linewidth=0.022cm,linestyle=dashed,dash=0.16cm 0.16cm](2.54,-0.26294443)(4.08,-0.48294446)
+\psline[linewidth=0.022,linestyle=dashed,dash=0.16cm 0.16cm](1.72,-0.6229445)(1.08,-0.26294443)(0.86,0.45705557)
+\psline[linewidth=0.0139999995,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{<->}(3.1,0.07705556)(3.1,-0.38294443)(3.34,-0.50294447)
+\psline[linewidth=0.014111111cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(3.12,-0.38294443)(2.82,-0.48294446)
+\psline[linewidth=0.028222222](5.12,-0.48294446)(5.7990556,0.9829444)(6.52,-0.5170556)
+\psbezier[linewidth=0.027999999](5.1394444,-0.44294444)(5.04,-0.66294444)(5.34,-0.94294447)(5.7,-0.96294445)(6.06,-0.9829444)(6.52,-0.82294446)(6.52,-0.50294447)
+\psbezier[linewidth=0.022,linestyle=dashed,dash=0.16cm 0.16cm](6.52,-0.52294445)(6.4,-0.34294444)(6.18,-0.22227074)(5.89007,-0.21260759)(5.60014,-0.20294444)(5.36,-0.22294444)(5.12,-0.50294447)
+\end{pspicture} 
+}
+\caption{Examples of a square pyramid, a triangular pyramid and a cone.}
+\label{fig:mg:sav:pyramids}
+\end{center}
+\end{figure}
+
+\textbf{Surface Area of a Pyramid} \\
+
+The surface area of a pyramid is calculated by adding the area of each face together.
+
+\begin{wex}
+{Surface Area}
+{If a cone has a height of $h$ and a base of radius $r$, show that the surface area is $\pi r^2 + \pi r \sqrt{r^2+h^2}$.\\}
+{
+\westep{Draw a picture}
+\begin{center}
+\begin{pspicture}(-5,-2)(2,2)
+%\psgrid
+\rput(-3.5,0){
+\psellipse[fillcolor=white,fillstyle=solid](0,-1)(1.5,1)
+\pspolygon[fillcolor=white,fillstyle=solid,linestyle=none](-1.5,-1)(0,2)(1.5,-1)
+\psellipse[linestyle=dotted](0,-1)(1.5,1)
+\psline(-1.5,-1)(0,2)(1.5,-1)
+\psline[arrows=<->](-1.5,-1)(0,-1)
+\uput[d](-0.75,-1){$r$}
+\psline[arrows=<->](0,-1)(0,2)
+\uput[r](0,0.5){$h$}
+\psline(-0.4,-1.0)(-0.4,-0.6)(-0.0,-0.6) %Right Angle
+}
+\pspolygon(-1.5,-1)(0,2)(1.5,-1)
+\psline[arrows=<->](-1.5,-1.2)(0,-1.2)
+\uput[d](-0.75,-1.2){$r$}
+\psline[arrows=<->](0,-1)(0,2)
+\uput[r](0,0.5){$h$}
+\uput[l](-0.75,0.5){$a$}
+\psline(-0.4,-1.0)(-0.4,-0.6)(-0.0,-0.6)
+\end{pspicture}
+\end{center}
+
+
+\westep{Identify the faces that make up the cone}
+The cone has two faces: the base and the walls. The base is a circle of radius $r$ and the walls can be opened out to a sector of a circle. \\
+
+ \scalebox{1} % Change this value to rescale the drawing. 
+{ \begin{pspicture}(0,-1.2046875)(7.8553123,1.1646875) 
+\psline[linewidth=0.04cm](1.24,1.1046875)(0.02,-0.3753125) 
+\psline[linewidth=0.04cm](1.22,1.1046875)(2.44,-0.3753125) 
+\psarc[linewidth=0.04](1.24,1.0046875){1.84}{228.81407}{312.27368} 
+\psline[linewidth=0.04cm](1.24,1.0846875)(0.18,-0.4953125) 
+\psline[linewidth=0.04cm](1.24,1.0846875)(0.34,-0.5953125) 
+\psline[linewidth=0.04cm](1.22,1.1046875)(0.5,-0.6753125) 
+\psline[linewidth=0.04cm](1.22,1.1046875)(0.7,-0.7353125) 
+\psline[linewidth=0.04cm](1.22,1.0846875)(0.92,-0.8153125) 
+\psline[linewidth=0.04cm](3.98,-0.6753125)(7.6,-0.6753125) 
+\psline[linewidth=0.04cm](3.98,-0.6753125)(4.16,1.1246876) 
+\psline[linewidth=0.04cm](4.16,1.1246876)(4.24,-0.6753125) 
+\psline[linewidth=0.04cm](4.24,-0.6553125)(4.42,1.1446875) 
+\psline[linewidth=0.04cm](4.42,1.1446875)(4.5,-0.6553125) 
+\psline[linewidth=0.04cm](4.5,-0.6953125)(4.68,1.1046875) 
+\psline[linewidth=0.04cm](4.68,1.1046875)(4.76,-0.6953125) 
+\psline[linewidth=0.04cm](4.76,-0.6753125)(4.94,1.1246876) 
+\psline[linewidth=0.04cm](4.94,1.1246876)(5.02,-0.6753125) 
+\psline[linewidth=0.04cm](5.02,-0.6753125)(5.2,1.1246876) 
+\psline[linewidth=0.04cm](5.2,1.1246876)(5.28,-0.6753125) 
+\psline[linewidth=0.04cm](5.28,-0.6753125)(5.46,1.1246876) 
+\psline[linewidth=0.04cm](5.46,1.1246876)(5.54,-0.6753125) 
+\psline[linewidth=0.04cm](3.96,-0.6753125)(5.58,-0.6753125) 
+\psline[linewidth=0.04cm](5.54,-0.6753125)(5.72,1.1246876) 
+\psline[linewidth=0.04cm](5.72,1.1246876)(5.8,-0.6753125) 
+\psline[linewidth=0.04cm](5.8,-0.6753125)(5.98,1.1246876) 
+\psline[linewidth=0.04cm](5.98,1.1246876)(6.06,-0.6753125) 
+\psline[linewidth=0.04cm](6.06,-0.6953125)(6.24,1.1046875) 
+\psline[linewidth=0.04cm](6.24,1.1046875)(6.32,-0.6953125) 
+\psline[linewidth=0.04cm](6.32,-0.6553125)(6.5,1.1446875) 
+\psline[linewidth=0.04cm](6.5,1.1446875)(6.58,-0.6553125) 
+\psline[linewidth=0.04cm](6.58,-0.6753125)(6.76,1.1246876) 
+\psline[linewidth=0.04cm](6.76,1.1246876)(6.84,-0.6753125) 
+\psline[linewidth=0.04cm](6.84,-0.6753125)(7.02,1.1246876) 
+\psline[linewidth=0.04cm](7.02,1.1246876)(7.1,-0.6753125) 
+\psline[linewidth=0.04cm](7.1,-0.6753125)(7.28,1.1246876) 
+\psline[linewidth=0.04cm](7.28,1.1246876)(7.36,-0.6753125) 
+\psline[linewidth=0.04cm](7.36,-0.6553125)(7.54,1.1446875) 
+\psline[linewidth=0.04cm](7.54,1.1446875)(7.62,-0.6553125) 
+\psline[linewidth=0.03cm,linestyle=dashed,dash=0.16cm 0.16cm](1.22,1.0846875)(1.16,-0.8153125) 
+\psline[linewidth=0.03cm,linestyle=dashed,dash=0.16cm 0.16cm](1.22,1.1246876)(1.42,-0.8553125) 
+\psline[linewidth=0.03cm,linestyle=dashed,dash=0.16cm 0.16cm](1.22,1.0846875)(1.66,-0.7553125) 
+\psline[linewidth=0.03cm,linestyle=dashed,dash=0.16cm 0.16cm](1.22,1.0846875)(1.94,-0.6553125) 
+\psline[linewidth=0.03cm,linestyle=dashed,dash=0.16cm 0.16cm](1.2,1.0846875)(2.22,-0.5353125) 
+\psline[linewidth=0.11cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(2.46,0.4246875)(3.04,0.4246875) 
+\rput(3.6859374,0.4146875){$a$} 
+\psline[linewidth=0.03cm,linestyle=dashed,dash=0.16cm 0.16cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(3.68,0.2646875)(3.68,-0.6753125) 
+\psline[linewidth=0.03cm,linestyle=dashed,dash=0.16cm 0.16cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(3.68,0.5446875)(3.68,1.1246876) 
+\rput(5.6826563,-0.9853125){$2\pi r$ = circumference} \end{pspicture} } 
+\\ This curved surface can be cut into many thin triangles with height close to $a$ ($a$ is called the \emph{slant height}). The area of these triangles will add up to $\frac{1}{2}\times$base$\times$height(of a small triangle) which is $\frac{1}{2}\times2\pi r \times a = \pi r a $ \\
+
+\westep{Calculate $a$}
+    $a$ can be calculated by using the Theorem of Pythagoras. Therefore:
+\begin{equation*}
+a = \sqrt{r^{2} + h^{2}}
+\end{equation*}
+\westep{Calculate the area of the circular base}
+\begin{equation*}
+A_{b} = \pi r^{2}
+\end{equation*}
+\westep{Calculate the area of the curved walls}
+\begin{eqnarray*}
+A_{w} &=& \pi r a \\
+&=& \pi r \sqrt{r^{2}+h^{2}}
+\end{eqnarray*}
+\westep{Calculate surface area $A$}
+\begin{eqnarray*}
+ A &=& A_{b} + A_{w} \\
+  &=& \pi r^{2} + \pi r \sqrt{r^{2}+h^{2}}
+\end{eqnarray*}
+}
+\end{wex}
+
+\textbf{Volume of a Pyramid:} The volume of a pyramid is found by:
+\nequ{V=\frac{1}{3}A\cdot h}
+where $A$ is the area of the base and $h$ is the perpendicular height.
+
+A cone is like a pyramid, so the volume of a cone is given by:
+\nequ{V=\frac{1}{3}\pi r^2 h.}
+
+A square pyramid has volume
+\nequ{V=\frac{1}{3}a^2 h}
+where $a$ is the side length of the square base.
+
+%Khan Academy video on solid geometry volumes:SIYAVULA-VIDEO:http://cnx.org/content/m38832/latest/#solid-geometry-volume
+
+\begin{wex}{Volume of a Pyramid}
+{
+What is the volume of a square pyramid, $3$ cm high with a side length of $2$ cm?\\
+}
+{
+\westep{Determine the correct formula}
+The volume of a pyramid is 
+$$V=\frac{1}{3}A\cdot h,$$ \\
+where $A$ is the area of the base and $h$ is the height of the pyramid. For a square base this means
+$$V = \frac{1}{3}a\cdot a \cdot h$$ \\
+where $a$ is the length of the side of the square base.
+
+\begin{center}
+\scalebox{0.8} % Change this value to rescale the drawing.
+{
+% \begin{pspicture}(0,-2.95)(6.02,2.95)
+% % \usefont{T1}{ptm}{m}{n}
+% \rput{0.6029805}(-0.0218156,-0.0519640){\rput(4.896719,-2.12){$2$ cm}}
+% % \usefont{T1}{ptm}{m}{n}
+% \rput{-1.0300905}(0.0386375,0.0202694){\rput(1.1167188,-2.16){$2$ cm}}
+% % \usefont{T1}{ptm}{m}{n}
+% \rput(2.5659375,1.315){\small $3$ cm}
+% \psline[linewidth=0.04cm](5.98,-0.91)(3.18,2.91)
+% \psline[linewidth=0.04cm](3.0,-2.93)(3.18,2.93)
+% \psline[linewidth=0.04cm](3.18,2.93)(0.0,-0.87)
+% \psline[linewidth=0.04cm](0.0,-0.89)(3.02,1.09)
+% \psline[linewidth=0.04cm](3.0,1.07)(5.98,-0.91)
+% \psline[linewidth=0.04cm](0.06,-0.89)(3.0,-2.91)
+% \psline[linewidth=0.04cm](3.0,-2.89)(6.0,-0.93)
+% \psdots[dotsize=0.12](2.98,-0.87)
+% \psline[linewidth=0.04cm,linestyle=dotted,dotsep=0.16cm](2.9,-0.81)(3.0,2.75)
+% \psline[linewidth=0.04cm,linestyle=dotted,dotsep=0.16cm](2.94,-0.79)(1.34,0.09)
+% \psline[linewidth=0.04cm](2.6,-0.63)(2.6,-0.37)
+% \psline[linewidth=0.04cm](2.62,-0.39)(2.82,-0.39)
+% \end{pspicture} 
+\begin{pspicture}(0,-2.89)(5.58,2.89)
+% \usefont{T1}{ptm}{m}{n}
+\rput{0.6029805}(-0.022694819,-0.047077317){\rput(4.4319425,-2.1803145){$2~$cm}}
+% \usefont{T1}{ptm}{m}{n}
+\rput{-1.0300905}(0.040004794,0.011890239){\rput(1,-2.2194574){$2~$cm}}
+% \usefont{T1}{ptm}{m}{n}
+\rput(2.0929687,1.255){\small $3~$cm}
+\psline[linewidth=0.04cm](5.54,-0.97)(2.74,2.85)
+\psline[linewidth=0.04cm](2.9,-2.85)(2.74,2.87)
+\psline[linewidth=0.04cm](2.74,2.87)(0.02,-0.87)
+\psline[linewidth=0.04cm](0.04,-0.87)(2.78,0.89)
+\psline[linewidth=0.04cm](2.76,0.89)(5.56,-0.99)
+\psline[linewidth=0.04cm](0.0,-0.87)(2.9,-2.87)
+\psline[linewidth=0.04cm](2.9,-2.87)(5.56,-0.99)
+\psdots[dotsize=0.12](2.62,-0.83)
+\psline[linewidth=0.04cm,linestyle=dashed,dash=0.17638889cm 0.10583334cm](2.64,-0.81)(2.72,2.75)
+\psline[linewidth=0.04cm,linestyle=dashed,dash=0.17638889cm 0.10583334cm](2.62,-0.85)(1.44,0.03)
+\psline[linewidth=0.04cm](2.4,-0.69)(2.4,-0.33)
+\psline[linewidth=0.04cm](2.38,-0.33)(2.66,-0.53)
+\end{pspicture} 
+}
+\end{center}
+
+\westep{Substitute the given values}
+\begin{eqnarray*}
+&=&\frac{1}{3}\cdot 2 \cdot 2 \cdot 3\\
+&=&\frac{1}{3} \cdot 12\\
+&=&4\textnormal{ cm}^3
+\end{eqnarray*}
+}
+\end{wex}
+
+
+We accept the following formulae for volume and surface area of a sphere (ball).
+\begin{eqnarray*}
+\textnormal{Surface area} &=& 4 \pi r^2\\
+\textnormal{Volume} &=& \frac{4}{3} \pi r^3\\
+\end{eqnarray*}
+
+\Exercise{Surface Area and Volume}
+{
+\begin{enumerate}
+
+\item Calculate the volumes and surface areas of the following solids: (Hint for (e): find the perpendicular height using Pythagoras). 
+
+\begin{center}
+% \usepackage[usenames,dvipsnames]{pstricks}
+% \usepackage{epsfig}
+% \usepackage{pst-grad} % For gradients
+% \usepackage{pst-plot} % For axes
+\scalebox{0.5} % Change this value to rescale the drawing.
+{
+%NB: This image doesn't render correctly in Evince. View in Acroread
+\begin{pspicture}(0,-3.4403076)(24.427212,3.4403076)
+\definecolor{color323f}{rgb}{0.996078431372549,0.996078431372549,0.996078431372549}
+\definecolor{color943f}{rgb}{0.8509803921568627,0.8509803921568627,0.8509803921568627}
+\definecolor{color718g}{rgb}{0.24313725490196078,0.24313725490196078,0.24313725490196078}
+\definecolor{color1189g}{rgb}{0.19607843137254902,0.19607843137254902,0.19607843137254902}
+\definecolor{color824b}{rgb}{0.5333333333333333,0.5333333333333333,0.5333333333333333}
+\definecolor{color1430g}{rgb}{0.3058823529411765,0.3058823529411765,0.3058823529411765}
+\definecolor{color1430f}{rgb}{0.7490196078431373,0.7490196078431373,0.7490196078431373}
+\definecolor{color1661f}{rgb}{0.8196078431372549,0.8196078431372549,0.8196078431372549}
+%coloured bottom of pyramid qith square base:
+\pspolygon[linewidth=0.002,linestyle=dashed,dash=0.16cm 0.16cm,fillstyle=gradient,gradlines=2000,gradbegin=color1430g,gradend=color1430f,gradmidpoint=1.0,gradangle=280.0](18.507353,-0.7056225)(21.107353,1.2343775)(24.387352,0.5143775)(21.807352,-1.4256225)
+%bottom of hemisphere: 
+\rput{14.5046}(0.43446147,-1.7909683){\pswedge[linewidth=0.04,fillstyle=gradient,gradlines=4000,gradbegin=color718g,gradend=color323f,gradmidpoint=1.0,gradangle=180.0](7.2540545,0.8115416){2.0675611}{178.8065}{0.0}}
+%top of hemisphere:
+\rput{13.78588}(0.40440628,-1.7068158){\psellipse[linewidth=0.04,dimen=outer,fillstyle=solid,fillcolor=color824b](7.2616796,0.8192368)(2.0922363,0.47717193)}
+\psdots[dotsize=0.12](7.2473526,0.81437)
+\psline[linewidth=0.04cm,linestyle=dashed,dash=0.16cm 0.16cm](5.2273526,0.33437)(9.247353,1.31437)
+\rput{-180.0}(32.434704,-0.3651504){\pstriangle[linewidth=0.04,linestyle=dashed,dash=0.16cm 0.16cm,dimen=outer,fillstyle=gradient,gradlines=2000,gradbegin=color1189g,gradend=color1661f,gradmidpoint=1.0](16.217352,-2.1725752)(3.06,3.98)}
+\pswedge[linewidth=0.04,fillstyle=gradient,gradlines=2000,gradbegin=color1189g,gradend=color943f,gradmidpoint=1.0,gradangle=270.0](16.227352,1.7943774){1.5}{0.0}{180.0}
+\rput{-180.0}(32.454704,3.5748296){\psellipse[linewidth=0.04,linestyle=dashed,dash=0.16cm 0.16cm,dimen=outer,fillstyle=gradient,gradlines=2000,gradbegin=color1189g,gradend=color943f,gradmidpoint=1.0](16.227352,1.7874148)(1.52,0.5)}
+\psline[linewidth=0.04cm](16.227352,-2.15258)(14.727352,1.76741)
+\psline[linewidth=0.04cm](16.227352,-2.15258)(17.727352,1.78741)
+\psline[linewidth=0.04cm,linestyle=dashed,dash=0.16cm 0.16cm](16.227352,-2.1325848)(16.227352,1.78741)
+\psdots[dotsize=0.12,dotangle=-180.0](16.227352,1.76741)
+\psline[linewidth=0.04cm,linestyle=dashed,dash=0.16cm 0.16cm](16.227352,1.78741)(14.707353,1.78741)
+\pscircle[linewidth=0.04,dimen=outer,fillstyle=gradient,gradlines=2000,gradbegin=color1430f,gradend=color718g,gradmidpoint=0.15,gradangle=220.0](2.0173526,0.3043775){1.99}
+\psline[linewidth=0.04cm,linestyle=dashed,dash=0.16cm 0.16cm](1.9673525,0.31437)(3.9873526,0.31437)
+\psdots[dotsize=0.12](1.9673525,0.31437)
+\pstriangle[linewidth=0.04,linestyle=dashed,dash=0.16cm 0.16cm,dimen=outer,fillstyle=gradient,gradlines=2000,gradbegin=color1189g,gradend=color943f,gradmidpoint=1.0,gradangle=270.0](12.137352,-1.1456225)(3.06,3.98)
+\psellipse[linewidth=0.04,linestyle=dashed,dash=0.16cm 0.16cm,dimen=outer,fillstyle=gradient,gradlines=2000,gradbegin=color1189g,gradend=color943f,gradmidpoint=1.0,gradangle=270.0](12.127353,-1.1256226)(1.52,0.5)
+\psline[linewidth=0.04cm](12.127353,2.81437)(13.627353,-1.10562)
+\psline[linewidth=0.04cm](12.127353,2.81437)(10.627353,-1.12562)
+\psline[linewidth=0.04cm,linestyle=dashed,dash=0.16cm 0.16cm](12.127353,2.79437)(12.127353,-1.12562)
+\psline[linewidth=0.04cm,linestyle=dashed,dash=0.16cm 0.16cm](12.127353,-1.12562)(13.647352,-1.12562)
+\psbezier[linewidth=0.04](10.607352,-1.127161)(10.787353,-1.46562)(11.354107,-1.61258)(12.087353,-1.60562)(12.820599,-1.59866)(13.647352,-1.43869)(13.646313,-1.08562)
+\psdots[dotsize=0.12](12.127353,-1.10562)
+\psline[linewidth=0.04cm](18.520452,-0.73602)(21.117653,1.23425)
+\psline[linewidth=0.04cm](21.810013,-1.44562)(18.520452,-0.73602)
+\psline[linewidth=0.04cm](24.407213,0.524663)(21.809952,-1.44562)
+\psline[linewidth=0.04cm](21.117683,1.23425)(24.407213,0.524663)
+\psline[linewidth=0.04cm,linestyle=dashed,dash=0.16cm 0.16cm](21.463852,-0.10568)(21.463753,2.23429)
+\psline[linewidth=0.04cm](21.127352,1.23437)(21.463852,2.23437)
+\psline[linewidth=0.04cm](21.463852,2.23437)(18.561104,-0.711344)
+\psline[linewidth=0.04cm](21.463852,2.23437)(21.796452,-1.42712)
+\psline[linewidth=0.04cm](21.463852,2.23437)(24.387352,0.53437)
+\psline[linewidth=0.04cm,linestyle=dashed,dash=0.16cm 0.16cm](21.433552,2.23437)(23.167353,-0.42562)
+\psline[linewidth=0.04cm,linestyle=dashed,dash=0.16cm 0.16cm](23.107353,-0.40562)(21.427353,-0.08562)
+% \usefont{T1}{ptm}{m}{n}
+\rput(2.9940639,0.50437){$4$}
+% \usefont{T1}{ptm}{m}{n}videos
+\rput(7.1507897,1.0243775){$6$}
+% \usefont{T1}{ptm}{m}{n}
+\rput(12.645314,-1.35562){$7$}
+% \usefont{T1}{ptm}{m}{n}
+\rput(11.746254,0.30437){$14$}
+% \usefont{T1}{ptm}{m}{n}
+\rput(15.497583,1.94437){$3$}
+% \usefont{T1}{ptm}{m}{n}
+\rput(16.372484,0.40437){$5$}
+\psline[linewidth=0.04cm](20.967352,1.13437)(21.207352,1.07437)
+\psline[linewidth=0.04cm](21.207352,1.07437)(21.347353,1.17437)
+\psline[linewidth=0.04cm](18.727352,-0.76562)(18.907352,-0.66562)
+\psline[linewidth=0.04cm](18.907352,-0.66562)(18.707352,-0.60562)
+\psline[linewidth=0.04cm](23.047352,-0.24562)(23.207352,-0.12562)
+\psline[linewidth=0.04cm](23.207352,-0.12562)(23.327353,-0.28562)
+\psline[linewidth=0.04cm](23.067352,-0.28562)(23.167353,-0.40562)
+% \usefont{T1}{ptm}{m}{n}
+\rput(22.738914,0.56437){$13$}
+% \usefont{T1}{ptm}{m}{n}
+\rput(19.918283,-1.33562){$24$}
+% \usefont{T1}{ptm}{m}{n}
+\rput(23.178284,-0.79562){$24$}
+% \usefont{T1}{ptm}{m}{n}
+\rput(0.21734375,3.12437){\LARGE a)}
+% \usefont{T1}{ptm}{m}{n}
+\rput(5.298125,3.10437){\LARGE b)}
+% \usefont{T1}{ptm}{m}{n}
+\rput(10.86875,3.12437){\LARGE c)}
+% \usefont{T1}{ptm}{m}{n}
+\rput(14.38874,3.12437){\LARGE d)}
+% \usefont{T1}{ptm}{m}{n}
+\rput(19.87876,3.10437){\LARGE e)}
+% \usefont{T1}{ptm}{m}{n}
+\rput(1.8565675,-2.27562){\LARGE a sphere}
+% \usefont{T1}{ptm}{m}{n}
+\rput(11.986571,-2.03562){\LARGE a cone}
+% \usefont{T1}{ptm}{m}{n}
+\rput(7.3065677,-1.97562){\LARGE a hemisphere}
+% \usefont{T1}{ptm}{m}{n}
+\rput(16.190321,-2.57562){\LARGE a hemisphere on}
+% \usefont{T1}{ptm}{m}{n}
+\rput(16.209322,-3.09562){\LARGE top of a cone}
+% \usefont{T1}{ptm}{m}{n}
+\rput(21.530321,-2.21562){\LARGE a pyramid with}
+% \usefont{T1}{ptm}{m}{n}
+\rput(21.576572,-2.73562){\LARGE a square base}
+\end{pspicture} 
+}
+\end{center}
+
+\item Water covers approximately $71\%$ of the Earth's surface. Taking the radius of the Earth to be $6378$ km, what is the total area of land (area not covered by water)?
+
+\item{$\left.\right.$
+
+\begin{minipage}{0.5\textwidth}
+A triangular pyramid is placed on top of a triangular prism. 
+The prism has an equilateral triangle of side length $20$ cm as a base, and has a height of $42$ cm. The pyramid has a height of $12$ cm.
+
+\begin{enumerate}
+\item Find the total volume of the object.
+\item Find the area of each face of the pyramid.
+\item Find the total surface area of the object.
+\end{enumerate}
+\end{minipage}
+\begin{minipage}{0.4\textwidth}
+\begin{center}
+\scalebox{1} % Change this value to rescale the drawing.
+{
+\begin{pspicture}(0,-1.97)(1.66,1.97)
+\definecolor{color338b}{rgb}{0.6,0.6,0.6}
+\definecolor{color376b}{rgb}{0.8,0.8,0.8}
+\pspolygon[linewidth=0.04,fillstyle=solid,fillcolor=color338b](1.22,0.52891)(1.64,1.69)(1.64,-0.72891)(1.22,-1.89)(1.22,-1.89)
+\pspolygon[linewidth=0.04,fillstyle=solid,fillcolor=color338b](0.8,1.95)(1.64,1.7557143)(1.22,0.53)
+\pspolygon[linewidth=0.04,fillstyle=solid,fillcolor=color376b](0.8,1.95)(0.0,1.25)(1.2,0.55)
+\pspolygon[linewidth=0.04,fillstyle=solid,fillcolor=color376b](0.02,1.25)(1.22,0.55)(1.22,-1.95)(0.02,-1.25)
+\psline[linewidth=0.04cm,linestyle=dashed,dash=0.16cm 0.16cm](0.02,1.29)(1.6,1.73)
+\psline[linewidth=0.04cm,linestyle=dashed,dash=0.16cm 0.16cm](0.02,-1.25)(1.6,-0.69)
+\end{pspicture} 
+}
+\end{center}
+\end{minipage}
+}
+\end{enumerate}
+}
+
+\section{Similarity of Polygons}
+%\begin{syllabus}
+%\item Investigate necessary and sufficient conditions for polygons to be similar.
+%\end{syllabus}
+
+In order for two polygons to be similar the following must be true:
+\begin{enumerate}
+\item{All corresponding angles must be congruent.}
+\item{All corresponding sides must be in the same proportion to each other. Refer to the picture below: this means that the ratio of side $AE$ on the large polygon to the side $PT$ on the small polygon must be the same as the ratio of side $AB$ to side $PQ$, $BC/QR$ etc. for \textit{all} the sides.}
+\end{enumerate}
+
+\begin{minipage}{0.6\textwidth}
+\begin{center}
+{
+\scalebox{1} % Change this value to rescale the drawing.
+{
+\begin{pspicture}(0,-2.19093)(5.5093,2.19093)
+\pspolygon[linewidth=0.04](0.33343,0.31406)(0.59343,-1.78593)(3.45343,-1.7859375)(5.1334376,0.2140625)(1.9734375,1.7740625)
+\pspolygon[linewidth=0.04](1.0134375,0.12361306)(1.1791875,-1.1859375)(3.0024376,-1.1859375)(4.0734377,0.06125351)(2.0589375,1.0340625)
+\usefont{T1}{ptm}{m}{n}
+\rput(5.36875,0.2290625){\footnotesize $B$}
+\usefont{T1}{ptm}{m}{n}
+\rput(0.5601562,-2.0309374){\footnotesize $D$}
+\usefont{T1}{ptm}{m}{n}
+\rput(3.6289062,-2.0509374){\footnotesize $C$}
+\usefont{T1}{ptm}{m}{n}
+\rput(1.9859375,2.0290625){\footnotesize $A$}
+\usefont{T1}{ptm}{m}{n}
+\rput(0.08421875,0.3690625){\footnotesize $E$}
+\usefont{T1}{ptm}{m}{n}
+\rput(0.8023437,0.1690625){\footnotesize $T$}
+\usefont{T1}{ptm}{m}{n}
+\rput(1.0639062,-1.4309375){\footnotesize $S$}
+\usefont{T1}{ptm}{m}{n}
+\rput(3.17875,-1.3509375){\footnotesize $R$}
+\usefont{T1}{ptm}{m}{n}
+\rput(4.2973437,0.0690625){\footnotesize $Q$}
+\usefont{T1}{ptm}{m}{n}
+\rput(2.0742188,1.2090625){\footnotesize $P$}
+\end{pspicture} 
+}
+}
+\end{center}
+\end{minipage}
+\begin{minipage}{0.4 \textwidth}{
+If
+\begin{enumerate}
+\item $\hat{A} = \hat{P}$; $\hat{B} = \hat{Q}$; $\hat{C} = \hat{R}$; $\hat{D} = \hat{S}$; $\hat{E} = \hat{T}$\\
+and
+\item $\frac{AB}{PQ} = \frac{BC}{QR} = \frac{CD}{RS} = \frac{DE}{ST} = \frac{EA}{TP}$
+\end{enumerate}
+then the polygons $ABCDE$ and $PQRST$ are similar.
+}
+\end{minipage}
+
+\begin{wex}{Similarity of Polygons}{
+
+\begin{minipage}{0.4\textwidth}
+
+Polygons $PQTU$ and $PRSU$ are similar. Find the value of $x$.
+\end{minipage}
+\begin{minipage}{0.4\textwidth}
+\begin{center}
+\scalebox{0.9} % Change this value to rescale the drawing.
+{
+\begin{pspicture}(0,-2.7084374)(3.975625,2.7084374)
+\pspolygon[linewidth=0.04](0.2946875,-0.3634375)(0.3146875,-2.3634374)(3.6146874,-1.8234375)(3.6346874,2.3565626)
+\psline[linewidth=0.04cm](2.3346875,1.2965626)(2.3346875,-2.0434375)
+\usefont{T1}{ptm}{m}{n}
+\rput(0.07546875,-0.1484375){\footnotesize $P$}
+\usefont{T1}{ptm}{m}{n}
+\rput(2.4635937,-2.2884376){\footnotesize $T$}
+\usefont{T1}{ptm}{m}{n}
+\rput(3.8451562,-1.9284375){\footnotesize $S$}
+\usefont{T1}{ptm}{m}{n}
+\rput(2.2785938,1.6115625){\footnotesize $Q$}
+\usefont{T1}{ptm}{m}{n}
+\rput(3.8,2.5515625){\footnotesize $R$}
+\usefont{T1}{ptm}{m}{n}
+\rput(0.22765625,-2.5684376){\footnotesize $U$}
+\usefont{T1}{ptm}{m}{n}
+\rput{34.62906}(0.57189727,-0.5604495){\rput(1.1801562,0.6665625){$x$}}
+\usefont{T1}{ptm}{m}{n}
+\rput{35.61344}(1.7704402,-1.3198667){\rput(2.9251564,2.0865624){$3 - x$}}
+\usefont{T1}{ptm}{m}{n}
+\rput{1.34754}(-0.057136375,-0.029296616){\rput(1.2023437,-2.4534376){$3$}}
+\usefont{T1}{ptm}{m}{n}
+\rput{1.2407701}(-0.045634605,-0.06900948){\rput(3.1215625,-2.1534376){$1$}}
+\end{pspicture} 
+}
+\end{center}
+\end{minipage}
+}{
+\westep{Identify corresponding sides}
+Since the polygons are similar, 
+\begin{eqnarray*}
+\frac{PQ}{PR} &=& \frac{TU}{SU}\\
+\therefore \frac{x}{x + (3 - x)} &=& \frac{3}{4}\\
+\therefore \frac{x}{3} &=& \frac{3}{4}\\
+\therefore x &=& \frac{9}{4}
+\end{eqnarray*}
+}
+\end{wex}
+
+
+\section{Triangle Geometry}
+%\begin{syllabus}
+%\item Prove and use (accepting results established in earlier grades):
+%\begin{itemize}
+%\item that a line drawn parallel to one side of a triangle divides the other two sides proportionally (the Mid-point Theorem as a special case of this theorem);
+%\item that equiangular triangles are similar;
+%\item that triangles with sides in proportion are similar;
+%\item the Pythagorean Theorem by similar triangles.
+%\end{itemize}
+%\end{syllabus}
+
+\subsection{Proportion}
+
+Two line segments are divided in the \textit{same} proportion if the ratios between their parts are equal.
+
+$$\frac{AB}{BC} = \frac{x}{y} = \frac{kx}{ky} = \frac{DE}{EF}$$
+$$\therefore \text { the line segments are in the same proportion}$$
+\begin{center}
+\scalebox{1} % Change this value to rescale the drawing.
+{
+\begin{pspicture}(0,-1.6107812)(6.8025,1.6107812)
+\psline[linewidth=0.032cm](0.29128346,-0.75084704)(4.93073,1.1664257)
+\psline[linewidth=0.032cm](3.4756944,0.7598901)(3.6055496,0.4456646)
+\psline[linewidth=0.032cm](4.217234,-0.28092363)(6.5293307,-1.2834258)
+\psline[linewidth=0.032cm](5.9524126,-0.79972565)(5.796208,-1.1679648)
+\usefont{T1}{ptm}{m}{n}
+\rput(0.12375,-0.46296874){$A$}
+\usefont{T1}{ptm}{m}{n}
+\rput(3.224375,0.8570312){$B$}
+\usefont{T1}{ptm}{m}{n}
+\rput(4.784375,1.4370313){$C$}
+\usefont{T1}{ptm}{m}{n}
+\rput(4.3571873,-0.04296875){$D$}
+\usefont{T1}{ptm}{m}{n}
+\rput(5.8992186,-0.60296875){$E$}
+\usefont{T1}{ptm}{m}{n}
+\rput(6.666875,-1.1229688){$F$}
+\usefont{T1}{ptm}{m}{n}
+\rput(2.0426562,-0.24296875){$x$}
+\usefont{T1}{ptm}{m}{n}
+\rput(4.385,0.69703126){$y$}
+\usefont{T1}{ptm}{m}{n}
+\rput(4.7534375,-0.78296876){$kx$}
+\usefont{T1}{ptm}{m}{n}
+\rput(6.114531,-1.3829688){$ky$}
+\end{pspicture} 
+}
+\end{center}
+
+If the line segments are proportional, the following also hold:
+\begin{enumerate}
+\item $\frac{CB}{AC} = \frac{FE}{DF}$
+\item $AC\cdot FE = CB\cdot DF$
+\item $\frac{AB}{BC} = \frac{DE}{FE}$ and $\frac{BC}{AB} = \frac{FE}{DE}$
+\item $\frac{AB}{AC} = \frac{DE}{DF}$ and $\frac{AC}{AB} = \frac{DF}{DE}$
+\end{enumerate}
+
+\subsubsection*{Proportionality of triangles}
+Triangles with equal heights have areas which are in the same proportion to each other as the bases of the triangles.
+
+\begin{eqnarray*}
+h_1 &=& h_2\\
+\therefore \frac{\text{area }\triangle ABC}{\text{area }\triangle DEF} &=& \frac{\frac{1}{2}BC \times h_1}{\frac{1}{2}EF \times h_2} = \frac{BC}{EF}
+\end{eqnarray*}
+
+\begin{center}
+\scalebox{1} % Change this value to rescale the drawing.
+{
+\begin{pspicture}(0,-1.6945312)(8.5,1.6945312)
+\psline[linewidth=0.04cm](0.0,1.2707813)(8.46,1.2907813)
+\psline[linewidth=0.04cm](0.0,-1.2892188)(8.48,-1.3292187)
+\psline[linewidth=0.04cm](0.66,-1.2892188)(3.9,1.2907813)
+\psline[linewidth=0.04cm](3.9,1.2707813)(2.5,-1.2892188)
+\psline[linewidth=0.04cm](4.26,-1.3092188)(5.52,1.2907813)
+\psline[linewidth=0.04cm](5.52,1.2907813)(7.44,-1.3092188)
+\psline[linewidth=0.032cm,linestyle=dashed,dash=0.16cm 0.16cm](3.86,1.2907813)(3.78,-1.2892188)
+\psline[linewidth=0.032cm,linestyle=dashed,dash=0.16cm 0.16cm](5.52,1.2507813)(5.5,-1.3092188)
+\psline[linewidth=0.032cm](3.8,-1.0292188)(4.02,-1.0292188)
+\psline[linewidth=0.032cm](4.04,-1.0292188)(4.04,-1.3092188)
+\psline[linewidth=0.032cm](5.52,-1.0492188)(5.78,-1.0492188)
+\psline[linewidth=0.032cm](5.78,-1.0492188)(5.76,-1.3292187)
+\psline[linewidth=0.032cm](5.52,-1.0492188)(5.5,-1.2892188)
+\psline[linewidth=0.032cm](3.8,-1.0292188)(3.8,-1.2492187)
+\usefont{T1}{ptm}{m}{n}
+\rput(3.9065626,1.5207813){$A$}
+\usefont{T1}{ptm}{m}{n}
+\rput(0.6271875,-1.5192188){$B$}
+\usefont{T1}{ptm}{m}{n}
+\rput(2.4871874,-1.5392188){$C$}
+\usefont{T1}{ptm}{m}{n}
+\rput(5.5,1.4807812){$D$}
+\usefont{T1}{ptm}{m}{n}
+\rput(4.262031,-1.5392188){$E$}
+\usefont{T1}{ptm}{m}{n}
+\rput(7.4496875,-1.5392188){$F$}
+\psline[linewidth=0.032cm](7.68,1.4307812)(7.84,1.3107812)
+\psline[linewidth=0.032cm](7.86,1.3107812)(7.7,1.1507813)
+\psline[linewidth=0.032cm](7.78,1.4507812)(7.96,1.3107812)
+\psline[linewidth=0.032cm](7.96,1.2907813)(7.8,1.1307813)
+\psline[linewidth=0.032cm](8.14,-1.3292187)(7.98,-1.4892187)
+\psline[linewidth=0.032cm](8.04,-1.3092188)(7.88,-1.4692187)
+\psline[linewidth=0.032cm](7.96,-1.1692188)(8.14,-1.3092188)
+\psline[linewidth=0.032cm](7.86,-1.1892188)(8.02,-1.3092188)
+\usefont{T1}{ptm}{m}{n}
+\rput(4.0935936,0.06578125){\footnotesize $h_1$}
+\usefont{T1}{ptm}{m}{n}
+\rput(5.753594,-0.57421875){\footnotesize $h_2$}
+\end{pspicture}
+}
+\end{center}
+
+\begin{itemize}
+\item A special case of this happens when the bases of the triangles are equal:\\
+Triangles with equal bases between the same parallel lines have the same area.
+$$\text{area } \triangle ABC = \frac{1}{2}\cdot h \cdot BC = \text{ area } \triangle DBC$$
+\begin{center}
+\scalebox{1} % Change this value to rescale the drawing.
+{
+\begin{pspicture}(0,-1.7045313)(5.9009376,1.7045313)
+\psline[linewidth=0.04cm](0.0809375,1.3007812)(5.8609376,1.3007812)
+\psline[linewidth=0.04cm](0.1009375,-1.2792188)(5.8809376,-1.3192188)
+\psline[linewidth=0.04cm](1.6609375,-1.2992188)(2.9209375,1.3007812)
+\psline[linewidth=0.04cm](2.9209375,1.3007812)(4.8409376,-1.2992188)
+\psline[linewidth=0.032cm,linestyle=dashed,dash=0.16cm 0.16cm](0.5609375,1.3007812)(0.4809375,-1.2792188)
+\usefont{T1}{ptm}{m}{n}
+\rput(0.9340625,1.5307813){$A$}
+\usefont{T1}{ptm}{m}{n}
+\rput(1.6753125,-1.5092187){$B$}
+\psline[linewidth=0.032cm](0.5009375,-1.0192188)(0.5009375,-1.2392187)
+\psline[linewidth=0.032cm](0.7409375,-1.0192188)(0.7409375,-1.2992188)
+\psline[linewidth=0.032cm](0.5009375,-1.0192188)(0.7209375,-1.0192188)
+\usefont{T1}{ptm}{m}{n}
+\rput(4.8953123,-1.5492188){$C$}
+\usefont{T1}{ptm}{m}{n}
+\rput(2.8909376,1.4907813){$D$}
+\psline[linewidth=0.032cm](5.0809374,1.4407812)(5.2409377,1.3207812)
+\psline[linewidth=0.032cm](5.2609377,1.3207812)(5.1009374,1.1607813)
+\psline[linewidth=0.032cm](5.1809373,1.4607812)(5.3609376,1.3207812)
+\psline[linewidth=0.032cm](5.3609376,1.3007812)(5.2009373,1.1407813)
+\psline[linewidth=0.032cm](5.5409374,-1.3192188)(5.3809376,-1.4792187)
+\psline[linewidth=0.032cm](5.4409375,-1.2992188)(5.2809377,-1.4592187)
+\psline[linewidth=0.032cm](5.3609376,-1.1592188)(5.5409374,-1.2992188)
+\psline[linewidth=0.032cm](5.2609377,-1.1792188)(5.4209375,-1.2992188)
+\psline[linewidth=0.032cm](1.6609375,-1.2992188)(0.8809375,1.3207812)
+\psline[linewidth=0.032cm](0.8609375,1.3007812)(4.8409376,-1.2992188)
+\usefont{T1}{ptm}{m}{n}
+\rput(0.23234375,0.1145313){$h$}
+\end{pspicture}
+}
+\end{center}
+
+\item Triangles on the same side of the same base, with equal areas, lie between parallel lines.
+
+$$\text{If area }\triangle ABC = \text{area } \triangle BDC$$
+$$\text{then } AD \parallel BC $$
+
+\begin{center}
+\scalebox{1} % Change this value to rescale the drawing.
+{
+\begin{pspicture}(0,-1.7245313)(5.82,1.7245313)
+\psline[linewidth=0.04cm](0.0,1.2807813)(5.78,1.2807813)
+\psline[linewidth=0.04cm](0.02,-1.2992188)(5.8,-1.3392187)
+\usefont{T1}{ptm}{m}{n}
+\rput(1.5665625,1.5507812){$A$}
+\usefont{T1}{ptm}{m}{n}
+\rput(1.6071875,-1.5292188){$B$}
+\usefont{T1}{ptm}{m}{n}
+\rput(4.8271875,-1.5692188){$C$}
+\usefont{T1}{ptm}{m}{n}
+\rput(3.94,1.5307813){$D$}
+\psline[linewidth=0.032cm](1.6,-1.2992188)(1.58,1.2607813)
+\psline[linewidth=0.032cm](1.58,1.3007812)(4.8,-1.3192188)
+\psline[linewidth=0.032cm](1.6,-1.2792188)(3.88,1.3007812)
+\psline[linewidth=0.032cm](3.88,1.3007812)(4.78,-1.3192188)
+\end{pspicture}
+}
+\end{center}
+\end{itemize}
+
+\begin{schooltheorem}
+{theorem:midpoint0}{Proportion Theorem}{ A line drawn parallel to one side of a triangle divides the other two sides proportionally.
+
+
+\begin{center}
+\scalebox{1} % Change this value to rescale the drawing.
+{
+\begin{pspicture}(0,-2.16)(12.14,2.14)
+\pspolygon[linewidth=0.04](0.99375,-1.2452228)(4.01375,-1.26)(3.31375,1.06)
+\pspolygon[linewidth=0.04](4.75375,-1.2852228)(7.77375,-1.3)(7.07375,1.02)
+\pspolygon[linewidth=0.04](8.35375,-1.3252227)(11.37375,-1.34)(10.67375,0.98)
+\psline[linewidth=0.04cm](3.31375,1.08)(4.21375,-1.9)
+\psline[linewidth=0.04cm](3.31375,1.08)(0.35375,-1.88)
+\psline[linewidth=0.04cm](0.35375,-1.86)(4.21375,-1.88)
+\psline[linewidth=0.04cm](5.71375,-0.28)(7.49375,-0.28)
+\psline[linewidth=0.04cm](11.05375,-0.26)(10.35375,2.02)
+\psline[linewidth=0.04cm](9.83375,0.16)(11.75375,2.0)
+\psline[linewidth=0.04cm](10.35375,2.02)(11.75375,2.0)
+\usefont{T1}{ptm}{m}{n}
+\rput(11.040313,0.93){$A$}
+\usefont{T1}{ptm}{m}{n}
+\rput(7.0803127,1.29){$A$}
+\usefont{T1}{ptm}{m}{n}
+\rput(3.3403125,1.31){$A$}
+\usefont{T1}{ptm}{m}{n}
+\rput(7.8209376,-1.53){$C$}
+\usefont{T1}{ptm}{m}{n}
+\rput(8.380938,-1.53){$B$}
+\usefont{T1}{ptm}{m}{n}
+\rput(4.8009377,-1.49){$B$}
+\usefont{T1}{ptm}{m}{n}
+\rput(0.7609375,-1.17){$B$}
+\usefont{T1}{ptm}{m}{n}
+\rput(11.520938,-1.57){$C$}
+\usefont{T1}{ptm}{m}{n}
+\rput(4.2409377,-1.21){$C$}
+\usefont{T1}{ptm}{m}{n}
+\rput(11.97375,1.85){$D$}
+\usefont{T1}{ptm}{m}{n}
+\rput(5.43375,-0.23){$D$}
+\usefont{T1}{ptm}{m}{n}
+\rput(0.11375,-2.01){$D$}
+\usefont{T1}{ptm}{m}{n}
+\rput(10.075781,1.89){$E$}
+\usefont{T1}{ptm}{m}{n}
+\rput(7.775781,-0.23){$E$}
+\usefont{T1}{ptm}{m}{n}
+\rput(4.4357815,-1.93){$E$}
+\psline[linewidth=0.04cm](2.61375,-1.76)(2.87375,-1.9)
+\psline[linewidth=0.04cm](2.85375,-1.88)(2.63375,-2.04)
+\psline[linewidth=0.04cm](6.31375,-1.16)(6.57375,-1.3)
+\psline[linewidth=0.04cm](6.55375,-1.28)(6.33375,-1.44)
+\psline[linewidth=0.04cm](2.63375,-1.12)(2.89375,-1.26)
+\psline[linewidth=0.04cm](2.87375,-1.24)(2.65375,-1.4)
+\psline[linewidth=0.04cm](6.57375,-0.14)(6.83375,-0.28)
+\psline[linewidth=0.04cm](6.81375,-0.26)(6.59375,-0.42)
+\psline[linewidth=0.04cm](9.89375,-1.2)(10.15375,-1.34)
+\psline[linewidth=0.04cm](10.13375,-1.32)(9.91375,-1.48)
+\psline[linewidth=0.04cm](10.77375,2.12)(11.03375,1.98)
+\psline[linewidth=0.04cm](11.01375,2.0)(10.79375,1.84)
+\psline[linewidth=0.027999999cm,linestyle=dashed,dash=0.16cm 0.16cm](7.47375,-0.26)(6.65375,0.58)
+\psline[linewidth=0.027999999cm,linestyle=dashed,dash=0.16cm 0.16cm](5.83375,-0.22)(7.31375,0.22)
+\psline[linewidth=0.027999999cm,linestyle=dashed,dash=0.16cm 0.16cm](5.79375,-0.26)(7.75375,-1.28)
+\psline[linewidth=0.027999999cm,linestyle=dashed,dash=0.16cm 0.16cm](4.79375,-1.24)(7.51375,-0.3)
+\psline[linewidth=0.027999999cm](6.77375,0.46)(6.63375,0.32)
+\psline[linewidth=0.027999999cm](6.63375,0.34)(6.47375,0.46)
+\psline[linewidth=0.027999999cm](7.15375,0.18)(7.19375,0.02)
+\psline[linewidth=0.027999999cm](7.19375,0.02)(7.35375,0.08)
+\usefont{T1}{ptm}{m}{n}
+\rput(6.927344,0.555){\footnotesize $h_1$}
+\usefont{T1}{ptm}{m}{n}
+\rput(6.387344,0.115){\footnotesize $h_2$}
+\end{pspicture}
+}
+\end{center}
+}{$\triangle ABC$ with line $DE \parallel BC$}{$$\frac{AD}{DB} = \frac{AE}{EC}$$}{
+
+Draw $h_1$ from $E$ perpendicular to $AD$, and $h_2$ from $D$ perpendicular to $AE$.\\
+Draw $BE$ and $CD$.
+\begin{eqnarray*}
+\frac{\text{area }\triangle ADE}{\text{area } \triangle BDE} &=& \frac{\frac{1}{2}AD\cdot h_1}{\frac{1}{2}DB\cdot h_1} = \frac{AD}{DB}\\
+\frac{\text{area } \triangle ADE}{\text{area } \triangle CED} &=& \frac{\frac{1}{2}AE\cdot h_2}{\frac{1}{2}EC\cdot h_2} = \frac{AE}{EC}\\
+\text{but area } \triangle BDE &=& \text{ area } \triangle CED \text{   (equal base and height)}\\
+\therefore \frac{\text{area } \triangle ADE}{\text{area }\triangle BDE} &=& \frac{\text{area } \triangle ADE}{\text{area }\triangle CED}\\
+\therefore \frac{AD}{DB} &=& \frac{AE}{EC}\\
+\therefore \text{$DE$ divides $AB$ and $AC$ proportionally.}
+\end{eqnarray*}
+
+Similarly,
+\begin{eqnarray*}
+\frac{AD}{AB} &=& \frac{AE}{AC}\\
+\frac{AB}{BD} &=& \frac{AC}{CE}
+\end{eqnarray*}
+}
+\end{schooltheorem}
+
+Following from Theorem~\ref{theorem:midpoint0}, we can prove the midpoint theorem.
+
+\begin{mytheorem}
+{theorem:midpoint}{Midpoint Theorem: A line joining the midpoints of two sides of a triangle is parallel to the third side and equal to half the length of the third side.}{
+
+This is a special case of the Proportionality Theorem (Theorem \ref{theorem:midpoint0}).
+
+\begin{minipage}{0.4\textwidth}
+
+If $AB = BD$ and $AC = AE$,\\
+and \\
+$AD = AB + BD = 2AB$ \\
+$AE = AC + CB = 2AC$ \\
+then $DE \parallel BC$ and $BC = 2DE$.
+
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+
+\scalebox{0.9} % Change this value to rescale the drawing.
+{
+\begin{pspicture}(0,-1.821875)(4.5853124,1.821875)
+\psline[linewidth=0.04cm](3.31375,1.418125)(4.21375,-1.561875)
+\psline[linewidth=0.04cm](3.31375,1.418125)(0.35375,-1.541875)
+\psline[linewidth=0.04cm](0.35375,-1.521875)(4.21375,-1.541875)
+\usefont{T1}{ptm}{m}{n}
+\rput(3.3403125,1.648125){$A$}
+\usefont{T1}{ptm}{m}{n}
+\rput(1.4409375,-0.071875){$B$}
+\usefont{T1}{ptm}{m}{n}
+\rput(4.0409374,-0.131875){$C$}
+\usefont{T1}{ptm}{m}{n}
+\rput(0.11375,-1.671875){$D$}
+\usefont{T1}{ptm}{m}{n}
+\rput(4.4357815,-1.591875){$E$}
+\psline[linewidth=0.04cm](1.79375,-0.121875)(3.75375,-0.141875)
+\psline[linewidth=0.032cm](3.47375,0.618125)(3.67375,0.678125)
+\psline[linewidth=0.032cm](3.95375,-0.921875)(4.15375,-0.861875)
+\psline[linewidth=0.032cm](2.69375,0.898125)(2.83375,0.778125)
+\psline[linewidth=0.032cm](2.63375,0.878125)(2.77375,0.758125)
+\psline[linewidth=0.032cm](1.21375,-0.541875)(1.35375,-0.661875)
+\psline[linewidth=0.032cm](1.17375,-0.601875)(1.29375,-0.701875)
+\end{pspicture}
+}
+
+\end{minipage}
+
+}
+\end{mytheorem}
+
+\begin{schooltheorem}
+{theorem:similarity1}{Similarity Theorem 1}{\ Equiangular triangles have their sides in proportion and are therefore similar.
+
+\begin{center}
+\scalebox{0.9} % Change this value to rescale the drawing.
+{
+\begin{pspicture}(0,-1.8345313)(8.499375,1.8345313)
+\psline[linewidth=0.04cm](3.2540624,1.4307812)(4.1540623,-1.5492188)
+\psline[linewidth=0.04cm](3.2540624,1.4307812)(0.2940625,-1.5292188)
+\psline[linewidth=0.04cm](0.2940625,-1.5092187)(4.1540623,-1.5292188)
+\usefont{T1}{ptm}{m}{n}
+\rput(3.280625,1.6607813){$A$}
+\usefont{T1}{ptm}{m}{n}
+\rput(8.36375,-0.89921874){$F$}
+\usefont{T1}{ptm}{m}{n}
+\rput(3.9971876,-0.09921875){$H$}
+\psline[linewidth=0.04cm,linestyle=dashed,dash=0.16cm 0.16cm](1.7340626,-0.10921875)(3.6940625,-0.12921876)
+\usefont{T1}{ptm}{m}{n}
+\rput(0.10125,-1.6392188){$B$}
+\usefont{T1}{ptm}{m}{n}
+\rput(4.38125,-1.6792188){$C$}
+\usefont{T1}{ptm}{m}{n}
+\rput(7.7540627,0.9607813){$D$}
+\usefont{T1}{ptm}{m}{n}
+\rput(5.976094,-0.93921876){$E$}
+\psline[linewidth=0.04cm](6.1740627,-0.76921874)(8.134063,-0.7892187)
+\psline[linewidth=0.04cm](7.6940627,0.7707813)(8.134063,-0.7892187)
+\psline[linewidth=0.04cm](6.1740627,-0.76921874)(7.6940627,0.75078124)
+\usefont{T1}{ptm}{m}{n}
+\rput(1.4151562,-0.05921875){$G$}
+\psdots[dotsize=0.12](3.1740625,1.1307813)
+\psdots[dotsize=0.12](7.6140623,0.45078126)
+\psline[linewidth=0.04cm](0.6740625,-1.2552906)(0.8181683,-1.3692187)
+\psline[linewidth=0.04cm](0.8181683,-1.2438978)(0.6540625,-1.4092188)
+\psline[linewidth=0.04cm](6.5740623,-0.5352906)(6.7181683,-0.64921874)
+\psline[linewidth=0.04cm](6.7181683,-0.52389777)(6.5540624,-0.68921876)
+\end{pspicture} 
+}
+\end{center}
+}
+{$\triangle ABC$ and $\triangle DEF$ with $\hat{A} = \hat{D}$; $\hat{B} = \hat{E}$; $\hat{C} = \hat{F}$}{$$\frac{AB}{DE} = \frac{AC}{DF}$$\begin{tabbing} \textbf{Construct:} \=$G$ on $AB$, so that $AG = DE$\\
+\>$H$ on $AC$, so that $AH = DF$ \end{tabbing}}{
+In $\triangle$'s $AGH$ and $DEF$
+\begin{eqnarray*}
+&& AG = DE; AH = DF \makebox[3cm]{\text{(constant)}}\\
+&&\hat{A} = \hat{D} \makebox[7.2cm]{\text{(given)}}\\
+&\therefore& \triangle AGH \equiv \triangle DEF \makebox[3.5cm]{\text{(SAS)}}\\
+&\therefore& A\hat{G}H = \hat{E} = \hat{B}\\
+&\therefore& GH \parallel BC \makebox[8.9cm]{\text{(corresponding $\angle$'s equal)}}\\
+&\therefore& \frac{AG}{AB} = \frac{AH}{AC} \makebox[7.7cm]{\text{(proportion theorem)}}\\
+&\therefore& \frac{DE}{AB} = \frac{DF}{AC} \makebox[8.4cm]{\text{($AG = DE$; $AH = DF$)}}\\
+&\therefore& \triangle ABC \; ||| \; \triangle DEF
+\end{eqnarray*}
+
+}
+\end{schooltheorem}
+
+\Tip{ $|||$ means ``is similar to"}
+
+\begin{schooltheorem}
+{theorem:similarity2}{Similarity Theorem 2}{\ Triangles with sides in proportion are equiangular and therefore similar.
+
+\begin{center}
+\scalebox{1} % Change this value to rescale the drawing.
+{
+\begin{pspicture}(0,-1.5745312)(3.2815623,1.5745312)
+\pspolygon[linewidth=0.04](0.0668748,-1.1744416)(3.0868747,-1.1892188)(2.386875,1.1307813)
+\psline[linewidth=0.04cm](1.0268748,-0.16921875)(2.8068748,-0.16921875)
+\usefont{T1}{ptm}{m}{n}
+\rput(2.4,1.4007813){$A$}
+\usefont{T1}{ptm}{m}{n}
+\rput(3.12125,-1.4192188){$C$}
+\usefont{T1}{ptm}{m}{n}
+\rput(0.10125,-1.3792187){$B$}
+\usefont{T1}{ptm}{m}{n}
+\rput(0.7368748,-0.11921875){$D$}
+\usefont{T1}{ptm}{m}{n}
+\rput(3.0809371,-0.11921875){$E$}
+\psline[linewidth=0.04cm](1.6268748,-1.0492188)(1.8868748,-1.1892188)
+\psline[linewidth=0.04cm](1.8668748,-1.1692188)(1.6468748,-1.3292187)
+\psline[linewidth=0.04cm](1.8868748,-0.02921875)(2.146875,-0.16921875)
+\psline[linewidth=0.04cm](2.1268747,-0.14921875)(1.9068748,-0.30921876)
+\psline[linewidth=0.027999999cm,linestyle=dashed,dash=0.16cm 0.16cm](2.7868748,-0.14921875)(1.9668748,0.69078124)
+\psline[linewidth=0.027999999cm,linestyle=dashed,dash=0.16cm 0.16cm](1.1468748,-0.10921875)(2.6268747,0.33078125)
+\psline[linewidth=0.027999999cm,linestyle=dashed,dash=0.16cm 0.16cm](1.1068748,-0.14921875)(3.0668747,-1.1692188)
+\psline[linewidth=0.027999999cm,linestyle=dashed,dash=0.16cm 0.16cm](0.1068748,-1.1292187)(2.8268747,-0.18921874)
+\psline[linewidth=0.027999999cm](2.0868747,0.57078123)(1.9468749,0.43078125)
+\psline[linewidth=0.027999999cm](1.9468749,0.45078126)(1.7868748,0.57078123)
+\psline[linewidth=0.027999999cm](2.4668748,0.29078126)(2.5068748,0.13078125)
+\psline[linewidth=0.027999999cm](2.5068748,0.13078125)(2.666875,0.19078125)
+\usefont{T1}{ptm}{m}{n}
+\rput(2.2240624,0.66578126){\footnotesize $h_1$}
+\usefont{T1}{ptm}{m}{n}
+\rput(1.6840626,0.22578125){\footnotesize $h_2$}
+\end{pspicture} 
+}
+\end{center}
+}{$\triangle ABC$ with line $DE$ such that
+$$\frac{AD}{DB} = \frac{AE}{EC}$$}{ $DE \parallel BC$; $\triangle ADE~|||~\triangle ABC$}{\begin{tabbing} \hspace{1cm} \=Draw $h_1$ from $E$ perpendicular to $AD$, and $h_2$ from $D$ perpendicular to $AE$.\\
+\>Draw $BE$ and $CD$. \end{tabbing}
+\begin{eqnarray*}
+\frac{\text{area }\triangle ADE}{\text{area }\triangle BDE} &=& \frac{\frac{1}{2}AD\cdot h_1}{\frac{1}{2}DB\cdot h_1} = \frac{AD}{DB}\\
+\frac{\text{area }\triangle ADE}{\text{area }\triangle CED} &=& \frac{\frac{1}{2}AE\cdot h_2}{\frac{1}{2}EC\cdot h_2} = \frac{AE}{EC}\\
+\text{but } \frac{AD}{DB} &=& \frac{AE}{EC} \text{    (given)}\\
+\therefore \frac{\text{area }\triangle ADE}{\text{area }\triangle BDE} &=& \frac{\text{area }\triangle ADE}{\text{area }\triangle CED}\\
+\therefore \text{area }\triangle BDE &=& \text{ area }\triangle CED\\
+\\
+\therefore DE \parallel BC & &\text{   (same side of equal base DE, same area)}\\
+\therefore A\hat{D}E &=& A\hat{B}C  \text{   (corresponding $\angle$'s)}\\
+\text{and } A\hat{E}D &=& A\hat{C}{B}
+\end{eqnarray*}
+$$\therefore \text{$\triangle ADE$ and $\triangle ABC$ are equiangular}$$
+$$\therefore \triangle ADE \; ||| \; \triangle ABC \text{   (AAA)}$$
+
+}
+\end{schooltheorem}
+
+\begin{schooltheorem}
+{theorem:pythagoras}{Pythagoras' Theorem}{\ The square on the hypotenuse of a right angled triangle is equal to the sum of the squares on the other two sides.}{$\triangle ABC$ with $\hat{A}=90^\circ$ 
+\begin{center}
+\scalebox{0.8} % Change this value to rescale the drawing. 
+{
+\begin{pspicture}(0,-1.5376563)(6.6939063,1.5376563)
+\pstriangle[linewidth=0.03,dimen=outer](3.3346875,-1.3576562)(6.109375,2.5153124)
+\usefont{T1}{ptm}{m}{n}
+\rput(3.0528123,-1.1376562){\footnotesize $1$}
+\usefont{T1}{ptm}{m}{n}
+\rput(3.5487502,0.6423438){\footnotesize $2$}
+\rput(3.3128126,1.3673438){\small $A$}
+\rput(0.095625,-1.2926563){\small $B$}
+\rput(6.540313,-1.2926563){\small $C$}
+\rput(3.3128126, -1.6){\small $D$}
+\usefont{T1}{ptm}{m}{n}
+\rput(3.4687502,-1.177656){\footnotesize $2$}
+\usefont{T1}{ptm}{m}{n}
+\rput(2.9728127,0.6623438){\footnotesize $1$}
+\psline[linewidth=0.04cm](3.32,1.1576563)(3.3,-1.3223437)
+\psline[linewidth=0.04cm](3.06,0.9176563)(3.3,0.6976563)
+\psline[linewidth=0.04cm](3.3,0.6976563)(3.56,0.9576563)
+\psline[linewidth=0.04cm](3.3,-0.9823437)(3.68,-0.9823437)
+\psline[linewidth=0.04cm](3.68,-0.9823437)(3.68,-1.3223437)
+\end{pspicture} 
+}\end{center}}{ $BC^{2}=AB^{2}+AC^{2}$ \newline}
+{
+\begin{eqnarray*}
+ \text{Let } \hat{C} &=& x\\ 
+\therefore D\hat{A}C &=& 90^\circ-x \text{  ($\angle$ 's of a $\triangle$ )}\\ 
+\therefore D\hat{A}B &=& x\\
+A\hat{B}D &=& 90^{\circ}-x \text{   ($\angle$ 's of a $\triangle$ )}\\
+B\hat{D}A &=& C\hat{D}A=\hat{A} =90^\circ
+\end{eqnarray*}
+
+ $$\therefore \triangle ABD  ||| \triangle CBA \text{  and  } \triangle CAD ||| \triangle CBA \text{  (AAA)}$$
+ $$\therefore \frac{AB}{CB} =\frac {BD}{BA} = \left(\frac{AD}{CA}\right) \text{ and } \frac{CA}{CB} = \frac{CD}{CA} = \left(\frac{AD}{BA}\right)$$
+ $$\therefore AB^{2} = CB \times BD \text{  and  } AC^2 = CB \times CD$$ 
+
+\begin{eqnarray*} \therefore AB^{2} + AC^{2} &= &CB(BD+CD) \\
+ &=&CB(CB) \\ 
+ &=&CB^{2} \\ 
+\text{i.e.  }  BC^{2} &=& AB^{2}+AC^{2} 
+\end{eqnarray*}
+}
+\end{schooltheorem}
+
+
+\begin{wex}
+{Triangle Geometry 1}{
+In $\triangle GHI$, $GH \parallel LJ$; $GJ \parallel LK$ and $\frac{JK}{KI} = \frac{5}{3}$. Determine $\frac{HJ}{KI}$.}
+%\begin{center}
+% Change this value to rescale the drawing.
+%\scalebox{1.0}
+{
+\begin{pspicture}(0,-2.415526)(9.615091,2.415526)
+\psline[linewidth=0.04cm](0.3862329,2.0651042)(3.8791187,-2.0330596)
+\psline[linewidth=0.04cm](3.8791187,-2.0330596)(9.361259,0.47686714)
+\psline[linewidth=0.04cm](0.40656003,2.0847719)(9.400925,0.45621014)
+\psline[linewidth=0.04cm](5.0927267,1.2073655)(6.7411623,-0.72008353)
+\psline[linewidth=0.04cm](0.38656276,2.0851016)(6.76083,-0.7404107)
+\psline[linewidth=0.04cm](5.1323915,1.1867086)(8.051211,-0.12160821)
+\psline[linewidth=0.04cm](3.6633542,0.6508638)(3.8206935,0.4882468)
+\psline[linewidth=0.04cm](3.6833515,0.650534)(3.9233189,0.6465758)
+\psline[linewidth=0.04cm](6.4236383,0.64533895)(6.5199966,0.4237196)
+\psline[linewidth=0.04cm](6.4239683,0.6653362)(6.6439385,0.6617079)
+\psline[linewidth=0.04cm](5.582763,0.59920084)(5.579465,0.39922807)
+\psline[linewidth=0.04cm](5.5437584,0.6598524)(5.8637147,0.65457475)
+\psline[linewidth=0.04cm](5.68209,0.55755705)(5.6781316,0.31758967)
+\psline[linewidth=0.04cm](5.68209,0.55755705)(5.881733,0.5342612)
+\psline[linewidth=0.04cm](2.348358,-0.2475707)(2.3843942,-0.48819774)
+\psline[linewidth=0.04cm](2.368685,-0.22790326)(2.6076627,-0.2918533)
+\psline[linewidth=0.04cm](2.4660325,-0.38953075)(2.5014093,-0.67015237)
+\psline[linewidth=0.04cm](2.4663625,-0.36953348)(2.6856728,-0.4131564)
+%%%%%\usefont{T1}{ptm}{m}{n}
+\rput{-0.944997}(-0.037069865,0.002336595){\rput(0.110318616,2.2394686){$G$}}
+%%%%\usefont{T1}{ptm}{m}{n}
+\rput{-0.944997}(0.03770205,0.06376458){\rput(3.8786013,-2.2631843){$H$}}
+%%%%\usefont{T1}{ptm}{m}{n}
+\rput{-0.944997}(-0.006843058,0.15710452){\rput(9.512649,0.48422313){$I$}}
+%%%%\usefont{T1}{ptm}{m}{n}
+\rput{-0.944997}(0.016217697,0.113847435){\rput(6.903096,-0.93290603){$J$}}
+%%%%\usefont{T1}{ptm}{m}{n}
+\rput{-0.944997}(0.006209751,0.1378808){\rput(8.35678,-0.31677106){$K$}}
+%%%%\usefont{T1}{ptm}{m}{n}
+\rput{-0.944997}(-0.023160184,0.084413655){\rput(5.0991707,1.4371732){$L$}}
+%\psline[linewidth=0.04cm](7.902324,-0.6592258)(8.245247,-0.48485777)
+%\psline[linewidth=0.04cm](8.125922,-0.4428841)(8.225909,-0.44453335)
+%\psline[linewidth=0.04cm](8.225909,-0.44453335)(8.22327,-0.60451156)
+%\psline[linewidth=0.04cm](7.4797425,-0.8122772)(7.056171,-1.0253204)
+%\psline[linewidth=0.04cm](7.0581503,-0.9053367)(7.056831,-0.9853258)
+%\psline[linewidth=0.04cm](7.056501,-1.005323)(7.1958222,-1.0476266)
+%\psline[linewidth=0.04cm](8.731118,-0.13282315)(8.468185,-0.3085106)
+%\psline[linewidth=0.04cm](8.489832,-0.20885406)(8.488512,-0.28884318)
+%\psline[linewidth=0.04cm](8.488512,-0.28884318)(8.628493,-0.29115215)
+%\psline[linewidth=0.04cm](9.135022,0.10054718)(9.43795,0.27557492)
+%\psline[linewidth=0.04cm](9.4182825,0.29590207)(9.278302,0.298211)
+%\psline[linewidth=0.04cm](9.4182825,0.29590207)(9.415644,0.13592382)
+%%%%\usefont{T1}{ptm}{m}{n}
+%\rput(8.984149,-0.03809901){\small k}
+%%%%\usefont{T1}{ptm}{m}{n}
+%\rput(7.704149,-0.73809904){\small k}
+\end{pspicture} 
+}
+%\end{center}
+{\westep{Identify similar triangles}
+\begin{eqnarray*}
+L\hat{I}J &=& G\hat{I}H\\
+J\hat{L}I &=& H\hat{G}I \makebox[5.8cm]{ \text{(Corresponding $\angle$'s)}}\\
+\therefore \triangle LIJ &|||& \triangle GIH \makebox[5cm]{\text{(Equiangular $\triangle$'s)}}
+\end{eqnarray*}
+\begin{eqnarray*}
+L\hat{I}K &=& G\hat{I}J\\
+K\hat{L}I &=& J\hat{G}I \makebox[5.8cm]{\text{ (Corresponding $\angle$'s)}}\\
+\therefore \triangle LIK &|||& \triangle GIJ \makebox[4.9cm]{ \text{(Equiangular $\triangle$'s)}}
+\end{eqnarray*}
+
+\westep{Use proportional sides}
+\begin{align*}
+ \frac{HJ}{JI} &= \frac{GL}{LI}       &(\triangle LIJ \; ||| \; \triangle GIH)\\
+ \text{and } \frac{GL}{LI} &= \frac{JK}{KI}       &(\triangle LIK \; ||| \; \triangle GIJ)\\
+ &= \frac{5}{3}\\
+ \therefore \frac{HJ}{JI} &= \frac{5}{3}
+\end{align*}
+
+\westep{Rearrange to find the required ratio}
+\begin{eqnarray*}
+\frac{HJ}{KI} &=& \frac{HJ}{JI} \times \frac{JI}{KI}
+\end{eqnarray*}
+% 
+We need to calculate $\frac{JI}{KI}$: 
+We were given $\frac{JK}{KI} = \frac{5}{3}$ 
+So rearranging, we have $JK = \frac{5}{3}KI$ 
+And: 
+\begin{eqnarray*}
+JI &=& JK + KI \\
+& = & \frac{5}{3}KI + KI\\
+& = & \frac{8}{3} KI \\
+\frac{JI}{KI} & = & \frac{8}{3}
+\end{eqnarray*} 
+Using this relation: 
+\begin{eqnarray*}
+&=& \frac{5}{3} \times \frac{8}{3}\\
+&=& \frac{40}{9}
+\end{eqnarray*}
+}
+\end{wex}
+
+\begin{wex}{Triangle Geometry 2}{$PQRS$ is a trapezium, with $PQ \parallel RS$. \newline Prove that $PT \cdot TR = ST \cdot TQ$.
+\begin{center}
+\scalebox{0.8}
+{
+\begin{pspicture}(0,-2.131875)(7.675,2.131875)
+\psline[linewidth=0.04cm](0.2740625,1.848125)(1.6740625,-1.811875)
+\psline[linewidth=0.04cm](1.6540625,-1.811875)(7.3140626,-1.831875)
+\psline[linewidth=0.04cm](7.2740626,-1.811875)(3.7340624,1.828125)
+\psline[linewidth=0.04cm](3.7340624,1.828125)(0.2140625,1.848125)
+\psline[linewidth=0.04cm](2.0340624,1.988125)(2.2140625,1.828125)
+\psline[linewidth=0.04cm](2.2140625,1.828125)(2.0540626,1.728125)
+\psline[linewidth=0.04cm](3.9540625,-1.631875)(4.0540624,-1.791875)
+\psline[linewidth=0.04cm](4.0940623,-1.811875)(3.9140625,-2.011875)
+\psline[linewidth=0.04cm](0.2540625,1.868125)(7.2740626,-1.831875)
+\psline[linewidth=0.04cm](1.6740625,-1.791875)(3.7340624,1.828125)
+%%%\usefont{T1}{ptm}{m}{n}
+\rput(6.6182814,-1.731875){\small $1$}
+%%%\usefont{T1}{ptm}{m}{n}
+\rput(1.6684375,-1.351875){\small $2$}
+%%%\usefont{T1}{ptm}{m}{n}
+\rput(1.8782812,-1.631875){\small $1$}
+%%%\usefont{T1}{ptm}{m}{n}
+\rput(0.75828123,1.688125){\small $1$}
+%%%\usefont{T1}{ptm}{m}{n}
+\rput(3.3382812,1.648125){\small $1$}
+%%%\usefont{T1}{ptm}{m}{n}
+\rput(0.6284375,1.448125){\small $2$}
+%%%\usefont{T1}{ptm}{m}{n}
+\rput(3.7484374,1.528125){\small $2$}
+%%%\usefont{T1}{ptm}{m}{n}
+\rput(6.6684375,-1.391875){\small $2$}
+%%%\usefont{T1}{ptm}{m}{n}
+\rput(3.000625,0.178125){$T$}
+%%%\usefont{T1}{ptm}{m}{n}
+\rput(0.08484375,1.938125){$P$}
+%%%\usefont{T1}{ptm}{m}{n}
+\rput(3.8907812,1.958125){$Q$}
+%%%\usefont{T1}{ptm}{m}{n}
+\rput(1.4526563,-1.981875){$R$}
+%%%\usefont{T1}{ptm}{m}{n}
+\rput(7.5332813,-1.841875){$S$}
+\end{pspicture} 
+}
+\end{center}
+}{
+\westep{Identify similar triangles}
+\begin{eqnarray*}
+\hat{P_1} &=& \hat{S_1} \makebox[5cm]{\text{(alternate $\angle$'s)}}\\
+\hat{Q_1} &=& \hat{R_1} \makebox[4.9cm]{\text{(alternate $\angle$'s)}}\\
+\therefore \triangle PTQ &|||& \triangle STR \makebox[4.1cm]{\text{(equiangular $\triangle$'s)}}
+\end{eqnarray*}
+
+\westep{Use proportional sides}
+\begin{eqnarray*}
+\frac{PT}{TQ} &=& \frac{ST}{TR} \makebox[5cm]{\text{($\triangle PTQ ||| \triangle STR$)}}\\
+\therefore PT \cdot TR &=& ST \cdot TQ
+\end{eqnarray*}
+}
+\end{wex}
+
+\Exercise{Triangle Geometry}
+{
+\begin{enumerate}
+\item
+Calculate $SV$
+\begin{center}
+\scalebox{0.8} % Change this value to rescale the drawing.
+{
+\begin{pspicture}(0,-2.66)(11.017969,2.66)
+\psline[linewidth=0.04cm](0.30078125,2.355)(4.2807813,-2.285)
+\psline[linewidth=0.04cm](4.2807813,-2.285)(10.660781,-1.385)
+\psline[linewidth=0.04cm](10.660781,-1.385)(0.24078125,2.375)
+\psline[linewidth=0.04cm](1.6007812,0.775)(3.7407813,1.095)
+\psline[linewidth=0.04cm](3.7407813,1.135)(4.2407813,-2.225)
+\psline[linewidth=0.04cm](2.5407813,0.955)(2.6407812,1.075)
+\psline[linewidth=0.04cm](2.5407813,0.935)(2.7007813,0.815)
+\psline[linewidth=0.04cm](7.1407814,-1.845)(7.2207813,-1.685)
+\psline[linewidth=0.04cm](7.1407814,-1.885)(7.320781,-1.985)
+\psdots[dotsize=0.12](3.6607811,0.955)
+\psdots[dotsize=0.12](3.9207811,0.955)
+\rput(0.06,2.465){$S$}
+\rput(4.2607813,-2.515){$T$}
+\rput(10.847969,-1.395){$U$}
+\rput(3.8270311,1.345){$V$}
+\rput(0.67328125,1.245){$10$}
+\rput(1.3832812,0.626875){$W$}
+\rput(2.5104687,-0.815){$20$}
+\rput(6.771562,-2.155){$35$}
+\end{pspicture} 
+}
+\end{center}
+
+\item
+$\frac{CB}{YB} = \frac{3}{2}$. Find $\frac{DS}{SB}$.
+\begin{center}
+\scalebox{0.7} % Change this value to rescale the drawing.
+{
+\begin{pspicture}(0,-2.381875)(6.6628127,2.381875)
+\psline[linewidth=0.04cm](1.326875,2.078125)(6.326875,2.058125)
+\psline[linewidth=0.04cm](0.346875,-1.981875)(5.366875,-1.981875)
+\psline[linewidth=0.04cm](1.346875,2.098125)(0.326875,-2.001875)
+\psline[linewidth=0.04cm](5.286875,-1.981875)(6.326875,2.078125)
+\psline[linewidth=0.04cm](5.266875,-1.961875)(1.306875,2.078125)
+\psline[linewidth=0.04cm](0.306875,-1.961875)(6.346875,2.058125)
+\psline[linewidth=0.04cm](2.766875,-1.961875)(4.306875,-0.921875)
+\psline[linewidth=0.04cm](1.366875,2.018125)(2.746875,-1.941875)
+\psline[linewidth=0.04cm](3.166875,2.238125)(3.266875,2.098125)
+\psline[linewidth=0.04cm](3.286875,2.098125)(3.146875,1.918125)
+\psline[linewidth=0.04cm](3.346875,2.298125)(3.446875,2.098125)
+\psline[linewidth=0.04cm](3.466875,2.078125)(3.266875,1.898125)
+\psline[linewidth=0.04cm](3.466875,2.298125)(3.586875,2.058125)
+\psline[linewidth=0.04cm](3.586875,2.058125)(3.386875,1.918125)
+\psline[linewidth=0.04cm](2.006875,-1.741875)(2.166875,-1.981875)
+\psline[linewidth=0.04cm](2.166875,-2.001875)(1.986875,-2.161875)
+\psline[linewidth=0.04cm](2.186875,-1.701875)(2.326875,-1.981875)
+\psline[linewidth=0.04cm](2.346875,-2.001875)(2.146875,-2.181875)
+\psline[linewidth=0.04cm](2.306875,-1.701875)(2.486875,-1.961875)
+\psline[linewidth=0.04cm](2.526875,-1.961875)(2.246875,-2.241875)
+\psline[linewidth=0.04cm](0.486875,-0.581875)(0.726875,-0.481875)
+\psline[linewidth=0.04cm](0.726875,-0.481875)(0.766875,-0.701875)
+\psline[linewidth=0.04cm](0.526875,-0.421875)(0.726875,-0.341875)
+\psline[linewidth=0.04cm](0.726875,-0.341875)(0.866875,-0.581875)
+\psline[linewidth=0.04cm](5.366875,-0.681875)(5.706875,-0.621875)
+\psline[linewidth=0.04cm](5.686875,-0.621875)(5.766875,-0.881875)
+\psline[linewidth=0.04cm](5.506875,-0.521875)(5.746875,-0.461875)
+\psline[linewidth=0.04cm](5.666875,-0.421875)(5.826875,-0.701875)
+\psline[linewidth=0.04cm](3.466875,-1.381875)(3.666875,-1.381875)
+\psline[linewidth=0.04cm](3.666875,-1.421875)(3.666875,-1.581875)
+\psline[linewidth=0.04cm](2.326875,-0.461875)(2.606875,-0.461875)
+\psline[linewidth=0.04cm](2.586875,-0.441875)(2.566875,-0.681875)
+%\usefont{T1}{ptm}{m}{n}
+\rput(2.2064064,-0.941875){\small $X$}
+%\usefont{T1}{ptm}{m}{n}
+\rput(2.765625,-2.241875){\small $Y$}
+%\usefont{T1}{ptm}{m}{n}
+\rput(4.44375,-0.701875){\small $Z$}
+%\usefont{T1}{ptm}{m}{n}
+\rput(6.4934373,2.208125){$A$}
+%\usefont{T1}{ptm}{m}{n}
+\rput(5.5540624,-2.011875){$B$}
+%\usefont{T1}{ptm}{m}{n}
+\rput(0.0940625,-2.011875){$C$}
+%\usefont{T1}{ptm}{m}{n}
+\rput(1.246875,2.208125){$D$}
+%\usefont{T1}{ptm}{m}{n}
+\rput(3.3060937,0.21){$S$}
+\end{pspicture} 
+}
+\end{center}
+
+\item
+
+Given the following figure with the following lengths, find $AE$, $EC$ and $BE$.\\
+$BC = 15$ cm, $AB = 4$ cm, $CD = 18$ cm, and $ED = 9$ cm.\\
+\begin{center}
+\scalebox{0.7} % Change this value to rescale the drawing.
+{
+\begin{pspicture}(0,-2.995156)(6.7895303,2.995156)
+\psline[linewidth=0.04cm](1.1354687,1.1351562)(0.303125,-2.6351562)
+\psline[linewidth=0.04cm](6.4154687,2.6551561)(5.3231254,-2.4151561)
+\psline[linewidth=0.04cm](1.1554687,1.115156)(5.335469,-2.4048438)
+\psline[linewidth=0.04cm](0.303125,-2.675156)(6.4354687,2.675156)
+\psline[linewidth=0.04cm](5.8431253,0.00484385)(5.615469,-0.1048439)
+\psline[linewidth=0.04cm](5.8431253,0.02484385)(6.0031257,-0.19515616)
+\psline[linewidth=0.04cm](0.883125,-0.05515616)(0.67546874,-0.1648439)
+\psline[linewidth=0.04cm](0.863125,-0.03515615)(1.003125,-0.27515617)
+\usefont{T1}{ptm}{m}{n}
+\rput(1.1721874,1.3448439){\small $A$}
+\usefont{T1}{ptm}{m}{n}
+\rput(0.095625,-2.8551562){\small $B$}
+\usefont{T1}{ptm}{m}{n}
+\rput(6.6359367,2.8248436){\small $C$}
+\usefont{T1}{ptm}{m}{n}
+\rput(5.6296873,-2.5151558){\small $D$}
+\usefont{T1}{ptm}{m}{n}
+\rput(2.97625,-0.09515615){\small $E$}
+\end{pspicture} 
+}
+\end{center}
+
+\item
+Using the following figure and lengths, find $IJ$ and $KJ$.\\
+$HI = 26$ m, $KL = 13$ m, $JL = 9$ m and $HJ = 32$ m.
+\begin{center}
+\scalebox{0.7} % Change this value to rescale the drawing.
+{
+\begin{pspicture}(0,-2.2225)(8.019844,2.2225)
+\psline[linewidth=0.04cm](0.28,1.3625)(2.3578124,-1.8225)
+\psline[linewidth=0.04cm](2.3578124,-1.8225)(7.68,2.1225)
+\psline[linewidth=0.04cm](2.66,1.6225)(4.04,-0.5575)
+\psline[linewidth=0.04cm](0.8378125,0.4975)(0.8378125,0.1575)
+\psline[linewidth=0.04cm](0.8378125,0.5175)(1.1378124,0.4175)
+\psline[linewidth=0.04cm](3.1978123,0.7575)(3.1978123,0.4575)
+\psline[linewidth=0.04cm](3.1578126,0.7975)(3.4578125,0.7175)
+\usefont{T1}{ptm}{m}{n}
+\rput(0.1103125,1.5975){\small $H$}
+\usefont{T1}{ptm}{m}{n}
+\rput(2.264375,-2.0825){\small $I$}
+\usefont{T1}{ptm}{m}{n}
+\rput(7.91125,2.0575){\small $J$}
+\usefont{T1}{ptm}{m}{n}
+\rput(2.680625,1.7975){\small $K$}
+\usefont{T1}{ptm}{m}{n}
+\rput(4.380625,-0.5975){\small $L$}
+\psline[linewidth=0.04cm](0.28,1.3625)(7.68,2.1425)
+\end{pspicture} 
+}
+\end{center}
+
+\item
+Find $FH$ in the following figure.
+
+\begin{center}
+\scalebox{0.7} % Change this value to rescale the drawing.
+{
+\begin{pspicture}(0,-3.6525)(7.7465625,3.6525)
+\psline[linewidth=0.04cm](2.2740624,3.3275)(7.3540626,0.1275)
+\psline[linewidth=0.04cm](7.3740625,0.1275)(0.3340625,-3.3525)
+\psline[linewidth=0.04cm](2.2940626,3.3475)(0.2940625,-3.3525)
+\psline[linewidth=0.04cm](1.1540625,-0.4325)(3.4540625,-1.8525)
+\psline[linewidth=0.04cm](4.7340627,1.7675)(4.7940626,1.5275)
+\psline[linewidth=0.04cm](4.7740626,1.7875)(5.0540624,1.7475)
+\psline[linewidth=0.04cm](2.0340624,-0.9925)(2.0740626,-1.1525)
+\psline[linewidth=0.04cm](2.2140625,-0.9325)(2.0740626,-0.9925)
+\psline[linewidth=0.04cm](2.2940626,3.3075)(3.4140625,-1.8125)
+\psdots[dotsize=0.12](3.0740626,-1.8325)
+\psdots[dotsize=0.12](3.2140625,-1.6125)
+\rput{52.125015}(0.054989625,-3.097434){\psarc[linewidth=0.04](3.1940625,-1.4925){0.14}{0.0}{180.0}}
+\rput{82.54344}(0.80469745,-4.60188){\psarc[linewidth=0.04](3.0240624,-1.8425){0.17}{0.0}{180.0}}
+%\usefont{T1}{ptm}{m}{n}
+\rput(2.130625,3.4875){\small $E$}
+%\usefont{T1}{ptm}{m}{n}
+\rput(7.5873437,0.1475){\small $D$}
+%\usefont{T1}{ptm}{m}{n}
+\rput(3.61875,-1.9925){\small $F$}
+%\usefont{T1}{ptm}{m}{n}
+\rput(0.8884375,-0.4325){\small $G$}
+%\usefont{T1}{ptm}{m}{n}
+\rput(0.1103125,-3.5125){\small $H$}
+%\usefont{T1}{ptm}{m}{n}
+\rput(1.399375,1.5475){\small $42$}
+%\usefont{T1}{ptm}{m}{n}
+\rput(0.4846875,-1.6325){\small $21$}
+%\usefont{T1}{ptm}{m}{n}
+\rput(4.555625,2.1675){\small $36$}
+\end{pspicture} 
+}
+\end{center}
+
+\item
+$BF = 25$ m, $AB = 13$ m, $AD = 9$ m, $DF = 18$ m.\\
+Calculate the lengths of $BC$, $CF$, $CD$, $CE$ and $EF$, and find the ratio $\frac{DE}{AC}$. \\
+\begin{center}
+\scalebox{0.9} 
+{
+\begin{pspicture}(0,-2.2351563)(5.992812,2.2351563)
+\psline[linewidth=0.04cm](1.72,1.8751563)(5.723125,-2.1151562)
+\psline[linewidth=0.04cm](0.16,-0.1248437)(5.703125,-2.115156)
+\psline[linewidth=0.04cm](0.163125,-0.1551562)(1.703125,1.9048438)
+\psline[linewidth=0.04cm](2.843125,-1.1351563)(1.703125,1.9048438)
+\psline[linewidth=0.04cm](3.943125,-0.7551562)(3.903125,-1.0151563)
+\psline[linewidth=0.04cm](3.943125,-0.7551562)(4.163125,-0.8951563)
+\psline[linewidth=0.04cm](3.923125,-0.65515625)(3.823125,-0.8951563)
+\psline[linewidth=0.04cm](3.883125,-0.67515624)(4.103125,-0.7551562)
+\psline[linewidth=0.04cm](2.143125,0.6848438)(2.143125,0.3648437)
+\psline[linewidth=0.04cm](2.143125,0.6848438)(2.423125,0.4848437)
+\psline[linewidth=0.04cm](2.103125,0.8248438)(2.023125,0.4648438)
+\psline[linewidth=0.04cm](2.123125,0.8448438)(2.363125,0.6848438)
+\psline[linewidth=0.04cm](1.043125,1.0448438)(0.763125,0.9448437)
+\psline[linewidth=0.04cm](1.043125,1.0648437)(1.043125,0.7848437)
+\usefont{T1}{ptm}{m}{n}
+\rput(1.7921876,2.064844){\small $A$}
+\usefont{T1}{ptm}{m}{n}
+\rput(0.095625,-0.31515625){\small $B$}
+\usefont{T1}{ptm}{m}{n}
+\rput(2.7359374,-1.2951562){\small $C$}
+\usefont{T1}{ptm}{m}{n}
+\rput(3.7696872,0.14484374){\small $D$}
+\usefont{T1}{ptm}{m}{n}
+\rput(4.2362494,-1.8351563){\small $E$}
+\usefont{T1}{ptm}{m}{n}
+\rput(5.8624997,-2.0951562){\small $F$}
+\psline[linewidth=0.04cm](2.82,-1.0648437)(3.58,0.0151563)
+\psline[linewidth=0.04cm](3.6,-0.0048437)(4.28,-1.6048437)
+\psline[linewidth=0.04cm](4.86,1.7951562)(4.86,1.7951562)
+\psline[linewidth=0.04cm](3.343125,-0.3551563)(3.343125,-0.6351563)
+\psline[linewidth=0.04cm](3.343125,-0.37515625)(3.063125,-0.4751563)
+\end{pspicture} 
+}
+\end{center}
+
+\item
+If $LM \parallel JK$, calculate $y$.
+\begin{center}
+\scalebox{1} % Change this value to rescale the drawing.
+{
+
+\begin{pspicture}(0,-1.7825)(6.0112495,1.7825)
+\psline[linewidth=0.04cm](0.24,1.5425)(1.2014062,-1.3825)
+\psline[linewidth=0.04cm](1.1814063,-1.3825)(5.6,-0.1375)
+\psline[linewidth=0.04cm](0.22140625,1.4775)(5.601406,-0.1625)
+\psline[linewidth=0.04cm](2.7414062,0.7175)(2.8814063,0.5575)
+\psline[linewidth=0.04cm](2.7614062,0.7375)(2.9814062,0.7575)
+\usefont{T1}{ptm}{m}{n}
+\rput(1.0879688,-1.6425){\small $I$}
+\usefont{T1}{ptm}{m}{n}
+\rput(0.05484375,1.6175){\small $J$}
+\usefont{T1}{ptm}{m}{n}
+\rput(5.8442187,-0.2425){\small $K$}
+\usefont{T1}{ptm}{m}{n}
+\rput(0.4348438,0.3375){\small $L$}
+\usefont{T1}{ptm}{m}{n}
+\rput(3.841094,-0.9025){\small $M$}
+\usefont{T1}{ptm}{m}{n}
+\rput(0.6865625,-0.4425){\small $y$}
+\usefont{T1}{ptm}{m}{n}
+\rput(4.8292184,-0.6425){\small $y - 2$}
+\usefont{T1}{ptm}{m}{n}
+\rput(0.18015625,0.8575){\small $2$}
+\usefont{T1}{ptm}{m}{n}
+\rput(2.6939063,-1.2225){\small $7$}
+\psline[linewidth=0.04cm](0.62,0.4025)(3.78,-0.6375)
+\psline[linewidth=0.04cm](2.0614061,-0.0425)(2.2814062,-0.0225)
+\psline[linewidth=0.04cm](2.0414062,-0.0625)(2.1814063,-0.2225)
+\end{pspicture} 
+}
+\end{center}
+
+\end{enumerate}
+}
+
+\section{Co-ordinate Geometry}
+%\begin{syllabus}
+%\item Use a Cartesian co-ordinate system to derive and apply:
+%\begin{itemize}
+%\item the equation of a line through two given points;
+%\item the equation of a line through one point and parallel or perpendicular to a given line;
+%\item the inclination of a line.
+%\end{itemize}
+%\end{syllabus}
+
+\subsection{Equation of a Line Between Two Points}
+%Khan Academy video on point-slope and standard form: SIYAVULA-VIDEO:http://cnx.org/content/m38835/latest/#Point-slope-and-standard-form\\
+There are many different methods of specifying the requirements for determining the equation of a straight line. One option is to find the equation of a straight line, when two points are given.
+
+Assume that the two points are $(x_1;y_1)$ and $(x_2;y_2)$, and we know that the general form of the equation for a straight line is:
+
+\begin{equation}\framebox{$y=mx+c$} \label{eq:mg:c:strline} \end{equation}
+
+So, to determine the equation of the line passing through our two points, we need to determine values for $m$ (the gradient of the line) and $c$ (the $y$-intercept of the line). The resulting equation is
+\begin{equation}\framebox{$y - y_1 = m(x-x_1)$}\label{eq:mg:c:strline2} \end{equation}
+where $(x_1;y_1)$ are the co-ordinates of either given point.
+
+\Extension{Finding the second equation for a straight line}{
+This is an example of a set of simultaneous equations, because we can write:
+\begin{eqnarray}
+\label{eq:mg:c:sim1}
+y_1&=&mx_1+c\\
+\label{eq:mg:c:sim2}
+y_2&=&mx_2+c
+\end{eqnarray}
+
+We now have two equations, with two unknowns, $m$ and $c$.
+
+\begin{eqnarray}
+\mbox{Subtract (\ref{eq:mg:c:sim1}) from (\ref{eq:mg:c:sim2})}\quad y_2-y_1&=&mx_2-mx_1\\
+\label{eq:mg:c:sim3}
+\therefore \quad m&=&\frac{y_2-y_1}{x_2-x_1}\\
+\label{eq:mg:c:c}
+\mbox{Re-arrange (\ref{eq:mg:c:sim1}) to obtain $c$}\quad y_1&=&mx_1+c\\
+c&=&y_1-mx_1
+\end{eqnarray}
+
+Now, to make things a bit easier to remember, substitute (\ref{eq:mg:c:c}) into (\ref{eq:mg:c:strline}):
+
+\begin{eqnarray}
+y&=&mx + c\\
+&=&mx + (y_1-mx_1)\\
+\mbox{which can be re-arranged to:} \quad y-y_1&=&m(x-x_1)
+\end{eqnarray}
+}
+
+\Tip{If you are asked to calculate the equation of a line passing through two points, use:
+\nequ{m=\frac{y_2-y_1}{x_2-x_1}}
+to calculate $m$ and then use:
+\nequ{y-y_1=m(x-x_1)}
+to determine the equation.}
+
+For example, the equation of the straight line passing through $(-1;1)$ and $(2;2)$ is given by first calculating $m$
+\begin{eqnarray*}
+m&=&\frac{y_2-y_1}{x_2-x_1}\\
+&=&\frac{2-1}{2-(-1)}\\
+&=&\frac{1}{3}
+\end{eqnarray*}
+and then substituting this value into \nequ{y-y_1=m(x-x_1)} to obtain
+\begin{eqnarray*}
+y-y_1&=&\frac{1}{3}(x-x_1).\\
+\end{eqnarray*}
+Then substitute $(-1;1)$ to obtain
+\begin{eqnarray*}
+y-(1)&=&\frac{1}{3}(x-(-1))\\
+y-1&=&\frac{1}{3}x + \frac{1}{3}\\
+y&=&\frac{1}{3}x + \frac{1}{3} + 1\\
+y&=&\frac{1}{3}x + \frac{4}{3}
+\end{eqnarray*}
+
+So, $y=\frac{1}{3}x + \frac{4}{3}$ passes through $(-1;1)$ and $(2;2)$.
+
+\begin{figure}[ht]
+\begin{center}
+\begin{pspicture}(-4.5,-1)(4.5,4.5)
+%\psgrid[gridcolor=lightgray,gridlabels=0,gridwidth=0.5pt,subgriddiv=10]
+\psaxes{<->}(0,0)(-4,-1)(4,4)
+\psplot[arrows=<->]{-3}{3}{x 3 div 4 3 div add}
+\psdots(-1,1)(2,2)
+\uput[u](-1,1){($-1;1$)}
+\uput[u](2,2){($2;2$)}
+\uput[r](1,1.5){$y=\frac{1}{3}x + \frac{4}{3}$}
+\uput[r](4,-0.2){$x$}
+\uput[u](0.2,4){$y$}
+\end{pspicture}
+\caption{The equation of the line passing through $(-1;1)$ and $(2;2)$ is $y=\frac{1}{3}x + \frac{4}{3}$.}
+\label{fig:mg:c:example1}
+\end{center}
+\end{figure}
+
+\begin{wex}{Equation of Straight Line}{Find the equation of the straight line passing through $(-3;2)$ and $(5;8)$.\\}{
+\westep{Label the points}
+\begin{eqnarray*}
+(x_1;y_1)&=&(-3;2)\\
+(x_2;y_2)&=&(5;8)
+\end{eqnarray*}
+
+\westep{Calculate the gradient}
+\begin{eqnarray*}
+m &=&\frac{y_2-y_1}{x_2-x_1}\\
+&=&\frac{8-2}{5-(-3)}\\
+&=&\frac{6}{5+3}\\
+&=&\frac{6}{8}\\
+&=&\frac{3}{4}
+\end{eqnarray*}
+
+\westep{Determine the equation of the line}
+\begin{eqnarray*}
+y-y_1&=&m(x-x_1)\\
+y-(2)&=&\frac{3}{4}(x-(-3))\\
+y&=&\frac{3}{4}(x+3) + 2\\
+&=&\frac{3}{4}x + \frac{3}{4} \cdot 3 + 2\\
+&=&\frac{3}{4}x + \frac{9}{4} + \frac{8}{4}\\
+&=&\frac{3}{4}x + \frac{17}{4}
+\end{eqnarray*}
+
+\westep{Write the final answer}
+The equation of the straight line that passes through $(-3;2)$ and $(5;8)$ is $y=\frac{3}{4}x + \frac{17}{4}$.}
+\end{wex}
+
+\subsection{Equation of a Line Through One Point and Parallel or Perpendicular to Another Line}
+
+Another method of determining the equation of a straight-line is to be given one point, $(x_1;y_1)$, and to be told that the line is parallel or perpendicular to another line. If the equation of the unknown line is $y=mx+c$ and the equation of the second line is $y=m_0x+c_0$, then we know the following:
+\begin{eqnarray}
+\mbox{If the lines are parallel, then }\quad\quad\quad m&=& m_0\\
+\mbox{If the lines are perpendicular, then}\quad m \times m_0&=& -1
+\end{eqnarray}
+
+Once we have determined a value for $m$, we can then use the given point together with:
+\nequ{y-y_1=m(x-x_1)}
+to determine the equation of the line.
+
+For example, find the equation of the line that is parallel to $y=2x-1$ and that passes through $(-1;1)$.
+
+First we determine $m$, the slope of the line we are trying to find. Since the line we are looking for is parallel to $y=2x-1$,
+\nequ{m=2}
+
+The equation is found by substituting $m$ and $(-1;1)$ into:
+\begin{eqnarray*}
+y-y_1&=&m(x-x_1)\\
+y-1&=&2(x-(-1)\\
+y-1&=&2(x+1)\\
+y-1&=&2x+2\\
+y&=&2x+2+1\\
+y&=&2x+3
+\end{eqnarray*}
+
+\begin{figure}[H]
+\begin{center}
+\begin{pspicture}(-4,-3)(4,4)
+%\psgrid[gridcolor=lightgray,gridlabels=0,gridwidth=0.5pt,subgriddiv=10]
+\psaxes{<->}(0,0)(-4,-3)(4,4)
+\psplot[arrows=<->]{-1.0}{2.5}{x 2 mul 1 sub}
+\psplot[arrows=<->]{-3}{0.5}{x 2 mul 3 add}
+\psdots(-1,1)
+\uput[l](-1,1){($-1;1$)}
+\uput[r](1,1){$y=2x-1$}
+\uput[l](-2,-1){$y=2x+3$}
+\uput[r](4,-0.1){$x$}
+\uput[u](0.1, 4){$y$}
+\end{pspicture}
+\caption{The equation of the line passing through $(-1;1)$ and parallel to $y=2x-1$ is $y=2x+3$. It can be seen that the lines are parallel to each other. You can test this by using your ruler and measuring the perpendicular distance between the lines at different points.}
+\label{fig:mg:c:example2}
+\end{center}
+\end{figure}
+
+\subsection{Inclination of a Line}
+
+\begin{figure}[htbp]
+\begin{center}
+\pspicture(-6,-1.5)(6,4)
+%\psgrid
+\rput(-5,0){%\psgrid[gridcolor=lightgray,gridlabels=0,gridwidth=0.5pt,subgriddiv=10](-1,-1)(4,4)
+\psaxes{<->}(0,0)(-1,-1)(4,4)
+\psplot[arrows=<->]{0.25}{2.5}{x 2 mul 1 sub}
+\psarc[arrows=<->](0.5,0){0.75}{0}{63.4}
+\rput(0.95,0.25){$\theta$}
+\psline[linewidth=0.5pt](1,1)(2,1)(2,3)
+\uput[r](2,2){$\Delta y$}
+\uput[d](1.5,1){$\Delta x$}}
+\uput[r](-1.2,-0.1){$x$}
+\uput[u](-5, 4){$y$}
+\rput(1,0){
+%\psgrid[gridcolor=lightgray,gridlabels=0,gridwidth=0.5pt,subgriddiv=10](-1,-1)(5,4)
+\psaxes{<->}(0,0)(-1,-1)(5,4)
+\psplot[arrows=<->,linewidth=0.5pt]{0.75}{2}{x 4 mul 4 sub}
+\psplot[arrows=<->,linestyle=dashed]{0.5}{2.5}{x 2 mul 2 sub}
+\psarc[arrows=<->,linestyle=dashed](1,0){0.75}{0}{63.4}
+\psarc[arrows=<->](1,0){1.5}{0}{76}
+\uput[dr](2,4){$f(x)=4x-4$}
+\uput[r](2,2){$g(x)=2x-2$}
+\rput(1.45,0.25){$\theta_g$}
+\rput(2.25,0.25){$\theta_f$}}
+\uput[r](5.85,-0.1){$x$}
+\uput[u](1, 4){$y$}
+\rput(-3.5,-1.5){(a)}
+\rput(3,-1.5){(b)}
+\endpspicture
+\caption{(a) A line makes an angle $\theta$ with the $x$-axis. (b) The angle is dependent on the gradient. If the gradient of $f$ is $m_f$ and the gradient of $g$ is $m_g$ then $m_f > m_g$ and $\theta_f > \theta_g$.}
+\label{fig:mg:c:inclination}
+\end{center}
+\end{figure}
+
+In Figure \ref{fig:mg:c:inclination}(a), we see that the line makes an angle $\theta$ with the $x$-axis. This angle is known as the \textit{inclination} of the line and it is sometimes interesting to know what the value of $\theta$ is.
+
+Firstly, we note that if the gradient changes, then the value of $\theta$ changes (Figure \ref{fig:mg:c:inclination}(b)), so we suspect that the inclination of a line is related to the gradient. We know that the gradient is a ratio of a change in the $y$-direction to a change in the $x$-direction.
+\nequ{m=\frac{\Delta y}{\Delta x}}
+But, in Figure \ref{fig:mg:c:inclination}(a) we see that
+\begin{eqnarray*}
+\tan \theta &=& \frac{\Delta y}{\Delta x}\\
+\therefore m &=& \tan \theta
+\end{eqnarray*}
+For example, to find the inclination of the line $y = x$, we know $m = 1$
+\begin{eqnarray*}
+\therefore \tan \theta &=& 1\\
+\therefore \theta &=& 45^\circ
+\end{eqnarray*}
+
+\Exercise{Co-ordinate Geometry}
+{
+\begin{enumerate}
+\item Find the equations of the following lines
+\begin{enumerate}
+\item through points $(-1;3)$ and $(1;4)$
+\item through points $(7;-3)$ and $(0;4)$
+\item parallel to $y = \frac{1}{2}x + 3$ passing through $(-1;3)$
+\item perpendicular to $y = -\frac{1}{2}x + 3$ passing through $(-1;2)$
+\item perpendicular to $2y + x = 6$ passing through the origin
+\end{enumerate}
+
+\item Find the inclination of the following lines
+\begin{enumerate}
+\item $y = 2x -3$
+\item $y = \frac{1}{3}x - 7$
+\item $4y = 3x + 8$
+\item $y = -\frac{2}{3}x + 3$  (Hint: if $m$ is negative $\theta$ must be in the second quadrant)
+\item $3y + x - 3 = 0$
+\end{enumerate}
+
+\item{Show that the line $y=k$ for any constant $k$ is parallel to the $x$-axis. (Hint: Show that the inclination of this line is $0^{\circ}$.)}
+\item{Show that the line $x=k$ for any constant $k$ is parallel to the $y$-axis. (Hint: Show that the inclination of this line is $90^{\circ}$.)}
+\end{enumerate}
+}
+
+\section{Transformations}
+\label{mg:t}
+%\begin{syllabus}
+%\item Investigate, generalise and apply the effect on the co-ordinates of:
+%\begin{itemize}
+%\item the point $(x ; y)$ after rotation around the origin through an angle of 90$^\circ$ or 180$^\circ$
+%\item the vertices $(x_1 ; y_1), (x_2 ; y_2),\ldots , (x_n ; y_n)$ of a polygon after enlargement through the origin, by a constant factor $k$.
+%\end{itemize}
+%\end{syllabus}
+
+\subsection{Rotation of a Point}
+When something is moved around a fixed point, we say that it is \textit{rotated} about the point. What happens to the coordinates of a point that is rotated by $90^\circ$ or $180^\circ$ around the origin?
+
+\Activity{Investigation}{Rotation of a Point by $90^\circ$}{
+\begin{center}
+\begin{tabular}[t]{p{6.5cm}c}
+Complete the table, by filling in the coordinates of the points shown in the figure.&\\
+\begin{tabular}[t]{|c|c|c|}\hline
+\textbf{Point}&\textbf{$x$-coordinate}&\textbf{$y$-coordinate}\\\hline\hline
+$A$&&\\\hline
+$B$&&\\\hline
+$C$&&\\\hline
+$D$&&\\\hline
+$E$&&\\\hline
+$F$&&\\\hline
+$G$&&\\\hline
+$H$&&\\\hline
+\end{tabular}
+&
+\multirow{2}{*}{\begin{tabular}{c}
+\begin{pspicture}(-2.2,-2.2)(2.2,2.2)
+\psset{unit=0.8}
+\psgrid[gridcolor=lightgray,gridlabels=0,gridwidth=0.5pt](-2.2,-2.2)(2.2,2.2)
+\psline[linewidth=0.02cm, arrows=<->](0,-2.2)(0,2.2)
+\psline[linewidth=0.02cm, arrows=<->](-2.2,0)(2.2,0)
+%\psaxes[dx=1,Dx=1,arrows=<->](0,0)(-2.2,-2.2)(2.2,2.2)
+\psdots[dotsize=5pt](1,0)(0.6, 0.8)(0,1)(-0.8,0.6)(-1,0)(-0.6,-0.8)(0,-1)(0.8,-0.6)
+\psline[linewidth=0.02cm](0.6, 0.8)(0,0)
+\psline[linewidth=0.02cm](-0.8, 0.6)(0,0)
+\psline[linewidth=0.02cm](0.2, 0.26)(-0.05,0.44)
+\psline[linewidth=0.02cm](-0.26, 0.2)(-0.05, 0.44)
+\psarc[linestyle=dashed](0,0){1}{0}{360}
+\uput[ur](1,0){$A$}
+\uput[ur](0.6, 0.8){$B$}
+\uput[ur](-0.6,1){$C$}
+\uput[ul](-0.6,0.7){$D$}
+\uput[ul](-1,0){$E$}
+\uput[dl](-0.6,-0.8){$F$}
+\uput[dr](0,-1){$G$}
+\uput[dr](0.8,-0.6){$H$}
+\end{pspicture}
+\end{tabular}
+}\\
+What do you notice about the $x$-coordinates? What do you notice about the $y$-coordinates?&\\
+What would happen to the coordinates of point $A$, if it was rotated to the position of point $C$? What about if point $B$ rotated to the position of $D$?&\\
+\end{tabular}
+\end{center}
+}
+
+\Activity{Investigation}{Rotation of a Point by $180^\circ$}{
+\begin{center}
+\begin{tabular}[t]{p{6.5cm}c}
+Complete the table, by filling in the coordinates of the points shown in the figure.&\\
+
+\begin{tabular}[t]{|c|c|c|}\hline
+\textbf{Point}&\textbf{$x$-coordinate}&\textbf{$y$-coordinate}\\\hline\hline
+$A$&&\\\hline
+$B$&&\\\hline
+$C$&&\\\hline
+$D$&&\\\hline
+$E$&&\\\hline
+$F$&&\\\hline
+$G$&&\\\hline
+$H$&&\\\hline
+\end{tabular}
+&
+\multirow{2}{*}{\begin{tabular}{c}
+\psset{unit=0.8}
+\begin{pspicture}(-2.2,-2.2)(2.2,2.2)
+\psgrid[gridcolor=lightgray,gridlabels=0,gridwidth=0.5pt](-2.2,-2.2)(2.2,2.2)
+\psline[linewidth=0.02cm, arrows=<->](0,-2.2)(0,2.2)
+\psline[linewidth=0.02cm, arrows=<->](-2.2,0)(2.2,0)
+%\psaxes[dx=1,Dx=1,arrows=<->](0,0)(-2.2,-2.2)(2.2,2.2)
+\psdots[dotsize=5pt](1,0)(0.6, 0.8)(0,1)(-0.8,0.6)(-1,0)(-0.6,-0.8)(0,-1)(0.8,-0.6)
+\psline[linewidth=0.02cm](0.6, 0.8)(0,0)
+\psline[linewidth=0.02cm](-0.6, -0.8)(0,0)
+\uput[ur](1,0){$A$}
+\uput[ur](0.6, 0.8){$B$}
+\uput[ur](-0.6,1){$C$}
+\uput[ul](-0.6,0.7){$D$}
+\uput[ul](-1,0){$E$}
+\uput[dl](-0.6,-0.8){$F$}
+\uput[dr](0,-1){$G$}
+\uput[dr](0.8,-0.6){$H$}
+\psarc[linestyle=dashed](0,0){1}{0}{360}
+\end{pspicture}
+\end{tabular}
+}\\
+What do you notice about the $x$-coordinates? What do you notice about the $y$-coordinates?&\\
+What would happen to the coordinates of point $A$, if it was rotated to the position of point $E$? What about point $F$ rotated to the position of $B$?&\\
+\end{tabular}
+\end{center}
+}
+
+From these activities you should have come to the following conclusions:
+
+\begin{minipage}{0.55\textwidth}
+\begin{itemize}
+\item 
+$90^\circ$ clockwise rotation:\\
+The image of a point $P(x;y)$ rotated clockwise through $90^\circ$ around the origin is $P'(y; - x)$.\\
+We write the rotation as $(x;y) \rightarrow (y; -x)$.
+\vspace{2cm}
+\item
+$90^\circ$ anticlockwise rotation:\\
+The image of a point $P(x;y)$ rotated anticlockwise through $90^\circ$ around the origin is $P'(-y; x)$.\\
+We write the rotation as $(x;y) \rightarrow (-y; x)$.
+\vspace{2cm}
+\item
+$180^\circ$ rotation:\\
+The image of a point $P(x;y)$ rotated through $180^\circ$ around the origin is $P'(-x; -y)$.\\
+We write the rotation as $(x;y) \rightarrow (-x; -y)$.
+\end{itemize}
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+\begin{flushright}
+\scalebox{0.8} % Change this value to rescale the drawing.
+{
+\begin{pspicture}(0,-2.435)(5.055,2.435)
+\definecolor{color0c}{rgb}{0.501960784,0.501960784,0.501960784}
+\rput(2.34,-0.14){\psgrid[gridwidth=0.0122,subgridwidth=0.014111111,gridlabels=0.0pt,subgriddiv=4,unit=2.1cm,subgridcolor=color0c](0,0)(-1,-1)(1,1)
+\psset{unit=1.0cm}}
+\psarc[linewidth=0.027999999,linestyle=dashed,dash=0.16cm 0.16cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{<-}(2.35,-0.15){1.67}{108.43495}{17.63179}
+\psarc[linewidth=0.04,arrowsize=0.1429cm 2.15,arrowlength=1.5,arrowinset=0.4]{<-}(2.35,-0.15){1.67}{17.15242}{107.86486}
+\psline[linewidth=0.04cm](1.84,1.44)(2.34,-0.1)
+\psline[linewidth=0.04cm](2.34,-0.14)(3.96,0.38)
+\psarc[linewidth=0.04,arrowsize=0.1029cm 2.12,arrowlength=1.48,arrowinset=0.4]{<-}(2.37,-0.13){0.61}{17.15242}{107.86486}
+\rput{-248.52878}(2.8947968,-2.0920615){\psframe[linewidth=0.02,dimen=outer](2.32,-0.22)(2.0,-0.54)}
+\psline[linewidth=0.04cm](2.08,0.96)(1.9,0.9)
+\psline[linewidth=0.04cm](2.12,0.9)(1.94,0.84)
+\psline[linewidth=0.04cm](3.54,0.32)(3.6,0.18)
+\psline[linewidth=0.04cm](3.46,0.3)(3.54,0.16)
+\psline[linewidth=0.03cm,arrowsize=0.0729cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(0.0,-0.14)(5.04,-0.16)
+\psline[linewidth=0.03cm,arrowsize=0.0729cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(2.36,-2.42)(2.34,2.42)
+\usefont{T1}{ptm}{m}{it}
+\rput(4.760469,-0.31){$x$}
+\usefont{T1}{ptm}{m}{it}
+\rput(2.5642188,2.17){$y$}
+\usefont{T1}{ptm}{m}{n}
+\rput(1.7240624,1.7149999){\footnotesize $P(x; y)$}
+\usefont{T1}{ptm}{m}{n}
+\rput(4.4740624,0.5749999){\footnotesize $P'(y; -x)$}
+\psdots[dotsize=0.12](1.8199999,1.4399999)
+\psdots[dotsize=0.12](3.9599998,0.3599999)
+\end{pspicture} 
+}
+% Generated with LaTeXDraw 1.9.3
+% Thu Dec 13 14:27:19 CAT 2007
+% \usepackage[usenames,dvipsnames]{pstricks}
+% \usepackage{epsfig}
+% \usepackage{pst-grad} % For gradients
+% \usepackage{pst-plot} % For axes
+\scalebox{0.8} % Change this value to rescale the drawing.
+{
+\begin{pspicture}(0,-2.535)(5.4296875,2.535)
+\definecolor{color0c}{rgb}{0.501960784,0.501960784,0.501960784}
+\rput(2.8346877,-0.1800001){\rput{-270.0}(0.0,0.0){\psgrid[gridwidth=0.0122,subgridwidth=0.014111111,gridlabels=0.0pt,subgriddiv=4,unit=2.1cm,subgridcolor=color0c](0,0)(-1,-1)(1,1)
+\psset{unit=1.0cm}}}
+\rput{-270.0}(2.6746876,-3.0146875){\psarc[linewidth=0.027999999,linestyle=dashed,dash=0.16cm 0.16cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{<-}(2.8446877,-0.17){1.67}{108.43495}{17.63179}}
+\rput{-270.0}(2.6546876,-3.0346875){\psarc[linewidth=0.04,arrowsize=0.1429cm 2.15,arrowlength=1.5,arrowinset=0.4]{->}(2.8446877,-0.19){1.67}{17.15242}{107.86486}}
+\psline[linewidth=0.04cm](1.2546875,-0.68)(2.7946875,-0.18)
+\psline[linewidth=0.04cm](2.8346877,-0.18)(2.3146875,1.44)
+\rput{-270.0}(2.6746874,-2.9746876){\psarc[linewidth=0.04,arrowsize=0.1029cm 2.12,arrowlength=1.48,arrowinset=0.4]{->}(2.8246875,-0.1500001){0.61}{17.15242}{110.772255}}
+\psline[linewidth=0.04cm](1.7346876,-0.44)(1.7946876,-0.62)
+\psline[linewidth=0.04cm](1.7946876,-0.4)(1.8546876,-0.58)
+\psline[linewidth=0.04cm](2.3746877,1.02)(2.5146875,1.08)
+\psline[linewidth=0.04cm](2.3946877,0.94)(2.5346875,1.02)
+\psline[linewidth=0.03cm,arrowsize=0.0729cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(2.8346877,-2.52)(2.8546877,2.52)
+\psline[linewidth=0.03cm,arrowsize=0.0729cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(0.5746876,-0.18)(5.4146876,-0.2)
+\usefont{T1}{ptm}{m}{it}
+\rput(5.135156,-0.37){$x$}
+\usefont{T1}{ptm}{m}{it}
+\rput(3.0789063,2.17){$y$}
+\usefont{T1}{ptm}{m}{n}
+\rput(2.19875,1.6549999){\footnotesize $P(x; y)$}
+\usefont{T1}{ptm}{m}{n}
+\rput(0.51875,-0.8250001){\footnotesize $P''(-y; x)$}
+\psdots[dotsize=0.12,dotangle=-270.0](1.2546877,-0.7000001)
+\psdots[dotsize=0.12,dotangle=-270.0](2.3346877,1.4399999)
+\rput{-158.52878}(5.4499764,0.3132921){\psframe[linewidth=0.02,dimen=outer](2.9146876,-0.52)(2.5946877,-0.84)}
+\end{pspicture} 
+}
+% Generated with LaTeXDraw 1.9.3
+% Thu Dec 13 14:29:56 CAT 2007
+% \usepackage[usenames,dvipsnames]{pstricks}
+% \usepackage{epsfig}
+% \usepackage{pst-grad} % For gradients
+% \usepackage{pst-plot} % For axes
+\scalebox{0.8} % Change this value to rescale the drawing.
+{
+\begin{pspicture}(0,-2.535)(4.855,2.535)
+\definecolor{color0c}{rgb}{0.501960784,0.501960784,0.501960784}
+\rput(2.26,-0.1800001){\rput{-270.0}(0.0,0.0){\psgrid[gridwidth=0.0122,subgridwidth=0.014111111,gridlabels=0.0pt,subgriddiv=4,unit=2.1cm,subgridcolor=color0c](0,0)(-1,-1)(1,1)
+\psset{unit=1.0cm}}}
+\rput{-270.0}(2.1,-2.44){\psarc[linewidth=0.027999999,linestyle=dashed,dash=0.16cm 0.16cm](2.27,-0.17){1.67}{197.85031}{17.63179}}
+\rput{-270.0}(2.08,-2.44){\psarc[linewidth=0.04,arrowsize=0.1429cm 2.15,arrowlength=1.5,arrowinset=0.4]{->}(2.26,-0.18000005){1.6600001}{17.15242}{199.3978}}
+\psline[linewidth=0.04cm](2.26,-0.18)(1.74,1.44)
+\rput{-270.0}(2.1,-2.4){\psarc[linewidth=0.04,arrowsize=0.1029cm 2.12,arrowlength=1.48,arrowinset=0.4]{->}(2.25,-0.1500001){0.61}{17.15242}{203.1986}}
+\psline[linewidth=0.04cm](1.8,1.02)(1.94,1.08)
+\psline[linewidth=0.04cm](1.82,0.94)(1.96,1.02)
+\psline[linewidth=0.03cm,arrowsize=0.0729cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(2.26,-2.52)(2.28,2.52)
+\psline[linewidth=0.03cm,arrowsize=0.0729cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(0.0,-0.18)(4.84,-0.2)
+\usefont{T1}{ptm}{m}{it}
+\rput(4.5604687,-0.37){$x$}
+\usefont{T1}{ptm}{m}{it}
+\rput(2.5042188,2.17){$y$}
+\usefont{T1}{ptm}{m}{n}
+\rput(1.6240624,1.6549999){\footnotesize $P(x; y)$}
+\usefont{T1}{ptm}{m}{n}
+\rput(3.0140624,-2.065){\footnotesize $P'''(-x; -y)$}
+\psdots[dotsize=0.12,dotangle=-270.0](1.7600001,1.4399999)
+\psline[linewidth=0.04cm](2.26,-0.1600001)(2.8,-1.7200001)
+\psline[linewidth=0.04cm](2.5,-1.0600001)(2.6799998,-1.0000001)
+\psline[linewidth=0.04cm](2.52,-1.1200001)(2.6999998,-1.08)
+\psdots[dotsize=0.12](2.82,-1.7400001)
+\end{pspicture} 
+}
+\end{flushright}
+\end{minipage}
+%
+
+\Exercise{Rotation}{
+\begin{enumerate}
+\item
+For each of the following rotations about the origin:\\
+(i) Write down the rule.\\
+(ii) Draw a diagram showing the direction of rotation. 
+\begin{enumerate}
+\item $OA$ is rotated to $OA^{\prime}$ with $A(4;2)$ and $A^{\prime}(-2;4)$
+\item $OB$ is rotated to $OB^{\prime}$ with $B(-2;5)$ and $B^{\prime}(5;2)$
+\item $OC$ is rotated to $OC^{\prime}$ with $C(-1;-4)$ and $C^{\prime}(1;4)$
+\end{enumerate}
+% 
+\item Copy $\Delta XYZ$ onto squared paper. The co-ordinates are given on the picture. 
+\begin{enumerate}
+\item Rotate $\Delta XYZ$ anti-clockwise through an angle of $90^{\circ}$ about the origin to give $\Delta X'Y'Z'$. Give the co-ordinates of $X'$, $Y'$ and $Z'$. 
+\item Rotate $\Delta XYZ$ through $180^{\circ}$ about the origin to give $\Delta X'' Y''Z''$. Give the co-ordinates of $X''$, $Y''$and $Z''$.
+\end{enumerate}
+\begin{center} 
+\scalebox{1} % Change this value to rescale the drawing.
+{
+\begin{pspicture}(0,-3.2)(6.9434376,3.2) 
+\definecolor{color1229c}{rgb}{0.501960784,0.501960784,0.501960784} 
+\rput(0.5434375,-3.2){\psgrid[gridwidth=0.028222222,subgridwidth=0.014111111,gridlabels=0.0pt,unit=3.2cm,subgridcolor=color1229c](0,0)(0,0)(2,2) 
+\psset{unit=1.0cm}} 
+\psline[linewidth=0.04](6.3034377,2.54)(1.1834375,-0.66)(3.0834374,-2.56)(6.3034377,2.56) 
+\usefont{T1}{ptm}{m}{n} 
+\rput(6.38125,2.77){$X(4;4)$} 
+\usefont{T1}{ptm}{m}{n} 
+\rput(3.0410938,-2.8500001){$Y(-1;-4)$} 
+\usefont{T1}{ptm}{m}{n} 
+\rput(0.674375,-0.97){$Z(-4;-1)$} 
+\end{pspicture} 
+}
+\end{center}
+\end{enumerate}
+}
+
+\subsection{Enlargement of a Polygon}
+When something is made larger, we say that it is \textit{enlarged}. What happens to the coordinates of a polygon that is enlarged by a factor $k$?
+
+\Activity{Investigation}{Enlargement of a Polygon}{
+\begin{center}
+\begin{tabular}[t]{p{6.5cm}c}
+Complete the table, by filling in the coordinates of the points shown in the figure.&\\
+Assume each small square on the plot is $1$ unit. & \\
+\begin{tabular}[t]{|c|c|c|}\hline
+\textbf{Point}&\textbf{$x$-coordinate}&\textbf{$y$-coordinate}\\\hline\hline
+$A$&&\\\hline
+$B$&&\\\hline
+$C$&&\\\hline
+$D$&&\\\hline
+$E$&&\\\hline
+$F$&&\\\hline
+$G$&&\\\hline
+$H$&&\\\hline
+\end{tabular}
+&
+\multirow{2}{*}{\begin{tabular}{c}
+\psset{unit=0.8}
+% \usepackage[usenames,dvipsnames]{pstricks}
+% \usepackage{epsfig}
+% \usepackage{pst-grad} % For gradients
+% \usepackage{pst-plot} % For axes
+\scalebox{01} % Change this value to rescale the drawing.
+{
+\begin{pspicture}(0,-3.04)(6.0,3.04)
+\definecolor{color0}{rgb}{0.8392156862745098,0.8196078431372549,0.8196078431372549}
+\definecolor{color0c}{rgb}{0.6509803921568628,0.6509803921568628,0.6509803921568628}
+\rput(3.0,0.0){\psgrid[gridwidth=0.017638888,subgridwidth=0.014111111,gridlabels=0.0pt,gridcolor=color0,subgridcolor=color0c](-2,-2)(-3,-3)(3,3)}
+\rput(3.0,0.0){\psaxes[linewidth=0.024,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4,labels=none,ticksize=0,dx=1.0cm,dy=1.0cm]{<->}(0,0)(-3,-3)(3,3)}
+\usefont{T1}{ptm}{m}{n}
+\rput(4.7745314,1.86){$E$}
+\usefont{T1}{ptm}{m}{n}
+\rput(1.1554687,1.84){$F$}
+\usefont{T1}{ptm}{m}{n}
+\rput(1.1745312,-1.86){$G$}
+\usefont{T1}{ptm}{m}{n}
+\rput(4.84,-1.9){$H$}
+\usefont{T1}{ptm}{m}{n}
+\rput(4.0003123,1.06){$A$}
+\usefont{T1}{ptm}{m}{n}
+\rput(1.993125,1.02){$B$}
+\usefont{T1}{ptm}{m}{n}
+\rput(1.9557812,-1.08){$C$}
+\usefont{T1}{ptm}{m}{n}
+\rput(3.9703126,-1.06){$D$}
+\psframe[linewidth=0.04,dimen=outer](3.8,0.8)(2.2,-0.8)
+\psframe[linewidth=0.04,dimen=outer](4.6,1.6)(1.38,-1.62)
+\psdots[dotsize=0.12](4.58,1.58)
+\psdots[dotsize=0.12](1.4,1.58)
+\psdots[dotsize=0.12](1.4,-1.62)
+\psdots[dotsize=0.12](4.6,-1.62)
+\psdots[dotsize=0.12](3.78,-0.76)
+\psdots[dotsize=0.12](3.78,0.78)
+\psdots[dotsize=0.12](2.24,0.78)
+\psdots[dotsize=0.12](2.22,-0.78)
+\end{pspicture} 
+}
+\end{tabular}
+}\\
+What do you notice about the $x$-coordinates? What do you notice about the $y$-coordinates?&\\
+What would happen to the coordinates of point $A$, if the square $ABCD$ was enlarged by a factor of $2$? &\\
+\end{tabular}
+\end{center}
+}
+
+\begin{Activity}
+{Investigation}
+{Enlargement of a Polygon}
+{
+\begin{center}
+\scalebox{0.8} % Change this value to rescale the drawing.
+{
+\begin{pspicture}(0,-3.78)(9.6,3.78)
+\definecolor{color0c}{rgb}{0.501960784,0.501960784,0.501960784}
+\definecolor{color212b}{rgb}{0.8,0.8,0.8}
+\usefont{T1}{ptm}{m}{n}
+\rput(2.0125,-1.24){\small $H$}
+\usefont{T1}{ptm}{m}{n}
+\rput(3.1265626,-0.28){\small $I$}
+\usefont{T1}{ptm}{m}{n}
+\rput(4.5134377,-2.78){\small $J$}
+\usefont{T1}{ptm}{m}{n}
+\rput(2.5028124,-2.72){\small $K$}
+\usefont{T1}{ptm}{m}{n}
+\rput(4.0909376,0.72){\small $H'$}
+\usefont{T1}{ptm}{m}{n}
+\rput(6.1184373,2.64){\small $I'$}
+\usefont{T1}{ptm}{m}{n}
+\rput(8.48,-1.26){\small $J'$}
+\usefont{T1}{ptm}{m}{n}
+\rput(4.05125,-1.3){\small $K'$}
+\usefont{T1}{ptm}{m}{n}
+\rput(0.3,-3.5){\psgrid[gridwidth=0.028222222,subgridwidth=0.014111111,gridlabels=7.0pt,gridfont=TimesRoman,subgriddiv=1,subgridcolor=color0c](0,0)(0,0)(9,7)}
+\psline[linewidth=0.04cm](0.28,-3.52)(6.88,3.08)
+\psline[linewidth=0.04cm](0.28,-3.52)(8.98,-1.32)
+\psline[linewidth=0.04,fillstyle=solid,fillcolor=color212b](4.28,-1.479596)(4.3,0.5)(6.32,2.54)(8.3,-1.5)(4.28,-1.5)
+\psline[linewidth=0.04,fillstyle=solid,fillcolor=color212b](2.28,-2.5)(2.3,-1.52)(3.3,-0.52)(4.28,-2.52)(2.28,-2.52)
+\psline[linewidth=0.04cm,linestyle=dotted,dotsep=0.16cm](0.28,-3.42)(8.98,0.68)
+\end{pspicture} 
+}
+\end{center}
+In the figure quadrilateral $HIJK$ has been enlarged by a factor of $2$ through the origin to become $H'I'J'K'$. Complete the following table using the information in the figure. \newline
+\begin{center}
+% use packages: array
+\begin{tabular}{|l|l|l|l|}
+\hline
+Co-ordinate & Co-ordinate' & Length & Length' \\ 
+\hline
+ $H$ = (  ;  ) & $H'$ = (  ;  ) & $OH$ =   & $OH'$ =   \\
+ $I$ = (  ;  ) & $I'$ = (  ;  ) & $OI$ =   & $OI'$ =   \\
+ $J$ = (  ;  ) & $J'$ = (  ;  ) & $OJ$ =   & $OJ'$ =   \\
+ $K$ = (  ;  ) & $K'$ = (  ;  ) & $OK$ =   & $OK'$ = \\
+\hline
+\end{tabular}
+\end{center}  
+What conclusions can you draw about
+\begin{enumerate}
+\item the co-ordinates
+\item the lengths when we enlarge by a factor of $2$?
+\end{enumerate}
+}
+\end{Activity}
+
+We conclude as follows: \newline
+Let the vertices of a triangle have co-ordinates $S(x_1;y_1)$, $T(x_2;y_2)$, $U(x_3;y_3)$. $\triangle S'T'U'$ is an enlargement through the origin of $\triangle STU$ by a factor of $c$ ($c > 0$).
+\begin{itemize}
+\item $\triangle STU$ is a reduction of $\triangle S'T'U'$ by a factor of $c$.
+\item   $\triangle S'T'U'$ can alternatively be seen as an reduction through the origin of $\triangle STU$ by a factor of $\frac{1}{c}$. (Note that a reduction by $\frac{1}{c}$ is the same as an enlargement by $c$).
+\item The vertices of $\triangle S'T'U'$ are $S'(cx_1;cy_1)$, $T'(cx_2,cy_2)$, $U'(cx_3,cy_3)$.
+\item The distances from the origin are $OS' = (c \cdot OS)$, $OT' = (c \cdot OT$) and $OU' = (c \cdot OU)$.
+\end{itemize}
+
+\begin{center}
+\scalebox{1} % Change this value to rescale the drawing.
+{
+\begin{pspicture}(0,-4.78)(11.72,4.78)
+\definecolor{color0c}{rgb}{0.501960784,0.501960784,0.501960784}
+\definecolor{color450b}{rgb}{0.8,0.8,0.8}
+\usefont{T1}{ptm}{m}{n}
+\rput(3.1996875,-2.8){\small $S$}
+\usefont{T1}{ptm}{m}{n}
+\rput(5.4990625,-0.76){\small $T$}
+\usefont{T1}{ptm}{m}{n}
+\rput(4.6,-3.24){\small $U$}
+\usefont{T1}{ptm}{m}{n}
+\rput(6.085625,-0.38){\small $S'$}
+\usefont{T1}{ptm}{m}{n}
+\rput(8.615,-2.24){\small $U'$}
+\usefont{T1}{ptm}{m}{n}
+\rput(10.496563,3.28){\small $T'$}
+\rput(0.3,-4.5){\psgrid[gridwidth=0.028222222,subgridwidth=0.014111111,gridfont=TimesRoman,gridlabels=7.0pt,subgriddiv=1,subgridcolor=color0c](0,0)(0,0)(11,9)}
+\psline[linewidth=0.04,fillstyle=solid,fillcolor=color450b](4.36,-3.5)(3.3,-2.5)(5.32,-0.54)(4.34,-3.48)
+\psline[linewidth=0.04,fillstyle=solid,fillcolor=color450b](8.329108,-2.56)(6.3,-0.5467785)(10.28,3.5)(8.329108,-2.4933975)
+\psline[linewidth=0.04cm](0.28,-4.52)(10.88,3.98)
+\psline[linewidth=0.04cm](0.28,-4.52)(9.68,-2.22)
+\psline[linewidth=0.04cm,linestyle=dotted,dotsep=0.16cm](0.28,-4.52)(10.58,2.18)
+\end{pspicture} 
+}
+\end{center}
+
+
+
+\Exercise{Transformations}{
+\begin{enumerate}
+\item 
+Copy polygon $STUV$ onto squared paper and then answer the following questions. 
+\begin{center}
+\scalebox{1} % Change this value to rescale the drawing.
+{
+\begin{pspicture}(0,-3.28)(8.66,3.28)
+\definecolor{color0c}{rgb}{0.501960784,0.501960784,0.501960784}
+\definecolor{color450b}{rgb}{0.8,0.8,0.8}
+\rput(3.36,0.0){\psgrid[gridwidth=0.028222222,subgridwidth=0.014111111,gridlabels=7.0pt,gridfont=TimesRoman,subgriddiv=1,subgridcolor=color0c](0,0)(-3,-3)(5,3)}
+\psline[linewidth=0.04,fillstyle=solid,fillcolor=color450b](4.34,-1.0)(5.38,2.02)(7.36,0.98)(6.38,-2.0)(4.34,-1.0)
+\usefont{T1}{ptm}{m}{n}
+\rput(5.539687,2.24){\small $S$}
+\usefont{T1}{ptm}{m}{n}
+\rput(7.539062,1.18){\small $T$}
+\usefont{T1}{ptm}{m}{n}
+\rput(6.58,-2.18){\small $U$}
+\usefont{T1}{ptm}{m}{n}
+\rput(4.148125,-1.18){\small $V$}
+\end{pspicture} 
+}
+\end{center}
+\begin{enumerate}
+\item What are the co-ordinates of polygon $STUV$?
+\item Enlarge the polygon through the origin by a constant factor of $c=2$. Draw this on the same grid. Label it $S'T'U'V'$.
+\item What are the co-ordinates of the vertices of $S'T'U'V'$?
+\end{enumerate}
+
+\item $\triangle ABC$ is an enlargement of $\triangle A'B'C'$ by a constant factor of $k$ through the origin.
+
+\begin{center}
+\scalebox{1} % Change this value to rescale the drawing.
+{
+\begin{pspicture}(0,-5.28)(10.66,5.28)
+\definecolor{color0c}{rgb}{0.501960784,0.501960784,0.501960784}
+\definecolor{color450b}{rgb}{0.8,0.8,0.8}
+\rput(5.36,0.0){\psgrid[gridwidth=0.028222222,subgridwidth=0.014111111,gridlabels=7.0pt,gridfont=TimesRoman,subgriddiv=1,subgridcolor=color0c](0,0)(-5,-5)(5,5)}
+\usefont{T1}{ptm}{m}{n}
+\rput(1.0328126,-4.28){\small $C$}
+\usefont{T1}{ptm}{m}{n}
+\rput(3.1290624,4.2){\small $A$}
+\usefont{T1}{ptm}{m}{n}
+\rput(9.5925,2.2){\small $B$}
+\usefont{T1}{ptm}{m}{n}
+\rput(4.1640625,2.18){\small $A'$}
+\usefont{T1}{ptm}{m}{n}
+\rput(7.58125,1.16){\small $B'$}
+\usefont{T1}{ptm}{m}{n}
+\rput(3.1146874,-2.16){\small $C'$}
+\psline[linewidth=0.04,fillstyle=solid,fillcolor=color450b](7.36,1.02)(4.36,2.0)(3.36,-1.98)(7.36,1.02)
+\psline[linewidth=0.04](3.34,4.04)(1.36,-3.98)(9.44,2.0)(3.36,3.98)
+\end{pspicture} 
+}
+\end{center}
+
+\begin{enumerate}
+\item What are the co-ordinates of the vertices of $\triangle ABC$ and $\triangle A'B'C'$?
+\item Giving reasons, calculate the value of $k$.
+\item If the area of $\triangle ABC$ is $m$ times the area of $\triangle A'B'C'$, what is $m$?
+\end{enumerate}
+
+\item Examine the polygon below.
+
+\begin{center} 
+\scalebox{1} % Change this value to rescale the drawing.
+{
+\begin{pspicture}(0,-3.78)(7.66,3.78)
+\definecolor{color0c}{rgb}{0.501960784,0.501960784,0.501960784}
+\definecolor{color18b}{rgb}{0.8,0.8,0.8}
+\rput(2.36,-1.5){\psgrid[gridwidth=0.028222222,subgridwidth=0.014111111,gridfont=TimesRoman,gridlabels=7.0pt,subgriddiv=1,subgridcolor=color0c](0,0)(-2,-2)(5,5)}
+\psline[linewidth=0.04,fillstyle=solid,fillcolor=color18b](3.38,-0.5)(6.4,0.5)(5.34,2.52)(2.36,0.5)(3.36,-0.5)(3.32,-0.46)
+\usefont{T1}{ptm}{m}{n}
+\rput(5.5596876,2.7){\small $M$}
+\usefont{T1}{ptm}{m}{n}
+\rput(6.605,0.3){\small $N$}
+\usefont{T1}{ptm}{m}{n}
+\rput(3.140625,-0.66){\small $Q$}
+\usefont{T1}{ptm}{m}{n}
+\rput(2.1915627,0.28){\small $P$}
+\end{pspicture} 
+}
+\end{center}
+
+\begin{enumerate}
+\item What are the co-ordinates of the vertices of polygon $MNPQ$?
+\item  Enlarge the polygon through the origin by using a constant factor of $c = 3$, obtaining polygon $M'N'P'Q'$. Draw this on the same set of axes.
+\item What are the co-ordinates of the new vertices?
+\item Now draw $M''N''P''Q''$ which is an anticlockwise rotation of $MNPQ$ by $90^{\circ}$ around the origin.
+\item Find the inclination of $OM''$.
+\end{enumerate}
+
+
+\end{enumerate}
+}
+
+%\begin{eocexercises}{}
+%\begin{enumerate}
+%\item{}
+%\item{\nts{exercises are needed}}
+%\end{enumerate}
+
+
+\practiceinfo
+\end{eocexercises} 
+
+
+
+% CHILD SECTION START 
+

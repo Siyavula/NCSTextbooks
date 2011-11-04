@@ -1,0 +1,1305 @@
+\chapter{Electric Circuits}
+\label{p:em:ec11}
+
+
+\section{Introduction}
+
+The study of electrical circuits is essential to understand the technology that uses electricity in the real-world. This includes electricity being used for the operation of electronic devices like computers.
+
+
+
+
+\section{Ohm's Law}
+%\begin{syllabus}
+%\item Determine the relationship between current, voltage and resistance at constant temperature using a simple circuit
+%\item State the difference between Ohmic and non-Ohmic conductors, and give an example of each
+%\item Solve problems using the mathematical expression of Ohm's Law, R=V/I
+%\item Note: Link to Grade 10. A light bulb is a common example of a non-Ohmic conductor. Nichrome wire is an Ohmic conductor. Try to let learners do experiments in which they measure the current through, and voltage across an Ohmic and a non-Ohmic conductor. If they use nichrome wire, ensure that they only close the circuit for a very short time or else the nichrome will heat up and its resistance will change.
+%\end{syllabus}
+
+\subsection{Definition of Ohm's Law}
+
+\Activity{Experiment}{Ohm's Law}{
+\Aim{In this experiment we will look at the relationship between the current going through a resistor and the potential difference (voltage) across the same resistor.}\\
+\begin{center}
+\scalebox{1} % Change this value to rescale the drawing.
+{
+\begin{pspicture}(0,-1.96)(5.4,1.96)
+\psline[linewidth=0.04cm](2.0,1.94)(2.0,0.54)
+\psline[linewidth=0.12cm](2.2,1.54)(2.2,0.94)
+\psline[linewidth=0.04cm](3.4,1.94)(3.4,0.54)
+\psline[linewidth=0.12cm](3.6,1.54)(3.6,0.94)
+\psline[linewidth=0.04cm,linestyle=dashed,dash=0.16cm 0.16cm](2.4,1.24)(3.2,1.24)
+\psline[linewidth=0.04cm](2.0,1.24)(0.0,1.24)
+\psline[linewidth=0.04cm](0.0,1.24)(0.0,-0.76)
+\psline[linewidth=0.04cm](0.0,-0.76)(1.5,-0.76)
+\psframe[linewidth=0.04,dimen=outer](2.7,-0.56)(1.5,-0.96)
+\pscircle[linewidth=0.04,dimen=outer](2.1,-1.56){0.4}
+\psline[linewidth=0.04cm](1.2,-0.76)(1.2,-1.56)
+\psline[linewidth=0.04cm](1.2,-1.56)(1.7,-1.56)
+\psline[linewidth=0.04cm](3.0,-0.76)(3.0,-1.56)
+\psline[linewidth=0.04cm](3.0,-1.56)(2.5,-1.56)
+\psline[linewidth=0.04cm](2.7,-0.76)(5.0,-0.76)
+\psline[linewidth=0.04cm](4.9,0.74)(4.9,0.74)
+\rput{-270.0}(5.34,-4.66){\pscircle[linewidth=0.04,dimen=outer](5.0,0.34){0.4}}
+\psline[linewidth=0.04cm](5.0,-0.76)(5.0,-0.06)
+\psline[linewidth=0.04cm](3.6,1.24)(5.0,1.24)
+\psline[linewidth=0.04cm](5.0,1.24)(5.0,0.74)
+\usefont{T1}{ptm}{m}{n}
+\rput(5.0265627,0.35){A}
+\usefont{T1}{ptm}{m}{n}
+\rput(2.12625,-1.55){V}
+\end{pspicture}
+}
+\end{center}
+\Method{
+\begin{enumerate}
+\item Set up the circuit according to the circuit diagram, starting with just one cell.
+\item Draw the following table in your lab book.
+\begin{center}
+\begin{tabular}{|c|c|}\hline
+Voltage, $V$ (V)	&	Current, $I$ (A)\\\hline\hline
+1,5 &\\\hline
+3,0 &\\\hline
+4,5 &\\\hline
+6,0 &\\\hline
+\end{tabular}
+\end{center}
+\item Get your teacher to check the circuit before turning the power on.
+\item Measure the current.
+\item Add one more 1,5~V cell to the circuit and measure the current again.
+\item Repeat until you have four cells and you have completed your table.
+\item Draw a graph of voltage versus current.
+\end{enumerate}
+}
+\Results{
+\begin{enumerate}
+\item Does your experimental results verify Ohm's Law? Explain.
+\item How would you go about finding the resistance of an unknown resistor using only a power supply, a voltmeter and a known resistor $R_0$?
+\end{enumerate}}
+}
+
+\Activity{Activity}{Ohm's Law}{If you do not have access to the equipment necessary for the Ohm's Law experiment, you can do this activity.
+\begin{center}
+\begin{tabular}{|c|c|}\hline
+Voltage, $V$ (V)	&	Current, $I$ (A)\\\hline\hline
+3,0 & 0,4\\\hline
+6,0 & 0,8\\\hline
+9,0 & 1,2\\\hline
+12,0 & 1,6\\\hline
+\end{tabular}
+\end{center}
+
+\begin{enumerate}
+\item Plot a graph of voltage (on the $x$-axis) and current (on the $y$-axis).
+\end{enumerate}
+
+\Conclusions{
+\begin{enumerate}
+\item What type of graph do you obtain (straight line, parabola, other curve)
+\item Calculate the gradient of the graph.
+\item Do your experimental results verify Ohm's Law? Explain.
+\item How would you go about finding the resistance of an unknown resistor using only a power supply, a voltmeter and a known resistor $R_0$?
+\end{enumerate}
+}
+}
+
+An important relationship between the current, voltage and resistance in a circuit was discovered by Georg Simon Ohm and is called \textbf{Ohm's Law}.
+
+\Definition{Ohm's Law}{The amount of electric current through a metal conductor, at a constant temperature, in a circuit is proportional to the voltage across the conductor. Mathematically, Ohm's Law is written:
+\begin{equation*}
+V=R\cdot I.
+\end{equation*}}
+
+Ohm's Law tells us that if a conductor is at a constant temperature, the current flowing through the conductor is proportional to the voltage across it. This means that if we plot voltage on the $x$-axis of a graph and current on the $y$-axis of the graph, we will get a straight-line. The gradient of the straight-line graph is related to the resistance of the conductor.
+
+\begin{center}
+\begin{pspicture}(-1,-1)(5,5)
+%\psgrid[gridcolor=gray]
+\psaxes{<->}(0,0)(5,5)
+\psline{->}(0,0)(5,5)
+\psline[linestyle=dashed](1.5,1.5)(3.5,1.5)(3.5,3.5)
+\uput[r](3.5,2.5){$\Delta V$}
+\uput[d](2.5,1.5){$\Delta I$}
+\pcline[offset=0.4cm,linestyle=none](0,0)(0,5)
+\aput{:U}{Voltage, $V$ (V)}
+\pcline[offset=-0.4cm,linestyle=none](0,0)(5,0)
+\bput{:U}{Current, $I$ (A)}
+\rput(1,4){$R=\frac{\Delta V}{\Delta I}$}
+\end{pspicture}
+\end{center}
+
+Phet simulation for Ohm's Law: SIYAVULA-SIMULATION:http://cnx.org/content/m38883/latest/#Ohms-Law
+\subsection{Ohmic and non-ohmic conductors}
+
+As you have seen, there is a mention of \textit{constant temperature} when we talk about Ohm's Law. This is because the resistance of some conductors changes as their temperature changes. These types of conductors are called \textit{non-ohmic} conductors, because they do not obey Ohm's Law. As can be expected, the conductors that obey Ohm's Law are called \textit{ohmic} conductors. A light bulb is a common example of a non-ohmic conductor. Nichrome wire is an ohmic conductor.
+
+In a light bulb, the resistance of the filament wire will increase dramatically as it warms from room temperature to operating temperature. If we increase the supply voltage in a real lamp circuit, the resulting increase in current causes the filament to increase in temperature, which increases its resistance. This effectively limits the increase in current. In this case, voltage and current do not obey Ohm's Law.
+
+The phenomenon of resistance changing with variations in temperature is one shared by almost all metals, of which most wires are made. For most applications, these changes in resistance are small enough to be ignored. In the application of metal lamp filaments, which increase a lot in temperature (up to about 1000$^\circ$C, and starting from room temperature) the change is quite large.
+
+In general non-ohmic conductors have plots of voltage against current that are curved, indicating that the resistance is not constant over all values of voltage and current.
+
+\begin{center}
+\begin{pspicture}(-1,-1)(5,5)
+%\psgrid[gridcolor=gray]
+\psaxes{<->}(0,0)(5,5)
+\psplot{0}{2.1}{x 2 exp}
+\pcline[offset=-0.4cm,linestyle=none](0,0)(5,0)
+\bput{:U}{Current, $I$ (A)}
+\pcline[offset=0.4cm,linestyle=none](0,0)(0,5)
+\aput{:U}{Voltage, $V$ (V)}
+\uput[r](2,2){$V$ vs. $I$ for a non-ohmic conductor}
+\end{pspicture}
+\end{center}
+
+\Activity{Experiment}{Ohmic and non-ohmic conductors}{Repeat the experiment as decribed in the previous section. In this case use a light bulb as a resistor. Compare your results to the ohmic resistor.}
+
+\subsection{Using Ohm's Law}
+
+We are now ready to see how Ohm's Law is used to analyse circuits.
+
+Consider the circuit with an ohmic resistor, $R$. If the resistor has a resistance of 5~\ohm\ and voltage across the resistor is 5 V, then we can use Ohm's law to calculate the current flowing through the resistor.
+
+\begin{center}
+\begin{pspicture}(0,0)(5,5)
+%\psgrid[gridcolor=gray]
+\pnode(1,1){A}
+\pnode(4,1){B}
+\pnode(4,4){C}
+\pnode(1,4){D}
+\battery(A)(B){}
+\psline(B)(C)
+\resistor[dipolestyle=rectangle](C)(D){$R$}
+\psline(D)(A)
+\end{pspicture}
+\end{center}
+
+Ohm's law is:
+\nequ{V=R \cdot I}
+which can be rearranged to:
+\nequ{I=\frac{V}{R}}
+
+The current flowing through the resistor is:
+\begin{eqnarray*}
+I&=&\frac{V}{R}\\
+&=&\frac{5\;\mathrm{V}}{5\;\eohm}\\
+&=&1\;\mathrm{A}
+\end{eqnarray*}
+
+\begin{wex}{Ohm's Law}{
+\begin{center}
+\begin{pspicture}(0,0)(5,5)
+%\psgrid[gridcolor=gray]
+\pnode(1,1){A}
+\pnode(4,1){B}
+\pnode(4,4){C}
+\pnode(1,4){D}
+\battery(A)(B){}
+\psline(B)(C)
+\resistor[dipolestyle=rectangle](C)(D){$R$}
+\psline(D)(A)
+\end{pspicture}
+\end{center}
+The resistance of the above resistor is 10~\ohm\ and the current going through the resistor is 4~A. What is the potential difference (voltage) across the resistor?}{
+
+\westep{Determine how to approach the problem}
+It is an Ohm's Law problem. So we use the equation:
+\nequ{V=R \cdot I}
+
+\westep{Solve the problem}
+\begin{eqnarray*}
+V&=&R \cdot I \\
+&=&(10)(4)  \\
+&=&40~V
+\end{eqnarray*}
+\westep{Write the final answer}
+The voltage across the resistor is 40~V.}
+\end{wex}
+
+\Exercise{Ohm's Law}{
+\begin{enumerate}
+\item Calculate the resistance of a resistor that has a potential difference of 8~V across it when a current of 2~A flows through it.
+\item What current will flow through a resistor of 6~\ohm\ when there is a potential difference of 18~V across its ends?
+\item What is the voltage across a 10~\ohm\ resistor when a current of 1,5~A flows though it?
+\end{enumerate}}
+
+\section{Resistance}
+%\begin{syllabus}
+%\item Calculate the equivalent resistance of series and parallel arrangements of resistors.
+%\item Solve problems involving current, voltage and resistance for circuits containing arrangements of resistors in series and in parallel.
+%\item State that a real battery has internal resistance
+%\item Explain why there is a difference between the emf and terminal voltage of a battery if the load (external resistance in the circuit) is comparable in size to the battery's internal resistance
+%\item Solve circuit problems in which the internal resistance of the battery must be considered.
+%\item Note: Some books use the term "lost volts" to refer to the difference between the emf and the terminal voltage. This is misleading. The voltage is not "lost", it is across the internal resistance of the battery. The internal resistance of the battery can be treated just like another resistor in series in the circuit. The sum of the voltages across the external circuit plus the voltage across the internal resistance is equal to the emf:e = V(load) + V(internal resistance)
+%\end{syllabus}
+
+In Grade 10, you learnt about resistors and were introduced to circuits where resistors were connected in series and circuits where resistors were connected in parallel. In a series circuit there is one path for the current to flow through. In a parallel circuit there are multiple paths for the current to flow through.
+
+\begin{center}
+\begin{pspicture}(0,-1)(10,4)
+%\psgrid[gridcolor=gray]
+\rput(0,0){
+\battery(0,0)(0,4){}
+\psline(0,4)(4,4)
+\resistor[dipolestyle=rectangle](4,4)(4,0){}
+\resistor[dipolestyle=rectangle](4,0)(0,0){}
+\uput[d](2,-0.2){series circuit}
+\uput[d](2,-0.6){\small{one current path}}
+%\rput(2,2){one current path}
+\psarcn{<-}(2,2){1.25}{210}{-30}}
+
+\rput(6,0){
+\battery(0,0)(0,4){}
+\psline(0,4)(4,4)
+\resistor[dipolestyle=rectangle](4,4)(4,0){}
+\resistor[dipolestyle=rectangle](2,4)(2,0){}
+\psline(4,0)(0,0)
+\uput[d](2,-0.2){parallel circuit}
+\uput[d](2,-0.6){\small{multiple current paths}}
+\psarcn{<-}(1,2){0.4}{210}{-30}
+\psarcn{<-}(3,2){0.4}{210}{-30}
+}
+
+\end{pspicture}
+\end{center}
+
+\subsection{Equivalent resistance}
+When there is more than one resistor in a circuit, we are usually able to calculate the total combined resitance of all the resistors. The resistance of the single resistor is known as \textit{equivalent resistance}.
+
+\subsubsection{Equivalent Series Resistance}
+Consider a circuit consisting of three resistors and a
+single cell connected in series.
+
+\begin{center}
+\begin{pspicture}(0,0)(5,5)
+%\psgrid
+\pnode(1,4){A}
+\pnode(4,4){B}
+\pnode(4,1){C}
+\pnode(1,1){D}
+\resistor[dipolestyle=rectangle](A)(B){R$_{1}$}
+\resistor[labeloffset=1.2cm,dipolestyle=rectangle](B)(C){R$_{2}$}
+\resistor[dipolestyle=rectangle](C)(D){R$_{3}$}
+\battery[labeloffset=1cm](A)(D){$V$}
+\uput[ul](A){A}
+\uput[ur](B){B}
+\uput[dr](C){C}
+\uput[dl](D){D}
+\psdots(A)(B)(C)(D)
+\end{pspicture}
+\end{center}
+
+The first principle to understand about series circuits is that the amount of current is the same through any component in the circuit. This is because there is only one path for electrons to flow in a series circuit. From the way that the battery is connected, we can tell which direction the current will flow. We know that current flows from positive to negative, by convention. Current in this circuit will flow in a clockwise direction, from point A to B to C to D and back to A.
+
+So, how do we use this knowledge to calculate the total resistance in the circuit?
+
+We know that in a series circuit the current has to be the same in all components. So we can write:
+
+\begin{equation*}
+\label{eq:seriesR:I}
+I = I_1 =I_2=I_3
+\end{equation*}
+
+We also know that total voltage of the circuit has to be equal to the sum of the voltages over all three resistors. So we can write:
+
+\begin{equation*}
+\label{eq:seriesR:V}
+V=V_1+V_2+V_3
+\end{equation*}
+
+Finally, we know that Ohm's Law has to apply for each resistor individually, which gives us:
+
+\begin{eqnarray*}
+V_1 & = & I_1\cdot R_1 \\
+V_2 & = & I_2\cdot R_2 \\
+V_3 & = & I_3\cdot R_3
+\end{eqnarray*}
+Therefore:
+
+\begin{equation*}
+V=I_1\cdot R_1+I_2\cdot R_2+I_3\cdot R_3
+\end{equation*}
+However, because
+\begin{equation*}
+I = I_1 =I_2=I_3
+\end{equation*} , we can further simplify this to:
+
+\begin{eqnarray*}
+V&=&I \cdot R_1+ I \cdot R_2+I  \cdot R_3\\
+&=&I (R_1+R_2+R_3)
+\end{eqnarray*}
+Further, we can write an Ohm's Law relation for the entire circuit:
+\nequ{V=I\cdot R}
+Therefore:
+\begin{eqnarray*}
+V&=&I (R_1+R_2+R_3)\\
+I\cdot R&=&I (R_1+R_2+R_3)\\
+\therefore\quad R&=&R_1+R_2+R_3
+\end{eqnarray*}
+
+\Definition{Equivalent resistance in a series circuit, $R_s$}
+{For $n$ resistors in series the equivalent resistance is:
+\begin{equation*}
+\label{eq:seriesR:R}
+R_s=R_{1}+R_{2}+R_{3}+\cdots+R_n
+\end{equation*}}
+You can use the following simulation to test this and other results in this chapter.
+Phet simulation on circuit construction: SIYAVULA-SIMULATION:http://cnx.org/content/m38889/latest/#id63458
+Let us apply this to the following circuit.
+
+\begin{center}
+\begin{pspicture}(0,0)(5,5)
+%\psgrid
+\pnode(1,4){A}
+\pnode(4,4){B}
+\pnode(4,1){C}
+\pnode(1,1){D}
+\resistor[dipolestyle=rectangle](A)(B){R$_{1}$=3~\ohm}
+\resistor[labeloffset=1.2cm,dipolestyle=rectangle](B)(C){R$_{2}$=10~\ohm}
+\resistor[dipolestyle=rectangle](C)(D){R$_{3}$=5~\ohm}
+\battery[labeloffset=1cm](A)(D){9~V}
+\uput[ul](A){A}
+\uput[ur](B){B}
+\uput[dr](C){C}
+\uput[dl](D){D}
+\psdots(A)(B)(C)(D)
+\end{pspicture}
+\end{center}
+
+The resistors are in series, therefore:
+\begin{eqnarray*}
+R_s&=&R_{1}+R_{2}+R_{3}\\
+&=&3\eohm+10\eohm+5\eohm\\
+&=&18\eohm
+\end{eqnarray*}
+Khan Academy video on electric circuits 1: SIYAVULA-VIDEO:http://cnx.org/content/m38889/latest/#electric-circuits-1
+\begin{wex}{Equivalent series resistance I}{Two 10~k\ohm\ resistors are connected in series. Calculate the equivalent resistance.}{
+
+\westep{Determine how to approach the problem}
+Since the resistors are in series we can use:
+\nequ{R_s=R_{1}+R_{2}}
+
+\westep{Solve the problem}
+\begin{eqnarray*}
+R_s&=&R_{1}+R_{2}\\
+&=&10\,\rm{k}\eohm+10\,\rm{k}\eohm\\
+&=&20\,\rm{k}\eohm
+\end{eqnarray*}
+
+\westep{Write the final answer}
+The equivalent resistance of two 10~k\ohm\ resistors connected in series is 20~k\ohm.}
+\end{wex}
+
+\begin{wex}{Equivalent series resistance II}{Two resistors are connected in series. The equivalent resistance is 100~\ohm. If one resistor is 10~\ohm, calculate the value of the second resistor.}{
+
+\westep{Determine how to approach the problem}
+Since the resistors are in series we can use:
+\nequ{R_s=R_{1}+R_{2}}
+We are given the value of $R_s$ and $R_1$.
+
+\westep{Solve the problem}
+\begin{eqnarray*}
+R_s&=&R_{1}+R_{2}\\
+\therefore\quad R_2&=&R_s-R_1\\
+&=&100\eohm-10\eohm\\
+&=&90\eohm
+\end{eqnarray*}
+
+\westep{Write the final answer}
+The second resistor has a resistance of 90~\ohm.}
+\end{wex}
+
+\subsubsection{Equivalent parallel resistance}
+Consider a circuit consisting of a single cell and three resistors that are connected in parallel.
+
+\begin{center}
+\begin{pspicture}(0,1)(8,4)
+%\psgrid
+\pnode(1,4){A}
+\pnode(3,4){B}
+\pnode(5,4){C}
+\pnode(7,4){D}
+\pnode(7,1){E}
+\pnode(5,1){F}
+\pnode(3,1){G}
+\pnode(1,1){H}
+\resistor[dipolestyle=rectangle](B)(G){R$_{1}$}
+\resistor[dipolestyle=rectangle](C)(F){R$_{2}$}
+\resistor[dipolestyle=rectangle](D)(E){R$_{3}$}
+\battery(A)(H){$V$}
+\psline(A)(D)
+\psline(H)(E)
+\uput[u](1,4){A}
+\uput[u](3,4){B}
+\uput[u](5,4){C}
+\uput[u](7,4){D}
+\uput[d](7,1){E}
+\uput[d](5,1){F}
+\uput[d](3,1){G}
+\uput[d](1,1){H}
+\psdots(A)(B)(C)(D)(E)(F)(G)(H)
+\end{pspicture}
+\end{center}
+
+The first principle to understand about parallel circuits is that the
+voltage is equal across all components in the circuit. This is because there are only two sets of electrically common points in a parallel circuit, and voltage measured between sets of common points must always be the same at any given time. So, for the circuit shown, the following is true:
+
+\begin{equation*}
+\label{eq:parallelR:V}
+V=V_1=V_2=V_3
+\end{equation*}
+
+The second principle for a parallel circuit is that all the currents through each resistor must add up to the total current in the circuit.
+
+\begin{equation*}
+\label{eq:parallelR:I}
+I=I_1+I_2+I_3
+\end{equation*}
+
+Also, from applying Ohm's Law to the entire circuit, we can write:
+\begin{equation*}
+V=\frac{I}{R_p}
+\end{equation*}
+where $R_p$ is the equivalent resistance in this parallel arrangement.
+
+We are now ready to apply Ohm's Law to each resistor, to get:
+\begin{eqnarray*}
+V_1&=&R_1\cdot I_1\\
+V_2&=&R_2\cdot I_2\\
+V_3&=&R_3\cdot I_3
+\end{eqnarray*}
+This can be also written as:
+\begin{eqnarray*}
+I_1&=&\frac{V_1}{R_1}\\
+I_2&=&\frac{V_2}{R_2}\\
+I_3&=&\frac{V_3}{R_3}
+\end{eqnarray*}
+
+Now we have:
+\begin{eqnarray*}
+I&=&I_1+I_2+I_3\\
+\frac{V}{R_p}&=&\frac{V_1}{R_1}+\frac{V_2}{R_2}+\frac{V_3}{R_3}\\
+&=&\frac{V}{R_1}+\frac{V}{R_2}+\frac{V}{R_3}\\
+\rm{because} & & V=V_1=V_2=V_3 \\
+&=&V\left(\frac{1}{R_1}+\frac{1}{R_2}+\frac{1}{R_3}\right)\\
+\therefore \quad \frac{1}{R_p}&=&\left(\frac{1}{R_1}+\frac{1}{R_2}+\frac{1}{R_3}\right)
+\end{eqnarray*}
+
+\Definition{Equivalent resistance in a parallel circuit, $R_p$}{For $n$ resistors in parallel, the equivalent resistance is:
+\begin{equation*}
+\label{eq:parallelR:R}
+\frac{1}{R_p}=\left(\frac{1}{R_1}+\frac{1}{R_2}+\frac{1}{R_3}+\cdots+\frac{1}{R_n}\right)
+\end{equation*}}
+
+Let us apply this formula to the following circuit.
+
+\begin{center}
+\begin{pspicture}(0,1)(8,4)
+%\psgrid
+\pnode(1,4){A}
+\pnode(3,4){B}
+\pnode(5,4){C}
+\pnode(7,4){D}
+\pnode(7,1){E}
+\pnode(5,1){F}
+\pnode(3,1){G}
+\pnode(1,1){H}
+\resistor[labeloffset=1cm,dipolestyle=rectangle](B)(G){R$_{1}$=10\ohm}
+\resistor[labeloffset=1cm,dipolestyle=rectangle](C)(F){R$_{2}$=2\ohm}
+\resistor[labeloffset=1cm,dipolestyle=rectangle](D)(E){R$_{3}$=1\ohm}
+\battery[labeloffset=1cm](A)(H){$V$=9~V}
+\psline(A)(D)
+\psline(H)(E)
+\end{pspicture}
+\end{center}
+
+What is the total resistance in the circuit?
+
+\begin{eqnarray*}
+\frac{1}{R_p}&=&\left(\frac{1}{R_1}+\frac{1}{R_2}+\frac{1}{R_3}\right)\\
+&=&\left(\frac{1}{10\eohm}+\frac{1}{2\eohm}+\frac{1}{1\eohm}\right)\\
+&=&\left(\frac{1+5+10}{10}\right)\\
+&=&\left(\frac{16}{10}\right)\\
+\therefore\quad R_p&=&0,625\eohm
+\end{eqnarray*}
+Khan Academy video on electric circuits 2: SIYAVULA-VIDEO:http://cnx.org/content/m38889/latest/#electric-circuits-2
+Khan Academy video on electric circuits 3: SIYAVULA-VIDEO:http://cnx.org/content/m38889/latest/#electric-circuits-3
+\subsection{Use of Ohm's Law in series and parallel Circuits}
+\begin{wex}{Ohm's Law}
+{Calculate the current ($I$) in this circuit if the resistors are both ohmic in nature.}
+{
+\begin{center}
+\begin{pspicture}(0,0)(5,5)
+%\psgrid[gridcolor=gray]
+\pnode(1,1){A}
+\pnode(4,1){B}
+\pnode(4,4){C}
+\pnode(1,4){D}
+\battery(A)(B){$V$=12~V}
+\psline(B)(C)
+\resistor[dipolestyle=rectangle](C)(D){$R_1$=2~\ohm}
+\resistor[labeloffset=-0.9cm](D)(A){$R_2$=4~\ohm}
+\pcline{<-}(1,0.5)(2,0.5)
+\bput{:U}{I}
+\end{pspicture}
+\end{center}
+}
+{
+\westep{Determine what is required}
+We are required to calculate the current flowing in the circuit.
+
+\westep{Determine how to approach the problem}
+Since the resistors are Ohmic in nature, we can use Ohm's Law. There are however two resistors in the circuit and we need to find the total resistance.
+
+\westep{Find total resistance in circuit}
+Since the resistors are connected in series, the total resistance $R$ is:
+\nequ{R=R_1+R_2}
+
+Therefore,
+\nequ{R=2+4=6\;\eohm}
+
+\westep{Apply Ohm's Law}
+\begin{eqnarray*}
+V&=&R\cdot I\\
+\therefore\quad I&=&\frac{V}{R}\\
+&=&\frac{12}{6}\\
+&=&2\;\mathrm{A}
+\end{eqnarray*}
+
+\westep{Write the final answer}
+A 2~A current is flowing in the circuit.}
+\end{wex}
+
+\begin{wex}{Ohm's Law I}
+{Calculate the current ($I$) in this circuit if the resistors are both ohmic in nature.}
+{
+\begin{center}
+\begin{pspicture}(0,0)(5,5)
+%\psgrid[gridcolor=gray]
+\pnode(1,1){A}
+\pnode(4,1){B}
+\pnode(4,4){C}
+\pnode(1,4){D}
+\pnode(1,2.5){E}
+\pnode(4,2.5){F}
+\battery(A)(B){$V$=12~V}
+\psline(B)(C)
+\resistor[dipolestyle=rectangle](D)(C){$R_1$=2~\ohm}
+\resistor[dipolestyle=rectangle](E)(F){$R_2$=4~\ohm}
+\psline(D)(A)
+\pcline{<-}(1,0.5)(2,0.5)
+\bput{:U}{I}
+\end{pspicture}
+\end{center}
+}
+{
+\westep{Determine what is required}
+We are required to calculate the current flowing in the circuit.
+
+\westep{Determine how to approach the problem}
+Since the resistors are Ohmic in nature, we can use Ohm's Law. There are however two resistors in the circuit and we need to find the total resistance.
+
+\westep{Find total resistance in circuit}
+Since the resistors are connected in parallel, the total resistance $R$ is:
+\nequ{\frac{1}{R}=\frac{1}{R_1}+\frac{1}{R_2}}
+Therefore,
+\begin{eqnarray*}
+\frac{1}{R}&=&\frac{1}{R_1}+\frac{1}{R_2}\\
+&=&\frac{1}{2}+\frac{1}{4}\\
+&=&\frac{2+1}{4}\\
+&=&\frac{3}{4}\\
+Therefore, R&=&1,33\;\eohm
+\end{eqnarray*}
+
+\westep{Apply Ohm's Law}
+\begin{eqnarray*}
+V&=&R\cdot I\\
+\therefore\quad I&=&\frac{V}{R}\\
+&=&\frac{12}{\frac{4}{3}}\\
+&=&9\;\mathrm{A}
+\end{eqnarray*}
+
+\westep{Write the final answer}
+A 9~A current is flowing in the circuit.}
+\end{wex}
+
+\begin{wex}{Ohm's Law II}
+{Two ohmic resistors ($R_1$ and $R_2$) are connected in series with a cell. Find the resistance of $R_2$, given that the current flowing through $R_1$ and $R_2$ is 0,25~A and that the voltage across the cell is 1,5~V. $R_1$=1~\ohm.}
+{\westep{Draw the circuit and fill in all known values.}
+
+\begin{center}
+\begin{pspicture}(0,0)(5,5)
+%\psgrid[gridcolor=gray]
+\pnode(1,1){A}
+\pnode(4,1){B}
+\pnode(4,4){C}
+\pnode(1,4){D}
+\battery(A)(B){$V$=1,5~V}
+\psline(B)(C)
+\resistor[dipolestyle=rectangle](C)(D){$R_1$=1~\ohm}
+\resistor[labeloffset=-0.9cm](D)(A){$R_2$=?}
+\pcline{<-}(1,0.5)(2,0.5)
+\bput{:U}{$I$=0,25~A}
+\end{pspicture}
+\end{center}
+
+\westep{Determine how to approach the problem.}
+We can use Ohm's Law to find the total resistance $R$ in the circuit, and then calculate the unknown resistance using:
+\nequ{R=R_1+R_2}
+because it is in a series circuit.
+
+\westep{Find the total resistance}
+\begin{eqnarray*}
+V&=&R\cdot I\\
+\therefore\quad R&=&\frac{V}{I}\\
+&=&\frac{1,5}{0,25}\\
+&=&6\eohm
+\end{eqnarray*}
+
+\westep{Find the unknown resistance}
+We know that:
+\nequ{R=6\eohm}
+and that
+\nequ{R_1=1\eohm}
+Since
+\nequ{R=R_1+R_2}
+\nequ{R_2=R-R_1}
+Therefore,
+\nequ{R_2=5\eohm}
+}
+\end{wex}
+
+\subsection{Batteries and internal resistance}
+
+Real batteries are made from materials which have resistance. This means that real batteries are not just sources of potential difference (voltage), but they also possess internal resistance. If the total voltage source is referred to as the emf, ${\cal E}$, then a real battery can be represented as an emf  connected in series with a resistor $r$. The internal resistance of the battery is represented by the symbol $r$.
+
+\begin{center}
+\begin{pspicture}(0,0)(5,5)
+%\psgrid[gridcolor=gray]
+\pnode(1,1){A}
+\pnode(4,1){B}
+\pnode(4,4){C}
+\pnode(1,4){D}
+\pnode(2.5,1){E}
+\battery(A)(E){$\mathcal{E}$}
+\resistor[unit=0.5,dipolestyle=rectangle](E)(B){$r$}
+\psline(B)(C)
+\resistor[dipolestyle=rectangle](C)(D){$R$}
+\psline(D)(A)
+\psframe[linestyle=dashed](1.4,0.4)(3.8,2)
+\uput[d](2.5,0.4){$V$}
+\end{pspicture}
+\end{center}
+
+\Definition{Load}{The external resistance in the circuit is referred to as the load.}
+
+Suppose that the battery with emf $\mathcal{E}$ and internal resistance $r$ supplies a current $I$ through an external load resistor $R$. Then the voltage drop across the load resistor is that supplied by the battery:
+\nequ{V=I\cdot R}
+Similarly, from Ohm's Law, the voltage drop across the internal resistance is:
+\nequ{V_r=I\cdot r}
+
+The voltage $V$ of the battery is related to its emf ${\cal E}$ and internal resistance $r$ by:
+\begin{eqnarray*}
+{\cal E} &=& V + I r ;or\\
+V&=& {\cal E} - I r
+\end{eqnarray*}
+
+The emf of a battery is essentially constant because it only depends on the chemical reaction (that converts chemical energy into electrical energy) going on inside the battery. Therefore, we can see that the voltage across the terminals of the battery is dependent on the current drawn by the load. The higher the current, the lower the voltage across the terminals, because the emf is constant. By the same reasoning, the voltage only equals the emf when the current is very small.
+
+The maximum current that can be drawn from a battery is limited by a critical value $I_c$. At a current of $I_c$, $V$=0~V. Then, the equation becomes:
+\begin{eqnarray*}
+0 &=& {\cal E} - I_c r\\
+I_c r &=& {\cal E}\\
+I_c&=&\frac{{\cal E}}{r}
+\end{eqnarray*}
+The maximum current that can be drawn from a battery is less than $\frac{{\cal E}}{r}$.
+
+
+\begin{wex}{Internal resistance}{What is the internal resistance of a battery if its emf is 12~V and the voltage drop across its terminals is 10~V when a current of 4~A flows in the circuit when it is connected across a load?}{
+\westep{Determine how to approach the problem}
+It is an internal resistance problem. So we use the equation:
+\begin{eqnarray*}
+{\cal E} &=& V + I r
+\end{eqnarray*}
+
+\westep{Solve the problem}
+\begin{eqnarray*}
+{\cal E} &=& V + I r\\
+12&=&10 + 4(r)\\
+&=&0.5
+\end{eqnarray*}
+
+\westep{Write the final answer}
+The internal resistance of the resistor is 0.5~\ohm.}
+\end{wex}
+
+\Exercise{Resistance}{
+\begin{enumerate}
+\item Calculate the equivalent resistance of:
+\begin{enumerate}
+\item three 2~\ohm\ resistors in series;
+\item two 4~\ohm\ resistors in parallel;
+\item a 4~\ohm\ resistor in series with a 8~\ohm\ resistor;
+\item a 6~\ohm\ resistor in series with two resistors (4~\ohm\ and 2~\ohm\ ) in parallel.
+\end{enumerate}
+\item Calculate the total current in this circuit if both resistors are ohmic.
+\begin{center}
+\begin{pspicture}(0,0)(5,5)
+%\psgrid[gridcolor=gray]
+\pnode(1,1){A}
+\pnode(4,1){B}
+\pnode(4,4){C}
+\pnode(1,4){D}
+\pnode(1,2.5){E}
+\pnode(4,2.5){F}
+\battery(A)(B){$V$=9~V}
+\psline(B)(C)
+\resistor[dipolestyle=rectangle](D)(C){$R_1$=3~\ohm}
+\resistor[dipolestyle=rectangle](E)(F){$R_2$=6~\ohm}
+\psline(D)(A)
+\pcline{<-}(1,0.5)(2,0.5)
+\bput{:U}{I}
+\end{pspicture}
+\end{center}
+\item Two ohmic resistors are connected in series. The resistance of the one resistor is 4~\ohm\ . What is the resistance of the other resistor if a current of 0,5~A flows through the resistors when they are connected to a voltage supply of 6~V.
+\item Describe what is meant by the \textit{internal resistance} of a real battery.
+\item Explain why there is a difference between the emf and terminal voltage of a battery if the load (external resistance in the circuit) is comparable in size to the battery's internal resistance
+\item What is the internal resistance of a battery if its emf is 6~V and the voltage drop across its terminals is 5,8~V when a current of 0,5~A flows in the circuit when it is connected across a load?
+\end{enumerate}
+\practiceinfo
+
+\begin{tabular}[h]{cccccc}
+(1.) aaa & (2.) aaa & (3.) aaa & (4.) aaa & (5.) aaa & (6.) aaa & 
+ \end{tabular}
+
+}
+
+\section{Series and parallel networks of resistors}
+%\begin{syllabus}
+%\item Solve circuit problems involving resistors in series with parallel networks of resistors
+%\item Note: A parallel network is an arrangement of resistors that are in parallel with each other but not with the battery. A circuit containing one or more resistors in series with parallel network(s) is a series-parallel circuit
+%\end{syllabus}
+
+Now that you know how to handle simple series and parallel circuits, you are ready to tackle problems like this:
+
+\begin{figure}[htbp]
+\begin{center}
+\begin{pspicture}(-0.6,-0.8)(6.6,4)
+%\psgrid[gridcolor=lightgray]
+\psset{unit=0.75}
+\pnode(0,0){A}
+\pnode(0,4){B}
+\pnode(2,4){C}
+\pnode(3,4.75){D}
+\pnode(3,3.25){E}
+\pnode(5,4.75){F}
+\pnode(6,4){G}
+\pnode(5,3.25){H}
+\pnode(8,4){I}
+\pnode(8,0){J}
+\pnode(5,0.75){K}
+\pnode(6,0){L}
+\pnode(5,-0.75){M}
+\pnode(2,0){O}
+\pnode(3,0.75){P}
+\pnode(3,-0.75){N}
+
+\battery(A)(B){}
+\psline(B)(C)
+\psline(C)(D)\resistor[unit=0.5,dipolestyle=rectangle](D)(F){$R_1$}\psline(F)(G)
+\resistor[unit=0.5,dipolestyle=rectangle](C)(G){$R_2$}
+\psline(C)(E)\resistor[unit=0.5,dipolestyle=rectangle](E)(H){$R_3$}\psline(H)(G)
+\psline(G)(I)
+\resistor[unit=0.5,dipolestyle=rectangle](I)(J){$R_4$}
+\psline(J)(L)
+\psline(L)(K)\resistor[unit=0.5,dipolestyle=rectangle](K)(P){\small{$R_5$}}\psline(P)(O)
+\resistor[unit=0.5,dipolestyle=rectangle](L)(O){$R_6$}
+\psline(L)(M)\resistor[unit=0.5,dipolestyle=rectangle](M)(N){$R_7$}\psline(N)(O)
+\psline(O)(A)
+\psframe[linestyle=dashed](1.8,-1)(6.2,1)
+\uput[u](4,1){Parallel Circuit 1}
+\psframe[linestyle=dashed](1.8,3)(6.2,5)
+\uput[d](4,3){Parallel Circuit 2}
+\end{pspicture}
+\end{center}
+\caption{An example of a series-parallel network. The dashed boxes indicate parallel sections of the circuit.}
+\label{fig:serpar}
+\end{figure}
+
+It is relatively easy to work out these kind of circuits because you use everything you have already learnt about series and parallel circuits. The only difference is that you do it in stages. In Figure~\ref{fig:serpar}, the circuit consists of 2 parallel portions that are then in series with 1 resistor. So, in order to work out the equivalent resistance, you start by calculating the total resistance of the parallel portions and then add up all the resistances in series. If all the resistors in Figure~\ref{fig:serpar} had resistances of 10~\ohm, we can calculate the equivalent resistance of the entire circuit.
+
+We start by calculating the total resistance of \textit{Parallel Circuit 1}.
+
+\begin{center}
+\begin{pspicture}(-0.6,-0.8)(6.6,4)
+%\psgrid[gridcolor=lightgray]
+\psset{unit=0.75}
+\pnode(0,0){A}
+\pnode(0,4){B}
+\pnode(2,4){C}
+\pnode(3,4.75){D}
+\pnode(3,3.25){E}
+\pnode(5,4.75){F}
+\pnode(6,4){G}
+\pnode(5,3.25){H}
+\pnode(8,4){I}
+\pnode(8,0){J}
+\pnode(5,0.75){K}
+\pnode(6,0){L}
+\pnode(5,-0.75){M}
+\pnode(2,0){O}
+\pnode(3,0.75){P}
+\pnode(3,-0.75){N}
+
+\battery(A)(B){}
+\psline(B)(C)
+%\psline(C)(D)\resistor[unit=0.5,dipolestyle=rectangle](D)(F){$R_1$}\psline(F)(G)
+\resistor[unit=0.5,dipolestyle=rectangle](C)(G){$R_{p1}$}
+%\psline(C)(E)\resistor[unit=0.5,dipolestyle=rectangle](E)(H){$R_3$}\psline(H)(G)
+\psline(G)(I)
+\resistor[unit=0.5,dipolestyle=rectangle](I)(J){$R_4$}
+\psline(J)(L)
+\psline(L)(K)\resistor[unit=0.5,dipolestyle=rectangle](K)(P){\small{$R_5$}}\psline(P)(O)
+\resistor[unit=0.5,dipolestyle=rectangle](L)(O){$R_6$}
+\psline(L)(M)\resistor[unit=0.5,dipolestyle=rectangle](M)(N){$R_7$}\psline(N)(O)
+\psline(O)(A)
+\end{pspicture}
+\end{center}
+
+The value of $R_{p1}$ is:
+\begin{eqnarray*}
+\frac{1}{R_{p1}}&=&\frac{1}{R_1}+\frac{1}{R_2}+\frac{1}{R_3}\\
+R_{p1}&=&\left(\frac{1}{10}+\frac{1}{10}+\frac{1}{10}\right)^{-1}\\
+&=&\left(\frac{1+1+1}{10}\right)^{-1}\\
+&=&\left(\frac{3}{10}\right)^{-1}\\
+&=&3,33\eohm
+\end{eqnarray*}
+
+We can similarly calculate the total resistance of \textit{Parallel Circuit 2}:
+\begin{eqnarray*}
+\frac{1}{R_{p2}}&=&\frac{1}{R_5}+\frac{1}{R_6}+\frac{1}{R_7}\\
+R_{p2}&=&\left(\frac{1}{10}+\frac{1}{10}+\frac{1}{10}\right)^{-1}\\
+&=&\left(\frac{1+1+1}{10}\right)^{-1}\\
+&=&\left(\frac{3}{10}\right)^{-1}\\
+&=&3,33\eohm
+\end{eqnarray*}
+
+\begin{center}
+\begin{pspicture}(-0.6,-0.8)(6.6,4)
+%\psgrid[gridcolor=lightgray]
+\psset{unit=0.75}
+\pnode(0,0){A}
+\pnode(0,4){B}
+\pnode(2,4){C}
+\pnode(3,4.75){D}
+\pnode(3,3.25){E}
+\pnode(5,4.75){F}
+\pnode(6,4){G}
+\pnode(5,3.25){H}
+\pnode(8,4){I}
+\pnode(8,0){J}
+\pnode(5,0.75){K}
+\pnode(6,0){L}
+\pnode(5,-0.75){M}
+\pnode(2,0){O}
+\pnode(3,0.75){P}
+\pnode(3,-0.75){N}
+
+\battery(A)(B){}
+\psline(B)(C)
+\resistor[unit=0.5,dipolestyle=rectangle](C)(G){$R_{p1}=\frac{10}{3}\eohm$}
+\psline(G)(I)
+\resistor[unit=0.5,dipolestyle=rectangle](I)(J){$R_4=10\eohm$}
+\psline(J)(L)
+\resistor[unit=0.5,dipolestyle=rectangle](L)(O){$R_{p2}=\frac{10}{3}\eohm$}
+\psline(O)(A)
+\end{pspicture}
+\end{center}
+
+This has now being simplified to a simple series circuit and the equivalent resistance is:
+\begin{eqnarray*}
+R&=&R_{p1}+R_4+R_{p2}\\
+&=&\frac{10}{3}+10+\frac{10}{3}\\
+&=&\frac{100+30+100}{30}\\
+&=&\frac{230}{30}\\
+&=&7,66\eohm
+\end{eqnarray*}
+
+The equivalent resistance of the circuit in Figure~\ref{fig:serpar} is 7,66$\eohm$.
+
+\Exercise{Series and parallel networks}{
+Determine the equivalent resistance of the following circuits:
+\begin{enumerate}
+\item  {
+\scalebox{1} % Change this value to rescale the drawing.
+{
+\begin{pspicture}(0,-2.0289063)(5.62,2.0089064)
+\psline[linewidth=0.04cm](2.5,1.9889063)(2.5,0.5889062)
+\psline[linewidth=0.12cm](2.7,1.5889063)(2.7,0.98890626)
+\psline[linewidth=0.04cm](2.5,1.2889062)(0.0,1.2889062)
+\psline[linewidth=0.04cm](0.0,1.2889062)(0.0,-0.7110937)
+\psline[linewidth=0.04cm](0.0,-0.7110937)(0.8,-0.7110937)
+\psframe[linewidth=0.04,dimen=outer](2.0,-0.51109374)(0.8,-0.9110938)
+\psline[linewidth=0.04cm](2.0,-0.7110937)(2.7,-0.7110937)
+\psline[linewidth=0.04cm](4.9,0.7889063)(4.9,0.7889063)
+\psline[linewidth=0.04cm](2.7,-1.3110938)(2.7,-0.11109375)
+\psline[linewidth=0.04cm](2.7,1.2889062)(5.6,1.2889062)
+\psline[linewidth=0.04cm](5.6,1.2889062)(5.6,-0.7110937)
+\psline[linewidth=0.04cm](2.7,-0.11109375)(3.2,-0.11109375)
+\psline[linewidth=0.04cm](2.7,-1.3110938)(3.2,-1.3110938)
+\psframe[linewidth=0.04,dimen=outer](4.4,0.08890625)(3.2,-0.31109375)
+\psframe[linewidth=0.04,dimen=outer](4.4,-1.1110938)(3.2,-1.5110937)
+\psline[linewidth=0.04cm](5.6,-0.7110937)(4.9,-0.7110937)
+\psline[linewidth=0.04cm](4.9,-1.3110938)(4.9,-0.11109375)
+\psline[linewidth=0.04cm](4.9,-0.11109375)(4.4,-0.11109375)
+\psline[linewidth=0.04cm](4.9,-1.3110938)(4.4,-1.3110938)
+\usefont{T1}{ptm}{m}{n}
+\rput(1.4670312,-1.2010938){2 $\Omega$}
+\usefont{T1}{ptm}{m}{n}
+\rput(3.8670313,-1.8010937){2 $\Omega$}
+\usefont{T1}{ptm}{m}{n}
+\rput(3.868125,0.29890624){4 $\Omega$}
+\end{pspicture}
+}
+}
+\item {
+\scalebox{1} % Change this value to rescale the drawing.
+{
+\begin{pspicture}(0,-1.9789063)(8.439688,1.9589063)
+\psline[linewidth=0.04cm](3.8578124,1.9389062)(3.8578124,0.5389063)
+\psline[linewidth=0.12cm](4.0578127,1.5389062)(4.0578127,0.93890625)
+\psline[linewidth=0.04cm](3.8578124,1.2389063)(1.3578125,1.2389063)
+\psline[linewidth=0.04cm](1.3578125,1.2389063)(1.3578125,0.5389063)
+\psline[linewidth=0.04cm](1.3578125,-0.6610938)(1.3578125,-1.2610937)
+\rput{-90.0}(7.018906,6.896719){\psframe[linewidth=0.04,dimen=outer](7.5578127,0.13890626)(6.3578124,-0.26109374)}
+\psline[linewidth=0.04cm](1.3578125,-1.2610937)(4.6578126,-1.2610937)
+\psline[linewidth=0.04cm](6.2578125,0.73890626)(6.2578125,0.73890626)
+\psline[linewidth=0.04cm](4.0578127,1.2389063)(6.9578123,1.2389063)
+\psline[linewidth=0.04cm](6.9578123,1.2389063)(6.9578123,0.5389063)
+\psframe[linewidth=0.04,dimen=outer](5.8578124,-1.0610938)(4.6578126,-1.4610938)
+\rput{-90.0}(1.4189062,1.2967187){\psframe[linewidth=0.04,dimen=outer](1.9578125,0.13890626)(0.7578125,-0.26109374)}
+\psline[linewidth=0.04cm](6.9578123,-1.2610937)(5.8578124,-1.2610937)
+\usefont{T1}{ptm}{m}{n}
+\rput(0.8076562,0.24890625){1 $\Omega$}
+\usefont{T1}{ptm}{m}{n}
+\rput(2.9248438,-0.25109375){2 $\Omega$}
+\usefont{T1}{ptm}{m}{n}
+\rput(5.2259374,-1.7510937){4 $\Omega$}
+\psline[linewidth=0.04cm](2.3578124,1.2389063)(2.3578124,0.5389063)
+\psline[linewidth=0.04cm](2.3578124,-0.6610938)(2.3578124,-1.2610937)
+\rput{-90.0}(2.4189062,2.2967188){\psframe[linewidth=0.04,dimen=outer](2.9578125,0.13890626)(1.7578125,-0.26109374)}
+\psline[linewidth=0.04cm](6.9578123,-0.6610938)(6.9578123,-1.2610937)
+\usefont{T1}{ptm}{m}{n}
+\rput(7.5209374,0.04890625){6 $\Omega$}
+\end{pspicture}
+}
+}
+\item {
+\scalebox{1} % Change this value to rescale the drawing.
+{
+\begin{pspicture}(0,-1.9889063)(11.014063,1.9489063)
+\psline[linewidth=0.04cm](5.9321876,1.9289062)(5.9321876,0.5289062)
+\psline[linewidth=0.12cm](6.1321874,1.5289062)(6.1321874,0.92890626)
+\psline[linewidth=0.04cm](5.9321876,1.2289063)(1.4321876,1.2289063)
+\psline[linewidth=0.04cm](1.4321876,1.2289063)(1.4321876,0.5289062)
+\psline[linewidth=0.04cm](1.4321876,-0.67109376)(1.4321876,-1.2710937)
+\rput{-90.0}(8.103281,7.961094){\psframe[linewidth=0.04,dimen=outer](8.632188,0.12890625)(7.4321876,-0.27109376)}
+\psline[linewidth=0.04cm](1.4321876,-1.2710937)(5.7321873,-1.2710937)
+\psline[linewidth=0.04cm](7.3321877,0.7289063)(7.3321877,0.7289063)
+\psline[linewidth=0.04cm](6.1321874,1.2289063)(9.532187,1.2289063)
+\psline[linewidth=0.04cm](8.032187,1.2289063)(8.032187,0.5289062)
+\psframe[linewidth=0.04,dimen=outer](6.9321876,-1.0710938)(5.7321873,-1.4710938)
+\rput{-90.0}(1.5032812,1.3610938){\psframe[linewidth=0.04,dimen=outer](2.0321875,0.12890625)(0.8321875,-0.27109376)}
+\psline[linewidth=0.04cm](9.532187,-1.2710937)(6.9321876,-1.2710937)
+\usefont{T1}{ptm}{m}{n}
+\rput(0.8592188,0.23890625){2 $\Omega$}
+\usefont{T1}{ptm}{m}{n}
+\rput(2.3792188,-0.12109375){2 $\Omega$}
+\usefont{T1}{ptm}{m}{n}
+\rput(6.3003125,-1.7610937){4 $\Omega$}
+\psline[linewidth=0.04cm](2.9321876,1.2289063)(2.9321876,0.5289062)
+\psline[linewidth=0.04cm](2.9321876,-0.67109376)(2.9321876,-1.2710937)
+\rput{-90.0}(3.0032814,2.8610938){\psframe[linewidth=0.04,dimen=outer](3.5321875,0.12890625)(2.3321874,-0.27109376)}
+\psline[linewidth=0.04cm](8.032187,-0.67109376)(8.032187,-1.2710937)
+\usefont{T1}{ptm}{m}{n}
+\rput(7.4603124,0.15890625){4 $\Omega$}
+\usefont{T1}{ptm}{m}{n}
+\rput(4.999219,-0.36109376){2 $\Omega$}
+\psline[linewidth=0.04cm](4.4321876,1.2289063)(4.4321876,0.5289062)
+\rput{-90.0}(4.503281,4.3610935){\psframe[linewidth=0.04,dimen=outer](5.0321875,0.12890625)(3.8321874,-0.27109376)}
+\psline[linewidth=0.04cm](4.4321876,-0.67109376)(4.4321876,-1.2710937)
+\rput{-90.0}(9.603281,9.461094){\psframe[linewidth=0.04,dimen=outer](10.132188,0.12890625)(8.932187,-0.27109376)}
+\psline[linewidth=0.04cm](8.332188,0.7289063)(8.332188,0.7289063)
+\psline[linewidth=0.04cm](9.532187,1.2289063)(9.532187,0.5289062)
+\psline[linewidth=0.04cm](9.532187,-0.67109376)(9.532187,-1.2710937)
+\usefont{T1}{ptm}{m}{n}
+\rput(10.099218,-0.06109375){2 $\Omega$}
+\end{pspicture}
+}
+}
+\end{enumerate}}
+
+\section{Wheatstone bridge}
+%\begin{syllabus}
+%\item Given a circuit diagram, explain how the Wheatstone bridge can be used for determining resistances very accurately
+%\item Derive an expression for the unknown resistance in terms of the known resistances when the bridge circuit is balanced
+%\item Note: The Wheatstone Bridge enables very accurate measurements of resistance to be made by inserting an unknown resistor into a bridge circuit containing three resistors that are already accurately known, one of which is variable. The resistance of the variable resistor is changed until a galvanometer reads zero, indicating that the bridge circuit is balanced.
+%\end{syllabus}
+
+Another method of finding an unknown resistance is to use a \textit{Wheatstone bridge}. A Wheatstone bridge is a measuring instrument that is used to measure an unknown electrical resistance by balancing two legs of a bridge circuit, one leg of which includes the unknown component. Its operation is similar to the original potentiometer except that in potentiometer circuits the meter used is a sensitive galvanometer.
+
+\begin{IFact}{The Wheatstone bridge was invented by Samuel Hunter Christie in 1833 and improved and popularized by Sir Charles Wheatstone in 1843.}
+\end{IFact}
+
+\begin{center}
+\begin{pspicture}(-0.6,-0.6)(6.6,4.6)
+%\psgrid[gridcolor=gray]
+\pnode(0,0){A}
+\pnode(0,4){B}
+\pnode(4,4){C}
+\pnode(6,2){D}
+\pnode(2,2){E}
+\pnode(4,0){F}
+\battery(A)(B){}
+\psline(B)(C)
+\psline(A)(F)
+\resistor[dipolestyle=rectangle](E)(C){$R_3$}
+\resistor[dipolestyle=rectangle](C)(D){$R_1$}
+\resistor[variable,labeloffset=-0.7](E)(F){$R_2$}
+\resistor[labeloffset=-0.7](F)(D){$R_x$}
+\Ucc[labeloffset=0](E)(D){V}
+\psdots(C)(E)(D)(F)
+\uput[u](C){A}
+\uput[r](D){B}
+\uput[d](F){C}
+\uput[l](E){D}
+\uput[r](6.5,2){Circuit for Wheatstone bridge}
+\end{pspicture}
+\end{center}
+
+In the circuit of the Wheatstone bridge, $R_x$ is the unknown resistance. $R_1$, $R_2$ and $R_3$ are resistors of known resistance and the resistance of $R_2$ is adjustable. If the ratio of $R_2$:$R_1$ is equal to the ratio of $R_x$:$R_3$, then the voltage between the two midpoints will be zero and no current will flow between the midpoints. In order to determine the unknown resistance, $R_2$ is varied until this condition is reached. That is when the voltmeter reads 0~V.
+
+\begin{wex}{Wheatstone bridge}
+
+{What is the resistance of the unknown resistor $R_x$ in the diagram below if $R_1$=4\ohm\, $R_2$=8\ohm\ and $R_3$=6\ohm.}
+\begin{center}
+\begin{pspicture}(-0.6,-0.6)(6.6,4.6)
+%\psgrid[gridcolor=gray]
+\pnode(0,0){A}
+\pnode(0,4){B}
+\pnode(4,4){C}
+\pnode(6,2){D}
+\pnode(2,2){E}
+\pnode(4,0){F}
+\battery(A)(B){}
+\psline(B)(C)
+\psline(A)(F)
+\resistor[dipolestyle=rectangle](E)(C){$R_3$}
+\resistor[dipolestyle=rectangle](C)(D){$R_1$}
+\resistor[variable,labeloffset=-0.7](E)(F){$R_2$}
+\resistor[labeloffset=-0.7](F)(D){$R_x$}
+\Ucc[labeloffset=0](E)(D){V}
+\psdots(C)(E)(D)(F)
+\uput[u](C){A}
+\uput[r](D){B}
+\uput[d](F){C}
+\uput[l](E){D}
+\uput[r](6.5,2){Circuit for Wheatstone bridge}
+\end{pspicture}
+\end{center}
+{
+
+\westep{Determine how to approach the problem}
+The arrangement is a Wheatstone bridge. So we use the equation:
+\begin{eqnarray*}
+R_x:R_3 &=& R_2:R_1\\
+\end{eqnarray*}
+
+\westep{Solve the problem}
+\begin{eqnarray*}
+R_x:R_3 &=& R_2:R_1\\
+R_x:6 &=& 8:4\\
+R_x&=&12~\ohm\ \\
+\end{eqnarray*}
+
+\westep{Write the final answer}
+The resistance of the unknown resistor is 12~\ohm.}
+\end{wex}
+
+\Extension{Power in electric circuits}{
+In addition to voltage and current, there is another measure of free electron activity in a circuit: \textit{power}. Power is a measure of how rapidly a standard amount of \textit{work} is done. In electric circuits, power is a function of both voltage and current:
+\Definition{Electrical Power}{Electrical power is calculated as:
+\begin{equation*}
+P=I \cdot V
+\end{equation*}}
+
+Power ($P$) is exactly equal to current ($I$) multiplied by voltage
+($V$) and there is no extra constant of proportionality. The unit of
+measurement for power is the \textit{Watt} (abbreviated W).
+
+
+\begin{IFact}{It was James Prescott Joule, not Georg Simon Ohm, who first discovered the mathematical relationship between power dissipation and current through a resistance. This discovery, published in 1841, followed the form of the equation:
+\nequ{P = I^{2}R}
+and is properly known as Joule's Law. However, these power equations are so commonly associated with the Ohm's Law equations relating voltage, current, and resistance that they are frequently credited to Ohm.}
+\end{IFact}
+
+\Activity{Investigation}{Equivalence}{Use Ohm's Law to show that:
+\nequ{P=VI}
+is identical to
+\nequ{P = I^{2}R}
+and
+\nequ{P = \frac{V^{2}}{R}}
+}}
+
+\summary{aaa}
+\begin{enumerate}
+\item Ohm's Law states that the amount of current through a conductor, at constant temperature, is proportional to the voltage across the resistor. Mathematically we write $V=I \cdot R$
+\item Conductors that obey Ohm's Law are called ohmic conductors; those that do not are called non-ohmic conductors.
+\item We use Ohm's Law to calculate the resistance of a resistor. $R=\frac{V}{I}$
+\item The equivalent resistance of resistors in series ($R_s$) can be calculated as follows: $R_s=R_1+R_2+R_3+ ...+R_n$
+\item The equivalent resistance of resistors in parallel ($R_p$) can be calculated as follows: $\frac{1}{R_p}=\frac{1}{R_1}+\frac{1}{R_2}+\frac{1}{R_3}+ ... +\frac{1}{R_n}$
+\item Real batteries have an internal resistance.
+\item Wheatstone bridges can be used to accurately determine the resistance of an unknown resistor.
+\end{enumerate}
+
+\begin{eocexercises}{}
+\begin{enumerate}
+\item{Calculate the current in the following circuit and then use the current to calculate the voltage drops across each resistor.
+\begin{center}
+\begin{pspicture}(5,5)
+\pnode(1,4){A}
+\pnode(4,4){B}
+\pnode(4,1){C}
+\pnode(1,1){D}
+\resistor[dipolestyle=rectangle](A)(B){R$_{1}$}
+\resistor[dipolestyle=rectangle](B)(C){R$_{2}$}
+\resistor[dipolestyle=rectangle](C)(D){R$_{3}$}
+\battery[](A)(D){9V}
+\rput(2.5,3.5){3$\Omega$}
+\rput(3.25,2.5){10$\Omega$}
+\rput(2.5,1.5){5$\Omega$}
+\end{pspicture}
+\end{center}
+}
+\item Explain why a voltmeter is placed in parallel with a resistor.
+\item Explain why an ammeter is placed in series with a resistor.
+
+\item{[IEB 2001/11 HG1] - \textbf{Emf}\\
+
+\begin{enumerate}
+\item{Explain the meaning of each of these two statements:
+\begin{enumerate}
+\item{``The current through the battery is 50 mA.''}
+\item{``The emf of the battery is 6 V.''}
+\end{enumerate}}
+\item{A battery tester measures the current supplied when the battery is connected to a resistor of 100 $\Omega$. If the current is less than 50 mA, the battery is ``flat'' (it needs to be replaced). Calculate the maximum internal resistance of a 6 V battery that will pass the test.}
+\end{enumerate}}
+
+\item{[IEB 2005/11 HG] The electric circuit of a torch consists of a cell, a switch and a small light bulb, as shown in the diagram below.
+
+\begin{center}
+\begin{pspicture}(-0.6,0)(5.5,4.6)
+\SpecialCoor
+%\psgrid[gridcolor=lightgray]
+\pnode(0,0){A}
+\pnode(0,4){B}
+\pnode(5,4){C}
+\pnode(5,0){D}
+\battery(A)(B){}
+\psline(B)(C)
+\psdots(3.6,4)(4.4,4)
+\uput[u](4,4){S}
+\lamp(C)(D){}
+\psline(D)(A)
+\end{pspicture}
+\end{center}
+The electric torch is designed to use a D-type cell, but the only cell that is available for use is an AA-type cell. The specifications of these two types of cells are shown in the table below:
+\begin{center}
+\begin{tabular}{|c|c|p{3.5cm}|p{6cm}|}\hline\hline
+\textbf{Cell}&\textbf{emf}&\textbf{Appliance for which it is designed}&\textbf{Current drawn from cell when connected to the appliance for which it is designed}\\\hline\hline
+D&1,5~V&torch&300~mA\\\hline
+AA&1,5~V&TV remote control&30~mA\\\hline
+\end{tabular}
+\end{center}
+
+What is likely to happen and why does it happen when the AA-type cell replaces the D-type cell in the electric torch circuit?
+
+\begin{center}
+\begin{tabular}{|c|l|p{5.5cm}|}\hline\hline
+&\textbf{What happens}&\textbf{Why it happens}\\\hline\hline
+(a)&the bulb is dimmer&the AA-type cell has greater internal resistance\\\hline
+(b)&the bulb is dimmer&the AA-type cell has less internal resistance\\\hline
+(c)&the brightness of the bulb is the same&the AA-type cell has the same internal resistance\\\hline
+(d)&the bulb is brighter&the AA-type cell has less internal resistance\\\hline
+\end{tabular}
+\end{center}}
+
+\item{[IEB 2005/11 HG1]
+A battery of emf $\varepsilon$ and internal resistance r = 25 $\Omega$ is connected to this arrangement of resistors.
+
+\begin{center}
+\begin{pspicture}(-1,0)(8,5)
+% \psgrid[gridcolor=lightgray]
+\pnode(0,0){A}
+\pnode(0,4){B}
+\pnode(2,0){C}
+\pnode(2,4){D}
+\pnode(4,0){E}
+\pnode(4,4){F}
+\pnode(6,0){G}
+\pnode(6,4){H}
+\pnode(7,0){I}
+\pnode(7,4){J}
+\battery(A)(B){$\varepsilon$, r}
+\Ucc[labeloffset=0](C)(D){V$_1$}
+\resistor(D)(F){100~$\Omega$}
+\resistor(E)(F){50~$\Omega$}
+\resistor(G)(H){50~$\Omega$}
+\Ucc[labeloffset=0](I)(J){V$_2$}
+\psline(B)(D)
+\psline(F)(J)
+\psline(A)(I)
+\end{pspicture}
+\end{center}
+
+The resistances of voltmeters V$_1$ and V$_2$ are so high that they do not affect the current in the circuit.
+
+\begin{enumerate}
+\item{Explain what is meant by ``the emf of a battery''.}
+
+The power dissipated in the 100 $\Omega$ resistor is 0,81 W.
+\item{Calculate the current in the 100 $\Omega$ resistor.}
+\item{Calculate the reading on voltmeter V$_2$.}
+\item{Calculate the reading on voltmeter V$_1$.}
+\item{Calculate the emf of the battery.}
+\end{enumerate}}
+
+\item{[SC 2003/11] A kettle is marked 240 V; 1 500 W.
+\begin{enumerate}
+\item{Calculate the resistance of the kettle when operating according to the above specifications.}
+\item{If the kettle takes 3 minutes to boil some water, calculate the amount of electrical energy transferred to the kettle.}
+\end{enumerate}}
+
+\item{[IEB 2001/11 HG1] - \textbf{Electric Eels}
+
+Electric eels have a series of cells from head to tail. When the cells are activated by a nerve impulse, a potential difference is created from head to tail. A healthy electric eel can produce a potential difference of 600 V.
+\begin{enumerate}
+\item{What is meant by ``a potential difference of 600 V''?}
+\item{How much energy is transferred when an electron is moved through a potential difference of 600 V?}
+\end{enumerate}}
+
+\end{enumerate}
+\practiceinfo
+
+\begin{tabular}[h]{cccccc}
+(1.) aaa & (2.) aaa & (3.) aaa & (4.) aaa & (5.) aaa & (6.) aaa & (7.) aaa & (8.) aaa & 
+ \end{tabular}
+\end{eocexercises}
+
+% CHILD SECTION END
+
+
+
+% CHILD SECTION START
+
