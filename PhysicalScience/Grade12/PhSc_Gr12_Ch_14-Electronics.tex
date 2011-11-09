@@ -147,6 +147,7 @@ Calculate the reactance of the capacitor
 \item Calculate the impedance $Z = \sqrt{X^{2} + R^{2}} = \sqrt{ 53,05^{2} + 30^{2}} = 60,9 \; \Omega$  \end{enumerate}}
 \end{wex}
 
+\begin{IFact}{Most factories containing heavy duty electrical equipment (e.g. large motors) have to pay extra money to their electricity supply company because the inductance of the motor coils causes the current and voltage to get out of phase.  As this makes the electricity distribution network less efficient, a financial penalty is incurred.  The factory engineer can prevent this by connecting capacitors into the circuit to reduce the reactance to zero, as in the last question above.  The current and voltage are then in phase again.  We can't calculate the capacitance needed in this chapter, because the capacitors are usually connected in parallel, and we have only covered the reactances and impedances of series circuits.} \end{IFact}
 \Exercise{Capacitive and Inductive Circuits}{
 \begin{enumerate}
 \item Why is the instantaneous value of $\frac{V}{I}$ of little use in an AC circuit containing an inductor or capacitor?
@@ -175,7 +176,6 @@ Calculate the reactance of the capacitor
 % Automatically inserted shortcodes - number inserted 6
 }
 
-\begin{IFact}{Most factories containing heavy duty electrical equipment (e.g. large motors) have to pay extra money to their electricity supply company because the inductance of the motor coils causes the current and voltage to get out of phase.  As this makes the electricity distribution network less efficient, a financial penalty is incurred.  The factory engineer can prevent this by connecting capacitors into the circuit to reduce the reactance to zero, as in the last question above.  The current and voltage are then in phase again.  We can't calculate the capacitance needed in this chapter, because the capacitors are usually connected in parallel, and we have only covered the reactances and impedances of series circuits.} \end{IFact}
 
 \section{Filters and Signal Tuning}
 %\begin{syllabus}
@@ -587,13 +587,11 @@ The operation of NPN and PNP transistors (in terms of conventional currents) is 
 
 \begin{IFact}{The transistor is considered by many to be one of the greatest discoveries or inventions in modern history, ranking with banking and the printing press. Key to the importance of the transistor in modern society is its ability to be produced in huge numbers using simple techniques, resulting in vanishingly small prices. Computer ``chips'' consist of millions of transistors and sell for Rands, with per-transistor costs in the thousandths-of-cents. The low cost has meant that the transistor has become an almost universal tool for non-mechanical tasks. Whereas a common device, say a refrigerator, would have used a mechanical device for control, today it is often less expensive to simply use a few million transistors and the appropriate computer program to carry out the same task through "brute force". Today transistors have replaced almost all electromechanical devices, most simple feedback systems, and appear in huge numbers in everything from computers to cars.}\end{IFact} 
 
-\begin{IFact}{The transistor was invented at Bell Laboratories in December 1947 (first demonstrated on December 23) by John Bardeen, Walter Houser Brattain, and William Bradford Shockley, who were awarded the Nobel Prize in physics in 1956.}\end{IFact}
 
 \subsubsection{The Field Effect Transistor (FET)}
 
 To control a bipolar transistor, you control the {\bf current} flowing into or out of its base.  The other type of transistor is the field effect transistor (FET).  FETs work using control {\bf voltages} instead.  Accordingly they can be controlled with much smaller currents and are much more economic to use.  
 
-\begin{IFact}{No-one would build a computer with billions of bipolar transistors --- the current in each transistor's base might be small, but when you add up all of the base currents in the millions of transistors, the computer as a whole would be consuming a great deal of electricity and making a great deal of heat.  Not only is this wasteful, it would prevent manufacturers making a computer of convenient size.  If the transistors were too close together, they would overheat.}\end{IFact}
 
 \begin{figure}[htbp]
 \begin{center} \begin{tabular}{cc}
@@ -628,8 +626,10 @@ To control a bipolar transistor, you control the {\bf current} flowing into or o
 
 The three terminals of the FET are called the \textit{source} (S), \textit{drain} (D) and \textit{gate} (G), as shown in Figure~\ref{fig:fet}.  When the gate is not connected, a current of electrons can flow from source (S) to drain (D) easily along the channel.  The source is, accordingly, the negative terminal of the transistor.  The drain, where the electrons come out, is the positive terminal of the transistor.  A few electrons will flow from the n-type channel into the p-type semiconductor of the gate when the device is manufactured.  However, as these electrons are not removed (the gate is not connected), a depletion band is set up which prevents further flow into the gate.
 
+\begin{IFact}{The transistor was invented at Bell Laboratories in December 1947 (first demonstrated on December 23) by John Bardeen, Walter Houser Brattain, and William Bradford Shockley, who were awarded the Nobel Prize in physics in 1956.}\end{IFact}
 In operation, the gate is connected to negative voltages relative to the source.  This makes the p-n junction between gate and channel reverse-biased.  Accordingly no current flows from the source into the gate.  When the voltage of the gate is lowered (made more negative), the depletion band becomes wider.  This enlarged depletion band takes up some of the space of the channel.  So the lower the voltage of the gate (the more negative it is relative to the source), the larger the depletion band.  The larger the depletion band, the narrower the channel.  The narrower the channel, the harder it is for electrons to flow from source to drain.
 
+\begin{IFact}{No-one would build a computer with billions of bipolar transistors --- the current in each transistor's base might be small, but when you add up all of the base currents in the millions of transistors, the computer as a whole would be consuming a great deal of electricity and making a great deal of heat.  Not only is this wasteful, it would prevent manufacturers making a computer of convenient size.  If the transistors were too close together, they would overheat.}\end{IFact}
 The voltage of the gate is not the only factor affecting the current of electrons between the source and the drain.  If the external circuit has a low resistance, electrons are able to leave the drain easily.  If the external circuit has a high resistance, electrons leave the drain slowly.  This creates a kind of `traffic jam' which slows the passage of further electrons.  In this way, the voltage of the drain regulates itself, and is more or less independent of the current demanded from the drain.
 
 Once these two factors have been taken into account, it is fair to say that the positive output voltage (the voltage of the drain relative to the source) is proportional to the negative input voltage (the voltage of the gate relative to the source).
@@ -1181,6 +1181,8 @@ In practise, the cheapest gate to manufacture is usually the NAND gate. Addition
 (5.)	01k8	&
 % Question 6
 (6.)	01k9	\\ % End row of shortcodes
+
+(7.) aaa &
 \end{tabular}
 % Automatically inserted shortcodes - number inserted 6
 }
@@ -1714,7 +1716,7 @@ The wavelength of a particular electromagnetic radiation will depend on how it w
 The radiation can take on any wavelength, which means that the spectrum is continuous. Physicists broke down this continuous band into sections. Each section is defined by how the radiation is created, not the wavelength of the radiation. But each category is continuous within the min and max wavelength of that category, meaning there are no wavelengths excluded within some range. 
 
 The spectrum is in order of wavelength, with the shortest wavelength at one end and the longest wavelength at the other. The spectrum is then broken down into categories as detailed in Table~\ref{tab:emspectrum}.
-
+\pagebreak
 \begin{table}[htbp]
 \begin{center}
 \caption{Electromagnetic spectrum}
@@ -1865,12 +1867,14 @@ E & = & h\frac{c}{\lambda}\\
 \end{wex}
 
 
-\subsection {Exercise - particle nature of EM waves}
+\Exercise{particle nature of EM waves}{
 \begin{enumerate}
 \item How is the energy of a photon related to its frequency and wavelength?
 \item Calculate the energy of a photon of EM radiation with a frequency of $10^{12}$~Hz.
 \item Determine the energy of a photon of EM radiation with a wavelength of 600 nm.
 \end{enumerate}
+\insertpracticeinfo{3}
+}
 
 \section{Penetrating ability of electromagnetic radiation}
 \label{p:em:emr12:pa}
@@ -1965,7 +1969,7 @@ Presentation on the electromagnetic spectrum: SIYAVULA-PRESENTATION:http://cnx.o
 
 \end{enumerate}
 
-\begin{eocexercises}
+\begin{eocexercises}{}
 \begin{enumerate}
 
 \item What is the energy of a photon of EM radiation with a frequency of $3 \times 10^{8}$~Hz? 
