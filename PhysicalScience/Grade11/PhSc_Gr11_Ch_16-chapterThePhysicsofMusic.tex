@@ -8,8 +8,8 @@ Do you blow through it, like a flute? Do you hit it, like a drum?
 All musical instruments work by making standing waves. Each instrument has a unique sound because of the special waves made in it.
 These waves could be in the strings of a guitar or violin.
 They could also be in the skin of a drum or a tube of air in a trumpet.
-These waves are picked up by the air and later reach your ear as sound.
-\chapterstartvid{VPkzh}
+These waves are picked up by the air and later reach your ear as sound.\\
+\chapterstartvideo{VPkzh}
 In Grade 10, you learned about standing waves and boundary conditions. We saw a rope that was:
 \begin{itemize}
 \item{fixed at both ends}
@@ -254,7 +254,7 @@ rich tones with over 20 harmonics per note. Some of these are out of the range o
 Very low piano notes can be heard mostly because of their higher harmonics.
 
 \begin{center}
-\scalebox{1} % Change this value to rescale the drawing.
+\scalebox{.8} % Change this value to rescale the drawing.
 {
 \begin{pspicture}(0,-3.7196875)(9.475264,3.6896875)
 \definecolor{color377b}{rgb}{0.08627450,0.04705882,0.04705882}
@@ -540,7 +540,7 @@ Very low piano notes can be heard mostly because of their higher harmonics.
 %\usefont{T1}{ptm}{m}{n}
 \rput(7.8508887,-3.5003126){soft pedal}
 %\usefont{T1}{ptm}{m}{n}
-\rput(8.046826,-3.1003125){sustain (sostuneto) pedal}
+\rput(8.546826,-3.1003125){sustain (sostuneto) pedal}
 %\usefont{T1}{ptm}{m}{n}
 \rput(7.8068266,-2.7003126){damper pedal}
 \end{pspicture}
@@ -556,7 +556,7 @@ When one plays a wind instrument, the air that is pushed through the pipe vibrat
 and standing waves are formed. Just like with strings, the wavelengths of the standing waves
 will depend on the length of the pipe and whether it is open or closed at each end. Let's
 consider each of the following situations:
-\begin{itemize}
+\begin{itemize}[noitemsep]
 \item A pipe with both ends open, like a flute or organ pipe.
 \item A pipe with one end open and one closed, like a clarinet.
 \end{itemize}
@@ -564,8 +564,9 @@ If you blow across a small hole in a pipe or reed, it makes a sound. If both end
 will form according to figure~\ref{fig:musicwaves}. You will notice that there is an anti-node at each end.
 In the next activity you will find how this affects the wavelengths.
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \begin{center}
+\scalebox{.6}{
 \begin{pspicture}(-2,-1.2)(2,6)
 %\psgrid
 \rput(0,4.8){\psplot[xunit=0.0111,plotstyle=curve]{-180}{180}{0.5
@@ -574,19 +575,19 @@ x mul sin}
 neg}
 \psline[linecolor=gray,linestyle=dashed](-2,1)(2,1)
 \psline[linecolor=gray,linestyle=dashed](-2,-1)(2,-1)
-\uput[r](2,0){fundamental frequency}}
+\uput[r](2,0){\LARGE{fundamental frequency}}}
 \rput(0,2.4){\psplot[xunit=0.0111,plotstyle=curve]{-180}{180}{x
 cos}\psplot[xunit=0.0111,plotstyle=curve]{-180}{180}{x cos neg}
 \psline[linecolor=gray,linestyle=dashed](-2,1)(2,1)
 \psline[linecolor=gray,linestyle=dashed](-2,-1)(2,-1)
-\uput[r](2,0){first harmonic}}
+\uput[r](2,0){\LARGE{first harmonic}}}
 \rput(0,0){\psplot[xunit=0.0111,plotstyle=curve]{-180}{180}{1.5 x
 mul sin}\psplot[xunit=0.0111,plotstyle=curve]{-180}{180}{1.5 x mul
 sin neg}
 \psline[linecolor=gray,linestyle=dashed](-2,1)(2,1)
 \psline[linecolor=gray,linestyle=dashed](-2,-1)(2,-1)
-\uput[r](2,0){second harmonic}}
-\end{pspicture}
+\uput[r](2,0){\LARGE{second harmonic}}}
+\end{pspicture}}
 \caption{Harmonics in a pipe open at both ends.}\label{fig:musicwaves}
 \end{center}
 \end{figure}
@@ -594,7 +595,7 @@ sin neg}
 
 
 \Activity{Investigation}{Waves in a Pipe Open at Both Ends}{This chart shows some standing waves in a pipe open at both ends.
-The pipe (shown with dashed lines) has length L. \\
+The pipe (shown with dashed lines) has length L. 
 \begin{enumerate}
 \item{Fill in the:
 \begin{itemize}
@@ -662,12 +663,12 @@ Here, $n$ is still the number of nodes.
 
 \begin{wex}{The Organ Pipe}
 {
-\begin{minipage}{0.5\textwidth}
+% \begin{minipage}{0.5\textwidth}
 An open organ pipe is 0,853 m long.  The speed of sound
 in air is 345 m.s$^{-1}$.  Can this pipe play middle C? (Middle C
 has a frequency of about 262 Hz)
-\end{minipage}
-\begin{minipage}{0.5\textwidth}
+% \end{minipage}
+% \begin{minipage}{0.5\textwidth}
 \begin{center}
 \scalebox{0.8} % Change this value to rescale the drawing.
 {
@@ -687,7 +688,7 @@ has a frequency of about 262 Hz)
 \end{pspicture}
 }
 \end{center}
-\end{minipage}
+% \end{minipage}
 }
 {The main frequency of a note is the fundamental frequency.
 The fundamental frequency of the open pipe has one node.
@@ -848,8 +849,9 @@ This pipe has a node at one end and an antinode at the other. An example of a mu
 instrument that has a node at one end and an antinode at the other is a clarinet. In the
 activity you will find out how the wavelengths are affected.
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \begin{center}
+\scalebox{.8}{
 \begin{pspicture}(0,-1.2)(4,6)
 %\psgrid[gridcolor=gray]
 \rput(0,4.8){\psplot[xunit=0.0111,plotstyle=curve]{0}{360}{0.25 x
@@ -868,7 +870,7 @@ mul sin}\psplot[xunit=0.0111,plotstyle=curve]{0}{360}{1.25 x mul
 sin neg}
 \psline[linecolor=gray,linestyle=dashed](4,1)(0,1)(0,-1)(4,-1)
 \uput[r](4,0){second harmonic}}
-\end{pspicture}
+\end{pspicture}}
 \caption{Harmonics in a pipe open at one end.}
 \end{center}
 \end{figure}
@@ -989,18 +991,18 @@ Resonance takes place when a system is made to vibrate at its natural frequency 
 that are received from another source of the same frequency. In the following investigation you will
 measure the speed of sound using resonance.
 
-\Activity{Experiment}{Using resonance to measure the speed of sound}
+\begin{g_experiment}{Using resonance to measure the speed of sound}
 {
-\Aim{ To measure the speed of sound using resonance}
-\Apparatus{
+\textbf{Aim: } To measure the speed of sound using resonance\\
+\textbf{Apparatus: } 
 \begin{itemize}
 \item one measuring cylinder
 \item a high frequency (512 Hz) tuning fork
 \item some water
 \item a ruler or tape measure
-\end{itemize}}
+\end{itemize}
 
-\Method{
+\textbf{Method: }
 \begin{enumerate}
 \item Make the tuning fork vibrate by hitting it on the sole of your shoe or something else that has a rubbery texture.
 A hard surface is not ideal as you can more easily damage the tuning fork. Be careful to hold the tuning fork by its handle. Don't touch the fork because it will damp the vibrations. \label{step:res1}
@@ -1017,79 +1019,78 @@ Remember to hold the tuning fork at the same height of about 1 cm above the cyli
 to get the loudest sound.
 
 \item Use a ruler or tape measure to find the new distance ($L_{B}$) from the top of the cylinder to the new water level.
-\end{enumerate}}
-\Conclusions{
-The difference between the two resonance water levels (i.e. $L = L_{A}-L_{B}$) is half a wavelength, or the same as
+\end{enumerate}
+\textbf{Conclusions: } The difference between the two resonance water levels (i.e. $L = L_{A}-L_{B}$) is half a wavelength, or the same as
 the distance between a compression and rarefaction. Therefore, since you know the wavelength, and you know the frequency
-of the tuning fork, it is easy to calculate the speed of sound!}
+of the tuning fork, it is easy to calculate the speed of sound!
 }
-
+\end{g_experiment} 
 %\begin{figure}[h!]
 \begin{center}
 \scalebox{1} % Change this value to rescale the drawing.
 {
-\begin{pspicture}(0,-3.0290067)(8.33566,3.0290067)
+\begin{pspicture}(0,-1.6290067)(8.080624,1.6490068)
 \definecolor{color32}{rgb}{0.6,0.6,0.6}
 \definecolor{color59b}{rgb}{0.8,0.8,0.8}
-\psline[linewidth=0.04cm](2.816875,2.170993)(2.816875,-2.829007)
-\psline[linewidth=0.04cm](3.856875,2.170993)(3.856875,-2.829007)
-\psellipse[linewidth=0.04,dimen=outer](3.346875,-2.8690069)(0.55,0.08)
-\psellipse[linewidth=0.04,dimen=outer](3.336875,-2.8890069)(0.68,0.14)
-\psellipse[linewidth=0.04,dimen=outer](3.346875,2.170993)(0.55,0.08)
-\psframe[linewidth=0.04,linecolor=color59b,dimen=outer,fillstyle=solid,fillcolor=color59b](3.836875,-1.3890069)(2.836875,-2.8690069)
-\psellipse[linewidth=0.04,linecolor=color32,dimen=outer](3.346875,-1.4290068)(0.55,0.08)
-\psellipse[linewidth=0.04,linecolor=color59b,dimen=outer,fillstyle=solid,fillcolor=color59b](3.306875,-2.8690069)(0.49,0.04)
-\psline[linewidth=0.04cm](5.976875,2.170993)(5.976875,-2.829007)
-\psline[linewidth=0.04cm](7.016875,2.170993)(7.016875,-2.829007)
-\psellipse[linewidth=0.04,dimen=outer](6.506875,-2.8690069)(0.55,0.08)
-\psellipse[linewidth=0.04,dimen=outer](6.496875,-2.8890069)(0.68,0.14)
-\psellipse[linewidth=0.04,dimen=outer](6.506875,2.170993)(0.55,0.08)
-\psframe[linewidth=0.04,linecolor=color59b,dimen=outer,fillstyle=solid,fillcolor=color59b](6.996875,0.47099316)(5.996875,-2.849007)
-\psellipse[linewidth=0.04,linecolor=color32,dimen=outer](6.506875,0.41099316)(0.55,0.08)
-\psellipse[linewidth=0.04,linecolor=color59b,dimen=outer,fillstyle=solid,fillcolor=color59b](6.466875,-2.8690069)(0.49,0.04)
-\psline[linewidth=0.04cm](2.3253932,2.479561)(2.4308472,2.2419071)
-\psline[linewidth=0.04cm](2.4308472,2.2419071)(3.4180253,2.6799474)
-\psline[linewidth=0.04cm](3.4180253,2.6799474)(3.4504728,2.6068232)
-\psline[linewidth=0.04cm](3.4504728,2.6068232)(2.3536081,2.1201115)
-\psline[linewidth=0.04cm](2.3536081,2.1201115)(2.2968252,2.248079)
-\psline[linewidth=0.04cm](2.3172812,2.497842)(3.3044593,2.9358826)
-\psline[linewidth=0.04cm](3.3044593,2.9358826)(3.2720118,3.0090067)
-\psline[linewidth=0.04cm](3.2720118,3.0090067)(2.1751473,2.5222952)
-\psline[linewidth=0.04cm](2.2400422,2.3760467)(2.1832592,2.5040143)
-\psline[linewidth=0.04cm](2.2502115,2.4024396)(1.7017791,2.1590838)
-\psline[linewidth=0.04cm](1.7017791,2.1590838)(1.766674,2.0128353)
-\psline[linewidth=0.04cm](1.766674,2.0128353)(2.2968252,2.248079)
-\psline[linewidth=0.04cm](7.609739,2.166881)(7.740115,2.39183)
-\psline[linewidth=0.04cm](7.740115,2.39183)(6.805712,2.9333932)
-\psline[linewidth=0.04cm](6.805712,2.9333932)(6.845828,3.0026083)
-\psline[linewidth=0.04cm](6.845828,3.0026083)(7.8840537,2.4008713)
-\psline[linewidth=0.04cm](7.8840537,2.4008713)(7.813851,2.279745)
-\psline[linewidth=0.04cm](7.59971,2.1495774)(6.665307,2.6911407)
-\psline[linewidth=0.04cm](6.665307,2.6911407)(6.625191,2.6219256)
-\psline[linewidth=0.04cm](6.625191,2.6219256)(7.663417,2.0201886)
-\psline[linewidth=0.04cm](7.7436485,2.1586187)(7.6734457,2.0374923)
-\psline[linewidth=0.04cm](7.7163157,2.1513438)(8.235429,1.8504754)
-\psline[linewidth=0.04cm](8.235429,1.8504754)(8.31566,1.9889055)
-\psline[linewidth=0.04cm](8.31566,1.9889055)(7.813851,2.279745)
-\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{<->}(2.636875,2.190993)(2.636875,-1.4890069)
-\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{<->}(5.796875,2.190993)(5.796875,0.39099318)
+\psline[linewidth=0.04cm](2.8117187,1.0490068)(2.8117187,-1.4290069)
+\psline[linewidth=0.04cm](3.852,1.0490068)(3.851719,-1.4290069)
+\psellipse[linewidth=0.04,dimen=outer](3.341719,-1.4690068)(0.55,0.08)
+\psellipse[linewidth=0.04,dimen=outer](3.3317187,-1.4890068)(0.68,0.14)
+\psellipse[linewidth=0.04,dimen=outer](3.3217187,1.0109931)(0.55,0.08)
+\psframe[linewidth=0.04,linecolor=color59b,dimen=outer,fillstyle=solid,fillcolor=color59b](3.8317187,0.0109932)(2.8317187,-1.4690068)
+\psellipse[linewidth=0.04,linecolor=color32,dimen=outer](3.341719,-0.0290067)(0.55,0.08)
+\psellipse[linewidth=0.04,linecolor=color59b,dimen=outer,fillstyle=solid,fillcolor=color59b](3.3017187,-1.4690068)(0.49,0.04)
+\psline[linewidth=0.04cm](5.971719,1.0490068)(5.971719,-1.4290069)
+\psline[linewidth=0.04cm](7.0117188,1.0490068)(7.0117188,-1.4290069)
+\psellipse[linewidth=0.04,dimen=outer](6.501719,-1.4690068)(0.55,0.08)
+\psellipse[linewidth=0.04,dimen=outer](6.491719,-1.4890068)(0.68,0.14)
+\psellipse[linewidth=0.04,dimen=outer](6.481719,1.0309931)(0.55,0.08)
+\psframe[linewidth=0.04,linecolor=color59b,dimen=outer,fillstyle=solid,fillcolor=color59b](6.991719,0.3290068)(5.991719,-1.4490069)
+\psellipse[linewidth=0.04,linecolor=color32,dimen=outer](6.481719,0.27099326)(0.55,0.08)
+\psellipse[linewidth=0.04,linecolor=color59b,dimen=outer,fillstyle=solid,fillcolor=color59b](6.461719,-1.4690068)(0.49,0.04)
+\psline[linewidth=0.04cm](2.3482733,1.2564095)(2.434228,1.0891607)
+\psline[linewidth=0.04cm](2.434228,1.0891607)(3.238869,1.3974314)
+\psline[linewidth=0.04cm](3.238869,1.3974314)(3.2653165,1.3459703)
+\psline[linewidth=0.04cm](3.2653165,1.3459703)(2.371271,1.003447)
+\psline[linewidth=0.04cm](2.371271,1.003447)(2.3249876,1.0935041)
+\psline[linewidth=0.04cm](2.3416612,1.2692747)(3.1463022,1.5775458)
+\psline[linewidth=0.04cm](3.1463022,1.5775458)(3.1198545,1.6290067)
+\psline[linewidth=0.04cm](3.1198545,1.6290067)(2.2258089,1.2864836)
+\psline[linewidth=0.04cm](2.2787042,1.1835613)(2.232421,1.2736185)
+\psline[linewidth=0.04cm](2.2869933,1.2021353)(1.8399702,1.0308738)
+\psline[linewidth=0.04cm](1.8399702,1.0308738)(1.8928655,0.9279514)
+\psline[linewidth=0.04cm](1.8928655,0.9279514)(2.3249876,1.0935041)
+\psline[linewidth=0.04cm](7.534216,1.0324104)(7.631438,1.1912714)
+\psline[linewidth=0.04cm](7.631438,1.1912714)(6.93465,1.5737281)
+\psline[linewidth=0.04cm](6.93465,1.5737281)(6.964565,1.6226084)
+\psline[linewidth=0.04cm](6.964565,1.6226084)(7.7387733,1.1976564)
+\psline[linewidth=0.04cm](7.7387733,1.1976564)(7.686423,1.112116)
+\psline[linewidth=0.04cm](7.526737,1.0201905)(6.8299494,1.4026473)
+\psline[linewidth=0.04cm](6.8299494,1.4026473)(6.800035,1.3537669)
+\psline[linewidth=0.04cm](6.800035,1.3537669)(7.574244,0.92881495)
+\psline[linewidth=0.04cm](7.634073,1.0265754)(7.5817223,0.941035)
+\psline[linewidth=0.04cm](7.6136904,1.0214379)(8.000795,0.808962)
+\psline[linewidth=0.04cm](8.000795,0.808962)(8.060624,0.90672255)
+\psline[linewidth=0.04cm](8.060624,0.90672255)(7.686423,1.112116)
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{<->}(2.6317189,1.0490068)(2.6317189,-0.0890068)
+\psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{<->}(5.84,1.0490068)(5.831719,0.3309933)
 \usefont{T1}{ptm}{m}{n}
-\rput(2.2482812,0.48099315){$L_{1}$}
+\rput(2.2045312,0.46099326){$L_{1}$}
 \usefont{T1}{ptm}{m}{n}
-\rput(5.4682813,1.4809932){$L_{2}$}
-\psline[linewidth=0.04cm](1.316875,2.3509932)(1.756875,2.3709931)
-\psline[linewidth=0.04cm](1.536875,-2.049007)(2.716875,-2.049007)
+\rput(5.4645314,0.7409933){$L_{2}$}
+\psline[linewidth=0.04cm](1.3717188,1.1109933)(1.8117188,1.1309932)
+\psline[linewidth=0.04cm](1.5317189,-0.6490069)(2.7117188,-0.6490069)
 \usefont{T1}{ptm}{m}{n}
-\rput(0.801875,2.5609932){tuning}
+\rput(0.9017188,1.3009933){tuning}
 \usefont{T1}{ptm}{m}{n}
-\rput(0.7710937,2.2809932){fork}
+\rput(0.86015624,1.0209934){fork}
 \usefont{T1}{ptm}{m}{n}
-\rput(0.7320312,-1.8590069){measuring}
+\rput(0.7320312,-0.4590068){measuring}
 \usefont{T1}{ptm}{m}{n}
-\rput(0.681875,-2.1590068){cylinder}
+\rput(0.6717188,-0.7590067){cylinder}
 \usefont{T1}{ptm}{m}{n}
-\rput(3.915,2.460993){1 cm}
-\end{pspicture}
+\rput(3.8079689,1.460993){1 cm}
+\end{pspicture} 
 }
 \end{center}
 %\end{figure}
@@ -1098,46 +1099,6 @@ of the tuning fork, it is easy to calculate the speed of sound!}
 \begin{IFact}{Soldiers march out of time on bridges to avoid stimulating the bridge to vibrate
 at its natural frequency.}
 \end{IFact}
-
-\begin{wex}{Resonance}
-{A 512 Hz tuning fork can produce a resonance in a cavity where the air column is 18,2 cm long. It can also produce
-a second resonance when the length of the air column is 50,1 cm. What is the speed of sound in the cavity?}
-{
-\westep{Identify what is given and what is asked:}
-\begin{eqnarray*}
-L_{1} &=& 18,2 \ \rm{cm} \\
-L_{2} &=& 50,3 \ \rm{cm} \\
-f &=& 512 \ \rm{Hz} \\
-v &=& ?
-\end{eqnarray*}
-Remember that:
-\begin{eqnarray*}
-v &=& f \times \lambda
-\end{eqnarray*}
-
-We have values for $f$ and so to calculate $v$, we need to first find $\lambda$.
-You know that the difference in the length of the air column between two resonances is half a wavelength.
-
-\westep{Calculate the difference in the length of the air column between the two resonances:}
-\begin{eqnarray*}
-L_{2} - L_{1} &=& 32,1 \ \rm{cm}
-\end{eqnarray*}
-Therefore 32,1 cm = $\frac{1}{2}\times \lambda$\\
-So,
-\begin{eqnarray*}
-\lambda &=& 2 \times 32,1 \ \rm{cm} \\
-&=& 64,2 \ \rm{cm} \\
-&=& 0,642 \ \rm{m}
-\end{eqnarray*}
-
-\westep{Now you can substitute into the equation for $v$ to find the speed of sound:}
-\begin{eqnarray*}
-v &=& f \times \lambda \\
-&=& 512 \times 0,642 \\
-&=& 328,7 \ \rm{m.s}^{-1}
-\end{eqnarray*}
-}
-\end{wex}
 
 From the investigation you will notice that the column of air will make a sound at a certain length.
 This is where resonance takes place.
@@ -1188,7 +1149,45 @@ This is where resonance takes place.
 }
 \end{center}
 
+\begin{wex}{Resonance}
+{A 512 Hz tuning fork can produce a resonance in a cavity where the air column is 18,2 cm long. It can also produce
+a second resonance when the length of the air column is 50,1 cm. What is the speed of sound in the cavity?}
+{
+\westep{Identify what is given and what is asked:}
+\begin{eqnarray*}
+L_{1} &=& 18,2 \ \rm{cm} \\
+L_{2} &=& 50,3 \ \rm{cm} \\
+f &=& 512 \ \rm{Hz} \\
+v &=& ?
+\end{eqnarray*}
+Remember that:
+\begin{eqnarray*}
+v &=& f \times \lambda
+\end{eqnarray*}
 
+We have values for $f$ and so to calculate $v$, we need to first find $\lambda$.
+You know that the difference in the length of the air column between two resonances is half a wavelength.
+
+\westep{Calculate the difference in the length of the air column between the two resonances:}
+\begin{eqnarray*}
+L_{2} - L_{1} &=& 32,1 \ \rm{cm}
+\end{eqnarray*}
+Therefore 32,1 cm = $\frac{1}{2}\times \lambda$\\
+So,
+\begin{eqnarray*}
+\lambda &=& 2 \times 32,1 \ \rm{cm} \\
+&=& 64,2 \ \rm{cm} \\
+&=& 0,642 \ \rm{m}
+\end{eqnarray*}
+
+\westep{Now you can substitute into the equation for $v$ to find the speed of sound:}
+\begin{eqnarray*}
+v &=& f \times \lambda \\
+&=& 512 \times 0,642 \\
+&=& 328,7 \ \rm{m.s}^{-1}
+\end{eqnarray*}
+}
+\end{wex}
 
 \section{Music and Sound Quality}
 In the sound chapter, we referred to the quality of sound as its
@@ -1201,6 +1200,7 @@ Let us see how overtones can change the shape of a wave:
 
 \begin{figure}[H]
 \begin{center}
+\scalebox{.8}{
 \begin{pspicture}(0,-10.4)(4,1.2)
 %\psgrid[gridcolor=gray]
 \rput(0,0){
@@ -1219,7 +1219,7 @@ mul sin}}
 \psplot[xunit=0.0056,plotstyle=curve]{0}{720}{x sin 0.5 x mul sin
 add 0.25 x mul sin add}
 \uput[r](4.5,0){resultant waveform}}
-\end{pspicture}
+\end{pspicture}}
 \end {center}
 \caption{The quality of a tone depends on its mixture of
 harmonics.}
