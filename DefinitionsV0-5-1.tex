@@ -329,6 +329,43 @@
 \end{pspicture}}
 }
 
+
+
+
+\newenvironment{g_experiment}[1]{
+\par
+\newlength{\myfloatsep}
+\setlength{\myfloatsep}{\floatsep}
+\setlength{\floatsep}{2mm}
+%\begin{quotation}
+\noindent
+\vspace{.5cm}
+\newlength{\oldparindent}
+\setlength{\oldparindent}{\parindent}
+\setlength{\parindent}{0pt}
+\ifdimless{\pagegoal-\pagetotal}{4cm}%4em play with this 
+{\clearpage\vspace*{-\topskip}}{} 
+\begin{mdframed}[backgroundcolor=siyavula-dark-gray, linecolor=siyavula-dark-gray, leftmargin=10pt]
+\vspace*{8pt}
+{\Large\textbf{\textit{General experiment:}} } {\Large\textit{#1}}
+\vspace*{0pt}
+\end{mdframed}
+\vspace*{2pt}
+\begin{mdframed}[linecolor=siyavula-gray,backgroundcolor=siyavula-gray, leftmargin=10pt, skipbelow=18pt]
+
+}%
+{%
+\end{mdframed}
+\setlength{\parindent}{\oldparindent}
+\setlength{\floatsep}{\myfloatsep}
+\par
+}
+
+
+
+
+
+
 \newenvironment{TempEnv}[3]%
 {% This is a picture at the beginning, a line or bar or something else
 \begin{center}

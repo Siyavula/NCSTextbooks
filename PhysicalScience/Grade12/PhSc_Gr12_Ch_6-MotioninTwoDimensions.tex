@@ -55,7 +55,6 @@ This means that if an object is moving upwards, its velocity decreases until it 
 
 \Tip{Projectiles have zero velocity at their greatest height.}
 
-\pagebreak[4]
 Consider an object thrown upwards from a vertical height $h_o$. We have seen that the object will travel upwards with decreasing velocity until it stops, at which point it starts falling. The time that it takes for the object to fall down to height $h_o$ is the same as the time taken for the object to reach its maximum height from height $h_o$.
 
 \begin{figure}[htbp]
@@ -118,7 +117,6 @@ Phet simulation on projectile motion: SIYAVULA-SIMULATION:http://cnx.org/content
 	\item Determine the maximum height reached above the thrower's hand.
 	\item Determine the time it takes the ball to reach its maximum height.
 	\end{enumerate}}
-\newpage
 {\westep{Identify what is required and what is given}
 We are required to determine the maximum height reached by the ball and how long it takes to reach this height. We are given the initial velocity $v_i$ = 10 \ms and the acceleration due to gravity g = 9,8 \mss.
 
@@ -376,8 +374,8 @@ For the first part of the motion we have:
 \end{minipage}
 
 Therefore we can use $v_f^2 = v_i^2 + 2g \Delta x$ to solve for the height and $v_f=v_i+gt$ to solve for the time.\\
-
-\begin{minipage}{0.49\textwidth}
+\hspace*{-2cm}
+\begin{minipage}{0.35\textwidth}
 \begin{eqnarray*}
 v_f^2 &=& v_i^2 + 2g \Delta x\\
 (0)^2 &=& (4,9)^2 + 2 \times (-9,8) \times \Delta x\\
@@ -385,7 +383,8 @@ v_f^2 &=& v_i^2 + 2g \Delta x\\
 \Delta x &=& 1,225~m\\
 \end{eqnarray*}
 \end{minipage}
-\begin{minipage}{0.5\textwidth}
+\hspace*{2cm}
+\begin{minipage}{0.35\textwidth}
 \begin{eqnarray*}
 v_f &=& v_i + gt\\
 0 &=& 4,9 + (-9,8) \times t\\
@@ -393,7 +392,6 @@ v_f &=& v_i + gt\\
 t &=& 0,5~s\\
 \end{eqnarray*}
 \end{minipage}
-
 \begin{center}
 \begin{pspicture}(0,0)(4.4,5)
 %\psgrid[gridcolor=lightgray]
@@ -1194,14 +1192,16 @@ If we find the final $x$ and $y$ components, then we can find the final $total$ 
 \begin{eqnarray*}
 p_{ix1} + p_{ix2} &=& p_{fx1} + p_{fx2} \\
 -80 \times 5\cos{75^{\circ}} + 80 \times 6 \times \cos{60^{\circ}} &=& 80 \times v_{fx1} + 80\times(-0.3) \\
-v_{fx1} &=& \frac{-80 \times 5\cos{75^{\circ}} + 80 \times 6 \times \cos{60^{\circ}} - 80\times(-0.3) }{80} \\
+v_{fx1} &=& \frac{-80 \times 5\cos{75^{\circ}} + 80 \times 6 \times \cos{60^{\circ}}}{80} \\ 
+&\phantom{=}&-\dfrac{80\times(-0.3) }{80} \\
 v_{fx1} &=& 2.0~ \rm{ms^{-1}}
 \end{eqnarray*}
 
 \begin{eqnarray*}
 p_{iy1} + p_{iy2} &=& p_{fy1} + p_{fy2} \\
 80\times 5\times \sin{75^{\circ}} + 80\times 6 \times \sin{60^{\circ}} &=& 80\times v_{fy1} + 80\times 6 \\
-v_{fy1} &=& \frac{80\times 5\sin{75^{\circ}} + 80\times 6 \times \sin{60^{\circ}}-80\times 6}{80} \\
+v_{fy1} &=& \frac{80\times 5\sin{75^{\circ}} + 80\times 6 \times \sin{60^{\circ}}}{80} \\
+& & -\dfrac{80 \times 6 }{80}\\
 v_{fy1} &=& 4.0~ \rm{ms^{-1}}
 \end{eqnarray*}
 
@@ -1441,6 +1441,7 @@ Choose to the right as positive.
 
 \westep{Draw a rough sketch of the situation}
 \begin{center}
+\scalebox{0.8}{
 \begin{pspicture}(0,-2.2639062)(12.742812,2.2639062)
 \pscircle[linewidth=0.04,dimen=outer](1.1809375,-0.02609375){0.85}
 \pscircle[linewidth=0.04,dimen=outer](4.0209374,-0.02609375){0.36}
@@ -1473,7 +1474,7 @@ Choose to the right as positive.
 \rput(8.732344,-1.2360938){$m_2=100g$}
 \usefont{T1}{ptm}{m}{n}
 \rput(11.842343,-1.2560937){$m_1=50g$}
-\end{pspicture}
+\end{pspicture}}
 \end{center}
 
 
@@ -1748,7 +1749,7 @@ v_f &=& 1\ \ems
 Therefore, the final velocity of the resulting mass of cars is 1 \ms to the left.
 }
 \end{wex}
-
+\clearpage
 \begin{wex}{Colliding balls of clay}{
 Two balls of clay, $200g$ each, are thrown towards each other according to the following diagram. When they collide, they stick together and move off together. All motion is taking place in the horizontal plane. Determine the velocity of the clay after the collision.
 \begin{center}
@@ -2177,7 +2178,6 @@ The man will take 15/2 = 7,5 s
 \end{tabular}
 % Automatically inserted shortcodes - number inserted 2
 }
-Presentation in summary: SIYAVULA-PRESENTATION:http://cnx.org/content/m39542/latest/#slidesharefigure
 \summary{aaa}
 
 \begin{enumerate}
@@ -2341,6 +2341,7 @@ III\,\,\,the resultant velocity of the bird relative to the ground\\
 
 Which diagram correctly shows these three velocities?	
 \begin{center}
+\scalebox{0.8}{
 \begin{pspicture}(0,-2.1125)(16.035,2.1125)
 \psline[linewidth=0.03cm,arrowsize=0.05291667cm 3.0,arrowlength=2.0,arrowinset=0.4]{<->}(0.58,1.5740625)(0.58,-1.3459375)
 \psline[linewidth=0.03cm,arrowsize=0.05291667cm 3.0,arrowlength=2.0,arrowinset=0.4]{<->}(0.0,1.0940624)(3.4,1.0940624)
@@ -2414,7 +2415,7 @@ Which diagram correctly shows these three velocities?
 \rput(5.651094,-1.9109375){\large B}
 \usefont{T1}{ptm}{m}{n}
 \rput(9.811093,-1.9309375){\large C}
-\end{pspicture} 
+\end{pspicture}} 
 \end{center}
 }
 
