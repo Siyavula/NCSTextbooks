@@ -10,6 +10,8 @@ inverse relations of functions, in particular the  inverses of:
 \nequ{y = ax^2}
 \nequ{y = ax; a>0}.
 
+\chapterstartvideo{aaa}
+
 \section{Definition of a Function}
 A \textit{function} is a relation for which there is only one value of $y$ corresponding to any value of $x$. We sometimes write $y=f(x)$, which is notation meaning '$y$ is a function of $x$'. This definition makes complete sense when compared to our real world examples --- each person has only one height, so height is a function of people; on each day, in a specific town, there is only one average temperature.
 
@@ -230,7 +232,7 @@ x^2&=&\frac{y}{a}\\
 x&=&\pm\sqrt{\frac{y}{a}}
 \end{eqnarray}
 
-\begin{figure}[htb]
+\begin{figure}[H]
 \begin{center}
 \pspicture(-4,-4)(4,4)
 \psaxes{<->}(0,0)(-4,-4)(4,4)
@@ -262,7 +264,7 @@ Khan Academy video on inverse functions, example 3: http://cnx.org/content/m3928
 \begin{enumerate}
 \item{The graph of $f^{-1}$ is shown. Find the equation of $f$, given that the graph of $f$ is a parabola. (Do not simplify your answer) 
 \begin{center}
-\pspicture(-4,-1)(4,4)
+\begin{pspicture}(-4,-1)(4,4)
 %\psgrid
 \psaxes[Dx=10,Dy=20]{<->}(0,0)(-4,-1)(4,4)
 \psplot[arrows=<-]{-4}{3}{3 x sub 0.5 mul 0.5 exp 1 add}
@@ -271,7 +273,7 @@ Khan Academy video on inverse functions, example 3: http://cnx.org/content/m3928
 \uput[r](3,1){$(3;1)$}
 \uput[d](1,0){$(1;0)$}
 \psdots(3,1)(1,0)
-\endpspicture
+\end{pspicture}
 \end{center}}
 \item{$f(x) = 2x^2$.
 \begin{enumerate}
@@ -291,7 +293,7 @@ Khan Academy video on inverse functions, example 3: http://cnx.org/content/m3928
 \end{enumerate}
 
 % Automatically inserted shortcodes - number to insert 4
-\par \practiceinfo
+\practiceinfo
 \par \begin{tabular}[h]{cccccc}
 % Question 1
 (1.)	01f4	&
@@ -301,6 +303,9 @@ Khan Academy video on inverse functions, example 3: http://cnx.org/content/m3928
 (3.)	01f6	&
 % Question 4
 (4.)	01f7	&
+% Question 5
+(5.)	aaa	&
+
 \end{tabular}}
 % Automatically inserted shortcodes - number inserted 4
 \subsection{Inverse Function of $y=a^x$}
@@ -313,7 +318,7 @@ y&=&a^x\\
 \end{eqnarray}
 The inverse of $y = 10^x$ is $x = \log(y)$ Therefore, if $f(x) = 10^x$, then $f(x)^{-1} = \log(x)$.
 
-\begin{figure}[htb]
+\begin{figure}[H]
 \begin{center}
 \pspicture(-4,-4)(4,4)
 \psaxes{<->}(0,0)(-4,-4)(4,4)
@@ -357,6 +362,8 @@ The domain of the function is equal to the range of the inverse. The range of th
 (2.)	01f9	&
 % Question 3
 (3.)	01fa	&
+% Question 4
+(4.)	aaa	&
 \end{tabular}}
 % Automatically inserted shortcodes - number inserted 3
 \begin{eocexercises}{}
