@@ -2,7 +2,7 @@
 \label{p:wsl:go11}
 
 \section{Introduction}
-In Grade 10, we studied how light is reflected and refracted. This chapter builds on what you have learnt in Grade 10. You will learn about lenses, how the human eye works as well as how telescopes and microscopes work.
+In Grade 10, we studied how light is reflected and refracted. This chapter builds on what you have learnt in Grade 10. You will learn about lenses, how the human eye works as well as how telescopes and microscopes work.\\
 \chapterstartvid{VPkmu}
 \section{Lenses}
 %\begin{syllabus}
@@ -92,14 +92,14 @@ Examples of converging and diverging lenses are shown in Figure~\ref{fig:lenses}
 
 \begin{figure}[H]
 \centering
-\scalebox{0.8}{
+\scalebox{0.6}{
 \begin{pspicture}(-2,-2)(6,2)
 %\psgrid[gridcolor=lightgray]
 \psset{fillcolor=lightgray,fillstyle=solid}
 
 \rput(0,0){
 \rput(1.5,0){\lens[lensGlass=true,drawing=false]}
-\uput[u](0.5,-2.2){converging lenses}
+\uput[u](0.5,-2.2){\LARGE{converging lenses}}
 \pscustom{
 \psarc[linewidth=2pt](0,0){1.5}{70}{290}
 \psarcn[linecolor=red](1,0){1.5}{240}{120}
@@ -107,7 +107,7 @@ Examples of converging and diverging lenses are shown in Figure~\ref{fig:lenses}
 
 \rput(5,0){
 \rput(0,0){\lens[lensType=DVG,lensGlass=true, drawing=false]}
-\uput[u](-0.5,-2.2){diverging lenses}
+\uput[u](-0.5,-2.2){\LARGE{diverging lenses}}
 \pscustom[unit=0.25,linetype=1]{
 \psarc[linewidth=2pt](0,0){8.65}{132}{228}
 \psarcn[linecolor=red](-1.7,0){6.5}{260}{100}
@@ -118,7 +118,7 @@ Examples of converging and diverging lenses are shown in Figure~\ref{fig:lenses}
 \end{figure}
 
 Before we study lenses in detail, there are a few important terms that must be defined. Figure~\ref{p:wsl:go11:l:properties} shows important lens properties:
-\begin{itemize}
+\begin{itemize}[noitemsep]
 \item{The \textbf{principal axis} is the line which runs horizontally straight through the \textit{optical centre} of the lens. It is also sometimes called the \textit{optic axis}.}
 \item{The \textbf{optical centre} (O) of a convex lens is usually the centre point of the lens. The direction of all light rays which pass through the optical centre, remains unchanged.}
 \item{The \textbf{focus} or \textbf{focal point} of the lens is
@@ -320,7 +320,7 @@ From your knowledge of the focal length of your lens, note where $f$ and $2f$ ar
 
 \Results{
 
-\begin{tabular}{*5{|p{2.4cm}}|}
+\begin{tabular}{|p{2.4cm}|p{2.4cm}|p{2cm}|p{1.8cm}|p{1.5cm}|}
 \hline
 Relative position of object & Relative position of image & Image upright or inverted & Relative size of image & Nature of \linebreak image \\
 \hline
@@ -364,11 +364,11 @@ Relative position of object & Relative position of image & Image upright or inve
 }
 
 \Results{
-{\footnotesize $f$ = focal length of lens}\\
-{\footnotesize $d_0$ = object distance}\\
-{\footnotesize $d_i$ = image distance}\\
+{ $f$ = focal length of lens}\\
+{ $d_0$ = object distance}\\
+{ $d_i$ = image distance}\\
 
-\begin{tabular}{*5{|p{2.4cm}}|}
+\begin{tabular}{|p{2.4cm}|p{2.4cm}|p{1cm}|p{1cm}|p{2cm}|}
 \hline
 {Object distance} &
 {Image distance} &
@@ -399,7 +399,7 @@ Relative position of object & Relative position of image & Image upright or inve
 \mbox{Focal length of lens} &=& \mbox{\underline{\hspace{3cm}} (b)}
 \end{eqnarray*}
 
-\textbf{QUESTIONS:}
+\textbf{Questions:}
 
 \begin{enumerate}
 \raggedright
@@ -422,10 +422,10 @@ Ray diagrams are normally drawn using three rays. The three rays are labelled $R
 \end{enumerate}
 
 \Tip{In ray diagrams, lenses are drawn like this:\\
-\begin{minipage}{0.2\textwidth}
+\begin{minipage}{0.3\textwidth}
 Convex lens:
 \end{minipage}
-\begin{minipage}{0.2\textwidth}
+\begin{minipage}{0.1\textwidth}
 \scalebox{1}
 {
 \begin{pspicture}(0,-1.02)(0.02,1.02)
@@ -433,10 +433,10 @@ Convex lens:
 \end{pspicture}
 }
 \end{minipage}
-\begin{minipage}{0.2\textwidth}
+\begin{minipage}{0.35\textwidth}
 Concave lens:
 \end{minipage}
-\begin{minipage}{0.2\textwidth}
+\begin{minipage}{0.1\textwidth}
 \scalebox{1}
 {
 \begin{pspicture}(0,-1.02)(0.02,1.02)
@@ -865,6 +865,7 @@ Since the image is on the opposite side of the lens to the object, the image is 
 {\westep{Draw the picture to set up the problem}
 Draw the lens, principal axis, focal points and the object.
 \begin{center}
+\scalebox{.8}{
 \begin{pspicture}(-8,-3)(3.2,4.2)
 %\psgrid[gridcolor=gray]
 \rput(0,0){
@@ -878,7 +879,7 @@ Draw the lens, principal axis, focal points and the object.
 \uput[d](F){$F_{1}$}
 \uput[u](F'){$F_{2}$}
 \uput[d](O){O}
-\end{pspicture}
+\end{pspicture}}
 \end{center}
 
 \westep{Draw the three rays to locate image}
@@ -989,7 +990,7 @@ Since the image is on the same side of the lens as the object, the image is virt
 \item At $f$
 \item Between $f$ and 0
 \end{enumerate}
-Is a virtual image always inverted?
+\item Is a virtual image always inverted?
 \item An object stands 50~mm from a lens (focal length 40~mm). Draw an accurate sketch to determine the position of the image. Is it enlarged or shrunk; upright or inverted?
 \item Draw a scale diagram (scale: 1~cm~=~50~mm) to find the position of the image formed by a convex lens with a focal length of 200~mm. The distance of the object is 100~mm and the size of the object is 50~mm. Determine whether the image is enlarged or shrunk. What is the height of the image? What is the magnification?
 \item An object, 20~mm high, is 80~mm from a convex lens with focal length 50~mm. Draw an accurate scale diagram and find the position and size of the image, and hence the ratio between the image size and object size.
@@ -999,7 +1000,7 @@ Is a virtual image always inverted?
 \practiceinfo
 
 \begin{tabular}[h]{cccccc}
-(1.) 00rm & (2.) 00rn & (3.) 00rp & (4.) 00rq & (5.) 00rr & (6.) 00rs & (7.) 00rt & 
+(1.) 00rm & (2.) 00rn & (3.) 00rp & (4.) 00rq & (5.) 00rr & (6.) 00rs & (7.) 00rt & (8.) aaa &
  \end{tabular}
 }
 
@@ -1070,7 +1071,6 @@ Unlike converging lenses, the type of images created by a concave lens is not de
 
 We examine the properties of the image by drawing ray diagrams. We can find the image by tracing the path of three light rays through the lens. Any two of these rays will show us the location of the image. You can use the third ray to check the location, but it is not necessary to show it on your diagram.\\
 
-\newpage
 \textbf{Drawing Ray Diagrams for Diverging Lenses}\\
 Draw the three rays starting at the top of the object.
 \begin{enumerate}
@@ -1307,7 +1307,7 @@ Diverging & any position & $<f$ & upright & smaller& virtual\\
 (1.) 00ru & (2.) 00rv & (3.) 00rw & 
  \end{tabular}
 }
-
+\pagebreak
 \section{The Human Eye}
 %\begin{syllabus}
 %\item The learner must be able to describe how the human eye has a converging lens to create real, inverted, reduced images on the retina at the back of the eye. Focusing is achieved by muscles, which change the focal length of the lens.
@@ -1315,9 +1315,8 @@ Diverging & any position & $<f$ & upright & smaller& virtual\\
 %\item The learner must be able to use simple diagrams to show how converging lenses can correct long-sightedness and diverging lenses can correct short-sightedness.
 %\item The learner must be able to describe how astigmatism is corrected by a special lens, which has different focal lengths in the vertical and horizontal planes.
 %\end{syllabus}
-
-\Activity{Investigation}{Model of the Human Eye}{
-This demonstration shows that:
+\nopagebreak \vspace{-.5cm}
+\Activity{Investigation}{Model of the Human Eye}{This demonstration shows that:
 \begin{enumerate}
 \item The eyeball has a spherical shape.
 \item The pupil is a small hole in the front and middle of the eye that lets light into the eye.
@@ -1325,7 +1324,6 @@ This demonstration shows that:
 \item The images that we see are formed on the retina.
 \item The images on the retina are upside down. The brain inverts the images so that what we see is the right way up.
 \end{enumerate}
-
 You will need:
 \begin{enumerate}
 \item a round, clear glass bowl
@@ -1334,7 +1332,6 @@ You will need:
 \item a sheet of cardboard covered with white paper
 \item a small desk lamp with an incandescent light-bulb or a candle and a match
 \end{enumerate}
-
 You will have to:
 \begin{enumerate}
 \item Fill the glass bowl with water.
@@ -1345,16 +1342,13 @@ You will have to:
 \item Make the room as dark as possible.
 \item Move the white cardboard until an image of the light bulb or candle appears on it.
 \end{enumerate}
-
 You now have a working model of the human eye.
-
 \begin{enumerate}
 \item The hole in the black cardboard represents the pupil. The pupil is a small hole in the front of the eyeball that lets light into the eye.
 \item The round bowl of water represents the eyeball.
 \item The white cardboard represents the retina. Images are projected onto the retina and are then sent to the brain via the optic nerve.
 \end{enumerate}
-
-\textbf{Tasks}\\
+\textbf{Tasks}
 \begin{enumerate}
 \item Is the image on the retina right-side up or upside down? Explain why.
 \item Draw a simple labelled diagram of the model of the eye showing which part of the eye each part of the model represents.
@@ -1669,7 +1663,7 @@ Light is collected by the primary mirror, which is large and concave. Parallel r
 SALT was completed in 2005 and is a truly international initiative, because the money to build it came from South Africa, the United States, Germany, Poland, the United Kingdom and New Zealand.
 
 \raggedright
-\Activity{SALT}{Investigate what the South African Astronomical Observatory (SAAO) does. SALT is part of SAAO. Write your investigation as a short 5-page report. Include images of the instrumentation used.}
+\Activity{stuff}{SALT}{Investigate what the South African Astronomical Observatory (SAAO) does. SALT is part of SAAO. Write your investigation as a short 5-page report. Include images of the instrumentation used.}
 
 %\nts{Get a SALT Astronomer to write an essay describing the telescopes at Sutherland and SALT.}
 
@@ -1687,12 +1681,12 @@ If you want to look at something very small, two lenses may work better than one
 A \textbf{compound microscope} uses two lenses to achieve high magnification (Figure \ref{fig:micro}). Both lenses are convex, or converging. Light from the object first passes through the \textbf{objective lens}. The lens that you look through is called the \textbf{eyepiece}. The focus of the system can be adjusted by changing the length of the tube between the lenses.
 
 \begin{figure}[H]
-\centering
+\begin{center}
 \begin{pspicture}(-7,-3)(6,2)
 %\psgrid[gridcolor=gray]
 % Specifications for primary and eyepiece lenses.
 \newpsstyle{lens1}{focus=1,OA=-1.5,AB=0.5,XO=-4,lensGlass=true,lensWidth=0.4,drawing=false}
-\newpsstyle{lens2}{XO=2.5,focus=6,lensGlass=true,lensWidth =0.4,drawing=false,lensTwo=true}
+\newpsstyle{lens2}{XO=2.5,focus=6,lensGlass=true,lensWidth=0.4,drawing=false,lensTwo=true}
 
 \PrincipalAxis(-7,0)(6,0)
 % Draw stuff.
@@ -1704,12 +1698,12 @@ A \textbf{compound microscope} uses two lenses to achieve high magnification (Fi
 \rput(0,0){\lens[style=lens2]}
 
 % Find points where rays end. "PEnd", etc don't seem to work.
-\Parallel[length=5, linestyle=none](0,0)(0,1)(6,0){xTR}
+\Parallel[length=5,linestyle=none](0,0)(0,1)(6,0){xTR}
 \ABinterCD(B)(O)(6,0)(xTR){eye}
 \ABinterCD(B')(I)(6,0)(xTR){eye2}
 
 % Illuminate it!! and add the eye
-\pspolygon[fillstyle=solid, fillcolor=lightgray, linestyle=none](B)(I)(eye2)(eye)
+\pspolygon[fillstyle=solid,fillcolor=lightgray,linestyle=none](B)(I)(eye2)(eye)
 \nodeBetween(eye)(eye2){eye3}
 \rput{15}(eye3){\psset{unit=0.5}\eye}
 \psline[linestyle=dashed](B')(eye)
@@ -1719,8 +1713,8 @@ A \textbf{compound microscope} uses two lenses to achieve high magnification (Fi
 \oi{->}(A1)(B1)
 
 % Redraw lenses
-\rput(0,0){ \lens [ style=lens1 ] }
-\rput(0,0){ \lens [ style=lens2 ] }
+\rput(0,0){\lens[style=lens1]}
+\rput(0,0){\lens[style=lens2]}
 
 % Label stuff
 \uput[u](B1){Object}
@@ -1729,7 +1723,9 @@ A \textbf{compound microscope} uses two lenses to achieve high magnification (Fi
 \uput[d](-4,2){Objective Lens}
 \uput[d](2.5,2){Eyepiece}
 \end{pspicture}
-\caption{Compound microscope} \label{fig:micro}
+\caption{Compound microscope} 
+\label{fig:micro}
+\end{center}
 \end{figure}
 
 \textbf{Drawing a Ray Diagram for a Two-Lens System}\\
@@ -1760,24 +1756,19 @@ To prepare to trace the light rays, make a diagram. In the diagram here, we plac
 %\newpsobject{oi}{psline}{arrowsize=4pt, arrowlength=1, arrowinset=0, linewidth=2pt}
 
 % First lens specifications
-\newpsstyle{lens1}{ focus =1.2,OA=-1.6,AB =.4, XO=0,lensGlass =true, lensWidth =0.4,
-drawing=false,
-lensHeight=3}
+\newpsstyle{lens1}{focus=1.2,OA=-1.6,AB=.4,XO=0,lensGlass=true,lensWidth=0.4,drawing=false,lensHeight=3}
 
 % Second lens specifications
-\newpsstyle{lens2}{XO=6.0, focus =2.0,
-lensGlass =true , lensWidth =0.4,
-drawing=false, lensTwo=true,
-lensHeight=3}
+\newpsstyle{lens2}{XO=6.0,focus=2.0,lensGlass=true,lensWidth=0.4,drawing=false,lensTwo=true,lensHeight=3}
 
 % Draw stuff
 
-\rput(0,0){ \lens[style=lens1] }
+\rput(0,0){\lens[style=lens1]}
 
 \psline[linewidth=1pt,linecolor=lightgray ](-3,0)(8,0)% Principal axis
 
 \Transform
-\rput(0,0){ \lens[ style=lens2] }
+\rput(0,0){\lens[style=lens2]}
 
 \oi{->}(A1)(B1)
 
@@ -1789,21 +1780,20 @@ lensHeight=3}
 \uput{0.2}[d](F'1){$f_1$}
 \uput{0.2}[d](F){$f_2$}
 \uput{0.2}[d](F'){$f_2$}
-\psdots[ dotscale=1 ](F)(F')(F1)(F'1)(O)(O1)
+\psdots[dotscale=1](F)(F')(F1)(F'1)(O)(O1)
 
-\ncline[ offset=2.6 ]{|-|}{O1}{O} % Lens separation
+\ncline[offset=2.6]{|-|}{O1}{O} % Lens separation
 \lput*{:U}{30 cm}
-\ncline[ offset=2.0 ]{|-|}{A1}{O1} % first object distance
+\ncline[offset=2.0]{|-|}{A1}{O1} % first object distance
 \bput*{:U}{$8 cm$}
-\ncline[ offset=0.4 ]{|-|}{F1}{O1} % foci for first lens
+\ncline[offset=0.4]{|-|}{F1}{O1} % foci for first lens
 \aput*{:U}{\scalebox{0.8}{6cm}}
-\ncline[ offset=0.4 ]{|-|}{O1}{F'1}
+\ncline[offset=0.4]{|-|}{O1}{F'1}
 \aput*{:U}{\scalebox{0.8}{6cm}}
-\ncline[ offset=0.4 ]{|-|}{F}{O} % foci for second lens
+\ncline[offset=0.4]{|-|}{F}{O} % foci for second lens
 \aput*{:U}{\scalebox{0.8}{10 cm}}
-\ncline[ offset=0.4 ]{|-|}{O}{F'}
+\ncline[offset=0.4]{|-|}{O}{F'}
 \aput*{:U}{\scalebox{0.8}{10 cm}}
-
 \end{pspicture}
 \end{figure}
 
@@ -1992,7 +1982,7 @@ The image we just found becomes the object for the second lens.
 \practiceinfo
 
 \begin{tabular}[h]{cccccc}
-(1.) 00rx & (2.) 00ry & (3.) 00rz & (4.) 00s0 & (5.) 00s1 & (6.) 00s2 & (7.) 00s3 & (8.) 00s4 & (9.) 00s5 & (10.) 00s6 & (11.) 00s7 & (12.) 00s8 & (13.) 00s9 & (14.) 00sa & (15.) 00sb & 
+(1. a. - j.) 00rx & (1. k. - q.) 00ry & (2.) 00rz & (3.) 00s0 & (4.) 00s1 & (5.) 00s2 & (6.) 00s3 & (7.) 00s4 & (8.) 00s5 & (9.) 00s6 & (10.) 00s7 & (11.) 00s8 & (12.) 00s9 & (13.) 00sa & (14.) 00sb & 
  \end{tabular}
 \end{eocexercises}
 

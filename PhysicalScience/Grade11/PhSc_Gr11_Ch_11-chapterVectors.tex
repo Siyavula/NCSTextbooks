@@ -5,7 +5,7 @@
 This chapter focuses on vectors. We will learn what is a vector and how it differs from everyday numbers. We will also learn how to add, subtract and multiply them and where they appear in Physics.
 
 Are vectors Physics? No, vectors themselves are not Physics. Physics is just a description of the world around us. To describe something we need to use a language. The most common language used to describe Physics is Mathematics. Vectors form a very important part of the mathematical description of Physics, so much so that it is
-absolutely essential to master the use of vectors.
+absolutely essential to master the use of vectors.\\
 \chapterstartvid{VPkel}
 \section{Scalars and Vectors}
 In Mathematics, you learned that a number is something that represents a quantity. For example if you have 5 books, 6 apples and 1 bicycle, the 5, 6, and 1 represent how many of each item you have.
@@ -84,7 +84,7 @@ The direction of this vector can also be described as: W 40$^\circ$ N (West 40$^
 \end{minipage}
 \begin{minipage}{0.5\textwidth}
 \begin{center}
-\begin{pspicture}(-1.2,-1.4)(1.2,1.4)
+\begin{pspicture}(-1.2,-1.8)(1.2,2.2)
 \pscompass
 \end{pspicture}
 \end{center}
@@ -180,15 +180,15 @@ long. A reference direction may be a line representing a horizontal surface or t
 \scalebox{0.7}{\pscompass}
 \end{center}
 
-\begin{minipage}{\textwidth}
+% \begin{minipage}{\textwidth}
 \textbf{Method: Drawing Vectors}{
-\begin{enumerate}
+\begin{enumerate}[noitemsep]
 \item{Decide upon a scale and write it down.}
 \item{Determine the length of the arrow representing the vector, by using the scale.}
 \item{Draw the vector as an arrow. Make sure that you fill in the arrow head.}
 \item{Fill in the magnitude of the vector.}
 \end{enumerate}}
-\end{minipage}
+% \end{minipage}
 
 \begin{wex}{Drawing vectors}{Represent the following vector quantities:\\
 \begin{enumerate}
@@ -211,27 +211,29 @@ long. A reference direction may be a line representing a horizontal surface or t
 \begin{enumerate}
 \item{
 Scale used: 1 cm = 2 \ms\\
-Direction = North\\
+Direction = North
 \begin{center}
-\begin{pspicture}(-0.7,0)(0.2,3)
+\scalebox{.9}{
+\begin{pspicture}(-0.7,0)(0.2,3.2)
 %\psgrid[gridcolor=lightgray]
 \psline[arrowscale=2]{->}(0,0)(0,3)
 \rput(-0.7,1.5){6 \ms}
 %\pcline[offset=8pt]{|-|}(0,0)(0,3)
 %\lput*{:U}{3 cm}
-\end{pspicture}
+\end{pspicture}}
 \end{center}}
 \item{
 Scale used: 1 cm = 4 m\\
-Direction = East\\
+Direction = East
 \begin{center}
-\begin{pspicture}(0,0)(4,0.6)
+\scalebox{.9}{
+\begin{pspicture}(0,0)(4,0.4)
 %\psgrid[gridcolor=lightgray]
 \psline[arrowscale=2]{->}(0,0)(4,0)
 \rput(2,0.4){16 m}
 %\pcline[offset=8pt]{|-|}(0,0)(4,0)
 %\lput*{:U}{4 cm}
-\end{pspicture}
+\end{pspicture}}
 \end{center}}
 \end{enumerate}}
 \end{wex}
@@ -248,7 +250,7 @@ Draw each of the following vectors to scale. Indicate the scale that you have us
 \practiceinfo
 
 \begin{tabular}[h]{cccccc}
-(1.) 00n1 & (2.) 00n2 & (3.) 00n3 & (4.) 00n4 & (5.) 00n5 & 
+(1.) 00n1 &  
  \end{tabular}
 }
 
@@ -539,7 +541,7 @@ another. However the same head-to-tail technique of vector addition
 can be applied to vectors in any direction.
 
 \begin{center}
-\begin{tabular}{ccc}
+\begin{tabular}{lll}
 \begin{pspicture}(-0.5,-0.5)(4.0,0.5)%%\psgrid
 %\psgrid[gridcolor=lightgray]
 \psline{->}(0.7,0)
@@ -1277,7 +1279,7 @@ $\Delta\vec{v} =  5\ems$ away from the wall.}
 \practiceinfo
 
 \begin{tabular}[h]{cccccc}
-(1.) 00n6 & (2.) 00n7 & 
+(1.) 00n6 & (2.) 00n7 & (3.) aaa & 
  \end{tabular}
 }
 
@@ -1509,7 +1511,7 @@ x_E &=& (250)(\cos{30^\circ})\\
 Remember $x_N$ and $x_E$ are the magnitudes of the components -- they
 are in the directions north and east respectively.}
 \end{wex}
-
+\pagebreak
 \Extension{Block on an incline}{
 As a further example of components let us consider a block of mass $m$
 placed on a frictionless surface inclined at some angle $\theta$ to
@@ -1567,7 +1569,7 @@ parallel component, however, $F_{g \parallel}$ is unbalanced and causes
 the block to slide down the slope.
 }
 
-\Extension{Worked example}{
+% \Extension{Worked example}{
 \begin{wex}{Block on an incline plane}{Determine the force needed to keep a 10~kg block from sliding down a frictionless slope. The slope makes an angle of 30$^\circ$ with the horizontal.\\}{
 \westep{Draw a diagram of the situation}
 
@@ -1606,7 +1608,7 @@ F_{g \parallel} &=& m g \sin{\theta}\\
 \westep{Write final answer}
 The force is 49~N up the slope.}
 \end{wex}
-}
+% }
 
 \subsection{Vector addition using components}
 Components can also be used to find the resultant of vectors. This technique can be applied to both graphical and algebraic methods of finding the resultant. The method is simple: make a rough sketch of the problem, find the horizontal and vertical components of each vector, find the sum of all horizontal components and the sum of all the vertical components and then use them to find the resultant.
@@ -1740,6 +1742,7 @@ A_x &=& (5,385) (\cos{21,8^\circ})\\
 \end{eqnarray*}
 
 \begin{center}
+\scalebox{.8}{
 \begin{pspicture}(-0.2,-0.6)(5.6,2.4)%%\psgrid
 %\psgrid[gridcolor=lightgray]
 \psline[arrowscale=2]{->}(0,0)(5,2)
@@ -1754,7 +1757,7 @@ A_x &=& (5,385) (\cos{21,8^\circ})\\
 %Right angle in corner! (5,0)
 \psline[linestyle=dashed,arrowscale=2](4.7,0)(4.7,0.3)
 \psline[linestyle=dashed,arrowscale=2](4.7,0.3)(5.,0.3)
-\end{pspicture}
+\end{pspicture}}
 \end{center}
 
 The components give the sides of the right angle triangle, for which the original vector, $\vec{A}$, is the hypotenuse.
@@ -1767,7 +1770,6 @@ We find the components of $\vec{B}$ by using known trigonometric ratios. First w
 B_y & = & (5)(\sin{53,13^\circ})\\
 & = & 4\emm
 \end{eqnarray*}
-
 Secondly we find the magnitude of the horizontal component, $B_x$:
 \begin{eqnarray*}
 \cos{\theta} &=& \frac{B_x}{B} \\
@@ -1775,8 +1777,8 @@ Secondly we find the magnitude of the horizontal component, $B_x$:
 B_x & = & (5,385) (\cos{53,13^\circ})\\
 & = & 5\emm
 \end{eqnarray*}
-
 \begin{center}
+\scalebox{1.1}{
 \begin{pspicture}(4.6,1.4)(8.6,6.4)
 %\psgrid[gridcolor=lightgray]
 \psline[arrowscale=2]{->}(5,2)(8,6)
@@ -1791,7 +1793,7 @@ B_x & = & (5,385) (\cos{53,13^\circ})\\
 %Right angle in corner (8,2)
 \psline[linestyle=dashed,arrowscale=2](7.7,2)(7.7,2.3)
 \psline[linestyle=dashed,arrowscale=2](7.7,2.3)(8,2.3)
-\end{pspicture}
+\end{pspicture}}
 \end{center}
 
 \westep{Determine the components of the resultant vector}
@@ -1809,7 +1811,6 @@ R_y &=& A_y+B_y\\
 &=&6\emm
 \end{eqnarray*}
 Therefore, $\vec{R}_y$ is 6 m up.
-
 \westep{Determine the magnitude and direction of the resultant vector}
 Now that we have the components of the resultant, we can use the Theorem of Pythagoras to determine the magnitude of the resultant, $R$.
 \begin{eqnarray*}
@@ -1983,9 +1984,9 @@ We still need to find the direction of $\vec{a}\times\vec{b}$. We do this by app
 \end{minipage}
 
 \begin{center}
-\begin{tabular}{p{3cm} p{3cm} p{3cm} p{3cm}}
-A & B & C & D\\
-\mbox{\scalebox{0.75} % Change this value to rescale the drawing.
+\begin{tabular}{p{2.5cm} p{2.5cm} p{2.5cm} p{2.5cm}}
+(a.) & (b.) & (c.) & (d.)\\
+\mbox{\scalebox{0.6} % Change this value to rescale the drawing.
 {
 \begin{pspicture}(0,-1.52)(1.52,1.52)
 \psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(1.5,0.1)(1.5,-1.5)
@@ -1996,7 +1997,7 @@ A & B & C & D\\
 
 &
 
-\mbox{\scalebox{0.75} % Change this value to rescale the drawing.
+\mbox{\scalebox{0.6} % Change this value to rescale the drawing.
 {
 \begin{pspicture}(0,-1.52)(3.02,1.52)
 \psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(1.5,0.0)(0.0,1.5)
@@ -2007,7 +2008,7 @@ A & B & C & D\\
 
 &
 
-\mbox{\scalebox{0.75} % Change this value to rescale the drawing.
+\mbox{\scalebox{0.6} % Change this value to rescale the drawing.
 {
 \begin{pspicture}(0,-1.52)(3.02,1.52)
 \psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(1.5,-0.75)(0.0,0.75)
@@ -2017,7 +2018,7 @@ A & B & C & D\\
 
 &
 
-\mbox{\scalebox{0.75} % Change this value to rescale the drawing.
+\mbox{\scalebox{0.6} % Change this value to rescale the drawing.
 {
 \begin{pspicture}(0,-1.52)(3.02,1.52)
 \psline[linewidth=0.04cm,arrowsize=0.05291667cm 2.0,arrowlength=1.4,arrowinset=0.4]{->}(1.5,0.0)(1.5,1.5)
@@ -2031,10 +2032,10 @@ A & B & C & D\\
 \begin{minipage}{0.65\textwidth}
 \item A load of weight $W$ is suspended from two strings. $F_1$ and $F_2$ are the forces exerted by the strings on the load in the directions show in the figure above. Which one of the following equations is valid for this situation?
 \begin{enumerate}
-\item[A] $\;\;$ $W = F_1^2 + F_2^2$
-\item[B] $\;\;$ $F_1 \sin{50^\circ} = F_2 \sin{30^\circ}$
-\item[C] $\;\;$ $F_1 \cos{50^\circ} = F_2 \cos{30^\circ}$
-\item[D] $\;\;$ $W = F_1 + F_2$\\
+\item $\;\;$ $W = F_1^2 + F_2^2$
+\item $\;\;$ $F_1 \sin{50^\circ} = F_2 \sin{30^\circ}$
+\item $\;\;$ $F_1 \cos{50^\circ} = F_2 \cos{30^\circ}$
+\item $\;\;$ $W = F_1 + F_2$\\
 \end{enumerate}
 \end{minipage}
 \begin{minipage}{0.33\textwidth}
@@ -2085,29 +2086,29 @@ A & B & C & D\\
 \end{minipage}
 \begin{tabular}{|c|c|c|}\hline
 & P & Q \\\hline
-A & 100 N & 0 N \\\hline
-B & 25 N & 75 N \\\hline
-C & 50 N & 50 N \\\hline
-D & 100 N & 100 N \\\hline
+(a.) & 100 N & 0 N \\\hline
+(b.) & 25 N & 75 N \\\hline
+(c.) & 50 N & 50 N \\\hline
+(d.) & 100 N & 100 N \\\hline
 \end{tabular}
 
 
 \item{A point is acted on by two forces in equilibrium. The forces
 \begin{enumerate}
-\item[A] $\;\;$have equal magnitudes and directions.
-\item[B] $\;\;$have equal magnitudes but opposite directions.
-\item[C] $\;\;$act perpendicular to each other.
-\item[D] $\;\;$act in the same direction.\\
+\item $\;\;$have equal magnitudes and directions.
+\item $\;\;$have equal magnitudes but opposite directions.
+\item $\;\;$act perpendicular to each other.
+\item $\;\;$act in the same direction.
 \end{enumerate}
 }
 
 \begin{minipage}{0.65\textwidth}
 \item A point in equilibrium is acted on by three forces. Force $F_1$ has components 15 N due south and 13 N due west. What are the components of force $F_2$?\\
 \begin{enumerate}
-\item[A] $\;\;$13 N due north and 20 due west
-\item[B] $\;\;$13 N due north and 13 N due west
-\item[C] $\;\;$15 N due north and 7 N due west
-\item[D] $\;\;$15 N due north and 13 N due east\\
+\item $\;\;$13 N due north and 20 due west
+\item $\;\;$13 N due north and 13 N due west
+\item $\;\;$15 N due north and 7 N due west
+\item $\;\;$15 N due north and 13 N due east\\
 \end{enumerate}
 \end{minipage}
 \begin{minipage}{0.34\textwidth}
@@ -2121,37 +2122,41 @@ D & 100 N & 100 N \\\hline
 \begin{minipage}{\textwidth}
 \item Which of the following contains two vectors and a scalar?
 \begin{enumerate}
-\item[A] $\;\;$distance, acceleration, speed
-\item[B] $\;\;$displacement, velocity, acceleration
-\item[C] $\;\;$distance, mass, speed
-\item[D] $\;\;$displacement, speed, velocity\\
+\item $\;\;$distance, acceleration, speed
+\item $\;\;$displacement, velocity, acceleration
+\item $\;\;$distance, mass, speed
+\item $\;\;$displacement, speed, velocity
 \end{enumerate}
 \end{minipage}
 
 \begin{minipage}{\textwidth}
 \item Two vectors act on the same point. What should the angle between them be so that a maximum resultant is obtained?
 \begin{multicols}{4}
-\item[A] $\;\;$0$^\circ$
-\item[B] $\;\;$90$^\circ$
-\item[C] $\;\;$180$^\circ$
-\item[D] $\;\;$cannot tell\\
+\begin{enumerate}
+\item $\;\;$0$^\circ$
+\item $\;\;$90$^\circ$
+\item $\;\;$180$^\circ$
+\item $\;\;$cannot tell
+\end{enumerate}
 \end{multicols}
 \end{minipage}
 
 \begin{minipage}{\textwidth}
 \item Two forces, 4~N and 11~N, act on a point. Which one of the following \underline{cannot} be the magnitude of a resultant?
 \begin{multicols}{4}
-\item[A] $\;\;$4 N
-\item[B] $\;\;$7 N
-\item[C] $\;\;$11 N
-\item[D] $\;\;$15 N
+\begin{enumerate}
+\item $\;\;$4 N
+\item $\;\;$7 N
+\item $\;\;$11 N
+\item $\;\;$15 N
+\end{enumerate}
 \end{multicols}
 \end{minipage}
 
-\end{enumerate}
-
-
-\begin{enumerate}
+% \end{enumerate}
+% 
+% 
+% \begin{enumerate}
 
 \item A helicopter flies due east with an air speed of 150 km.h$^{-1}$. It flies through an air current which moves at 200 km.h$^{-1}$ north. Given this information, answer the following questions:
 \begin{enumerate}
@@ -2267,7 +2272,7 @@ D & 100 N & 100 N \\\hline
 \practiceinfo
 
 \begin{tabular}[h]{cccccc}
-(1.) 00nc & (2.) 00nd & (3.) 00ne & (4.) 00nf & (5.) 00ng & (6.) 00nh & (7.) 00ni & (8.) 00nj & (9.) 00nk & (10.) 00nm & (11.) 00nn & (12.) 00np & (13.) 00nq & (14.) 00nr & (15.) 00ns & (16.) 00nt & (17.) 00nu & (18.) 00nv & (19.) 00nw & (20.) 00nx & (21.) 00ny & (22.) 00nz & (23.) 00p0 & (24.) 00p1 & (25.) 00p2 & (26.) 00p3 & 
+(1.) 00nc & (2.) 00nd & (3.) 00ne & (4.) 00nf & (5.) 00ng & (6.) 00nh & (7.) 00ni & (8.) 00nj & (9.) 00nk & (10.) 00nm & (11.) 00nn & (12.) 00np & (13.) 00nq & (14.) 00nr & (15.) 00ns & (16.) 00nt & (17.) 00nu & 
  \end{tabular}
 \end{eocexercises}
 

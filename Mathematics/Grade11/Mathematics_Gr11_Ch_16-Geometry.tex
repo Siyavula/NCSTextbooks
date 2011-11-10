@@ -21,6 +21,8 @@ The works of the following people or  cultures should be investigated:
 \item{Geometry in the 17th - 20th centuries (c. 700 - 1500)}
 \end{enumerate}}
 
+\inserstartvideo{aaa}
+
 \section{Right Pyramids, Right Cones and Spheres}
 %\begin{syllabus}
 %\item Use the formulae for  surface area and volume of right pyramids, right cones, spheres and combinations %of these geometric objects.
@@ -73,8 +75,8 @@ The surface area of a pyramid is calculated by adding the area of each face toge
 \begin{pspicture}(-5,-2)(2,2)
 %\psgrid
 \rput(-3.5,0){
-\psellipse[fillcolor=white,fillstyle=solid](0,-1)(1.5,1)
-\pspolygon[fillcolor=white,fillstyle=solid,linestyle=none](-1.5,-1)(0,2)(1.5,-1)
+\psellipse[fillcolor=white,fillstyle=none](0,-1)(1.5,1)
+\pspolygon[fillcolor=white,fillstyle=none,linestyle=none](-1.5,-1)(0,2)(1.5,-1)
 \psellipse[linestyle=dotted](0,-1)(1.5,1)
 \psline(-1.5,-1)(0,2)(1.5,-1)
 \psline[arrows=<->](-1.5,-1)(0,-1)
@@ -374,6 +376,7 @@ We accept the following formulae for volume and surface area of a sphere (ball).
 
 \item Water covers approximately $71\%$ of the Earth's surface. Taking the radius of the Earth to be $6378$ km, what is the total area of land (area not covered by water)?
 
+\pagebreak
 \item{$\left.\right.$
 
 \begin{minipage}{0.5\textwidth}
@@ -474,6 +477,7 @@ then the polygons $ABCDE$ and $PQRST$ are similar.
 }
 \end{minipage}
 
+\pagebreak
 \begin{wex}{Similarity of Polygons}{
 
 \begin{minipage}{0.4\textwidth}
@@ -779,7 +783,7 @@ $$\text{then } AD \parallel BC $$
 }
 \end{center}
 }{$\triangle ABC$ with line $DE \parallel BC$}{$$\frac{AD}{DB} = \frac{AE}{EC}$$}{
-
+\pagebreak
 Draw $h_1$ from $E$ perpendicular to $AD$, and $h_2$ from $D$ perpendicular to $AE$.\\
 Draw $BE$ and $CD$.
 \begin{eqnarray*}
@@ -1012,7 +1016,7 @@ B\hat{D}A &=& C\hat{D}A=\hat{A} =90^\circ
 }
 \end{schooltheorem}
 
-
+\pagebreak
 \begin{wex}
 {Triangle Geometry 1}{
 In $\triangle GHI$, $GH \parallel LJ$; $GJ \parallel LK$ and $\frac{JK}{KI} = \frac{5}{3}$. Determine $\frac{HJ}{KI}$.}
@@ -1170,8 +1174,10 @@ Using this relation:
 \frac{PT}{TQ} &=& \frac{ST}{TR} \makebox[5cm]{\text{($\triangle PTQ ||| \triangle STR$)}}\\
 \therefore PT \cdot TR &=& ST \cdot TQ
 \end{eqnarray*}
+
 }
 \end{wex}
+
 
 \Exercise{Triangle Geometry}
 {
@@ -1739,11 +1745,13 @@ For example, to find the inclination of the line $y = x$, we know $m = 1$
 
 \subsection{Rotation of a Point}
 When something is moved around a fixed point, we say that it is \textit{rotated} about the point. What happens to the coordinates of a point that is rotated by $90^\circ$ or $180^\circ$ around the origin?
-
+\nopagebreak[1]
 \Activity{Investigation}{Rotation of a Point by $90^\circ$}{
 \begin{center}
+Complete the table, by filling in the coordinates of the points shown in the figure.\\
+\begin{figure}[H]
 \begin{tabular}[t]{p{6.5cm}c}
-Complete the table, by filling in the coordinates of the points shown in the figure.&\\
+
 \begin{tabular}[t]{|c|c|c|}\hline
 \textbf{Point}&\textbf{$x$-coordinate}&\textbf{$y$-coordinate}\\\hline\hline
 $A$&&\\\hline
@@ -1780,16 +1788,22 @@ $H$&&\\\hline
 \end{pspicture}
 \end{tabular}
 }\\
+
+\end{tabular}
+\end{figure}
+
 What do you notice about the $x$-coordinates? What do you notice about the $y$-coordinates?&\\
 What would happen to the coordinates of point $A$, if it was rotated to the position of point $C$? What about if point $B$ rotated to the position of $D$?&\\
-\end{tabular}
 \end{center}
 }
 
+\vspace{5pt}
 \Activity{Investigation}{Rotation of a Point by $180^\circ$}{
 \begin{center}
+
+Complete the table, by filling in the coordinates of the points shown in the figure.\\
+\begin{figure}[H]
 \begin{tabular}[t]{p{6.5cm}c}
-Complete the table, by filling in the coordinates of the points shown in the figure.&\\
 
 \begin{tabular}[t]{|c|c|c|}\hline
 \textbf{Point}&\textbf{$x$-coordinate}&\textbf{$y$-coordinate}\\\hline\hline
@@ -1804,8 +1818,8 @@ $H$&&\\\hline
 \end{tabular}
 &
 \multirow{2}{*}{\begin{tabular}{c}
-\psset{unit=0.8}
 \begin{pspicture}(-2.2,-2.2)(2.2,2.2)
+\psset{unit=0.8}
 \psgrid[gridcolor=lightgray,gridlabels=0,gridwidth=0.5pt](-2.2,-2.2)(2.2,2.2)
 \psline[linewidth=0.02cm, arrows=<->](0,-2.2)(0,2.2)
 \psline[linewidth=0.02cm, arrows=<->](-2.2,0)(2.2,0)
@@ -1825,9 +1839,11 @@ $H$&&\\\hline
 \end{pspicture}
 \end{tabular}
 }\\
+
+\end{tabular}
+\end{figure}
 What do you notice about the $x$-coordinates? What do you notice about the $y$-coordinates?&\\
 What would happen to the coordinates of point $A$, if it was rotated to the position of point $E$? What about point $F$ rotated to the position of $B$?&\\
-\end{tabular}
 \end{center}
 }
 
@@ -1839,16 +1855,7 @@ From these activities you should have come to the following conclusions:
 $90^\circ$ clockwise rotation:\\
 The image of a point $P(x;y)$ rotated clockwise through $90^\circ$ around the origin is $P'(y; - x)$.\\
 We write the rotation as $(x;y) \rightarrow (y; -x)$.
-\vspace{2cm}
-\item
-$90^\circ$ anticlockwise rotation:\\
-The image of a point $P(x;y)$ rotated anticlockwise through $90^\circ$ around the origin is $P'(-y; x)$.\\
-We write the rotation as $(x;y) \rightarrow (-y; x)$.
-\vspace{2cm}
-\item
-$180^\circ$ rotation:\\
-The image of a point $P(x;y)$ rotated through $180^\circ$ around the origin is $P'(-x; -y)$.\\
-We write the rotation as $(x;y) \rightarrow (-x; -y)$.
+% \vspace{2cm}
 \end{itemize}
 \end{minipage}
 \begin{minipage}{0.45\textwidth}
@@ -1883,12 +1890,20 @@ We write the rotation as $(x;y) \rightarrow (-x; -y)$.
 \psdots[dotsize=0.12](3.9599998,0.3599999)
 \end{pspicture} 
 }
-% Generated with LaTeXDraw 1.9.3
-% Thu Dec 13 14:27:19 CAT 2007
-% \usepackage[usenames,dvipsnames]{pstricks}
-% \usepackage{epsfig}
-% \usepackage{pst-grad} % For gradients
-% \usepackage{pst-plot} % For axes
+\end{flushright}
+\end{minipage}
+
+\begin{minipage}{0.55\textwidth}
+\begin{itemize}
+\item
+$90^\circ$ anticlockwise rotation:\\
+The image of a point $P(x;y)$ rotated anticlockwise through $90^\circ$ around the origin is $P'(-y; x)$.\\
+We write the rotation as $(x;y) \rightarrow (-y; x)$.
+% \vspace{2cm}
+\end{itemize}
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+\begin{flushright}
 \scalebox{0.8} % Change this value to rescale the drawing.
 {
 \begin{pspicture}(0,-2.535)(5.4296875,2.535)
@@ -1919,12 +1934,20 @@ We write the rotation as $(x;y) \rightarrow (-x; -y)$.
 \rput{-158.52878}(5.4499764,0.3132921){\psframe[linewidth=0.02,dimen=outer](2.9146876,-0.52)(2.5946877,-0.84)}
 \end{pspicture} 
 }
-% Generated with LaTeXDraw 1.9.3
-% Thu Dec 13 14:29:56 CAT 2007
-% \usepackage[usenames,dvipsnames]{pstricks}
-% \usepackage{epsfig}
-% \usepackage{pst-grad} % For gradients
-% \usepackage{pst-plot} % For axes
+\end{flushright}
+\end{minipage}
+
+\begin{minipage}{0.55\textwidth}
+\begin{itemize}
+\item
+$180^\circ$ rotation:\\
+The image of a point $P(x;y)$ rotated through $180^\circ$ around the origin is $P'(-x; -y)$.\\
+We write the rotation as $(x;y) \rightarrow (-x; -y)$.
+\end{itemize}
+\end{minipage}
+\begin{minipage}{0.45\textwidth}
+\begin{flushright}
+
 \scalebox{0.8} % Change this value to rescale the drawing.
 {
 \begin{pspicture}(0,-2.535)(4.855,2.535)
@@ -2010,9 +2033,9 @@ When something is made larger, we say that it is \textit{enlarged}. What happens
 
 \Activity{Investigation}{Enlargement of a Polygon}{
 \begin{center}
+Complete the table, by filling in the coordinates of the points shown in the figure. Assume each small square on the plot is $1$ unit.\\
+\begin{figure}[H]
 \begin{tabular}[t]{p{6.5cm}c}
-Complete the table, by filling in the coordinates of the points shown in the figure.&\\
-Assume each small square on the plot is $1$ unit. & \\
 \begin{tabular}[t]{|c|c|c|}\hline
 \textbf{Point}&\textbf{$x$-coordinate}&\textbf{$y$-coordinate}\\\hline\hline
 $A$&&\\\hline
@@ -2031,7 +2054,7 @@ $H$&&\\\hline
 % \usepackage{epsfig}
 % \usepackage{pst-grad} % For gradients
 % \usepackage{pst-plot} % For axes
-\scalebox{01} % Change this value to rescale the drawing.
+\scalebox{0.9} % Change this value to rescale the drawing.
 {
 \begin{pspicture}(0,-3.04)(6.0,3.04)
 \definecolor{color0}{rgb}{0.8392156862745098,0.8196078431372549,0.8196078431372549}
@@ -2068,9 +2091,10 @@ $H$&&\\\hline
 }
 \end{tabular}
 }\\
+\end{tabular}
+\end{figure}
 What do you notice about the $x$-coordinates? What do you notice about the $y$-coordinates?&\\
 What would happen to the coordinates of point $A$, if the square $ABCD$ was enlarged by a factor of $2$? &\\
-\end{tabular}
 \end{center}
 }
 
@@ -2278,10 +2302,17 @@ Copy polygon $STUV$ onto squared paper and then answer the following questions.
 % Automatically inserted shortcodes - number to insert 2
 \par \practiceinfo
 \par \begin{tabular}[h]{cccccc}
+% % Question 1
+% (1.)	013a	&
+% % Question 2
+% (2.)	013b	&
+
 % Question 1
-(1.)	013a	&
+(1.)	aaa	&
 % Question 2
-(2.)	013b	&
+(2.)	aaa	&
+% Question 3
+(3.)	aaa	&
 \end{tabular}
 % Automatically inserted shortcodes - number inserted 2
 \end{eocexercises} 
