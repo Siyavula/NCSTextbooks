@@ -181,7 +181,7 @@ Again we can tabulate the events and formulate an equation for the general case:
 \hline 4 & $16 \: = 2 \times 8 = 2 \times 2 \times 2 \times 2 = 2 \times 2^3$ \\
 \hline 5 & $32 \: = 2 \times 16 = 2 \times 2 \times 2 \times 2 \times 2 = 2 \times 2^4$ \\
 \hline \vdots & \qquad \qquad \qquad \qquad \vdots \\
-\hline $n$ & $\: \: \quad = 2 \times 2 \times 2 \times 2 \times \ldots \times 2 = 2 \times 2^{n-1}$
+\hline $n$ & $\: \: \quad = 2 \times 2 \times 2 \times 2 \times \cdots \times 2 = 2 \times 2^{n-1}$
 \\
 \hline\hline
 \end{tabular}
@@ -302,6 +302,7 @@ squares in a row takes $10$ matchsticks. Determine:
 \end{center}}
 \item{$5;\;x;\;y$ is an arithmetic sequence and $x;\;y;\;81$ is a geometric sequence. All terms in
 the sequences are integers. Calculate the values of $x$ and $y$.}
+\end{enumerate}
 
 % Automatically inserted shortcodes - number to insert 4
 \par \practiceinfo
@@ -316,7 +317,6 @@ the sequences are integers. Calculate the values of $x$ and $y$.}
 (4.)	01ce	&
 \end{tabular}}
 % Automatically inserted shortcodes - number inserted 4
-\end{enumerate}
 
 \section{Recursive Formulae for Sequences}
 %\begin{syllabus}
@@ -390,7 +390,7 @@ In this section we simply work on the concept of \textit{adding} up the numbers 
 If we add up the terms of a sequence, we obtain what is called a \textit{series}. If we only sum a finite number of terms, we get a \textit{finite series}. We use the symbol $S_n$ to mean the sum of the first $n$ terms of a sequence
 $\{a_1; \: a_2; \: a_3; \ldots ; a_n \}$:
 \begin{eqnarray}
-S_n = a_1 + a_2 + a_3 + \ldots + a_n
+S_n = a_1 + a_2 + a_3 + \cdots + a_n
 \end{eqnarray}
 
 For example, if we have the following sequence of numbers
@@ -418,7 +418,7 @@ In this section we introduce a notation that will make our lives a little easier
 A sum may be written out using the summation symbol $\sum$\,. This symbol is \textit{sigma}, which is the capital letter ``S'' in the Greek alphabet. It indicates that you must sum the expression to the \textit{right} of it:
 \begin{equation}
 \label{eq:mp:se:sigma}
-\sum_{i=m}^n a_i = a_m + a_{m+1} + \ldots + a_{n-1}+ a_n
+\sum_{i=m}^n a_i = a_m + a_{m+1} + \cdots + a_{n-1}+ a_n
 \end{equation}
 where
 \begin{itemize}
@@ -433,7 +433,7 @@ The index $i$ increases from $m$ to $n$ in steps of $1$.
 If we are summing from $i=1$ (which implies summing from the first term in a sequence), then we can use either $S_n$- or $\sum$-notation since they mean the same thing:
 \begin{equation}
 \label{eq:mp:se:Ssigma}
-S_n=\sum_{i=1}^n a_i = a_1 + a_2 + \ldots + a_n
+S_n=\sum_{i=1}^n a_i = a_1 + a_2 + \cdots + a_n
 \end{equation}
 
 For example, in the following sum,
@@ -456,7 +456,7 @@ we have to add together all the terms in the sequence $a_i=i$ from $i=1$ up unti
 \end{eqnarray*}
 \item
 \begin{eqnarray*}
-\sum_{i=3}^{10} (3x^i) = 3x^3 + 3x^4 + \ldots + 3x^9 + 3x^{10}
+\sum_{i=3}^{10} (3x^i) = 3x^3 + 3x^4 + \cdots + 3x^9 + 3x^{10}
 \end{eqnarray*}
 for any value $x$.
 \end{enumerate}
@@ -474,8 +474,8 @@ for any value $x$.
 \item {For any constant $c$ that is not dependent on the index $i$,
 \begin{eqnarray}
 \label{eq:mp:series:sigma:rule2}
-\sum_{i=1}^n c \,.\, a_i &=& c \,.\, a_1 + c \,.\, a_2 + c \,.\, a_3 + \ldots + c \,.\, a_n \nonumber \\
-&=& c \; (a_1 + a_2 + a_3 + \ldots + a_n) \nonumber \\
+\sum_{i=1}^n c \,.\, a_i &=& c \,.\, a_1 + c \,.\, a_2 + c \,.\, a_3 + \cdots + c \,.\, a_n \nonumber \\
+&=& c \; (a_1 + a_2 + a_3 + \cdots + a_n) \nonumber \\
 &=& c \sum_{i=1}^n a_i
 \end{eqnarray}
 }
@@ -542,7 +542,7 @@ a_i &=& a_1 + d \; (i - 1) \\
 \end{eqnarray*}
 If we wish to sum this sequence from $i=1$ to any positive integer $n$, we would write
 \begin{equation*}
-\sum_{i=1}^n {a_i} = \sum_{i=1}^n 1 = 1 + 1 + 1 + \ldots + 1 \qquad (n\textrm{ times})
+\sum_{i=1}^n {a_i} = \sum_{i=1}^n 1 = 1 + 1 + 1 + \cdots + 1 \qquad (n\textrm{ times})
 \end{equation*}
 
 Because all the terms are equal to $1$, it means that if we sum to $n$ we will be adding $n$-number of $1$'s together, which is simply equal to $n$:
@@ -560,7 +560,7 @@ a_i &=& a_1 + d \; (i - 1) \\
 If we wish to sum this sequence from $i=1$ to any positive integer $n$, we would write
 \begin{equation}
 \label{eq:mp:se:fa:simple:sum1}
-\sum_{i=1}^n i = 1 + 2 + 3 + \ldots + n
+\sum_{i=1}^n i = 1 + 2 + 3 + \cdots + n
 \end{equation}
 This is an equation with a very important solution as it gives the answer to the sum of positive integers.
 
@@ -570,17 +570,17 @@ This is an equation with a very important solution as it gives the answer to the
 We first write $S_n$ as a sum of terms in ascending order:
 \begin{equation}
 \label{eq:mp:series:arith:sum_integers1}
-S_n = 1 + 2 + \ldots + (n - 1) + n
+S_n = 1 + 2 + \cdots + (n - 1) + n
 \end{equation}
 \noindent
 We then write the same sum but with the terms in descending order:
 \begin{equation}
 \label{eq:mp:series:arith:sum_integers2}
-S_n = n + (n-1) + \ldots + 2 + 1
+S_n = n + (n-1) + \cdots + 2 + 1
 \end{equation}
 We then add corresponding pairs of terms from Equations \eqref{eq:mp:series:arith:sum_integers1} and \eqref{eq:mp:series:arith:sum_integers2}, and we find that the sum for each pair is the same, $(n+1)$:
 \begin{equation}
-2 \; S_n = (n+1) + (n+1) + \ldots + (n+1) + (n+1)
+2 \; S_n = (n+1) + (n+1) + \cdots + (n+1) + (n+1)
 \end{equation}
 We then have $n$-number of $(n+1)$-terms, and by simplifying we arrive at the final result:
 \begin{eqnarray*}
@@ -678,7 +678,7 @@ a_i &=& i^{\,2} \\
 If we wish to sum this sequence and create a series, we write
 \begin{equation*}
 \label{eq:mp:se:fs:sum}
-S_n=\sum_{i=1}^n i^{\,2} = 1 + 4 + 9 + \ldots + n^2
+S_n=\sum_{i=1}^n i^{\,2} = 1 + 4 + 9 + \cdots + n^2
 \end{equation*}
 which can be written, in general, as
 \begin{equation}
@@ -691,7 +691,7 @@ The proof for Equation \eqref{eq:mp:se:fs:2} can be found under the \textit{Exte
 \Extension{Derivation of the Finite Squared Series}{
 We will now prove the formula for the finite squared series:
 \begin{equation*}
-S_n=\sum_{i=1}^n i^{\,2} = 1 + 4 + 9 + \ldots + n^2
+S_n=\sum_{i=1}^n i^{\,2} = 1 + 4 + 9 + \cdots + n^2
 \end{equation*}
 We start off with the expansion of ${(k + 1)}^3$.
 \begin{eqnarray*}
@@ -747,12 +747,12 @@ where
 By simply adding together the first $n$ terms, we are actually writing out the series
 \begin{equation}
 \label{eq:mp:s:geom:S}
-S_n = a_1 + a_1\,r + a_1\,r^2 + \ldots + a_1\,r^{n-2} + a_1\,r^{n-1}
+S_n = a_1 + a_1\,r + a_1\,r^2 + \cdots + a_1\,r^{n-2} + a_1\,r^{n-1}
 \end{equation}
 We may multiply the above equation by $r$ on both sides, giving us
 \begin{equation}
 \label{eq:mp:s:geom:rS}
-rS_n = a_1\,r + a_1\,r^2 + a_1\,r^3 + \ldots + a_1\,r^{n-1} + a_1\,r^n
+rS_n = a_1\,r + a_1\,r^2 + a_1\,r^3 + \cdots + a_1\,r^{n-1} + a_1\,r^n
 \end{equation}
 You may notice that all the terms on the right side of \eqref{eq:mp:s:geom:S} and \eqref{eq:mp:s:geom:rS} are the same, except the first and last terms. If we subtract \eqref{eq:mp:s:geom:S} from \eqref{eq:mp:s:geom:rS}, we are left with just
 \begin{eqnarray*}
@@ -770,7 +770,7 @@ Dividing by $(r-1)$ on both sides, we arrive at the general form of a geometric 
 \mindsetvid{Khan on sequences}{VMgjq}
 \Exercise{}{
 \begin{enumerate}
-\item Prove that $$a + ar + ar^2 + ... + ar^{n-1} = \dfrac{a\,(1 - r^n)}{(1-r)}$$
+\item Prove that $$a + ar + ar^2 + \cdots + ar^{n-1} = \dfrac{a\,(1 - r^n)}{(1-r)}$$
 \item{Given the geometric sequence $1;\;-3;\; 9;\;\dots$ determine:
 \begin{enumerate}
 \item{The $8^{\rm{th}}$ term of the sequence}
@@ -779,10 +779,11 @@ Dividing by $(r-1)$ on both sides, we arrive at the general form of a geometric 
 \item{Determine:
 \nequ{\sum_{n=1}^{4}3\,.\,2^{n-1}}}
 \item Find the sum of the first $11$ terms of the geometric series $6 + 3 + \tfrac{3}{2} + \tfrac{3}{4} + \ldots$
-\item Show that the sum of the first $n$ terms of the geometric series $$54 + 18 + 6 + ... + 5 \, (\tfrac{1}{3})^{n-1}$$ is given by $81 - 3^{4-n}$.
+\item Show that the sum of the first $n$ terms of the geometric series $$54 + 18 + 6 + \cdots + 5 \, (\tfrac{1}{3})^{n-1}$$ is given by $81 - 3^{4-n}$.
 \item The eighth term of a geometric sequence is $640$. The third term is $20$. Find the sum of the first 7 terms.
 \item Solve for $n$: $\sum_{t=1}^n \limits 8 \, (\tfrac{1}{2})^t = 15\tfrac{3}{4}$.
 \item The ratio between the sum of the first three terms of a geometric series and the sum of the $4^{th}$-, $5^{th}$- and $6^{th}$-terms of the same series is $8:27$. Determine the common ratio and the first 2 terms if the third term is $8$.
+\end{enumerate}
 
 % Automatically inserted shortcodes - number to insert 8
 \par \practiceinfo
@@ -806,7 +807,6 @@ Dividing by $(r-1)$ on both sides, we arrive at the general form of a geometric 
 \end{tabular}}
 % Automatically inserted shortcodes - number inserted 8
 
-\end{enumerate}
 
 \section{Infinite Series}
 Thus far we have been working only with finite sums, meaning that whenever we determined the sum of a series, we only considered the sum of the first $n$ terms. In this section, we consider what happens when we add infinitely many terms together. You might think that this is a silly question - surely the answer will be $\infty$ when one sums infinitely many numbers, no matter how small they are? The surprising answer is that while in some cases one will reach $\infty$ (like when you try to add all the positive integers together), there are some cases in which one will get a finite answer. If you don't believe this, try doing the following sum, a geometric series, on your calculator or computer:
@@ -898,7 +898,7 @@ correct to two decimal places using previously calculated results.
 \begin{eocexercises}{}
 \begin{enumerate}
 
-\item Is $1 + 2 + 3 + 4 + ...$ an example of a \textit{finite series} or an \textit{infinite series}?
+\item Is $1 + 2 + 3 + 4 + \cdots$ an example of a \textit{finite series} or an \textit{infinite series}?
 
 \item Calculate $$\sum_{k=2}^6 3 \, {(\tfrac{1}{3})}^{k+2}$$
 
@@ -908,9 +908,9 @@ correct to two decimal places using previously calculated results.
 \item Sum to infinity of the series.
 \end{enumerate}
 
-\item Write the sum of the first twenty terms of the series $6 + 3 + \tfrac{3}{2} + \tfrac{3}{4} + ...$ in $\sum$\,-notation.
+\item Write the sum of the first twenty terms of the series $6 + 3 + \tfrac{3}{2} + \tfrac{3}{4} + \cdots$ in $\sum$\,-notation.
 
-\item For the geometric series, $$54 + 18 + 6 + ... + 5 \, (\tfrac{1}{3})^{n-1}$$ calculate the smallest value of $n$ for which the sum of the first $n$ terms is greater than $80.99$.
+\item For the geometric series, $$54 + 18 + 6 + \cdots + 5 \, (\tfrac{1}{3})^{n-1}$$ calculate the smallest value of $n$ for which the sum of the first $n$ terms is greater than $80.99$.
 
 \item Determine the value of $\sum_{k=1}^\infty \limits 12(\tfrac{1}{5})^{k-1} $.
 
