@@ -1,3 +1,8 @@
+
+% this is the prefix for the section shortcodes
+\newcommand{\shortcodeprefix}{BOGUS}
+\usepackage{fmtcount} % needed for \ABAlph
+
 %\evensidemargin = 0.46cm
 %\oddsidemargin = 0.46cm
 %\topmargin = -1.54cm
@@ -923,7 +928,7 @@
               \end{minipage}
               };
         \node[anchor=east,text centered, yshift=1.0cm, xshift=\hoffset+0.45\marginparwidth+1.1\textwidth]
-              {\Large\color{black} \raisebox{-0.25em}{\includegraphics[scale=0.3]{../../icons/www.ps}}~P\arabic{shortcodecounter}};
+              {\Large\color{black} \raisebox{-0.25em}{\includegraphics[scale=0.3]{../../icons/www.ps}}~\shortcodeprefix\ABAlph{shortcodecounter}};
        \end{tikzpicture}
       };
    \end{tikzpicture}
@@ -950,7 +955,7 @@
                 \end{minipage}
                 };
         \node[anchor=east,text centered, yshift=0.75cm, xshift=\hoffset+0.05\marginparwidth+1.1\textwidth]
-              {\Large\color{black} \raisebox{-0.25em}{\includegraphics[scale=0.3]{../../icons/www.ps}}~P\arabic{shortcodecounter}};
+              {\Large\color{black} \raisebox{-0.25em}{\includegraphics[scale=0.3]{../../icons/www.ps}}~\shortcodeprefix\ABAlph{shortcodecounter}};
        \end{tikzpicture}
       };
    \end{tikzpicture}
@@ -1056,15 +1061,15 @@ See the summary presentation (\raisebox{-0.2em}{\includegraphics[height=1em]{../
 
 
 \newcommand{\chapterstartvideo}[1]{
-See introductory video: (\raisebox{-0.2em}{\includegraphics[height=1em]{../icons/video.pdf}} Video: #1 at www.everythingmaths.co.za)\par
+See introductory video: (\raisebox{-0.2em}{\includegraphics[height=1em]{../../icons/video.ps}} Video: #1 at www.everythingmaths.co.za)\par
 }
 
 \newcommand{\simulation}[2]{
-See simulation: #1 (\raisebox{-0.2em}{\includegraphics[height=1em]{../icons/video.pdf}} Simulation: #2 at www.everythingmaths.co.za)\par
+See simulation: #1 (\raisebox{-0.2em}{\includegraphics[height=1em]{../../icons/video.ps}} Simulation: #2 at www.everythingmaths.co.za)\par
 }
 
 
 \newcommand{\mindsetvid}[2]{
-See video about: #1 (\raisebox{-0.2em}{\includegraphics[height=1em]{../icons/video.pdf}} Video: #2 at www.everythingmaths.co.za)\par
+See video about: #1 (\raisebox{-0.2em}{\includegraphics[height=1em]{../../icons/video.ps}} Video: #2 at www.everythingmaths.co.za)\par
 }
 
