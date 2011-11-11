@@ -53,7 +53,7 @@
 \usepackage{auto-pst-pdf}
 
 
-\usepackage{extsizes}
+
 
 \usepackage[paper=a4paper, 
   lmargin=0.1\paperwidth, rmargin=0.25\paperwidth, 
@@ -70,7 +70,7 @@
 
 
 \input{../../DefinitionsV0-5-1}
-
+\usepackage{extsizes}
 \begin{document}
 % Stuff copied from thesis
 % Dutch style of paragraph formatting, i.e. no indents. 
@@ -87,9 +87,14 @@
 \input{EverythingMathsTitlePages}
 
 
+\newpage
+\thispagestyle{empty}
+\mbox{}
+\setcounter{tocdepth}{1}
+
+
 \tableofcontents
 \pagenumbering{arabic}
-
 
 % change shortcodeprefix to the correct value
 \renewcommand{\shortcodeprefix}{EMB}
