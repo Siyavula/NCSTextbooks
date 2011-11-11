@@ -81,18 +81,22 @@
 \pagestyle{fancy}
 \renewcommand{\sectionmark}[1]{\markright{\thesection}{}}
 \renewcommand{\footrulewidth}{0.4pt}
+\newpage
+\thispagestyle{empty}
+\mbox{}
+\input{EverythingMathsTitlePages}
 
-\cleardoublepage
+
 \tableofcontents
-\cleardoublepage
 \pagenumbering{arabic}
 
 
 % change shortcodeprefix to the correct value
 \renewcommand{\shortcodeprefix}{EMB}
 
+\newgeometry{lmargin=0.1\paperwidth, rmargin=0.25\paperwidth, tmargin=1in, bmargin=1in, twoside, centering, includehead,  marginparwidth=0.225\paperwidth}
+\normalfont
 
- 
 \input{Mathematics_Gr11_Ch_1-chapterIntroductiontoBook}
 \input{Mathematics_Gr11_Ch_2-Exponents}
 \input{Mathematics_Gr11_Ch_3-Surds}
@@ -112,6 +116,10 @@
 \input{Mathematics_Gr11_Ch_17-Trigonometry} %Need to make further changes to graphs etc.
 \input{Mathematics_Gr11_Ch_18-Statistics}
 \input{Mathematics_Gr11_Ch_19-IndependentandDependentEvents}
-\input{Mathematics_Gr11_Ch_20-chapterGNUFreeDocumentationLicenselabelfdl}
-
+\newpage
+\thispagestyle{empty}
+\mbox{}
+\newpage
+\thispagestyle{empty}
+\mbox{}
 \end{document}
