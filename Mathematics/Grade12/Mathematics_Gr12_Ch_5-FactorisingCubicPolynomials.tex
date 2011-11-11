@@ -1,0 +1,314 @@
+\chapter{Factorising Cubic Polynomials}
+\label{m:se12}
+
+\section{Introduction}
+In Grades 10 and 11, you learnt how to solve different types of equations. Most of the solutions, relied on being able to factorise some expression and the factorisation of quadratics was studied in detail. This chapter focusses on the factorisation of cubic polynomials, that is expressions with the highest power equal to $3$.
+
+\section{The Factor Theorem}
+The \textit{factor theorem} describes the relationship between the root of a polynomial and a factor of the polynomial.
+
+\Definition{Factor Theorem}{For any polynomial, $f(x)$, for all values of $a$ which satisfy $f(a) = 0$, $(x - a)$ is a factor of $f(x)$. Or, more concisely:
+\nequ{f(x) = (x - a)q(x)}
+where $q(x)$ is a polynomial.\\
+In other words:  If the remainder when dividing $f(x)$ by $(x-a)$ is zero, then $(x - a)$ is a factor of $f(x)$.\\
+So if $f(-\frac{b}{a})=0$, then $(ax + b)$ is a factor of $f(x)$.}
+
+\begin{wex}{Factor Theorem}{Use the Factor Theorem to determine whether $y-1$ is a factor of $f(y) = 2y^4+3y^2-5y + 7$.}{
+\westep{Determine how to approach the problem}
+In order for $y-1$ to be a factor, $f(1)$ must be $0$.
+\westep{Calculate $f(1)$}
+\begin{eqnarray*}
+f(y)&=&2y^4 + 3y^2 - 5y + 7\\
+\therefore f(1)&=&2(1)^4+3(1)^2-5(1)+7\\
+&=&2+3-5+7\\
+&=&7
+\end{eqnarray*}
+\westep{Conclusion}
+Since $f(1)\ne0$, $y-1$ is not a factor of $f(y) = 2y^4 + 3y^2 - 5y + 7$.
+}\end{wex}
+
+\begin{wex}{Factor Theorem}{Using the Factor Theorem, verify that $y + 4$ is a factor of $g(y) = 5y^4 + 16y^3 - 15y^2 + 8y + 16$.}{
+\westep{Determine how to approach the problem}
+In order for $y+4$ to be a factor, $g(-4)$ must be $0$.
+\westep{Calculate $f(1)$}
+\begin{eqnarray*}
+g(y)& = &5y^4 + 16y^3 - 15y^2 + 8y + 16\\R
+\therefore g(-4)&=&5(-4)^4+16(-4)^3-15(-4)^2+8(-4)+16\\
+&=&5(256)+16(-64)-15(16)+8(-4)+16\\
+&=&1280-1024-240-32+16\\
+&=&0
+\end{eqnarray*}
+\westep{Conclusion}
+Since $g(-4)=0$, $y+4$ is a factor of $g(y) = 5y^4 + 16y^3 - 15y^2 + 8y + 16$.
+}
+\end{wex}
+
+\section{Factorisation of Cubic Polynomials}
+%\begin{syllabus}
+%\item Factorise third degree polynomials (including examples which require the factor theorem).
+%\end{syllabus}
+
+A cubic polynomial is a polynomial of the form \nequ{ax^{3} + bx^{2} + cx + d} where a is nonzero. We have seen in Grade 10 that the sum and difference of cubes is factorised as follows:
+\nequ{(x+y)(x^2-xy+y^2)=x^3 +y^3}
+and
+\nequ{(x-y)(x^2+xy+y^2)=x^3-y^3}
+We also saw that the quadratic factor does not have real roots.
+
+There are many methods of factorising a cubic polynomial. The general method is similar to that used to factorise quadratic equations. If you have a cubic polynomial of the form:
+\nequ{f(x)=ax^3+bx^2+cx+d}
+then in an ideal world you would get factors of the form:
+\equ{(Ax+B)(Cx+D)(Ex+F).}{eq:m:se12:factor:cubic:general}
+But sometimes you will get factors of the form:
+\nequ{(Ax+B)(Cx^2+Ex+D)}
+We will deal with simplest case first. When $a=1$, then $A=C=E=1$, and you only have to determine $B$, $D$ and $F$.
+For example, find the factors of:
+\nequ{x^3 - 2x^2 -5x +6.}
+In this case we have
+\begin{eqnarray*}
+a&=&1\\
+b&=&-2\\
+c&=&-5\\
+d&=&6
+\end{eqnarray*}
+The factors will have the general form shown in (\ref{eq:m:se12:factor:cubic:general}), with $A=C=E=1$. We can then use values for $a$, $b$, $c$ and $d$ to determine values for $B$, $D$ and $F$.
+We can re-write (\ref{eq:m:se12:factor:cubic:general}) with $A=C=E=1$ as:
+\nequ{(x+B)(x+D)(x+F).}
+If we multiply this out we get:
+\begin{eqnarray*}
+(x+B)(x+D)(x+F)&=&(x+B)(x^2+Dx+Fx+DF)\\
+&=&x^3+Dx^2+Fx^2+Bx^2+DFx+BDx+BFx+BDF\\
+&=&x^3+(D+F+B)x^2+(DF+BD+BF)x+BDF
+\end{eqnarray*}
+We can therefore write:
+\begin{eqnarray}
+\label{eq:ex1}
+b&=&-2=D+F+B\\
+\label{eq:ex2}
+c&=&-5=DF+BD+BF\\
+\label{eq:ex3}
+d&=&6=BDF.
+\end{eqnarray}
+This is a set of three equations in three unknowns. 
+However, we know that $B$, $D$ and $F$ are factors of $6$ because $BDF=6$. Therefore we can use a trial and error method to find $B$, $D$ and $F$.\\
+This can become a very tedious method, therefore the \textbf{Factor Theorem} can be used to find the factors of cubic polynomials.
+
+\begin{wex}{Factorisation of Cubic Polynomials}{Factorise $f(x) = x^3 + x^2 - 9x - 9$ into three linear factors.}{
+\westep{By trial and error using the factor theorem to find a factor}
+
+Try
+\nequ{f(1) = (1)^3 + (1)^2 - 9(1) - 9 = 1 + 1 - 9 - 9 = -16}
+Therefore $(x-1)$ is not a factor
+
+Try
+\nequ{f(-1) = (-1)^3 + (-1)^2 – 9(-1) – 9 = – 1 + 1 + 9 – 9 = 0}
+Thus $(x+1)$ is a factor, because $f(-1) = 0$.\\
+
+Now divide $f(x)$ by $(x+1)$ using division by inspection:\\
+Write $x^3 + x^2 - 9x - 9 = (x+1)(\quad\quad\quad)$\\
+The first term in the second bracket must be $x^2$ to give $x^3$ if one works backwards.\\
+The last term in the second bracket must be $-9$ because $+1 \times -9 = -9$.\\
+So we have $x^3 + x^2 - 9x - 9 = (x + 1)(x^2 + ? x - 9)$.\\
+Now, we must find the coefficient of the middle term ($x$).\\
+$(+1)(x^2)$ gives the $x^2$ in the original polynomial. So, the coefficient of the $x$-term must be $0$.\\
+So $f(x) = (x+1)(x^2 - 9)$.\\
+\westep{Factorise fully}
+$x^2-9$ can be further factorised to $(x-3)(x+3)$,\\
+and we are now left with $f(x) = (x+1)(x-3)(x+3)$
+}
+\end{wex}
+
+In general, to factorise a cubic polynomial, you find one factor by trial and error. Use the factor theorem to confirm that the guess is a root. Then divide the cubic polynomial by the factor to obtain a quadratic. Once you have the quadratic, you can apply the standard methods to factorise the quadratic.
+
+For example the factors of $x^3 - 2x^2 - 5x + 6$ can be found as follows:
+There are three factors which we can write as
+\nequ{(x-a)(x-b)(x-c).}
+
+\begin{wex}{Factorisation of Cubic Polynomials}{Use the Factor Theorem to factorise \nequ{x^3 - 2x^2 -5^x +6.}}{
+\westep{Find one factor using the Factor Theorem}
+Try
+\nequ{f(1) = (1)^3 - 2(1)^2 -5(1) +6 = 1 -2 -5 +6 = 0}
+Therefore $(x-1)$ is a factor.
+\westep{Division by inspection}
+$x^3 - 2x^2 - 5x +6 = (x-1)(\quad\quad\quad)$\\
+The first term in the second bracket must be $x^2$ to give $x^3$ if one works backwards.\\
+The last term in the second bracket must be $-6$ because $-1 \times -6 = +6$.\\
+So we have $x^3 -2x^2 -5x + 6 = (x - 1)(x^2 + ? x - 6)$.\\
+Now, we must find the coefficient of the middle term ($x$).\\
+$(-1)(x^2)$ gives $-x^2$. So, the coefficient of the $x$-term must be $-1$.\\
+So $f(x) = (x-1)(x^2 -x -6)$.\\
+\westep{Factorise fully}
+$x^2-x - 6$ can be further factorised to $(x-3)(x+2)$,\\
+and we are now left with $x^3 - 2x^2 -5x +6 = (x-1)(x-3)(x+2)$
+}
+\end{wex}
+
+\Exercise{}{
+\begin{enumerate}
+\item{Find the remainder when $4x^3-4x^2+x-5$ is divided by $(x+1)$.}
+\item{Use the factor theorem to factorise $x^3-3x^2+4$ completely.}
+\item{$f(x)= 2x^3+x^2-5x+2$}{
+\begin{enumerate}
+\item{Find $f(1)$.}
+\item{Factorise $f(x)$ completely}
+\end{enumerate}}
+\item{Use the Factor Theorem to determine all the factors of  the following expression:
+\nequ{x^3 + x^2 - 17x + 15}}
+\item{Complete:  If $f(x)$ is a polynomial and $p$ is a number such that $f(p) = 0$,  then $(x-p)$ is .....}
+\end{enumerate}
+
+% Automatically inserted shortcodes - number to insert 5
+\par \practiceinfo
+\par \begin{tabular}[h]{cccccc}
+% Question 1
+(1.)	01eh	&
+% Question 2
+(2.)	01ei	&
+% Question 3
+(3.)	01ej	&
+% Question 4
+(4.)	01ek	&
+% Question 5
+(5.)	01em	&
+\end{tabular}}
+% Automatically inserted shortcodes - number inserted 5
+\section{Solving Cubic Equations}
+
+Once you know how to factorise cubic polynomials, it is also easy to solve cubic equations of the kind 
+\nequ{ax^3 + bx^2 + cx + d = 0}
+
+\begin{wex}{Solution of Cubic Equations}{Solve \nequ{6x^3 - 5x^2 -17x + 6 = 0.}}{
+\westep{Find one factor using the Factor Theorem}
+Try
+\nequ{f(1) = 6(1)^3 - 5(1)^2 -17(1) + 6 = 6 - 5 - 17 + 6 = -10}
+Therefore $(x-1)$ is NOT a factor.\\
+Try
+\nequ{f(2) = 6(2)^3 - 5(2)^2 -17(2) + 6 = 48 - 20 - 34 + 6 = 0}
+Therefore $(x-2)$ IS a factor.
+\westep{Division by inspection}
+$6x^3 - 5x^2 -17x + 6 = (x-2)(\quad\quad\quad)$\\
+The first term in the second bracket must be $6x^2$ to give $6x^3$ if one works backwards.\\
+The last term in the second bracket must be $-3$ because $-2 \times -3 = +6$.\\
+So we have $6x^3 - 5x^2 -17x + 6 = (x - 2)(6x^2 + ? x - 3)$.\\
+Now, we must find the coefficient of the middle term ($x$).\\
+$(-2)(6x^2)$ gives $-12x^2$. So, the coefficient of the $x$-term must be $7$.\\
+So, $6x^3 - 5x^2 -17x + 6 = (x-2)(6x^2 +7x -3)$.\\
+\westep{Factorise fully}
+$6x^2+7x - 3$ can be further factorised to $(2x+3)(3x-1)$,\\
+and we are now left with $6x^3 - 5x^2 - 17x +6 = (x-2)(2x+3)(3x-1)$
+\westep{Solve the equation}
+\begin{eqnarray*}
+6x^3 - 5x^2 -17x + 6&=&0\\
+(x-2)(2x+3)(3x-1)&=&0\\
+x&=&2; \frac{1}{3}; -\frac{3}{2}
+\end{eqnarray*}
+}
+\end{wex}
+
+Sometimes it is not possible to factorise the trinomial ("second bracket").  This is when the quadratic formula
+\nequ{x  = \frac{-b \pm \sqrt{b^{2} - 4ac}}{2a}}
+can be used to solve the cubic equation fully.\\
+For example:
+
+\begin{wex}{Solution of Cubic Equations}{Solve  for $x$: $x^3 - 2x^2 -6x + 4 = 0.$}{
+\westep{Find one factor using the Factor Theorem}
+Try
+\nequ{f(1) = (1)^3 - 2(1)^2 -6(1) + 4 = 1 - 2 - 6 + 4 = -1}
+Therefore $(x-1)$ is NOT a factor.\\
+Try
+\nequ{f(2) = (2)^3 - 2(2)^2 -6(2) + 4 = 8 - 8 - 12 + 4 = -8}
+Therefore $(x-2)$ is NOT a factor.
+\nequ{f(-2) = (-2)^3 - 2(-2)^2 -6(-2) + 4 = -8 - 8 + 12 + 4 = 0}
+Therefore $(x+2)$ IS a factor.
+\westep{Division by inspection}
+$x^3 - 2x^2 -6x + 4  = (x+2)(\quad\quad\quad)$\\
+The first term in the second bracket must be $x^2$ to give $x^3$.\\
+The last term in the second bracket must be $2$ because $2 \times 2 = +4$.\\
+So we have $x^3 - 2x^2 -6x + 4  = (x + 2)(x^2 + ?x +2)$.\\
+Now, we must find the coefficient of the middle term ($x$).\\
+$(2)(x^2)$ gives $2x^2$. So, the coefficient of the $x$-term must be $-4$. ($2x^2-4x^2 = -2x^2$)\\
+So $x^3 - 2x^2 -6x + 4  = (x+2)(x^2 -4x +2)$.\\
+$x^2-4x +2$ cannot be factorised any futher and we are now left with\\
+$(x+2)(x^2-4x+2) = 0$
+\westep{Solve the equation}
+\begin{eqnarray*}
+(x+2)(x^2-4x+2) &=&0\\
+(x+2) = 0 ~&\mbox{or}&~(x^2 - 4x + 2) = 0
+\end{eqnarray*}
+\westep{Apply the quadratic formula for the second bracket}
+Always write down the formula first and then substitute the values of $a, b$ and $c$.
+\begin{eqnarray*}
+x & =& \frac{-b \pm \sqrt{b^{2} - 4ac}}{2a} \\
+& =& \frac{-(-4) \pm \sqrt{(-4)^{2} -4(1)(2)}}{2(1)} \\
+& =& \frac{4 \pm \sqrt{8}}{2} \\
+& =& 2 \pm \sqrt{2}
+\end{eqnarray*}
+\westep{Final solutions}
+$x= -2 ~$or$~ x = 2 \pm \sqrt{2}$
+}
+\end{wex}
+\begin{eocexercises}{}
+\begin{enumerate}
+\item{Solve for $x$: $x^3 + x^2 - 5x + 3 = 0$}
+\item{Solve for $y$: $y^3 - 3y^2 - 16y - 12 = 0$}
+\item{Solve for $m$: $m^3 - m^2 - 4m - 4 =0$}
+\item{Solve for $x$: $x^3 - x^2 = 3(3x + 2)$
+\Tip:{Remove brackets and write as an equation equal to zero.}}
+\item{Solve for $x$ if $2x^3 - 3x^2 - 8x = 3$}
+\end{enumerate}
+
+
+\begin{enumerate}
+\item{Solve for $x$: $16(x+1) = x^2 (x+1)$}
+\item{
+\begin{enumerate}
+\item{Show that $x - 2$ is a factor of $3x^3 - 11x^2 + 12x - 4$}
+\item{Hence, by factorising completely, solve the equation
+\nequ{3x^3 - 11x^2 + 12x - 4 =0}}
+\end{enumerate}}
+
+\item{$2x^3 - x^2 - 2x + 2 = Q(x).(2x-1) + R$ for all values of $x$. What is the value of $R$?}
+
+\item{
+\begin{enumerate}
+\item{Use the factor theorem to solve the following equation for $m$: $$8m^3 + 7m^2 - 17m + 2 = 0$$}
+\item{Hence, or otherwise, solve for $x$: $$2^{3x+3} + 7 \cdot 2^{2x} + 2 = 17 \cdot 2^x$$}
+\end{enumerate}}
+
+\item{\textbf{A challenge}:\\
+Determine the values of $p\;$ for which the function $$f(x) = 3p ^3 - (3p-7)x^2 + 5x - 3$$ leaves a remainder of $9$ when it is divided by $(x-p)$.}
+
+\end{enumerate}
+
+
+
+% CHILD SECTION END 
+
+
+
+% CHILD SECTION START 
+% Automatically inserted shortcodes - number to insert 10
+\par \practiceinfo
+\par \begin{tabular}[h]{cccccc}
+% Question 1
+(1.)	01en	&
+% Question 2
+(2.)	01ep	&
+% Question 3
+(3.)	01eq	&
+% Question 4
+(4.)	01er	&
+% Question 5
+(5.)	01es	&
+% Question 6
+(6.)	01et	\\ % End row of shortcodes
+% Question 7
+(7.)	01eu	&
+% Question 8
+(8.)	01ev	&
+% Question 9
+(9.)	01ew	&
+% Question 10
+(10.)	01ex	&
+\end{tabular}
+% Automatically inserted shortcodes - number inserted 10
+\end{eocexercises}
