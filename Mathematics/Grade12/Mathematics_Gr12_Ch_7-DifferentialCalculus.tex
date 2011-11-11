@@ -1,8 +1,13 @@
 \chapter{Differential Calculus}
 \label{m:fg:diff12}
 
-\section{Why Do I Have to Learn This Stuff?}
+<<<<<<< HEAD
+\section{Introduction}
 Calculus is one of the central branches of mathematics and was developed from algebra and geometry. Calculus is built on the concept of limits, which will be discussed in this chapter. Calculus consists of two complementary ideas: differential calculus and integral calculus. We will only be dealing with differential calculus in this text. Differential calculus is concerned with the instantaneous rate of change of quantities with respect to other quantities, or more precisely, the local behaviour of functions. This can be illustrated by the slope of a function's graph. Examples of typical differential calculus problems include: finding the acceleration and velocity of a free-falling body at a particular moment and finding the optimal number of units a company should produce to maximize its profit.
+=======
+\section{Why Do I Have to Learn This Stuff?}
+Calculus is one of the central branches of mathematics and was developed from algebra and geometry. Calculus is built on the concept of limits, which will be discussed in this chapter. Calculus consists of two complementary ideas: differential calculus and integral calculus. We will only be dealing with differential calculus in this text. Differential calculus is concerned with the instantaneous rate of change of quantities with respect to other quantities, or more precisely, the local behaviour of functions. This can be illustrated by the slope of a function's graph. Examples of typical differential calculus problems include: finding the acceleration and velocity of a free-falling body at a particular moment and finding the optimal number of units a company should produce to maximise its profit.
+>>>>>>> 87fbe17a7d2a59e192d41390edbc6425615b0e12
 
 Calculus is fundamentally different from the mathematics that you have studied previously. Calculus is more dynamic and less static. It is concerned with change and motion. It deals with quantities that approach other quantities. For that reason it may be useful to have an overview of the subject before beginning its intensive study. 
 
@@ -10,9 +15,16 @@ Calculus is a tool to understand many phenomena, both natural and man-made, like
 
 In this section we give a glimpse of some of the main ideas of calculus by showing how limits arise when we attempt to solve a variety of problems.
 
+<<<<<<< HEAD
+\chapterstartvideo{aaa}
+
 \Extension{Integral Calculus}{Integral calculus is concerned with the accumulation of quantities, such as areas under a curve, linear distance traveled, or volume displaced. Differential and integral calculus act inversely to each other. Examples of typical integral calculus problems include finding areas and volumes, finding the amount of water pumped by a pump with a set power input but varying conditions of pumping losses and pressure and finding the amount of rain that fell in a certain area if the rain fell at a specific rate.}
 
+=======
+\Extension{Integral Calculus}{Integral calculus is concerned with the accumulation of quantities, such as areas under a curve, linear distance travelled, or volume displaced. Differential and integral calculus act inversely to each other. Examples of typical integral calculus problems include finding areas and volumes, finding the amount of water pumped by a pump with a set power input but varying conditions of pumping losses and pressure and finding the amount of rain that fell in a certain area if the rain fell at a specific rate.}
+>>>>>>> 87fbe17a7d2a59e192d41390edbc6425615b0e12
 
+\chapterstartvideo{VMgxl}
 \section{Limits}
 \label{md:limits}
 %\begin{syllabus}
@@ -98,7 +110,7 @@ Then we can cancel the $x+6$ from numerator and denominator and we are left with
 \nequ{y=x-2.}
 However, we are only able to cancel the $x+6$ term if $x\ne-6$. If $x=-6$, then the denominator becomes $0$ and the function is not defined. This means that the domain of the function does not include $x=-6$. But we can examine what happens to the values for $y$ as $x$ gets closer to $-6$. These values are listed in Table~\ref{tab:m:fg:diff12:limits} which shows that as $x$ gets closer to $-6$, $y$ gets close to 8. 
 
-\begin{table}[htbp]
+\begin{table}[H]
 \begin{center}
 \caption{Values for the function $y=\dfrac{(x+6)(x-2)}{x+6}$ as $x$ gets close to $-6$.}
 \label{tab:m:fg:diff12:limits}
@@ -130,7 +142,7 @@ $-3 $& $-5$\\\hline
 
 The graph of this function is shown in Figure~\ref{fig:m:fg:diff12:limitseg}. The graph is a straight line with slope $1$ and intercept $-2$, but with a hole at $x = -6$.
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \begin{center}
 \begin{pspicture}(-6,-6)(5,5)
 %\psgrid
@@ -164,7 +176,7 @@ The graph of this function is shown in Figure~\ref{fig:m:fg:diff12:limitseg}. Th
 We can now introduce a new notation. For the function $y=\dfrac{(x+6)(x-2)}{x+6}$, we can write:
 \nequ{\lim_{x\to-6}\frac{(x+6)(x-2)}{x+6}=-8.}
 This is read: \textit{the limit of $\frac{(x+6)(x-2)}{x+6}$ as $x$ tends to $-6$ is $-8$.}
-
+\pagebreak
 \Activity{Investigation}{Limits}{If $f(x)=x+1$, determine:
 \begin{center}
 \begin{tabular}{|c|p{2cm}|}\hline
@@ -197,7 +209,7 @@ in limit notation.}
 
 We can also have the situation where a function has a different value depending on whether $x$ approaches from the left or the right. An example of this is shown in Figure~\ref{fig:m:fg:diff12:limits:lr}.
 
-\begin{figure}[htbp]
+\begin{figure}[H]
 \begin{center}
 \begin{pspicture}(-6,-4)(6,4)
 %\psgrid[gridcolor=gray]
@@ -336,7 +348,9 @@ Now imagine that $Q$ moves along the curve toward $P$. The secant line approache
 \end{equation}
 and we say that the gradient at point $P$ is the limit of the average gradient as $Q$ approaches $P$ along the curve. 
 
-Khan Academy video on derivatives:SIYAVULA-VIDEO:http://cnx.org/content/m39270/latest/#derivatives-1
+% Khan Academy video on derivatives:SIYAVULA-VIDEO:http://cnx.org/content/m39270/latest/#derivatives-1
+
+\mindsetvid{Khan on derivatives}{VMgye}
 % \Activity{Investigation}{Limits}{
 % The gradient at a point $x$ on a curve defined by $f(x)$ can also be written as:
 % \begin{equation}
@@ -461,7 +475,9 @@ The symbols $D$ and $\frac{d}{dx}$ are called {\bf differential operators} becau
 \Tip{Though we choose to use a fractional form of representation, $\frac{dy}{dx}$ is a limit and \textbf{is not} a fraction, i.e. $\frac{dy}{dx}$ does not mean $dy \div dx$. $\frac{dy}{dx}$ means $y$ differentiated with respect to $x$. Thus, $\frac{dp}{dx}$ means $p$ differentiated with respect to $x$. The `$\frac{d}{dx}$' is the ``operator", applied to some
 function of $x$.}
 
-Video on functions vs. derivatives:SIYAVULA-VIDEO:http://cnx.org/content/m39313/latest/#calculus-2
+% Video on functions vs. derivatives:SIYAVULA-VIDEO:http://cnx.org/content/m39313/latest/#calculus-2
+\mindsetvid{Video on fns vs derivatives}{VMgyp}
+
 \begin{wex}
 {Derivatives - First Principles}{Calculate the derivative of $g(x)=x-1$ from first principles.}{
 \westep{Calculate the gradient at a point}
@@ -576,8 +592,10 @@ There are two other rules which make differentiation simpler. For any two functi
 This means that we differentiate each term separately. 
 
 The final rule applies to a function $f(x)$ that is multiplied by a constant $k$.
-\equ{\frac{d}{dx} [k\cdot f (x)]= k f'(x)}{diff3}
-Video on the power rule for derivatives:SIYAVULA-VIDEO:http://cnx.org/content/m39313/latest/#calculus-3
+\equ{\frac{d}{dx} [k\,.\, f (x)]= k f'(x)}{diff3}
+% Video on the power rule for derivatives:SIYAVULA-VIDEO:http://cnx.org/content/m39313/latest/#calculus-3
+
+\mindsetvid{Video on the power rule}{VMhgb}
 
 \begin{wex}{Rules of Differentiation}{Determine the derivative of $x-1$ using the rules of differentiation.}{
 \westep{Identify the rules that will be needed}
@@ -905,7 +923,7 @@ Therefore the turning points are: $(1;0)$ and $(3;4)$.
 \begin{enumerate}
 \item{Given $f(x) = x^3 + x^2 - 5x + 3$:
 \begin {enumerate}
-\item{Show that $(x-1)$ is a factor of $f(x)$ and hence fatorise $f(x)$ fully.}
+\item{Show that $(x-1)$ is a factor of $f(x)$ and hence factorise $f(x)$ fully.}
 \item{Find the coordinates of the intercepts with the axes and the turning points and sketch the graph}
 \end{enumerate}}
 \item{Sketch the graph of $f(x) = x^3 - 4x^2 -11x + 30$ showing all the relative turning points and intercepts with the axes.}
@@ -932,7 +950,11 @@ Therefore the turning points are: $(1;0)$ and $(3;4)$.
 \end{tabular}}
 % Automatically inserted shortcodes - number inserted 6
 
+<<<<<<< HEAD
 \subsection{Local Minimum, Local Maximum and Point of Inflextion}
+=======
+\subsection{Local Minimum, Local Maximum and Point of Infliction}
+>>>>>>> 87fbe17a7d2a59e192d41390edbc6425615b0e12
 
 If the derivative ($\frac{dy}{dx}$) is zero at a point, the gradient of the tangent at that point is zero.  It means that a turning point occurs as seen in the previous example. 
 
@@ -1012,7 +1034,9 @@ v&=&\frac{6 \times 40}{3}\\
 \end{eqnarray*}
 
 This means that the most economical speed is $80~$km/h.
-Video on optimisation:SIYAVULA-VIDEO:http://cnx.org/content/m39273/latest/#calculus-4
+% Video on optimisation:SIYAVULA-VIDEO:http://cnx.org/content/m39273/latest/#calculus-4
+
+\mindsetvid{video on optimisation}{VMhgi}
 
 \begin{wex}
 {Optimisation Problems}{The sum of two positive numbers is $10$. One of the numbers is multiplied by the square of the other. If each number is greater than $0$, find the numbers that make this product a maximum.}
@@ -1023,7 +1047,7 @@ Let the two numbers be $a$ and $b$. Then we have:
 
 We are required to minimise the product of $a$ and $b$. Call the product $P$. Then:
 
-\equ{P=a \cdot b}{diff12:ex1:2}
+\equ{P=a \,.\, b}{diff12:ex1:2}
 
 We can solve for $b$ from (\ref{diff12:ex1:1}) to get:
 
@@ -1083,7 +1107,7 @@ The product is maximised when $a$ and $b$ are both equal to $5$.}
 {
 \westep{Examine the problem and formulate the equations that are required}
 The important pieces of information given are related to the area and modified perimeter of the garden. We know that the area of the garden is:
-\equ{A=w\cdot l}{diff12:ex2:1}
+\equ{A=w\,.\, l}{diff12:ex2:1}
 We are also told that the fence covers only $3$ sides and the three sides should add up to $160~\emm$. This can be written as:
 \equ{160\emm=w+l+l}{diff12:ex2:2}
 
@@ -1150,7 +1174,7 @@ A width of $80~\emm$ and a length of $40~\emm$ will yield the maximal area fence
 \item{Find the value of $x$ for which the block will have a maximum volume. (Volume = area of base $\times$ height.)}
 \end{enumerate}}
 
-\item{The diagram shows the plan for a verandah which is to be built on the corner of a cottage. A railing $ABC\!D\!E$ is to be constructed around the four edges of the verandah.
+\item{The diagram shows the plan for a veranda which is to be built on the corner of a cottage. A railing $ABC\!D\!E$ is to be constructed around the four edges of the veranda.
 
 \begin{center}
 \begin{pspicture}(-1,-1)(5,3.6)
@@ -1260,7 +1284,7 @@ v(4) &=& h'(4)\\
 &=& 20 - 10(4)\\
 &=& -20~\ems\\
 \end{eqnarray*}
-The ball hits the gound at a speed of $20~\ems$. Notice that the sign of the velocity is negative which means that the ball is moving downward (the reverse of upward, which is when the velocity is positive).
+The ball hits the ground at a speed of $20~\ems$. Notice that the sign of the velocity is negative which means that the ball is moving downward (the reverse of upward, which is when the velocity is positive).
 \westep{Acceleration}
 \begin{eqnarray*}
 a &=& v'(t)\\

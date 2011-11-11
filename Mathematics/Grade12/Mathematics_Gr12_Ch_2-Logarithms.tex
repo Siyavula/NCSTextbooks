@@ -5,6 +5,8 @@
 %\item Demonstrate an understanding of the definition of a logarithm and any laws needed to solve real-life problems (e.g. growth and decay or $A=P(1\pm i)^n$).
 %\end{syllabus}
 
+\section{Introduction}
+
 In mathematics many ideas are related. We saw that addition and subtraction are related and that multiplication and division are related. Similarly, exponentials and logarithms are related. 
 
 \textit{Logarithms}, commonly referred to as \textit{logs}, are the inverse of exponentials. The logarithm of a number $x$ in the base $a$ is defined as the number $n$ such that $a^n = x$. 
@@ -15,12 +17,16 @@ So, if $a^n = x$, then:
 \log_{a}(x) = n
 \end{equation}
 
+\chapterstartvideo{aaa}
+
 \Extension{Inverse Function}{When we say ``inverse function'' we mean that the answer becomes the
 question and the question becomes the answer. For example, in the equation $a^{b} = x$ the
 ``question'' is ``what is $a$ raised to the power $b$?'' The answer is ``$x$.'' The inverse function
 would be $\log_{a}x=b$ or ``by what power must we raise $a$ to obtain $x$?'' The answer is ``$b$.'' }
 
 The mathematical symbol for logarithm is $\log_{a}(x)$ and it is read ``log to the base $a$ of $x$''. For example, $\log_{10}(100)$ is ``log to the base $10$of $100$.''
+
+\chapterstartvideo{VMgio}
 
 \Activity{}{Logarithm Symbols}{Write the following out in words. The first one is done for you.
 \begin{enumerate}
@@ -88,7 +94,8 @@ For example, change $\log_{2}12$ in base $10$ is:
 \item{$\log_{x}(8)$ to base $y$}
 \item{$\log_{y}(x)$ to base $x$}
 \end{enumerate}}
-Khan Academy video on logarithms:SIYAVULA-VIDEO:http://cnx.org/content/m31883/latest/#logs-1
+% Khan Academy video on logarithms:SIYAVULA-VIDEO:http://cnx.org/content/m31883/latest/#logs-1
+\mindsetvid{Khan on logs}{VMgiq}
 \section{Laws of Logarithms}
 Just as for the exponents, logarithms have some laws which make working with them easier. These laws are based on the exponential laws and are summarised first and then explained in detail.
 
@@ -98,7 +105,7 @@ Just as for the exponents, logarithms have some laws which make working with the
 \label{eq:mn:l:law2}
 \log_{a}(a)&=&1 \\
 \label{eq:mn:l:law3}
-\log_{a}(x\cdot y) &=& \log_{a}(x) + \log_{a}(y)\\
+\log_{a}(x\,.\, y) &=& \log_{a}(x) + \log_{a}(y)\\
 \label{eq:mn:l:law4}
 \log_{a}\left(\frac{x}{y}\right) &=& \log_{a}(x) - \log_{a}(y) \\
 \label{eq:mn:l:law5}
@@ -156,7 +163,7 @@ From the work done up to now, it is also useful to summarise the following facts
 \item{$\log 1000 = 3$}
 \end{enumerate}}
 
-\section{Logarithm Law 3: $\log_{a}(x\cdot y) = \log_{a}(x) + \log_{a}(y)$}
+\section{Logarithm Law 3: $\log_{a}(x\,.\, y) = \log_{a}(x) + \log_{a}(y)$}
 The derivation of this law is a bit trickier than the first two. Firstly, we need to relate $x$ and $y$ to the base $a$. So, assume that $x=a^m$ and $y=a^n$. Then from Equation~\ref{eq:mn:l}, we have that:
 \begin{eqnarray}
 \label{eq:mn:loglaw3:1}
@@ -167,15 +174,15 @@ The derivation of this law is a bit trickier than the first two. Firstly, we nee
 
 This means that we can write:
 \begin{eqnarray*}
-\log_{a}(x \cdot y)&=&\log_{a}(a^m \cdot a^n)\\
+\log_{a}(x \,.\, y)&=&\log_{a}(a^m \,.\, a^n)\\
 &=&\log_{a}(a^{m+n}) \qquad \mbox{(Exponential Law Equation (Grade 10))}\\
 &=&\log_{a}(a^{\log_{a}(x)+\log_{a}(y)}) \qquad \mbox{(From Equation~\ref{eq:mn:loglaw3:1} and Equation~\ref{eq:mn:loglaw3:2})}\\
 &=&\log_{a}(x)+\log_{a}(y) \qquad \mbox{(From Equation~\ref{eq:mn:l})}
 \end{eqnarray*}
 
-For example, show that $\log (10 \cdot 100) = \log 10 + \log 100$. Start with calculating the left hand side:
+For example, show that $\log (10 \,.\, 100) = \log 10 + \log 100$. Start with calculating the left hand side:
 \begin{eqnarray*}
-\log (10 \cdot 100) &=& \log (1000)\\
+\log (10 \,.\, 100) &=& \log (1000)\\
 &=& \log (10^3)\\
 &=&3
 \end{eqnarray*}
@@ -184,9 +191,9 @@ The right hand side:
 \log 10 + \log 100 &=& 1 + 2\\
 &=&3
 \end{eqnarray*}
-Both sides are equal. Therefore, $\log (10 \cdot 100) = \log 10 + \log 100$.
+Both sides are equal. Therefore, $\log (10 \,.\, 100) = \log 10 + \log 100$.
 
-\Activity{}{Logarithm Law 3: $\log_{a}(x\cdot y) = \log_{a}(x) + \log_{a}(y)$}{Write as seperate logs:
+\Activity{}{Logarithm Law 3: $\log_{a}(x\,.\, y) = \log_{a}(x) + \log_{a}(y)$}{Write as separate logs:
 \begin{enumerate}
 \item{$\log_{2}(8\times4)$}
 \item{$\log_{8}(10\times10)$}
@@ -195,7 +202,7 @@ Both sides are equal. Therefore, $\log (10 \cdot 100) = \log 10 + \log 100$.
 \item{$\log_{x}(y^2)$}
 \end{enumerate}}
 
-\section{Logarithm Law 4: $\log_{a}\left(\frac{x}{y}\right) = \log_{a}(x) - \log_{a}(y)$}
+\section[Logarithm Law 4: $\log_{a}\left(\frac{x}{y}\right) = \log_{a}(x) - \log_{a}(y)$]{Logarithm Law 4: \Huge $\log_{a}\left(\frac{x}{y}\right) = \log_{a}(x) - \log_{a}(y)$}
 
 The derivation of this law is identical to the derivation of Logarithm Law 3 and is left as an exercise.
 
@@ -212,7 +219,7 @@ The right hand side:
 \end{eqnarray*}
 Both sides are equal. Therefore, $\log (\frac{10}{100}) = \log 10 - \log 100$.
 
-\Activity{}{Logarithm Law 4: $\log_{a}\left(\frac{x}{y}\right) = \log_{a}(x) - \log_{a}(y)$}{Write as seperate logs:
+\Activity{}{Logarithm Law 4: $\log_{a}\left(\frac{x}{y}\right) = \log_{a}(x) - \log_{a}(y)$}{Write as separate logs:
 \begin{enumerate}
 \item{$\log_{2}(\frac{8}{5})$}
 \item{$\log_{8}(\frac{100}{3})$}
@@ -225,16 +232,16 @@ Both sides are equal. Therefore, $\log (\frac{10}{100}) = \log 10 - \log 100$.
 Once again, we need to relate $x$ to the base $a$. So, we let $x=a^m$. Then,
 \begin{eqnarray*}
 \log_{a}(x^b)&=&\log_{a}((a^m)^b)\\
-&=&\log_{a}(a^{m \cdot b}) \quad \mbox{(Exponential Law in Equation (Grade 10))}\\
+&=&\log_{a}(a^{m \,.\, b}) \quad \mbox{(Exponential Law in Equation (Grade 10))}\\
 \mbox{But,}\quad m &=& \log_{a}(x)\quad \quad \mbox{(Assumption that $x=a^m$)}\\
-\therefore \quad \log_{a}(x^b)&=&\log_{a}(a^{b \cdot \log_{a}(x)})\\
-&=&b \cdot \log_{a}(x) \quad \mbox{(Definition of logarithm in Equation~\ref{eq:mn:l})}
+\therefore \quad \log_{a}(x^b)&=&\log_{a}(a^{b \,.\, \log_{a}(x)})\\
+&=&b \,.\, \log_{a}(x) \quad \mbox{(Definition of logarithm in Equation~\ref{eq:mn:l})}
 \end{eqnarray*}
 
 For example, we can show that $\log_{2}(5^3) = 3 \log_{2}(5)$.
 \begin{eqnarray*}
-\log_{2}(5^3) &=& \log_2 (5 \cdot 5 \cdot 5)\\
-&=& \log_2 5 + \log_2 5 + \log_2 5\quad (\because \log_{a}(x \cdot y)=\log_{a}(a^m \cdot a^n))\\
+\log_{2}(5^3) &=& \log_2 (5 \,.\, 5 \,.\, 5)\\
+&=& \log_2 5 + \log_2 5 + \log_2 5\quad (\because \log_{a}(x \,.\, y)=\log_{a}(a^m \,.\, a^n))\\
 &=&3 \log_2 5
 \end{eqnarray*}
 Therefore, $\log_{2}(5^3) = 3 \log_{2}(5)$.
@@ -269,10 +276,17 @@ Therefore, $\log_{2}(\sqrt[3]{5}) = \frac{\log_{2}5}{3}$.
 \item{$\log_{x}(\sqrt[2x]{y})$}
 \end{enumerate}}
 
-\MarginTip{The final answer doesn't have to \textit{look} simple.}
+<<<<<<< HEAD
 Khan Academy video on logarithm properties, part 1: SIYAVULA-VIDEO:http://cnx.org/content/m31883/latest/#logs-2
 Khan Academy video on logarithm properties, part 2: SIYAVULA-VIDEO:http://cnx.org/content/m31883/latest/#logs-3
+=======
+\MarginTip{The final answer doesn't have to \textit{look} simple.}
+% Khan Academy video on logarithm properties, part 1: SIYAVULA-VIDEO:http://cnx.org/content/m31883/latest/#logs-2
+% Khan Academy video on logarithm properties, part 2: SIYAVULA-VIDEO:http://cnx.org/content/m31883/latest/#logs-3
+\mindsetvid{Khan on logs 1}{VMgjl}
+>>>>>>> 87fbe17a7d2a59e192d41390edbc6425615b0e12
 
+\MarginTip{The final answer doesn't have to \textit{look} simple.}
 \begin{wex}{Simplification of Logs}{Simplify, without use of a calculator:
 \nequ{3\log 3 + \log 125}}
 {\westep{Try to write any quantities as exponents}
@@ -313,9 +327,7 @@ We can now use $\log_a a =1$
 The final answer is:
 \nequ{8^{\frac{2}{3}}+\log_2 32 =9}}
 \end{wex}
-
-
-
+\\
 \begin{wex}{Simplify to one log}{Write $2\log {3} + \log {2} -\log {5}$ as the logarithm of a single number.}{
 \westep{Reverse law 5}
 $2\log {3} + \log {2} -\log {5} = \log {3^2} + \log {2} -\log {5}$
@@ -334,7 +346,7 @@ In Grade 10 you solved some exponential equations by trial and error, because yo
 
 For example to solve $x$ in $25^x = 50$ correct to two decimal places you simply apply the following reasoning.  If the LHS = RHS then the logarithm of the LHS must be equal to the logarithm of the RHS.  By applying Law 5, you will be able to use your calculator to solve for $x$.
 
-\begin{wex}{Solving Log equations}{Solve for $x$:\quad $25^x = 50$ correct to two decimal places.}{
+\begin{wex}{Solving Log equations}{Solve for $x$:\quad $25^x = 50$ correct to two decimal places.\pagebreak}{
 \westep{Taking the log of both sides}
 $\log{25^x} = \log{50}$
 \westep{Use Law 5}
@@ -353,7 +365,7 @@ For example, the equation
 \nequ{2^{(x+2)}=1}
 is solved by moving all terms with the unknown to one side of the equation and taking all constants to the other side of the equation
 \begin{eqnarray*}
-2^x\cdot2^2&=&1\\
+2^x\,.\,2^2&=&1\\
 2^x &=&\frac{1}{2^2}\\
 \end{eqnarray*}
 Then, take the logarithm of each side. 
@@ -380,7 +392,7 @@ Similarly, $9^{(1-2x)}=3^4$ is solved as follows:
 Substituting into the original equation, yields
 \nequ{9^{(1-2(\frac{-1}{2}))}=9^{(1+1)}=3^{2(2)}=3^4 \quad \checkmark}
 
-\begin{wex}{Exponential Equation}{Solve for $x$ in $7 \cdot 5^{(3x+3)}=35$}{
+\begin{wex}{Exponential Equation}{Solve for $x$ in $7 \,.\, 5^{(3x+3)}=35$}{
 \westep{Identify the base with $x$ as an exponent}
 There are two possible bases: $5$ and $7$. $x$ is an exponent of $5$.
 \westep{Eliminate the base with no $x$}
@@ -396,7 +408,7 @@ In order to eliminate $7$, divide both sides of the equation by $7$ to give:
 x&=&-\frac{2}{3}
 \end{eqnarray*}
 \westep{Substitute into the original equation to check answer.}
-\nequ{7 \cdot 5^{((-3\times\frac{2}{3})+3)}=7 \cdot 5^{(-2+3)}=7 \cdot 5^{1}=35 \quad \checkmark}
+\nequ{7 \,.\, 5^{((-3\times\frac{2}{3})+3)}=7 \,.\, 5^{(-2+3)}=7 \,.\, 5^{1}=35 \quad \checkmark}
 }\end{wex}
 
 \Exercise{}{
