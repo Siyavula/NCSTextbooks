@@ -87,16 +87,20 @@
 \pagestyle{fancy}
 \renewcommand{\sectionmark}[1]{\markright{\thesection}{}}
 \renewcommand{\footrulewidth}{0.4pt}
+\newpage
+\thispagestyle{empty}
+\mbox{}
 
-\cleardoublepage
+\input{EverythingMathsTitlePages}
+
 \tableofcontents
-\cleardoublepage
 \pagenumbering{arabic}
-
 
 % change shortcodeprefix to the correct value
 \renewcommand{\shortcodeprefix}{EMC}
 
+\newgeometry{lmargin=0.1\paperwidth, rmargin=0.25\paperwidth, tmargin=1in, bmargin=1in, twoside, centering, includehead,  marginparwidth=0.225\paperwidth}
+\normalfont
 
  \input{Mathematics_Gr12_Ch_1-chapterIntroductiontoBook}
  \input{Mathematics_Gr12_Ch_2-Logarithms}
@@ -110,7 +114,13 @@
  \input{Mathematics_Gr12_Ch_10-Trigonometry}
  \input{Mathematics_Gr12_Ch_11-Statistics}
  \input{Mathematics_Gr12_Ch_12-CombinationsandPermutations}
- \input{Mathematics_Gr12_Ch_15-chapterGNUFreeDocumentationLicenselabelfdl}
+\newpage
+\thispagestyle{empty}
+\mbox{}
+\newpage
+\thispagestyle{empty}
+\mbox{}
+
 
 % % %  NO LONGER INCLUDED
 % % %  \input{Mathematics_Gr12_Ch_13-chapterGeneralExercises}
