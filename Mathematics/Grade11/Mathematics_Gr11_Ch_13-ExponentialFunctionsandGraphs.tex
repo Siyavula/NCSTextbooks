@@ -152,8 +152,8 @@ The range of $y=ab^{(x+p)} + q$ is dependent on the sign of $a$.
 If $a>0$ then:
 \begin{eqnarray*}
 b^{(x+p)}&>& 0\\
-a\cdot b^{(x+p)} &>& 0\\
-a\cdot b^{(x+p)}+q &>& q\\
+a\,.\, b^{(x+p)} &>& 0\\
+a\,.\, b^{(x+p)}+q &>& q\\
 f(x) &>& q
 \end{eqnarray*}
 Therefore, if $a>0$, then the range is $\{f(x):f(x)\in[q;\infty)\}$.
@@ -161,18 +161,18 @@ Therefore, if $a>0$, then the range is $\{f(x):f(x)\in[q;\infty)\}$.
 If $a<0$ then:
 \begin{eqnarray*}
 b^{(x+p)} &>& 0\\
-a\cdot b^{(x+p)} &<& 0\\
-a\cdot b^{(x+p)}+q &<& q\\
+a\,.\, b^{(x+p)} &<& 0\\
+a\,.\, b^{(x+p)}+q &<& q\\
 f(x) &<& q
 \end{eqnarray*}
 Therefore, if $a<0$, then the range is $\{f(x):f(x)\in(-\infty;q]\}$.
 
-For example, the domain of $g(x)=3\cdot 2^{x+1} + 2$ is $\{x:x\in\mathbb{R}\}$.
+For example, the domain of $g(x)=3\,.\, 2^{x+1} + 2$ is $\{x:x\in\mathbb{R}\}$.
 For the range,
 \begin{eqnarray*}
 2^{x+1}&>&0\\
-3 \cdot 2^{x+1}&>&0\\
-3 \cdot 2^{x+1}+2&>&2
+3 \,.\, 2^{x+1}&>&0\\
+3 \,.\, 2^{x+1}+2&>&2
 \end{eqnarray*}
 Therefore the range is $\{g(x):g(x)\in[2;\infty)\}$.
 
@@ -206,12 +206,12 @@ y_{int}&=&ab^{(0+p)} + q\\
 &=&ab^p + q
 \end{eqnarray}
 
-For example, the $y$-intercept of $g(x)=3\cdot 2^{x+1} + 2$ is given by setting $x=0$ to get:
+For example, the $y$-intercept of $g(x)=3\,.\, 2^{x+1} + 2$ is given by setting $x=0$ to get:
 \begin{eqnarray*}
-y&=&3\cdot 2^{x+1} + 2\\
-y_{int}&=&3\cdot 2^{0+1} + 2\\
-&=&3\cdot 2^{1} + 2\\
-&=&3 \cdot 2 + 2\\
+y&=&3\,.\, 2^{x+1} + 2\\
+y_{int}&=&3\,.\, 2^{0+1} + 2\\
+&=&3\,.\, 2^{1} + 2\\
+&=&3 \,.\, 2 + 2\\
 &=&8\\
 \end{eqnarray*}
 
@@ -224,14 +224,14 @@ b^{(x_{int}+p)}&=&-\frac{q}{a}
 \end{eqnarray}
 Which only has a real solution if either $a<0$ or $q<0$ and $a\neq0$. Otherwise, the graph of the function of form $y=ab^{(x+p)} + q$ does not have any $x$-intercepts.
 
-For example, the $x$-intercept of $g(x)=3\cdot 2^{x+1} + 2$ is given by setting $y=0$ to get:
+For example, the $x$-intercept of $g(x)=3\,.\, 2^{x+1} + 2$ is given by setting $y=0$ to get:
 \begin{eqnarray*}
-y&=&3\cdot 2^{x+1} + 2\\
-0&=&3\cdot 2^{x_{int}+1} + 2\\
--2&=&3\cdot 2^{x_{int}+1}\\
+y&=&3\,.\, 2^{x+1} + 2\\
+0&=&3\,.\, 2^{x_{int}+1} + 2\\
+-2&=&3\,.\, 2^{x_{int}+1}\\
 2^{x_{int}+1}&=&\frac{-2}{3}
 \end{eqnarray*}
-which has no real solution. Therefore, the graph of $g(x)=3\cdot 2^{x+1} + 2$ does not have a $x$-intercept.
+which has no real solution. Therefore, the graph of $g(x)=3\,.\, 2^{x+1} + 2$ does not have a $x$-intercept.
 
 \Exercise{Intercepts}{
 \begin{enumerate}
@@ -252,7 +252,7 @@ which has no real solution. Therefore, the graph of $g(x)=3\cdot 2^{x+1} + 2$ do
 \subsection{Asymptotes}
 The asymptote is the place at which the function is undefined.  For functions of the form $y=ab^{(x+p)} + q$ this is along the line where $y = q$.
 
-For example, the asymptote of $g(x)=3\cdot 2^{x+1} + 2$ is $y = 2$.
+For example, the asymptote of $g(x)=3\,.\, 2^{x+1} + 2$ is $y = 2$.
 
 \Exercise{Asymptotes}{
 \begin{enumerate}
@@ -279,7 +279,7 @@ In order to sketch graphs of functions of the form, $f(x)=ab^{(x+p)} + q$, we ne
 \item{$x$-intercept}
 \end{enumerate}
 
-For example, sketch the graph of $g(x)=3\cdot 2^{x+1} + 2$. Mark the intercepts.
+For example, sketch the graph of $g(x)=3\,.\, 2^{x+1} + 2$. Mark the intercepts.
 
 We have determined the domain to be $\{x:x\in\mathbb{R}\}$ and the range to be $\{g(x):g(x)\in(2;\infty)\}$.
 
@@ -293,7 +293,7 @@ The $y$-intercept is $y_{int}=8$ and there is no $x$-intercept.
 \psaxes[arrows=<->](0,0)(-5,-1)(5,12)
 \psplot[plotstyle=curve,arrows=<->]{-5}{0.73}{2 x 1 add exp 3 mul 2 add}
 \end{pspicture}
-\caption{Graph of $g(x)=3\cdot 2^{x+1} + 2$.}
+\caption{Graph of $g(x)=3\,.\, 2^{x+1} + 2$.}
 \label{fig:mf:g:exponentialsketchexample}
 \end{center}
 \end{figure}
@@ -304,8 +304,8 @@ The $y$-intercept is $y_{int}=8$ and there is no $x$-intercept.
   \begin{enumerate}
   \item{$y = 2^x + 2$}
   \item{$y = 2^{x+2}$}
-  \item{$y = 2\cdot2^x$}
-  \item{$y = 2\cdot2^{x+2} + 2$}
+  \item{$y = 2\,.\,2^x$}
+  \item{$y = 2\,.\,2^{x+2} + 2$}
   \end{enumerate}}
 
 \item{Draw the graph of $f(x) = 3^x$.}

@@ -43,13 +43,13 @@ a_2 &=& a_1 + d \\
 a_3 &=& a_2 + d = (a_1 + d) + d = a_1 + 2d \\
 a_4 &=& a_3 + d = (a_1 + 2d) + d = a_1 + 3d \\
 \ldots \\
-a_n &=& a_1 + d \cdot (n - 1)
+a_n &=& a_1 + d \,.\, (n - 1)
 \end{eqnarray*}
 
 Thus, the equation for the $n^{th}$-term is:
 \begin{equation}
 \label{eq:mp:s:arithseq:2}
-a_n = a_1 + d \cdot (n - 1)
+a_n = a_1 + d \,.\, (n - 1)
 \end{equation}
 Given $a_1$ and the common difference, $d$, the entire set of numbers belonging to an arithmetic sequence can be generated.
 
@@ -229,14 +229,14 @@ geometric sequences:
 From the flu example above we know that $a_1 = 2$ and $r = 2$, and we have seen from the table that the
 $n^{th}$-term is given by $a_n = 2 \times 2^{n-1}$. Thus, in general,
 \begin{equation}
-a_n = a_1 \cdot r^{n-1}
+a_n = a_1 \,.\, r^{n-1}
 \end{equation}
 where $a_1$ is the first term and $r$ is called the \textit{common ratio}. 
 
 So, if we want to know how many people are newly-infected after 10 days, we need to work
 out $a_{10}$:
 \begin{eqnarray*}
-a_n &=& a_1 \cdot r^{n-1} \\
+a_n &=& a_1 \,.\, r^{n-1} \\
 a_{10} &=& 2 \times 2^{10-1} \\
 &=& 2 \times 2^9 \\
 &=& 2 \times 512 \\
@@ -247,7 +247,7 @@ That is, after 10 days, there are $1~024$ newly-infected people.
 
 Or, after how many days would $16~384$ people be newly-infected with the flu virus?
 \begin{eqnarray*}
-a_n &=& a_1 \cdot r^{n-1} \\
+a_n &=& a_1 \,.\, r^{n-1} \\
 16~384 &=& 2 \times 2^{n-1} \\
 16~384 \div 2 &=& 2^{n-1} \\
 8~192 &=& 2^{n-1} \\
@@ -336,7 +336,7 @@ The above equation is an example of a \textit{recursive equation} since we can c
 $n^{th}$-term only by considering the previous term in the sequence. Compare this with Equation
 (\ref{eq:mp:s:arithseq:2}),
 \begin{equation}
-a_n = a_1 + d \cdot (n - 1)
+a_n = a_1 + d \,.\, (n - 1)
 \end{equation}
 where one can directly calculate the $n^{th}$-term of an arithmetic sequence without knowing
 previous terms. 
@@ -344,18 +344,18 @@ previous terms.
 For quadratic sequences, we noticed the difference between consecutive terms is given by
 (\ref{eq:mp:s:quadseq:2}):
 \begin{eqnarray*}
-a_n - a_{n-1} = D \cdot (n-2) + d
+a_n - a_{n-1} = D \,.\, (n-2) + d
 \end{eqnarray*}
 
 Therefore, we re-write the equation as
 \begin{equation}
-a_n = a_{n-1} + D \cdot (n-2) + d
+a_n = a_{n-1} + D \,.\, (n-2) + d
 \end{equation}
 which is then a recursive equation for a quadratic sequence with common second difference, $D$. 
 
 Using (\ref{eq:mp:s:geomseq:1}), the recursive equation for a geometric sequence is:
 \begin{equation}
-a_n = r \cdot a_{n-1}
+a_n = r \,.\, a_{n-1}
 \end{equation}
 \\
 Recursive equations are extremely powerful: you can work out every term in the series just by
@@ -475,7 +475,7 @@ for any value $x$.
 \item {For any constant $c$ that is not dependent on the index $i$,
 \begin{eqnarray}
 \label{eq:mp:series:sigma:rule2}
-\sum_{i=1}^n c \cdot a_i &=& c \cdot a_1 + c \cdot a_2 + c \cdot a_3 + \ldots + c \cdot a_n \nonumber \\
+\sum_{i=1}^n c \,.\, a_i &=& c \,.\, a_1 + c \,.\, a_2 + c \,.\, a_3 + \ldots + c \,.\, a_n \nonumber \\
 &=& c \; (a_1 + a_2 + a_3 + \ldots + a_n) \nonumber \\
 &=& c \sum_{i=1}^n a_i
 \end{eqnarray}
@@ -488,7 +488,7 @@ for any value $x$.
 \item Determine $\sum_{i=-1}^3 \limits i$.
 \item Expand $\sum_{k=0}^5 \limits i$.
 \item{Calculate the value of $a$ if:
-\nequ{\sum_{k=1}^{3}a\cdot 2^{k-1}=28}}
+\nequ{\sum_{k=1}^{3}a\,.\, 2^{k-1}=28}}
 \end{enumerate}
 
 % Automatically inserted shortcodes - number to insert 4
@@ -537,7 +537,7 @@ When we sum a finite number of terms in an arithmetic sequence, we get a \textit
 A simple arithmetic sequence is when $a_1=1$ and $d=0$ in the general form \eqref{eq:mp:series:lin:gen}; in other words all the terms in the sequence are $1$:
 \begin{eqnarray*}
 a_i &=& a_1 + d \; (i - 1) \\
-&=& 1 + 0 \cdot (i - 1) \\
+&=& 1 + 0 \,.\, (i - 1) \\
 &=& 1 \\
 \{a_i\} &=& \{1; \: 1; \: 1; \: 1; \: 1; \: \ldots \}
 \end{eqnarray*}
@@ -554,7 +554,7 @@ Because all the terms are equal to $1$, it means that if we sum to $n$ we will b
 Another simple arithmetic sequence is when $a_1=1$ and $d=1$, which is the sequence of positive integers:
 \begin{eqnarray*}
 a_i &=& a_1 + d \; (i - 1) \\
-&=& 1 + 1 \cdot (i - 1) \\
+&=& 1 + 1 \,.\, (i - 1) \\
 &=& i \\
 \{a_i\} &=& \{1; \: 2; \: 3; \: 4; \: 5; \: \ldots \}
 \end{eqnarray*}
@@ -624,7 +624,7 @@ or, more sensibly, we could use Equation \eqref{eq:mp:se:fa:3} noting that $a_1=
 \begin{eqnarray*}
 \label{eq:mp:se:fa:ex:smartway}
 S_{20} &=& \sum_{i=1}^{20} \; [3 + 7 \, (i-1)] \\
-&=& \textstyle \small {\frac{20}{2}} \: [2 \cdot 3 + 7 \, (20 - 1) ] \\
+&=& \textstyle \small {\frac{20}{2}} \: [2 \,.\, 3 + 7 \, (20 - 1) ] \\
 &=& 1390
 \end{eqnarray*}
 This example demonstrates how useful Equation \eqref{eq:mp:se:fa:3} is.
@@ -734,7 +734,7 @@ Therefore,
 When we sum a known number of terms in a geometric sequence, we get a \textit{finite geometric series}. %We know from \eqref{eq:mp:s:geom:genalt}, that 
 We can write out each term of a geometric sequence in the general form:
 \begin{equation}
-a_n = a_1 \cdot r^{n-1}
+a_n = a_1 \,.\, r^{n-1}
 \end{equation}
 where
 \begin{itemize}
@@ -764,7 +764,7 @@ S_n(r - 1) = a_1\,(r^n - 1)
 Dividing by $(r-1)$ on both sides, we arrive at the general form of a geometric series:
 \begin{equation}
 \label{eq:mp:se:fg:4}
-\boxed{S_n = \sum_{i=1}^n a_1 \cdot r^{i-1} = \frac{a_1 \, (r^n - 1)}{r-1}}
+\boxed{S_n = \sum_{i=1}^n a_1 \,.\, r^{i-1} = \frac{a_1 \, (r^n - 1)}{r-1}}
 \end{equation}
 % The following video summarises what you have learnt so far about sequences and series:
 % Khan Academy video on sequences and series, part 1:SIYAVULA-VIDEO:http://cnx.org/content/m39301/latest/#series-1
@@ -778,7 +778,7 @@ Dividing by $(r-1)$ on both sides, we arrive at the general form of a geometric 
 \item{The sum of the first eight terms of the sequence.}
 \end{enumerate}}
 \item{Determine:
-\nequ{\sum_{n=1}^{4}3\cdot2^{n-1}}}
+\nequ{\sum_{n=1}^{4}3\,.\,2^{n-1}}}
 \item Find the sum of the first $11$ terms of the geometric series $6 + 3 + \tfrac{3}{2} + \tfrac{3}{4} + \ldots$
 \item Show that the sum of the first $n$ terms of the geometric series $$54 + 18 + 6 + ... + 5 \, (\tfrac{1}{3})^{n-1}$$ is given by $81 - 3^{4-n}$.
 \item The eighth term of a geometric sequence is $640$. The third term is $20$. Find the sum of the first 7 terms.
@@ -827,7 +827,7 @@ There is a simple test for knowing instantly which geometric series converges an
 
 Let's start off with Formula \eqref{eq:mp:se:fg:4} for the finite geometric series:
 \begin{equation*}
-S_n = \sum_{i=1}^n a_1 \cdot r^{i-1} = \frac{a_1 \, (r^n - 1)}{r-1}
+S_n = \sum_{i=1}^n a_1 \,.\, r^{i-1} = \frac{a_1 \, (r^n - 1)}{r-1}
 \end{equation*}
 
 Now we will investigate the behaviour of $r^n$ for $-1<r<1$ as $n$ becomes larger.
@@ -835,8 +835,8 @@ Now we will investigate the behaviour of $r^n$ for $-1<r<1$ as $n$ becomes large
 Take $r=\frac{1}{2}$:
 \begin{eqnarray*}
 n=1 &:& r^n = r^1 =(\tfrac{1}{2})^1 = \tfrac{1}{2} \\
-n=2 &:& r^n = r^2 =(\tfrac{1}{2})^2 = \tfrac{1}{2} \cdot \tfrac{1}{2} = \tfrac{1}{4} < \tfrac{1}{2} \\
-n=3 &:& r^n = r^3 =(\tfrac{1}{2})^3 = \tfrac{1}{2} \cdot \tfrac{1}{2} \cdot \tfrac{1}{2} = \tfrac{1}{8} < \tfrac{1}{4}
+n=2 &:& r^n = r^2 =(\tfrac{1}{2})^2 = \tfrac{1}{2} \,.\, \tfrac{1}{2} = \tfrac{1}{4} < \tfrac{1}{2} \\
+n=3 &:& r^n = r^3 =(\tfrac{1}{2})^3 = \tfrac{1}{2} \,.\, \tfrac{1}{2} \,.\, \tfrac{1}{2} = \tfrac{1}{8} < \tfrac{1}{4}
 \end{eqnarray*}
 
 Since $r$ is in the range $-1<r<1$, we see that $r^n$ gets closer to $0$ as $n$ gets larger.
@@ -866,13 +866,13 @@ where $a_1$ is the first term of the series and $r$ is the common ratio.
 \begin{enumerate}
 \item What does $(\tfrac{2}{5})^n$ approach as $n$ tends towards $\infty$?
 \item{Given the geometric series:
-\nequ{2\cdot(5)^5+2\cdot(5)^4+2\cdot(5)^3+\ldots}
+\nequ{2\,.\,(5)^5+2\,.\,(5)^4+2\,.\,(5)^3+\ldots}
 \begin{enumerate}
 \item Show that the series converges
 \item Calculate the sum to infinity of the series
 \item Calculate the sum of the first eight terms of the series, correct to two decimal places.
 \item Determine
-\nequ{\sum_{n=9}^{\infty}2\cdot{5}^{6-n}}
+\nequ{\sum_{n=9}^{\infty}2\,.\,{5}^{6-n}}
 correct to two decimal places using previously calculated results.
 \end{enumerate}}
 \item Find the sum to infinity of the geometric series $3 + 1 + \tfrac{1}{3} + \tfrac{1}{9} + \ldots$
@@ -988,7 +988,7 @@ He sets a mathematical quiz with $20$ questions. For the correct answer to the f
 \item{$x=-5$}
 \end{enumerate}
 
-\item{Calculate: \qquad $\sum_{i=1}^{\infty} \limits \; 5 \cdot 4^{-i}$}
+\item{Calculate: \qquad $\sum_{i=1}^{\infty} \limits \; 5 \,.\, 4^{-i}$}
 
 \item{The sum of the first $p$ terms of a sequence is $p \; (p+1)$. Find the $10^{th}$ term.}
 
