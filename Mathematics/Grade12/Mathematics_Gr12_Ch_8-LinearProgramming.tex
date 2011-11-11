@@ -14,22 +14,46 @@ In Grade 11 you were introduced to linear programming and solved problems by loo
 Here is a recap of some of the important concepts in linear programming.
 
 \subsection{Feasible Region and Points}
-Constraints mean that we cannot just take any $x$ and $y$ when looking for the $x$ and $y$ that optimise our objective function. If we think of the variables $x$ and $y$ as a point $(x;y)$ in the $xy$-plane then we call the set of all points in the $xy$-plane that satisfy our constraints the \textbf{feasible region}. Any point in the feasible region is called a \textbf{feasible point}.
+Constraints mean that we cannot just take any $x$ and $y$ when looking for the $x$ and $y$ that optimise our objective function. If we think of the variables $x$ and $y$ as a point $(x;y)$ in the $xy$-plane then we call the set of all points in the $xy$-plane that satisfy 
+\Tip{The constraints are used to create bounds of the solution.}
+our constraints the \textbf{feasible region}. Any point in the feasible region is called a \textbf{feasible point}.
 
 For example, the constraints
 \begin{eqnarray*}
 x\geq 0\\
 y\geq 0
 \end{eqnarray*}
+
 mean that every $(x,y)$ we can consider must lie in the first quadrant of the $xy$ plane. The constraint
 \nequ{x\geq y}
 means that every $(x,y)$ must lie on or below the line $y=x$ and the constraint
 \nequ{x\leq 20}
 means that $x$ must lie on or to the left of the line $x=20$. 
 
-We can use these constraints to draw the feasible region as shown by the shaded region in Figure~\ref{fig:lp:feasible}. 
+\Tip{
+% \begin{center}
+% \begin{tabular}{lp{7cm}}
+\mbox{\boldmath${ax+by=c}$}\\
+\begin{list}{\labelitemi}{\leftmargin=1em}
+\renewcommand{\labelitemi}{$\circ$}
+\item
+If $b\neq 0$, feasible points must lie \textit{on} the line $y=-\frac{a}{b}x+\frac{c}{b}$\\
+\item
+If $b=0$, feasible points must lie \textit{on} the line $x=c/a$\\
+\end{list}
+\mbox{\boldmath${ax+by\leq c}$}\\
+\begin{list}{\labelitemi}{\leftmargin=1em}
+\renewcommand{\labelitemi}{$\circ$}
+\item
+If $b\neq 0$, feasible points must lie \textit{on} or \textit{below} the line $y=-\frac{a}{b}x+\frac{c}{b}$.\\
+\item
+If $b=0$, feasible points must lie \textit{on} or \textit{to the left of} the line $x=c/a$.\\
+\end{list}
+% \end{tabular}
+% \end{center}
+}
 
-\Tip{The constraints are used to create bounds of the solution.}
+We can use these constraints to draw the feasible region as shown by the shaded region in Figure~\ref{fig:lp:feasible}. 
 
 \begin{figure}[!ht]
 \begin{center}
@@ -51,16 +75,7 @@ $y\geq 0$, $x\geq y$ and $x\leq 20$.}
 \end{center}
 \end{figure}
 
-\Tip{
-\begin{center}
-\begin{tabular}{lp{7cm}}
-$ax+by=c$& If $b\neq 0$, feasible points must lie \textit{on} the line $y=-\frac{a}{b}x+\frac{c}{b}$\\
-&If $b=0$, feasible points must lie \textit{on} the line $x=c/a$\\
-$ax+by\leq c$&If $b\neq 0$, feasible points must lie \textit{on} or \textit{below} the line $y=-\frac{a}{b}x+\frac{c}{b}$.\\
-&If $b=0$, feasible points must lie \textit{on} or \textit{to the left of} the line $x=c/a$.\\
-\end{tabular}
-\end{center}
-}
+
 When a constraint is linear, it means that it requires that any feasible point $(x,y)$ lies on one side of or on a line. Interpreting constraints as graphs in the $xy$ plane is very important since it allows us to construct the feasible region such as in Figure~\ref{fig:lp:feasible}. 
 
 \section{Linear Programming and the Feasible Region}
@@ -328,7 +343,7 @@ Pentagon lawn cutters that will yield a maximum profit.}
 % \usepackage{epsfig}
 % \usepackage{pst-grad} % For gradients
 % \usepackage{pst-plot} % For axes
-\scalebox{1} % Change this value to rescale the drawing.
+\scalebox{0.7} % Change this value to rescale the drawing.
 {
 \begin{pspicture}(0,-4.170469)(6.9175,4.190469)
 \definecolor{color11b}{rgb}{0.8,0.8,0.8}
@@ -357,6 +372,7 @@ Pentagon lawn cutters that will yield a maximum profit.}
 \psline[linewidth=0.04cm,linestyle=dashed,dash=0.16cm 0.16cm](0.8921875,-0.14953125)(2.8921876,-3.7495313)
 \end{pspicture} 
 }
+\pagebreak
 \westep{Profit equation}
 \nequ{P = 1~200x + 400y}
 \westep{Maximum profit}
