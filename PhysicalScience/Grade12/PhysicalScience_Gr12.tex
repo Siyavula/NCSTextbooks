@@ -1,4 +1,4 @@
-\documentclass[9pt,a4paper,titlepage,twoside,openright]{extbook}
+\documentclass[9pt,a4paper,titlepage,twoside,openany]{extbook}
 \renewcommand{\familydefault}{\sfdefault}
 \usepackage{extsizes}
 \usepackage{float} % for figures to appear where you want them
@@ -100,33 +100,34 @@ of hours went into making them and they are a gift to everyone in the education 
 \pagestyle{fancy}
 \renewcommand{\sectionmark}[1]{\markright{\thesection}{}}
 \renewcommand{\footrulewidth}{0.4pt}
-
+% change shortcodeprefix to the correct value
+\renewcommand{\shortcodeprefix}{ESC}
 \clearpage
 \tableofcontents
 \cleardoublepage
 \pagenumbering{arabic}
 \part{Chemistry}
-% \include{PhSc_Gr12_Ch_1-OrganicMolecules}
-% \include{PhSc_Gr12_Ch_2-OrganicMacromolecules}
-% \include{PhSc_Gr12_Ch_3-ReactionRates}
-% \include{PhSc_Gr12_Ch_4-ElectrochemicalReactions}
-\include{PhSc_Gr12_Ch_5-TheChemicalIndustry}
+  \include{PhSc_Gr12_Ch_1-OrganicMolecules}
+  \include{PhSc_Gr12_Ch_2-OrganicMacromolecules}
+  \include{PhSc_Gr12_Ch_3-ReactionRates}
+  \include{PhSc_Gr12_Ch_4-ElectrochemicalReactions}
+  \include{PhSc_Gr12_Ch_5-TheChemicalIndustry}
 
 \part{Physics}
-% \include{PhSc_Gr12_Ch_6-MotioninTwoDimensions}
-% \include{PhSc_Gr12_Ch_7-MechanicalPropertiesofMatter}
-% \include{PhSc_Gr12_Ch_8-WorkEnergyandPower}
-% \include{PhSc_Gr12_Ch_9-DopplerEffect}
-% \include{PhSc_Gr12_Ch_10-Colour}
-% \include{PhSc_Gr12_Ch_11-2Dand3DWavefronts}
-% \include{PhSc_Gr12_Ch_12-WaveNatureofMatter}
-% \include{PhSc_Gr12_Ch_13-Electrodynamics}
-% \include{PhSc_Gr12_Ch_14-Electronics}
-% \include{PhSc_Gr12_Ch_15-OpticalPhenomenaandPropertiesofMatter}
-% \include{PhSc_Gr12_Ch_16-chapterExercises}
-% \include{PhSc_Gr12_Ch_17-chapterEssayHowacellphoneworks}
-% \include{PhSc_Gr12_Ch_18-chapterEssayHowaPhysiotherapistusestheConceptofLevers}
-% \include{PhSc_Gr12_Ch_19-chapterEssayHowaPilotUsesVectors}
+  \include{PhSc_Gr12_Ch_6-MotioninTwoDimensions}
+  \include{PhSc_Gr12_Ch_7-MechanicalPropertiesofMatter}
+  \include{PhSc_Gr12_Ch_8-WorkEnergyandPower}
+  \include{PhSc_Gr12_Ch_9-DopplerEffect}
+  \include{PhSc_Gr12_Ch_10-Colour}
+  \include{PhSc_Gr12_Ch_11-2Dand3DWavefronts}
+  \include{PhSc_Gr12_Ch_12-WaveNatureofMatter}
+  \include{PhSc_Gr12_Ch_13-Electrodynamics}
+  \include{PhSc_Gr12_Ch_14-Electronics}
+  \include{PhSc_Gr12_Ch_15-OpticalPhenomenaandPropertiesofMatter}
+  \include{PhSc_Gr12_Ch_16-chapterExercises}
+  \include{PhSc_Gr12_Ch_17-chapterEssayHowacellphoneworks}
+  \include{PhSc_Gr12_Ch_18-chapterEssayHowaPhysiotherapistusestheConceptofLevers}
+  \include{PhSc_Gr12_Ch_19-chapterEssayHowaPilotUsesVectors}
 
 \appendix
 \include{GNU_License}
