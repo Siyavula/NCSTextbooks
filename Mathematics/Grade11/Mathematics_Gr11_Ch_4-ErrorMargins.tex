@@ -2,13 +2,18 @@
 \label{m:ng11}
 
 \section{Introduction}
+When rounding off, we throw away some of the digits of a number. This
+means that we are making an error. In this chapter we discuss how
+errors can grow larger than expected if we are not careful with
+algebraic calculations.
 
-\chapterstartvideo{aaa}
+\chapterstartvideo{VMefg}
 
 %\begin{syllabus}
 %\item Demonstrate an understanding of error margins.
 %\end{syllabus}
 
+\section{Rounding Off}
 We have seen that numbers are either rational or irrational and we have see how to round off numbers. However, in a calculation that has many steps, it is best to leave the rounding off right until the end.
 
 For example, if you were asked to write
@@ -21,7 +26,7 @@ as a decimal number correct to two decimal places, there are two ways of doing t
 \label{tab:mn:a:errors:example1}
 $\begin{array}{|rcl|rcl|}\hline
 \multicolumn{3}{|c}{\textbf{\Large{\smiley} \normalsize Method 1}}& \multicolumn{3}{|c|}{\textbf{\Large{\frownie} \normalsize Method 2}}\\\hline\hline
-3\sqrt{3}+\sqrt{12}&=&3\sqrt{3}+\sqrt{4\cdot 3} &3\sqrt{3}+\sqrt{12}&=&3 \times 1,73+3,46\\
+3\sqrt{3}+\sqrt{12}&=&3\sqrt{3}+\sqrt{4\,.\, 3} &3\sqrt{3}+\sqrt{12}&=&3 \times 1,73+3,46\\
 &=&3\sqrt{3}+2\sqrt{3} &&=&5,19+3,46\\
 &=&5\sqrt{3} &&=&8,65\\
 &=&5 \times 1,732050808\ldots &&&\\
@@ -35,12 +40,12 @@ In the example we see that Method 1 gives $8,66$ as an answer while Method 2 giv
 
 In general, it is best to simplify any expression as much as possible, before using your calculator to work out the answer in decimal notation.
 
-\Tip{Simplification and Accuracy}{It is best to simplify all expressions as much as possible before rounding off answers. This maintains the accuracy of your answer.}
+\Tip{It is best to simplify all expressions as much as possible before rounding off answers. This maintains the accuracy of your answer.}
 
 \begin{wex}{Simplification and Accuracy}{Calculate $\sqrt[3]{54}+\sqrt[3]{16}$. Write the answer to three decimal places.}{\westep{Simplify the expression}
 \begin{eqnarray*}
-\sqrt[3]{54}+\sqrt[3]{16}&=&\sqrt[3]{27 \cdot 2}+\sqrt[3]{8 \cdot 2}\\
-&=&\sqrt[3]{27} \cdot \sqrt[3]{2}+\sqrt[3]{8} \cdot \sqrt[3]{2}\\
+\sqrt[3]{54}+\sqrt[3]{16}&=&\sqrt[3]{27 \,.\, 2}+\sqrt[3]{8 \,.\, 2}\\
+&=&\sqrt[3]{27} \,.\, \sqrt[3]{2}+\sqrt[3]{8} \,.\, \sqrt[3]{2}\\
 &=&3 \sqrt[3]{2}+2 \sqrt[3]{2}\\
 &=&5 \sqrt[3]{2}
 \end{eqnarray*}

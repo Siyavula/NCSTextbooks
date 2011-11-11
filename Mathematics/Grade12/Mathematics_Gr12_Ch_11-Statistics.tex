@@ -7,6 +7,7 @@
 \section{Introduction}
 In this chapter, you will use the mean, median, mode and standard deviation of a set of data to identify whether the data is normally distributed or whether it is skewed. You will learn more about populations and selecting different kinds of samples in order to avoid bias. You will work with lines of best fit, and learn how to find a regression equation and a correlation coefficient. You will analyse these measures in order to draw conclusions and make predictions.
 
+\chapterstartvideo{VMhwi}
 \section{Normal Distribution}
 \Activity{Investigation}{}
 {You are given a table of data below. 
@@ -171,7 +172,7 @@ Secondly, the \emph{size} of the sample population must be large enough. It is n
 So how does one ensure that ones sample is representative? There are a variety of methods available, which we will look at now. \\
 
 \begin{enumerate}
-\item[] \textbf{Random Sampling.} Every person in the country has an equal chance of being selected. It is unbiased and also independant, which means that the selection of one person has no effect on the selection on another. One way of doing this would be to give each person in the country a number, and then ask a computer to give us a list of random numbers. We could then send the questionnaire to the people corresponding to the random numbers.
+\item[] \textbf{Random Sampling.} Every person in the country has an equal chance of being selected. It is unbiased and also independent, which means that the selection of one person has no effect on the selection on another. One way of doing this would be to give each person in the country a number, and then ask a computer to give us a list of random numbers. We could then send the questionnaire to the people corresponding to the random numbers.
 \item[]  \textbf{Systematic Sampling.} Again give every person in the country a number, and then, for example, select every hundredth person on the list. So person with number $1$ would be selected, person with number $100$ would be selected, person with number $200$ would be selected, etc.
 \item[] \textbf{Stratified Sampling.} We consider different subgroups of the population, and take random samples from these. For example, we can divide the population into male and female, different ages, or into different income ranges. 
 \item[] \textbf{Cluster Sampling.} Here the sample is concentrated in one area. For example, we consider all the people living in one urban area.
@@ -238,13 +239,14 @@ Suppose you are doing an experiment with washing dishes. You count how many dish
 }
 \end{center}
 
-If $t$ is the time taken, and $d$ the number of dishes, then it looks as though $t$ is proportional to $d$, ie. $t=m\cdot d$, where $m$ is the constant of proportionality. There are two questions that interest us now.
+If $t$ is the time taken, and $d$ the number of dishes, then it looks as though $t$ is proportional to $d$, ie. $t=m\,.\, d$, where $m$ is the constant of proportionality. There are two questions that interest us now.
 \begin{enumerate}
 \item How do we find $m$? One way you have already learnt, is to draw a line of best-fit through the data points, and then measure the gradient of the line. But this is not terribly precise. Is there a better way of doing it?
-\item How well does our line of best fit really fit our data?  If the points on our plot don't all lie close to the line of best fit, but are scattered everywhere, then the fit is not 'good', and our assumption that $t=m\cdot d$ might be incorrect. Can we find a quantitative measure of how well our line really fits the data?
+\item How well does our line of best fit really fit our data?  If the points on our plot don't all lie close to the line of best fit, but are scattered everywhere, then the fit is not 'good', and our assumption that $t=m\,.\, d$ might be incorrect. Can we find a quantitative measure of how well our line really fits the data?
 \end{enumerate}
 In this chapter, we answer both of these questions, using the techniques of \emph{regression analysis}.
-Phet simulation for curve fitting: SIYAVULA-SIMULATION:http://cnx.org/content/m39305/latest/#curve-fitting
+% Phet simulation for curve fitting: SIYAVULA-SIMULATION:http://cnx.org/content/m39305/latest/#curve-fitting
+\simulation{Phet for curve fitting}{VMibv}
 \begin{wex}{Fitting by hand}
 {Use the data given to draw a scatter plot and line of best fit. Now write down the equation of the line that best seems to fit the data.\\ \\
 \begin{tabular}{l|l|l|l|l|l|l}
@@ -323,7 +325,7 @@ Suppose we have a data set of $n$ points  $\{(x_1;y_1), (x_2;y_2), \ldots , (x_n
  $$\text{distance}=y_1-f(x_1)=y_1-(mx_1+c)$$
 We now square each of these distances and add them together. Lets call this sum $S(m,c)$. Then we have that
 \begin{eqnarray*}
-S(m,c)&=&(y_1-f(x_1))^2+(y_2-f(x_2))^2+\cdots+(y_n-f(x_n))^2\\
+S(m,c)&=&(y_1-f(x_1))^2+(y_2-f(x_2))^2+\,.\,s+(y_n-f(x_n))^2\\
 &=&\sum^n_{i=1}(y_i-f(x_i))^2
 \end{eqnarray*} 
 Thus our problem is to find the value of $m$ and $c$ such that $S(m,c)$ is minimised. Let us call these minimising values $m_0$ and $c_0$. Then the line of best-fit is $f(x)=m_0 x+c_0$. We can find $m_0$ and $c_0$ using calculus, but it is tricky, and we will just give you the result, which is that
@@ -331,7 +333,9 @@ Thus our problem is to find the value of $m$ and $c$ such that $S(m,c)$ is minim
 m_0&=&\frac{n\sum^n_{i=1}x_iy_i-\sum^n_{i=1}x_i\sum^n_{i=1}y_i}{n\sum^n_{i=1}(x_i)^2-\left(\sum^n_{i=1}x_i\right )^2}\\
 c_0&=&\frac{1}{n}\sum^n_{i=1}y_i-\frac{m_0}{n}\sum^n_{i=0}x_i=\bar{y}-m_0\bar{x}
 \end{eqnarray*}
-Khan Academy video on regression lines:SIYAVULA-VIDEO:http://cnx.org/content/m39324/latest/#regression-1
+% Khan Academy video on regression lines:SIYAVULA-VIDEO:http://cnx.org/content/m39324/latest/#regression-1
+
+\mindsetvid{Khan on regression}{VMhyr}
 \begin{wex}{Method of Least Squares}
 {In the table below, we have the records of the maintenance costs in Rands, compared with the age of the appliance in months. We have data for five appliances.\\ \\
 \begin{center}
@@ -425,8 +429,8 @@ Switch on the calculator. Press [MODE] and then select STAT by pressing [2]. The
 \begin{tabular}{|c c c c|}\hline
 $1$ & $1-VAR$ & $2$ & $A + BX$ \\
 $3$ & $\_ + CX^2$ & $4$ & $ln~X$ \\
-$5$ & $e \hat{ } X$ & $6$ & $A \cdot B$ $\hat{ } X$ \\
-$7$ & $A \cdot X \hat{ } B$ & $8$ & $1/X$ \\\hline
+$5$ & $e \hat{ } X$ & $6$ & $A \,.\, B$ $\hat{ } X$ \\
+$7$ & $A \,.\, X \hat{ } B$ & $8$ & $1/X$ \\\hline
 \end{tabular}
 \end{center}
 Now press [2] for linear regression. Your screen should look something like this:
@@ -513,7 +517,7 @@ Biology \% & $48$ & $59$ & $68$ & $84$ & $53$ \\\hline
 \end{center}
 \begin{enumerate}
 \item Draw a scatter plot of the data on graph paper.
-\item Indentify and describe any trends shown in the scatter plot.
+\item Identify and describe any trends shown in the scatter plot.
 \item Find the equation of the least squares line by using algebraic methods and draw the line on your graph.
 \item Use your equation to predict the height of a student with footlength $21,6$ cm.
 \item Use your equation to predict the footlength of a student $176$ cm tall.
