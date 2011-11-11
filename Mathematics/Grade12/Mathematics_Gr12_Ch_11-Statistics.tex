@@ -7,6 +7,7 @@
 \section{Introduction}
 In this chapter, you will use the mean, median, mode and standard deviation of a set of data to identify whether the data is normally distributed or whether it is skewed. You will learn more about populations and selecting different kinds of samples in order to avoid bias. You will work with lines of best fit, and learn how to find a regression equation and a correlation coefficient. You will analyse these measures in order to draw conclusions and make predictions.
 
+\chapterstartvideo{VMhwi}
 \section{Normal Distribution}
 \Activity{Investigation}{}
 {You are given a table of data below. 
@@ -171,7 +172,7 @@ Secondly, the \emph{size} of the sample population must be large enough. It is n
 So how does one ensure that ones sample is representative? There are a variety of methods available, which we will look at now. \\
 
 \begin{enumerate}
-\item[] \textbf{Random Sampling.} Every person in the country has an equal chance of being selected. It is unbiased and also independant, which means that the selection of one person has no effect on the selection on another. One way of doing this would be to give each person in the country a number, and then ask a computer to give us a list of random numbers. We could then send the questionnaire to the people corresponding to the random numbers.
+\item[] \textbf{Random Sampling.} Every person in the country has an equal chance of being selected. It is unbiased and also independent, which means that the selection of one person has no effect on the selection on another. One way of doing this would be to give each person in the country a number, and then ask a computer to give us a list of random numbers. We could then send the questionnaire to the people corresponding to the random numbers.
 \item[]  \textbf{Systematic Sampling.} Again give every person in the country a number, and then, for example, select every hundredth person on the list. So person with number $1$ would be selected, person with number $100$ would be selected, person with number $200$ would be selected, etc.
 \item[] \textbf{Stratified Sampling.} We consider different subgroups of the population, and take random samples from these. For example, we can divide the population into male and female, different ages, or into different income ranges. 
 \item[] \textbf{Cluster Sampling.} Here the sample is concentrated in one area. For example, we consider all the people living in one urban area.
@@ -244,7 +245,8 @@ If $t$ is the time taken, and $d$ the number of dishes, then it looks as though 
 \item How well does our line of best fit really fit our data?  If the points on our plot don't all lie close to the line of best fit, but are scattered everywhere, then the fit is not 'good', and our assumption that $t=m\,.\, d$ might be incorrect. Can we find a quantitative measure of how well our line really fits the data?
 \end{enumerate}
 In this chapter, we answer both of these questions, using the techniques of \emph{regression analysis}.
-Phet simulation for curve fitting: SIYAVULA-SIMULATION:http://cnx.org/content/m39305/latest/#curve-fitting
+% Phet simulation for curve fitting: SIYAVULA-SIMULATION:http://cnx.org/content/m39305/latest/#curve-fitting
+\simulation{Phet for curve fitting}{VMibv}
 \begin{wex}{Fitting by hand}
 {Use the data given to draw a scatter plot and line of best fit. Now write down the equation of the line that best seems to fit the data.\\ \\
 \begin{tabular}{l|l|l|l|l|l|l}
@@ -331,7 +333,9 @@ Thus our problem is to find the value of $m$ and $c$ such that $S(m,c)$ is minim
 m_0&=&\frac{n\sum^n_{i=1}x_iy_i-\sum^n_{i=1}x_i\sum^n_{i=1}y_i}{n\sum^n_{i=1}(x_i)^2-\left(\sum^n_{i=1}x_i\right )^2}\\
 c_0&=&\frac{1}{n}\sum^n_{i=1}y_i-\frac{m_0}{n}\sum^n_{i=0}x_i=\bar{y}-m_0\bar{x}
 \end{eqnarray*}
-Khan Academy video on regression lines:SIYAVULA-VIDEO:http://cnx.org/content/m39324/latest/#regression-1
+% Khan Academy video on regression lines:SIYAVULA-VIDEO:http://cnx.org/content/m39324/latest/#regression-1
+
+\mindsetvid{Khan on regression}{VMhyr}
 \begin{wex}{Method of Least Squares}
 {In the table below, we have the records of the maintenance costs in Rands, compared with the age of the appliance in months. We have data for five appliances.\\ \\
 \begin{center}
@@ -513,7 +517,7 @@ Biology \% & $48$ & $59$ & $68$ & $84$ & $53$ \\\hline
 \end{center}
 \begin{enumerate}
 \item Draw a scatter plot of the data on graph paper.
-\item Indentify and describe any trends shown in the scatter plot.
+\item Identify and describe any trends shown in the scatter plot.
 \item Find the equation of the least squares line by using algebraic methods and draw the line on your graph.
 \item Use your equation to predict the height of a student with footlength $21,6$ cm.
 \item Use your equation to predict the footlength of a student $176$ cm tall.
