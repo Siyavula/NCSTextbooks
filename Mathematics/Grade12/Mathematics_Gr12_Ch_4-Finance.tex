@@ -84,7 +84,7 @@ The R$3~500$ was invested for 2 years.}
 
 By this stage, you know how to do calculations such as `If I want R$1~000$ in three years' time, how much do I need to invest now at $10\%$?'
 
-What if we extend this as follows: `If I want to draw R$1~000$ next year, R$1~000$ the next year and R$1~000$ after three years ... how much do I need to initially put into a bank account earning $10\%$ p.a. to be able to afford to be able to do this?'
+What if we extend this as follows: ``If I want to draw R$1~000$ next year, R$1~000$ the next year and R$1~000$ after three years, how much do I need to initially put into a bank account earning $10\%$ p.a.\@{} to be able to afford to be able to do this?''
 
 The obvious way of working that out is to work out how much you need now to afford the payments individually and sum them. We'll work out how much is needed now to afford the payment of R$1~000$ in a year $(= $ {R}$1~000\times (1,10)^{-1} = ${R}$909,09)$, the amount needed now for the following year's R$1~000 (= ${R}$1~000\times (1,10)^{-2} = $ {R}$826,45)$ and the amount needed now for the R$1~000$ after three years $(= ${R}$1~000\times (1,10)^{-3} =${R}$751,31)$. Adding these together gives you the amount needed to afford all three payments and you get R$2~486,85$.
 
@@ -93,12 +93,12 @@ So, if you put R$2~486,85$ into a $10\%$ bank account now, you will be able to d
 You can check this as follows:
 
 \begin{tabular}{lll}
-Amount at Time 0 (i.e. Now) &&= R$2~486,85$\\
-Amount at Time 1 (i.e. a year later) &= R$2~486,85(1+10\%)$ &= R$2~735,54$\\
+Amount at Time 0 (i.e.\@{} Now) &&= R$2~486,85$\\
+Amount at Time 1 (i.e.\@{} a year later) &= R$2~486,85(1+10\%)$ &= R$2~735,54$\\
 Amount after withdrawing R$1~000$ &= R$2~735,54 ~-$ R$1~000$ &= R$1~735,54$\\
-Amount at Time 2 (i.e. a year later) &= R$1~735,54(1+10\%)$ &= R$1~909,09$\\
+Amount at Time 2 (i.e.\@{} a year later) &= R$1~735,54(1+10\%)$ &= R$1~909,09$\\
 Amount after withdrawing R$1~00$0 &= R$1~909,09 ~-$ R$1~000$ &= R$909,09$\\
-Amount at Time 3 (i.e. a year later) &= R$909,09(1+10\%)$ &= R$1~000$\\
+Amount at Time 3 (i.e.\@{} a year later) &= R$909,09(1+10\%)$ &= R$1~000$\\
 Amount after withdrawing R$1~000$ &= R$1~000 ~-$ R$1~000$ &= R$0$\\
 \end{tabular}
 
@@ -117,7 +117,7 @@ Before we progress, you need to go back and read Chapter~\ref{mp:s} (from Page~\
 
 In summary, if you have a series of $n$ terms in total which looks like this:
 \begin{equation*}
-a + ar + ar^2 + ... + ar^{n-1} = a [ 1 + r + r^2 + ... r^{n-1} ]
+a + ar + ar^2 + \cdots + ar^{n-1} = a [ 1 + r + r^2 + \cdots r^{n-1} ]
 \end{equation*}
 
 this can be simplified as:
@@ -184,7 +184,7 @@ The painful way of solving this problem would be to do the calculation for each 
 Naturally, there is a simpler way of doing this! You can rewrite the above equation as follows:
 
 \begin{eqnarray*}
-M = X[v^1 + v^2 + v^3 + ... + v^{20}]\\
+M = X[v^1 + v^2 + v^3 + \cdots + v^{20}]\\
 \mbox{where $v = (1+i)^{-1} = 1/(1+i)$}
 \end{eqnarray*}
 
@@ -192,7 +192,7 @@ Of course, you do not have to use the method of substitution to solve this. We j
 
 Now, the item in square brackets is the sum of a geometric sequence, as discussion in section~\ref{mp:s}. This can be re-written as follows, using what we know from Chapter~\ref{mp:s} of this text book:
 \begin{eqnarray*}
-v^1 + v^2 + v^3 + ... + v^n &=& v(1 + v + v^2 + ... + v^{n-1})\\
+v^1 + v^2 + v^3 + \cdots + v^n &=& v(1 + v + v^2 + \cdots + v^{n-1})\\
 &=& v\left(\frac{1 - v^n}{1-v}\right)\\
 &=& \frac{1 - v^n}{1/v-1}\\
 &=& \frac{1-(1+i)^{-n}}{i}\\
@@ -220,7 +220,7 @@ X &=& \frac{Mi}{1-(1+i)^{-n}}\\
 \end{eqnarray*}
 This means, each year for the next 20 years, I need to pay the bank R$47~928,44$ per year before I have paid off the mortgage bond. 
 
-On the other hand, if I know I will have only R$30~000$ per year to repay my bond, then how big a house can I buy? That is easy ....
+On the other hand, if I know I will have only R$30~000$ per year to repay my bond, then how big a house can I buy? That is easy.
 
 \begin{eqnarray*}
 M &=& X \biggl[\frac{(1-(1+i)^{-n})}{i}\biggr]\\
@@ -254,7 +254,7 @@ M &=& \mbox{R}250~000 - \mbox{R}15~000\\
 &=& \mbox{R}235~000
 \end{eqnarray*}
 
-Now because we are considering monthly repayments, but we have been given an annual interest rate, we need to convert this to a monthly interest rate, $i_{12}$. (If you are not clear on this, go back and revise section \ref{m:f11:nominal}.)
+Now because we are considering monthly repayments, but we have been given an annual interest rate, we need to convert this to a monthly interest rate, $i_{12}$. (If you are not clear on this, go back and revise Section~\ref{m:f11:nominal}.)
 
 \begin{eqnarray*}
 (1+ i_{12})^{12} &=& (1+i)\\
@@ -326,7 +326,7 @@ So to repay a R$190~000$ mortgage over 20 years, at $9\%$ interest payable month
 \subsubsection{Show Me the Money}
 Now that you've done the calculations for the worked example and know what the monthly repayments are, you can work out some surprising figures. For example, R$1~709,48$ per month for 240 months makes for a total of R$410~275,20$ ($=$R$1~709,48 \times 240$). That is more than double the amount that you borrowed! This seems like a lot. However, now that you've studied the effects of time (and interest) on money, you should know that this amount is somewhat meaningless. The value of money is dependant on its timing.
 
-Nonetheless, you might not be particularly happy to sit back for 20 years making your R$1~709,48$ mortgage payment every month knowing that half the money you are paying are going toward interest. But there is a way to avoid those heavy interest charges. It can be done for less than R$300$ extra every month...
+Nonetheless, you might not be particularly happy to sit back for 20 years making your R$1~709,48$ mortgage payment every month knowing that half the money you are paying are going toward interest. But there is a way to avoid those heavy interest charges. It can be done for less than R$300$ extra every month.
 
 So our payment is now R$2~000$. The interest rate is still $9\%$ per annum payable monthly ($0,75\%$ per month), and our principal amount borrowed is R$190~000$. Making this higher repayment amount every month, how long will it take to pay off the mortgage?
 
@@ -356,7 +356,7 @@ Can you see the difference between this example and the ones at the start of the
 So, using our usual notation, let us write out the answer. Make sure you agree how we come up with this. Because we are making monthly payments, everything needs to be in months. So let $A$ be the closing balance you need to buy a car, $P$ is how much you need to pay into the bank account each month, and $i_{12}$ is the monthly interest rate. (Careful - because $12\%$ is the annual interest rate, so we will need to work out later what the monthly interest rate is!)
 
 \begin{equation*}
-A = P(1+i_{12})^{24} + P(1+i_{12})^{23} + ... + P(1+i_{12})^1
+A = P(1+i_{12})^{24} + P(1+i_{12})^{23} + \cdots + P(1+i_{12})^1
 \end{equation*}
 
 Here are some important points to remember when deriving this formula:
@@ -369,15 +369,15 @@ Here are some important points to remember when deriving this formula:
 
 So, now that we have the right starting point, let us simplify this equation:
 \begin{eqnarray*}
-A &=& P[(1+i_{12})^{24} + (1+i_{12})^{23} + \ldots + (1+i_{12})^{1}]\\
-&=& P [ X^{24} + X^{23} + \ldots + X^1] \mbox{ using $X=(1+i_{12})$}
+A &=& P[(1+i_{12})^{24} + (1+i_{12})^{23} + \cdots + (1+i_{12})^{1}]\\
+&=& P [ X^{24} + X^{23} + \cdots + X^1] \mbox{ using $X=(1+i_{12})$}
 \end{eqnarray*}
 
 Note that this time $X$ has a positive exponent not a negative exponent, because we are doing future values. This is not a rule you have to memorise - you can see from the equation what the obvious choice of $X$ should be.
 
 Let us re-order the terms:
 \begin{equation*}
-A = P [ X^1 + X^2 + \ldots + X^{24}] = P \,.\, X [1 + X + X^2 + \ldots + X^{23}]
+A = P [ X^1 + X^2 + \cdots + X^{24}] = P \,.\, X [1 + X + X^2 + \cdots + X^{23}]
 \end{equation*}
 
 This is just another sum of a geometric sequence, which as you know can be simplified as:
@@ -435,7 +435,7 @@ By now, you should be well equipped to perform calculations with compound intere
 
 At this stage, you should understand the mathematical theory behind compound interest. However, the numerical implications of compound interest are often subtle and far from obvious.
 
-Recall the example `Show Me the Money' in Section \ref{presentvalues}. For an extra payment of R$29~052$ a month, we could have paid off our loan in less than 14 years instead of 20 years. This provides a good illustration of the long term effect of compound interest that is often surprising. In the following section, we'll aim to explain the reason for the drastic reduction in the time it takes to repay the loan.
+Recall the example `Show Me the Money' in Section~\ref{presentvalues}. For an extra payment of R$29~052$ a month, we could have paid off our loan in less than 14 years instead of 20 years. This provides a good illustration of the long term effect of compound interest that is often surprising. In the following section, we'll aim to explain the reason for the drastic reduction in the time it takes to repay the loan.
 
 \subsection{Loan Schedules}
 \label{ss:loadschedules}
@@ -464,7 +464,7 @@ I &=& M \times i_{12}\\
 
 Since we don't owe the bank as much as we did last time, we also owe a little less interest. The capital component of the repayment is now R$1~709,48 -$ R$1~422,87 =$ R$286,61$. The capital outstanding will be R$189~715,52 -$ R$286,61 =$ R$189~428,91$. This way, we can break each of our repayments down into an interest part and the part that goes towards paying off the loan.
 
-This is a simple and repetitive process. Table \ref{tb:lschedule1} is a table showing the breakdown of the first 12 payments. This is called a loan schedule.
+This is a simple and repetitive process. Table~\ref{tb:lschedule1} is a table showing the breakdown of the first 12 payments. This is called a loan schedule.
 
 \begin{table}
 \begin{center}
@@ -496,7 +496,7 @@ $12$&R&$1~709$&$48$&R&$1~400$&$63$&R&$308$&$85$&R&$186~441$&$84$\\
 
 Now, let's see the same thing again, but with R$2~000$ being repaid each year. We expect the numbers to change. However, how much will they change by? As before, we owe R$1~425$ in interest in interest. After one month. However, we are paying R$2~000$ this time. That leaves R$575$ that goes towards paying off the capital outstanding, reducing it to R$189~425$. By the end of the second month, the interest owed is R$1~420,69$ (That's R$189~425\times i_{12}$). Our R$2~000$ pays for that interest, and reduces the capital amount owed by R$2~000 -$ R$1~420,69 =$ R$579,31$. This reduces the amount outstanding to R$188~845,69$.
 
-Doing the same calculations as before yields a new loan schedule shown in Table \ref{tb:lschedule2}.
+Doing the same calculations as before yields a new loan schedule shown in Table~\ref{tb:lschedule2}.
 
 \begin{table}
 \begin{center}
@@ -527,13 +527,13 @@ $12$&R&$2~000$&$00$&R&$1~375$&$74$&R&$624$&$26$&R&$182~808$&$14$\\
 
 The important numbers to notice is the ``Capital Component" column. Note that when we are paying off R$2~000$ a month as compared to R$1~709,48$ a month, this column more than double. In the beginning of paying off a loan, very little of our money is used to pay off the capital outstanding. Therefore, even a small increase in repayment amounts can significantly increase the speed at which we are paying off the capital.
 
-What's more, look at the amount we are still owing after one year (i.e. at time $12$). When we were paying R$1~709,48$ a month, we still owe R$186~441,84$. However, if we increase the repayments to R$2~000$ a month, the amount outstanding decreases by over R$3~000$ to R$182~808,14$. This means we would have paid off over R$7~000$ in our first year instead of less than R$4~000$. This increased speed at which we are paying off the capital portion of the loan is what allows us to pay off the whole loan in around 14 years instead of the original $20$. Note however, the effect of paying R$2~000$ instead of R$1~709,48$ is more significant in the beginning of the loan than near the end of the loan.
+What's more, look at the amount we are still owing after one year (i.e.\@{} at time $12$). When we were paying R$1~709,48$ a month, we still owe R$186~441,84$. However, if we increase the repayments to R$2~000$ a month, the amount outstanding decreases by over R$3~000$ to R$182~808,14$. This means we would have paid off over R$7~000$ in our first year instead of less than R$4~000$. This increased speed at which we are paying off the capital portion of the loan is what allows us to pay off the whole loan in around 14 years instead of the original $20$. Note however, the effect of paying R$2~000$ instead of R$1~709,48$ is more significant in the beginning of the loan than near the end of the loan.
 
 It is noted that in this instance, by paying slightly more than what the bank would ask you to pay, you can pay off a loan a lot quicker. The natural question to ask here is: why are banks asking us to pay the lower amount for much longer then? Are they trying to cheat us out of our money?
 
 There is no simple answer to this. Banks provide a service to us in return for a fee, so they are out to make a profit. However, they need to be careful not to cheat their customers for fear that they'll simply use another bank. The central issue here is one of scale. For us, the changes involved appear big. We are paying off our loan 6 years earlier by paying just a bit more a month. To a bank, however, it doesn't matter much either way. In all likelihood, it doesn't affect their profit margins one bit!
 
-Remember that the bank calculates repayment amounts using the same methods as we've been learning. They decide on the correct repayment amounts for a given interest rate and set of terms. Smaller repayment amounts will make the bank more money, because it will take you longer to pay off the loan and more interest will accumulate. Larger repayment amounts mean that you will pay off the loan faster, so you will accumulate less interest i.e. the bank will make less money off of you. It's a simple matter of less money now or more money later. Banks generally use a 20 year repayment period by default.
+Remember that the bank calculates repayment amounts using the same methods as we've been learning. They decide on the correct repayment amounts for a given interest rate and set of terms. Smaller repayment amounts will make the bank more money, because it will take you longer to pay off the loan and more interest will accumulate. Larger repayment amounts mean that you will pay off the loan faster, so you will accumulate less interest i.e.\@{} the bank will make less money off of you. It's a simple matter of less money now or more money later. Banks generally use a 20 year repayment period by default.
 
 Learning about financial mathematics enables you to duplicate these calculations for yourself. This way, you can decide what's best for you. You can decide how much you want to repay each month and you'll know of its effects. A bank wouldn't care much either way, so you should pick something that suits you.
 
@@ -561,7 +561,7 @@ The monthly repayments $= $R$6~712,46$
 
 \Exercise{}{
 \begin{enumerate}
-\item{A property costs R$1~800~000$.  Calculate the monthly repayments if the interest rate is $14\%$ p.a. compounded monthly and the loan must be paid off in 20 years time.}
+\item{A property costs R$1~800~000$.  Calculate the monthly repayments if the interest rate is $14\%$ p.a.\@{} compounded monthly and the loan must be paid off in 20 years time.}
 \item{A loan of R $4~200$ is to be returned in two equal annual instalments.  If the rate of interest of $10\%$ per annum, compounded annually, calculate the amount of each instalment.}
 \end{enumerate}
 
@@ -578,7 +578,7 @@ The monthly repayments $= $R$6~712,46$
 \subsection{Calculating Capital Outstanding}
 \label{ss:capitaloutstanding}
 
-As defined in Section \ref{ss:loadschedules}, capital outstanding is the amount we still owe the people we borrowed money from at a given moment in time. We also saw how we can calculate this using loan schedules. However, there is a significant disadvantage to this method: it is very time consuming. For example, in order to calculate how much capital is still outstanding at time $12$ using the loan schedule, we'll have to first calculate how much capital is outstanding at time $1$ through to $11$ as well. This is already quite a bit more work than we'd like to do. Can you imagine calculating the amount outstanding after 10 years (time $120$)?
+As defined in Section~\ref{ss:loadschedules}, capital outstanding is the amount we still owe the people we borrowed money from at a given moment in time. We also saw how we can calculate this using loan schedules. However, there is a significant disadvantage to this method: it is very time consuming. For example, in order to calculate how much capital is still outstanding at time $12$ using the loan schedule, we'll have to first calculate how much capital is outstanding at time $1$ through to $11$ as well. This is already quite a bit more work than we'd like to do. Can you imagine calculating the amount outstanding after 10 years (time $120$)?
 
 Fortunately, there is an easier method. However, it is not immediately clear why this works, so let's take some time to examine the concept.
 
@@ -588,7 +588,7 @@ Let's say that after a certain number of years, just after we made a repayment, 
 
 Therefore, the present value of all outstanding future payments equal the present amount outstanding. This is the prospective method for calculating capital outstanding.
 
-Let's return to a previous example. Recall the case where we were trying to repay a loan of R$200~000$ over 20 years. A R$10~000$ deposit was put down, so the amount being payed off was R$190~000$. At an interest rate of $9\%$ compounded monthly, the monthly repayment was R$1~709,48$. In Table \ref{tb:lschedule1}, we can see that after 12 months, the amount outstanding was R$186~441,84$. Let's try to work this out using the the prospective method.
+Let's return to a previous example. Recall the case where we were trying to repay a loan of R$200~000$ over 20 years. A R$10~000$ deposit was put down, so the amount being payed off was R$190~000$. At an interest rate of $9\%$ compounded monthly, the monthly repayment was R$1~709,48$. In Table~\ref{tb:lschedule1}, we can see that after 12 months, the amount outstanding was R$186~441,84$. Let's try to work this out using the the prospective method.
 
 After time $12$, there are still $19 \times 12 = 228$ repayments left of R$1~709,48$ each. The present value is:
 
@@ -610,7 +610,7 @@ As an easy reference, here are the key formulae that we derived and used during 
 $P$ &Principal (the amount of money at the starting point of the calculation)\\
 $i$ &interest rate, normally the effective rate per annum\\
 $n$ &period for which the investment is made\\
-$iT$ &the interest rate paid $T$ times per annum, i.e. $iT = \frac{\mbox{Nominal Interest Rate}}{T}$
+$iT$ &the interest rate paid $T$ times per annum, i.e.\@{} $iT = \frac{\mbox{Nominal Interest Rate}}{T}$
 \end{tabular}
 
 \subsection{Equations}
@@ -632,7 +632,7 @@ $iT$ &the interest rate paid $T$ times per annum, i.e. $iT = \frac{\mbox{Nominal
 \end{array}\right\}= P (1+i)^n
 \end{equation*}
 
-\Tip{Always keep the interest and the time period in the same units of time (e.g. both in years, or both in months etc.).}
+\Tip{Always keep the interest and the time period in the same units of time (e.g.\@{} both in years, or both in months etc.).}
 
 \begin{eocexercises}{}
 \begin{enumerate}
@@ -660,7 +660,7 @@ $iT$ &the interest rate paid $T$ times per annum, i.e. $iT = \frac{\mbox{Nominal
 %\item{How Moira's investment differ from Robert's?}
 %\end{enumerate}}
 
-\item{Calculate the real cost of a loan of R$10~000$ for 5 years at $5\%$ capitalised monthly. Repeat this for the case where it is capitalised half yearly i.e. Every 6 months.}
+\item{Calculate the real cost of a loan of R$10~000$ for 5 years at $5\%$ capitalised monthly. Repeat this for the case where it is capitalised half yearly i.e.\@{} Every 6 months.}
 \item{Determine how long, in years, it will take for the value of a motor vehicle to decrease
 to $25\%$ of its original value if the rate of depreciation, based on the reducing-balance
 method, is $21\%$ per annum.}
