@@ -3,7 +3,9 @@
 
 \section{Introduction}
 You have learnt about the basic principles of reflection and refraction. In this chapter, you will learn about phenomena that arise with waves in two and three dimensions: interference and diffraction. 
+
 \chapterstartvideo{VPpcu}
+
 \section{Wavefronts}
 %\begin{syllabus}
 %\item The learner must be able to define a wavefront as an imaginary line that connects waves that are in phase (e.g.\@ all at the crest of their cycle).
@@ -58,6 +60,8 @@ The diagram shows three identical waves being emitted by three point sources. Al
 
 What type of lines (straight, curved, etc) do you get? How does this compare to the line that joins the sources?}
 
+\clearpage
+
 Consider three point sources of waves. If each source emits waves isotropically (i.e.\@ the same in all directions) we will get the situation shown in  as shown in Figure~\ref{fig:p:wsl:2d3d12:wavefront}.
 
 \begin{figure}
@@ -96,6 +100,8 @@ Christiaan Huygens described how to determine the path of waves through a medium
  
 \Definition{The Huygens Principle}{Each point on a wavefront acts like a point source of circular waves. The waves emitted from these point sources interfere to form another wavefront.}
 
+\clearpage
+
 A simple example of the Huygens Principle is to consider the single wavefront in Figure~\ref{fig:p:wsl:2d3d12:huygens}.
 
 \begin{figure}[H]
@@ -119,7 +125,6 @@ A simple example of the Huygens Principle is to consider the single wavefront in
 \psline[linestyle=dashed](0.5,0)(0.5,3)
 \uput[l](-0.5,1.5){wavefront at time $t$}
 \uput{10pt}[dl](-0.5,1.5){acts a source of circular waves}
-
 }
 \rput(0.5,0){
 \psline[linewidth=2pt]{->}(1,1.5)(2,1.5)
@@ -139,56 +144,75 @@ A simple example of the Huygens Principle is to consider the single wavefront in
 \end{center}
 \end{figure}
 
+\clearpage
 
+\vspace{-2.5cm}
 
 \begin{wex}
-{Application of the Huygens Principle}{Given the wavefront, 
-
-\begin{center}
-\begin{pspicture}(0,0)(5,5)
-%\psgrid[gridcolor=gray]
-\psarc(0,0){4}{0}{90}
-\end{pspicture}
-\end{center}
-use the Huygens Principle to determine the wavefront at a later time.}
+{Application of the Huygens Principle}
+{Given the wavefront,\newline%
+  \begin{center}
+    \scalebox{0.75}{
+      \begin{pspicture}(0,0)(5,5)
+        % \psgrid[gridcolor=gray]
+        \psarc(0,0){4}{0}{90}
+      \end{pspicture}
+    }
+  \end{center}
+  use the Huygens Principle to determine the wavefront at a later time.}
 {
-\westep{Draw circles at various points along the given wavefront}
-\begin{center}
-\begin{pspicture}(0,0)(5,5)
-%\psgrid[gridcolor=gray]
-\psarc[linecolor=gray](0,0){4}{0}{90}
-\pscircle(4;10){0.5}
-\pscircle(4;20){0.5}
-\pscircle(4;30){0.5}
-\pscircle(4;40){0.5}
-\pscircle(4;50){0.5}
-\pscircle(4;60){0.5}
-\pscircle(4;70){0.5}
-\pscircle(4;80){0.5}
-\end{pspicture}
-\end{center}
+  \westep{Draw circles at various points along the given wavefront}
+  \begin{center}
+    \scalebox{0.75}{
+      \begin{pspicture}(0,0)(5,5)
+        % \psgrid[gridcolor=gray]
+        \psarc[linecolor=gray](0,0){4}{0}{90}
+        \pscircle(4;10){0.5}
+        \pscircle(4;20){0.5}
+        \pscircle(4;30){0.5}
+        \pscircle(4;40){0.5}
+        \pscircle(4;50){0.5}
+        \pscircle(4;60){0.5}
+        \pscircle(4;70){0.5}
+        \pscircle(4;80){0.5}
+      \end{pspicture}
+    }
+  \end{center}
 
-\westep{Join the crests of each circle to get the wavefront at a later time}
-
-\begin{center}
-\begin{pspicture}(0,0)(5,5)
-%\psgrid[gridcolor=gray]
-\psarc[linecolor=gray](0,0){4}{0}{90}
-\pscircle[linecolor=gray](4;10){0.5}
-\pscircle[linecolor=gray](4;20){0.5}
-\pscircle[linecolor=gray](4;30){0.5}
-\pscircle[linecolor=gray](4;40){0.5}
-\pscircle[linecolor=gray](4;50){0.5}
-\pscircle[linecolor=gray](4;60){0.5}
-\pscircle[linecolor=gray](4;70){0.5}
-\pscircle[linecolor=gray](4;80){0.5}
-\psarc[linewidth=2pt](0,0){4.5}{0}{90}
-\end{pspicture}
-\end{center}
+  \westep{Join the circle crests to get the wavefront at a later time}
+  \begin{center}
+    \scalebox{0.75}{
+      \begin{pspicture}(0,0)(5,5)
+        % \psgrid[gridcolor=gray]
+        \psarc[linecolor=gray](0,0){4}{0}{90}
+        \pscircle[linecolor=gray](4;10){0.5}
+        \pscircle[linecolor=gray](4;20){0.5}
+        \pscircle[linecolor=gray](4;30){0.5}
+        \pscircle[linecolor=gray](4;40){0.5}
+        \pscircle[linecolor=gray](4;50){0.5}
+        \pscircle[linecolor=gray](4;60){0.5}
+        \pscircle[linecolor=gray](4;70){0.5}
+        \pscircle[linecolor=gray](4;80){0.5}
+        \psarc[linewidth=2pt](0,0){4.5}{0}{90}
+      \end{pspicture}
+    }
+  \end{center}
 }
 \end{wex}
 
+\vspace{-2.5cm}
 
+\clearpage
+
+%\begin{IFact}{Christiaan Huygens
+%% (14 April 1629 - 8 July 1695), 
+%was a Dutch mathematician, astronomer and physicist.
+%%; born in The Hague as the son of Constantijn Huygens.
+%He studied law at the University of Leiden and the College of Orange
+%in Breda before turning to science.
+%% Historians commonly associate Huygens with the scientific revolution.
+%Huygens generally receives minor credit for his role in the development of modern calculus. He also achieved note for his arguments that light consisted of waves. In 1655, he discovered Saturn's moon Titan. He also examined Saturn's planetary rings, and in 1656 he discovered that those rings consisted of rocks. In the same year he observed and sketched the Orion Nebula. He also discovered several interstellar nebulae and some double stars.}
+%\end{IFact}
 
 \section{Interference}
 %\begin{syllabus}
@@ -205,11 +229,6 @@ Constructive interference occurs when both waves have a displacement in the same
 
 Constructive interference is the result of two waves with similar phase overlapping. This means that positive parts of one wave tend to overlap with positive parts of the other, and alike for the negative parts. When positive is added to positive and negative is added to negative, the net absolute displacement of the medium is greater than the displacements of the individual waves.
 
-\begin{IFact}
-{Christiaan Huygens (14 April 1629 - 8 July 1695), was a Dutch mathematician, astronomer and physicist; born in The Hague as the son of Constantijn Huygens. He studied law at the University of Leiden and the College of Orange in Breda before turning to science. Historians commonly associate Huygens with the scientific revolution.
-
-Huygens generally receives minor credit for his role in the development of modern calculus. He also achieved note for his arguments that light consisted of waves; see: wave-particle duality in Chapter~\ref{}. In 1655, he discovered Saturn's moon Titan. He also examined Saturn's planetary rings, and in 1656 he discovered that those rings consisted of rocks. In the same year he observed and sketched the Orion Nebula. He also discovered several interstellar nebulae and some double stars.}
-\end{IFact}
 Destructive interference, on the other hand, is the result of two waves with non-similar phase (i.e.\@ anti-phase) overlapping. This means that the positive parts of one wave tend to align with the negative parts of the second wave. When the waves are added together, the positive and negative contributions lead to a net absolute displacement of the medium which is less than the absolute displacements of either of the individual waves. A place where destructive interference takes place is called a node.
 
 Waves can interfere at places where there is never a trough and trough or peak and peak or trough and peak at the same time. At these places the waves will add together and the resultant displacement will be the sum of the two waves but they won't be points of maximum interference.

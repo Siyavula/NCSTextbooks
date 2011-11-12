@@ -263,8 +263,8 @@ $B$ is the magnetic field strength (in teslas, T). \\
 
 The direction of the Lorentz force is perpendicular to both the direction of the flow of current and the magnetic field and can be found using the \textbf{Right Hand Rule} as shown in the picture below. Use your \textit{right hand}; your thumb points in the direction of the current, your first finger in the direction of the magnetic field and your third finger will then point in the direction of the force.
 
-\scalebox{1} % Change this value to rescale the drawing.
-{
+\begin{center}
+\scalebox{1}{% Change this value to rescale the drawing.
 \begin{pspicture}(0,-2.8)(7.2617035,2.8)
 \psline[linewidth=0.04cm](0.02,1.14)(1.42,1.14)
 \psline[linewidth=0.04cm](1.42,1.14)(1.42,-0.84)
@@ -292,6 +292,7 @@ The direction of the Lorentz force is perpendicular to both the direction of the
 \rput(2.43,-0.18){\footnotesize [1st FINGER]}
 \end{pspicture} 
 }
+\end{center}
 
 Both motors and generators can be explained in terms of a coil that rotates in a magnetic field. In a generator the coil is attached to an external circuit that is turned, resulting in a changing flux that induces an emf. In a motor, a current-carrying coil in a magnetic field experiences a force on both sides of the coil, creating a twisting force (called a \textit{torque}, pronounce like 'talk') which makes it turn.\\
 
@@ -522,14 +523,13 @@ In an ideal DC circuit the current and voltage are constant. In an AC circuit th
 \begin{eqnarray*}
 i&=&I_{max}\sin(2\pi f t + \phi)\\
 v&=&V_{max}\sin(2\pi f t)
-\end{eqnarray*}\\
- 
-$i$ is the instantaneous current. $I_{max}$ is the maximum current. $v$ is the instantaneous voltage. $V_{max}$ is the maximum voltage. $f$ is the frequency of the AC and $t$ is the time at which the instantaneous current or voltage is being calculated.\\
+\end{eqnarray*}
+ $i$ is the instantaneous current. $I_{max}$ is the maximum current. $v$ is the instantaneous voltage. $V_{max}$ is the maximum voltage. $f$ is the frequency of the AC and $t$ is the time at which the instantaneous current or voltage is being calculated.\\
 The average value we use for AC is known as the root mean square (rms) average. This is defined as:
 \begin{eqnarray*}
 I_{rms}&=&\frac{I_{max}}{\sqrt{2}}\\
 V_{rms}&=&\frac{V_{max}}{\sqrt{2}}
-\end{eqnarray*}\\
+\end{eqnarray*}
 Since AC varies sinusoidally, with as much positive as negative, doing a straight average would get you zero for the average voltage. The rms value by-passes this problem.
 
 \Exercise{alternating  current}{
@@ -588,6 +588,7 @@ If we examine the equation for the reactance of a capacitor, we see that the fre
  
 When the frequency is high, the capacitive reactance is low. This is why a capacitor allows the flow of high frequency AC because its reactance decreases with increasing frequency.
 
+\clearpage
 
 \subsection{Inductance}
 
@@ -636,8 +637,9 @@ L&=&\frac{\mu_0 A N^2}{l}\\
 The inductance of the coil is $3,8\times 10^{-3}$~H/m.}
 \end{wex}
 
-\begin{wex}{Inductance II}{Calculate the inductance of a 5~cm long solenoid with a diameter of 4~mm and 2000 turns.
-}
+\clearpage
+
+\begin{wex}{Inductance II}{Calculate the inductance of a 5~cm long solenoid with a diameter of 4~mm and 2000 turns.}
 {Again this is an inductance problem, so we use the same formula as the worked example above.\\
  
 $$\textrm{r} = \frac{4 \textrm{ mm}}{2} = 2 \textrm{ mm} = 0,002 \textrm{ m}$$
@@ -654,16 +656,16 @@ $$\textrm{A} = \pi \textrm{r}^2 = \pi \times 0,002^2$$
 \end{wex}
 
 An inductor in an AC circuit also has a reactance, $X_L$. Reactance is the property of an inductor that opposes the flow of AC current. Reactance is defined by:
-
 \begin{equation*}
 X_L = 2\pi fL
 \end{equation*}
+where $L$ is the inductance and $f$ is the frequency of the AC.
  
-where $L$ is the inductance and $f$ is the frequency of the AC.\\
- 
-If we examine the equation for the reactance of an inductor, we see that inductive reactance increases with increasing frequency. Therefore, when the frequency is low, the inductive reactance is very low. This is why an inductor allows the flow of DC and low frequency AC because its reactance decreases with decreasing frequency.\\ 
+If we examine the equation for the reactance of an inductor, we see that inductive reactance increases with increasing frequency. Therefore, when the frequency is low, the inductive reactance is very low. This is why an inductor allows the flow of DC and low frequency AC: its reactance decreases with decreasing frequency.
  
 When the frequency is high, the inductive reactance is high. This is why an inductor blocks the flow of high frequency AC because its reactance increases with increasing frequency.
+
+\clearpage
 
 \Exercise{capacitance and inductance}{
 \begin{enumerate}
