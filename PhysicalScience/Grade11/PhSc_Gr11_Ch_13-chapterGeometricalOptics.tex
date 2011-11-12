@@ -1307,7 +1307,6 @@ Diverging & any position & $<f$ & upright & smaller& virtual\\
 (1.) 00ru & (2.) 00rv & (3.) 00rw & 
  \end{tabular}
 }
-\pagebreak
 \section{The Human Eye}
 %\begin{syllabus}
 %\item The learner must be able to describe how the human eye has a converging lens to create real, inverted, reduced images on the retina at the back of the eye. Focusing is achieved by muscles, which change the focal length of the lens.
@@ -1315,7 +1314,7 @@ Diverging & any position & $<f$ & upright & smaller& virtual\\
 %\item The learner must be able to use simple diagrams to show how converging lenses can correct long-sightedness and diverging lenses can correct short-sightedness.
 %\item The learner must be able to describe how astigmatism is corrected by a special lens, which has different focal lengths in the vertical and horizontal planes.
 %\end{syllabus}
-\nopagebreak \vspace{-.5cm}
+\nopagebreak 
 \Activity{Investigation}{Model of the Human Eye}{This demonstration shows that:
 \begin{enumerate}
 \item The eyeball has a spherical shape.
@@ -1348,6 +1347,8 @@ You now have a working model of the human eye.
 \item The round bowl of water represents the eyeball.
 \item The white cardboard represents the retina. Images are projected onto the retina and are then sent to the brain via the optic nerve.
 \end{enumerate}
+
+\pagebreak
 \textbf{Tasks}
 \begin{enumerate}
 \item Is the image on the retina right-side up or upside down? Explain why.
@@ -1687,21 +1688,16 @@ A \textbf{compound microscope} uses two lenses to achieve high magnification (Fi
 % Specifications for primary and eyepiece lenses.
 \newpsstyle{lens1}{focus=1,OA=-1.5,AB=0.5,XO=-4,lensGlass=true,lensWidth=0.4,drawing=false}
 \newpsstyle{lens2}{XO=2.5,focus=6,lensGlass=true,lensWidth=0.4,drawing=false,lensTwo=true}
-
 \PrincipalAxis(-7,0)(6,0)
 % Draw stuff.
 \rput(0,0){\lens[style=lens1]}
-
 \pspolygon[fillstyle=solid,fillcolor=lightgray,linestyle=none](B)(I)(B')(I')(B)
-
 \Transform
 \rput(0,0){\lens[style=lens2]}
-
 % Find points where rays end. "PEnd", etc don't seem to work.
 \Parallel[length=5,linestyle=none](0,0)(0,1)(6,0){xTR}
 \ABinterCD(B)(O)(6,0)(xTR){eye}
 \ABinterCD(B')(I)(6,0)(xTR){eye2}
-
 % Illuminate it!! and add the eye
 \pspolygon[fillstyle=solid,fillcolor=lightgray,linestyle=none](B)(I)(eye2)(eye)
 \nodeBetween(eye)(eye2){eye3}
@@ -1711,11 +1707,9 @@ A \textbf{compound microscope} uses two lenses to achieve high magnification (Fi
 \oi{->}(A)(B)
 \oi[linestyle=dashed]{->}(A')(B')
 \oi{->}(A1)(B1)
-
 % Redraw lenses
 \rput(0,0){\lens[style=lens1]}
 \rput(0,0){\lens[style=lens2]}
-
 % Label stuff
 \uput[u](B1){Object}
 \uput[u](A){First image}
@@ -1754,24 +1748,16 @@ To prepare to trace the light rays, make a diagram. In the diagram here, we plac
 %\psgrid
 % Arrow style for objects and images.
 %\newpsobject{oi}{psline}{arrowsize=4pt, arrowlength=1, arrowinset=0, linewidth=2pt}
-
 % First lens specifications
 \newpsstyle{lens1}{focus=1.2,OA=-1.6,AB=.4,XO=0,lensGlass=true,lensWidth=0.4,drawing=false,lensHeight=3}
-
 % Second lens specifications
 \newpsstyle{lens2}{XO=6.0,focus=2.0,lensGlass=true,lensWidth=0.4,drawing=false,lensTwo=true,lensHeight=3}
-
 % Draw stuff
-
 \rput(0,0){\lens[style=lens1]}
-
 \psline[linewidth=1pt,linecolor=lightgray ](-3,0)(8,0)% Principal axis
-
 \Transform
 \rput(0,0){\lens[style=lens2]}
-
 \oi{->}(A1)(B1)
-
 % Label stuff
 \uput{0.2}[l](B1){Object}
 \uput{2}[d](O1){Lens 1 (Objective)}
@@ -1781,7 +1767,6 @@ To prepare to trace the light rays, make a diagram. In the diagram here, we plac
 \uput{0.2}[d](F){$f_2$}
 \uput{0.2}[d](F'){$f_2$}
 \psdots[dotscale=1](F)(F')(F1)(F'1)(O)(O1)
-
 \ncline[offset=2.6]{|-|}{O1}{O} % Lens separation
 \lput*{:U}{30 cm}
 \ncline[offset=2.0]{|-|}{A1}{O1} % first object distance
@@ -1805,26 +1790,20 @@ To prepare to trace the light rays, make a diagram. In the diagram here, we plac
 \centering
 \begin{pspicture}(-2,-3)(8,2)
 %\psgrid
-
 % First lens specifications
 \newpsstyle{lens1}{ focus =1.2,
 OA=-1.6,AB =.4, XO=0,
 lensGlass =true, lensWidth =0.4,
 drawing=false,
 lensHeight=3}
-
 % Second lens specifications
 \newpsstyle{lens2}{XO=6.0, focus =2.0,
 lensGlass =true , lensWidth =0.4,
 drawing=false, lensTwo=true,
 lensHeight=3}
-
 % Start drawing
-
 \rput(0,0){ \lens[style=lens1] }
-
 \psline[linewidth =1pt,linecolor=lightgray ](-2,0)(8,0) % Principal axis
-
 \oi{->}(A)(B) % Object
 \oi{->}(A')(B') % Image
 \psOutLine(I)(B'){end1} % Rays
@@ -1833,18 +1812,14 @@ lensHeight=3}
 \psline{->}(B)(I)(B')(end1)
 \psline{->}(B)(O)(B')(end2)
 \psline{->}(B)(I')(B')(end3)
-
 \Transform
 \rput(0,0){ \lens[ style=lens2] }
-
 \oi{->}(A)(B)
 %\oi[linestyle=dashed]{->}(A')(B')
 \oi{->}(A1)(B1)
-
 % Redraw lenses
 %\rput(0,0){ \lens [ style=lens1] }
 %\rput(0,0){ \lens [ style=lens2] }
-
 % Label stuff
 \uput{0.6}[d](B1){Object}
 \uput{0.2}[u](A){Image}
@@ -1874,25 +1849,20 @@ The image we just found becomes the object for the second lens.
 %\psgrid
 \newpsstyle{lens1}{focus=1.2,XO=0,lensGlass=true,lensWidth=0.4,drawing=false,lensHeight=3,OA=-1.6,AB=0.4}
 \newpsstyle{lens2}{focus=2.0,XO=6,lensGlass=true,lensWidth=0.4,drawing=false,lensTwo=true,lensHeight=3}
-
 % Start drawing
 \rput(0,0){\lens[style=lens1]}
 \psline[linewidth=0.5pt,linecolor=lightgray](-2,0)(8,0) % Principal axis
-
 \Transform
 \rput(0,0){\lens[style=lens2]}
-
 \psOutLine(B)(O){end1} % Rays
 \psOutLine(B')(I){end2}
 \psline{->}(B)(O)(end1)
 \psline{->}(B)(I)(end2)
 \psline[linestyle=dashed](O)(B')
 \psline[linestyle=dashed](I)(B')
-
 \oi{->}(A)(B)
 \oi[linestyle=dashed]{->}(A')(B')
 \oi{->}(A1)(B1)
-
 % Label stuff
 \uput{0.2}[u](B1){Object}
 \uput{0.2}[u](A){Object}
@@ -1902,7 +1872,6 @@ The image we just found becomes the object for the second lens.
 \uput{0.2}[d](F1){$f_1$}
 \uput{0.2}[d](F'1){$f_1$}
 \psdots[ dotscale=1 ](F)(F')(F1)(F'1)(O)(O1)
-
 \uput{1.5}[d](A1){\pnode(0,0){L1}} % below object
 \uput{2.2}[u](O1){\pnode(0,0){L2}} % above first mirror
 \uput{1.5}[d](O1){\pnode(0,0){L3}} % below first mirror
@@ -1912,7 +1881,6 @@ The image we just found becomes the object for the second lens.
 \uput{1.8}[u](O){\pnode(0,0){L7}} % above second mirror, low
 \uput{1.5}[d](O){\pnode(0,0){L8}} % below second mirror
 \uput{2.5}[u](A'){\pnode(0,0){L9}} % above final image
-
 \end{pspicture}
 \end{center}
 }
