@@ -135,9 +135,9 @@ It is important to remember that when resistors and inductances (or capacitors) 
 
 % The following simulation allows you to build some circuits with capacitors and inductors.
 % PhET simulation on circuit building: SIYAVULA-SIMULATION:http://cnx.org/content/m39523/latest/#id63458
-\simulation{PhET sim on circuits}{VPpvr}
+\simulation{Circuits}{VPpvr}
 \begin{wex}{The impedance of a coil}{Calculate the maximum current in a coil in a South African motor which has a resistance of 5 $\Omega$ and an inductance of 3 mH.  The maximum voltage across the coil is 6 V.  You can assume that the resistance and inductance are in series.}{\begin{enumerate} \item Calculate the reactance of the coil $X_{L} = 2 \pi f L = 2 \pi \times 50 \times 0,003 = 0,942 \; \Omega$ 
-\item Calculate the impedance of the coil $Z = \sqrt{X^{2} + R^{2}} = \sqrt{ 0,942^{2} + 5^{2}} = 5,09 \; \Omega$\
+\item Calculate the impedance of the coil $Z = \sqrt{X^{2} + R^{2}} = \sqrt{ 0,942^{2} + 5^{2}} = 5,09 \; \Omega$
 \item Calculate the maximum current $I_{\mathrm{max}} = V_{\mathrm{max}} / Z = 6 / 5,09 = 1,18$ A. \end{enumerate}}
 \end{wex}
 
@@ -148,7 +148,10 @@ Calculate the reactance of the capacitor
 \item Calculate the impedance $Z = \sqrt{X^{2} + R^{2}} = \sqrt{ 53,05^{2} + 30^{2}} = 60,9 \; \Omega$  \end{enumerate}}
 \end{wex}
 
-\begin{IFact}{Most factories containing heavy duty electrical equipment (e.g. large motors) have to pay extra money to their electricity supply company because the inductance of the motor coils causes the current and voltage to get out of phase.  As this makes the electricity distribution network less efficient, a financial penalty is incurred.  The factory engineer can prevent this by connecting capacitors into the circuit to reduce the reactance to zero, as in the last question above.  The current and voltage are then in phase again.  We can't calculate the capacitance needed in this chapter, because the capacitors are usually connected in parallel, and we have only covered the reactances and impedances of series circuits.} \end{IFact}
+%\begin{IFact}{Most factories containing heavy duty electrical equipment (e.g.\@ large motors) have to pay extra money to their electricity supply company because the inductance of the motor coils causes the current and voltage to get out of phase.  As this makes the electricity distribution network less efficient, a financial penalty is incurred.  The factory engineer can prevent this by connecting capacitors into the circuit to reduce the reactance to zero, as in the last question above.  The current and voltage are then in phase again.  We can't calculate the capacitance needed in this chapter, because the capacitors are usually connected in parallel, and we have only covered the reactances and impedances of series circuits.} \end{IFact}
+
+\clearpage
+
 \Exercise{Capacitive and Inductive Circuits}{
 \begin{enumerate}
 \item Why is the instantaneous value of $\frac{V}{I}$ of little use in an AC circuit containing an inductor or capacitor?
@@ -429,8 +432,6 @@ Another explanation for the increased resistance is that the battery has made th
 
 On the other hand, if the diode is forward biased, the depletion band is made narrower.  The negative charge on the p-type silicon is cancelled out by the battery.  The greater the voltage used, the narrower the depletion band becomes.  Eventually, when the voltage is about 0,6 V (for silicon) the depletion band disappears.  Once this has occurred, the diode conducts very well.  
 
-
-
 \Exercise{The Diode}{
 \begin{enumerate}
 \item What is a diode?
@@ -440,8 +441,12 @@ On the other hand, if the diode is forward biased, the depletion band is made na
 \end{enumerate}
 
 % Automatically inserted shortcodes - number to insert 4
-\par \practiceinfo
-\par \begin{tabular}[h]{cccccc}
+
+\vspace{-1cm} % [-0.5]
+\practiceinfo
+
+\vspace{-1cm} % [-0.5]
+\begin{tabular}[h]{cccccc}
 % Question 1
 (1.)	01jj	&
 % Question 2
@@ -453,6 +458,8 @@ On the other hand, if the diode is forward biased, the depletion band is made na
 \end{tabular}
 % Automatically inserted shortcodes - number inserted 4
 }
+
+\clearpage
 
 \subsection{The Light-Emitting Diode (LED)}
 %\begin{syllabus}
@@ -482,18 +489,18 @@ The wavelength of the light emitted, and therefore its colour, depends on the ma
 \subsubsection{LED applications}
 LEDs have many uses.  Some of these are given here.
 \begin{itemize}
-\item thin, lightweight message displays, e.g. in public information signs (at airports and railway stations, among other places)
-\item status indicators, e.g. on/off lights on professional instruments and consumers audio/video equipment
+\item thin, lightweight message displays, e.g.\@ in public information signs (at airports and railway stations, among other places)
+\item status indicators, e.g.\@ on/off lights on professional instruments and consumers audio/video equipment
 \item infrared LEDs in remote controls (for TVs, VCRs, etc.)
 \item clusters of LEDs are used in traffic signals, replacing ordinary bulbs behind coloured glass
 \item car indicator lights and bicycle lighting
 \item calculator and measurement instrument displays (seven segment displays), although now mostly replaced by LCDs
-\item red or yellow LEDs are used in indicator and [alpha]numeric displays in environments where night vision must be retained: aircraft cockpits, submarine and ship bridges, astronomy observatories, and in the field, e.g. night time animal watching and military field use
+\item red or yellow LEDs are used in indicator and [alpha]numeric displays in environments where night vision must be retained: aircraft cockpits, submarine and ship bridges, astronomy observatories, and in the field, e.g.\@ night time animal watching and military field use
 \item red or yellow LEDs are also used in photographic darkrooms, for providing lighting which does not lead to unwanted exposure of the film
-\item illumination, e.g. flashlights (a.k.a. torches, UK), and backlighting for LCD screens
+\item illumination, e.g.\@ flashlights (a.k.a.\@ torches, UK), and backlighting for LCD screens
 \item signalling/emergency beacons and strobes
-\item movement sensors, e.g. in mechanical and optical computer mice and trackballs
-\item in LED printers, e.g. high-end colour printers
+\item movement sensors, e.g.\@ in mechanical and optical computer mice and trackballs
+\item in LED printers, e.g.\@ high-end colour printers
 \end{itemize}
 
 LEDs offer benefits in terms of maintenance and safety.
@@ -586,7 +593,23 @@ The operation of NPN and PNP transistors (in terms of conventional currents) is 
 \end{center}
 \end{figure}
 
-\begin{IFact}{The transistor is considered by many to be one of the greatest discoveries or inventions in modern history, ranking with banking and the printing press. Key to the importance of the transistor in modern society is its ability to be produced in huge numbers using simple techniques, resulting in vanishingly small prices. Computer ``chips'' consist of millions of transistors and sell for Rands, with per-transistor costs in the thousandths-of-cents. The low cost has meant that the transistor has become an almost universal tool for non-mechanical tasks. Whereas a common device, say a refrigerator, would have used a mechanical device for control, today it is often less expensive to simply use a few million transistors and the appropriate computer program to carry out the same task through "brute force". Today transistors have replaced almost all electromechanical devices, most simple feedback systems, and appear in huge numbers in everything from computers to cars.}\end{IFact} 
+\begin{IFact}{The transistor is considered by many to be one of the
+    greatest discoveries or inventions in modern history, ranking with
+    banking and the printing press. Key to the importance of the
+    transistor in modern society is its ability to be produced in huge
+    numbers using simple techniques, resulting in vanishingly small
+    prices. Computer ``chips'' consist of millions of transistors and
+    sell for Rands, with per-transistor costs in the
+    thousandths-of-cents.
+% The low cost has meant that the transistor has become an almost
+% universal tool for non-mechanical tasks. Whereas a common device,
+% say a refrigerator, would have used a mechanical device for control,
+% today it is often less expensive to simply use a few million
+% transistors and the appropriate computer program to carry out the
+% same task through "brute force". Today transistors have replaced
+% almost all electromechanical devices, most simple feedback systems,
+% and appear in huge numbers in everything from computers to cars.
+}\end{IFact} 
 
 
 \subsubsection{The Field Effect Transistor (FET)}
@@ -796,7 +819,7 @@ For most commercially produced operational amplifiers (known as op-amps for shor
 %\item The learner must be able to Describe digital electronics as all-pervasive in modern technology: it is the ability to encode information with digital symbols that has made information processing the most important of modern technologies.
 %\item The learner must be able to State that in digital electronics, two symbols are used: 1, which means "high" and 0, which means "low" (binary system).
 %\item The learner must be able to Describe a logic gate as a device made with groups of transistors on a single chip called an integrated circuit (IC).
-%\item The learner must be able to Recall the five main types of logic gates: i.e. NOT;  AND;  OR;  NAND;  NOR. Illustrate the correct symbol for each logic gate.
+%\item The learner must be able to Recall the five main types of logic gates: i.e.\@ NOT;  AND;  OR;  NAND;  NOR. Illustrate the correct symbol for each logic gate.
 %\item The learner must be able to Compile the relevant truth table for each of the five logic gates.
 %\item The learner must be able to Perform simple problem-solving exercises with two gates joined together to find the equivalent gate using truth tables.
 %\item The learner must be able to Describe and explain how to use transistors to make a circuit that can count in the binary system.
@@ -1051,7 +1074,6 @@ The examples given were easy.  Each job only needed one logic gate.  However any
 
 
 \begin{wex}{Solving a circuit with two logic gates}{Compile the truth table for the circuit below.
-
 \begin{center}
 \begin{pspicture}(1.5,0)(6,2)
 \pscurve(2,0.2)(2.2,1)(2,1.8)
@@ -1607,6 +1629,7 @@ You can also make T flip flops out of logic gates, however these are more compli
 
 \section{Introduction}
 This chapter will focus on the electromagnetic (EM) radiation. Electromagnetic radiation is a self-propagating wave in space with electric and magnetic components. These components oscillate at right angles to each other and to the direction of propagation, and are in phase with each other. Electromagnetic radiation is classified into types according to the frequency of the wave: these types include, in order of increasing frequency, radio waves, microwaves, infrared radiation, visible light, ultraviolet radiation, X-rays and gamma rays.
+
 \chapterstartvideo{VPrsy}
 
 \section{Particle/wave nature of electromagnetic radiation}
@@ -1616,15 +1639,23 @@ This chapter will focus on the electromagnetic (EM) radiation. Electromagnetic r
 %\item Note: Link to Grade 12 Matter and Materials, photoelectric effect
 %\end{syllabus}
 
+\vspace{-0.5cm}
+
 If you watch a colony of ants walking up the wall, they look like a thin continuous black line.  But as you look closer, you see that the line is made up of thousands of separated black ants.
 
 Light and all other types of electromagnetic radiation seems like a continuous wave at first, but when one performs experiments with light, one can notice that light can have both wave and particle like properties.  Just like the individual ants, the light can also be made up of individual bundles of energy, or quanta of light.
 
 Light has both wave-like and particle-like properties (wave--particle duality), but only shows one or the other, depending on the kind of experiment we perform. A wave-type experiment shows the wave nature, and a particle-type experiment shows particle nature.  One cannot test the wave and the particle nature at the same time. A particle of light is called a photon.
 
+\vspace{-2cm} % -0.5
+
 \Definition{Photon}{A photon is a quantum (energy packet) of light.}
 
+\vspace{-0.1cm}
+
 The particle nature of light can be demonstrated by the interaction of photons with matter.  One way in which light interacts with matter is via the photoelectric effect, which will be studied in detail in Chapter~\ref{p:mm:op12}.
+
+\clearpage
 
 \Exercise{Particle/wave nature of electromagnetic radiation}{
 \begin{enumerate}
@@ -1685,7 +1716,7 @@ These mutually regenerating fields travel through empty space at a constant spee
 %\begin{syllabus}
 %\item The learner given a list of different types of EM radiation, must be able to arrange them in order of frequency or wavelength.
 %\item The learner Given the wavelength of EM waves, must be able to calculate the frequency and vice versa, using the equation c=f.lambda.
-%\item The learner must be able to Give an example of the use of each type of EM radiation, i.e. gamma rays, X-rays, ultraviolet light, visible light, infrared, microwave and radio and TV waves.
+%\item The learner must be able to Give an example of the use of each type of EM radiation, i.e.\@ gamma rays, X-rays, ultraviolet light, visible light, infrared, microwave and radio and TV waves.
 %\item Note: Link to Grade 10 Waves, Sound and Light
 %\end{syllabus}
 
@@ -1817,7 +1848,7 @@ Humans experience electromagnetic waves differently depending on their wavelengt
 \begin{enumerate}
 \item Arrange the following types of EM radiation in order of increasing frequency: infrared, X-rays, ultraviolet, visible, gamma. 
 \item Calculate the frequency of an EM wave with a wavelength of 400~nm.
-\item Give an example of the use of each type of EM radiation, i.e. gamma rays, X-rays, ultraviolet light, visible light, infrared, microwave and radio and TV waves.
+\item Give an example of the use of each type of EM radiation, i.e.\@ gamma rays, X-rays, ultraviolet light, visible light, infrared, microwave and radio and TV waves.
 \end{enumerate}
 
 % Automatically inserted shortcodes - number to insert 3
