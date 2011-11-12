@@ -1327,27 +1327,28 @@ If we connect T flip flops in a chain, then we make a counter which can count pu
 
 When this circuit is fed with a stream of pulses, the outputs of the different stages change.  The table below shows how this happens.  Each row shows a different stage, with the first stage at the top.  We assume that all of the flip flops have 0 as their output to start with.
 
-\begin{center} \begin{tabular}{|c|c|c|c|r|r|} \hline
-Input & Output 1 & Output 2 & Output 3 & Number of pulse & Number in binary \\ \hline
-1 & 0 & 0 & 0 & 0 & 000 \\ \hline
-0 & 1 & 0 & 0 & 1 & 001 \\ \hline
-1 & 1 & 0 & 0 & 1 & 001 \\ \hline
-0 & 0 & 1 & 0 & 2 & 010 \\ \hline
-1 & 0 & 1 & 0 & 2 & 010 \\ \hline
-0 & 1 & 1 & 0 & 3 & 011 \\ \hline
-1 & 1 & 1 & 0 & 3 & 011 \\ \hline
-0 & 0 & 0 & 1 & 4 & 100 \\ \hline
-1 & 0 & 0 & 1 & 4 & 100 \\ \hline
-0 & 1 & 0 & 1 & 5 & 101 \\ \hline
-1 & 1 & 0 & 1 & 5 & 101 \\ \hline
-0 & 0 & 1 & 1 & 6 & 110 \\ \hline
-1 & 0 & 1 & 1 & 6 & 110 \\ \hline
-0 & 1 & 1 & 1 & 7 & 111 \\ \hline
-1 & 1 & 1 & 1 & 7 & 111 \\ \hline
+\begin{center} \begin{tabular}{|c|c|c|c|c|c|} \hline
+Input & Output 1 & Output 2 & Output 3 & Number & Number \\
+ &  &  &  & of pulse & in binary \\ \hline
+1 & 0 & 0 & 0 & 0 & 0000 \\ \hline
+0 & 1 & 0 & 0 & 1 & 0001 \\ \hline
+1 & 1 & 0 & 0 & 1 & 0001 \\ \hline
+0 & 0 & 1 & 0 & 2 & 0010 \\ \hline
+1 & 0 & 1 & 0 & 2 & 0010 \\ \hline
+0 & 1 & 1 & 0 & 3 & 0011 \\ \hline
+1 & 1 & 1 & 0 & 3 & 0011 \\ \hline
+0 & 0 & 0 & 1 & 4 & 0100 \\ \hline
+1 & 0 & 0 & 1 & 4 & 0100 \\ \hline
+0 & 1 & 0 & 1 & 5 & 0101 \\ \hline
+1 & 1 & 0 & 1 & 5 & 0101 \\ \hline
+0 & 0 & 1 & 1 & 6 & 0110 \\ \hline
+1 & 0 & 1 & 1 & 6 & 0110 \\ \hline
+0 & 1 & 1 & 1 & 7 & 0111 \\ \hline
+1 & 1 & 1 & 1 & 7 & 0111 \\ \hline
 0 & 0 & 0 & 0 & 8 & 1000 \\ \hline
 1 & 0 & 0 & 0 & 8 & 1000 \\ \hline
-0 & 1 & 0 & 0 & 9 & 1101 \\ \hline
-1 & 1 & 0 & 0 & 9 & 1101 \\ \hline \end{tabular} \end{center}
+0 & 1 & 0 & 0 & 9 & 1001 \\ \hline
+1 & 1 & 0 & 0 & 9 & 1001 \\ \hline \end{tabular} \end{center}
                
 The binary numbers in the right hand column count the pulses arriving at the input.  You will notice that the output of the first flip flop gives the right most digit of the pulse count (in binary).  The output of the second flip flop gives the second digit from the right (the `twos' digit) of the pulse count.  The output of the third flip flop gives the third digit from the right (the `fours' digit) of the pulse count.  As there are only three flip flops, there is nothing to provide the next digit (the `eights' digit), and so the eighth pulse is recorded as 000, not 1000.
 
