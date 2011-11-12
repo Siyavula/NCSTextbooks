@@ -944,6 +944,8 @@ This device is called an AND gate, because the output is only 1 if one input AND
 
 \Extension{Using 0 and 1 to mean True and False}{When we use logic gates we use the low voltage state 0 to represent `false'.  The high voltage state 1 represents `true'.  This is why the word AND is so appropriate.  A AND B is true (1) if, and only if, A is true (1) AND B is true (1).}
 
+\clearpage
+
 \Extension{AND and multiplication}{Sometimes, the AND operation is written as multiplication.  A AND B is written AB.  If either A or B are 0, then AB will also be 0.  For AB to be 1, we need A and B to both be 1.  Multiplication of the numbers 0 and 1 does exactly the same job as an AND gate.}
 
 \subsubsection{The NAND Gate}
@@ -1108,15 +1110,6 @@ The examples given were easy.  Each job only needed one logic gate.  However any
 \end{pspicture}
 \end{center}
 Next we prepare a truth table.  There is a column for each of the inputs, for the intermediate point C and also for the output.  The truth table has four rows, since there are four possible inputs --- 00, 01, 10 and 11.
-\begin{center}
-\begin{tabular}{|c|c|c|c|}\hline
-A&B&C&Output\\\hline\hline
-0&0& & \\\hline
-0&1& & \\\hline
-1&0& & \\\hline
-1&1& & \\\hline
-\end{tabular}
-\end{center}
 Next we fill in the C column given that we know what a NOR gate does.
 \begin{center}
 \begin{tabular}{|c|c|c|c|}\hline
@@ -1140,6 +1133,8 @@ A&B&C&Output\\\hline\hline
 Finally we see that this combination of gates does the same job as an OR gate.
 }
 \end{wex}
+
+\clearpage
 
 Each logic gate is manufactured from two or more transistors.  Other circuits can be made using logic gates, as we shall see in the next section.  We shall show you how to count and store numbers using logic gates.  This means that if you have enough transistors, and you connect them correctly to make the right logic gates, you can make circuits which count and store numbers.
 
@@ -1190,7 +1185,9 @@ In practise, the cheapest gate to manufacture is usually the NAND gate. Addition
 \end{enumerate}
 
 % Automatically inserted shortcodes - number to insert 6
+\vspace{-0.5cm}
 \par \practiceinfo
+\vspace{-0.5cm}
 \par \begin{tabular}[h]{cccccc}
 % Question 1
 (1.)	01k4	&
@@ -1232,6 +1229,8 @@ In the previous section, we saw how the numbers 0 and 1 could represent `false' 
 
 In normal (denary) numbers, we write 9+1 as 10.  The fact that the `1' in 10 is the second digit from the right tells us that it actually means 10 and not 1.  Similarly, the `3' in 365 represents 300 because it is the third digit from the right.  You could write 365 as $3 \times 100 + 6 \times 10 + 5$.  You will notice the pattern that the $n$th digit from the right represents $10^{n-1}$.  In binary, we use the $n$th digit from the right to represent $2^{n-1}$.  Thus 2 is written as 10 in binary.  Similarly $2^{2} = 4$ is written as 100 in binary, and $2^{3} = 8$ is written as 1000 in binary.
 
+\clearpage
+
 \begin{wex}{Conversion of Binary Numbers to Denary Numbers}{Convert the binary number 10101 to its denary equivalent.}{We start on the right.  The `1' on the right does indeed represent one.  The next `1' is in the third place from the right, and represents $2^2 = 4$.  The next `1' is in the fifth place from the right and represents $2^4 = 16$.  Accordingly, the binary number 10101 represents 16+4+1 = 21 in denary notation.}
 \end{wex}
 
@@ -1239,9 +1238,9 @@ In normal (denary) numbers, we write 9+1 as 10.  The fact that the `1' in 10 is 
 \begin{wex}{Conversion of Denary Numbers to Binary Numbers}{Convert the decimal number 12 to its binary equivalent.}{Firstly we write 12 as a sum of powers of 2, so 12 = 8+4.  In binary, eight is 1000, and four is 100.  This means that twelve = eight + four must be 1000+100 = 1100 in binary.  You could also write 12 as $1 \times 8 + 1 \times 4 + 0 \times 2 + 0 \times 1 = 1100$ in binary.}
 \end{wex}
 
-\begin{IFact}{How do you write numbers as a sum of powers of two?  The first power of two (the largest) is the largest power of two which is not larger than the number you are working with.  In our last example, where we wanted to know what twelve was in binary, the largest power of two which is not larger than 12 is 8.  Thus 12 = 8 + something.  By arithmetic, the `something' must be 4, and the largest power of two not larger than this is 4 exactly.  Thus 12 = 8 + 4, and we have finished.
-
-A more complicated example would be to write one hundred in binary.  The largest power of two not larger than 100 is 64 (1000000 in binary).  Subtracting 64 from 100 leaves 36.  The largest power of two not larger than 36 is 32 (100000 in binary).  Removing this leaves a remainder of 4, which is a power of two itself (100 in binary).  Thus one hundred is 64 + 32 + 4, or in binary  1000000 + 100000 + 100 = 1100100.} \end{IFact}
+%\begin{IFact}{How do you write numbers as a sum of powers of two?  The first power of two (the largest) is the largest power of two which is not larger than the number you are working with.  In our last example, where we wanted to know what twelve was in binary, the largest power of two which is not larger than 12 is 8.  Thus 12 = 8 + something.  By arithmetic, the `something' must be 4, and the largest power of two not larger than this is 4 exactly.  Thus 12 = 8 + 4, and we have finished.
+%
+%A more complicated example would be to write one hundred in binary.  The largest power of two not larger than 100 is 64 (1000000 in binary).  Subtracting 64 from 100 leaves 36.  The largest power of two not larger than 36 is 32 (100000 in binary).  Removing this leaves a remainder of 4, which is a power of two itself (100 in binary).  Thus one hundred is 64 + 32 + 4, or in binary  1000000 + 100000 + 100 = 1100100.} \end{IFact}
 
 Once a number is written in binary, it can be represented using the low and high voltage levels of digital electronics.  We demonstrate how this is done by showing you how an electronic counter works.
 
@@ -1364,15 +1363,18 @@ Counting is important.  However, it is equally important to be able to remember 
 
 The memory in the computer contains many parts.  Each part is able to store a single 0 or 1.  Since 0 and 1 are the two binary digits, we say that each part of the memory stores one {\bf bit}.
 
+%\begin{IFact}{The bistable circuits drawn here don't remember 0s or 1s forever --- they lose the information if the power is turned off.  The same is true for the RAM (Random Access Memory) used to store working and temporary data in a computer.  Some modern circuits contain special memory which can remember its state even if the power is turned off.  This is used in FLASH drives, commonly found in USB data sticks and on the memory cards used with digital cameras.  These bistable circuits are much more complex.}  \end{IFact}
+
 \Definition{Bit}{One bit is a short way of saying one `binary digit'.  It is a single 0 or 1.}
 
-\begin{IFact}{If you have eight bits, you can store a binary number from 00000000 to 11111111 (0 to 255 in denary).  This gives you enough permutations of 0s and 1s to have one for each letter of the alphabet (in upper and lower case), each digit from 0 to 9, each punctuation mark and each control code used by a computer in storing a document.  When you type text into a word processor, each character is stored as a set of eight bits.  Each set of eight bits is called a {\bf byte}.  Computer memories are graded according to how many bytes they store.  There are 1024 bytes in a kilobyte (kB), $1024 \times 1024$ bytes in a megabyte (MB), and $1024 \times 1024 \times 1024$ bytes in a gigabyte (GB).} \end{IFact}
+%\begin{IFact}{If you have eight bits, you can store a binary number from 00000000 to 11111111 (0 to 255 in denary).  This gives you enough permutations of 0s and 1s to have one for each letter of the alphabet (in upper and lower case), each digit from 0 to 9, each punctuation mark and each control code used by a computer in storing a document.  When you type text into a word processor, each character is stored as a set of eight bits.  Each set of eight bits is called a {\bf byte}.  Computer memories are graded according to how many bytes they store.  There are 1024 bytes in a kilobyte (kB), $1024 \times 1024$ bytes in a megabyte (MB), and $1024 \times 1024 \times 1024$ bytes in a gigabyte (GB).} \end{IFact}
 
 To store a bit we need a circuit which can `remember' a 0 or a 1.  This is called a {\bf bistable} circuit because it has two stable states.  It can stay indefinitely either as a 0 or a 1.  An example of a bistable circuit is shown in Figure~\ref{fig:bistable}.  It is made from two NOR gates.
 
 \begin{figure}[!h]
 \begin{center}
 \begin{tabular}{cc}
+\scalebox{0.8}{
 \begin{pspicture}(0,0)(6,6)
 
 \pscurve(2,3.2)(2.2,4)(2,4.8)
@@ -1396,8 +1398,8 @@ To store a bit we need a circuit which can `remember' a 0 or a 1.  This is calle
 
 \psline(0.5,0.5)(2,0.5)
 \uput[r](0,0.5){S}
-\end{pspicture} &
-
+\end{pspicture}} &
+\scalebox{0.8}{
 \begin{pspicture}(0,0)(6,6)
 
 \pscurve(2,3.2)(2.2,4)(2,4.8)
@@ -1420,7 +1422,7 @@ To store a bit we need a circuit which can `remember' a 0 or a 1.  This is calle
 
 \psline(0.5,0.5)(2,0.5)
 \uput[r](0,0.5){S}
-\end{pspicture} \\ 
+\end{pspicture}} \\ 
 \end{tabular}
 \caption{A bistable circuit made from two NOR gates.  This circuit is able to store one bit of digital information.  With the two inputs set to 0, you can see that the output could be (and will remain) either 0 or 1.  The circuit on the left shows an output of 0, the circuit on the right shows an output of 1.  Wires carrying high logic levels (1) are drawn thicker.  The output of the bistable is labelled Q.}
 \label{fig:bistable}
@@ -1431,6 +1433,7 @@ To store the 0 or the 1 in the bistable circuit, you set one of the inputs to 1,
 
 \begin{figure}
 \begin{center}
+\scalebox{0.8}{
 \begin{pspicture}(0,0)(6,6)
 \pscurve(2,3.2)(2.2,4)(2,4.8)
 
@@ -1454,7 +1457,7 @@ To store the 0 or the 1 in the bistable circuit, you set one of the inputs to 1,
 \psline[linewidth=0.1cm](0.5,0.5)(2,0.5)
 \uput[r](0,0.5){S}
 \end{pspicture}
-
+}
 \caption{The output of a bistable circuit is {\bf set} (made 1) by raising the `S' input to 1.  Wires carrying high logic levels (1) are shown with thicker lines.}
 \label{fig:biS}
 \end{center}
@@ -1464,6 +1467,7 @@ To store a 0, you raise the `R' (reset) input to 1.  This is shown in Figure~\re
 
 \begin{figure}
 \begin{center}
+\scalebox{0.8}{
 \begin{pspicture}(0,0)(6,6)
 
 \pscurve(2,3.2)(2.2,4)(2,4.8)
@@ -1488,7 +1492,7 @@ To store a 0, you raise the `R' (reset) input to 1.  This is shown in Figure~\re
 \psline(0.5,0.5)(2,0.5)
 \uput[r](0,0.5){S}
 \end{pspicture}
-
+}
 \caption{The output of a bistable circuit is {\bf reset} (made 0) by raising the `R' input to 1. Wires carrying high logic levels (1) are shown with thicker lines.}
 \label{fig:biR}
 \end{center}
@@ -1497,8 +1501,6 @@ To store a 0, you raise the `R' (reset) input to 1.  This is shown in Figure~\re
 Once you have used the S or R inputs to set or reset the bistable circuit, you then bring both inputs back to 0.  The bistable `remembers' the state.  Because of the ease with which the circuit can be Reset and Set it is also called an {\bf RS flip flop} circuit.
 
 Computer memory can store millions or billions of bits.  If it used our circuit above, it would need millions or billions of NOR gates, each of which is made from several transistors.  Computer memory is made of many millions of transistors.
-
-\begin{IFact}{The bistable circuits drawn here don't remember 0s or 1s forever --- they lose the information if the power is turned off.  The same is true for the RAM (Random Access Memory) used to store working and temporary data in a computer.  Some modern circuits contain special memory which can remember its state even if the power is turned off.  This is used in FLASH drives, commonly found in USB data sticks and on the memory cards used with digital cameras.  These bistable circuits are much more complex.}  \end{IFact}
 
 You can also make T flip flops out of logic gates, however these are more complicated to design.
 
@@ -1550,7 +1552,7 @@ You can also make T flip flops out of logic gates, however these are more compli
 \end{itemize}
 
 
-\Exercise{End of Chapter Exercises}{
+\begin{eocexercises}{}
 \begin{enumerate}
 \item Calculate the reactance of a 3 mH inductor at a frequency of 50 Hz.
 \item Calculate the reactance of a 30 $\mu$F capacitor at a frequency of 1 kHz.
@@ -1616,7 +1618,8 @@ You can also make T flip flops out of logic gates, however these are more compli
 (19.)	01m1	&
 \end{tabular}
 % Automatically inserted shortcodes - number inserted 19
-}
+\end{eocexercises}
+
 
 % CHILD SECTION END 
 
@@ -1688,6 +1691,7 @@ Accelerating charges emit electromagnetic waves. We have seen that a changing el
 These mutually regenerating fields travel through empty space at a constant speed of $3 \times 10^8\ems$, represented by $c$.
 
 \begin{center}
+\scalebox{0.6}{% 0.8
 \begin{pspicture}(-4,-4)(3,4)
 \psset{Alpha=30}
 \pstThreeDCoor[nameY=$B$,nameZ=$E$,linecolor=black,xMin=-4,yMin=-4,zMin=-4]
@@ -1701,6 +1705,7 @@ These mutually regenerating fields travel through empty space at a constant spee
      -3 2.5 t mul cos mul
     }
 \end{pspicture}
+}
 \end{center}
 
 %\begin{figure}[htp!]
@@ -1737,6 +1742,8 @@ Electromagnetic radiation allows us to observe the world around us. It is this r
 
 The wavelength of a particular electromagnetic radiation will depend on how it was created. 
 
+\clearpage
+
 \Exercise{Wave Nature of EM Radiation}{
 \begin{enumerate}
 \item List one source of electromagnetic waves. Hint: consider the spectrum diagram and look at the names we give to different wavelengths.
@@ -1746,7 +1753,9 @@ The wavelength of a particular electromagnetic radiation will depend on how it w
 \end{enumerate}
 
 % Automatically inserted shortcodes - number to insert 4
+\vspace{-0.5cm}
 \par \practiceinfo
+\vspace{-0.5cm}
 \par \begin{tabular}[h]{cccccc}
 % Question 1
 (1.)	01m4	&
@@ -1758,14 +1767,13 @@ The wavelength of a particular electromagnetic radiation will depend on how it w
 (4.)	01m7	&
 \end{tabular}
 % Automatically inserted shortcodes - number inserted 4
-
 }
 
 The radiation can take on any wavelength, which means that the spectrum is continuous. Physicists broke down this continuous band into sections. Each section is defined by how the radiation is created, not the wavelength of the radiation. But each category is continuous within the min and max wavelength of that category, meaning there are no wavelengths excluded within some range. 
 
 The spectrum is in order of wavelength, with the shortest wavelength at one end and the longest wavelength at the other. The spectrum is then broken down into categories as detailed in Table~\ref{tab:emspectrum}.
-\pagebreak
-\begin{table}[htbp]
+
+\begin{table}[H]
 \begin{center}
 \caption{Electromagnetic spectrum}
 \label{tab:emspectrum}
@@ -1782,10 +1790,10 @@ radio waves&$>10^{8}$&$<3\times 10^{9}$\\\hline
 \end{center}
 \end{table}
 
+Since an electromagnetic wave is still a wave, the equation that you learnt in Grade 10 still applies:
+$c=f\cdot \lambda$.
 
-Since an electromagnetic wave is still a wave, the following equation that you learnt in Grade 10 still applies:
-\nequ{c=f\cdot \lambda}
-
+\clearpage
 
 \begin{wex}{EM spectrum I}{Calculate the frequency of red light with a wavelength of $4,2 \times 10^{-7}$~m}{ 
 We use the formula: $c=f\lambda$ to calculate frequency. The speed of light is a constant $3 \times 10^{8}$m/s.
@@ -1818,8 +1826,6 @@ f &=&  1.5 \times 10^{15} \ \rm{Hz}
 }
 \end{wex}
 
-
-
 Examples of some uses of electromagnetic waves are shown in Table~\ref{tab:emuses}. 
 
 \begin{table}[htbp]
@@ -1848,11 +1854,13 @@ Humans experience electromagnetic waves differently depending on their wavelengt
 \begin{enumerate}
 \item Arrange the following types of EM radiation in order of increasing frequency: infrared, X-rays, ultraviolet, visible, gamma. 
 \item Calculate the frequency of an EM wave with a wavelength of 400~nm.
-\item Give an example of the use of each type of EM radiation, i.e.\@ gamma rays, X-rays, ultraviolet light, visible light, infrared, microwave and radio and TV waves.
+\item Give an example of the use of each type of EM radiation: gamma rays, X-rays, ultraviolet light, visible light, infrared, microwave and radio and TV waves.
 \end{enumerate}
 
 % Automatically inserted shortcodes - number to insert 3
+\vspace{-0.75cm}
 \par \practiceinfo
+\vspace{-0.5cm}
 \par \begin{tabular}[h]{cccccc}
 % Question 1
 (1.)	01m8	&
@@ -1864,6 +1872,8 @@ Humans experience electromagnetic waves differently depending on their wavelengt
 % Automatically inserted shortcodes - number inserted 3
 }
 
+\clearpage
+
 \section{The particle nature of electromagnetic radiation}
 %\begin{syllabus}
 %\item energy of a photon related to frequency and wavelength
@@ -1874,10 +1884,7 @@ When we talk of electromagnetic radiation as a particle, we refer to photons, wh
 %\equ{E=h\cdot f= \frac{hc}{\lambda}}{eq:ehf}
 $h$ (called Planck's constant).
 
-
-
-
-
+\vspace{-0.5cm}
 
 \Definition{Planck's constant}{Planck's constant is a physical constant named after Max Planck.
 
@@ -1888,9 +1895,7 @@ The energy of a photon can be calculated using the formula: $E=hf$ or $E=h \frac
 Where E is the energy of the photon in joules (J), h is Planck's constant, c is the speed of light, f is the frequency in hertz (Hz) and $\lambda$ is the wavelength in metres (m).
 
 \begin{wex}{Calculating the energy of a photon I}{Calculate the energy of a photon with a frequency of $3 \times 10^{18}$~Hz}
-{
-We use the formula: $E=hf$
-
+{We use the formula:
 \begin{eqnarray*}
 E &=& hf\\
 &=& 6,6 \times 10^{-34} \times 3 \times 10^{18}\\
@@ -1950,21 +1955,21 @@ Certain kinds of electromagnetic radiation such as ultra-violet radiation, X-ray
  
 Excessive exposure to radiation, including sunlight, X-rays and all nuclear radiation, can cause destruction of biological tissue. 
 
-\subsection{Ultraviolet(UV) radiation and the skin}
+\vspace{-0.5cm}
+
+\subsection{Ultraviolet (UV) radiation and the skin}
 UVA and UVB are different ranges of frequencies for ultraviolet (UV) light. UVA and UVB can damage collagen fibres which results in the speeding up skin ageing. In general, UVA is the least harmful, but it  can contribute to the ageing of skin, DNA damage and possibly skin cancer. It penetrates deeply and does not cause sunburn. Because it does not cause reddening of the skin (erythema) it cannot be measured in the SPF testing. There is no good clinical measurement of the blocking of UVA radiation, but it is important that sunscreen block both UVA and UVB.
 
 UVB light can cause skin cancer. The radiation excites DNA molecules in skin cells, resulting in possible mutations, which can cause cancer. This cancer connection is one reason for concern about ozone depletion and the ozone hole.
 
 As a defence against UV radiation, the body tans when exposed to moderate (depending on skin type) levels of radiation by releasing the brown pigment melanin. This helps to block UV penetration and prevent damage to the vulnerable skin tissues deeper down. Suntan lotion, often referred to as sunblock or sunscreen, partly blocks UV and is widely available. Most of these products contain an SPF rating that describes the amount of protection given. This protection, however, applies only to UVB rays responsible for sunburn and not to UVA rays that penetrate more deeply into the skin and may also be responsible for causing cancer and wrinkles. Some sunscreen lotion now includes compounds such as titanium dioxide which helps protect against UVA rays. Other UVA blocking compounds found in sunscreen include zinc oxide and avobenzone.
 
-\Extension{What makes a good sunscreen?}{
-\begin{itemize}
-\item UVB protection: Padimate O, Homosalate, Octisalate (octyl salicylate), Octinoxate (octyl methoxycinnamate)
-\item UVA protection: Avobenzone
-\item UVA/UVB protection: Octocrylene, titanium dioxide, zinc oxide, Mexoryl (ecamsule)
-\end{itemize}
-
-Another means to block UV is by wearing sun protective clothing. This is clothing that has a UPF rating that describes the protection given against both UVA and UVB.}
+%\Extension{What makes a good sunscreen?}{\begin{itemize}
+%\item UVB protection: Padimate O, Homosalate, Octisalate (octyl salicylate), Octinoxate (octyl methoxycinnamate)
+%\item UVA protection: Avobenzone
+%\item UVA/UVB protection: Octocrylene, titanium dioxide, zinc oxide, Mexoryl (ecamsule)
+%\end{itemize}
+%Another means to block UV is by wearing sun protective clothing. This is clothing that has a UPF rating that describes the protection given against both UVA and UVB.}
 
 \subsection{Ultraviolet radiation and the eyes}
 High intensities of UVB light are hazardous to the eyes, and exposure can cause welder's flash (photo keratitis or arc eye) and may lead to cataracts, pterygium and pinguecula formation.
@@ -2018,13 +2023,14 @@ Cellphone users are recommended to minimise radiation, by for example:
 }
 % Presentation on the electromagnetic spectrum: SIYAVULA-PRESENTATION:http://cnx.org/content/m39513/latest/#slidesharefigure
 
+\clearpage
+
 \summary{VPpxh}
 \begin{enumerate}
 \item Electromagnetic radiation has both a wave and a particle nature.
 \item Electromagnetic waves travel at a speed of $3 \times 10^{8}~m \cdot s^{-1}$ in a vacuum.
 \item The Electromagnetic spectrum consists of the following types of radiation: radio waves, microwaves, infrared, visible, ultraviolet, X-rays, gamma-rays.
 \item Gamma-rays have the most energy and are the most penetrating, while radio waves have the lowest energy and are the least penetrating.
-
 \end{enumerate}
 
 \begin{eocexercises}{}
@@ -2050,7 +2056,7 @@ Cellphone users are recommended to minimise radiation, by for example:
 
 \item What precautions should we take when using cell phones?
 
-\item Write a short essay on a type of electromagnetic waves. You should look at uses, advantages and disadvantages of your chosen radiation.
+\item Write a short essay on a type of electromagnetic wave. You should look at uses, advantages and disadvantages of the radiation.
 
 \item Explain why some types of electromagnetic radiation are more penetrating than others.
 
