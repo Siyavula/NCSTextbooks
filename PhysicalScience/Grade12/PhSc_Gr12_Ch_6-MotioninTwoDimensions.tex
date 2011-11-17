@@ -116,10 +116,13 @@ v_f^2 &=& v_i^2 + 2g\Delta x \label{eq:pg:eq4}
 \end{eqnarray}
 % PhET simulation on projectile motion: SIYAVULA-SIMULATION:http://cnx.org/content/m39546/latest/#projectile-motion
 \simulation{PhET sim on motion}{VPnlc}
-\begin{wex}{Projectile motion}{A ball is thrown upwards with an initial velocity of 10~\ms. \begin{enumerate}
+\begin{wex}{Projectile motion}{A ball is thrown upwards with an initial velocity of 10~\ms. \\
+\begin{minipage}{\textwidth}
+\begin{enumerate}
 	\item Determine the maximum height reached above the thrower's hand.
 	\item Determine the time it takes the ball to reach its maximum height.
-	\end{enumerate}}
+	\end{enumerate}
+\end{minipage}}
 {\westep{Identify what is required and what is given}
 We are required to determine the maximum height reached by the ball and how long it takes to reach this height. We are given the initial velocity $v_i$ = 10 \ms and the acceleration due to gravity g = 9,8 \mss.
 
@@ -305,8 +308,8 @@ If we take the upwards direction as positive then for an object moving upwards w
 \uput[u](2.04,0){$t_f$}
 \psline[linestyle=dashed](2.04,-1.6)(2.04,0)
 \uput[l](0,0){0}
-\uput[l](0,5){$v_{i}$}
-\uput[l](0,-5){$v_{f}$}
+\uput[l](0,1.2){$v_{i}$}
+\uput[l](0,-1.5){$v_{f}$}
 \uput[d](1.5,-1.5){(b)}}
 \rput(9,1){\psaxes[labels=none,ticks=none]{->}(0,0)(0,-2)(2.5,2)
 \psline[linewidth=2pt](0,-1)(2,-1)
@@ -320,24 +323,25 @@ If we take the upwards direction as positive then for an object moving upwards w
 \end{center}
 \end{figure}
 
-\newpage
-
 \begin{wex}{Drawing Graphs of Projectile Motion}{Stanley is standing on the a balcony 20 m above the ground. Stanley tosses up a rubber ball with an initial velocity of 4,9~\ms. The ball travels upwards and then falls to the ground. Draw graphs of position vs.\@ time, velocity vs.\@ time and acceleration vs.\@ time. Choose upwards as the positive direction.}{
 \westep{Determine what is required}
-We are required to draw graphs of 
+We are required to draw graphs of:\\
+\begin{minipage}{\textwidth} 
 	\begin{enumerate}
 	\item $\Delta x$ vs.\@ $t$
 	\item $v$ vs.\@ $t$
 	\item $a$ vs.\@ $t$
 	\end{enumerate}
-
+\end{minipage}
 \westep{Determine how to approach the problem}
 %\begin{minipage}{0.5\textwidth}
-There are two parts to the motion of the ball:
+There are two parts to the motion of the ball:\\
+\begin{minipage}{\textwidth}
 \begin{enumerate}
 \item ball travelling upwards from the building
 \item ball falling to the ground
 \end{enumerate}
+\end{minipage}\\
 We examine each of these parts separately. To be able to draw the graphs, we need to determine the time taken and displacement for each of the motions.
 %\end{minipage}
 
@@ -554,7 +558,8 @@ We chose upwards to be positive. The acceleration of the ball is downward. $g=-9
 \end{wex}
 
 \begin{wex}{Analysing Graphs of Projectile Motion}
-{The graph below (not drawn to scale) shows the motion of tennis ball that was thrown vertically upwards from an open window some distance from the ground. It takes the ball 0,2 s to reach its highest point before falling back to the ground. Study the graph given and calculate 
+{The graph below (not drawn to scale) shows the motion of tennis ball that was thrown vertically upwards from an open window some distance from the ground. It takes the ball 0,2 s to reach its highest point before falling back to the ground. Study the graph given and calculate:\\
+\begin{minipage}{\textwidth} 
 	\begin{enumerate}
 	\item how high the window is above the ground.
 	\item the time it takes the ball to reach the maximum height.
@@ -562,6 +567,7 @@ We chose upwards to be positive. The acceleration of the ball is downward. $g=-9
 	\item the maximum height that the ball reaches.
 	\item the final velocity of the ball when it reaches the ground.
 	\end{enumerate}
+\end{minipage}\\
 \begin{center}
 \begin{pspicture}(-1,-1)(5,5.5)
 \psline{->}(0,0)(0,5.5)
@@ -649,12 +655,14 @@ The final velocity of the ball is 9,07 \ms \textit{downwards}.
 
 \begin{wex}{Describing Projectile Motion}
 %{\nts{Need a worked example: given a graph, describe the motion.}}{A cricket ball is hit by a cricketer and the following graph of velocity vs.\@ time was drawn:
-{A cricketer hits a cricket ball from the ground and the following graph of velocity vs.\@ time was drawn. Upwards was taken as positive. Study the graph and follow the instructions below:
+{A cricketer hits a cricket ball from the ground and the following graph of velocity vs.\@ time was drawn. Upwards was taken as positive. Study the graph and follow the instructions below:\\
+\begin{minipage}{\textwidth}
 	\begin{enumerate}
 	\item Describe the motion of the ball according to the graph.
 	\item Draw a sketch graph of the corresponding displacement-time graph. Label the axes.
 	\item Draw a sketch graph of the corresponding acceleration-time graph. Label the axes.
 	\end{enumerate}
+\end{minipage}\\
 \begin{center}
 \scalebox{1.2} % Change this value to rescale the drawing.
 {\begin{pspicture}(0,-3.17)(5.7029686,3.175)
@@ -890,6 +898,7 @@ Consider two objects moving towards each other as shown in Figure~\ref{fig:p:m:m
 %\psgrid[gridcolor=gray]
 \psline[linecolor=lightgray](0,0)(1,0)
 \psline{->}(0,0)(1;45)
+\psline[linestyle=dotted]{->}(0,0)(3;45)
 \psline{->}(0,0)(0,0.707)
 \psline{->}(0,0)(0.707,0)
 \uput[u](0,0.707){$v_{i1y}$}
@@ -904,6 +913,7 @@ Consider two objects moving towards each other as shown in Figure~\ref{fig:p:m:m
 \rput(5,0){
 \psline[linecolor=lightgray](0,0)(-1,0)
 \psline{->}(0,0)(1;135)
+\psline[linestyle=dotted]{->}(0,0)(3;135)
 \psline{->}(0,0)(0,0.707)
 \psline{->}(0,0)(-0.707,0)
 \uput[u](0,0.707){$v_{i2y}$}
@@ -924,6 +934,7 @@ Consider two objects moving towards each other as shown in Figure~\ref{fig:p:m:m
 %\psgrid[gridcolor=gray]
 \rput(4,2){\psline[linecolor=lightgray](0,0)(1,0)
 \psline{->}(0,0)(1;45)
+\psline[linestyle=dotted]{<-}(0,0)(2;-135)
 \psline{->}(0,0)(0,0.707)
 \psline{->}(0,0)(0.707,0)
 \uput[u](0,0.707){$v_{f1y}$}
@@ -938,6 +949,7 @@ Consider two objects moving towards each other as shown in Figure~\ref{fig:p:m:m
 \rput(1,2){
 \psline[linecolor=lightgray](0,0)(-1,0)
 \psline{->}(0,0)(1;135)
+\psline[linestyle=dotted]{<-}(0,0)(2;-45)
 \psline{->}(0,0)(0,0.707)
 \psline{->}(0,0)(-0.707,0)
 \uput[u](0,0.707){$v_{f2y}$}
@@ -950,8 +962,8 @@ Consider two objects moving towards each other as shown in Figure~\ref{fig:p:m:m
 \pscircle[fillcolor=white,fillstyle=solid](0,0){0.25}
 \rput(0,0){$m_2$}
 }
-\psdot(2.5,0)
-\uput[u](2.5,0){P}
+\psdot(2.5,0.5)
+\uput[u](2.5,0.5){P}
 \end{pspicture}
 }
 \caption{Two balls collide at point P.}
@@ -1011,11 +1023,9 @@ This forms the basis of analysing momentum conservation problems in two dimensio
 % PhET simulation on momentum: SIYAVULA-SIMULATION:http://cnx.org/content/m39550/latest/#momentum
 \simulation{PhET sim on momentum}{VPnlm}
 \begin{wex}{2D Conservation of Momentum}
-{In a rugby game, Player 1 is running with the ball at 5~m$\cdot$s$^{-1}$ straight down the field parallel to the edge of the field. Player 2 runs at 6~m$\cdot$s$^{-1}$ an angle of $60^{\circ}$ to the edge of the field and tackles Player 1. In the tackle, Player 2 stops completely while Player 1 bounces off Player 2. Calculate the velocity (magnitude and direction) at which Player 1 bounces off Player 2. Both the players have a mass of 90 kg.  }
-{
+{In a rugby game, Player 1 is running with the ball at 5~m$\cdot$s$^{-1}$ straight down the field parallel to the edge of the field. Player 2 runs at 6~m$\cdot$s$^{-1}$ an angle of $60^{\circ}$ to the edge of the field and tackles Player 1. In the tackle, Player 2 stops completely while Player 1 bounces off Player 2. Calculate the velocity (magnitude and direction) at which Player 1 bounces off Player 2. Both the players have a mass of 90 kg.}{
 \westep{Identify what is required and what is given}
 The first step is to draw the picture to work out what the situation is. Mark the initial velocities of both players in the picture.
-
 \begin{center}
 \scalebox{1} % Change this value to rescale the drawing.
 {
@@ -1035,7 +1045,6 @@ The first step is to draw the picture to work out what the situation is. Mark th
 \end{center}
 We also know that $m_{1}=m_{2}=90$ kg and $v_{f2}$ = 0 ms$^{-1}$. \\
 We need to find the final velocity and angle at which Player 1 bounces off Player 2.
-
 \westep{Use conservation of momentum to solve the problem. First find the initial total momentum:}
 Total initial momentum = Total final momentum. 
 But we have a two dimensional problem, and we need to break up the initial momentum into $x$ and $y$ components. 
@@ -1043,54 +1052,45 @@ But we have a two dimensional problem, and we need to break up the initial momen
 p_{ix} &=& p_{fx}\\
 p_{iy} &=& p_{fy}
 \end{eqnarray*}
-
 For Player 1:
 \begin{eqnarray*}
 p_{ix1} &=& m_{1}v_{i1x} = 90 \times 0 = 0 \\
 p_{iy1} &=& m_{1}v_{i1y} = 90 \times 5 
 \end{eqnarray*}
-
 For Player 2:
 \begin{eqnarray*}
 p_{ix2} &=& m_{2}v_{i2x} = 90 \times 8\times \sin{60^{\circ}} \\
 p_{iy2} &=& m_{2}v_{i2y} = 90 \times 8\times \cos{60^{\circ}} 
 \end{eqnarray*}
-
 \westep{Now write down what we know about the final momentum:}
 For Player 1:
 \begin{eqnarray*}
 p_{fx1} &=& m_{1}v_{fx1} = 90 \times v_{fx1}\\
 p_{fy1} &=& m_{1}v_{fy1} = 90 \times v_{fy1}
 \end{eqnarray*}
-
 For Player 2:
 \begin{eqnarray*}
 p_{fx2} &=& m_{2}v_{fx2} = 90 \times 0 = 0 \\
 p_{fy2} &=& m_{2}v_{fy2} = 90 \times 0 = 0
 \end{eqnarray*}
-
 \westep{Use conservation of momentum:}
 The initial total momentum in the $x$ direction is equal to the final total momentum in the $x$ direction.\\
 The initial total momentum in the $y$ direction is equal to the final total momentum in the $y$ direction.\\
 If we find the final $x$ and $y$ components, then we can find the final $total$ momentum.
-
 \begin{eqnarray*}
 p_{ix1} + p_{ix2} &=& p_{fx1} + p_{fx2} \\
 0 + 90 \times 8\times \sin{60^{\circ}} &=& 90 \times v_{fx1} + 0 \\
 v_{fx1} &=& \frac{90 \times 8\times \sin{60^{\circ}} }{90} \\
 v_{fx1} &=& 6.928 \text{ms}^{-1}
 \end{eqnarray*}
-
 \begin{eqnarray*}
 p_{iy1} + p_{iy2} &=& p_{fy1} + p_{fy2} \\
 90\times 5 + 90\times 8\times \cos{60^{\circ}} &=& 90\times v_{fy1} + 0 \\
 v_{fy1} &=& \frac{90\times 5 + 90\times 8\times \cos{60^{\circ}}}{90} \\
 v_{fy1} &=& 9.0 \text{ms}^{-1}
 \end{eqnarray*}
-
 \westep{Using the $x$ and $y$ components, calculate the final total $v$}
 Use Pythagoras's theorem to find the total final velocity:
-
 \begin{center}
 \scalebox{1} % Change this value to rescale the drawing.
 {
@@ -1105,19 +1105,16 @@ Use Pythagoras's theorem to find the total final velocity:
 \end{pspicture} 
 }
 \end{center}
-
 \begin{eqnarray*}
 v_{ftot} &=& \sqrt{v_{fx1}^{2} + v_{fy1}^{2}}\\
 &=& \sqrt{6.928^{2} + 9^{2}} \\
 &=& 11.36
 \end{eqnarray*}
-
 Calculate the angle $\theta$ to find the direction of Player 1's final velocity:
 \begin{eqnarray*}
 \sin{\theta} &=& \frac{v_{fy1}}{v_{ftot}}\\
 \theta &=& 52.4^{\circ}
 \end{eqnarray*}
-
 Therefore Player 1 bounces off Player 2 with a final velocity of 11.36~m$\cdot$s$^{-1}$ at an angle of 52.4$^\circ$ from the horizontal.
 }
 \end{wex}
@@ -1131,8 +1128,6 @@ What is the final total velocity of Player 1?  }
 {
 \westep{Identify what is required and what is given}
 The first step is to draw the picture to work out what the situation is. Mark the initial velocities of both players in the picture.
-
-
 \begin{center}
 \scalebox{1} % Change this value to rescale the drawing.
 {
@@ -1153,50 +1148,41 @@ The first step is to draw the picture to work out what the situation is. Mark th
 \end{pspicture} 
 }
 \end{center}
-
-We need to define a reference frame: For y, choose the direction they are both running in as positive. For x, the direction player 2 is running in is positive.
-
+We need to define a reference frame: For y, choose the direction they are both running in as positive. For x, the direction player 2 is running in is positive.\\
 We also know that $m_{1}=m_{2}=80$ kg. And $v_{fx2}$=-0.3 ms$^{-1}$ and $v_{fy2}$=6 ms$^{-1}$. \\
 We need to find the final velocity and angle at which Player 1 bounces off Player 2.
-
 \westep{Use conservation of momentum to solve the problem. First find the initial total momentum:}
-Total initial momentum = Total final momentum. 
+Total initial momentum = Total final momentum. \\
 But we have a two dimensional problem, and we need to break up the initial momentum into $x$ and $y$ components. Remember that momentum is a vector and has direction which we will indicate with a '+' or '-' sign.
 \begin{eqnarray*}
 p_{ix} &=& p_{fx}\\
 p_{iy} &=& p_{fy}
 \end{eqnarray*}
-
 For Player 1:
 \begin{eqnarray*}
 p_{ix1} &=& m_{1}v_{i1x} = 80 \times (-5) \times \cos{75^{\circ}} \\
 p_{iy1} &=& m_{1}v_{i1y} = 80 \times 5 \times \sin{75^{\circ}}
 \end{eqnarray*}
-
 For Player 2:
 \begin{eqnarray*}
 p_{ix2} &=& m_{2}v_{i2x} = 80 \times 6\times \cos{60^{\circ}} \\
 p_{iy2} &=& m_{2}v_{i2y} = 80 \times 6\times \sin{60^{\circ}} 
 \end{eqnarray*}
-
 \westep{Now write down what we know about the final momentum:}
 For Player 1:
 \begin{eqnarray*}
 p_{fx1} &=& m_{1}v_{fx1} = 80 \times v_{fx1}\\
 p_{fy1} &=& m_{1}v_{fy1} = 80 \times v_{fy1}
 \end{eqnarray*}
-
 For Player 2:
 \begin{eqnarray*}
 p_{fx2} &=& m_{2}v_{fx2} = 80 \times (-0.3) \\
 p_{fy2} &=& m_{2}v_{fy2} = 80 \times 6 
 \end{eqnarray*}
-
 \westep{Use conservation of momentum:}
 The initial total momentum in the $x$ direction is equal to the final total momentum in the $x$ direction.\\
 The initial total momentum in the $y$ direction is equal to the final total momentum in the $y$ direction.\\
 If we find the final $x$ and $y$ components, then we can find the final $total$ momentum.
-
 \begin{eqnarray*}
 p_{ix1} + p_{ix2} &=& p_{fx1} + p_{fx2} \\
 -80 \times 5\cos{75^{\circ}} + 80 \times 6 \times \cos{60^{\circ}} &=& 80 \times v_{fx1} + 80\times(-0.3) \\
@@ -1204,7 +1190,6 @@ v_{fx1} &=& \frac{-80 \times 5\cos{75^{\circ}} + 80 \times 6 \times \cos{60^{\ci
 &\phantom{=}&-\dfrac{80\times(-0.3) }{80} \\
 v_{fx1} &=& 2.0~\text{ms}^{-1}
 \end{eqnarray*}
-
 \begin{eqnarray*}
 p_{iy1} + p_{iy2} &=& p_{fy1} + p_{fy2} \\
 80\times 5\times \sin{75^{\circ}} + 80\times 6 \times \sin{60^{\circ}} &=& 80\times v_{fy1} + 80\times 6 \\
@@ -1212,10 +1197,8 @@ v_{fy1} &=& \frac{80\times 5\sin{75^{\circ}} + 80\times 6 \times \sin{60^{\circ}
 & & -\dfrac{80 \times 6 }{80}\\
 v_{fy1} &=& 4.0~\text{ms}^{-1}
 \end{eqnarray*}
-
 \westep{Using the $x$ and $y$ components, calculate the final total $v$}
 Use Pythagoras's theorem to find the total final velocity:
-
 \begin{center}
 \scalebox{1} % Change this value to rescale the drawing.
 {
@@ -1230,19 +1213,16 @@ Use Pythagoras's theorem to find the total final velocity:
 \end{pspicture} 
 }
 \end{center}
-
 \begin{eqnarray*}
 v_{ftot} &=& \sqrt{v_{fx1}^{2} + v_{fy1}^{2}}\\
 &=& \sqrt{2^{2} + 4^{2}} \\
 &=& 4.5
 \end{eqnarray*}
-
 Calculate the angle $\theta$ to find the direction of Player 1's final velocity:
 \begin{eqnarray*}
 \tan{\theta} &=& \frac{v_{fy1}}{v_{fx1}}\\
 \theta &=& 63.4^{\circ}
 \end{eqnarray*}
-
 Therefore Player 1 bounces off Player 2 with a final velocity of 4.5 m$\cdot s^{-1}$ at an angle of 63.4$^\circ$ from the horizontal.
 }
 \end{wex}
@@ -1258,23 +1238,17 @@ Therefore Player 1 bounces off Player 2 with a final velocity of 4.5 m$\cdot s^{
 %}
 
 
-\newpage
-
 \section{Types of Collisions}
 \label{pc:types}
 Two types of collisions are of interest:
-
 \begin{itemize}
 \item elastic collisions
 \item inelastic collisions
 \end{itemize}
-
 In both types of collision, total momentum is \emph{always} conserved. Kinetic energy is conserved for elastic collisions, but not for inelastic collisions.
 
 \subsection{Elastic Collisions}
-
 \Definition{Elastic Collisions}{An elastic collision is a collision where total momentum and total kinetic energy are both conserved.}
-
 This means that in an elastic collision the total momentum \emph{and} the total kinetic energy before the collision is the same as after the collision. For these kinds of collisions, the kinetic energy is not changed into another type of energy.
 
 \subsubsection{Before the Collision}
@@ -1358,6 +1332,7 @@ p_{i1}+p_{i2} &=& p_{f1}+p_{f2} \\\nonumber
 \begin{wex}{An Elastic Collision}
 {Consider a collision between two pool balls. Ball 1 is at rest and ball 2 is moving towards it with a speed of 2 \ms. The mass of each ball is 0.3 kg. After the balls collide \emph{elastically}, ball 2 comes to an immediate stop and ball 1 moves off. What is the final velocity of ball 1?}{
 \westep{Determine what is given and what is needed}
+\begin{minipage}{.8\textwidth}
 \begin{itemize}
 \item Mass of ball 1, $m_1$ = 0.3 kg.
 \item Mass of ball 2, $m_2$ = 0.3 kg.
@@ -1366,15 +1341,16 @@ p_{i1}+p_{i2} &=& p_{f1}+p_{f2} \\\nonumber
 \item Final velocity of ball 2, $v_{f2}$ = 0 \ms.
 \item The collision is elastic.
 \end{itemize}
+\end{minipage}\\
+\begin{minipage}{.8\textwidth}
 All quantities are in SI units. We need to find the final velocity of ball 1, $v_{f1}$. Since the collision is elastic, we know that 
 \begin{itemize}
 \item momentum is conserved, $m_1v_{i1}+m_2v_{i2}=m_1v_{f1}+m_2v_{f2}$
 \item energy is conserved, $\frac{1}{2}(m_1v_{i1}^2+m_2v_{i2}^2)=\frac{1}{2}(m_1v_{f1}^2+m_2v_{f2}^2)$
 \end{itemize}
-
+\end{minipage}
 \westep{Choose a frame of reference}
 Choose to the right as positive.
-
 \westep{Draw a rough sketch of the situation}
 \begin{center}
 \begin{pspicture}(0,-0.5)(9,1.5)
@@ -1396,7 +1372,6 @@ Choose to the right as positive.
 \uput[d](6.5,0){After collision}
 \end{pspicture}
 \end{center}
-
 \westep{Solve the problem}
 Momentum is conserved. Therefore:
 \begin{eqnarray*}
@@ -1408,9 +1383,9 @@ v_{f1}&=&2\ems
 The final velocity of ball 1 is 2 \ms{} to the right.}
 \end{wex}
 
-\begin{wex}{Another Elastic Collision}{Consider two 2 marbles. Marble 1 has mass 50~g and marble 2 has mass 100~g. Edward rolls marble 2 along the ground towards marble 1 in the positive $x$-direction. Marble 1 is initially at rest and marble 2 has a velocity of 3 \ms\ in the positive $x$-direction. After they collide \emph{elastically}, both marbles are moving. What is the final velocity of each marble?}
+\begin{wex}{Another Elastic Collision}{Consider 2 marbles. Marble 1 has mass 50~g and marble 2 has mass 100~g. Edward rolls marble 2 along the ground towards marble 1 in the positive $x$-direction. Marble 1 is initially at rest and marble 2 has a velocity of 3 \ms\ in the positive $x$-direction. After they collide \emph{elastically}, both marbles are moving. What is the final velocity of each marble?}
 {\westep{Decide how to approach the problem}
-
+\begin{minipage}{.8\textwidth}
 We are given:
 \begin{itemize}
 \item mass of marble 1, $m_1$=50 g
@@ -1421,17 +1396,19 @@ We are given:
 \end{itemize}
 
 The masses need to be converted to SI units.
+\end{minipage}
 \begin{eqnarray*}
 m_{1} &=& 0,05~\text{kg}\\
 m_{2} &=& 0,1~\text{kg}
 \end{eqnarray*}
-
+\begin{minipage}{.8\textwidth}
 We are required to determine the final velocities:
 \begin{itemize}
 \item final velocity of marble 1, $v_{f1}$
 \item final velocity of marble 2, $v_{f2}$
 \end{itemize}
-
+\end{minipage}\\
+\begin{minipage}{.8\textwidth}
 Since the collision is elastic, we know that
 \begin{itemize}
 
@@ -1440,10 +1417,9 @@ Since the collision is elastic, we know that
 \end{itemize}
 
 We have two equations and two unknowns ($v_1$, $v_2$) so it is a simple case of solving a set of simultaneous equations.
-
+\end{minipage}
 \westep{Choose a frame of reference}
 Choose to the right as positive.
-
 \westep{Draw a rough sketch of the situation}
 \begin{center}
 \scalebox{0.8}{
@@ -1481,10 +1457,7 @@ Choose to the right as positive.
 \rput(11.842343,-1.2560937){$m_1=50g$}
 \end{pspicture}}
 \end{center}
-
-
 \westep{Solve the problem}
-
 Momentum is conserved. Therefore:
 \begin{eqnarray}
 \nonumber
@@ -1505,9 +1478,7 @@ Energy is also conserved. Therefore:
 0,45&=&0,025v_{f1}^2+0,05v_{f2}^2
 \label{eq:wex2}
 \end{eqnarray}
-
 Substitute Equation~\ref{eq:wex1} into Equation~\ref{eq:wex2} and solve for $v_{f2}$.
-
 \begin{eqnarray*}
 m_{2}{v}_{i2}^2 &=& m_{1}{v}_{f1}^2+m_{2}{v}_{f2}^2\\
 &=& m_{1} \left( \frac{m_2}{m_1}({v}_{i2} - {v}_{f2}) \right) ^2 +m_{2}{v}_{f2}^2\\
@@ -1548,17 +1519,20 @@ Therefore marble 2 moves to the right with a velocity of 1 \ms.
 {Two billiard balls each with a mass of $150g$ collide head-on in an
   elastic collision. Ball 1 was travelling at a speed of $2\ems$ and
   ball 2 at a speed of $1,5 \ems$. After the collision, ball 1 travels
-  away from ball 2 at a velocity of $1,5 \ems$.
+  away from ball 2 at a velocity of $1,5 \ems$.\\
 %\renewcommand{\labelenumii}{\alpha{enumii}}
+\begin{minipage}{.8\textwidth}
   \begin{enumerate}
   \item {Calculate the velocity of ball 2 after the collision.}
   \item {Prove that the collision was elastic. Show calculations.}
   \end{enumerate}
+\end{minipage}
 }
 {
 %\renewcommand{\labelenumii}{\alpha{enumii}}
   \westep{Draw a rough sketch of the situation}
   \begin{center}
+\scalebox{.8}{
     \begin{pspicture}(0,-1.445)(12.58,1.485)
       \pscircle[linewidth=0.04,dimen=outer](0.64,-0.805){0.64}
       \pscircle[linewidth=0.04,dimen=outer](3.58,-0.805){0.64}
@@ -1588,7 +1562,7 @@ Therefore marble 2 moves to the right with a velocity of 1 \ms.
       \rput(1.1114062,0.165){$2\ems$}
       \usefont{T1}{ptm}{m}{n}
       \rput(3.5114062,0.185){$1,5\ems$}
-    \end{pspicture} 
+    \end{pspicture} }
   \end{center}
 
   \westep{Decide how to approach the problem}
@@ -1752,10 +1726,11 @@ v_f &=& 1\ \ems
 Therefore, the final velocity of the resulting mass of cars is 1 \ms to the left.
 }
 \end{wex}
-\clearpage
+
 \begin{wex}{Colliding balls of clay}{
 Two balls of clay, $200g$ each, are thrown towards each other according to the following diagram. When they collide, they stick together and move off together. All motion is taking place in the horizontal plane. Determine the velocity of the clay after the collision.
 \begin{center}
+\scalebox{.8}{
 \begin{pspicture}(0,-4.53)(10.631562,4.51)
 \pscircle[linewidth=0.04,dimen=outer](6.94,3.64){0.87}
 \psline[linewidth=0.04cm,arrowsize=0.05291667cm 3.0,arrowlength=2.0,arrowinset=0.4]{->}(6.94,2.79)(6.94,-1.19)
@@ -1774,7 +1749,7 @@ Two balls of clay, $200g$ each, are thrown towards each other according to the f
 \psline[linewidth=0.04cm,arrowsize=0.05291667cm 3.5,arrowlength=2.4,arrowinset=0.4]{->}(10.44,-2.21)(10.44,2.09)
 \rput(10.43875,2.645){\large N}
 \rput(8.239062,-3.455){\large ?}
-\end{pspicture} 
+\end{pspicture} }
 \end{center}
 }{
 \westep{Analyse the problem}
@@ -1929,7 +1904,7 @@ CERN, SLAC, BNL, and Fermilab, just to name a few. The giant machines that
 perform the collisions are roughly the size of towns. For example, the RHIC
 collider at BNL is a ring about 1 km in diameter and can be seen from space.
 The newest machine currently being built, the LHC at CERN, is a ring 9 km in
-diameter!}
+diameter!
 
 \Activity{Casestudy}{Atoms and its Constituents}
 {\textbf{Questions:}
@@ -1992,7 +1967,7 @@ diameter!}
 %\end{enumerate}
 
 %}
-}
+}}
 
 
 \section{Frames of Reference}
@@ -2054,7 +2029,6 @@ The next worked example will explain this.
 \subsection{Relative Velocity}
 The velocity of an object is frame dependent. More specifically, the perceived velocity of an object depends on the velocity of the observer. For example, a person standing on shore would observe the velocity of a boat to be different than a passenger on the boat. 
 
-\clearpage
 
 \begin{wex}
 {Relative Velocity}
@@ -2202,7 +2176,7 @@ The man will take 15/2 = 7,5 s
 \item Graphs for vertical projectile motion are similar to graphs for
   motion at constant acceleration. If upwards is taken as positive the
   $\Delta x$ vs $t$, $v$ vs $t$ ans $a$ vs $t$ graphs for an object
-  being thrown upwards look like this:
+  being thrown upwards look like this:\\
   \hspace*{-1cm}
   \begin{minipage}{\textwidth}
     \begin{center}
@@ -2228,8 +2202,8 @@ The man will take 15/2 = 7,5 s
           \uput[u](2.04,0){$t_f$}
           \psline[linestyle=dashed](2.04,-1.6)(2.04,0)
           \uput[l](0,0){0}
-          \uput[l](0,5){$v_{i}$}
-          \uput[l](0,-5){$v_{f}$}
+          \uput[l](0,1.3){$v_{i}$}
+          \uput[l](0,-1.3){$v_{f}$}
           \uput[d](1.5,-1.5){(b)}}
         \rput(9,1){\psaxes[labels=none,ticks=none]{->}(0,0)(0,-2)(2.5,2)
           \psline[linewidth=2pt](0,-1)(2,-1)
@@ -2260,7 +2234,6 @@ The man will take 15/2 = 7,5 s
 \item The frame of reference is the point of view from which a system is observed.
 \end{itemize}
 
-\clearpage
 
 \begin{eocexercises}{}
 \begin{enumerate}

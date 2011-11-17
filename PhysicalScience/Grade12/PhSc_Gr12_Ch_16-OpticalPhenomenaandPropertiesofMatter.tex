@@ -88,7 +88,7 @@ Metals generally reflect most wavelengths of visible light, but they will reflec
 
 Most materials will absorb \textit{infrared radiation} (longer wavelengths than visible light), since the energies of that radiation often correspond to rotational or vibrational energy levels of molecules. 
 
-\begin{figure}[!tb]
+\begin{figure}[H]
 \begin{center}
 \includegraphics[width=4.5in]{../../epsimages/photon_scatter_transmission.eps}
 \end{center}
@@ -669,14 +669,15 @@ Discharge lamps (sometimes incorrectly called neon lights) use the spectra of va
 \simulation{Discharge lamps}{VPqea}
 
 \begin{wex}{Colours of light}
-{A photon of wavelength 500 nm is emitted by a traffic light. 
+{A photon of wavelength 500 nm is emitted by a traffic light. \\
+\begin{minipage}{.8\textwidth}
 \begin{enumerate}
 \item What is the energy of the photon?
 \item What is the frequency of the photon?
 \item Use table~\ref{t:Optic:Colours} to determine the colour of the light.
 \end{enumerate}
-}
-{
+\end{minipage}
+}{
 \westep{What information is given and what do we need to find?}
 We are given $\lambda = 500 \times 10^{-9}~~\rm{m}$ and we need to find the photon's \textit{energy}, \textit{frequency} and \textit{colour}.
 
@@ -704,7 +705,8 @@ The wavelength given in the question is 500 nm. We can see in the table that gre
 \end{wex}
 
 \begin{wex}{Colours and energies of light}
-{I have some sources which emit light of the following wavelengths:
+{\begin{minipage}{.8\textwidth}
+I have some sources which emit light of the following wavelengths:
 \begin{enumerate} 
 \item 400 nm, 
 \item 580 nm, 
@@ -712,6 +714,7 @@ The wavelength given in the question is 500 nm. We can see in the table that gre
 \item 300 nm.
 \end{enumerate}
 What are the colours of light emitted by the sources (see table~\ref{t:Optic:Colours})? Which source emits photons with the highest energy and which with the lowest energy?
+\end{minipage}
 }
 {
 \westep{What information is given, and what do we need to do?}
@@ -720,13 +723,14 @@ Four wavelengths of light are given and we need to find their \textit{colours}.
 We also need to find which colour photon has the highest energy and which one has the lowest energy.
 
 \westep{To find the colours of light, we can compare the wavelengths to those given in table~\ref{t:Optic:Colours}}
+\begin{minipage}{.8\textwidth}
 \begin{enumerate}
  \item 400 nm falls into the range for \textit{violet} light (390 - 455 nm).
  \item 580 nm falls into the range for \textit{yellow} light (577 - 597 nm).
  \item 650 nm falls into the range for \textit{red} light (622 - 780 nm).
  \item 300 nm is not shown in the table. However, this wavelength is just a little shorter than the shortest wavelength in the violet range. Therefore 300 nm is \textit{ultraviolet}.
 \end{enumerate}
-
+\end{minipage}
 \westep{To find the colour of the light whose photons have the highest and lowest energies respectively, we need to calculate the energies of all the photons}
 
 We know $E = \frac{hc}{\lambda}$
@@ -1013,7 +1017,7 @@ You can imagine that stimulated emission can lead to more and more identical pho
 
 \begin{figure}[!h]
 \begin{center}
-\includegraphics[width=5.in]{../../epsimages/laser-spontaneous_2.eps}
+\includegraphics[width=.8\textwidth]{../../epsimages/laser-spontaneous_2.eps}
 \end{center}
 \caption{Spontaneous emission is a two step process, as shown here.  First, energy from an external source is applied to an atom in the laser medium, raising its energy to an excited (metastable) state.  After some time, it will decay back down to its ground state and emit the excess energy in the form of a photon.  This is the first stage in the formation of a laser beam. }
 \label{laserse}
@@ -1021,7 +1025,7 @@ You can imagine that stimulated emission can lead to more and more identical pho
 
 \begin{figure}[!h]
 \begin{center}
-\includegraphics[width=5.in]{../../epsimages/laser-amplification_2.eps}
+\includegraphics[width=.8\textwidth]{../../epsimages/laser-amplification_2.eps}
 \end{center}
 \caption{Stimulated emission is also a two step process, as shown here.  First, a laser photon encounters an atom that has been raised to an excited state, just like in the case of spontaneous emission.  The photon then causes the atom to decay to its ground state and emit another photon identical to the incoming photon.  This is the second step in the creation of a laser beam.  It happens many, many times as the laser photons pass through the optical cavity until the laser beam builds up to full strength.}
 \label{laseramp}
@@ -1118,7 +1122,7 @@ A laser consists of a number of different parts that work together to create the
 
 \begin{figure}[!htb]
 \begin{center}
-\includegraphics[width=4.8in]{../../epsimages/laser-cavity_2.eps}
+\includegraphics[width=.8\textwidth]{../../epsimages/laser-cavity_2.eps}
 \end{center}
 \caption{Diagram of a laser showing the main components.}
 \label{lasercavity}
@@ -1127,7 +1131,7 @@ A laser consists of a number of different parts that work together to create the
 
 \begin{figure}[!tb]
 \begin{center}
-\includegraphics[width=4.5in]{../../epsimages/laser-process.eps}
+\includegraphics[width=.8\textwidth]{../../epsimages/laser-process.eps}
 \end{center}
 \caption{Diagram of a laser showing the process of creating a laser beam. (1) A source of external energy is applied to the laser medium, raising the atoms to an excited state. (2) An excited atom decays though spontaneous emission, emitting a photon.  (3) The photon encounters another excited atom and causes it to decay through stimulated emission, creating another photon. (4) The photons bounce back and forth through the laser medium between the mirrors, building up more and more photons.  (5) A small percentage of the photons pass through the partially-silvered mirror to become the laser beam we see.}
 \label{laserprocess}
@@ -1140,10 +1144,7 @@ Before the laser is turned on, all the atoms in the laser material are in their 
 The creation of the laser beam starts through the process of \textit{spontaneous emission}, shown in Figure~\ref{laserse}. An electron drops down to the ground state and emits a photon with energy equal to the energy difference of the two energy levels. This laser photon is the beginning of the laser beam.\\
 
 At some time a laser photon will run into another excited electron. Then stimulated emission occurs and the electron drops down to the ground state and emits an additional identical photon as shown in Figure~\ref{laseramp}. Since the laser material typically has a large number of atoms, one laser photon passing through this material will rapidly cause a large number of photons just like it to be emitted.
- 
-The optical cavity keeps the laser photons inside the laser cavity so that they can build up the laser beam. At each end is a concave mirror; one is a full mirror and one is a partial mirror. The full mirror is totally reflective. The partial mirror transmits a small amount of the light that hits it (less than 1\%). The mirrors are carefully aligned so that photons that reflect off one mirror become ``trapped'', and bounce back and forth between the mirrors many times causing more and more stimulated emission. The photons that eventually escape through the partially-silvered mirror become the laser beam that we see.
- 
-\begin{IFact}
+ \begin{IFact}
 {In 1953, Charles Townes and graduate students James Gordon and
   Herbert Zeiger produced the first maser, a device operating on
   similar principles to the laser, but producing microwave rather than
@@ -1153,6 +1154,9 @@ The optical cavity keeps the laser photons inside the laser cavity so that they 
   continuous beam using more than two energy levels. Townes, Basov and
   Prokhorov shared the Nobel Prize in Physics in 1964.}
 \end{IFact}
+The optical cavity keeps the laser photons inside the laser cavity so that they can build up the laser beam. At each end is a concave mirror; one is a full mirror and one is a partial mirror. The full mirror is totally reflective. The partial mirror transmits a small amount of the light that hits it (less than 1\%). The mirrors are carefully aligned so that photons that reflect off one mirror become ``trapped'', and bounce back and forth between the mirrors many times causing more and more stimulated emission. The photons that eventually escape through the partially-silvered mirror become the laser beam that we see.
+ 
+\pagebreak
 
 As the photons bounce between mirrors, they continually pass through the laser material, stimulating those atoms to emit more photons.  This creates an ever increasing beam of photons, all with the same characteristics, all travelling in the same direction.  In this way, the optical cavity helps to amplify the original laser photons into a concentrated, intense beam of photons.
 

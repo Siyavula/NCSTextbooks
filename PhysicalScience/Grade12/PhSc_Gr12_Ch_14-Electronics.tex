@@ -136,21 +136,17 @@ It is important to remember that when resistors and inductances (or capacitors) 
 % The following simulation allows you to build some circuits with capacitors and inductors.
 % PhET simulation on circuit building: SIYAVULA-SIMULATION:http://cnx.org/content/m39523/latest/#id63458
 \simulation{Circuits}{VPpvr}
-\begin{wex}{The impedance of a coil}{Calculate the maximum current in a coil in a South African motor which has a resistance of 5 $\Omega$ and an inductance of 3 mH.  The maximum voltage across the coil is 6 V.  You can assume that the resistance and inductance are in series.}{\begin{enumerate} \item Calculate the reactance of the coil $X_{L} = 2 \pi f L = 2 \pi \times 50 \times 0,003 = 0,942 \; \Omega$ 
-\item Calculate the impedance of the coil $Z = \sqrt{X^{2} + R^{2}} = \sqrt{ 0,942^{2} + 5^{2}} = 5,09 \; \Omega$
-\item Calculate the maximum current $I_{\mathrm{max}} = V_{\mathrm{max}} / Z = 6 / 5,09 = 1,18$ A. \end{enumerate}}
+\begin{wex}{The impedance of a coil}{Calculate the maximum current in a coil in a South African motor which has a resistance of 5 $\Omega$ and an inductance of 3 mH.  The maximum voltage across the coil is 6 V.  You can assume that the resistance and inductance are in series.}{ \westep{Calculate the reactance of the coil} $X_{L} = 2 \pi f L = 2 \pi \times 50 \times 0,003 = 0,942 \; \Omega$ 
+\westep{Calculate the impedance of the coil} $Z = \sqrt{X^{2} + R^{2}} = \sqrt{ 0,942^{2} + 5^{2}} = 5,09 \; \Omega$
+\westep{Calculate the maximum current} $I_{\mathrm{max}} = V_{\mathrm{max}} / Z = 6 / 5,09 = 1,18$ A. }
 \end{wex}
 
-\begin{wex}{An RC circuit}{Part of a radio contains a 30 $\Omega$ resistor in series with a 3 $\mu$F capacitor.  What is its impedance at a frequency of 1 kHz?}{\begin{enumerate} \item 
-Calculate the reactance of the capacitor
-
+\begin{wex}{An RC circuit}{Part of a radio contains a 30 $\Omega$ resistor in series with a 3 $\mu$F capacitor.  What is its impedance at a frequency of 1 kHz?}{ \westep{Calculate the reactance of the capacitor}
 \nequ{X_{C} = \frac{1}{2 \pi f C} = \frac{1}{2 \pi \times 10^{3} \times 3 \times 10^{-6}} = 53,05 \; \Omega}
-\item Calculate the impedance $Z = \sqrt{X^{2} + R^{2}} = \sqrt{ 53,05^{2} + 30^{2}} = 60,9 \; \Omega$  \end{enumerate}}
+\westep{Calculate the impedance} $Z = \sqrt{X^{2} + R^{2}} = \sqrt{ 53,05^{2} + 30^{2}} = 60,9 \; \Omega$ }
 \end{wex}
 
 %\begin{IFact}{Most factories containing heavy duty electrical equipment (e.g.\@ large motors) have to pay extra money to their electricity supply company because the inductance of the motor coils causes the current and voltage to get out of phase.  As this makes the electricity distribution network less efficient, a financial penalty is incurred.  The factory engineer can prevent this by connecting capacitors into the circuit to reduce the reactance to zero, as in the last question above.  The current and voltage are then in phase again.  We can't calculate the capacitance needed in this chapter, because the capacitors are usually connected in parallel, and we have only covered the reactances and impedances of series circuits.} \end{IFact}
-
-\clearpage
 
 \Exercise{Capacitive and Inductive Circuits}{
 \begin{enumerate}
@@ -580,19 +576,6 @@ In an NPN transistor a small current of electrons flows from the emitter (E) to 
 How does it do it?  The answer comes from our work with diodes.  Electrons arriving at the emitter (n-type semiconductor) will naturally flow through into the central p-type since the base-emitter junction is forward biased.  However if none of these electrons are removed from the base, the electrons flowing into the base from the emitter will fill all of the available `holes'.  Accordingly, a large depletion band will be set up.  This will act as an insulator preventing current flow into the collector as well.  On the other hand, if the base is connected to a positive voltage, a small number of electrons will be removed by the base connection.  This will prevent the `holes' in the base becoming filled up, and no depletion band will form. While some electrons from the emitter leave via the base connection, the bulk of them flow straight on to the collector.  You may wonder how the electrons get from the base into the collector (it seems to be reverse biased).  The answer is complicated, but the important fact is that the p-type layer is extremely thin.  As long as there is no depletion layer, the bulk of the electrons will have no difficulty passing straight from the n-type emitter into the n-type collector.  A more satisfactory answer can be given to a university student once band theory has been explained.
 
 Summing up, in an NPN transistor, a small flow of electrons from emitter (E) to base (B) allows a much larger flow of electrons from emitter (E) to collector (C).  Given that conventional current (flowing from $+$ to $-$) is in the opposite direction to electron flow, we say that a small conventional current from base to emitter allows a large current to flow from collector to emitter.
-
-A PNP transistor works the other way.  A small conventional current from emitter to base allows a much larger conventional current to flow from emitter to collector.  The operation is more complicated to explain since the principal charge carrier in a PNP transistor is not the electron but the `hole'.
-
-The operation of NPN and PNP transistors (in terms of conventional currents) is summarised in Figure~\ref{fig:transcur}.
-
-\begin{figure}
-\begin{center}
-\includegraphics[scale=0.7]{../../epsimages/tranistorcurrents.eps}
-\caption{An overview of bipolar transistors as current amplifiers. (Left) An NPN transistor. (Right) A PNP transistor.}
-\label{fig:transcur}
-\end{center}
-\end{figure}
-
 \begin{IFact}{The transistor is considered by many to be one of the
     greatest discoveries or inventions in modern history, ranking with
     banking and the printing press. Key to the importance of the
@@ -610,6 +593,19 @@ The operation of NPN and PNP transistors (in terms of conventional currents) is 
 % almost all electromechanical devices, most simple feedback systems,
 % and appear in huge numbers in everything from computers to cars.
 }\end{IFact} 
+A PNP transistor works the other way.  A small conventional current from emitter to base allows a much larger conventional current to flow from emitter to collector.  The operation is more complicated to explain since the principal charge carrier in a PNP transistor is not the electron but the `hole'.
+
+The operation of NPN and PNP transistors (in terms of conventional currents) is summarised in Figure~\ref{fig:transcur}.
+
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.5]{../../epsimages/tranistorcurrents.eps}
+\caption{An overview of bipolar transistors as current amplifiers. (Left) An NPN transistor. (Right) A PNP transistor.}
+\label{fig:transcur}
+\end{center}
+\end{figure}
+
+
 
 
 \subsubsection{The Field Effect Transistor (FET)}
@@ -780,9 +776,9 @@ For most commercially produced operational amplifiers (known as op-amps for shor
 \end{center}
 \end{figure}
 
+\pagebreak
 
-
-\Extension{Calculating the gain of the amplifier in Figure~\ref{fig:invertamplifier}.}{
+\Extension{\normalsize{Calculating the gain of the amplifier in Figure~\ref{fig:invertamplifier}.}}{
 \begin{enumerate}
 \item The input resistance of the operational amplifier is very high.  This means that very little current flows into the inverting input of the op-amp.  Accordingly, the current through resistor $R_{1}$ must be almost the same as the current through resistor $R_{2}$.  This means that the ratio of the voltage across $R_{1}$ to the voltage across $R_{2}$ is the same as the ratio of the two resistances.
 \item The open loop gain $A$ of the op-amp is very high.  Assuming that the output voltage is less than a few volts, this means that the two input terminals must be at very similar voltages.  We shall assume that they are at the same voltage.  
@@ -944,8 +940,6 @@ This device is called an AND gate, because the output is only 1 if one input AND
 
 \Extension{Using 0 and 1 to mean True and False}{When we use logic gates we use the low voltage state 0 to represent `false'.  The high voltage state 1 represents `true'.  This is why the word AND is so appropriate.  A AND B is true (1) if, and only if, A is true (1) AND B is true (1).}
 
-\clearpage
-
 \Extension{AND and multiplication}{Sometimes, the AND operation is written as multiplication.  A AND B is written AB.  If either A or B are 0, then AB will also be 0.  For AB to be 1, we need A and B to both be 1.  Multiplication of the numbers 0 and 1 does exactly the same job as an AND gate.}
 
 \subsubsection{The NAND Gate}
@@ -1024,7 +1018,7 @@ If you wish, you can prove that the normal rules of algebra still work using thi
 \subsubsection{The NOR Gate}
 The last gate you need to know is the NOR gate.  This is opposite to the OR gate.  The output is 1 if both inputs are 0.  In other words, the output switches on if neither the first NOR the second input is 1.  The symbol for the NOR gate is:
 
-\begin{figure}{H}
+\begin{figure}[H]
 \begin{center}
 \begin{pspicture}(1.5,0)(4.5,2)
 
@@ -1133,8 +1127,6 @@ A&B&C&Output\\\hline\hline
 Finally we see that this combination of gates does the same job as an OR gate.
 }
 \end{wex}
-
-\clearpage
 
 Each logic gate is manufactured from two or more transistors.  Other circuits can be made using logic gates, as we shall see in the next section.  We shall show you how to count and store numbers using logic gates.  This means that if you have enough transistors, and you connect them correctly to make the right logic gates, you can make circuits which count and store numbers.
 
