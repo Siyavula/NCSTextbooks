@@ -1717,7 +1717,6 @@ Similar rules will apply in naming the alkenes, as for the alkanes.
 % Khan Academy video on naming alkenes: SIYAVULA-VIDEO:http://cnx.org/content/m39453/latest/#alkenes
 \mindsetvid{Khan on naming alkenes}{VPmqj}
 \begin{wex}{Naming the alkenes}{Give the IUPAC name for the following compound:
-
 \begin{center}
 \begin{pspicture}(-3,-2)(2,2)
 %\psgrid[gridcolor=lightgray]
@@ -1759,8 +1758,6 @@ There are no branched groups in this molecule.
 The name of this compound is \textbf{but-2-ene}.}
 \end{wex}
 
-\newpage
-
 \begin{wex}{Naming the alkenes}{Draw the structural formula for the organic compound 3-methyl-butene\\}
 {\westep{Identify the functional group}
 The suffix -ene means that this compound is an alkene and there must be a double bond in the molecule. There is no number immediately before the suffix which means that the double bond must be at the first carbon in the chain.
@@ -1769,9 +1766,9 @@ The prefix for the compound is 'but' so there must be four carbons in the longes
 \westep{Look for any branched groups}
 There is a methyl group at the third carbon atom in the chain.
 \westep{Combine this information to draw the structural formula for this molecule.}
-
-\begin{figure}[H]
+% \begin{figure}[H]
 \begin{center}
+\scalebox{.8}{
 \begin{pspicture}(-3,-1)(2.5,3.2)
 %\psgrid[gridcolor=lightgray]
 \rput(-2,0){\textbf{C}}
@@ -1804,10 +1801,9 @@ There is a methyl group at the third carbon atom in the chain.
 \rput(1,-1){\textbf{H}}
 \psline(1.2,0)(1.8,0)
 \rput(2,0){\textbf{H}}
-
-\end{pspicture}
+\end{pspicture}}
 \end{center}
-\end{figure}
+% \end{figure}
 }
 \end{wex}
 
@@ -1840,9 +1836,7 @@ There is a methyl group at the third carbon atom in the chain.
 \psline(1.3,0)(1.7,0)
 \end{pspicture}
 \end{center}
-}
-
-{\westep{Identify the functional group}
+}{\westep{Identify the functional group}
 The compound is an alkene and will have the suffix -ene. There is a double bond between the first and second carbons and also between the third and forth carbons. The organic compound is therefore a 'diene'.
 \westep{Find the longest carbon chain and number the carbon atoms}
 There are four carbon atoms in the longest chain and so the prefix for this compound will be 'but'. The carbon atoms are numbered 1 to 4 in the diagram above. Remember that the main carbon chain must contain both the double bonds.
@@ -1854,7 +1848,7 @@ The name of this compound is \textbf{2-ethyl-but-1,3-diene}.}
 
 
 
-\Exercise{Naming the alkenes\\}{
+\Exercise{Naming the alkenes}{
 Give the IUPAC name for each of the following alkenes:
 
 \begin{enumerate}
@@ -1923,7 +1917,7 @@ A catalyst such as platinum is normally needed for these reactions
 
 $\rm{H_{2}C=CH_{2} + H_{2} \rightarrow H_{3}C-CH_{3}}$ (figure \ref{fig:organic:hydrogenation})
 
-\begin{figure}[h]
+\begin{figure}[H]
 \begin{center}
 \begin{pspicture}(-2,-0.5)(10,1.5)
 \rput(-1,0){\textbf{H}}
@@ -1969,7 +1963,7 @@ $\rm{H_{2}C=CH_{2} + H_{2} \rightarrow H_{3}C-CH_{3}}$ (figure \ref{fig:organic:
 
 $\rm{CH_{2}=CH_{2} + HBr \rightarrow CH_{3}-CH_{2}-Br}$ (figure \ref{fig:organic:halogenation})
 
-\begin{figure}[h]
+\begin{figure}[H]
 \begin{center}
 \begin{pspicture}(-2,-1)(10,1.5)
 \rput(-1,0){\textbf{H}}
@@ -2015,7 +2009,7 @@ $\rm{CH_{2}=CH_{2} + HBr \rightarrow CH_{3}-CH_{2}-Br}$ (figure \ref{fig:organic
 
 $\rm{CH_{2}=CH_{2} + H_{2}O \rightarrow CH_{3}-CH_{2}-OH}$ (figure \ref{fig:organic:forming alcohols})
 
-\begin{figure}[h]
+\begin{figure}[H]
 \begin{center}
 \begin{pspicture}(-2,-1)(10,1.5)
 \rput(-1,0){\textbf{H}}
@@ -2058,7 +2052,7 @@ $\rm{CH_{2}=CH_{2} + H_{2}O \rightarrow CH_{3}-CH_{2}-OH}$ (figure \ref{fig:orga
 }
 \end{enumerate}
 
-\Exercise{The Alkenes\\}{
+\Exercise{The Alkenes}{
 \begin{enumerate}
 \item{Give the IUPAC name for each of the following organic compounds:}
 	\begin{enumerate}
@@ -2152,7 +2146,7 @@ $\rm{CH_{3}CHCH_{2} + H_{2} \rightarrow CH_{3}CH_{2}CH_{3}}$
 }
 \end{enumerate}
 % Automatically inserted shortcodes - number to insert 3
-\par \practiceinfo
+ \practiceinfo
 \par \begin{tabular}[h]{cccccc}
 % Question 1
 (1.)	01nv	&
@@ -2162,14 +2156,24 @@ $\rm{CH_{3}CHCH_{2} + H_{2} \rightarrow CH_{3}CH_{2}CH_{3}}$
 (3.)	01nx	&
 \end{tabular}
 % Automatically inserted shortcodes - number inserted 3
-
 }
 
 
 \subsection{The Alkynes}
-
 In the alkynes, there is at least one triple bond between two of the carbon atoms. They are unsaturated compounds and are therefore highly reactive. Their general formula is C$_{n}$H$_{2n-2}$. The simplest alkyne is ethyne (figure \ref{fig:om:ethyne}), also known as acetylene. Many of the alkynes are used to synthesise other chemical products.
+\begin{IFact}{
+The raw materials that are needed to make acetylene are calcium carbonate and coal.
+% Acetylene can be produced through the following reactions:
+% 
+% $\text{CaCO}_{3} \rightarrow \text{CaO}$
+% 
+% $\text{CaO} + 3\text{C} \rightarrow \text{CaC}_{2} + \text{CO}$
+% 
+% $\text{CaC}_{2} + 2\text{H}_{2}\text{O} \rightarrow \text{Ca(OH)}_{2} + \text{C}_{2}\text{H}_{2}$
 
+An important use of acetylene is in oxyacetylene gas welding. The fuel gas burns with oxygen in a torch. An incredibly high heat is produced, and this is hot enough to melt metal.
+}
+\end{IFact}
 \begin{figure}[h]
 \begin{center}
 
@@ -2191,26 +2195,14 @@ In the alkynes, there is at least one triple bond between two of the carbon atom
 \label{fig:om:ethyne}
 \end{figure}
 
-\begin{IFact}{
-The raw materials that are needed to make acetylene are calcium carbonate and coal. Acetylene can be produced through the following reactions:
 
-$\text{CaCO}_{3} \rightarrow \text{CaO}$
-
-$\text{CaO} + 3\text{C} \rightarrow \text{CaC}_{2} + \text{CO}$
-
-$\text{CaC}_{2} + 2\text{H}_{2}\text{O} \rightarrow \text{Ca(OH)}_{2} + \text{C}_{2}\text{H}_{2}$
-
-An important use of acetylene is in oxyacetylene gas welding. The fuel gas burns with oxygen in a torch. An incredibly high heat is produced, and this is hot enough to melt metal.
-}
-\end{IFact}
 
 \subsection{Naming the alkynes}
 
 The same rules will apply as for the alkanes and alkenes, except that the suffix of the name will now be -yne.
 
 \begin{wex}{Naming the alkynes}{Give the IUPAC name for the following compound:
-
-\begin{figure}[H]
+% \begin{figure}[H]
 \begin{center}
 \begin{pspicture}(-4,-1.5)(4,1)
 %\psgrid[gridcolor=lightgray]
@@ -2232,9 +2224,8 @@ The same rules will apply as for the alkanes and alkenes, except that the suffix
 \psline(-0.6,0)(-0.4,0)
 \end{pspicture}
 \end{center}
-\end{figure}
-}
-{\westep{Identify the functional group}
+% \end{figure}
+}{\westep{Identify the functional group}
 There is a triple bond between two of the carbon atoms, so this compound is an alkyne. The suffix will be -yne. The triple bond is at the second carbon, so the suffix will in fact be 2-yne.\\
 \westep{Find the longest carbon chain and give the compound the correct prefix}
 If we count the carbons in a straight line, there are six. The prefix of the compound's name will be 'hex'.
@@ -2251,8 +2242,6 @@ If we follow this order, the name of the compound is \textbf{5-methyl-hex-2-yne}
 `Fermentation' refers to the conversion of sugar to alcohol using yeast (a fungus). The process of fermentation produces items such as wine, beer and yogurt. To make wine, grape juice is fermented to produce alcohol. This reaction is shown below:
 $$\rm{C_{6}H_{12}O_{6} \rightarrow$$ $$2CO_{2} + 2C_{2}H_{5}OH$$ $$+ \text{energy}}$$}
 \end{IFact}
-
-\newpage
 
 \Exercise{The alkynes\\}{
 
@@ -2379,12 +2368,10 @@ The rules used to name the alcohols are similar to those already discussed for t
 
 
 %\begin{IFact}{
-\paragraph{Interesting Fact}
-Ethanol is a diuretic. In humans, ethanol reduces the secretion of a hormone called antidiuretic hormone (ADH). The role of ADH is to control the amount of water that the body retains. When this hormone is not secreted in the right quantities, it can cause dehydration because too much water is lost from the body in the urine. This is why people who drink too much alcohol can become dehydrated, and experience symptoms such as headaches, dry mouth, and lethargy. Part of the reason for the headaches is that dehydration causes the brain to shrink away from the skull slightly. The effects of drinking too much alcohol can be reduced by drinking lots of water.
+\IFact{
+Ethanol is a diuretic. In humans, ethanol reduces the secretion of a hormone called antidiuretic hormone (ADH). The role of ADH is to control the amount of water that the body retains. When this hormone is not secreted in the right quantities, it can cause dehydration because too much water is lost from the body in the urine. This is why people who drink too much alcohol can become dehydrated, and experience symptoms such as headaches, dry mouth, and lethargy. Part of the reason for the headaches is that dehydration causes the brain to shrink away from the skull slightly. The effects of drinking too much alcohol can be reduced by drinking lots of water.}
 %}
 %\end{IFact}
-
-\newpage
 
 \begin{wex}{Naming alcohols 1}{Give the IUPAC name for the following organic compound
 \begin{figure}[H]
@@ -2587,7 +2574,7 @@ A certain type of ant, called formicine ants, manufacture and secrete formic aci
 
 Carboxylic acids are \textbf{weak acids}, in other words they only dissociate partially. Why does the carboxyl group have acidic properties? In the carboxyl group, the hydrogen tends to separate itself from the oxygen atom. In other words, the carboxyl group becomes a source of positively-charged hydrogen ions (H$^{+}$). This is shown in figure \ref{fig:om:dissociation carboxylic acid}.
 
-\begin{figure}[h]
+\begin{figure}[H]
 \begin{center}
 \begin{pspicture}(-6,-2)(7,1.5)
 %\psgrid[gridcolor=lightgray]
@@ -2682,6 +2669,7 @@ When an alcohol reacts with a carboxylic acid, an \textbf{ester} is formed. Most
 
 \begin{figure}[h]
 \begin{center}
+\scalebox{.8}{
 \begin{pspicture}(-8,-2)(8,2)
 %\psgrid[gridcolor=lightgray]
 \rput(-8,0){\textbf{H}}
@@ -2732,7 +2720,7 @@ When an alcohol reacts with a carboxylic acid, an \textbf{ester} is formed. Most
 \rput(-6.5,-1.7){\textbf{methanol}}
 \rput(-2.5,-1.7){\textbf{methanoic acid}}
 \rput(2.5,-1.7){\textbf{methyl methanoate}}
-\end{pspicture}
+\end{pspicture}}
 \end{center}
 \caption{The formation of an ester and water from an alcohol and carboxylic acid}
 \label{fig:om:ester}

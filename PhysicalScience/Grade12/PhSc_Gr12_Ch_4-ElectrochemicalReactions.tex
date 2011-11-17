@@ -230,18 +230,20 @@ So what is meant by the 'reaction potential' of a substance? Every metal has a d
 
 \Definition{Galvanic cell}{A galvanic (voltaic) cell is an electrochemical cell that uses a chemical reaction between two dissimilar electrodes dipped in an electrolyte, to generate an electric current.}
 
-\begin{wex}{Understanding galvanic cells\\}{
+\begin{wex}{Understanding galvanic cells}{
 For the following cell:
 \begin{center}
 \begin{equation*}
 \text{Zn}|\text{Zn}^{2+}||\text{Ag}^{+}|\text{Ag}
 \end{equation*}
-\end{center}
+\end{center}\\
+\begin{minipage}{\textwidth}
 \begin{enumerate}
 \item{Give the anode and cathode half-reactions.}
 \item{Write the overall equation for the chemical reaction.}
 \item{Give the direction of the current in the external circuit.}
 \end{enumerate}
+\end{minipage}
 }
 {
 
@@ -668,11 +670,11 @@ At the zinc electrode, the zinc metal loses electrons and forms Zn$^{2+}$ ions. 
 \rput(1.6,1.5){\textbf{2+}}
 \rput(1.3,2.6){\textbf{2+}}
 \psline(3.2,2.3)(4.2,2.3)
-\rput(6.2,2.3){Zn$^{2+}$ ions in solution}
+\rput(5.8,2.3){Zn$^{2+}$ ions in solution}
 \psline(2,4.5)(4.2,4.5)
 \rput(5.3,4.5){zinc metal}
 \psline(2,3.5)(4.2,3.5)
-\rput(8,3.5){concentration of electrons on metal surface}
+\rput(7.3,3.5){concentration of electrons on metal surface}
 \end{pspicture}
 \caption{Zinc loses electrons to form positive ions in solution. The electrons accumulate on the metal surface.}
 \label{fig:electrochemical:zinc}
@@ -712,11 +714,11 @@ At the copper electrode, a similar process takes place. The difference though is
 \rput(2.3,1.8){\textbf{2+}}
 \rput(1.6,1.5){\textbf{2+}}
 \psline(2.7,1.8)(4.2,1.8)
-\rput(6.2,2.3){Cu$^{2+}$ ions in solution}
+\rput(5.8,1.8){Cu$^{2+}$ ions in solution}
 \psline(2,4.5)(4.2,4.5)
 \rput(5.3,4.5){copper metal}
 \psline(2,3.5)(4.2,3.5)
-\rput(8,3.5){concentration of electrons on metal surface}
+\rput(7.3,3.5){concentration of electrons on metal surface}
 \end{pspicture}
 \caption{Zinc loses electrons to form positive ions in solution. The electrons accumulate on the metal surface.}
 \label{fig:electrochemical:copper}
@@ -747,13 +749,15 @@ The problem though is that we cannot measure the potential difference (voltage) 
 \subsection{The standard hydrogen electrode}
 \label{subsec:electrochemical:hydrogen electrode}
 
-Before we look at the standard hydrogen electrode, it may be useful to have some more understanding of the ideas behind a 'reference electrode'. Refer to the Tip box on 'Understanding the ideas behind a reference electrode' before you read further.
+Before we look at the standard hydrogen electrode, it may be useful to have some more understanding of the ideas behind a 'reference electrode'.
+%  Refer to the Tip box on 'Understanding the ideas behind a reference electrode' before you read further.
 
-\Tip{Understanding the ideas behind a reference electrode}{\textit{Adapted from www.chemguide.co.uk}\\
+\textbf{Understanding the ideas behind a reference electrode} \textit{Adapted from www.chemguide.co.uk}\\
 
 Let's say that you have a device that you can use to measure heights from some distance away. You want to use this to find out how tall a particular person is. Unfortunately, you can't see their feet because they are standing in long grass. Although you can't measure their absolute height, what you can do is to measure their height relative to the post next to them. Let's say that person A for example is 15 cm \textit{shorter} than the height of the post. You could repeat this for a number of other people (B and C). Person B is 30 cm shorter than the post and person C is 10 cm \textit{taller} than the post.
 
 \begin{center}
+\scalebox{.8}{
 \begin{pspicture}(-3,-5)(6,3)
 %\psgrid[gridcolor=lightgray]
 \def\stickman{
@@ -779,7 +783,7 @@ Let's say that you have a device that you can use to measure heights from some d
 \psframe[fillstyle=solid,fillcolor=darkgray](3.2,0)(3.5,2.7)
 \rput(0,-0.3){\textbf{C}}
 }
-\end{pspicture}
+\end{pspicture}}
 \end{center}
 
 You could summarise your findings as follows:
@@ -793,16 +797,12 @@ C & +10 \\\hline
 \end{tabular}
 \end{center}
 
-
-
 Although you don't know any of their absolute heights, you can rank them in order, and do some very simple sums to work out exactly how much taller one is than another. For example, person C is 25 cm taller than A and 40 cm taller than B.
-}
 
 As mentioned earlier, it is difficult to measure the \textit{absolute} electrode potential of a particular substance, but we can use a reference electrode (similar to the 'post' in the Tip box example) that we use to calculate \textit{relative} electrode potentials for these substances. The reference electrode that is used is the \textbf{standard hydrogen electrode} (figure \ref{fig:electrochemical:hydrogen electrode}).
 
-\Definition{Standard hydrogen electrode\\}{
+\Definition{Standard hydrogen electrode}{
 The standard hydrogen electrode is a redox electrode which forms the basis of the scale of oxidation-reduction potentials. The actual electrode potential of the hydrogen electrode is estimated to be 4.44 � $\pm$ 0.02 V at 25$^{0}$C, but its standard electrode potential is said to be zero at all temperatures so that it can be used as for comparison with other electrodes. The hydrogen electrode is based on the following redox half cell:
-
 \begin{center}
    $\rm{2H^{+}(aq) + 2e^{-} \rightarrow H_{2}(g)}$
 \end{center}
@@ -810,7 +810,7 @@ The standard hydrogen electrode is a redox electrode which forms the basis of th
 
 \begin{figure}[h]
 \begin{center}
-\scalebox{1.3} % Change this value to rescale the drawing.
+\scalebox{1} % Change this value to rescale the drawing.
 {
 \begin{pspicture}(0,-3.5848436)(10.2864065,3.5648437)
 \psline[linewidth=0.04cm](4.4370313,1.6848439)(4.4379997,-2.5351562)
@@ -990,9 +990,9 @@ The voltmeter measures the potential difference between the charge on these elec
 
 The voltages recorded earlier when zinc and copper were connected to a standard hydrogen electrode are in fact the \textbf{standard electrode potentials} for these two metals. It is important to remember that these are not \textit{absolute} values, but are potentials that have been measured \textit{relative} to the potential of hydrogen if the standard hydrogen electrode is taken to be zero. 
 
-\Tip{Conventions and voltage sign\\}{By convention, the hydrogen electrode is written on the \textit{left hand side} of the cell. The sign of the voltage tells you the sign of the metal electrode.\\
+\Tip{By convention, the hydrogen electrode is written on the \textit{left hand side} of the cell. The sign of the voltage tells you the sign of the metal electrode.\\
 
-In the examples we used earlier, zinc's electrode potential is actually -0.76 and copper is +0.34. So, if a metal has a \textit{negative} standard electrode potential, it means it forms ions easily. The more negative the value, the easier it is for that metal to form ions. If a metal has a \textit{positive} standard electrode potential, it means it does not form ions easily. This will be explained in more detail below.} 
+In the examples we used earlier, zinc's electrode potential is actually $-0.76$ and copper is +0.34. So, if a metal has a \textit{negative} standard electrode potential, it means it forms ions easily. The more negative the value, the easier it is for that metal to form ions. If a metal has a \textit{positive} standard electrode potential, it means it does not form ions easily. This will be explained in more detail below.} 
 
 Luckily for us, we do not have to calculate the standard electrode potential for every metal. This has been done already and the results are recorded in a table of standard electrode potentials (table \ref{tab:electrochemical:table sep}).
 
@@ -1072,7 +1072,8 @@ $\rm{F_{2} + 2e^{-} \rightleftharpoons 2F^{-} }$& 2.87 \\ \hline
 \caption{Standard Electrode Potentials} 
 \label{tab:electrochemical:table sep}
 \end{table}
-
+\Tip{Learning to understand the question in a problem.\\ Before you tackle this problem, make sure you understand exactly what the question is asking. If magnesium is able to displace silver from a solution of silver nitrate, this means that magnesium metal will form magnesium ions and the silver ions will become silver metal. In other words, there will now be \textit{silver} metal and a solution of \textit{magnesium nitrate}. This will only happen if magnesium has a greater tendency than silver to form ions. In other words, what the question is actually asking is whether magnesium or silver forms ions more easily.
+}
 \begin{wex}{Using the table of Standard Electrode Potentials}
 {The following half-reactions take place in an electrochemical cell:
   \begin{align*}
@@ -1091,8 +1092,6 @@ Both values are positive, but silver has a higher positive electrode potential t
 }
 \end{wex}
 
-\Tip{Learning to understand the question in a problem.\\ Before you tackle this problem, make sure you understand exactly what the question is asking. If magnesium is able to displace silver from a solution of silver nitrate, this means that magnesium metal will form magnesium ions and the silver ions will become silver metal. In other words, there will now be \textit{silver} metal and a solution of \textit{magnesium nitrate}. This will only happen if magnesium has a greater tendency than silver to form ions. In other words, what the question is actually asking is whether magnesium or silver forms ions more easily.
-}
 
 \begin{wex}{Using the table of Standard Electrode Potentials}
 {Is magnesium able to displace silver from a solution of silver nitrate?}
@@ -1252,64 +1251,47 @@ $= 1.1 V$\\
 %}
 
 \begin{wex}{Calculating the emf of a cell}{The following reaction takes place:
-
 \begin{center}
 $\rm{Cu(s) + Ag^{+}(aq) \rightarrow Cu^{2+}(aq) + Ag(s)}$
-\end{center}
-
+\end{center}\\
+\begin{minipage}{\textwidth}
 \begin{enumerate}
 \item{Represent the cell using standard notation.}
 \item{Calculate the cell potential (emf) of the electrochemical cell.\\}
 \end{enumerate}
-}
-{
-\westep{Write equations for the two half reactions involved}
-$\rm{Cu^{2+} + 2e^{-} \rightleftharpoons Cu}$ (E$^{\circ}$V = 0.16V)
-
-$\rm{Ag^{+} + e^{-} \rightleftharpoons Ag}$ (E$^{\circ}$V = 0.80V)\\
-
+\end{minipage}
+}{\westep{Write equations for the two half reactions involved}
+$\rm{Cu^{2+} + 2e^{-} \rightleftharpoons Cu}$ (E$^{\circ}$V $= 0.16$ V)\\
+$\rm{Ag^{+} + e^{-} \rightleftharpoons Ag}$ (E$^{\circ}$V $= 0.80$ V)
 \westep{Determine which reaction takes place at the cathode and which is the anode reaction}
 Both half-reactions have positive electrode potentials, but the silver half-reaction has a higher positive value. In other words, silver does not form ions easily, and this must be the reduction half-reaction. Copper is the oxidation half-reaction. Copper is oxidised, therefore this is the anode reaction. Silver is reduced and so this is the cathode reaction.
-
 \westep{Represent the cell using standard notation}
 \begin{equation*}
 \text{Cu}|\text{Cu}^{2+} (1 \text{mol} \cdot \text{dm}^{-3})||\text{Ag}^{+} (1 \text{mol} \cdot \text{dm}^{-3})|\text{Ag}
 \end{equation*}
-
 \westep{Calculate the cell potential}
 E$^{\circ}_{(cell)}$ = E$^{\circ}$ (cathode) - E$^{\circ}$ (anode)\\
-
 $= +0.80 - (+0.34)$\\
-
 $= +0.46$ V
 }
 \end{wex}
 
 \begin{wex}{Calculating the emf of a cell}{Calculate the cell potential of the electrochemical cell in which the following reaction takes place, and represent the cell using standard notation.
-
 \begin{center}
 $\rm{Mg(s) + 2H^{+}(aq) \rightarrow Mg{2+}(aq) + H_{2}(g)}$
 \end{center}
-}
-
-{\westep{Write equations for the two half reactions involved}
-$\rm{Mg^{2+} + 2e^{-} \rightleftharpoons Mg}$ (E$^{\circ}$V = $-2.37$)
-
-$\rm{2H^{+} + 2e^{-} \rightleftharpoons H_{2}}$ (E$^{\circ}$V = 0.00)\\
-
+}{\westep{Write equations for the two half reactions involved}
+$\rm{Mg^{2+} + 2e^{-} \rightleftharpoons Mg}$ (E$^{\circ}$V $= -2.37$)\\
+$\rm{2H^{+} + 2e^{-} \rightleftharpoons H_{2}}$ (E$^{\circ}$V $= 0.00$)
 \westep{Determine which reaction takes place at the cathode and which is the anode reaction}
 From the overall equation, it is clear that magnesium is oxidised and hydrogen ions are reduced in this reaction. Magnesium is therefore the anode reaction and hydrogen is the cathode reaction.
-
 \westep{Represent the cell using standard notation}
 \begin{equation*}
 \text{Mg}|\text{Mg}^{2+}||\text{H}^{+}|\text{H}_{2}
 \end{equation*}
-
 \westep{Calculate the cell potential}
 E$^{\circ}_{(cell)}$ = E$^{\circ}$ (cathode) - E$^{\circ}$ (anode)\\
-
 $= 0.00 - (-2.37)$\\
-
 $= +2.37$ V
 }
 \end{wex}
@@ -1318,7 +1300,7 @@ $= +2.37$ V
 \subsubsection{Predicting whether a reaction will take place spontaneously}
 
 Look at the following example to help you to understand how to predict whether a reaction will take place spontaneously or not.
-
+\Tip{You will see that the half reactions are written as they appear in the table of standard electrode potentials. It may be useful to highlight the reacting substance in each half reaction. In this case, the reactants are Pb$^{2+}$ and Br$^{-}$ ions.}
 In the reaction,
 
 \begin{center}
@@ -1333,38 +1315,31 @@ $\rm{Pb^{2+} + 2e^{-} \rightleftharpoons Pb}$ ($-0.13$ V)
 $\rm{Br_{2} + 2e^{-} \rightleftharpoons 2Br^{-}}$ (+1.06 V)
 \end{center}
 
-\Tip{You will see that the half reactions are written as they appear in the table of standard electrode potentials. It may be useful to highlight the reacting substance in each half reaction. In this case, the reactants are Pb$^{2+}$ and Br$^{-}$ ions.}
-
 Look at the electrode potential for the first half reaction. The negative value shows that lead loses electrons easily, in other words it is easily oxidised. The reaction would normally proceed from right to left (i.e.\@ the equilibrium lies to the left), but in the original equation, the opposite is happening. It is the Pb$^{2+}$ ions that are being reduced to lead. This part of the reaction is therefore not spontaneous. The positive electrode potential value for the bromine half-reaction shows that bromine is more easily reduced, in other words the equilibrium lies to the right. The spontaneous reaction proceeds from left to right. This is not what is happening in the original equation and therefore this is also not spontaneous. Overall it is clear then that the reaction will not proceed spontaneously.
 
-\begin{wex}{Predicting whether a reaction is spontaneous}{Will copper react with dilute sulphuric acid (H$_{2}$SO$_{4}$)? You are given the following half reactions:
-
-\begin{center}
-$\rm{Cu^{2+}(aq) + 2e^{-} \rightleftharpoons Cu(s)}$ (E$^{0}$ = +0.34 V)
-
-$\rm{2H^{+}(aq) + 2e^{-} \rightleftharpoons H_{2}(g)}$ (E$^{0}$ = 0 V)
-\end{center} 
+\Tip{Another way of predicting whether a reaction occurs spontaneously, is to look at the sign of the emf value for the cell. If the emf is \textbf{positive} then the reaction is \textbf{spontaneous}. If the emf is \textbf{negative}, then the reaction is \textbf{not spontaneous}.
 }
-{\westep{For each reaction, look at the electrode potentials and decide in which direction the equilibrium lies}
-In the first half reaction, the positive electrode potential means that copper does not lose electrons easily, in other words it is more easily reduced and the equilibrium position lies to the right. Another way of saying this is that the spontaneous reaction is the one that proceeds from left to right, when copper ions are reduced to copper metal.
-
+\begin{wex}{Predicting whether a reaction is spontaneous}{Will copper react with dilute sulphuric acid (H$_{2}$SO$_{4}$)? You are given the following half reactions:
+\begin{center}
+$\rm{Cu^{2+}(aq) + 2e^{-} \rightleftharpoons Cu(s)}$ (E$^{0} = +0.34$ V)\\
+$\rm{2H^{+}(aq) + 2e^{-} \rightleftharpoons H_{2}(g)}$ (E$^{0} = 0$ V)
+\end{center} 
+}{\westep{For each reaction, look at the electrode potentials and decide in which direction the equilibrium lies}
+In the first half reaction, the positive electrode potential means that copper does not lose electrons easily, in other words it is more easily reduced and the equilibrium position lies to the right. Another way of saying this is that the spontaneous reaction is the one that proceeds from left to right, when copper ions are reduced to copper metal.\\
 In the second half reaction, the spontaneous reaction is from right to left.
-
 \westep{Compare the equilibrium positions to the original reaction}
-
 What you should notice is that in the original reaction, the reactants are copper (Cu) and sulphuric acid (2H$^{+}$). During the reaction, the copper is oxidised and the hydrogen ions are reduced. But from an earlier step, we know that neither of these half reactions will proceed spontaneously in the direction indicated by the original reaction. The reaction is therefore not spontaneous.
 }
 \end{wex} 
 
-\Tip{Another way of predicting whether a reaction occurs spontaneously, is to look at the sign of the emf value for the cell. If the emf is \textbf{positive} then the reaction is \textbf{spontaneous}. If the emf is \textbf{negative}, then the reaction is \textbf{not spontaneous}.
-} % end Tip
+ % end Tip
 
 %\item{\textbf{Balancing redox reactions}
 
 
 %}
 %\end{enumerate}
-
+\pagebreak
 \Exercise{Predicting whether a reaction will take place spontaneously\\}{
 \begin{enumerate}
 \item Predict whether the following reaction will take place spontaneously or not. Show all your working.
@@ -1597,156 +1572,114 @@ We check the number of atoms and the charges and find that the equation is balan
 \end{wex}
 
 
-\begin{wex}{Balancing redox reactions\\}{Chlorine gas oxidises Fe(II) ions to Fe(III) ions. In the process, chlorine is reduced to chloride ions. Write a balanced equation for this reaction.\\}
-
-{\westep{Write down the oxidation half reaction.}
-
+\begin{wex}{Balancing redox reactions}{Chlorine gas oxidises Fe(II) ions to Fe(III) ions. In the process, chlorine is reduced to chloride ions. Write a balanced equation for this reaction.}{\westep{Write down the oxidation half reaction.}
 \begin{center}
 $\rm{Fe^{2+} \rightarrow Fe^{3+}}$\\
 \end{center}
 \westep{Balance the number of atoms on both sides of the equation.} 
-
-There is one iron atom on the left and one on the right, so no additional atoms need to be added.\\
+There is one iron atom on the left and one on the right, so no additional atoms need to be added.
 \westep{Once the atoms are balanced, check that the \textit{charges} balance.}
-
 The charge on the left of the equation is +2, but the charge on the right is +3. Therefore, one electron must be added to the right hand side so that the charges balance. The half reaction is now:
-
 \begin{center}
-$\rm{Fe^{2+} \rightarrow Fe^{3+} + e^{-}}$\\
+$\rm{Fe^{2+} \rightarrow Fe^{3+} + e^{-}}$
 \end{center}
 \westep{Repeat the above steps, but this time using the reduction half reaction.}
-
 The reduction half reaction is:
-
 \begin{center}
 $\rm{Cl_{2} \rightarrow Cl^{-}}$
 \end{center}
-
 The atoms don't balance, so we need to multiply the right hand side by two to fix this. Two electrons must be added to the left hand side to balance the charges.
-
 \begin{center}
 $\rm{Cl_{2} + 2e^{-} \rightarrow 2Cl^{-}}$
 \end{center}
 \westep{Multiply each half reaction by a suitable number so that the number of electrons \textit{released} in the oxidation half reaction is made equal to the number of electrons that are accepted in the reduction half reaction.}
-
 We need to multiply the oxidation half reaction by two so that the number of electrons on either side are balanced. This gives:
-
 \begin{center}
-$\rm{2Fe^{2+} \rightarrow 2Fe^{3+} + 2e^{-}}$\\
+$\rm{2Fe^{2+} \rightarrow 2Fe^{3+} + 2e^{-}}$
 \end{center}
 \westep{Combine the two half reactions to get a final equation for the overall reaction.}
-
 \begin{center}
-$\rm{2Fe^{2+} + Cl_{2} \rightarrow 2Fe^{3+} + 2Cl^{-}}$\\
+$\rm{2Fe^{2+} + Cl_{2} \rightarrow 2Fe^{3+} + 2Cl^{-}}$
 \end{center}
 \westep{Do a final check to make sure that the equation is balanced}
 The equation is balanced.
 }
 \end{wex}
 
-\begin{wex}{Balancing redox reactions in an acid medium\\}{The following reaction takes place in an acid medium:
-
+\begin{wex}{Balancing redox reactions in an acid medium}{The following reaction takes place in an acid medium:
 \begin{center}
 $\rm{Cr_{2}O_{7}^{2-} + H_{2}S \rightarrow Cr^{3+} + S}$
 \end{center}
-
-Write a balanced equation for this reaction.\\}
-
-{\westep{Write down the oxidation half reaction.}
-
+Write a balanced equation for this reaction.}{\westep{Write down the oxidation half reaction.}
 \begin{center}
-$\rm{Cr_{2}O_{7}^{2-} \rightarrow Cr^{3+}}$\\
+$\rm{Cr_{2}O_{7}^{2-} \rightarrow Cr^{3+}}$
 \end{center}
 \westep{Balance the number of atoms on both sides of the equation.} 
-
 We need to multiply the right side by two so that the number of Cr atoms will balance. To balance the oxygen atoms, we will need to add water molecules to the right hand side. 
-
 \begin{center}
 $\rm{Cr_{2}O_{7}^{2-} \rightarrow 2Cr^{3+} + 7H_{2}O}$
 \end{center}
-
 Now the oxygen atoms balance but the hydrogens don't. Because the reaction takes place in an acid medium, we can add hydrogen ions to the left side.
-
 \begin{center}
-$\rm{Cr_{2}O_{7}^{2-} + 14H^{+} \rightarrow 2Cr^{3+} + 7H_{2}O}$\\
+$\rm{Cr_{2}O_{7}^{2-} + 14H^{+} \rightarrow 2Cr^{3+} + 7H_{2}O}$
 \end{center}
 \westep{Once the atoms are balanced, check that the \textit{charges} balance.}
-
 The charge on the left of the equation is (-2+14) = +12, but the charge on the right is +6. Therefore, six electrons must be added to the left hand side so that the charges balance. The half reaction is now:
-
 \begin{center}
-$\rm{Cr_{2}O_{7}^{2-} + 14H^{+} + 6e^{-} \rightarrow 2Cr^{3+} + 7H_{2}O}$\\
+$\rm{Cr_{2}O_{7}^{2-} + 14H^{+} + 6e^{-} \rightarrow 2Cr^{3+} + 7H_{2}O}$
 \end{center}
 \westep{Repeat the above steps, but this time using the reduction half reaction.}
-
 The reduction half reaction after the charges have been balanced is:
-
 \begin{center}
-$\rm{S^{2-} \rightarrow S + 2e^{-}}$\\
+$\rm{S^{2-} \rightarrow S + 2e^{-}}$
 \end{center}
 \westep{Multiply each half reaction by a suitable number so that the number of electrons \textit{released} in the oxidation half reaction is made equal to the number of electrons that are accepted in the reduction half reaction.}
-
 We need to multiply the reduction half reaction by three so that the number of electrons on either side are balanced. This gives:
-
 \begin{center}
-$\rm{3S^{2-} \rightarrow 3S + 6e^{-}}$\\
+$\rm{3S^{2-} \rightarrow 3S + 6e^{-}}$
 \end{center}
 \westep{Combine the two half reactions to get a final equation for the overall reaction.}
-
 \begin{center}
-$\rm{Cr_{2}O_{7}^{2-} + 14H^{+} + 3S^{2-} \rightarrow 3S + 2Cr^{3+} + 7H_{2}O}$\\
+$\rm{Cr_{2}O_{7}^{2-} + 14H^{+} + 3S^{2-} \rightarrow 3S + 2Cr^{3+} + 7H_{2}O}$
 \end{center}
 \westep{Do a final check to make sure that the equation is balanced}
 }
 \end{wex}
 
-\begin{wex}{Balancing redox reactions in an alkaline medium\\}{If ammonia solution is added to a solution that contains cobalt(II) ions, a complex ion is formed, called the hexaaminecobalt(II) ion (Co(NH$_{3}$)$_{6}^{2+}$). In a chemical reaction with hydrogen peroxide solution, hexaaminecobalt ions are oxidised by hydrogen peroxide solution to the hexaaminecobalt(III) ion Co(NH$_{3}$)$_{6}^{3+}$. Write a balanced equation for this reaction.\\}
-
-{\westep{Write down the oxidation half reaction}
-
+\begin{wex}{Balancing redox reactions in an alkaline medium}{If ammonia solution is added to a solution that contains cobalt(II) ions, a complex ion is formed, called the hexaaminecobalt(II) ion (Co(NH$_{3}$)$_{6}^{2+}$). In a chemical reaction with hydrogen peroxide solution, hexaaminecobalt ions are oxidised by hydrogen peroxide solution to the hexaaminecobalt(III) ion Co(NH$_{3}$)$_{6}^{3+}$. Write a balanced equation for this reaction.}{\westep{Write down the oxidation half reaction}
 \begin{center}
-$\rm{Co(NH_{3})_{6}^{2+} \rightarrow Co(NH_{3})_{6}^{3+}}$\\
+$\rm{Co(NH_{3})_{6}^{2+} \rightarrow Co(NH_{3})_{6}^{3+}}$
 \end{center}
 \westep{Balance the number of atoms on both sides of the equation.} 
-
-The number of atoms are the same on both sides.\\
+The number of atoms are the same on both sides.
 \westep{Once the atoms are balanced, check that the \textit{charges} balance.}
-
 The charge on the left of the equation is +2, but the charge on the right is +3. One electron must be added to the right hand side to balance the charges in the equation.The half reaction is now:
-
 \begin{center}
-$\rm{Co(NH_{3})_{6}^{2+} \rightarrow Co(NH_{3})_{6}^{3+} + e^{-}}$\\
+$\rm{Co(NH_{3})_{6}^{2+} \rightarrow Co(NH_{3})_{6}^{3+} + e^{-}}$
 \end{center}
 \westep{Repeat the above steps, but this time using the reduction half reaction.}
-
 Although you don't actually know what product is formed when hydrogen peroxide is reduced, the most logical product is OH$^{-}$. The reduction half reaction is:
-
 \begin{center}
-$\rm{H_{2}O_{2} \rightarrow OH^{-}}$\\
+$\rm{H_{2}O_{2} \rightarrow OH^{-}}$
 \end{center}
-
 After the atoms and charges have been balanced, the final equation for the reduction half reaction is:
-
 \begin{center}
-$\rm{H_{2}O_{2} + 2e^{-} \rightarrow 2OH^{-}}$\\
+$\rm{H_{2}O_{2} + 2e^{-} \rightarrow 2OH^{-}}$
 \end{center}
 \westep{Multiply each half reaction by a suitable number so that the number of electrons \textit{released} in the oxidation half reaction is made equal to the number of electrons that are accepted in the reduction half reaction.}
-
 We need to multiply the oxidation half reaction by two so that the number of electrons on both sides are balanced. This gives:
-
 \begin{center}
-$\rm{2Co(NH_{3})_{6}^{2+} \rightarrow 2Co(NH_{3})_{6}^{3+} + 2e^{-}}$\\
+$\rm{2Co(NH_{3})_{6}^{2+} \rightarrow 2Co(NH_{3})_{6}^{3+} + 2e^{-}}$
 \end{center}
 \westep{Combine the two half reactions to get a final equation for the overall reaction.}
-
 \begin{center}
-$\rm{2Co(NH_{3})_{6}^{2+} + H_{2}O_{2} \rightarrow 2Co(NH_{3})_{6}^{3+} + 2OH^{-}}$\\
+$\rm{2Co(NH_{3})_{6}^{2+} + H_{2}O_{2} \rightarrow 2Co(NH_{3})_{6}^{3+} + 2OH^{-}}$
 \end{center}
 \westep{Do a final check to make sure that the equation is balanced}
 }
 \end{wex}
 
-\Exercise{Balancing redox reactions\\}{
+\Exercise{Balancing redox reactions}{
 \begin{enumerate}
 \item{Balance the following equations.}
 	\begin{enumerate}
