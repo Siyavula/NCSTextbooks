@@ -1,0 +1,1172 @@
+% \iffalse meta-comment, etc.
+%%
+%% Package `pst-lens.dtx'
+%%
+%% Denis Girou (CNRS/IDRIS - France) <Denis.Girou@idris.fr>
+%% Manuel Luque <Mluque5130@aol.com> (ml)
+%% Herbert Voss <voss@pstricks.de> (hv)
+%%
+%% June 06, 2006
+%%
+%% This file is under the LaTeX Project Public License 
+%% See CTAN archives in directory macros/latex/base/lppl.txt.
+%%
+%% DESCRIPTION:
+%%   `pst-lens' is a PSTricks package to define a generic lens, which can be
+%%   used on texts and graphics.
+%%
+% \fi
+%
+% \changes{v1.02}{2006/06/06}{using psscalebox instead of scalebox. (hv)}
+% \changes{v1.01}{2005/09/03}{using the extended pst-xkey instead of pst-key. (hv)}
+% \changes{v1.00}{2001/02/16}{First public release. (dg)}
+%
+% \DoNotIndex{\!,\",\#,\$,\%,\&,\',\(,\+,\*,\,,\-,\.,\/,\:,\;,\<,\=,\>,\?}
+% \DoNotIndex{\@,\@B,\@K,\@cTq,\@f,\@fPl,\@ifnextchar,\@nameuse,\@oVk}
+% \DoNotIndex{\[,\\,\],\^,\_,\ }
+% \DoNotIndex{\^,\\^,\\\^,$\^$,$\\^$,$\\^$}
+% \DoNotIndex{\0,\2,\4,\5,\6,\7,\8,}
+% \DoNotIndex{\A,\a}
+% \DoNotIndex{\B,\b,\Bc,\begin,\Bq,\Bqc}
+% \DoNotIndex{\C,\c,\catcode,\cJA,\CodelineIndex,\csname}
+% \DoNotIndex{\D,\def,\define@key,\Df,\divide,\DocInput,\documentclass,\pst@addfams}
+% \DoNotIndex{\eCN,\edef,\else,\eHd,\eMcj,\EnableCrossrefs,\end,\endcsname}
+% \DoNotIndex{\endCenterExample,\endExample,\endinput,\endpsclip}
+% \DoNotIndex{\PrintIndex,\PrintChanges,\ProvidesFile}
+% \DoNotIndex{\endpspicture,\endSideBySideExample,\Example}
+% \DoNotIndex{\F,\f,\FdUrr,\fi,\filedate,\fileversion,\FV@Environment}
+% \DoNotIndex{\FV@UseKeyValues,\FV@XRightMargin,\FVB@Example,\fvset}
+% \DoNotIndex{\G,\g,\GetFileInfo,\gr,\GradientLoaded,\gsFKrbK@o,\gsj,\gsOX}
+% \DoNotIndex{\hbadness,\hfuzz,\HLEmphasize,\HLMacro,\HLMacro@i}
+% \DoNotIndex{\HLReverse,\HLReverse@i,\hqcu,\HqY}
+% \DoNotIndex{\I,\i,\ifx,\input,\Ir,\IU}
+% \DoNotIndex{\j,\jl,\JT,\JVodH}
+% \DoNotIndex{\K,\k,\kfSlL}
+% \DoNotIndex{\L,\let}
+% \DoNotIndex{\message,\mHNa,\mIU}
+% \DoNotIndex{\N,\nB,\newcmykcolor,\newdimen,\newif,\nW}
+% \DoNotIndex{\O,\oCDJDo,\ocQhVI,\OnlyDescription,\oRKJ}
+% \DoNotIndex{\P,\p,\ProvidesPackage,\psframe,\pslinewidth,\psset}
+% \DoNotIndex{\PstAtCode,\PSTricksLoaded}
+% \DoNotIndex{\q,\Qr,\qssRXq,\qu,\qXjFQp,\qYL}
+% \DoNotIndex{\R,\r,\RecordChanges,\relax,\RlaYI,\rN,\Rp,\rp,\RPDXNn,\rput}
+% \DoNotIndex{\S,\psscalebox,\SgY,\SideBySide@Example,\SideBySideExample}
+% \DoNotIndex{\SgY,\sk,\Sp,\space,\sZb}
+% \DoNotIndex{\T,\the,\tw@}
+% \DoNotIndex{\u,\UiSWGEf@,\uJi,\usepackage,\uVQdMM,\UYj}
+% \DoNotIndex{\VerbatimEnvironment,\VerbatimInput,\VrC@}
+% \DoNotIndex{\WhZ,\WjKCYb,\WNs}
+% \DoNotIndex{\XkN,\XW}
+% \DoNotIndex{\Z,\ZCM,\Ze}
+% \DoNotIndex{\addtocounter,\advance,\alph,\arabic,\AtBeginDocument,\AtEndDocument}
+% \DoNotIndex{\AtEndOfPackage,\begingroup,\bfseries,\bgroup,\box,\csname}
+% \DoNotIndex{\else,\endcsname,\endgroup,\endinput,\expandafter,\fi}
+%
+% \setcounter{IndexColumns}{2}
+%
+% \newcommand{\PstLensPackage}{`\textsf{pst-lens}'}
+% \newcommand{\PstBlurPackage}{`\textsf{pst-blur}'}
+% \newcommand{\PstLensMacro}{\cs{PstLens}}
+%
+% ^^A From ltugboat.cls
+%
+% ^^A Typeset the name of an environment
+% \providecommand\env[1]{\textsf{#1}}
+% \providecommand\clsname[1]{\textsf{#1}}
+% \providecommand\pkgname[1]{\textsf{#1}}
+% \providecommand\optname[1]{\textsf{#1}}
+% \providecommand\progname[1]{\textsf{#1}}
+%
+% ^^A A list of options for a package/class
+% \newenvironment{optlist}{\begin{description}%
+%   \renewcommand\makelabel[1]{%
+%     \descriptionlabel{\mdseries\optname{##1}}}%
+%   \itemsep0.25\itemsep}%
+%  {\end{description}}
+%
+% \makeatletter
+%
+% ^^A Utility macros
+%
+% ^^A Example macros - adapted from the `fvrb-ex' package
+% ^^A ---------------------------------------------------
+%
+% ^^A Take care that we use here the four /?_Z characters as escape
+% ^^A characters, so we can't use these characters in the examples!
+%
+% ^^A To highlight some verbatim sequences (comments, macro names, etc.)
+% \def\HLEmphasize#1{\textit{#1}}
+% \newcommand{\BS}{\texttt{\symbol{`\\}}}
+% \def\HLMacro#1{\BS{}def\HLMacro@i#1\@nil}
+% \def\HLMacro@i#1def#2\@nil{\HLReverse{#2}}
+% \def\HLReverse#1{{\setlength{\fboxsep}{1pt}\HLReverse@i{#1}}}
+% \def\HLReverse@i#1{\colorbox{black}{\textcolor{white}{\textbf{#1}}}}
+%
+% \def\Example{\FV@Environment{}{Example}}
+% \def\endExample{%
+% \end{VerbatimOut}
+% \Below@Example{\input{\jobname.tmp}}
+% \endgroup}
+%
+% \def\CenterExample{\FV@Environment{}{Example}}
+% \def\endCenterExample{%
+% \end{VerbatimOut}
+% \begin{center}
+%   \Below@Example{\input{\jobname.tmp}}
+% \end{center}
+% \endgroup}
+%
+% \def\SideBySideExample{\FV@Environment{}{Example}}
+% \def\endSideBySideExample{%
+% \end{VerbatimOut}
+% \SideBySide@Example{\input{\jobname.tmp}}
+% \endgroup}
+%
+% \def\FVB@Example{%
+% \begingroup
+% \FV@UseKeyValues
+% \parindent=0pt
+% \multiply\topsep by 2
+% \VerbatimEnvironment
+% \begin{VerbatimOut}[gobble=4,codes={\catcode`\Z=12}]{\jobname.tmp}}
+%
+% \def\Below@Example#1{%
+% \VerbatimInput[gobble=0,commentchar=Z,commandchars=/?_,frame=single,
+%                numbers=left,numbersep=3pt]{\jobname.tmp}
+% \catcode`\%=14\relax
+% \catcode`\Z=9\relax
+% ^^A We suppress the effect of the highlighting macros
+% \catcode`/=0\relax
+% \catcode`?=1\relax
+% \catcode`_=2\relax
+% \def\HLEmphasize##1{##1}%
+% \def\HLMacro##1{##1}%
+% \def\HLReverse##1{##1}%
+% #1
+% \par}
+%
+% \def\SideBySide@Example#1{%
+% \vskip 1mm
+% \@tempdimb=\FV@XRightMargin
+% \advance\@tempdimb -5mm
+% \begin{minipage}[c]{\@tempdimb}
+%   \fvset{xrightmargin=0pt}
+%   \catcode`\%=14\relax
+%   \catcode`\Z=9\relax
+%   ^^A We suppress the effect of the highlighting macros
+%   \catcode`/=0\relax
+%   \catcode`?=1\relax
+%   \catcode`_=2\relax
+%   \def\HLEmphasize##1{##1}%
+%   \def\HLMacro##1{##1}%
+%   \def\HLReverse##1{##1}%
+%   #1
+% \end{minipage}%
+% \@tempdimb=\textwidth
+% \advance\@tempdimb -\FV@XRightMargin
+% \advance\@tempdimb 5mm
+% \begin{minipage}[c]{\@tempdimb}
+%   \VerbatimInput[gobble=0,commentchar=Z,commandchars=/?_,
+%                  frame=single,numbers=left,numbersep=3pt,
+%                  xleftmargin=5mm,xrightmargin=0pt]{\jobname.tmp}
+% \end{minipage}
+% \vskip 1mm}
+%
+% ^^A End of example macros from `fvrb-ex'
+%
+% ^^A Customizations of the "Verbatim" environment
+% \RecustomVerbatimEnvironment{Verbatim}{Verbatim}%
+%   {gobble=4,frame=single,numbers=left,numbersep=3pt,commandchars=/?_}
+%
+% ^^A For the possible index and changes log
+% \setlength{\columnseprule}{0.6pt}
+%
+% ^^A The basic text used for demonstration purposes.
+%
+% \def\Wishes{{%
+% \rput[lb](0,0){%
+%   \Large
+%   \begin{minipage}{3cm}
+%     \centering
+%     \textbf{Best wishes}\\
+%     Caroline,\\
+%     for this new year\\
+%     \Huge 2001 !
+% \end{minipage}}}}
+%
+% ^^A The second text used for demonstration purposes (poem from the French
+% ^^A poet Arthur Rimbaud.)
+%
+% \def\TheEternity{{%
+% \rput[lb](0,0){%
+% \scriptsize
+% \begin{minipage}{3.5cm}
+%   \centerline{\normalsize\textbf{L'\'Eternit\'e}}
+%   \vspace{5mm}
+%   \begin{raggedright}
+%     Elle est retrouv\'ee.\\
+%     Quoi ? --- L'\'Eternit\'e.\\
+%     C'est la mer all\'ee\\
+%     Avec le soleil.\\[3mm]
+%
+%     \^Ame sentinelle\\
+%     Murmurons l'aveu\\
+%     De la nuit si nulle\\
+%     Et du jour en feu.\\[3mm]
+%
+%     Des humains suffrages\\
+%     Des communs \'elans\\
+%     L\`a tu te d\'egages\\
+%     Et voles selon.\\[3mm]
+%
+%     Puisque de vous seules,\\
+%     Braises de satin,\\
+%     Le devoir s'exhale\\
+%     Sans qu'on dise : enfin.\\[3mm]
+%
+%     L\`a pas d'esp\'erance,\\
+%     Nul orietur.\\
+%     Science avec patience,\\
+%     Le supplice est s\^ur.\\[3mm]
+%
+%     Elle est retrouv\'ee.\\
+%     Quoi ? --- L'\'Eternit\'e.\\
+%     C'est la mer all\'ee\\
+%     Avec le soleil.\\[3mm]
+%   \end{raggedright}
+%   \flushright{\normalsize\textbf{Arthur Rimbaud}}
+% \end{minipage}}}}
+%
+% ^^A One of the Truchet's tilings, for demonstration purposes
+%
+% ^^A The four elementary tiles for it
+%
+% \def\TruchetTileA{\pspolygon*(0,0)(0,1)(1,0)}
+% \def\TruchetTileB{\pspolygon*(0,0)(0,1)(1,1)}
+% \def\TruchetTileC{\pspolygon*(0,1)(1,1)(1,0)}
+% \def\TruchetTileD{\pspolygon*(0,0)(1,0)(1,1)}
+%
+% \def\TruchetTilingA#1#2{{%
+% \psset{dimen=middle}
+% \pst@cntb=#2
+% \psframe(#1,#2)
+% \whiledo{\pst@cntb>\z@}{%
+%   \advance\pst@cntb\m@ne
+%   \pst@cnta=\z@
+%   \whiledo{\pst@cnta<#1}{%
+%     \rput(\pst@cnta,\pst@cntb){\TruchetTileB}\advance\pst@cnta\@ne
+%     \rput(\pst@cnta,\pst@cntb){\TruchetTileA}\advance\pst@cnta\@ne
+%     \rput(\pst@cnta,\pst@cntb){\TruchetTileD}\advance\pst@cnta\@ne
+%     \rput(\pst@cnta,\pst@cntb){\TruchetTileC}\advance\pst@cnta\@ne}
+%   \advance\pst@cntb\m@ne
+%   \pst@cnta=\z@
+%   \whiledo{\pst@cnta<#1}{%
+%     \rput(\pst@cnta,\pst@cntb){\TruchetTileC}\advance\pst@cnta\@ne
+%     \rput(\pst@cnta,\pst@cntb){\TruchetTileD}\advance\pst@cnta\@ne
+%     \rput(\pst@cnta,\pst@cntb){\TruchetTileA}\advance\pst@cnta\@ne
+%     \rput(\pst@cnta,\pst@cntb){\TruchetTileB}\advance\pst@cnta\@ne}
+%   \advance\pst@cntb\m@ne
+%   \pst@cnta=\z@
+%   \whiledo{\pst@cnta<#1}{%
+%     \rput(\pst@cnta,\pst@cntb){\TruchetTileD}\advance\pst@cnta\@ne
+%     \rput(\pst@cnta,\pst@cntb){\TruchetTileC}\advance\pst@cnta\@ne
+%     \rput(\pst@cnta,\pst@cntb){\TruchetTileB}\advance\pst@cnta\@ne
+%     \rput(\pst@cnta,\pst@cntb){\TruchetTileA}\advance\pst@cnta\@ne}
+%   \advance\pst@cntb\m@ne
+%   \pst@cnta=\z@
+%   \whiledo{\pst@cnta<#1}{%
+%     \rput(\pst@cnta,\pst@cntb){\TruchetTileA}\advance\pst@cnta\@ne
+%     \rput(\pst@cnta,\pst@cntb){\TruchetTileB}\advance\pst@cnta\@ne
+%     \rput(\pst@cnta,\pst@cntb){\TruchetTileC}\advance\pst@cnta\@ne
+%     \rput(\pst@cnta,\pst@cntb){\TruchetTileD}\advance\pst@cnta\@ne}}}}
+%
+% \def\TruchetTiling{{%
+% \rput[lb](0,0){\psset{unit=0.5}\TruchetTilingA{12}{12}}}}
+%
+% ^^A Van Koch curve and Siepinski triangle fractals, for demonstration
+% ^^A purposes
+%
+% ^^A The recursion macro used (from David Carlisle)
+%
+% \newcount\DeepRecursion
+%
+% \def\Recursion #1{%
+% #1\relax
+%   \expandafter\@firstoftwo
+% \else
+%   \expandafter\@secondoftwo
+% \fi}
+%
+% ^^A General definition of a fractal
+%
+% \def\PstFractal#1{%
+% \ifx\PstFractalBegin\@undefined
+% \else
+%   \PstFractalBegin
+% \fi
+% \Recursion
+%   {\ifnum#1>1\relax}
+%   {\DeepRecursion=#1%
+%    \advance\DeepRecursion by -1%
+%    \PstFractalRepeat{\DeepRecursion}}
+%   {\PstFractalDefinition}}
+%
+% ^^A Sierpinski triangle
+%
+% \def\PstSierpinskiTriangle#1{{%
+% \rput[lb](0,0){%
+% \psset{unit=3}
+% \def\PstFractalDefinition{%
+%   \pspolygon*[linecolor=\PstSierpinskiExternalColor](1;0)(1;1)(1;2)
+%   \rput{-2}(0,0){\pspolygon*[linecolor=\PstSierpinskiInternalColor]%
+%                             (0.5;0.5)(0.5;1.5)(0.5;2.5)}}%
+% \def\PstFractalBegin{\PstFractalDefinition}%
+% \def\PstFractalRepeat##1{%
+%   \rput(0.5;0){\psset{unit=0.5}\PstFractal{##1}}
+%   \rput(0.5;1){\psset{unit=0.5}\PstFractal{##1}}
+%   \rput(0.5;2){\psset{unit=0.5}\PstFractal{##1}}}%
+% \rput{90}(0,0){%
+%   \SpecialCoor
+%   \degrees[3]
+%   \PstFractal{#1}}}}}
+%
+% ^^A Von Koch curve
+%
+% \def\PstVonKochCurve#1{{%
+% \rput[lb](0,0){%
+% \psset{unit=3}
+% \def\PstFractalDefinition{\psline(0,0)(1,0)(1.5,0.8660254)(2,0)(3,0)}%
+% \def\PstFractalRepeat##1{%
+%   \rput(0,0){\psset{unit=0.3333}\PstFractal{##1}}
+%   \rput{60}(1,0){\psset{unit=0.3333}\PstFractal{##1}}
+%   \rput{-60}(1.5,0.866){\psset{unit=0.3333}\PstFractal{##1}}
+%   \rput(2,0){\psset{unit=0.3333}\PstFractal{##1}}}%
+% \PstFractal{#1}}}}
+%
+% \makeatother
+%
+%
+% ^^A Beginning of the documentation itself
+%
+% \title{The \PstLensPackage{} package\\A PSTricks package for lens}
+% \author{Denis \textsc{Girou}\thanks{CNRS/IDRIS ---
+%         Centre National de la Recherche Scientifique /
+%         Institut du D\'eveloppement et des Ressources en Informatique
+%         Scientifique --- Orsay --- France ---
+%         \mbox{\texttt{<Denis.Girou@idris.fr>}}.}\\
+%         and\\
+%         Manuel \textsc{Luque}\thanks{\mbox{\texttt{<Mluque5130@aol.com>}}.
+%         The original idea and the first version of the lens were from
+%         Manuel \textsc{Luque}.}}
+% \date{Version \pstLensFileVersion\ \pstLensFileDate\ \\
+%       {\small Documentation revised \today\ (hv)}}
+%
+% \maketitle
+%
+% \begin{abstract}
+%     This package defines a lens which can be used in various contexts
+%   to simulate the effect of a lens, using the unique macro \PstLensMacro,
+%   with some customization parameters.
+%
+%     It is also a good example of the great power and flexibility of
+%   PSTricks, as in fact it is a very short program (it body, without
+%   considering the various customizations, is only 7~lines long!)
+%   but nevertheless powerful.
+%
+%     And last, it is also a good pedagogical example of how to design and
+%   program \emph{high level graphic objects} above PSTricks own ones.
+%
+%   \verb+pst-lens+ uses the extended version of the keyval interface. Be sure, that
+%   you have installed the \verb+xkeyval+ package. Otherwise get it from \verb+CTAN+.
+% \end{abstract}
+%
+% \clearpage
+% \tableofcontents
+%
+% \section{Introduction}
+%
+%   \PstLensPackage{} offer a unique macro with some parameters to interact
+% on it.
+%
+% \vspace{1mm}
+% \def\ParamObject{\textbraceleft Object\textbraceright}
+%   The syntax is simply:
+% \fbox{\PstLensMacro\texttt{[optional\_parameters]\textit{(x,y)}\ParamObject}}
+%
+% \vspace{1mm}
+%   \texttt{\textit{(x,y)}} is a PSTricks coordinate, which as usual is taken
+% as \texttt{(0,0)} if it is not defined.
+%
+%   To use the lens, we must define a \texttt{pspicture} environment,
+% optionally draw the object and then call the \PstLensMacro{} macro on it.
+%
+% \section{Usage}
+%
+%   We will use the following textual object to illustrate our examples
+% (note that we must define the reference point at the left bottom corner,
+% as it is the normal behavior of PSTricks):
+%
+% \begin{SideBySideExample}[xrightmargin=3.8cm]
+%   Z\begin{pspicture}(3,4)
+%   Z  \psgrid[subgriddiv=0,griddots=5]
+%   /HLMacro?\def\Wishes_{{%
+%   \rput[lb](0,0){%
+%     \Large
+%     \begin{minipage}{3cm}
+%       \centering
+%       \textbf{Best wishes}\\
+%       Caroline,\\
+%       for this new year\\
+%       \Huge 2001 !
+%     \end{minipage}}}}
+%
+%   \Wishes
+%   Z\end{pspicture}
+% \end{SideBySideExample}
+%
+% \subsection{Parameters}
+%
+%   There are \textbf{9} specific parameters defined to change the way the
+% lens works:
+%
+% \begin{optlist}
+%   \item [LensMagnification (real)]: magnification to apply for the lens
+%   (\emph{Default:~1} --- no~magnification).
+% \end{optlist}
+%
+% \begin{CenterExample}
+%   \begin{pspicture}(0,-1.5)(3,4)
+%     \Wishes
+%     \PstLens[LensMagnification=2](2,2){\Wishes}
+%   \end{pspicture}
+%   \hfill
+%   \begin{pspicture}(0,-1.5)(3,4)
+%     \Wishes
+%     \PstLens[LensMagnification=4](1,2.4){\Wishes}
+%   \end{pspicture}
+%   \hfill
+%   \begin{pspicture}(0,-1.5)(3.5,4)
+%     \Wishes
+%     \PstLens[LensMagnification=0.5](1,1){\Wishes}
+%     \PstLens[LensMagnification=-0.5](2.5,3){\Wishes}
+%   \end{pspicture}
+% \end{CenterExample}
+%
+% \begin{optlist}
+%   \item [LensSize (real or length)]: value of the radius of the glass of the
+% lens (\emph{Default:~1}).
+% \end{optlist}
+%
+% \noindent Note that the size of the handle will change accordingly.
+%
+% \begin{SideBySideExample}[xrightmargin=3.8cm]
+%   \begin{pspicture}(0,-4)(3,3.5)
+%     \Wishes
+%     \PstLens[LensSize=2](1,1){\Wishes}
+%     \PstLens[LensSize=0.5](3,3){\Wishes}
+%   \end{pspicture}
+% \end{SideBySideExample}
+%
+% \begin{optlist}
+%   \item [LensRotation (real)]: rotation angle applied to the lens
+%   (\emph{Default:~0} --- no rotation).
+% \end{optlist}
+%
+% \begin{SideBySideExample}[xrightmargin=3.8cm]
+%   \begin{pspicture}(0,-1)(3,3.8)
+%     \Wishes
+%     \PstLens[LensRotation=80]{\Wishes}
+%     \PstLens[LensRotation=-108.5](2,2){\Wishes}
+%   \end{pspicture}
+% \end{SideBySideExample}
+%
+% \begin{optlist}
+%   \item [LensHandle (boolean)]: boolean value to choose between to draw
+%   a handle for the lens or not.
+%   (\emph{Default:~true} --- handle).
+% \end{optlist}
+%
+% \begin{SideBySideExample}[xrightmargin=3.8cm]
+%   \begin{pspicture}(3,3.5)
+%     \Wishes
+%     \PstLens[LensHandle=false](2,2){\Wishes}
+%   \end{pspicture}
+% \end{SideBySideExample}
+%
+% \begin{optlist}
+%   \item [LensHandleWidth (real or length)]: width of the handle
+%   (\emph{Default:~0.2 for \texttt{LensSize=1}}).
+% \end{optlist}
+%
+% \begin{SideBySideExample}[xrightmargin=3.8cm]
+%   \begin{pspicture}(0,-2.5)(3,3.5)
+%     \Wishes
+%     \PstLens[LensHandleWidth=0.1]{\Wishes}
+%     \PstLens[LensHandleWidth=4mm](2,2){\Wishes}
+%   \end{pspicture}
+% \end{SideBySideExample}
+%
+% \begin{optlist}
+%   \item [LensHandleHeight (real or length)]: height of the handle
+%   (\emph{Default:~2.5 for \texttt{LensSize=1}}).
+% \end{optlist}
+%
+%   Take care that this length is between the \emph{center} of the glass and
+% the bottom of the handle.
+%
+% \begin{SideBySideExample}[xrightmargin=3.8cm]
+%   \begin{pspicture}(0,-2)(3,3.5)
+%     \Wishes
+%     \PstLens[LensHandleHeight=15mm]{\Wishes}
+%     \PstLens[LensHandleHeight=4](2,2){\Wishes}
+%   \end{pspicture}
+% \end{SideBySideExample}
+%
+% \begin{optlist}
+%   \item [LensStyleHandle (style)]: name of the PSTricks style for the
+% handle.
+%   (\emph{Default: LensStyleHandle}).
+% \end{optlist}
+%
+% \noindent Its default value is:
+%
+% \begin{Verbatim}
+%   \newpsstyle{/HLReverse?LensStyleHandle_}{%
+%     fillstyle=gradient,framearc=0.6,linewidth=0.5\pslinewidth,
+%     gradmidpoint=0.5,gradangle=\PstLens@Rotation,
+%     gradbegin=Brown,gradend=Salmon}
+% \end{Verbatim}
+%
+% \begin{SideBySideExample}[xrightmargin=3.8cm]
+%   \begin{pspicture}(0,-2.5)(3,3.5)
+%     \Wishes
+%     \newpsstyle{/HLReverse?HandleYellow_}{%
+%       linecolor=red,framearc=1,
+%       fillstyle=solid,fillcolor=yellow}
+%     \PstLens[LensHandleWidth=0.5,
+%              LensStyleHandle=HandleYellow]
+%             {\Wishes}
+%     \newpsstyle{/HLReverse?HandleCrosshatch_}{%
+%       fillstyle=crosshatch*,fillcolor=white}
+%     \PstLens[LensStyleHandle=HandleCrosshatch]
+%             (2,2){\Wishes}
+%   \end{pspicture}
+% \end{SideBySideExample}
+%
+% \begin{optlist}
+%   \item [LensShadow (boolean)]: boolean value to choose between to draw
+%   a shadow for the glass of the lens or not.
+%   (\emph{Default:~true} --- shadow).
+% \end{optlist}
+%
+%   Note that if we redefine the \texttt{LensStyleGlass} parameter without
+% explicitely require a shadow, there will be none even if \texttt{LensShadow}
+% will have the \texttt{true} value.
+%
+% \begin{SideBySideExample}[xrightmargin=3.8cm]
+%   \begin{pspicture}(0,-0.5)(3,3.5)
+%     \Wishes
+%     \PstLens[LensShadow=false](2,2){\Wishes}
+%   \end{pspicture}
+% \end{SideBySideExample}
+%
+% \begin{optlist}
+%   \item [LensStyleGlass (style)]: name of the PSTricks style for the glass.
+%   (\emph{Default: LensStyleGlass}).
+% \end{optlist}
+%
+%   It allow to change the appearance of the glass, but its main utility is
+% probably to be able to define the style of the shadow of the glass.
+% Default definition is:
+%
+% \begin{Verbatim}
+%   \newpsstyle{/HLReverse?LensStyleGlass_}{%
+%     fillstyle=solid,fillcolor=white,
+%     shadow=true,shadowcolor=lightgray,shadowsize=0.15,
+%     shadowangle=\PstLens@Rotation}
+% \end{Verbatim}
+%
+%   Take care that if we will use later the \texttt{LensRotation} parameter
+% with \texttt{LensShadow} positioned, we must set the value of the
+% \texttt{shadowangle} parameter to \cs{PstLens@Rotation} to have the shadow
+% rotate accordingly.
+%
+%   And for better shadow effects, you must look at the \PstBlurPackage{}
+% package from Martin \textsc{Giese}.
+%
+% \begin{SideBySideExample}[xrightmargin=3.8cm]
+%   \begin{pspicture}(3,4)
+%     \Wishes
+%     \makeatletter
+%     \newpsstyle{/HLReverse?DarkShadow_}{%
+%       fillstyle=solid,fillcolor=white,
+%       shadow=true,shadowcolor=darkgray,
+%       shadowsize=0.2,
+%       shadowangle=\PstLens@Rotation}
+%     \makeatother
+%     \PstLens[LensRotation=230,
+%              LensStyleGlass=DarkShadow](2,2)
+%             {\Wishes}
+%   \end{pspicture}
+% \end{SideBySideExample}
+%
+% \begin{SideBySideExample}[xrightmargin=3.8cm]
+%   \begin{pspicture}(0,-0.5)(3,3.5)
+%     \Wishes
+%     \newpsstyle{/HLReverse?YellowGlass_}{%
+%       linecolor=red,linewidth=0.1,
+%       fillstyle=solid,fillcolor=yellow}
+%     \PstLens[LensStyleGlass=YellowGlass](2,2)
+%             {\Wishes}
+%   \end{pspicture}
+% \end{SideBySideExample}
+%
+% \subsection{Shape of the glass}
+%
+%  The \cs{PstLensShape} macro define the shape of the glass. It default
+% value is a circle, as in real life, but we can redefine it for various
+% effects...
+%
+% \begin{CenterExample}
+%   \psset{LensMagnification=1.5}
+%   \begin{pspicture}(0,-1.8)(4,3.8)
+%     \Wishes
+%     \renewcommand{\PstLensShape}{\psellipse(2,1)}
+%     \PstLens(2,2){\Wishes}
+%   \end{pspicture}
+%   \hfill
+%   \begin{pspicture}(-0.5,-1.8)(4,3.8)
+%     \Wishes
+%     \renewcommand{\PstLensShape}{\pstriangle(3,1)}
+%     \PstLens[LensSize=1.5](2,2){\Wishes}
+%   \end{pspicture}
+%   \hfill
+%   \begin{pspicture}(0,-1.8)(3.5,3.8)
+%     \Wishes
+%     \renewcommand{\PstLensShape}{%
+%       \rput{18}{\pspolygon(1;0)(1;144)(1;288)(1;72)(1;216)}}
+%     \PstLens[LensSize=1.5](2,2){\Wishes}
+%   \end{pspicture}
+%
+%   \begin{pspicture}(0,-0.5)(4,3.5)
+%     \renewcommand{\PstLensShape}{%
+%        \parabola[fillstyle=solid,fillcolor=white](-1,-1.5)(1,2)}
+%     \Wishes
+%     \PstLens[LensShadow=false,LensHandle=false](1,1){\Wishes}
+%   \end{pspicture}
+%   \hfill
+%   \begin{pspicture}(-1.5,-1)(3.5,3.5)
+%     \renewcommand{\PstLensShape}{%
+%       \psccurve(-1,-1)(0,1.2)(0.5,-1)(1,0.8)}
+%     \Wishes
+%     \PstLens[LensSize=2,LensHandle=false](1,1){\Wishes}
+%   \end{pspicture}
+% \end{CenterExample}
+%
+% \subsection{Examples}
+%
+%   We can use the lens for all textual objects and for all PSTricks graphic
+% objects (we use here some versions of tilings and fractals, but only basic
+% ones to avoid requiring too much memory from old \TeX{} systems, to compile
+% the file).
+%
+%   And specially take care to explicitely position the reference point
+% at the left bottom corner and to compute the correct dimensions for the
+% \texttt{pspicture} environment (in our examples, we choose most of the time
+% to include the lens inside the bounding boxes, but we can choose to define
+% them just for the objects).
+%
+% \begin{Verbatim}
+%   /HLMacro?\def\TheEternity_{{%
+%   \rput[lb](0,0){%
+%     \scriptsize
+%     \begin{minipage}{3.5cm}
+%       \centerline{\normalsize\textbf{L'\'Eternit\'e}}
+%   ...
+%   /HLMacro?\def\TruchetTiling_#1#2{{%
+%   \rput[lb](0,0){%
+%   ...
+%   /HLMacro?\def\PstSierpinskiTriangle_#1{{%
+%   \rput[lb](0,0){%
+%   ...
+%   /HLMacro?\def\PstVonKochCurve_#1{{%
+%   \rput[lb](0,0){%
+%   ...
+% \end{Verbatim}
+%
+% \begin{CenterExample}
+%   \newpsstyle{/HLReverse?SimpleGlass_}{fillstyle=solid,fillcolor=white}
+%   \newpsstyle{/HLReverse?SimpleHandle_}{fillstyle=solid,fillcolor=white,
+%                             framearc=0.5}
+%   \psset{LensStyleGlass=SimpleGlass,LensStyleHandle=SimpleHandle}
+%
+%   \begin{pspicture}(-1,-2.5)(5,10.5)
+%     \TheEternity
+%     \PstLens[LensSize=2,LensMagnification=4,LensRotation=40]
+%             (1.5,6){\TheEternity}
+%     \PstLens[LensSize=1.5,LensMagnification=2,LensRotation=-20]
+%             (0.5,2){\TheEternity}
+%   \end{pspicture}
+%   \hfill
+%   \begin{pspicture}(-2,-2.5)(4,10.5)
+%     \TheEternity
+%     \PstLens[LensMagnification=0.5,LensRotation=140]
+%             (1,8.5){\TheEternity}
+%     \PstLens[LensSize=2.5,LensMagnification=3,LensRotation=-100]
+%             (2.4,0){\TheEternity}
+%   \end{pspicture}
+% \end{CenterExample}
+%
+% \begin{CenterExample}
+%   \begin{pspicture}(0,-6)(6,6)
+%     \TruchetTiling
+%     \PstLens[LensSize=2.5,LensMagnification=2.5](3.5,1)
+%             {\TruchetTiling}
+%   \end{pspicture}
+% \end{CenterExample}
+%
+% \begin{CenterExample}
+%   \newcommand{\PstSierpinskiInternalColor}{red}
+%   \newcommand{\PstSierpinskiExternalColor}{yellow}
+%
+%   % /HLEmphasize?The Sierpinski triangle is in a unit circle of radius 1,_
+%   % /HLEmphasize?so we must define the "pspicture" accordingly: (-3,-2)(3,3)_
+%   \begin{pspicture}(-3,-2)(3,3)
+%     \PstSierpinskiTriangle{3}
+%   \end{pspicture}
+%   \hfill
+%   \begin{pspicture}(-3,-2)(3,3)
+%     \PstSierpinskiTriangle{3}
+%     \psset{LensShadow=false}
+%     \PstLens[LensMagnification=2,LensRotation=-80](-1,0)
+%             {\PstSierpinskiTriangle{3}}
+%     \PstLens[LensSize=2,LensMagnification=5,LensRotation=100,
+%              LensHandle=false](1,1){\PstSierpinskiTriangle{3}}
+%   \end{pspicture}
+%
+%   \begin{pspicture}(-1,-2)(11,5)
+%     \PstVonKochCurve{3}
+%     \PstLens[LensSize=1.2,LensMagnification=2,LensRotation=-50]
+%             (1.5,0.6){\PstVonKochCurve{3}}
+%     \PstLens[LensSize=2.5,LensMagnification=5,LensRotation=160,
+%              LensHandleHeight=2](6.2,0.2){\PstVonKochCurve{3}}
+%   \end{pspicture}
+% \end{CenterExample}
+%
+%   Of course, as for all PSTricks objects, we can apply to them some
+% transformations. For instance, we can project them in the 3~dimensional
+% space, with the general \cs{ThreeDput} macro or the simple \cs{pstilt} one.
+%
+% \begin{CenterExample}
+%   \psset{LensMagnification=1.5}
+%   \begin{pspicture}(0.8,-1.5)(5.3,3)
+%     \renewcommand{\PstLensShape}{\psdiamond(1.5,1)}
+%     \pstilt{60}{%
+%       \Wishes
+%       \PstLens[LensSize=1.5](2,2){\Wishes}}
+%   \end{pspicture}
+%   \hfill
+%   \begin{pspicture}(-3,-0.5)(3.5,8)
+%     \psset{viewpoint=0.5 -2 5,LensHandleHeight=3.5}
+%     \multido{\nPosX=0+-0.8,\nPosY=8+-1.5,\nMag=3+-0.5}{5}{%
+%       \ThreeDput(\nPosX,\nPosY,0){%
+%         \PstLens[LensMagnification=\nMag](0.6,0.2)
+%                 {\rput[lb](0,0){Danger!}}}}
+%   \end{pspicture}
+% \end{CenterExample}
+%
+% \noindent And we can also use the lens on non PSTricks graphics,
+% as external images.
+%
+% \begin{CenterExample}
+%   \newcommand{\tigerHead}{%
+%     \rput[lb](0,0){%
+%       \includegraphics[width=4cm,height=5cm]{tiger}}}
+%   \newpsstyle{/HLReverse?SimpleGlass_}{linestyle=none}
+%   \psset{LensStyleGlass=SimpleGlass}
+%
+%   \begin{pspicture}(0,-1)(4,5)
+%     \tigerHead
+%   \end{pspicture}
+%   \hfill
+%   \begin{pspicture}(-0.5,-1)(3,5)
+%     \PstLens[LensHandle=false,LensSize=1.8,LensMagnification=2]
+%             (1.2,2.3){\tigerHead}
+%   \end{pspicture}
+%   \hfill
+%   \newpsstyle{/HLReverse?SimpleHandle_}{fillstyle=solid,fillcolor=white,
+%                             framearc=0.5}
+%   \psset{LensStyleHandle=SimpleHandle}
+%   \begin{pspicture}(0,-1)(4,5)
+%     \tigerHead
+%     \PstLens[LensSize=1.5,LensMagnification=4]
+%             (1.5,2.5){\tigerHead}
+%   \end{pspicture}
+% \end{CenterExample}
+%
+%
+% \begin{CenterExample}
+%   \def\Persistance{{%
+%   \rput(0,0){%
+%   \begin{minipage}{6cm}
+%    \centerline{\normalsize\textbf{La persistance rétinienne}}
+%    \vspace{5mm}
+%   La persistance des impressions lumineuses, ou maintien de la 
+%   sensation lumineuse après que l'excitation ait disparue, est 
+%   connue depuis la plus haute antiquité. \textsc{Aristote} 
+%   (Sur le Songes) et \textsc{Lucrèce} (De Natura Rerum),
+%   entre autres, constatent son existence et proposent le 
+%   premières explications, à la mesure de leurs moyens. 
+%   Au fil des siècles, Guillaume de Saint Cloud (1285), 
+%   Léonard de Vinci, Newton et bien d'autres s'intéressent aussi 
+%   à la question de l'observation des éclipses de Soleil.
+% 
+%   Toutefois, la mesure de la durée de persistance n'aura lieu qu'au
+%   \textsc{xiii}\textsuperscript{eme} siècle. Reprenant une 
+%    observation déjà formulée par Léonard de Vinci :
+% 
+%   <<\ldots si tu agites un tison enflammé, le cercle que tu lui feras
+%   tracer semblera un anneau de feu.>>, Patrice d'\textsc{Arcy} 
+%   imagine en 1765 toute une machinerie pour effectuer des mesures à 
+%   peu près fiables. Un charbon ardent est fixé à la périphérie d'une 
+%   roue qu'un mécanisme de poids et de volants met en rotation 
+%   uniforme. En raison de la persistance des impressions lumineuses, 
+%   la braise semble décrire un arc de cercle, d'autant plus grand que 
+%   la vitesse de rotation est plus importante. Quand la durée d'un 
+%   tour est égale à celle de la persistance de la sensation lumineuse, 
+%   la trace décrit un tour complet. À la suite de nombreuses 
+%   expériences, d'\textsc{Arcy} aboutit à la valeur de 8 tierces, à 
+%   peu près 130 millisecondes.
+%    \flushright{\normalsize\textbf{Miche HENRY}}
+%   \end{minipage}}}}
+%
+%   \begin{pspicture}*(-3,-5)(3,5)
+%    \Persistance
+%    \PstLens[LensSize=2.5,LensMagnification=2,LensRotation=20]%
+%       (0,1.5){\Persistance}
+%   \end{pspicture}\hfill
+%   \begin{pspicture}*(-3,-5)(3,5)
+%    \Persistance
+%    \PstLens[LensSize=2,LensMagnification=0.6,LensRotation=-20]%
+%       (0,1.5){\Persistance}
+%   \end{pspicture}
+% \end{CenterExample}
+%
+%
+% \StopEventually{}
+%
+% ^^A .................... End of the documentation part ....................
+%
+% \section{Driver file}
+%
+%   The next bit of code contains the documentation driver file for \TeX{},
+% i.e., the file that will produce the documentation you are currently
+% reading. It will be extracted from this file by the \texttt{docstrip}
+% program.
+%
+%    \begin{macrocode}
+%<*driver>
+\documentclass{ltxdoc}
+\GetFileInfo{pst-lens.dtx}
+\usepackage[T1]{fontenc}
+\usepackage{fancyvrb}
+\usepackage{graphicx}
+\usepackage{ifthen}
+\usepackage{multido}
+\usepackage{pstricks}
+\usepackage{pst-lens}
+\let\pstLensFileVersion\fileversion
+\let\pstLensFileDate\filedate
+\usepackage{pst-3d}
+\AtBeginDocument{
+%  \OnlyDescription % comment out for implementation details
+  \EnableCrossrefs
+  \RecordChanges
+  \CodelineIndex
+}
+\AtEndDocument{
+  \PrintChanges
+  \PrintIndex
+}
+\hbadness=7000            % Over and under full box warnings
+\hfuzz=3pt
+\begin{document}
+  \DocInput{pst-lens.dtx}
+\end{document}
+%</driver>
+%    \end{macrocode}
+%
+% \section{\PstLensPackage{} \LaTeX{} wrapper}
+%
+%    \begin{macrocode}
+%<*latex-wrapper>
+\RequirePackage{pstricks}
+\ProvidesPackage{pst-lens}[2005/09/02 package wrapper for 
+  pst-lens.tex (hv)]
+\input{pst-lens.tex}
+\ProvidesFile{pst-lens.tex}
+  [\filedate\space v\fileversion\space `PST-lens' (hv)]
+%</latex-wrapper>
+%    \end{macrocode}
+%
+% \section{\PstLensPackage{} code}
+%
+%    \begin{macrocode}
+%<*pst-lens>
+%    \end{macrocode}
+%
+% \subsection{Preambule}
+%
+%   Who we are.
+%
+%    \begin{macrocode}
+\csname PSTLensLoaded\endcsname
+\let\PSTLensLoaded\endinput
+%    \end{macrocode}
+%
+%   Require the PSTricks and `\textsf{pst-grad}' packages.
+%
+%    \begin{macrocode}
+\ifx\PSTricksLoaded\endinput\else\input pstricks.tex\fi
+\ifx\GradientLoaded\endinput\else\input pst-grad.tex\fi
+\ifx\PSTXKeyLoaded\endinput\else\input pst-xkey \fi % (hv 2005-09-03)
+%    \end{macrocode}
+%
+%   Catcodes changes.
+%
+%    \begin{macrocode}
+\edef\PstAtCode{\the\catcode`\@}
+\catcode`\@=11\relax
+\pst@addfams{pst-lens}
+\def\fileversion{1.02}
+\def\filedate{2006/06/06}
+\message{`PST-Lens' v\fileversion, \filedate\space
+         (Denis Girou and Manuel Luque)}
+%    \end{macrocode}
+%
+% \subsection{Definition of the parameters}
+%
+%   \texttt{LensHandle} will define if we will draw an handle to the lens
+% or not. It is a \emph{boolean} value.
+%
+%    \begin{macrocode}
+\newif\ifPstLens@Handle
+\define@key[psset]{pst-lens}{LensHandle}[true]{%
+  \@nameuse{PstLens@Handle#1}}
+%    \end{macrocode}
+%
+%   \texttt{LensStyleHandle} is the name of the PSTricks style to draw
+% the handle of the lens.
+%
+%    \begin{macrocode}
+\define@key[psset]{pst-lens}{LensStyleHandle}{%
+  \def\PstLens@StyleHandle{#1}}
+%    \end{macrocode}
+%
+%   \texttt{LensHandleWidth} will be the size of the lens.
+% This is a \emph{real} or \emph{length} value, as all PSTrisks dimensions,
+% but as we will have to make computations with it, we store it in a dimension
+% register.
+%
+%    \begin{macrocode}
+\newdimen\PstLens@HandleWidth
+\define@key[psset]{pst-lens}{LensHandleWidth}{%
+  \pssetlength{\PstLens@HandleWidth}{#1}}
+%    \end{macrocode}
+%
+%   \texttt{LensHandleHeight} will be the size of the lens.
+% This is a \emph{real} or \emph{length} value, as all PSTrisks dimensions,
+% but as we will have not to make computations with it, we store it in a
+% simple macro.
+%
+%    \begin{macrocode}
+\define@key[psset]{pst-lens}{LensHandleHeight}{%
+  \def\PstLens@HandleHeight{#1}}
+%    \end{macrocode}
+%
+%   \texttt{LensShadow} will define if we will draw a shadow to the glass
+% of the lens or not. It is a \emph{boolean} value.
+%
+%    \begin{macrocode}
+\newif\ifPstLens@Shadow
+\define@key[psset]{pst-lens}{LensShadow}[true]{%
+  \@nameuse{PstLens@Shadow#1}}
+%    \end{macrocode}
+%
+%   \texttt{LensStyleGlass} is the name of the PSTricks style to draw
+% the glass.
+%
+%    \begin{macrocode}
+\define@key[psset]{pst-lens}{LensStyleGlass}{%
+  \def\PstLens@StyleGlass{#1}}
+%    \end{macrocode}
+%
+%   \texttt{LensSize} will be the size of the lens.
+% This is a \emph{real} or \emph{length} value, as all PSTrisks dimensions,
+% but as we will have not to make computations with it, we store it in a
+% simple macro.
+%
+%    \begin{macrocode}
+\define@key[psset]{pst-lens}{LensSize}{%
+  \def\PstLens@Size{#1}}
+%    \end{macrocode}
+%
+%   \texttt{LensMagnification} will be the magnification to apply to the lens.
+% This is a \emph{real} or \emph{length} value, but as we will have not
+% to make computations with it, we strore it in a simple macro.
+%
+%    \begin{macrocode}
+\define@key[psset]{pst-lens}{LensMagnification}{%
+  \def\PstLens@Magnification{#1}}
+%    \end{macrocode}
+%
+%   \texttt{LensRotation} will be the rotation angle to apply to the lens.
+% It is a \emph{real} value used as an \emph{angle}.
+%
+%    \begin{macrocode}
+\define@key[psset]{pst-lens}{LensRotation}{%
+  \def\PstLens@Rotation{#1}}
+%    \end{macrocode}
+%
+%   Next, we set the default values for all these new parameters.
+% We choose to have an handle of width 0.2 unit and height of 2.5 unit,
+% LensStyleHandle as style for the handle, a shadow to the glass,
+% LensStyleGlass as style for it, no rotation, a size equal to 1 unit
+% and no magnification (so of value 1).
+%
+%    \begin{macrocode}
+\psset[pst-lens]{%
+  LensHandle=true,LensHandleWidth=0.2,LensHandleHeight=2.5,
+  LensStyleHandle=LensStyleHandle,
+  LensShadow=true,LensStyleGlass=LensStyleGlass,
+  LensRotation=0,LensSize=1,LensMagnification=1}
+%    \end{macrocode}
+%
+%   We define also the default style for the handle.
+%
+%    \begin{macrocode}
+\newcmykcolor{Brown}{0 0.81 1 0.6}
+\newcmykcolor{Salmon}{0 0.53 0.38 0}
+\newpsstyle{LensStyleHandle}{%
+  fillstyle=gradient,framearc=0.6,linewidth=0.5\pslinewidth,
+  gradmidpoint=0.5,gradangle=\PstLens@Rotation,gradbegin=Brown,gradend=Salmon}
+%    \end{macrocode}
+%
+%   And the default style for the glass (we only define a shaow for it).
+%
+%    \begin{macrocode}
+\newpsstyle{LensStyleGlass}{%
+  fillstyle=solid,fillcolor=white,
+  shadow=true,shadowcolor=lightgray,shadowsize=0.15,
+  shadowangle=\PstLens@Rotation}
+%    \end{macrocode}
+%
+%   Then we define the default shape for the lens (a circle of radius 1 and
+% center (0,0)).
+%
+%    \begin{macrocode}
+\def\PstLensShape{\pscircle{1}}
+%    \end{macrocode}
+%
+% \subsection{Main macro}
+%
+%   The general \cs{PstLens} macro to draw lens.
+%
+% \begin{macro}{\PstLens}
+%    \begin{macrocode}
+\def\PstLens{\@ifnextchar[{\PstLens@i}{\PstLens@i[]}}
+%    \end{macrocode}
+% \end{macro}
+%
+%   We first check if the coordinate is given, and if not we choose as usual
+% (0,0) as default one.
+%
+% \begin{macro}{\PstLens@i}
+%    \begin{macrocode}
+\def\PstLens@i[#1]{\@ifnextchar({\PstLens@ii[#1]}{\PstLens@ii[#1](0,0)}}
+%    \end{macrocode}
+% \end{macro}
+%
+%   Then we define the auxiliary macro which will handle the parameters if
+% some are used. Note also the usage of the double \verb+{{+ to have only
+% changes of parameter values for this specific object, as redefinitions
+% of them must be local.
+%
+% \begin{macro}{\PstLens@ii}
+%    \begin{macrocode}
+\def\PstLens@ii[#1](#2,#3)#4{{%
+%    \end{macrocode}
+%
+%   After that, we can set the values of local parameters if defined.
+%
+%    \begin{macrocode}
+\psset{#1}%
+%    \end{macrocode}
+%
+%   Now, we can start the \emph{real} code. First, we must be able to use
+% PostScript expressions as coordinates.
+%
+%    \begin{macrocode}
+\SpecialCoor
+%    \end{macrocode}
+%
+%   Then, if the handle is not suppressed, we position it at the required
+% coordinate, with it specified rotation.
+%
+%    \begin{macrocode}
+\rput{\PstLens@Rotation}(#2,#3){%
+  \ifPstLens@Handle
+    \psscalebox{\PstLens@Size}{%
+      \divide\PstLens@HandleWidth\tw@
+      \psframe[style=\PstLens@StyleHandle]
+              (-\PstLens@HandleWidth,0)
+              (\PstLens@HandleWidth,-\PstLens@HandleHeight)}%
+  \fi}
+%    \end{macrocode}
+%
+%   Now, we can draw the object at the specified position, but surimposing on
+% it a shape which will represent the glass of the lens, and we use the
+% powerful clipping mechanism to eliminate the parts of the object not inside
+% this shape.
+%
+%    \begin{macrocode}
+\psclip{{\psset{style=\PstLens@StyleGlass}
+         \ifPstLens@Shadow
+         \else
+           \psset{shadow=false}
+         \fi
+         \rput(#2,#3){\psset{unit=\PstLens@Size}\PstLensShape}}}
+%    \end{macrocode}
+%
+%   Then we draw again the object, but with the specified magnification.
+% It require also to recompute the coordinates where to put the object,
+% according to the magnification.
+%
+%    \begin{macrocode}
+  \rput(! 1 \PstLens@Magnification\space sub #2\space mul
+          1 \PstLens@Magnification\space sub #3\space mul){%
+    \psscalebox{\PstLens@Magnification}{#4}}
+%    \end{macrocode}
+%
+%   To finish we close the clipping mechanism and the \cs{PstLens@ii} macro.
+%
+%    \begin{macrocode}
+\endpsclip}}
+%    \end{macrocode}
+% \end{macro}
+%
+% \subsection{Closing}
+%
+%   Catcodes restoration.
+%
+%    \begin{macrocode}
+\catcode`\@=\PstAtCode\relax
+%    \end{macrocode}
+%
+%    \begin{macrocode}
+%</pst-lens>
+%    \end{macrocode}
+%
+\endinput
+%%
+%% End of file `pst-lens.dtx'

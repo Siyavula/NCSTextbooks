@@ -1,0 +1,19 @@
+                 ---------------------------------------
+                 | pst-lens: PSTricks package for lens |
+                 |                                     |
+                 | Denis Girou <Denis.Girou@idris.fr>  |
+                 | Manuel Luque <Mluque5130@aol.com>   |
+                 ---------------------------------------
+
+  * Run "(la)tex" on pst-lens.ins to create pst-lens.sty|tex
+  * Copy pst-lens.tex and pst-lens.sty in one of your TeX input directories
+
+To generate the documentaion run:
+ 
+  * (la)tex pst-lens.dtx 
+  * makeindex -s gind.ist pst-lens.idx
+  * makeindex -s gglo.ist -o pst-lens.gls pst-lens.glo
+  * (la)tex pst-lens.dtx 
+
+--
+Denis Girou and Manuel Luque and hv

@@ -1,0 +1,38 @@
+%% `pst-lens.ins'
+%%
+%% Docstrip installation instruction file for docstyle `pst-lens'
+%%
+%% Denis Girou (CNRS/IDRIS - France) <Denis.Girou@idris.fr> and
+%% Manuel Luque <Mluque5130@aol.com> (France)
+%%
+%% February 19, 2001
+
+\def\batchfile{pst-lens.ins}
+\input docstrip.tex
+\keepsilent
+\Msg{*** Generating the `pst-lens' package ***}
+\askforoverwritefalse
+\generate{\file{pst-lens.tex}{\from{pst-lens.dtx}{pst-lens}}}
+\generate{\file{pst-lens.sty}{\from{pst-lens.dtx}{latex-wrapper}}}
+%
+\ifToplevel{%
+\Msg{***********************************************************}
+\Msg{*}
+\Msg{* To finish the installation you have to move the files}
+\Msg{* pst-lens.sty and pst-lens.tex in a directory/folder searched by TeX.}
+\Msg{*}
+\Msg{* To produce the documentation, run the file `pst-lens.dtx'}
+\Msg{* through LaTeX.}
+\Msg{*}
+\Msg{* If you require the commented code, desactivating the}
+\Msg{* OnlyDescription macro, you must recompile, execute:}
+\Msg{* `makeindex -s gind.ist pst-lens'}
+\Msg{* `makeindex -s gglo.ist -o pst-lens.gls pst-lens.glo'}
+\Msg{* and recompile.}
+\Msg{*}
+\Msg{***********************************************************}
+}
+
+\endinput
+%% 
+%% End of file `pst-lens.ins'
